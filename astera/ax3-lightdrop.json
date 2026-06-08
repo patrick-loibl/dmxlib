@@ -1,0 +1,66 @@
+{
+  "name": "AX3 Lightdrop",
+  "shortName": "AsteraAX3",
+  "categories": ["Color Changer"],
+  "meta": { "authors": ["Astera LED Technology"] },
+  "links": { "productPage": ["https://astera-led.com/product/ax3-lightdrop/"] },
+  "physical": {
+    "dimensions": [260, 260, 62],
+    "weight": 1.1,
+    "power": 25,
+    "DMXconnector": "5-pin",
+    "bulb": { "type": "RGBAW LED" }
+  },
+  "availableChannels": {
+    "Red": { "capability": { "type": "ColorIntensity", "color": "Red" } },
+    "Green": { "capability": { "type": "ColorIntensity", "color": "Green" } },
+    "Blue": { "capability": { "type": "ColorIntensity", "color": "Blue" } },
+    "White": { "capability": { "type": "ColorIntensity", "color": "White" } },
+    "Amber": { "capability": { "type": "ColorIntensity", "color": "Amber" } },
+    "Dimmer": { "capability": { "type": "Intensity" } },
+    "Dimmer 16bit": { "fineChannelAliases": ["Dimmer fine"], "capability": { "type": "Intensity" } },
+    "Dimmer fine": { "capability": { "type": "Intensity" } },
+    "Strobe": {
+      "capabilities": [
+        { "dmxRange": [0, 0], "type": "ShutterStrobe", "shutterEffect": "Open" },
+        { "dmxRange": [1, 255], "type": "ShutterStrobe", "shutterEffect": "Strobe", "speedStart": "slow", "speedEnd": "fast" }
+      ]
+    },
+    "Color Temperature": { "capability": { "type": "ColorTemperature", "colorTemperatureStart": "2700K", "colorTemperatureEnd": "8000K" } },
+    "Index": { "capability": { "type": "Generic" } },
+    "Effect": { "capabilities": [{ "dmxRange": [0, 0], "type": "NoFunction" }, { "dmxRange": [1, 255], "type": "Effect", "effectName": "Built-in effect" }] },
+    "Effect Speed": { "capability": { "type": "EffectSpeed", "speedStart": "slow", "speedEnd": "fast" } },
+    "Effect Size": { "capability": { "type": "Generic" } },
+    "Effect Position": { "capability": { "type": "Generic" } },
+    "Effect Angle": { "capability": { "type": "Generic" } },
+    "Macro": { "capability": { "type": "Generic" } },
+    "GM": { "capability": { "type": "Generic" } },
+    "Crossover RGB": { "capability": { "type": "Generic" } },
+    "Hue": { "capability": { "type": "Generic" } },
+    "Saturation": { "capability": { "type": "Generic" } }
+  },
+  "modes": [
+    { "name": "1: RGB", "shortName": "1-rgb", "channels": ["Red", "Green", "Blue"] },
+    { "name": "2: RGBW", "shortName": "2-rgbw", "channels": ["Red", "Green", "Blue", "White"] },
+    { "name": "3: RGBAW", "shortName": "3-rgbaw", "channels": ["Red", "Green", "Blue", "Amber", "White"] },
+    { "name": "4: DIM RGB", "shortName": "4-dim-rgb", "channels": ["Dimmer", "Red", "Green", "Blue"] },
+    { "name": "5: DIM RGBW", "shortName": "5-dim-rgbw", "channels": ["Dimmer", "Red", "Green", "Blue", "White"] },
+    { "name": "6: DIM RGBAW", "shortName": "6-dim-rgbaw", "channels": ["Dimmer", "Red", "Green", "Blue", "Amber", "White"] },
+    { "name": "7: DIM RGB CCT DIM IND", "shortName": "7-rgb-cct", "channels": ["Red", "Green", "Blue", "Color Temperature", "Dimmer", "Index"] },
+    { "name": "8: RGBS", "shortName": "8-rgbs", "channels": ["Red", "Green", "Blue", "Strobe"] },
+    { "name": "9: RGBWS", "shortName": "9-rgbws", "channels": ["Red", "Green", "Blue", "White", "Strobe"] },
+    { "name": "10: RGBAWS", "shortName": "10-rgbaws", "channels": ["Red", "Green", "Blue", "Amber", "White", "Strobe"] },
+    { "name": "11: DIM RGBS", "shortName": "11-dim-rgbs", "channels": ["Dimmer", "Red", "Green", "Blue", "Strobe"] },
+    { "name": "12: DIM RGBWS", "shortName": "12-dim-rgbws", "channels": ["Dimmer", "Red", "Green", "Blue", "White", "Strobe"] },
+    { "name": "13: DIM RGBAWS", "shortName": "13-dim-rgbaws", "channels": ["Dimmer", "Red", "Green", "Blue", "Amber", "White", "Strobe"] },
+    { "name": "14: RGB CCT DIM IND S", "shortName": "14-rgb-cct-s", "channels": ["Red", "Green", "Blue", "Color Temperature", "Dimmer", "Index", "Strobe"] },
+    { "name": "15: EFFECT FIX", "shortName": "15-fx-fix", "channels": ["Dimmer", "Red", "Green", "Blue", "Amber", "White", "Strobe", "Color Temperature", "Effect", "Effect Speed", "Effect Size", "Effect Position", "Macro"] },
+    { "name": "16: EFFECT RGB", "shortName": "16-fx-rgb", "channels": ["Dimmer", "Red", "Green", "Blue", "Effect", "Effect Speed", "Effect Size", "Effect Position", "Effect Angle", "Macro", "Index", "GM", "Crossover RGB", "Color Temperature", "Hue", "Saturation", "Dimmer fine", "White", "Strobe", "Macro", "Effect"] },
+    { "name": "89: D CCT GM CRO RGB", "shortName": "89", "channels": ["Dimmer", "Color Temperature", "GM", "Crossover RGB", "Red", "Green", "Blue"] },
+    { "name": "90: D CCT GM HUE SAT", "shortName": "90", "channels": ["Dimmer", "Color Temperature", "GM", "Hue", "Saturation"] },
+    { "name": "91: D16 CCT GM CRO RGB", "shortName": "91", "channels": ["Dimmer 16bit", "Dimmer fine", "Color Temperature", "GM", "Crossover RGB", "Red", "Green", "Blue"] },
+    { "name": "92: D16 CCT GM H SAT", "shortName": "92", "channels": ["Dimmer 16bit", "Dimmer fine", "Color Temperature", "GM", "Hue", "Saturation", "Index"] }
+  ],
+  "fixtureKey": "ax3-lightdrop",
+  "manufacturerKey": "astera"
+}

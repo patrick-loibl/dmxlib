@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
+  "name": "Generic Fan",
+  "shortName": "Fan",
+  "categories": ["Other"],
+  "meta": {
+    "authors": ["user-defined"],
+    "createDate": "2026-06-06",
+    "lastModifyDate": "2026-06-06"
+  },
+  "availableChannels": {
+    "Fan Speed": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "Fan",
+        "speedStart": "stop",
+        "speedEnd": "fast"
+      }
+    },
+    "Dimmer": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "Intensity"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1 channel",
+      "shortName": "1ch",
+      "channels": [
+        "Fan Speed"
+      ]
+    },
+    {
+      "name": "2 channel",
+      "shortName": "2ch",
+      "channels": [
+        "Dimmer",
+        "Fan Speed"
+      ]
+    }
+  ],
+  "fixtureKey": "fan",
+  "manufacturerKey": "generic",
+  "oflURL": ""
+}
