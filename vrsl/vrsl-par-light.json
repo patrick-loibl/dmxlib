@@ -1,0 +1,224 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VRSL Par Light",
+  "shortName": "LED PAR",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-06",
+    "lastModifyDate": "2026-04-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BB6613F9-BE55-4D8E-8C67-65A01C1BE594"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "Intensity MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "16 Channel",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Color FX1",
+        "Sh1 2",
+        "Strobe Duration",
+        "Intensity MSpeed",
+        "Color Mix MSpeed",
+        "Dim Curve",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "White",
+        "White fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      0
+    ],
+    "revision": {
+      "date": "2026-04-24T17:59:11",
+      "text": "Update for SL Zoom PAR 155 v2"
+    }
+  },
+  "manufacturerKey": "vrsl",
+  "fixtureKey": "vrsl-par-light",
+  "gwFixtureTypeID": "BB6613F9-BE55-4D8E-8C67-65A01C1BE594"
+}

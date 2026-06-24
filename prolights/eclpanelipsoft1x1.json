@@ -1,0 +1,7045 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EclPanelIPSoft1x1",
+  "shortName": "PanelSoft1x1",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-01",
+    "lastModifyDate": "2025-09-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9F17EAD0-0EA7-4F90-B4D0-4873410219E6"
+    }
+  },
+  "comment": "The EclPanel IPSoft1x1 is a 1x1 format IP65 Soft Light, featuring high quality of light in all weather conditions. \nEclPanel IPSoft range is engineered with a 6-color LED light source controllable in 4 section, maximizing the light flux and delivering a beautiful soft projection with outstanding quality and rich color spectrum. ",
+  "rdm": {
+    "modelId": 53521
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1850K"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "20000K"
+        }
+      ]
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "FullMinus"
+        },
+        {
+          "dmxRange": [
+            4,
+            126
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": -1,
+          "comment": "MinusGreen"
+        },
+        {
+          "dmxRange": [
+            127,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            253
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "PlusGreen"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "FullPlus"
+        }
+      ]
+    },
+    "CTC<>RGB": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CTC layer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "RGB Layer"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseInStrobe"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseOutStrobe"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Square Law"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Inverse Square Law"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "High Res @ Low"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "Tungsten"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emulation ON"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Emulation OFF"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dynamic Smoothing ON"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Dynamic Smoothing OFF"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Native"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "ProPhoto"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "sRGB"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Rec2020"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Rec709"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (CRIMode)",
+          "physical": 0,
+          "comment": "High Brightness"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (CRIMode)",
+          "physical": 0,
+          "comment": "High Quality"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Turbo"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 1 Contant Output"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 2 Contant Output"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "OFF Contant Output"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 1 Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 2 Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Off Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - Keep Last Frame"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - CCT Mode"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - RGB Mode"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch HSI mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch XY mode"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch GEL mode"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch FX mode"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Standalone"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emergency"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - CCT mode"
+        },
+        {
+          "dmxRange": [
+            84,
+            85
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - RGB mode"
+        },
+        {
+          "dmxRange": [
+            86,
+            87
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - HSI mode"
+        },
+        {
+          "dmxRange": [
+            88,
+            89
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - XY mode"
+        },
+        {
+          "dmxRange": [
+            90,
+            91
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - GEL mode"
+        },
+        {
+          "dmxRange": [
+            92,
+            93
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - FX mode"
+        },
+        {
+          "dmxRange": [
+            94,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Standalone"
+        },
+        {
+          "dmxRange": [
+            96,
+            97
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            98,
+            99
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emergency"
+        },
+        {
+          "dmxRange": [
+            100,
+            101
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1282Hz",
+          "comment": "1282 Hz"
+        },
+        {
+          "dmxRange": [
+            102,
+            103
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "2000Hz",
+          "comment": "2 kHz"
+        },
+        {
+          "dmxRange": [
+            104,
+            105
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "4000Hz",
+          "comment": "4 kHz"
+        },
+        {
+          "dmxRange": [
+            106,
+            107
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "6000Hz",
+          "comment": "6 kHz"
+        },
+        {
+          "dmxRange": [
+            108,
+            109
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "10000Hz",
+          "comment": "10 kHz"
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "12000Hz",
+          "comment": "12 kHz"
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "15000Hz",
+          "comment": "15 kHz"
+        },
+        {
+          "dmxRange": [
+            114,
+            115
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "20000Hz",
+          "comment": "20 kHz"
+        },
+        {
+          "dmxRange": [
+            116,
+            117
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "25000Hz",
+          "comment": "25 kHz"
+        },
+        {
+          "dmxRange": [
+            118,
+            119
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "36000Hz",
+          "comment": "36 kHz"
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "40000Hz",
+          "comment": "40 kHz"
+        },
+        {
+          "dmxRange": [
+            122,
+            123
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Power Limit 100%"
+        },
+        {
+          "dmxRange": [
+            124,
+            125
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Power Limit 75%"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Power Limit 50%"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Power Limit 25%"
+        },
+        {
+          "dmxRange": [
+            130,
+            131
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Invert Mapping On"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Invert Mapping Off"
+        },
+        {
+          "dmxRange": [
+            134,
+            135
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Timeout Always On"
+        },
+        {
+          "dmxRange": [
+            136,
+            137
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 1,
+          "comment": "Backlight Timeout 10s"
+        },
+        {
+          "dmxRange": [
+            138,
+            139
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 2,
+          "comment": "Backlight Timeout 30s"
+        },
+        {
+          "dmxRange": [
+            140,
+            141
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 3,
+          "comment": "Backlight Timeout 60s"
+        },
+        {
+          "dmxRange": [
+            142,
+            143
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 4,
+          "comment": "Backlight Display 25%"
+        },
+        {
+          "dmxRange": [
+            144,
+            145
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 5,
+          "comment": "Backlight Display 50%"
+        },
+        {
+          "dmxRange": [
+            146,
+            147
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 6,
+          "comment": "Backlight Display 75%"
+        },
+        {
+          "dmxRange": [
+            148,
+            149
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 7,
+          "comment": "Backlight Display 100%"
+        },
+        {
+          "dmxRange": [
+            150,
+            151
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 8,
+          "comment": "Backlight Encoder Off"
+        },
+        {
+          "dmxRange": [
+            152,
+            153
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 9,
+          "comment": "Backlight Encoder On"
+        },
+        {
+          "dmxRange": [
+            154,
+            155
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 10,
+          "comment": "Flip Display On"
+        },
+        {
+          "dmxRange": [
+            156,
+            157
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 11,
+          "comment": "Flip Display Off"
+        },
+        {
+          "dmxRange": [
+            158,
+            159
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 12,
+          "comment": "Keylock On"
+        },
+        {
+          "dmxRange": [
+            160,
+            161
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 13,
+          "comment": "Keylock Off"
+        },
+        {
+          "dmxRange": [
+            162,
+            163
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Stand Alone Master DMX"
+        },
+        {
+          "dmxRange": [
+            164,
+            165
+          ],
+          "type": "Maintenance",
+          "parameterStart": 1,
+          "parameterEnd": 2,
+          "comment": "Stand Alone Master NO DMX"
+        },
+        {
+          "dmxRange": [
+            166,
+            167
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Stand Alone Slave"
+        },
+        {
+          "dmxRange": [
+            168,
+            169
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Stand Alone CCT Mode"
+        },
+        {
+          "dmxRange": [
+            170,
+            171
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Stand Alone RGB Mode"
+        },
+        {
+          "dmxRange": [
+            172,
+            173
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "Stand Alone HSI Mode"
+        },
+        {
+          "dmxRange": [
+            174,
+            175
+          ],
+          "type": "Maintenance",
+          "parameter": 6,
+          "comment": "Stand Alone XY Mode"
+        },
+        {
+          "dmxRange": [
+            176,
+            177
+          ],
+          "type": "Maintenance",
+          "parameter": 7,
+          "comment": "Stand Alone Gel Mode"
+        },
+        {
+          "dmxRange": [
+            178,
+            179
+          ],
+          "type": "Maintenance",
+          "parameter": 8,
+          "comment": "Stand Alone FX"
+        },
+        {
+          "dmxRange": [
+            180,
+            181
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Stand Alone Preset Mode 1"
+        },
+        {
+          "dmxRange": [
+            182,
+            183
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Stand Alone Preset Mode 2"
+        },
+        {
+          "dmxRange": [
+            184,
+            185
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Stand Alone Preset Mode 3"
+        },
+        {
+          "dmxRange": [
+            186,
+            187
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Stand Alone Preset Mode 4"
+        },
+        {
+          "dmxRange": [
+            188,
+            189
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "Stand Alone Preset Mode 5"
+        },
+        {
+          "dmxRange": [
+            190,
+            191
+          ],
+          "type": "Maintenance",
+          "parameter": 6,
+          "comment": "Stand Alone Preset Mode 6"
+        },
+        {
+          "dmxRange": [
+            192,
+            193
+          ],
+          "type": "Maintenance",
+          "parameter": 7,
+          "comment": "Stand Alone Preset Mode 7"
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Maintenance",
+          "parameter": 8,
+          "comment": "Stand Alone Preset Mode 8"
+        },
+        {
+          "dmxRange": [
+            196,
+            197
+          ],
+          "type": "Maintenance",
+          "parameter": 9,
+          "comment": "Stand Alone Preset Mode 9"
+        },
+        {
+          "dmxRange": [
+            198,
+            199
+          ],
+          "type": "Maintenance",
+          "parameter": 10,
+          "comment": "Stand Alone Preset Mode 10"
+        },
+        {
+          "dmxRange": [
+            200,
+            201
+          ],
+          "type": "Maintenance",
+          "parameter": 11,
+          "comment": "Stand Alone Preset Mode 11"
+        },
+        {
+          "dmxRange": [
+            202,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 12,
+          "comment": "Stand Alone Preset Mode 12"
+        },
+        {
+          "dmxRange": [
+            204,
+            205
+          ],
+          "type": "Maintenance",
+          "parameter": 13,
+          "comment": "Stand Alone Preset Mode 13"
+        },
+        {
+          "dmxRange": [
+            206,
+            207
+          ],
+          "type": "Maintenance",
+          "parameter": 14,
+          "comment": "Stand Alone Preset Mode 14"
+        },
+        {
+          "dmxRange": [
+            208,
+            209
+          ],
+          "type": "Maintenance",
+          "parameter": 15,
+          "comment": "Stand Alone Preset Mode 15"
+        },
+        {
+          "dmxRange": [
+            210,
+            211
+          ],
+          "type": "Maintenance",
+          "parameter": 16,
+          "comment": "Stand Alone Preset Mode 16"
+        },
+        {
+          "dmxRange": [
+            212,
+            213
+          ],
+          "type": "Maintenance",
+          "parameter": 17,
+          "comment": "Stand Alone Preset Mode 17"
+        },
+        {
+          "dmxRange": [
+            214,
+            215
+          ],
+          "type": "Maintenance",
+          "parameter": 18,
+          "comment": "Stand Alone Preset Mode 18"
+        },
+        {
+          "dmxRange": [
+            216,
+            217
+          ],
+          "type": "Maintenance",
+          "parameter": 19,
+          "comment": "Stand Alone Preset Mode 19"
+        },
+        {
+          "dmxRange": [
+            218,
+            219
+          ],
+          "type": "Maintenance",
+          "parameter": 20,
+          "comment": "Stand Alone Preset Mode 20"
+        },
+        {
+          "dmxRange": [
+            220,
+            221
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Preset 1"
+        },
+        {
+          "dmxRange": [
+            222,
+            223
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Preset 2"
+        },
+        {
+          "dmxRange": [
+            224,
+            225
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Preset 3"
+        },
+        {
+          "dmxRange": [
+            226,
+            227
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Preset 4"
+        },
+        {
+          "dmxRange": [
+            228,
+            229
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Curve Square TWC"
+        },
+        {
+          "dmxRange": [
+            230,
+            231
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Fast"
+        },
+        {
+          "dmxRange": [
+            232,
+            233
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Minimum End Standard"
+        },
+        {
+          "dmxRange": [
+            234,
+            241
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Minimum End Low"
+        },
+        {
+          "dmxRange": [
+            242,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Reset all Control Channel values used"
+        }
+      ]
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2200K"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "15000K"
+        }
+      ]
+    },
+    "CTC 3": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 3 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "10000K"
+        }
+      ]
+    },
+    "CTC<>RGB 2": {
+      "name": "CTC<>RGB",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CCT layer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "RGB layer"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTCRangeSelector": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "NoFunction",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (CTCRangeSelector)",
+          "physical": 1,
+          "comment": "2200K - 15000K",
+          "switchChannels": {
+            "4_Body_CTC": "CTC 2",
+            "4_Body_CTC fine": "CTC 2 fine"
+          }
+        },
+        {
+          "dmxRange": [
+            20,
+            255
+          ],
+          "type": "Unknown (CTCRangeSelector)",
+          "physical": 2,
+          "comment": "2800K - 10000K",
+          "switchChannels": {
+            "4_Body_CTC": "CTC 3",
+            "4_Body_CTC fine": "CTC 3 fine"
+          }
+        }
+      ]
+    },
+    "WhitePoint": {
+      "fineChannelAliases": [
+        "WhitePoint fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            511
+          ],
+          "type": "Unknown (WhitePoint)",
+          "physical": 0,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            512,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Dynamic"
+        }
+      ]
+    },
+    "TransitionType": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 1,
+          "comment": "Standard Direct XY  (w/o Constant Brightness)"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 2,
+          "comment": "Through Black"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 3,
+          "comment": "Through White 3200K (w/o Constant Brightness)"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 4,
+          "comment": "Through White 3200K (Constant Brightness)"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 5,
+          "comment": "Through White 5600K (w/o Constant Brightness)"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 6,
+          "comment": "Through White 5600K (Constant Brightness)"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 7,
+          "comment": "Through White 6500K (w/o Constant Brightness)"
+        },
+        {
+          "dmxRange": [
+            80,
+            255
+          ],
+          "type": "Unknown (TransitionType)",
+          "physical": 8,
+          "comment": "Through White 6500K (Constant Brightness)"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 01"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 02"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 03"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 04"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 05"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 06"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 07"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 08"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 09"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 10"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 11"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 12"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 13"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 14"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 15"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 16"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 17"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 18"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 19"
+        },
+        {
+          "dmxRange": [
+            40,
+            167
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset 20"
+        },
+        {
+          "dmxRange": [
+            168,
+            169
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 2000K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            170,
+            171
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 2500K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            172,
+            173
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 2900K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            174,
+            175
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 3200K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            176,
+            177
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 4000K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            178,
+            179
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 5000K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            180,
+            181
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 5600K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            182,
+            183
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 6500K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            184,
+            185
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 8000K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            186,
+            187
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT - 10000K (+/- 0 GN)"
+        },
+        {
+          "dmxRange": [
+            188,
+            189
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "HMI"
+        },
+        {
+          "dmxRange": [
+            190,
+            191
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Low Pressure Sodium"
+        },
+        {
+          "dmxRange": [
+            192,
+            193
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CFL Bright White"
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CFL Cool White"
+        },
+        {
+          "dmxRange": [
+            196,
+            197
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CFL Daylight"
+        },
+        {
+          "dmxRange": [
+            198,
+            199
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Halogen"
+        },
+        {
+          "dmxRange": [
+            200,
+            201
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Candle"
+        },
+        {
+          "dmxRange": [
+            202,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Sun Direct"
+        },
+        {
+          "dmxRange": [
+            204,
+            205
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Sun Overcast"
+        },
+        {
+          "dmxRange": [
+            206,
+            207
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Sun Blue Hour"
+        },
+        {
+          "dmxRange": [
+            208,
+            209
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "120 Hue - 100% Saturation"
+        },
+        {
+          "dmxRange": [
+            210,
+            211
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "240 Hue - 100% Saturation"
+        },
+        {
+          "dmxRange": [
+            212,
+            213
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RC 3408 -  CCT 5600K"
+        },
+        {
+          "dmxRange": [
+            214,
+            215
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "L187 - CCT 3200K"
+        },
+        {
+          "dmxRange": [
+            216,
+            217
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RC 3152 -  CCT 3200K"
+        },
+        {
+          "dmxRange": [
+            218,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "L162 - CCT 3200K"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Turbo"
+        },
+        {
+          "dmxRange": [
+            6,
+            107
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 100,
+          "comment": "Manual Fan Speed"
+        },
+        {
+          "dmxRange": [
+            108,
+            109
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 1 Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 2 Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Off Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            114,
+            115
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 1 Contant Output"
+        },
+        {
+          "dmxRange": [
+            116,
+            117
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 2 Contant Output"
+        },
+        {
+          "dmxRange": [
+            118,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "OFF Contant Output"
+        }
+      ]
+    },
+    "Dummy": {
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "RGB<>GEL": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (RGB<>GEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "RGB layer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (RGB<>GEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (RGB<>GEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "GEL layer"
+        }
+      ]
+    },
+    "GelSource": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "0%",
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "100%",
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "200%",
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "300%",
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "400%",
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "500%",
+          "comment": "5000K"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "600%",
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "700%",
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Unknown (GelSource)",
+          "physical": "800%",
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            90,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "GelCategory": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 0,
+          "comment": "LEE Color Correction",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 10"
+          }
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 1,
+          "comment": "LEE Color Filters",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 12"
+          }
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 2,
+          "comment": "LEE 600 Series",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 14"
+          }
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 3,
+          "comment": "LEE Cosmetic Filters",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 16"
+          }
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 4,
+          "comment": "LEE 700 Series",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 18"
+          }
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 5,
+          "comment": "Rosco Color Correction",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 2"
+          }
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 6,
+          "comment": "Rosco CalColor",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 4"
+          }
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 7,
+          "comment": "Rosco Storaro Selection",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 6"
+          }
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 8,
+          "comment": "Rosco Cinelux",
+          "switchChannels": {
+            "5_Body_GelSelector": "GelSelector 8"
+          }
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Unknown (GelCategory)",
+          "physical": 9,
+          "comment": "Blackout",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            100,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved",
+          "switchChannels": {}
+        }
+      ]
+    },
+    "GelSelector": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "3202 - Full CTB"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "3203 -  3/4 CTB"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "3204 - 1/2 CTB"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "3206 - 1/3 CTB"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "3208 - 1/4 CTB"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "3216 - 1/8 CTB"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "3220 - Double CTB"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "3407 - Full CTO"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "3411 - 3/4 CTO"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "3408 - 1/2 CTO"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "3409 - 1/4 CTO"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "3410 - 1/8 CTO"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "3420 - Double CTO"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "3441 - Full CTS"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "3442 - 1/2 CTS"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "3443 - 1/4 CTS"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "3444 - 1/8 CTS"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "3304 - Full Plusgreen"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 18,
+          "comment": "3315 - 1/2 Plusgreen"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 19,
+          "comment": "3316 - 1/4 Plusgreen"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 20,
+          "comment": "3317 - 1/8 Plusgreen"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 21,
+          "comment": "3308 - Full Minusgreen"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 22,
+          "comment": "3309 - 3/4 Minusgreen"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 23,
+          "comment": "3313 - 1/2 Minusgreen"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 24,
+          "comment": "3314 - 1/4 Minusgreen"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 25,
+          "comment": "3318 - 1/8 Minusgreen"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 26,
+          "comment": "3310 - Fluorofilter"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 27,
+          "comment": "3150 - Industrial Vapor"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 28,
+          "comment": "3152 - Urban Vapor"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 29,
+          "comment": "3107 - Tough Y-1"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 30,
+          "comment": "3134 - Tough MT 54"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 31,
+          "comment": "3106 - Tough MTY"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 32,
+          "comment": "3102 - Tough MT2"
+        },
+        {
+          "dmxRange": [
+            66,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 33,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 2": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 3": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "4215 - 15 Blue"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "4230 - 30 Blue"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "4260 - 60 Blue"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "4290 - 90 Blue"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "4307 - 7 Cyan"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "4315 - 15 Cyan"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "4330 - 30 Cyan"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "4360 - 60 Cyan"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "4390 - 90 Cyan"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "4415 - 15 Green"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "4430 - 30 Green"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "4460 - 60 Green"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "4490 - 90 Green"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "4515 - 15 Yellow"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "4530 - 30 Yellow"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "4560 - 60 Yellow"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "4590 - 90 Yellow"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "4615 - 15 Red"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 18,
+          "comment": "4630 - 30 Red "
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 19,
+          "comment": "4660 - 60 Red"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 20,
+          "comment": "4690 - 90 Red"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 21,
+          "comment": "4715 - 15 Magenta"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 22,
+          "comment": "4730 - 30 Magenta"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 23,
+          "comment": "4760 - 60 Magenta"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 24,
+          "comment": "4790 - 90 Magenta"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 25,
+          "comment": "4815 - 15 Pink"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 26,
+          "comment": "4830 - 30 Pink"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 27,
+          "comment": "4860 - 60 Pink"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 28,
+          "comment": "4890 - 90 Pink"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 29,
+          "comment": "4915 - 15 Lavander"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 30,
+          "comment": "4930 - 30 Lavander"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 31,
+          "comment": "4960 - 60 Lavander"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 32,
+          "comment": "4990 - 90 Lavander"
+        },
+        {
+          "dmxRange": [
+            66,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 33,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 4": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 5": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "2001 - VS Red"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "2202 - VS Orange"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "2003 - VS Yellow"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "2004 - VS Green"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "2005 - VS Cyan"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "2006 - VS Azure"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "2007 - VS Blue"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "2008 - VS Indigo"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "2009 - VS Violet"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "2010 - VS Magenta"
+        },
+        {
+          "dmxRange": [
+            20,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 6": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 7": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "2 - Bastard Amber"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "302 - Pale Bastard Amber"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "6 - No Color Straw"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "8 - Pale Gold"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "310 - Daffodil"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "12 - Straw"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "16 - Light Amber"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "316 - Gallo Gold"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "17 - Light Flame"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "18 - Flame "
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "318 - Mayan Sun"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "21 - Golden Amber"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "321 - Soft Golden Amber"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "23 - Orange"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "325 - Henny Sky"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "26 - Light Red"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "33 - No Color Pink"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "333 - Blush Pink "
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 18,
+          "comment": "34 - Flesh Pink"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 19,
+          "comment": "37 - Pale Rose Pink"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 20,
+          "comment": "41 - Salmon"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 21,
+          "comment": "42 - Deep Salmon"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 22,
+          "comment": "44 - Middle Rose"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 23,
+          "comment": "47 - Light Rose Purple"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 24,
+          "comment": "51 - Surprise Pink"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 25,
+          "comment": "60 - No Color Blue"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 26,
+          "comment": "360 - Clearwater"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 27,
+          "comment": "62 - Booster Blue"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 28,
+          "comment": "362 - Tipton Blue"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 29,
+          "comment": "364 - Blue Bell"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 30,
+          "comment": "65 - Daylight Blue"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 31,
+          "comment": "365 - Tharon Delft Blue"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 32,
+          "comment": "375 - Cerulean Blue"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 33,
+          "comment": "376 - Bermuda Blue"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 34,
+          "comment": "77 - Green Blue"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 35,
+          "comment": "378 - Alice Blue"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 36,
+          "comment": "80 - Primary Blue"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 37,
+          "comment": "381 - Baldassari Blue"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 38,
+          "comment": "83 - Medium Blue"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 39,
+          "comment": "87 - Pale Yellow Green"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 40,
+          "comment": "88 - Light Green"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 41,
+          "comment": "89 - Moss Green"
+        },
+        {
+          "dmxRange": [
+            84,
+            85
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 42,
+          "comment": "91 - Primary Green"
+        },
+        {
+          "dmxRange": [
+            86,
+            87
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 43,
+          "comment": "92 - Turquoise "
+        },
+        {
+          "dmxRange": [
+            88,
+            89
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 44,
+          "comment": "93 - Blue Green"
+        },
+        {
+          "dmxRange": [
+            90,
+            91
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 45,
+          "comment": "99 - Chocolate"
+        },
+        {
+          "dmxRange": [
+            92,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 46,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 8": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 9": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "200 - Double CTB"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "201 - Full CTB"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "281 - 3/4 CTB"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "202 - 1/2 CTB"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "203 - 1/4 CTB"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "218 - 1/8 CTB"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "287 - Double CTO"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "204 - Full CTO"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "285 - 3/4 CTO"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "205 - 1/2 CTO"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "206 - 1/4 CTO"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "223 - 1/8 CTO"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "283 - 1 1/2 CTB"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "286 - 1 1/2 CTO"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "441 - Full CTS"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "442 - 1/2 CTS"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "443 - 1/4 CTS"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "444 - 1/8 CTS"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 18,
+          "comment": "207 - Full CTO + 3 ND"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 19,
+          "comment": "208 - Full CTO + 6 ND"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 20,
+          "comment": "212 - LCT Yellow Y1"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 21,
+          "comment": "213 - White Flame Green"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 22,
+          "comment": "219 - LEE Fluorescent Green"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 23,
+          "comment": "230 - Super Correction LCT Y"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 24,
+          "comment": "232 - Super Correction WF Green"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 25,
+          "comment": "236 - HMI to TW"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 26,
+          "comment": "237 - CID to TW"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 27,
+          "comment": "238 - CSI to TW"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 28,
+          "comment": "241 - LEE Fluorescent 5700K"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 29,
+          "comment": "242 - LEE Fluorescent 4300K"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 30,
+          "comment": "243 - LEE Fluorescent 3600K"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 31,
+          "comment": "244 - LEE Plus Green"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 32,
+          "comment": "245 - 1/2 Plus Green"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 33,
+          "comment": "246 - 1/4 Plus Green"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 34,
+          "comment": "278 - 1/8 Plus Green"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 35,
+          "comment": "247 - LEE Minus Green"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 36,
+          "comment": "248 - 1/2 Minus Green"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 37,
+          "comment": "249 - 1/4 Minus Green"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 38,
+          "comment": "279 - 1/8 Minus Green"
+        },
+        {
+          "dmxRange": [
+            78,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 39,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 10": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 11": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "2 - Rose Pink"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "3 - Lavander Tint"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "4 - Medium Bastard Amber"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "7 - Pale Yellow"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "8 -Dark Salmon"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "9 - Pale Amber Gold"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "10 - Medium Yellow"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "13 - Straw Tint"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "17 - Surprise Peach"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "19 - Fire"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "20 - Medium Amber"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "21 - Gold Amber"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "22 - Dark Amber"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "24 - Scarlet"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "25 - Sunset Red"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "26 - Bright Red"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "35 - Light Pink"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "36 - Medium Pink"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 18,
+          "comment": "46 - Dark Magenta"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 19,
+          "comment": "48 - Rose Purple"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 20,
+          "comment": "52 - Light Lavander"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 21,
+          "comment": "53 - Paler Lavander"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 22,
+          "comment": "58 - Lavander"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 23,
+          "comment": "61 - Mist Blue"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 24,
+          "comment": "63 - Pale Blue"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 25,
+          "comment": "68 - Sky Blue"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 26,
+          "comment": "75 - Evening Blue"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 27,
+          "comment": "79 - Just Blue"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 28,
+          "comment": "85 - Deeper Blue"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 29,
+          "comment": "88 - Lime Green"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 30,
+          "comment": "89 - Moss Green"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 31,
+          "comment": "90 - Dark Yellow Green"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 32,
+          "comment": "100 - Spring Yellow"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 33,
+          "comment": "101 - Yellow"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 34,
+          "comment": "102 - Light Amber"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 35,
+          "comment": "103 - Straw"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 36,
+          "comment": "104 - Deep Amber"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 37,
+          "comment": "106 - Primary Red"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 38,
+          "comment": "107 - Light Rose"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 39,
+          "comment": "108 - English Rose"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 40,
+          "comment": "109 - Light Salmon"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 41,
+          "comment": "110 - Middle Rose"
+        },
+        {
+          "dmxRange": [
+            84,
+            85
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 42,
+          "comment": "111 - Dark Pink"
+        },
+        {
+          "dmxRange": [
+            86,
+            87
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 43,
+          "comment": "113 - Magenta"
+        },
+        {
+          "dmxRange": [
+            88,
+            89
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 44,
+          "comment": "115 - Peacock Blue"
+        },
+        {
+          "dmxRange": [
+            90,
+            91
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 45,
+          "comment": "117 - Steel Blue"
+        },
+        {
+          "dmxRange": [
+            92,
+            93
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 46,
+          "comment": "118 - Light Blue"
+        },
+        {
+          "dmxRange": [
+            94,
+            95
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 47,
+          "comment": "120 - Deep Blue"
+        },
+        {
+          "dmxRange": [
+            96,
+            97
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 48,
+          "comment": "121 - LEE Green"
+        },
+        {
+          "dmxRange": [
+            98,
+            99
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 49,
+          "comment": "122 - Fern Green"
+        },
+        {
+          "dmxRange": [
+            100,
+            101
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 50,
+          "comment": "124 - Dark Green"
+        },
+        {
+          "dmxRange": [
+            102,
+            103
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 51,
+          "comment": "127 - Smokey Pink"
+        },
+        {
+          "dmxRange": [
+            104,
+            105
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 52,
+          "comment": "128 - Bright Pink"
+        },
+        {
+          "dmxRange": [
+            106,
+            107
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 53,
+          "comment": "131 - Marine Blue"
+        },
+        {
+          "dmxRange": [
+            108,
+            109
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 54,
+          "comment": "134 - Golden Amber"
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 55,
+          "comment": "135 - Deep Golden Amber"
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 56,
+          "comment": "136 - Pale Lavander"
+        },
+        {
+          "dmxRange": [
+            114,
+            115
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 57,
+          "comment": "137 - Special Lavander"
+        },
+        {
+          "dmxRange": [
+            116,
+            117
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 58,
+          "comment": "138 - Pale Green"
+        },
+        {
+          "dmxRange": [
+            118,
+            119
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 59,
+          "comment": "140 - Summer Blue"
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 60,
+          "comment": "142 - Pale Violet"
+        },
+        {
+          "dmxRange": [
+            122,
+            123
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 61,
+          "comment": "143 - Pale Navy Blue"
+        },
+        {
+          "dmxRange": [
+            124,
+            125
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 62,
+          "comment": "144 - No Color Blue"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 63,
+          "comment": "147 - Apricot "
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 64,
+          "comment": "148 - Bright Rose"
+        },
+        {
+          "dmxRange": [
+            130,
+            131
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 65,
+          "comment": "151 - Gold Tint"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 66,
+          "comment": "152 - Pale Gold"
+        },
+        {
+          "dmxRange": [
+            134,
+            135
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 67,
+          "comment": "153 - Pale Salmon"
+        },
+        {
+          "dmxRange": [
+            136,
+            137
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 68,
+          "comment": "154 - Pale Rose"
+        },
+        {
+          "dmxRange": [
+            138,
+            139
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 69,
+          "comment": "156 - Chocolate"
+        },
+        {
+          "dmxRange": [
+            140,
+            141
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 70,
+          "comment": "157 - Pink"
+        },
+        {
+          "dmxRange": [
+            142,
+            143
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 71,
+          "comment": "159 - No Color Straw"
+        },
+        {
+          "dmxRange": [
+            144,
+            145
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 72,
+          "comment": "161 - Slate Blue"
+        },
+        {
+          "dmxRange": [
+            146,
+            147
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 73,
+          "comment": "162 - Bastard Amber"
+        },
+        {
+          "dmxRange": [
+            148,
+            149
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 74,
+          "comment": "164 - Flame Red"
+        },
+        {
+          "dmxRange": [
+            150,
+            151
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 75,
+          "comment": "165 - Daylight Blue"
+        },
+        {
+          "dmxRange": [
+            152,
+            153
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 76,
+          "comment": "169 - Lilac Tint"
+        },
+        {
+          "dmxRange": [
+            154,
+            155
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 77,
+          "comment": "170 - Deep Lavander"
+        },
+        {
+          "dmxRange": [
+            156,
+            157
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 78,
+          "comment": "174 - Dark Steel Blue"
+        },
+        {
+          "dmxRange": [
+            158,
+            159
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 79,
+          "comment": "176 - Loving Amber"
+        },
+        {
+          "dmxRange": [
+            160,
+            161
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 80,
+          "comment": "180 - Dark Lavander"
+        },
+        {
+          "dmxRange": [
+            162,
+            163
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 81,
+          "comment": "182 - Light Red"
+        },
+        {
+          "dmxRange": [
+            164,
+            165
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 82,
+          "comment": "192 - Flesh Pink"
+        },
+        {
+          "dmxRange": [
+            166,
+            167
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 83,
+          "comment": "194 - Surprise Pink"
+        },
+        {
+          "dmxRange": [
+            168,
+            169
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 84,
+          "comment": "195 - Zenith Blue"
+        },
+        {
+          "dmxRange": [
+            170,
+            171
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 85,
+          "comment": "196 - True Blue"
+        },
+        {
+          "dmxRange": [
+            172,
+            173
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 86,
+          "comment": "197 - Alice Blue"
+        },
+        {
+          "dmxRange": [
+            174,
+            175
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 87,
+          "comment": "198 - Palace Blue"
+        },
+        {
+          "dmxRange": [
+            176,
+            177
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 88,
+          "comment": "199 - Regal Blue"
+        },
+        {
+          "dmxRange": [
+            178,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 89,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 12": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 13": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "600 - Arctic White"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "601 - Silver"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "602 - Platinum"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "603 - Moonlight White"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "604 - Full CT 85"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "650 - Industry Sodium"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "651 - HI Sodium"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "652 - Urban Sodium"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "653 - LO Sodium"
+        },
+        {
+          "dmxRange": [
+            18,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 14": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 15": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "184 - Cosmetic Peach"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "186 - Cosmetic Silver Rose"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "187 - Cosmetic Rouge"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "188 - Cosmetic Highlight"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "189 - Cosmetic Silver Moss"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "191 - Cosmetic Aqua Blue"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "705 - Lily Frost"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "717 - Shanklin Frost"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "718 - Half Shanklin Frost"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "720 - Durham Daylight Frost"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "749 - Hampshire Rose"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "774 - Soft Amber Key 1"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "775 - Soft Amber Key 2"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "791 - Moroccan Frost"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "217 - Blue Diffusion"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "221 - Blue Frost"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "224 - Daylight Blue Frost"
+        },
+        {
+          "dmxRange": [
+            34,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 16": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GelSelector 17": {
+      "name": "GelSelector",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 0,
+          "comment": "700 - Perfect Lavander"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 1,
+          "comment": "701 - Provence"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 2,
+          "comment": "702 - Special Pale Lavander"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 3,
+          "comment": "703 - Cold Lavander"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 4,
+          "comment": "704 - Lily"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 5,
+          "comment": "706 - Kings Fals Lavander"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 6,
+          "comment": "708 - Cool Lavander"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 7,
+          "comment": "709 - Electric Lilac"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 8,
+          "comment": "710 - Spir Special Blue"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 9,
+          "comment": "711 - Cold Blue"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 10,
+          "comment": "712 - Bedford Blue"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 11,
+          "comment": "714 - Elysian Blue"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 12,
+          "comment": "715 - Cabana Blue"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 13,
+          "comment": "716 - Mikkel Blue"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 14,
+          "comment": "719 - Colour Wash Blue"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 15,
+          "comment": "721 - Berry Blue"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 16,
+          "comment": "723 - Virgin Blue"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 17,
+          "comment": "724 - Ocean Blue"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 18,
+          "comment": "725 - Old Steel Blue"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 19,
+          "comment": "728 - Steel Green"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 20,
+          "comment": "730 - Liberty Green"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 21,
+          "comment": "731 - Dirty Ice"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 22,
+          "comment": "733 - Damp Squib"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 23,
+          "comment": "738 - JAS Green"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 24,
+          "comment": "742 - Bram Brown"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 25,
+          "comment": "744 - Dirty White"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 26,
+          "comment": "746 - Brown"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 27,
+          "comment": "747 Easy White"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 28,
+          "comment": "748 - Seedy Pink"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 29,
+          "comment": "763 - Wheat"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 30,
+          "comment": "764 - Sun Colour Straw"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 31,
+          "comment": "765 - LEE Yellow"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 32,
+          "comment": "773 - Cardbox Amber"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 33,
+          "comment": "776 - Nectarine"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 34,
+          "comment": "778 - Millenium Gold"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 35,
+          "comment": "779 - Bastard Pink"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 36,
+          "comment": "781 - Terry Red"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 37,
+          "comment": "789 - Blood Red"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 38,
+          "comment": "790 - Moroccan Pink"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 39,
+          "comment": "794 - Pretty n' Pink"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 40,
+          "comment": "795 - Magical Magenta"
+        },
+        {
+          "dmxRange": [
+            82,
+            255
+          ],
+          "type": "Unknown (GelSelector)",
+          "physical": 41,
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "GelSelector 18": {
+      "name": "GelSelector",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "CTC<>XY": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CCT layer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "XY layer"
+        }
+      ]
+    },
+    "X": {
+      "fineChannelAliases": [
+        "X fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "B 3": {
+      "name": "B",
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_Brightness)",
+          "physical": "0%",
+          "comment": "Empty Channel Set"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "Unknown (CIE_Brightness)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Unknown (CIE_Brightness)",
+          "physical": "100%",
+          "comment": "Empty Channel Set"
+        }
+      ]
+    },
+    "R 3": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "C": {
+      "fineChannelAliases": [
+        "C fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "Lime": {
+      "fineChannelAliases": [
+        "Lime fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "WW": {
+      "fineChannelAliases": [
+        "WW fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Square Law"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Inverse Square Law"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "High Res @ Low"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Tungsten"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emulation ON"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emulation OFF"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dynamic Smoothing ON"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dynamic Smoothing OFF"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Native"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "ProPhoto"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "sRGB"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Rec2020"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Rec709"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (CRIMode)",
+          "physical": 0,
+          "comment": "High Brightness"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (CRIMode)",
+          "physical": 0,
+          "comment": "High Quality"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Turbo"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Manual"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 1 Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 2 Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Off Dynamic Output"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 1 Contant Output"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Quiet 2 Contant Output"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "OFF Contant Output"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - On Encoder Touch CCT mode"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - On Encoder Touch RGB mode"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - On Encoder Touch HSI mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - On Encoder Touch XY mode"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - On Encoder Touch GEL mode"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold - On Encoder Touch FX mode"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Standalone"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emergency"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - CCT mode"
+        },
+        {
+          "dmxRange": [
+            84,
+            85
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - RGB mode"
+        },
+        {
+          "dmxRange": [
+            86,
+            87
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - HSI mode"
+        },
+        {
+          "dmxRange": [
+            88,
+            89
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - XY mode"
+        },
+        {
+          "dmxRange": [
+            90,
+            91
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - GEL mode"
+        },
+        {
+          "dmxRange": [
+            92,
+            93
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "On Encoder Touch - FX mode"
+        },
+        {
+          "dmxRange": [
+            94,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Standalone"
+        },
+        {
+          "dmxRange": [
+            96,
+            97
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            98,
+            99
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Emergency"
+        },
+        {
+          "dmxRange": [
+            100,
+            101
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1282Hz",
+          "comment": "1282 Hz"
+        },
+        {
+          "dmxRange": [
+            102,
+            103
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "2000Hz",
+          "comment": "2 kHz"
+        },
+        {
+          "dmxRange": [
+            104,
+            105
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "4000Hz",
+          "comment": "4 kHz"
+        },
+        {
+          "dmxRange": [
+            106,
+            107
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "6000Hz",
+          "comment": "6 kHz"
+        },
+        {
+          "dmxRange": [
+            108,
+            109
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "10000Hz",
+          "comment": "10 kHz"
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "12000Hz",
+          "comment": "12 kHz"
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "15000Hz",
+          "comment": "15 kHz"
+        },
+        {
+          "dmxRange": [
+            114,
+            115
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "20000Hz",
+          "comment": "20 kHz"
+        },
+        {
+          "dmxRange": [
+            116,
+            117
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "25000Hz",
+          "comment": "25 kHz"
+        },
+        {
+          "dmxRange": [
+            118,
+            119
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "36000Hz",
+          "comment": "36 kHz"
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "40000Hz",
+          "comment": "40 kHz"
+        },
+        {
+          "dmxRange": [
+            122,
+            123
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Power Limit 100%"
+        },
+        {
+          "dmxRange": [
+            124,
+            125
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Power Limit 75%"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Power Limit 50%"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Power Limit 25%"
+        },
+        {
+          "dmxRange": [
+            130,
+            131
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Invert Mapping On"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Invert Mapping Off"
+        },
+        {
+          "dmxRange": [
+            134,
+            135
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Timeout Always On"
+        },
+        {
+          "dmxRange": [
+            136,
+            137
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Timeout 10s"
+        },
+        {
+          "dmxRange": [
+            138,
+            139
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Timeout 30s"
+        },
+        {
+          "dmxRange": [
+            140,
+            141
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Timeout 60s"
+        },
+        {
+          "dmxRange": [
+            142,
+            143
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Dimmer 25%"
+        },
+        {
+          "dmxRange": [
+            144,
+            145
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Dimmer 50%"
+        },
+        {
+          "dmxRange": [
+            146,
+            147
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Dimmer 75%"
+        },
+        {
+          "dmxRange": [
+            148,
+            149
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Dimmer 100%"
+        },
+        {
+          "dmxRange": [
+            150,
+            151
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Encoder Off"
+        },
+        {
+          "dmxRange": [
+            152,
+            153
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Backlight Encoder On"
+        },
+        {
+          "dmxRange": [
+            154,
+            155
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Flip Display On"
+        },
+        {
+          "dmxRange": [
+            156,
+            157
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Flip Display Off"
+        },
+        {
+          "dmxRange": [
+            158,
+            159
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Keylock On"
+        },
+        {
+          "dmxRange": [
+            160,
+            161
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Keylock Off"
+        },
+        {
+          "dmxRange": [
+            162,
+            163
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Master DMX"
+        },
+        {
+          "dmxRange": [
+            164,
+            165
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Master NO DMX"
+        },
+        {
+          "dmxRange": [
+            166,
+            167
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Slave"
+        },
+        {
+          "dmxRange": [
+            168,
+            169
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCT Mode"
+        },
+        {
+          "dmxRange": [
+            170,
+            171
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RGB Mode"
+        },
+        {
+          "dmxRange": [
+            172,
+            173
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "HSI Mode"
+        },
+        {
+          "dmxRange": [
+            174,
+            175
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "XY Mode"
+        },
+        {
+          "dmxRange": [
+            176,
+            177
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Gel Mode"
+        },
+        {
+          "dmxRange": [
+            178,
+            179
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "FX Mode"
+        },
+        {
+          "dmxRange": [
+            180,
+            181
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 1"
+        },
+        {
+          "dmxRange": [
+            182,
+            183
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 2"
+        },
+        {
+          "dmxRange": [
+            184,
+            185
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 3"
+        },
+        {
+          "dmxRange": [
+            186,
+            187
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 4"
+        },
+        {
+          "dmxRange": [
+            188,
+            189
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 5"
+        },
+        {
+          "dmxRange": [
+            190,
+            191
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 6"
+        },
+        {
+          "dmxRange": [
+            192,
+            193
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 7"
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 8"
+        },
+        {
+          "dmxRange": [
+            196,
+            197
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 9"
+        },
+        {
+          "dmxRange": [
+            198,
+            199
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 10"
+        },
+        {
+          "dmxRange": [
+            200,
+            201
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 11"
+        },
+        {
+          "dmxRange": [
+            202,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 12"
+        },
+        {
+          "dmxRange": [
+            204,
+            205
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 13"
+        },
+        {
+          "dmxRange": [
+            206,
+            207
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 14"
+        },
+        {
+          "dmxRange": [
+            208,
+            209
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 15"
+        },
+        {
+          "dmxRange": [
+            210,
+            211
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 16"
+        },
+        {
+          "dmxRange": [
+            212,
+            213
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 17"
+        },
+        {
+          "dmxRange": [
+            214,
+            215
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 18"
+        },
+        {
+          "dmxRange": [
+            216,
+            217
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 19"
+        },
+        {
+          "dmxRange": [
+            218,
+            219
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset Mode 20"
+        },
+        {
+          "dmxRange": [
+            220,
+            221
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset1"
+        },
+        {
+          "dmxRange": [
+            222,
+            223
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset2"
+        },
+        {
+          "dmxRange": [
+            224,
+            225
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset3"
+        },
+        {
+          "dmxRange": [
+            226,
+            227
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Preset4"
+        },
+        {
+          "dmxRange": [
+            228,
+            229
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Curve Square TWC"
+        },
+        {
+          "dmxRange": [
+            230,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Reset all Control Channel values used"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "UNO_1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "DUO_2ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "IRGB_4ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "Standard_11ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "CTC fine",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "M16 - CCT + RGB 16bit_21ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "4_Body_CTC",
+        "4_Body_CTC fine",
+        "Tint",
+        "CTC<>RGB 2",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "CTCRangeSelector",
+        "WhitePoint",
+        "WhitePoint fine",
+        "TransitionType",
+        "Sh1",
+        "Ctrl1",
+        "Function",
+        "Fan Mode",
+        "Dummy"
+      ]
+    },
+    {
+      "name": "M18 - CCT + RGB + GEL 16bit_25ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "4_Body_CTC",
+        "4_Body_CTC fine",
+        "Tint",
+        "CTC<>RGB 2",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "RGB<>GEL",
+        "GelSource",
+        "GelCategory",
+        "5_Body_GelSelector",
+        "CTCRangeSelector",
+        "WhitePoint",
+        "WhitePoint fine",
+        "TransitionType",
+        "Sh1",
+        "Ctrl1",
+        "Function",
+        "Fan Mode",
+        "Dummy"
+      ]
+    },
+    {
+      "name": "M28 - CCT + XY 16bit_17ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "4_Body_CTC",
+        "4_Body_CTC fine",
+        "Tint",
+        "CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "CTCRangeSelector",
+        "TransitionType",
+        "Sh1",
+        "Ctrl1",
+        "Function",
+        "Fan Mode",
+        "Dummy"
+      ]
+    },
+    {
+      "name": "M36 - RAW 16bit_19ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 4",
+        "B 4 fine",
+        "C",
+        "C fine",
+        "Lime",
+        "Lime fine",
+        "WW",
+        "WW fine",
+        "Sh1",
+        "Ctrl1 2",
+        "Function",
+        "Fan Mode",
+        "Dummy"
+      ]
+    },
+    {
+      "name": "PIXEL 2V",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "PIXEL 2H",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "PIXEL 4",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "PIXEL 2V + I",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "PIXEL 2H + I",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "PIXEL 4 + I",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      343,
+      142,
+      397
+    ],
+    "weight": 12.0,
+    "power": 300,
+    "bulb": {
+      "type": "623nm / 527nm / 458nm / 509nm / 576nm / 583nm / 623nm / 526nm / 458nm LED",
+      "lumens": 16221,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        22.9,
+        42.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red_RAW",
+      "cie": "0.694000,0.303000,14.493000",
+      "hex": "#ee0000",
+      "dominantWavelength": 623.0
+    },
+    {
+      "name": "Green_RAW",
+      "cie": "0.164000,0.725000,26.509000",
+      "hex": "#00b100",
+      "dominantWavelength": 527.0
+    },
+    {
+      "name": "Blue_RAW",
+      "cie": "0.133000,0.067000,6.547000",
+      "hex": "#0030ea",
+      "dominantWavelength": 458.0
+    },
+    {
+      "name": "Cyan_RAW",
+      "cie": "0.093000,0.630000,23.268000",
+      "hex": "#00ab47",
+      "dominantWavelength": 509.0
+    },
+    {
+      "name": "Mint_RAW",
+      "cie": "0.372000,0.465000,67.679000",
+      "hex": "#cbe16a",
+      "dominantWavelength": 576.0
+    },
+    {
+      "name": "Warm White_RAW",
+      "cie": "0.434000,0.405000,56.151000",
+      "hex": "#fcb86e",
+      "dominantWavelength": 583.0
+    },
+    {
+      "name": "Red_RGB",
+      "cie": "0.694000,0.303000,13.048000",
+      "hex": "#e30000",
+      "dominantWavelength": 623.0
+    },
+    {
+      "name": "Green_RGB",
+      "cie": "0.161000,0.722000,25.459000",
+      "hex": "#00ae00",
+      "dominantWavelength": 526.0
+    },
+    {
+      "name": "Blue_RGB",
+      "cie": "0.151000,0.033000,6.142000",
+      "hex": "#4500ff",
+      "dominantWavelength": 458.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "The EclPanel IPSoft1x1 is a 1x1 format IP65 Soft Light, featuring high quality of light in all weather conditions. \nEclPanel IPSoft range is engineered with a 6-color LED light source controllable in 4 section, maximizing the light flux and delivering a beautiful soft projection with outstanding quality and rich color spectrum.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-09-01T13:09:26",
+      "text": "Rev 004 - RAW emitters order fixed"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "df2a5dc153d6ce36"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "eclpanelipsoft1x1",
+  "gwFixtureTypeID": "9F17EAD0-0EA7-4F90-B4D0-4873410219E6"
+}

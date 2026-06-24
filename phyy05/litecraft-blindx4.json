@@ -1,0 +1,322 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Litecraft BlindX4",
+  "shortName": "BX4",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-11-21",
+    "lastModifyDate": "2025-07-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 37FE627E-9BC9-4F32-BE20-46DE5E41F1AD"
+    }
+  },
+  "comment": "BlindX4: LED 4lite Blinder",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            11,
+            132
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Frequenz"
+        },
+        {
+          "dmxRange": [
+            133,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Keine Funktion",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Auto 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Auto 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Auto 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Auto 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Auto 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            240
+          ],
+          "type": "Effect",
+          "effectName": "Auto 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Keine Funktion",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "keine Funktion"
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Modus 1"
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Modus 2"
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Modus 3"
+        },
+        {
+          "dmxRange": [
+            121,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "keine Funktion"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "4CH",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4"
+      ]
+    },
+    {
+      "name": "9CH",
+      "channels": [
+        "Dim 5",
+        "Dim 5 fine",
+        "Sh1",
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4",
+        "FX1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      192,
+      400,
+      400
+    ],
+    "weight": 8.7,
+    "DMXconnector": "XLR5",
+    "power": 260,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8750,
+      "colorTemperature": 2900
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        86.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warmwhite",
+      "cie": "0.436930,0.404070,100.000000",
+      "hex": "#ffed8e"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED 4lite Blinder",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-29T12:54:02",
+      "text": "Final_BlindX4, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "63af1de8d53c4d11"
+  },
+  "manufacturerKey": "phyy05",
+  "fixtureKey": "litecraft-blindx4",
+  "gwFixtureTypeID": "37FE627E-9BC9-4F32-BE20-46DE5E41F1AD"
+}

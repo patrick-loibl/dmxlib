@@ -1,0 +1,307 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Ango 600",
+  "shortName": "Ango",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-08",
+    "lastModifyDate": "2024-09-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F2DB58E4-51A9-4AC5-86E3-843BF0B862AC"
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Full"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Full"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Full"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strob"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Safety OFF"
+        },
+        {
+          "dmxRange": [
+            250,
+            250
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "SafetY ON"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Safety OFF"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "R",
+        "G",
+        "B",
+        "Dim",
+        "StrobeM Strobe",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1100,
+      235,
+      330
+    ],
+    "weight": 280.0,
+    "power": 5000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 100000000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        0.1,
+        0.1
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150100,0.060040,7.224000",
+      "hex": "#0100ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-17T14:12:22",
+      "text": "V1.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c63a09a63ce41a72"
+  },
+  "manufacturerKey": "rti",
+  "fixtureKey": "ango-600",
+  "gwFixtureTypeID": "F2DB58E4-51A9-4AC5-86E3-843BF0B862AC"
+}

@@ -1,0 +1,173 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "NV-400",
+  "shortName": "NV-400",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-09-14",
+    "lastModifyDate": "2021-09-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 531AF2E0-65E7-4A5B-8659-7B6C8D1BD32F"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Strobe"
+        },
+        {
+          "dmxRange": [
+            7,
+            122
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Strobe"
+        },
+        {
+          "dmxRange": [
+            124,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            128,
+            168
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "12Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran1"
+        },
+        {
+          "dmxRange": [
+            169,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "10Hz",
+          "speedEnd": "9Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran2"
+        },
+        {
+          "dmxRange": [
+            189,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "8Hz",
+          "speedEnd": "7Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran3"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode2 2 DMX",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      246,
+      150
+    ],
+    "power": 100,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Novalight NV-400",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-09-14T01:48:36",
+      "text": "Jacky"
+    }
+  },
+  "manufacturerKey": "novalight",
+  "fixtureKey": "nv-400",
+  "gwFixtureTypeID": "531AF2E0-65E7-4A5B-8659-7B6C8D1BD32F"
+}

@@ -1,0 +1,285 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "T400WW",
+  "shortName": "T400WW",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-11",
+    "lastModifyDate": "2025-11-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E0052CB4-B1D7-468C-B087-2AFE49462C96"
+    }
+  },
+  "comment": "Terbly T400WW",
+  "rdm": {
+    "modelId": 1939
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 20,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Strobe"
+        },
+        {
+          "dmxRange": [
+            22,
+            116
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            117,
+            126
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Strobe"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Pulse"
+        },
+        {
+          "dmxRange": [
+            128,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            180,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Pulse"
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "min Rnd"
+        },
+        {
+          "dmxRange": [
+            193,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "max Rnd"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage "
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural "
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre "
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Setting"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1Channel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "4 Channel",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      215,
+      786,
+      208
+    ],
+    "weight": 8.5,
+    "power": 400,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        15.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-11-11T06:30:00",
+      "text": "First Realease"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ac5c9656b849a967"
+  },
+  "manufacturerKey": "terbly",
+  "fixtureKey": "t400ww",
+  "gwFixtureTypeID": "E0052CB4-B1D7-468C-B087-2AFE49462C96"
+}

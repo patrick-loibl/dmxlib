@@ -1,0 +1,1295 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Laserblade2",
+  "shortName": "Laserblade2",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-04-11",
+    "lastModifyDate": "2026-03-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 46CB3BDB-F2E2-4D76-9C8E-E36F0C7B8217"
+    }
+  },
+  "comment": "8 Cell RGB Laser Array Fixture with X scanning and motorised tilt",
+  "rdm": {
+    "modelId": 1
+  },
+  "wheels": {
+    "Patterns": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Single Beam",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "6e7886c93c2dd4ab"
+        },
+        {
+          "type": "Color",
+          "name": "2 Beam",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "fd9e2d5d14644702"
+        },
+        {
+          "type": "Color",
+          "name": "3 Beam",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "d5a3a72a26f67348"
+        },
+        {
+          "type": "Color",
+          "name": "4 Beam",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "4e46e4442892a208"
+        },
+        {
+          "type": "Color",
+          "name": "5 Beam",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "eea90500f446f9ef"
+        },
+        {
+          "type": "Color",
+          "name": "Flat Scan",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "db1ccbb7e84ab6c9"
+        },
+        {
+          "type": "Color",
+          "name": "2 Flat",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "1657de9c179a862e"
+        },
+        {
+          "type": "Color",
+          "name": "3 Flat",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "c6313c4b56469dc5"
+        },
+        {
+          "type": "Color",
+          "name": "4 Flat",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "30567ab4ef907063"
+        },
+        {
+          "type": "Color",
+          "name": "5 Flat",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "4fc084675d39aa0e"
+        },
+        {
+          "type": "Color",
+          "name": "o-o",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "c292b77de3c784c6"
+        },
+        {
+          "type": "Color",
+          "name": "o-o-o",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "0d15450524ebc85a"
+        },
+        {
+          "type": "Color",
+          "name": "o-o-o-o",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "a43c67e1baea30e7"
+        },
+        {
+          "type": "Color",
+          "name": "o-o-o-o-o",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "f104b4b0994ba9b2"
+        },
+        {
+          "type": "Color",
+          "name": "o  -  o",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "2353fae721f68064"
+        },
+        {
+          "type": "Color",
+          "name": "o  -  o  -  o",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "1f821ece4a9a4eaa"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Zoom": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Scale X": {
+      "capability": {
+        "type": "Unknown (Scale_X)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Strobe Rate": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            100
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "25s",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            101,
+            200
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "26s",
+          "durationEnd": "50s",
+          "comment": "Random Strobe"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "StrobeDuration",
+          "duration": "100s",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "G1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 1,
+          "comment": "o"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 2,
+          "comment": "o o"
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 3,
+          "comment": "o o o"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 4,
+          "comment": "o o o o"
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 5,
+          "comment": "o o o o o"
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 6,
+          "comment": "-"
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 7,
+          "comment": "- -"
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 8,
+          "comment": "- - -"
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 9,
+          "comment": "- - - -"
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 10,
+          "comment": "- - - - -"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 11
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 12
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 13
+        },
+        {
+          "dmxRange": [
+            131,
+            140
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 14
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 15,
+          "comment": "o   -   o"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Patterns",
+          "slotNumber": 16,
+          "comment": "o  -   o   -   o"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Action"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Colour - White Balance"
+        },
+        {
+          "dmxRange": [
+            211,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Colour - High Power"
+        },
+        {
+          "dmxRange": [
+            221,
+            221
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Colour Min Calibration"
+        },
+        {
+          "dmxRange": [
+            222,
+            222
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Colour Max Calibration"
+        },
+        {
+          "dmxRange": [
+            223,
+            223
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Scanner Calibration"
+        },
+        {
+          "dmxRange": [
+            224,
+            224
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Blackout On Move - Disable"
+        },
+        {
+          "dmxRange": [
+            225,
+            225
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Blackout On Move - Enable"
+        },
+        {
+          "dmxRange": [
+            226,
+            228
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            229,
+            229
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Canecl Calibration Change"
+        },
+        {
+          "dmxRange": [
+            230,
+            230
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Save Calibration Change"
+        },
+        {
+          "dmxRange": [
+            231,
+            231
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 1 -Setup -Min"
+        },
+        {
+          "dmxRange": [
+            232,
+            232
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 1 -Setup -Max"
+        },
+        {
+          "dmxRange": [
+            233,
+            233
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 1 -Setup -Enable"
+        },
+        {
+          "dmxRange": [
+            234,
+            234
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 1 -Setup -Disable"
+        },
+        {
+          "dmxRange": [
+            235,
+            235
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 2 -Setup -Min"
+        },
+        {
+          "dmxRange": [
+            236,
+            236
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 2 -Setup -Max"
+        },
+        {
+          "dmxRange": [
+            237,
+            237
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 2 -Setup -Enable"
+        },
+        {
+          "dmxRange": [
+            238,
+            238
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 2 -Setup -Disable"
+        },
+        {
+          "dmxRange": [
+            239,
+            239
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 3 -Setup -Min"
+        },
+        {
+          "dmxRange": [
+            240,
+            240
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 3 -Setup -Max"
+        },
+        {
+          "dmxRange": [
+            241,
+            241
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 3 -Setup -Enable"
+        },
+        {
+          "dmxRange": [
+            242,
+            242
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 3 -Setup -Disable"
+        },
+        {
+          "dmxRange": [
+            243,
+            243
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 4 -Setup -Min"
+        },
+        {
+          "dmxRange": [
+            244,
+            244
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 4 -Setup -Max"
+        },
+        {
+          "dmxRange": [
+            245,
+            245
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 4 -Setup -Enable"
+        },
+        {
+          "dmxRange": [
+            246,
+            247
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dead Zone 4 -Setup -Disable"
+        },
+        {
+          "dmxRange": [
+            248,
+            248
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dark Mode - Enable"
+        },
+        {
+          "dmxRange": [
+            249,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dark Mode - Disable"
+        },
+        {
+          "dmxRange": [
+            250,
+            250
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reboot Fixture"
+        },
+        {
+          "dmxRange": [
+            251,
+            251
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Save Dead Zones"
+        },
+        {
+          "dmxRange": [
+            252,
+            252
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Cancel Dead Zones"
+        },
+        {
+          "dmxRange": [
+            253,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Action"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "No FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Zoom Up FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Zoom Down FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Zoom Bounce FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Random Zoom FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Position FX <<<",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Position FX >>>",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Position Bounce FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Position Random FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX Sync": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "No Offset"
+        },
+        {
+          "dmxRange": [
+            1,
+            50
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Offset >>>"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Offset <<<"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Offset <<<>>>"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Offset >>><<<"
+        }
+      ]
+    },
+    "Global X Size": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Global X Size)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Zero"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Global X Size)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Range"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Global X Size)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full"
+        }
+      ]
+    },
+    "Scan Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (Scan Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Control": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            110
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Disarm"
+        },
+        {
+          "dmxRange": [
+            111,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Arm"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Disarm"
+        }
+      ]
+    },
+    "R HotPoint": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (ColorRGB_R#2)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "G HotPoint": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (ColorRGB_G#2)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B HotPoint": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (ColorRGB_B#2)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim HotPoint": {
+      "capability": {
+        "type": "Unknown (Dimmer#2)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim",
+        "Zoom",
+        "P",
+        "P fine",
+        "Scale X",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe Rate",
+        "Strobe Duration",
+        "G1",
+        "T",
+        "T fine",
+        "Ctrl1",
+        "FX1",
+        "FX1 Rate",
+        "FX Sync",
+        "Global X Size",
+        "Scan Rate",
+        "Control"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim",
+        "R HotPoint",
+        "G HotPoint",
+        "B HotPoint",
+        "Dim HotPoint",
+        "Zoom",
+        "P",
+        "P fine",
+        "Scale X",
+        "G1",
+        "Scan Rate",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe Rate",
+        "Strobe Duration",
+        "T",
+        "T fine",
+        "Ctrl1",
+        "FX1",
+        "FX1 Rate",
+        "FX Sync",
+        "Global X Size",
+        "Control"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      187,
+      274,
+      1200
+    ],
+    "weight": 30.0,
+    "power": 75,
+    "bulb": {
+      "type": "638nm / 525nm / 450nm LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270021",
+      "hex": "#ff0000",
+      "dominantWavelength": 638.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.300100,0.600000,71.520018",
+      "hex": "#01ff00",
+      "dominantWavelength": 525.0
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff",
+      "dominantWavelength": 450.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "8 Cell RGB Laser Array Fixture with X scanning and motorised tilt",
+    "beamType": "Rectangle",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-25T16:46:49",
+      "text": "Advanced V2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "37f22a4840285291"
+  },
+  "manufacturerKey": "er-productions",
+  "fixtureKey": "laserblade2",
+  "gwFixtureTypeID": "46CB3BDB-F2E2-4D76-9C8E-E36F0C7B8217"
+}

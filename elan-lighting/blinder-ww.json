@@ -1,0 +1,1203 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Blinder ww",
+  "shortName": "Blinder",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-11-28",
+    "lastModifyDate": "2025-07-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E6A79FB4-6888-43AB-9BEE-83987E51ADA5"
+    }
+  },
+  "comment": "Blinder T Stack: LED 2lite Blinder WW+R",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Dimmer Curve"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Exponential Dimmer Curve"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Logarithmic Dimmer Curve"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve Dimmer Curve"
+        }
+      ]
+    },
+    "Blackout Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "LED / fast"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Halogen / slow"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            85,
+            170
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Redshift OFF"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Redshift ON"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 20,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "Unknown (Open)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            26,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            64,
+            69
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            70,
+            70
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            71,
+            83
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            84,
+            89
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            90,
+            90
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            91,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            104,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            111,
+            123
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            124,
+            129
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            131,
+            143
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            144,
+            149
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            151,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            164,
+            169
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "Unknown (Burst Pulse)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            171,
+            183
+          ],
+          "type": "Unknown (Burst Pulse)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            184,
+            189
+          ],
+          "type": "Unknown (Burst Pulse)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            190,
+            190
+          ],
+          "type": "Unknown (Random Burst Pulse)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            191,
+            203
+          ],
+          "type": "Unknown (Random Burst Pulse)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            204,
+            209
+          ],
+          "type": "Unknown (Random Burst Pulse)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            210,
+            210
+          ],
+          "type": "Unknown (Sine Wave)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            211,
+            223
+          ],
+          "type": "Unknown (Sine Wave)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            224,
+            229
+          ],
+          "type": "Unknown (Sine Wave)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            230,
+            230
+          ],
+          "type": "Unknown (Burst)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            231,
+            243
+          ],
+          "type": "Unknown (Burst)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            244,
+            255
+          ],
+          "type": "Unknown (Burst)",
+          "physicalStart": "0s",
+          "physicalEnd": "1s",
+          "comment": "Slow"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "100%"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "No FX",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            41
+          ],
+          "type": "Effect",
+          "effectName": "Slow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            42,
+            82
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            83,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "Fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "Slow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            126
+          ],
+          "type": "Effect",
+          "effectName": "Fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Slow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "Effect",
+          "effectName": "Fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Slow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            211
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            212,
+            212
+          ],
+          "type": "Effect",
+          "effectName": "Fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            213,
+            213
+          ],
+          "type": "Effect",
+          "effectName": "Slow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            214,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            30,
+            34
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display ON (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            35,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display OFF (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            40,
+            44
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            45,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX Fail Blackout (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            50,
+            54
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX Fail Hold (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            55,
+            59
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX Fail Emergency Light (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            60,
+            64
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            65,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RAW (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            70,
+            74
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "User Calibrated (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            75,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "800Hz (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            85,
+            89
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1200Hz (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            90,
+            94
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2000Hz (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            95,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "3600Hz (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            100,
+            104
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "12kHz (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            105,
+            109
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "25kHz (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan Auto (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan Silent (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            125,
+            129
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan Off (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            130,
+            134
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan High Power (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            135,
+            139
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            144
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Invert Map ON (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            145,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Invert Map OFF (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            150,
+            154
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            155,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Illumination Mode (hold 1;5s)"
+        },
+        {
+          "dmxRange": [
+            160,
+            164
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Boost Mode (hold 1;5s)"
+        },
+        {
+          "dmxRange": [
+            165,
+            169
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            174
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Factory Reset (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            175,
+            179
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "User Reset (hold 3s)"
+        },
+        {
+          "dmxRange": [
+            180,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 6 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH DWE",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2CH DWE",
+      "channels": [
+        "Dim",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "4CH DWE",
+      "channels": [
+        "Dim",
+        "Dim Curve",
+        "Blackout Mode",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "5CH Strobe",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Strobe Duration",
+        "Dim 2",
+        "Dim 3"
+      ]
+    },
+    {
+      "name": "7CH Standard",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Dim 2",
+        "Dim 3",
+        "Dim Curve",
+        "Blackout Mode",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "10CH Extended",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Strobe Duration",
+        "Dim 2",
+        "Dim 3",
+        "Dim Curve",
+        "Blackout Mode",
+        "Dim Mode",
+        "FX1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "13CH Extended",
+      "channels": [
+        "Dim 4",
+        "Dim 4 fine",
+        "Sh1",
+        "Strobe Duration",
+        "Dim 5",
+        "Dim 5 fine",
+        "Dim 6",
+        "Dim 6 fine",
+        "Dim Curve",
+        "Blackout Mode",
+        "Dim Mode",
+        "FX1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      192,
+      200,
+      400
+    ],
+    "weight": 10.3,
+    "DMXconnector": "XLR5",
+    "power": 260,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10400,
+      "colorTemperature": 2900
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        86.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warmwhite",
+      "cie": "0.436930,0.404070,100.000000",
+      "hex": "#ffed8e"
+    },
+    {
+      "name": "Emitter 1",
+      "cie": "0.633800,0.337500,100.000000",
+      "hex": "#ff4500"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED 2lite Blinder WW+R",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-07-03T12:00:15",
+      "text": "03072025-03"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a658b152ef73f1d8"
+  },
+  "manufacturerKey": "elan-lighting",
+  "fixtureKey": "blinder-ww",
+  "gwFixtureTypeID": "E6A79FB4-6888-43AB-9BEE-83987E51ADA5"
+}

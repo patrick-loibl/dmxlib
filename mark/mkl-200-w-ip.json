@@ -1,0 +1,154 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MKL 200 W IP",
+  "shortName": "MKL 200 W IP",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-12-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D8959D9F-1122-4735-B862-8E669A58A560"
+    }
+  },
+  "comment": "Proyector LED IP65 de 60º de apertura integrado por 1 LED COB blanco cálido de 200W.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow > Fast"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Color Jump Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Fade Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Slow > Fast"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1 CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "4 CH",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      98,
+      181
+    ],
+    "weight": 5.1,
+    "power": 96,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        45.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Proyector LED IP65 de 60º de apertura integrado por 1 LED COB blanco cálido de 200W.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-05T11:56:43",
+      "text": "Version1_3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d84c507844c083d6"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "mkl-200-w-ip",
+  "gwFixtureTypeID": "D8959D9F-1122-4735-B862-8E669A58A560"
+}

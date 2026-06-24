@@ -1,0 +1,119 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Genius Flame Machine",
+  "shortName": "Moka GFM",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-01",
+    "lastModifyDate": "2023-02-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FE852DEE-55E1-4145-A130-F6A81027351A"
+    }
+  },
+  "comment": "Moka H-E01 Genius Flame Machine: China Flame FX",
+  "rdm": {
+    "modelId": 1
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            101
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            153
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "FIRE"
+        },
+        {
+          "dmxRange": [
+            154,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "OFF"
+        }
+      ]
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Ignition 255 = ON"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Safety channel",
+      "channels": [
+        "Dim",
+        "T"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      550,
+      500,
+      450
+    ],
+    "weight": 2.0
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "China Flame FX",
+    "operatingTemperature": [
+      0,
+      30
+    ],
+    "revision": {
+      "date": "2023-02-01T07:50:24",
+      "text": "Pröbstl"
+    }
+  },
+  "manufacturerKey": "moka",
+  "fixtureKey": "genius-flame-machine",
+  "gwFixtureTypeID": "FE852DEE-55E1-4145-A130-F6A81027351A"
+}

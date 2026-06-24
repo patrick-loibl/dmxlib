@@ -1,0 +1,183 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Mini RGBW Strobe",
+  "shortName": "",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-04-09",
+    "lastModifyDate": "2026-04-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7C1F6C25-8035-1002-CCC1-2603A4A4AC7E"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Slow to Fast"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "30 Ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      150,
+      100,
+      300
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Beam",
+      "cie": "0.312727,0.329023,100.000020",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "R",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-09T12:30:38",
+      "text": "V001"
+    }
+  },
+  "manufacturerKey": "yuer-lighting-professional",
+  "fixtureKey": "mini-rgbw-strobe",
+  "gwFixtureTypeID": "7C1F6C25-8035-1002-CCC1-2603A4A4AC7E"
+}

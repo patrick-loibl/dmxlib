@@ -1,0 +1,891 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MOVILIGHT 480 ZOOM",
+  "shortName": "Movi480Z",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-06-27",
+    "lastModifyDate": "2025-11-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 08B8A884-64F1-4312-9E78-A5C381E57711"
+    }
+  },
+  "comment": "MOVILIGHT 480 ZOOM es una cabeza móvil que incorpora la última tecnología de iluminación LED  de 480W. Gracias a sus precisos motores, los movimientos en ambos ejes son realmente rápidos. Ofrece escenas de mezcla de colores y efectos.\n\nEl dispositivo incorpora un conector de alimentación PowerCON de entrada y salida y una conexión XLR de tipo 3 para la entrada y salida de señales DMX. MOVILIGHT 480 ZOOM puede ser controlado a través del protocolo DMX y funciona tanto por audio o como maestro/esclavo. Trabajando con DMX, es posible utilizar 11, 17, 18 y 58 canales, con efectos como dimmer lineal, estrobo, control de color y zoom.\n\nMOVILIGHT 480 ZOOM está fabricado en plástico ABS, lo que reduce su peso y ofrece una carcasa dura contra los impactos.",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Pan"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Tilt"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "F > S"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            4,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        },
+        {
+          "dmxRange": [
+            104,
+            107
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            108,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        },
+        {
+          "dmxRange": [
+            208,
+            212
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            213,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "S > F"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Open"
+        }
+      ]
+    },
+    "C1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "R > G > B > R",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "S": {
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Saturation"
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom"
+      }
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            59
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            60,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        },
+        {
+          "dmxRange": [
+            100,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "CTC"
+      }
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Color Change S > F",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Color Change S > F",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Shaper Macros": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            6
+          ],
+          "type": "Effect",
+          "effectName": "LED 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            7,
+            13
+          ],
+          "type": "Effect",
+          "effectName": "LED 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            14,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "LED 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "LED 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            34
+          ],
+          "type": "Effect",
+          "effectName": "LED 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            35,
+            41
+          ],
+          "type": "Effect",
+          "effectName": "LED 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            42,
+            48
+          ],
+          "type": "Effect",
+          "effectName": "LED 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            49,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "LED 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            62
+          ],
+          "type": "Effect",
+          "effectName": "LED 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            63,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "LED 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            76
+          ],
+          "type": "Effect",
+          "effectName": "LED 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            77,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "LED 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Shape 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            97
+          ],
+          "type": "Effect",
+          "effectName": "Shape 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            98,
+            104
+          ],
+          "type": "Effect",
+          "effectName": "Shape 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            105,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "Shape 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            118
+          ],
+          "type": "Effect",
+          "effectName": "Shape 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "Shape 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            132
+          ],
+          "type": "Effect",
+          "effectName": "Shape 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            133,
+            139
+          ],
+          "type": "Effect",
+          "effectName": "Shape 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            146
+          ],
+          "type": "Effect",
+          "effectName": "Shape 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            147,
+            153
+          ],
+          "type": "Effect",
+          "effectName": "Shape 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            154,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Shape 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "Shape 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            182,
+            188
+          ],
+          "type": "Effect",
+          "effectName": "Macro 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            189,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "Macro 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            196,
+            202
+          ],
+          "type": "Effect",
+          "effectName": "Macro 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            203,
+            209
+          ],
+          "type": "Effect",
+          "effectName": "Macro 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            210,
+            216
+          ],
+          "type": "Effect",
+          "effectName": "Macro 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            217,
+            223
+          ],
+          "type": "Effect",
+          "effectName": "Macro 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            230
+          ],
+          "type": "Effect",
+          "effectName": "Macro 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            231,
+            237
+          ],
+          "type": "Effect",
+          "effectName": "Macro Color 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            238,
+            244
+          ],
+          "type": "Effect",
+          "effectName": "Macro Color 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            245,
+            251
+          ],
+          "type": "Effect",
+          "effectName": "Macro Color 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Macro Color 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Shaper Macros Speed": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "S > F"
+      }
+    },
+    "C2": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "R > G > B > R",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "C3": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "Dimmer Back",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "HSI - 11 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Strobe1",
+        "C1",
+        "S",
+        "Dim",
+        "Zoom",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "STD - 17 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Dim fine",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "CTC",
+        "C1",
+        "Color FX1",
+        "Zoom",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "GUI - 18 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "Shaper Macros",
+        "Shaper Macros Speed",
+        "C2",
+        "C3",
+        "Zoom",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "EXT - 58 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Dim fine",
+        "Strobe1",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Zoom",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      280,
+      180,
+      280
+    ],
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        66.0,
+        66.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "MOVILIGHT 480 ZOOM es una cabeza móvil que incorpora la última tecnología de iluminación LED  de 480W. Gracias a sus precisos motores, los movimientos en ambos ejes son realmente rápidos. Ofrece escenas de mezcla de colores y efectos.\n\nEl dispositivo incorpora un conector de alimentación PowerCON de entrada y salida y una conexión XLR de tipo 3 para la entrada y salida de señales DMX. MOVILIGHT 480 ZOOM puede ser controlado a través del protocolo DMX y funciona tanto por audio o como maestro/esclavo. Trabajando con DMX, es posible utilizar 11, 17, 18 y 58 canales, con efectos como dimmer lineal, estrobo, control de color y zoom.\n\nMOVILIGHT 480 ZOOM está fabricado en plástico ABS, lo que reduce su peso y ofrece una carcasa dura contra los impactos.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-14T12:15:45",
+      "text": "ALL OK 3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e9c53007b7c4ee20"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "movilight-480-zoom",
+  "gwFixtureTypeID": "08B8A884-64F1-4312-9E78-A5C381E57711"
+}

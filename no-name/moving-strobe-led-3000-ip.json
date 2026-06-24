@@ -1,0 +1,310 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Moving Strobe LED-3000 IP",
+  "shortName": "Moving Strobe",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-02-23",
+    "lastModifyDate": "2026-03-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1C5BB3C8-FFDC-4085-BB93-104571255BF9"
+    }
+  },
+  "availableChannels": {
+    "T": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            182
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            183,
+            184
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "90 degree angle front"
+        },
+        {
+          "dmxRange": [
+            185,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strob Slow to Medium"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe Medium to Fast"
+        }
+      ]
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Value"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "61 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "StrobeM Strobe",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      232,
+      467
+    ],
+    "weight": 15.3,
+    "power": 70,
+    "bulb": {
+      "type": "625nm / 524nm / 456nm / 490nm / 488nm / -544nm / 572nm / 478nm LED",
+      "lumens": 2463,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        35.0,
+        63.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.699179,0.299365,20.349236",
+      "hex": "#ff0000",
+      "dominantWavelength": 625.049988
+    },
+    {
+      "name": "Green",
+      "cie": "0.172842,0.684168,36.599732",
+      "hex": "#00cb1c",
+      "dominantWavelength": 524.099976
+    },
+    {
+      "name": "Blue",
+      "cie": "0.152241,0.027236,8.163036",
+      "hex": "#6400ff",
+      "dominantWavelength": 455.630005
+    },
+    {
+      "name": "White",
+      "cie": "0.318151,0.331059,49.219767",
+      "hex": "#beb9b8",
+      "dominantWavelength": 489.76001
+    },
+    {
+      "name": "Cyan",
+      "cie": "0.159643,0.292302,44.425493",
+      "hex": "#00d0e8",
+      "dominantWavelength": 488.5
+    },
+    {
+      "name": "Magenta",
+      "cie": "0.369499,0.134987,28.642010",
+      "hex": "#ff00ff",
+      "dominantWavelength": -544.340027
+    },
+    {
+      "name": "Yellow",
+      "cie": "0.431175,0.495792,59.425610",
+      "hex": "#dcce00",
+      "dominantWavelength": 571.979981
+    },
+    {
+      "name": "All On White",
+      "cie": "0.306532,0.308925,100.000000",
+      "hex": "#fffbff",
+      "dominantWavelength": 478.350006
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-28T12:02:30",
+      "text": "Version 7"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "356f851295f3abbf"
+  },
+  "manufacturerKey": "no-name",
+  "fixtureKey": "moving-strobe-led-3000-ip",
+  "gwFixtureTypeID": "1C5BB3C8-FFDC-4085-BB93-104571255BF9"
+}

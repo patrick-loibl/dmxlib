@@ -1,0 +1,243 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Notex",
+  "shortName": "Notex",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-11-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A09771C6-A725-4DB3-BCF4-E799E9C6A62C"
+    }
+  },
+  "comment": "Notex wash",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Color Mix Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "P",
+        "T",
+        "Zoom",
+        "Sh1",
+        "Dim",
+        "Color Mix Mode",
+        "Color FX1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "P fine",
+        "T fine",
+        "Pos MSpeed",
+        "FX1",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 5.6,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-11-14T22:40:03",
+      "text": "Only channels no 3d or presets"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "exton",
+  "fixtureKey": "notex",
+  "gwFixtureTypeID": "A09771C6-A725-4DB3-BCF4-E799E9C6A62C"
+}

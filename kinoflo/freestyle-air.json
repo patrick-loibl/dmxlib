@@ -1,0 +1,292 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FREESTYLE AIR",
+  "shortName": "FSTYLE AIR",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-26",
+    "lastModifyDate": "2026-04-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E1080820-EC77-4BFC-AF69-BA59D8EB8DDF"
+    }
+  },
+  "comment": "KINOFLO FREESTYLE AIR",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0 G/M"
+        },
+        {
+          "dmxRange": [
+            12,
+            22
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100 M"
+        },
+        {
+          "dmxRange": [
+            23,
+            121
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "99 M - 1 M"
+        },
+        {
+          "dmxRange": [
+            122,
+            133
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0 G/M"
+        },
+        {
+          "dmxRange": [
+            134,
+            232
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "1 G - 99 G"
+        },
+        {
+          "dmxRange": [
+            233,
+            243
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100 G"
+        },
+        {
+          "dmxRange": [
+            244,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0 G/M"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "XF": {
+      "fineChannelAliases": [
+        "XF fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color XF)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color CTC": {
+      "fineChannelAliases": [
+        "Color CTC fine"
+      ],
+      "capability": {
+        "type": "Unknown (ColorAdd_CTC)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "P3 : CCT RGB 8BIT",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "P8 : CCT RGB 16BIT",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "Tint",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "P25 : XFADE CCT+RGB 8BIT",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "XF",
+        "Color CTC",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "P26 : XFADE CCT+RGB 16BIT",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "CTC fine",
+        "Tint",
+        "XF",
+        "XF fine",
+        "Color CTC",
+        "Color CTC fine",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      330,
+      50,
+      1000
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-20T09:29:47",
+      "text": "TRUE MATCH FW 6-0 _ CREATED BY TOINE"
+    }
+  },
+  "manufacturerKey": "kinoflo",
+  "fixtureKey": "freestyle-air",
+  "gwFixtureTypeID": "E1080820-EC77-4BFC-AF69-BA59D8EB8DDF"
+}

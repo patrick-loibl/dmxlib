@@ -1,0 +1,283 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FINE 400D LEKO",
+  "shortName": "FINE 400D LEKO",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-26",
+    "lastModifyDate": "2025-12-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B521E8DF-E58A-4DC6-BFE6-76CE2C64332F"
+    }
+  },
+  "comment": "FINE 400D LEKO为一款高色温(5600K)LED成像灯，创新的光学及散热系统设计，采用高显色性大功率400W LED 模组、高质量光学透镜，该产品具有三高特点:高光效、高显色、高清晰；采用机身和镜头分离技术，沿袭传统成像灯设计理念和使用方法，光源和成像独立组合，配置光闸，应用方便",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "dim"
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "r"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "g"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Empty Channel Set"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "Mint white"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber",
+        "comment": "ry"
+      }
+    },
+    "N\\A": {
+      "capability": {
+        "type": "Unknown (NA)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "N\\A 2": {
+      "name": "N\\A",
+      "capability": {
+        "type": "Unknown (NA)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            6,
+            105
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "shutter"
+        },
+        {
+          "dmxRange": [
+            106,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Pulse"
+        },
+        {
+          "dmxRange": [
+            111,
+            178
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Pulse"
+        },
+        {
+          "dmxRange": [
+            180,
+            185
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            186,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Rnd"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (NA)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "H": {
+      "fineChannelAliases": [
+        "H fine"
+      ],
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Chroma Mode": {
+      "capability": {
+        "type": "Unknown (ChromaticMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "cto"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 3  10CH",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "N\\A",
+        "N\\A 2",
+        "Sh1",
+        "Function"
+      ]
+    },
+    {
+      "name": "Mode1 6ch",
+      "channels": [
+        "H",
+        "H fine",
+        "Chroma Mode",
+        "Dim",
+        "Sh1",
+        "Function"
+      ]
+    },
+    {
+      "name": "Mode2 7ch",
+      "channels": [
+        "H",
+        "H fine",
+        "Chroma Mode",
+        "Dim",
+        "Sh1",
+        "Function",
+        "CTO"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      552,
+      714,
+      226
+    ],
+    "weight": 10.0,
+    "power": 280,
+    "bulb": {
+      "type": "LED",
+      "lumens": 11000,
+      "colorTemperature": 5700
+    },
+    "lens": {
+      "degreesMinMax": [
+        19.0,
+        19.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "FINE 400D LEKO为一款高色温(5600K)LED成像灯，创新的光学及散热系统设计，采用高显色性大功率400W LED 模组、高质量光学透镜，该产品具有三高特点:高光效、高显色、高清晰；采用机身和镜头分离技术，沿袭传统成像灯设计理念和使用方法，光源和成像独立组合，配置光闸，应用方便",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-29T02:21:00",
+      "text": "FINE 400D  LEKO"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "56f2db77f53b3eff"
+  },
+  "manufacturerKey": "fine-art",
+  "fixtureKey": "fine-400d-leko",
+  "gwFixtureTypeID": "B521E8DF-E58A-4DC6-BFE6-76CE2C64332F"
+}

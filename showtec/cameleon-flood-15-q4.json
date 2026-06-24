@@ -1,0 +1,291 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Cameleon Flood 15 Q4",
+  "shortName": "Cameleon",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-05-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 64EA8D2A-BC1C-4CE2-8037-E093FCFD70AF"
+    }
+  },
+  "wheels": {
+    "Colors": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Colors",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0Hz",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Pulse1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speed": "0Hz",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speed": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speed": "15Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colors",
+          "slotNumber": 0,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            8,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colors",
+          "slotNumber": 0
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "6 channel",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "10 channel",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "Pulse1",
+        "C1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      210,
+      330
+    ],
+    "weight": 5.2,
+    "DMXconnector": "XLR3",
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 3434,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        39.0,
+        39.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-05-02T13:40:41",
+      "text": "Changed orientation of beam"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "77aa3a0b667f7367"
+  },
+  "manufacturerKey": "showtec",
+  "fixtureKey": "cameleon-flood-15-q4",
+  "gwFixtureTypeID": "64EA8D2A-BC1C-4CE2-8037-E093FCFD70AF"
+}

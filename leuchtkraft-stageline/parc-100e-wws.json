@@ -1,0 +1,229 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PARC-100E/WWS",
+  "shortName": "100E",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-02-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7F1D59FA-1E74-4389-8265-A98DC68396A0"
+    }
+  },
+  "comment": "100W COB-LED Warm-White\n\nTemperature-controlled power limitation\n- if on, the power consumption will be reduced to 50% when temperature reaches 80°C. Will rise to 100%, if temperature has dropped to 58°C.\n\nLED response time\n- to simulate slow response of a conventional lamp, select the desired setting from the four settings \"dr-1\"(slightly slow response) to \"dr-4\"(slowest respsonse). It's not possible to save setting 2-4. Lamp will be reset to setting 0 after it is switched off.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Slowest Strobe"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Fastes Strobe"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Reaction Time"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reactiontime LED 1 - slow"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reactiontime LED 2"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reactiontime LED 3"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reactiontime LED 4 - slowest"
+        },
+        {
+          "dmxRange": [
+            101,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            150,
+            155
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Turn off Powerlimit (3s)"
+        },
+        {
+          "dmxRange": [
+            156,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            205
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Turn on Powerlimit (3s)"
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1-Channel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3-Channel",
+      "channels": [
+        "Dim",
+        "Strobe Frequency",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      200,
+      200
+    ],
+    "weight": 1.5,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        70.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "100W COB-LED Warm-White\n\nTemperature-controlled power limitation\n- if on, the power consumption will be reduced to 50% when temperature reaches 80°C. Will rise to 100%, if temperature has dropped to 58°C.\n\nLED response time\n- to simulate slow response of a conventional lamp, select the desired setting from the four settings \"dr-1\"(slightly slow response) to \"dr-4\"(slowest respsonse). It's not possible to save setting 2-4. Lamp will be reset to setting 0 after it is switched off.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-18T20:50:41",
+      "text": "v1.2 - Updated Beam Properties"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "leuchtkraft-stageline",
+  "fixtureKey": "parc-100e-wws",
+  "gwFixtureTypeID": "7F1D59FA-1E74-4389-8265-A98DC68396A0"
+}

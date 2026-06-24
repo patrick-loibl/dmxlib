@@ -1,0 +1,330 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Photon Multi RGB",
+  "shortName": "PhotMult",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-26",
+    "lastModifyDate": "2024-11-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D17F45B3-CB45-4B99-8E4C-31E2488BD7AF"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Macros"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Closed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Pulse",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "Colours Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "Effect",
+          "effectName": "7 Colour Snap",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "Effect",
+          "effectName": "18 Colour Snap",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "Sound 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "From Menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode 1"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode 2"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode 3"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4278190080,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "9CH",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Color Macro1",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "4CH",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "3CH",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      288,
+      244
+    ],
+    "weight": 3.5,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-11-26T04:21:44",
+      "text": "Rev 100"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "badf5920a44db19c"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "photon-multi-rgb",
+  "gwFixtureTypeID": "D17F45B3-CB45-4B99-8E4C-31E2488BD7AF"
+}

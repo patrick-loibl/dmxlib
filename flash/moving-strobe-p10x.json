@@ -1,0 +1,234 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Moving Strobe P10X",
+  "shortName": "P10X",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-01-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E4F0DD6A-6313-4AEC-827F-481EB5C9B54A"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro3": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "48 ch",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim 2",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Color Macro2",
+        "Color Macro3",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "42 ch",
+      "channels": [
+        "T",
+        "T fine",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 5.6,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-01-29T13:31:37",
+      "text": "FLASH_v2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "flash",
+  "fixtureKey": "moving-strobe-p10x",
+  "gwFixtureTypeID": "E4F0DD6A-6313-4AEC-827F-481EB5C9B54A"
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SPARK PYRO 750",
+  "shortName": "PYRO SPARK",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-02-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: CF90AE43-ECFB-4F21-A66C-F25F1318F772"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "FIRE"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            150,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CLEAR"
+        }
+      ]
+    },
+    "Ctrl2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "HEAT"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STOP HEAT"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 CHANNEL",
+      "channels": [
+        "Dim",
+        "Ctrl1",
+        "Ctrl2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      150,
+      100
+    ]
+  },
+  "gwDmxProfiles": [
+    {
+      "name": "MODE CHANNEL 3",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-02-26T22:26:06",
+      "text": "Matteo89"
+    }
+  },
+  "manufacturerKey": "pyro",
+  "fixtureKey": "spark-pyro-750",
+  "gwFixtureTypeID": "CF90AE43-ECFB-4F21-A66C-F25F1318F772"
+}

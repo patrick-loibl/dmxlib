@@ -1,0 +1,224 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VL550D",
+  "shortName": "VL550D",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-30",
+    "lastModifyDate": "2023-11-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4286F16B-E031-489B-906A-6E5F4DAB44E0"
+    }
+  },
+  "comment": "VL550D Wash: Series 550 Wash Luminaire with internal dimmer",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "C": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "Y": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Yellow"
+      }
+    },
+    "M": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Magenta"
+      }
+    },
+    "Frost1": {
+      "capability": {
+        "type": "Frost",
+        "frostIntensityStart": 0,
+        "frostIntensityEnd": 1,
+        "comment": "Frost"
+      }
+    },
+    "Focus MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Focus Timing"
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Color Timing"
+      }
+    },
+    "Zoom MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Beam Timing"
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Extended 16-Bit Mode (13CH)",
+      "channels": [
+        "Dim",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "C",
+        "Y",
+        "M",
+        "Frost1",
+        "Focus MSpeed",
+        "Color Mix MSpeed",
+        "Zoom MSpeed",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      253,
+      350,
+      253
+    ],
+    "weight": 21.8,
+    "power": 1320,
+    "bulb": {
+      "type": "LED",
+      "lumens": 14000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        35.0,
+        35.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Series 550 Wash Luminaire with internal dimmer",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -29,
+      50
+    ],
+    "revision": {
+      "date": "2023-11-30T16:36:13",
+      "text": "VL550D based on VL5 file.  Extended mode only"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d2de84b6cac83d15"
+  },
+  "manufacturerKey": "vari-lite",
+  "fixtureKey": "vl550d",
+  "gwFixtureTypeID": "4286F16B-E031-489B-906A-6E5F4DAB44E0"
+}

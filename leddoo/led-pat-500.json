@@ -1,0 +1,221 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED PAT 500",
+  "shortName": "PAT",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-18",
+    "lastModifyDate": "2024-10-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0594FDD9-C1FD-4179-81C7-48389A473BF3"
+    }
+  },
+  "comment": "PAT Vintage 500, Decoration Fixture with 2 Instances , 1 Lamp + RGB Strip",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "max"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "7 Ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "Dim",
+        "Sh1",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "1 Ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 Ch",
+      "channels": [
+        "Dim",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "4 Ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      460,
+      265,
+      460
+    ],
+    "weight": 9.0,
+    "power": 500,
+    "bulb": {
+      "type": "Halogen",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        90.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.640100,0.330000,21.260006",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520003",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "PAT Vintage 500, Decoration Fixture with 2 Instances , 1 Lamp + RGB Strip",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      70
+    ],
+    "revision": {
+      "date": "2024-10-06T14:50:24",
+      "text": "V2.0 by Gui, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e3a593c27ebf7441"
+  },
+  "manufacturerKey": "leddoo",
+  "fixtureKey": "led-pat-500",
+  "gwFixtureTypeID": "0594FDD9-C1FD-4179-81C7-48389A473BF3"
+}

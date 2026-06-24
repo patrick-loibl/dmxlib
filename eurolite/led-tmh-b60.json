@@ -1,0 +1,242 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED TMH-B60",
+  "shortName": "TMH-B60",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-07-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BC77F790-1056-4700-A8B7-7C60E817719C"
+    }
+  },
+  "comment": "LED TMH-B60 Moving-Head Beam",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Global MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX1 Pos": {
+      "capability": {
+        "type": "Rotation",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Global MSpeed",
+        "Dim",
+        "Strobe Mode",
+        "R",
+        "G",
+        "B",
+        "White",
+        "FX1",
+        "FX1 Rate",
+        "FX1 Pos"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 3.25,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.648600,0.341800,100.000000",
+      "hex": "#ff3700"
+    },
+    {
+      "name": "Green",
+      "cie": "0.309400,0.609600,100.000000",
+      "hex": "#39ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.155600,0.052830,100.000000",
+      "hex": "#c200ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-07-23T20:12:00",
+      "text": "initial"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f85a38eb4d2bcb8d"
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "led-tmh-b60",
+  "gwFixtureTypeID": "BC77F790-1056-4700-A8B7-7C60E817719C"
+}

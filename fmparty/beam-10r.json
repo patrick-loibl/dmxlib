@@ -1,0 +1,221 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "beam-10r",
+  "shortName": "beam-10r",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-20",
+    "lastModifyDate": "2026-05-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7A0A1463-FA87-4C3B-AF6E-5C6BC58526A3"
+    }
+  },
+  "comment": "Miner light Beam 10r 280w, sharpy style",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            43689
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            43690,
+            43690
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            43691,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Frost1": {
+      "capability": {
+        "type": "Frost",
+        "frostIntensityStart": 0,
+        "frostIntensityEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "C1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Unknown",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "G1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Unknown",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1
+      }
+    },
+    "Prism1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Prism"
+      }
+    },
+    "Rotate1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "PrismRotation",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard",
+      "channels": [
+        "P",
+        "T",
+        "P fine",
+        "T fine",
+        null,
+        "Frost1",
+        "Sh1",
+        "Dim",
+        "C1",
+        null,
+        "G1",
+        null,
+        "Focus1",
+        "Prism1",
+        "Rotate1",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      330,
+      96,
+      405
+    ],
+    "weight": 19.0,
+    "power": 189,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 7940,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        3.8,
+        3.8
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Miner light Beam 10r 280w, sharpy style",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-23T14:26:51",
+      "text": "beta2"
+    }
+  },
+  "manufacturerKey": "fmparty",
+  "fixtureKey": "beam-10r",
+  "gwFixtureTypeID": "7A0A1463-FA87-4C3B-AF6E-5C6BC58526A3"
+}

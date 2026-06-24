@@ -1,0 +1,234 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Stageblinder FLEX Blaze (Single Pod)",
+  "shortName": "Blaze Pod",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-06-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 10569F48-99B8-4C75-87DA-3E40D494AC10"
+    }
+  },
+  "comment": "FLEX Blaze Pod: The Showtec Stage Blinder FLEX Blaze Single Pod is a powerful 100-watt LED blinder that uses a warm white COB LED of 3000 K with a CRI of >92. It has uniquely integrated amber LEDs for mimicking a tungsten dim effect and RGB LEDs for a blaze effect. IP65",
+  "rdm": {
+    "modelId": 210
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            54
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            55,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            104,
+            152
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            201
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            202,
+            250
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Custom",
+      "channels": [
+        "White",
+        "Amber",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "Basic Strobe",
+      "channels": [
+        "Dim 3",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Basic",
+      "channels": [
+        "Dim 3",
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      115,
+      200
+    ],
+    "weight": 1.47,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 100000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        45.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "The Showtec Stage Blinder FLEX Blaze Single Pod is a powerful 100-watt LED blinder that uses a warm white COB LED of 3000 K with a CRI of >92. It has uniquely integrated amber LEDs for mimicking a tungsten dim effect and RGB LEDs for a blaze effect. IP65",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-06-18T14:56:05",
+      "text": "20240618-2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "32d07f3b25f52560"
+  },
+  "manufacturerKey": "showtec",
+  "fixtureKey": "stageblinder-flex-blaze-single-pod",
+  "gwFixtureTypeID": "10569F48-99B8-4C75-87DA-3E40D494AC10"
+}

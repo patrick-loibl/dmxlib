@@ -1,0 +1,2176 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "APUTURE LS600C",
+  "shortName": "Aputure 600",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-06",
+    "lastModifyDate": "2025-02-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EB1233B8-750E-431B-AAC4-9D9E1A4D1DDC"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "max"
+        }
+      ]
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-100 Green"
+        },
+        {
+          "dmxRange": [
+            21,
+            119
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-99 to -1 Green"
+        },
+        {
+          "dmxRange": [
+            120,
+            145
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral/No Effect"
+        },
+        {
+          "dmxRange": [
+            146,
+            244
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+1 to +99 Green"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+100 Green"
+        }
+      ]
+    },
+    "Crossfade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Color"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            22,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "H": {
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "S": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    },
+    "HSI base": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "Unknown (HSI base)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Gel": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "Unknown (Gel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rosco",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            30,
+            59
+          ],
+          "type": "Unknown (Gel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lee",
+          "switchChannels": {
+            "5_Beam_Series": "Series 2"
+          }
+        },
+        {
+          "dmxRange": [
+            60,
+            255
+          ],
+          "type": "Unknown (Gel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserved",
+          "switchChannels": {}
+        }
+      ]
+    },
+    "Series": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Col corr"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Cal Color"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Storaro"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Cinelux"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            50,
+            255
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Series 2": {
+      "name": "Series",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Col Corr"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Col Filters"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "600 Series"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Cosmetic"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "700 Series"
+        },
+        {
+          "dmxRange": [
+            50,
+            255
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Category": {
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "X": {
+      "capability": {
+        "type": "Unknown (CIE_X)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Y": {
+      "capability": {
+        "type": "Unknown (CIE_Y)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4278190080,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Color Ctrl": {
+      "defaultValue": 0,
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CCT + RGB",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1",
+            "9_Beam_Parametr 2": "Parametr 2",
+            "9_Beam_Parametr 3": "Parametr 3",
+            "9_Beam_Parametr 4": "Parametr 4",
+            "9_Beam_Parametr 5": "Parametr 5",
+            "9_Beam_Parametr 6": "Parametr 6",
+            "9_Beam_Parametr 7": "Parametr 7 2"
+          }
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CCT",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 2",
+            "9_Beam_Parametr 2": "Parametr 2 2",
+            "9_Beam_Parametr 3": "Parametr 3 3",
+            "9_Beam_Parametr 4": "Parametr 4 2",
+            "9_Beam_Parametr 5": "Parametr 5 2",
+            "9_Beam_Parametr 6": "Parametr 6 2",
+            "9_Beam_Parametr 7": "Parametr 7 3"
+          }
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CCT + HSI",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 3",
+            "9_Beam_Parametr 2": "Parametr 2 3",
+            "9_Beam_Parametr 3": "Parametr 3 4",
+            "9_Beam_Parametr 4": "Parametr 4 3",
+            "9_Beam_Parametr 5": "Parametr 5 3",
+            "9_Beam_Parametr 6": "Parametr 6 3",
+            "9_Beam_Parametr 7": "Parametr 7 5"
+          }
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RGB",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 4",
+            "9_Beam_Parametr 2": "Parametr 2 4",
+            "9_Beam_Parametr 3": "Parametr 3 5",
+            "9_Beam_Parametr 4": "Parametr 4 5",
+            "9_Beam_Parametr 5": "Parametr 5 4",
+            "9_Beam_Parametr 6": "Parametr 6 4",
+            "9_Beam_Parametr 7": "Parametr 7 6"
+          }
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "HSI",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 5",
+            "9_Beam_Parametr 2": "Parametr 2 5",
+            "9_Beam_Parametr 3": "Parametr 3 6",
+            "9_Beam_Parametr 4": "Parametr 4 7",
+            "9_Beam_Parametr 5": "Parametr 5 5",
+            "9_Beam_Parametr 6": "Parametr 6 5",
+            "9_Beam_Parametr 7": "Parametr 7 7"
+          }
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gel",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 6",
+            "9_Beam_Parametr 2": "Parametr 2 6",
+            "9_Beam_Parametr 3": "Parametr 3 7",
+            "9_Beam_Parametr 4": "Parametr 4 8",
+            "9_Beam_Parametr 5": "Parametr 5 7",
+            "9_Beam_Parametr 6": "Parametr 6 6",
+            "9_Beam_Parametr 7": "Parametr 7 8"
+          }
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "XY",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 7",
+            "9_Beam_Parametr 2": "Parametr 2 7",
+            "9_Beam_Parametr 3": "Parametr 3 9",
+            "9_Beam_Parametr 4": "Parametr 4 9",
+            "9_Beam_Parametr 5": "Parametr 5 8",
+            "9_Beam_Parametr 6": "Parametr 6 7",
+            "9_Beam_Parametr 7": "Parametr 7 9"
+          }
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Source",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 8",
+            "9_Beam_Parametr 2": "Parametr 2 8",
+            "9_Beam_Parametr 3": "Parametr 3 10",
+            "9_Beam_Parametr 4": "Parametr 4 11"
+          }
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "FX",
+          "switchChannels": {
+            "9_Beam_Parametr 1": "Parametr 1 9"
+          }
+        },
+        {
+          "dmxRange": [
+            90,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved",
+          "switchChannels": {}
+        }
+      ]
+    },
+    "Parametr 1": {
+      "highlightValue": 127,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Parametr 1 2": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Parametr 1 3": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Parametr 1 4": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "Parametr 1 5": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Parametr 1 6": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3200"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "5600"
+        }
+      ]
+    },
+    "Parametr 1 7": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capability": {
+        "type": "Unknown (CIE_X)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Parametr 1 8": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Parametr 1 9": {
+      "name": "Parametr 1",
+      "highlightValue": 127,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Club lights"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "Paparazzi"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "ColorPreset",
+          "comment": "Lighting"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": "Candle"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "ColorPreset",
+          "comment": "Fire"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "ColorPreset",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "ColorPreset",
+          "comment": "Explosion"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "ColorPreset",
+          "comment": "Faulty bulb"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "Pulsing"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ColorPreset",
+          "comment": "Welding"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "ColorPreset",
+          "comment": "Cop car"
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "ColorPreset",
+          "comment": "Color chase"
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "ColorPreset",
+          "comment": "Party lights"
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "ColorPreset",
+          "comment": "Fireworks"
+        },
+        {
+          "dmxRange": [
+            150,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Parametr 2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full - Green"
+        },
+        {
+          "dmxRange": [
+            21,
+            119
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "- green"
+        },
+        {
+          "dmxRange": [
+            120,
+            145
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            146,
+            244
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+ green"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full + green"
+        }
+      ]
+    },
+    "Parametr 2 2": {
+      "name": "Parametr 2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "- full green"
+        },
+        {
+          "dmxRange": [
+            21,
+            119
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "- green"
+        },
+        {
+          "dmxRange": [
+            120,
+            145
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            146,
+            244
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+ green"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+ full green"
+        }
+      ]
+    },
+    "Parametr 2 3": {
+      "name": "Parametr 2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "- full green"
+        },
+        {
+          "dmxRange": [
+            21,
+            119
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "- green"
+        },
+        {
+          "dmxRange": [
+            120,
+            145
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            146,
+            244
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+ green"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+ full green"
+        }
+      ]
+    },
+    "Parametr 2 4": {
+      "name": "Parametr 2",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "Parametr 2 5": {
+      "name": "Parametr 2",
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Parametr 2 6": {
+      "name": "Parametr 2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "Unknown (Gel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rosco"
+        },
+        {
+          "dmxRange": [
+            30,
+            59
+          ],
+          "type": "Unknown (Gel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lee"
+        },
+        {
+          "dmxRange": [
+            60,
+            255
+          ],
+          "type": "Unknown (Gel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Parametr 2 7": {
+      "name": "Parametr 2",
+      "capability": {
+        "type": "Unknown (CIE_Y)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Parametr 2 8": {
+      "name": "Parametr 2",
+      "capability": {
+        "type": "Unknown (CIE_X)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Parametr 3": {
+      "capability": {
+        "type": "Unknown (Crossfade)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Parametr 3 2": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 3 3": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 3 4": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "Unknown (Crossfade)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Parametr 3 5": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Parametr 3 6": {
+      "name": "Parametr 3",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Parametr 3 7": {
+      "name": "Parametr 3",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Col corr"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Cal col / col filters"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Storaro / 600 series"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Cinelux / Cosmetic"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserved / 700 series"
+        },
+        {
+          "dmxRange": [
+            50,
+            255
+          ],
+          "type": "Unknown (Series)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserver"
+        }
+      ]
+    },
+    "Parametr 3 8": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 3 9": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 3 10": {
+      "name": "Parametr 3",
+      "capability": {
+        "type": "Unknown (CIE_Y)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Parametr 4": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "Parametr 4 2": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 4 3": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Parametr 4 4": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 4 5": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 4 6": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 4 7": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 4 8": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Parametr 4 9": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 4 10": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 4 11": {
+      "name": "Parametr 4",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 5": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "Parametr 5 2": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 5 3": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Parametr 5 4": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 5 5": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 5 6": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 5 7": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 5 8": {
+      "name": "Parametr 5",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 6": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Parametr 6 2": {
+      "name": "Parametr 6",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 6 3": {
+      "name": "Parametr 6",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSI base)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Parametr 6 4": {
+      "name": "Parametr 6",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 6 5": {
+      "name": "Parametr 6",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 6 6": {
+      "name": "Parametr 6",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 6 7": {
+      "name": "Parametr 6",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 7": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 7 2": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 7 3": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 7 4": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Parametr 7 5": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Parametr 7 6": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 7 7": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 7 8": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Parametr 7 9": {
+      "name": "Parametr 7",
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 3": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "max"
+        }
+      ]
+    },
+    "Tint 2": {
+      "name": "Tint",
+      "fineChannelAliases": [
+        "Tint 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5000
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            5001,
+            10000
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-100 Green"
+        },
+        {
+          "dmxRange": [
+            10001,
+            29999
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-99 to -1 Green"
+        },
+        {
+          "dmxRange": [
+            30000,
+            40000
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral/No Effect"
+        },
+        {
+          "dmxRange": [
+            40001,
+            59999
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+1 to +99 Green"
+        },
+        {
+          "dmxRange": [
+            60000,
+            65535
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+100 Green"
+        }
+      ]
+    },
+    "Crossfade 2": {
+      "name": "Crossfade",
+      "fineChannelAliases": [
+        "Crossfade 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Color"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "random fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "random mid"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "random slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            8,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 CCT+RGB 8bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "Crossfade",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 2 CCT 8-bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 3 CCT+HSI 8bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "Crossfade",
+        "H",
+        "S",
+        "HSI base",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 4 RGB 8bit",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 5 HSI 8bit",
+      "channels": [
+        "Dim",
+        "H",
+        "S",
+        "HSI base",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 6 GEL 8bit",
+      "channels": [
+        "Dim",
+        null,
+        null,
+        null,
+        "Sh1",
+        "Gel",
+        "5_Beam_Series",
+        "Category",
+        "CTC 2"
+      ]
+    },
+    {
+      "name": "Mode 7 XY 8-bit",
+      "channels": [
+        "Dim",
+        "X",
+        "Y",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 8 Source 8-bit",
+      "channels": [
+        "Dim",
+        "Color Macro1",
+        "X",
+        "Y",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 10 WW+RGB 8bit",
+      "channels": [
+        "WW",
+        "CW",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "Mode 11 Ultimate 8-bit",
+      "channels": [
+        "Dim",
+        "Color Ctrl",
+        "9_Beam_Parametr 1",
+        "9_Beam_Parametr 2",
+        "9_Beam_Parametr 3",
+        "9_Beam_Parametr 4",
+        "9_Beam_Parametr 5",
+        "9_Beam_Parametr 6",
+        "9_Beam_Parametr 7"
+      ]
+    },
+    {
+      "name": "Mode 12 CCT+RGBW 16bit 1",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade 2",
+        "Crossfade 2 fine",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "Sh1 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      655,
+      185,
+      880
+    ],
+    "weight": 15.8,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 68514,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        67.0,
+        112.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red_LED",
+      "cie": "0.695800,0.302200,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green_LED",
+      "cie": "0.150800,0.705600,100.000000",
+      "hex": "#00ff2a"
+    },
+    {
+      "name": "Blue_LED",
+      "cie": "0.147300,0.042800,100.000000",
+      "hex": "#7600ff"
+    },
+    {
+      "name": "WarmWhite_LED",
+      "cie": "0.469400,0.411500,100.000000",
+      "hex": "#ffe571"
+    },
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.299000,0.313700,100.000000",
+      "hex": "#f8ffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-02-25T12:55:31",
+      "text": "ogi_v13"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "986480e4a7bf8647"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "aputure-ls600c",
+  "gwFixtureTypeID": "EB1233B8-750E-431B-AAC4-9D9E1A4D1DDC"
+}

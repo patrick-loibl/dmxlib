@@ -1,0 +1,211 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Crystal Pixel Color Dynamic White",
+  "shortName": "Crystal Pixel Color DW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-08-16",
+    "lastModifyDate": "2024-10-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C2EDF997-0703-44C0-B488-909FAE5EB351"
+    }
+  },
+  "comment": "Crystal Pixel Dynamic White has 6 3000K and 6500K white pixels (6 columns). \nThere are 4 sizes available. Only the 130cm size is modelized however all sizes work the same.\nFixing system is not modelized as well since several options are also available.  ",
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Ctrl2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Color Ctrl": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "ColorAdd_A": {
+      "capability": {
+        "type": "Unknown (colorAdd_A)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "One Pixel Mode",
+      "channels": [
+        "Ctrl1",
+        "Dim",
+        "FX1 Rate",
+        "Ctrl2",
+        "Color Ctrl"
+      ]
+    },
+    {
+      "name": "Pixel Mode",
+      "channels": [
+        "Ctrl1 2",
+        "Dim",
+        "CW",
+        "WW",
+        "R",
+        "G",
+        "B",
+        "ColorAdd_A"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1300,
+      1300,
+      1300
+    ],
+    "weight": 10.5,
+    "power": 500,
+    "bulb": {
+      "type": "LED",
+      "lumens": 60000
+    },
+    "lens": {
+      "degreesMinMax": [
+        360.0,
+        360.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White 3000K",
+      "cie": "0.433900,0.403200,100.000000",
+      "hex": "#ffed91"
+    },
+    {
+      "name": "White 6500K",
+      "cie": "0.312300,0.328200,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Red",
+      "cie": "0.639400,0.330200,100.000000",
+      "hex": "#ff0b04"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.597900,100.000000",
+      "hex": "#0cff0e"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.060300,100.000000",
+      "hex": "#5e00ff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.565000,0.420000,100.000000",
+      "hex": "#ffc700"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Crystal Pixel Dynamic White has 6 3000K and 6500K white pixels (6 columns). \nThere are 4 sizes available. Only the 130cm size is modelized however all sizes work the same.\nFixing system is not modelized as well since several options are also available.",
+    "beamType": "Glow",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-29T11:31:18",
+      "text": "ColorDW"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "dd31e9b7737cb32b"
+  },
+  "manufacturerKey": "airstar",
+  "fixtureKey": "crystal-pixel-color-dynamic-white",
+  "gwFixtureTypeID": "C2EDF997-0703-44C0-B488-909FAE5EB351"
+}

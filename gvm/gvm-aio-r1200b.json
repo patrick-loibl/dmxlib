@@ -1,0 +1,495 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "GVM-AIO-R1200B",
+  "shortName": "AIO-R1200B",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-04-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9BEBC087-0CB0-40C7-B585-59508127793E"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Rotation",
+          "speed": 0,
+          "comment": "Fan smart mode"
+        },
+        {
+          "dmxRange": [
+            86,
+            170
+          ],
+          "type": "Rotation",
+          "speed": 1,
+          "comment": "Fan high speed"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Rotation",
+          "speed": 2,
+          "comment": "Fan silent mode"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Strobe off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 1…25 mean?",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Lightning",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Effect",
+          "effectName": "CCT loop",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "Bad bulb",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "Candle",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "TV",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "Paparazzi",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "Explosion",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Pulsing",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Strobe",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "Fire",
+          "speed": 8
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Firework",
+          "speed": 9
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speed": 11
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "P": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Pan",
+          "angle": "0deg",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            86,
+            170
+          ],
+          "type": "Pan",
+          "angle": "1deg",
+          "comment": "Loop"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Pan",
+          "angle": "2deg",
+          "comment": "Once"
+        }
+      ]
+    },
+    "Play Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "100%",
+          "comment": "Spd 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "200%",
+          "comment": "Spd 2"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "300%",
+          "comment": "Spd 3"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "400%",
+          "comment": "Spd 4"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "500%",
+          "comment": "Spd 5"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "600%",
+          "comment": "Spd 6"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "700%",
+          "comment": "Spd 7"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "800%",
+          "comment": "Spd 8"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "900%",
+          "comment": "Spd 9"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "1000%",
+          "comment": "Spd 10"
+        },
+        {
+          "dmxRange": [
+            200,
+            219
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "1100%",
+          "comment": "random 1-10"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        }
+      ]
+    },
+    "CTC 3": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 3 fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "CCT 8-bit",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "CCT 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine"
+      ]
+    },
+    {
+      "name": "CCT+CTRL 8-bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Fan1",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "CCT+CTRL 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Fan1",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "FX 8-bit",
+      "channels": [
+        "Dim",
+        "FX1",
+        "P",
+        "Play Speed",
+        "CTC 3"
+      ]
+    },
+    {
+      "name": "FX 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "FX1",
+        "P",
+        "Play Speed",
+        "CTC 3",
+        "CTC 3 fine"
+      ]
+    },
+    {
+      "name": "FX+CTRL 8-bit",
+      "channels": [
+        "Dim",
+        "FX1",
+        "P",
+        "Play Speed",
+        "CTC 3",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "FX+CTRL 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "FX1",
+        "P",
+        "Play Speed",
+        "CTC 3",
+        "CTC 3 fine",
+        "Fan1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-24T04:00:32",
+      "text": "Ver:0002"
+    }
+  },
+  "manufacturerKey": "gvm",
+  "fixtureKey": "gvm-aio-r1200b",
+  "gwFixtureTypeID": "9BEBC087-0CB0-40C7-B585-59508127793E"
+}

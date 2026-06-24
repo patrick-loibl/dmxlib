@@ -1,0 +1,255 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EF Smoke 3100",
+  "shortName": "EF 3100",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-12-12",
+    "lastModifyDate": "2026-03-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 31401F4A-D9C2-4126-8483-9D0FF943C0A8"
+    }
+  },
+  "comment": "EF3100: Vertical Fogger",
+  "availableChannels": {
+    "Fog1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "11ch",
+      "channels": [
+        "Fog1",
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Sh1",
+        "Dim 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      401,
+      205,
+      475
+    ],
+    "weight": 16.0,
+    "power": 50,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Vertical Fogger",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-17T22:54:32",
+      "text": "2022, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "899741fcc3b0f38b"
+  },
+  "manufacturerKey": "clf",
+  "fixtureKey": "ef-smoke-3100",
+  "gwFixtureTypeID": "31401F4A-D9C2-4126-8483-9D0FF943C0A8"
+}

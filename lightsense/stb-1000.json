@@ -1,0 +1,100 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "STB-1000",
+  "shortName": "LED Strobe Light 1000 W.",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2022-10-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6A6AF553-D73E-4960-A8C5-C543B70FB896"
+    }
+  },
+  "comment": "LED Strobe Light 1000 W.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Strobe speed close"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Speed from slow to fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "Strobe Duration"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      300,
+      250,
+      50
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-10-12T02:13:56",
+      "text": "LED Strobe Light 1000 W."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "999757414688bf48"
+  },
+  "manufacturerKey": "lightsense",
+  "fixtureKey": "stb-1000",
+  "gwFixtureTypeID": "6A6AF553-D73E-4960-A8C5-C543B70FB896"
+}

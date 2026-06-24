@@ -1,0 +1,226 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Spark SP650",
+  "shortName": "Spark SP650",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-08-29",
+    "lastModifyDate": "2025-08-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 38C81E20-A524-417F-AC4C-434684DA9033"
+    }
+  },
+  "comment": "The Cold Spark Fountain creates a stunning effect similar to a traditional firework fountain, but without pyrotechnics, making it completely safe for both outdoor events and indoor use.\nThe effect is produced by titanium powder, heated inside the unit and ejected as sparkling jets reaching heights from 1.5 to 5 meters. Both the height and duration of the sparks can be adjusted. Control is possible via the included remote or through DMX512, offering full flexibility for different setups.\nThis makes the device an ideal choice for weddings, parties, concerts, stage shows, and special events.\nHeating time: 5 minutes\nOperating temperature: -10°C to +50°C\nControl: DMX512 / remote control",
+  "wheels": {
+    "Function": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Clean",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "a604ca56bb450e22"
+        },
+        {
+          "type": "Color",
+          "name": "Preheat",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "82092f82fd17c0a9"
+        }
+      ]
+    },
+    "Fontain": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "OFF",
+          "colors": [
+            "#0025ff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fontain",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "39d268a6eb2a7963"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Lamp Ctrl": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            100,
+            219
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Clean Spark"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Preheat ON"
+        }
+      ]
+    },
+    "Fog1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Spark Off"
+        },
+        {
+          "dmxRange": [
+            16,
+            63
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Spark Height 1"
+        },
+        {
+          "dmxRange": [
+            64,
+            111
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Spark Height 2"
+        },
+        {
+          "dmxRange": [
+            112,
+            159
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Spark Height 3"
+        },
+        {
+          "dmxRange": [
+            160,
+            207
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Spark Height 4"
+        },
+        {
+          "dmxRange": [
+            208,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Spark Height 5"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2 CHANNEL MODE",
+      "channels": [
+        "Lamp Ctrl",
+        "Fog1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      300,
+      1800
+    ],
+    "weight": 5.88,
+    "power": 650,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        25.0
+      ]
+    }
+  },
+  "gwDmxProfiles": [
+    {
+      "name": "2 CHANNEL MODE",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "The Cold Spark Fountain creates a stunning effect similar to a traditional firework fountain, but without pyrotechnics, making it completely safe for both outdoor events and indoor use.\nThe effect is produced by titanium powder, heated inside the unit and ejected as sparkling jets reaching heights from 1.5 to 5 meters. Both the height and duration of the sparks can be adjusted. Control is possible via the included remote or through DMX512, offering full flexibility for different setups.\nThis makes the device an ideal choice for weddings, parties, concerts, stage shows, and special events.\nHeating time: 5 minutes\nOperating temperature: -10°C to +50°C\nControl: DMX512 / remote control",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      50
+    ],
+    "revision": {
+      "date": "2025-08-29T06:33:29",
+      "text": "Spark SP650"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2054b93e16d200e8"
+  },
+  "manufacturerKey": "prstage",
+  "fixtureKey": "spark-sp650",
+  "gwFixtureTypeID": "38C81E20-A524-417F-AC4C-434684DA9033"
+}

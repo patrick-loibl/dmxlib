@@ -1,0 +1,515 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "X1 Profile",
+  "shortName": "X1 Spot",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "87D46EC2-E402-4517-BA25-97AFF75A19CE"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 5.6,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "wheels": {
+    "Gobo1 ": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    },
+    "Gobo2": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Beam Dimmer fine"
+      ]
+    },
+    "Head CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head CTO fine"
+      ]
+    },
+    "Head Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Head Gobo1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Head Gobo1PosRotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlotRotation"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Gobo1PosRotate fine"
+      ]
+    },
+    "Head Gobo2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Head AnimationWheel1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Head Frost1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Frost"
+        }
+      ]
+    },
+    "Head Prism1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Prism"
+        }
+      ]
+    },
+    "Head Prism1PosRotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "PrismRotation"
+        }
+      ]
+    },
+    "Head Prism2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Prism"
+        }
+      ]
+    },
+    "Head Prism2PosRotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "PrismRotation"
+        }
+      ]
+    },
+    "Head Iris": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Iris"
+        }
+      ]
+    },
+    "Head Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Zoom fine"
+      ]
+    },
+    "Head Focus1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Focus"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Focus1 fine"
+      ]
+    },
+    "Head ShaperRot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "ShaperRot 1"
+        }
+      ]
+    },
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Head FixtureGlobalReset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "FixtureGlobalReset 1"
+        }
+      ]
+    },
+    "Head Blade1A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeInsertion"
+        }
+      ]
+    },
+    "Head Blade1Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeRotation"
+        }
+      ]
+    },
+    "Head Blade2A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeInsertion"
+        }
+      ]
+    },
+    "Head Blade2Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeRotation"
+        }
+      ]
+    },
+    "Head Blade3A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeInsertion"
+        }
+      ]
+    },
+    "Head Blade3Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeRotation"
+        }
+      ]
+    },
+    "Head Blade4A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeInsertion"
+        }
+      ]
+    },
+    "Head Blade4Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "BladeRotation"
+        }
+      ]
+    },
+    "Head ColorSub_C": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cyan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorSub_C fine"
+      ]
+    },
+    "Head ColorSub_M": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Magenta"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorSub_M fine"
+      ]
+    },
+    "Base ColorSub_Y": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Yellow"
+        }
+      ],
+      "fineChannelAliases": [
+        "Base ColorSub_Y fine"
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "shortName": "Mode 1",
+      "channels": [
+        "Beam Shutter1",
+        "Beam Dimmer",
+        "Beam Dimmer fine",
+        "Head ColorSub_C",
+        "Head ColorSub_C fine",
+        "Head ColorSub_M",
+        "Head ColorSub_M fine",
+        "Base ColorSub_Y",
+        "Base ColorSub_Y fine",
+        "Head CTO",
+        "Head CTO fine",
+        "Head Color1",
+        "Head Gobo1",
+        "Head Gobo1PosRotate",
+        "Head Gobo1PosRotate fine",
+        "Head Gobo2",
+        "Head AnimationWheel1",
+        "Head Frost1",
+        "Head Prism1",
+        "Head Prism1PosRotate",
+        "Head Prism2",
+        "Head Prism2PosRotate",
+        "Head Iris",
+        "Head Zoom",
+        "Head Zoom fine",
+        "Head Focus1",
+        "Head Focus1 fine",
+        "Head Blade1A",
+        "Head Blade1Rot",
+        "Head Blade2A",
+        "Head Blade2Rot",
+        "Head Blade3A",
+        "Head Blade3Rot",
+        "Head Blade4A",
+        "Head Blade4Rot",
+        "Head ShaperRot",
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Head FixtureGlobalReset"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-03-19T03:54:02",
+      "text": "Release "
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "artfox",
+  "fixtureKey": "x1-profile",
+  "gwFixtureTypeID": "87D46EC2-E402-4517-BA25-97AFF75A19CE"
+}

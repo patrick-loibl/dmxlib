@@ -1,0 +1,361 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "NOVA PAR 1810",
+  "shortName": "NOVA PAR 1810",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-28",
+    "lastModifyDate": "2025-05-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FE184D8C-BDBE-416A-91FE-FC693F8968BE"
+    }
+  },
+  "comment": "\n",
+  "wheels": {
+    "macro de couleur": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "rouge",
+          "colors": [
+            "#e40301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "vert",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "bleu",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "blanc froid",
+          "colors": [
+            "#d5d4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "rose",
+          "colors": [
+            "#e404e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "jaune",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "cyan",
+          "colors": [
+            "#05e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "ambre",
+          "colors": [
+            "#e49701"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "blanc",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            13
+          ],
+          "type": "NoFunction",
+          "comment": "pas de fonction"
+        },
+        {
+          "dmxRange": [
+            14,
+            14
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            15,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "max"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "pas de fonction",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "macro de couleur",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            139
+          ],
+          "type": "Effect",
+          "effectName": "Changement franc de 3 couleurs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            179
+          ],
+          "type": "Effect",
+          "effectName": "Changement franc de 7 couleurs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            180,
+            209
+          ],
+          "type": "Effect",
+          "effectName": "Changement fondu de 7 couleurs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            210,
+            229
+          ],
+          "type": "Effect",
+          "effectName": "Stroboscope 1 avec 7 couleurs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            230,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Stroboscope 2 avec 7 couleurs",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "5 canaux",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "8 canaux",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Color FX1",
+        "Color Mix MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      242,
+      260,
+      242
+    ],
+    "weight": 7.0,
+    "power": 59,
+    "bulb": {
+      "type": "623nm / 530nm / 463nm LED",
+      "lumens": 1643,
+      "colorTemperature": 6900
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "rouge",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000",
+      "dominantWavelength": 623.0
+    },
+    {
+      "name": "vert",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00",
+      "dominantWavelength": 530.0
+    },
+    {
+      "name": "bleu",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff",
+      "dominantWavelength": 463.0
+    },
+    {
+      "name": "blanc",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      65
+    ],
+    "revision": {
+      "date": "2025-05-28T14:47:37",
+      "text": "version 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3336fefd6256a7c2"
+  },
+  "manufacturerKey": "nicols",
+  "fixtureKey": "nova-par-1810",
+  "gwFixtureTypeID": "FE184D8C-BDBE-416A-91FE-FC693F8968BE"
+}

@@ -1,0 +1,934 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "H20 Two",
+  "shortName": "H20 Two",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-12-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A52185C5-0C2F-4D94-9799-D5B04696CAAB"
+    }
+  },
+  "comment": "The H2O TWO is a stimulating lighting fixture designed to bring a dynamic water-like effect to your lighting display. With a bright 120-Watt cool white LED source and 5 Dichroic colors, this fixture creates a mesmerizing simulated water effect that can be projected onto walls, ceilings, or floors. The H2O Two can be used with or without fog and is great for mood or background lighting.\nThis fixture is equipped with two DMX channel modes and may be controlled via DMX, the included IR wireless remote or from the built-in programs, giving you complete control over your lighting setup. The digital DMX display with a 4-button menu makes navigation easy, while the 0-100% dimming (via DMX) manual adjustable zoom and focusing lens allow you to fine-tune the lighting to your exact specifications.\nBuilt to last, the H2O Two features long-life LED source rating of 50,000 hours, and multi-voltage operation (AC 120-240V 50/60Hz). The fixture is fan-cooled and includes a safety loop on the rear panel, ensuring reliable and safe operation. With a power consumption of only 128W (120V) or 125W (220V), the H2O TWO can run all night without the need for a duty cycle.",
+  "wheels": {
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White/Orange",
+          "colors": [
+            "#9a653d"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orange",
+          "colors": [
+            "#cd3900"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orange/Green",
+          "colors": [
+            "#fde45d"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#008800"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green/Blue",
+          "colors": [
+            "#00816f"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0003b0"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue/Yellow",
+          "colors": [
+            "#a5f5c1"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#f2ea00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow/Purple",
+          "colors": [
+            "#d0eadb"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Purple",
+          "colors": [
+            "#2a00a2"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Purple/White",
+          "colors": [
+            "#816c7b"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Clockwise Rotation - Fast to Slow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "STOP",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Counter Clockwise Rotation - Slow to Fast",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Anim Select Spin": {
+      "highlightValue": 5,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": "stop",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            10,
+            120
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": "stop",
+          "comment": "Clockwise Rotation - Fast to Slow"
+        },
+        {
+          "dmxRange": [
+            121,
+            134
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": "stop",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            135,
+            245
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": "stop",
+          "comment": "Counter Clockwise Rotation - Slow to Fast "
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": "stop",
+          "comment": "No Rotation"
+        }
+      ]
+    },
+    "Wheel Index": {
+      "highlightValue": 5,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            11,
+            21
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "White/Orange"
+        },
+        {
+          "dmxRange": [
+            22,
+            32
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Orange"
+        },
+        {
+          "dmxRange": [
+            33,
+            43
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Orange/Green"
+        },
+        {
+          "dmxRange": [
+            44,
+            54
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            55,
+            65
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Green/Blue"
+        },
+        {
+          "dmxRange": [
+            66,
+            76
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            77,
+            87
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Blue/Yellow"
+        },
+        {
+          "dmxRange": [
+            88,
+            98
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Yellow"
+        },
+        {
+          "dmxRange": [
+            99,
+            109
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Yellow/Purple"
+        },
+        {
+          "dmxRange": [
+            110,
+            120
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Purple"
+        },
+        {
+          "dmxRange": [
+            121,
+            127
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Purple/White"
+        },
+        {
+          "dmxRange": [
+            128,
+            187
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Clockwise Rotation - Fast to Slow"
+        },
+        {
+          "dmxRange": [
+            188,
+            196
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "STOP"
+        },
+        {
+          "dmxRange": [
+            197,
+            255
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color Wheel",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Counter Clockwise Rotation - Slow to Fast"
+        }
+      ]
+    },
+    "Strobe1": {
+      "highlightValue": 48,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LEDs OFF"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LEDs ON"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Effect - Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LEDs ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse Effect in Sequences"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LEDs ON"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random Strobe Effect - Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LEDs ON"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorPreset",
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            11,
+            26
+          ],
+          "type": "ColorPreset",
+          "comment": "Program 0"
+        },
+        {
+          "dmxRange": [
+            27,
+            43
+          ],
+          "type": "ColorPreset",
+          "comment": "Program 1"
+        },
+        {
+          "dmxRange": [
+            44,
+            60
+          ],
+          "type": "ColorPreset",
+          "comment": "Program 2"
+        },
+        {
+          "dmxRange": [
+            61,
+            76
+          ],
+          "type": "ColorPreset",
+          "comment": "Program 3"
+        },
+        {
+          "dmxRange": [
+            77,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Setting"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            121,
+            140
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage 2"
+        },
+        {
+          "dmxRange": [
+            141,
+            141
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_1s"
+        },
+        {
+          "dmxRange": [
+            142,
+            142
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_2s"
+        },
+        {
+          "dmxRange": [
+            143,
+            143
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_3s"
+        },
+        {
+          "dmxRange": [
+            144,
+            144
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_4s"
+        },
+        {
+          "dmxRange": [
+            145,
+            145
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_5s"
+        },
+        {
+          "dmxRange": [
+            146,
+            146
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_6s"
+        },
+        {
+          "dmxRange": [
+            147,
+            147
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_7s"
+        },
+        {
+          "dmxRange": [
+            148,
+            148
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_8s"
+        },
+        {
+          "dmxRange": [
+            149,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "0_9s"
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1s"
+        },
+        {
+          "dmxRange": [
+            151,
+            151
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1_5s"
+        },
+        {
+          "dmxRange": [
+            152,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2s"
+        },
+        {
+          "dmxRange": [
+            153,
+            153
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "3s"
+        },
+        {
+          "dmxRange": [
+            154,
+            154
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "4s"
+        },
+        {
+          "dmxRange": [
+            155,
+            155
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "5s"
+        },
+        {
+          "dmxRange": [
+            156,
+            156
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "6s"
+        },
+        {
+          "dmxRange": [
+            157,
+            157
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "7s"
+        },
+        {
+          "dmxRange": [
+            158,
+            158
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "8s"
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "9s"
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "10s"
+        },
+        {
+          "dmxRange": [
+            161,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Setting"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv Square"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S Curve"
+        },
+        {
+          "dmxRange": [
+            81,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            26
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset All Motors"
+        },
+        {
+          "dmxRange": [
+            27,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "9CH",
+      "channels": [
+        "Dim",
+        "Anim Select Spin",
+        "Wheel Index",
+        "Strobe1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Dim Mode",
+        "Dim Curve",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      315,
+      282,
+      231
+    ],
+    "weight": 4.99
+  },
+  "gwSpecs": {
+    "description": "The H2O TWO is a stimulating lighting fixture designed to bring a dynamic water-like effect to your lighting display. With a bright 120-Watt cool white LED source and 5 Dichroic colors, this fixture creates a mesmerizing simulated water effect that can be projected onto walls, ceilings, or floors. The H2O Two can be used with or without fog and is great for mood or background lighting.\nThis fixture is equipped with two DMX channel modes and may be controlled via DMX, the included IR wireless remote or from the built-in programs, giving you complete control over your lighting setup. The digital DMX display with a 4-button menu makes navigation easy, while the 0-100% dimming (via DMX) manual adjustable zoom and focusing lens allow you to fine-tune the lighting to your exact specifications.\nBuilt to last, the H2O Two features long-life LED source rating of 50,000 hours, and multi-voltage operation (AC 120-240V 50/60Hz). The fixture is fan-cooled and includes a safety loop on the rear panel, ensuring reliable and safe operation. With a power consumption of only 128W (120V) or 125W (220V), the H2O TWO can run all night without the need for a duty cycle.",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-17T18:10:22",
+      "text": "Rev 3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3950aa008c712948"
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "h20-two",
+  "gwFixtureTypeID": "A52185C5-0C2F-4D94-9799-D5B04696CAAB"
+}

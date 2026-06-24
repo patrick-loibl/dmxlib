@@ -1,0 +1,295 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "DuoBlind 200 RGB",
+  "shortName": "DuoBlindRGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-01-04",
+    "lastModifyDate": "2025-01-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EB37C073-6AF5-4BCD-9071-6E6A6B750617"
+    }
+  },
+  "comment": "2× 100W COB RGB -LED Blinder",
+  "rdm": {
+    "modelId": 33174
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            7,
+            122
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            124,
+            127
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            129,
+            184
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            185,
+            185
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            186,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            192,
+            248
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            249,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "5 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "9 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Dim 2",
+        "Dim 2 fine",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      160,
+      145,
+      310
+    ],
+    "weight": 2.4,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        39.5,
+        65.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "2× 100W COB RGB -LED Blinder",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-04T20:56:15",
+      "text": "Release 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fda45f0026dd7e17"
+  },
+  "manufacturerKey": "stairville",
+  "fixtureKey": "duoblind-200-rgb",
+  "gwFixtureTypeID": "EB37C073-6AF5-4BCD-9071-6E6A6B750617"
+}

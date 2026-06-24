@@ -1,0 +1,138 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Led Par WW CW",
+  "shortName": "Led Par",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-07-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 509EB387-1349-4325-9DE2-3397250DFD2C"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4 Channel",
+      "channels": [
+        "Dim",
+        "WW",
+        "CW",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "weight": 5.0,
+    "power": 180,
+    "bulb": {
+      "type": "LED",
+      "lumens": 18000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-22T21:06:45",
+      "text": "Version 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "ridgeyard",
+  "fixtureKey": "led-par-ww-cw",
+  "gwFixtureTypeID": "509EB387-1349-4325-9DE2-3397250DFD2C"
+}

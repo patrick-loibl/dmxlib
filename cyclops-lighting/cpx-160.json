@@ -1,0 +1,583 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CPX-160",
+  "shortName": "CPX-160",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-04-14",
+    "lastModifyDate": "2026-04-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C3A66740-41E8-423A-864E-A3A96B184C6A"
+    }
+  },
+  "comment": "Cyclops Lighting Official Library",
+  "rdm": {
+    "modelId": 144
+  },
+  "availableChannels": {
+    "H": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "S": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Brightness)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode  1"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode  2"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode  3"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode  4"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 1"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 2"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 3"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 4"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 5"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Color Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorPreset",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro Select"
+        }
+      ]
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTO Adjust"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "Auto 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Auto 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            67
+          ],
+          "type": "Effect",
+          "effectName": "Auto 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            68,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "Auto 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "Auto 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Auto 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            147
+          ],
+          "type": "Effect",
+          "effectName": "Auto 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            148,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "Auto 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            187
+          ],
+          "type": "Effect",
+          "effectName": "Auto 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            188,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "Auto 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            208,
+            227
+          ],
+          "type": "Effect",
+          "effectName": "Auto 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            228,
+            247
+          ],
+          "type": "Effect",
+          "effectName": "Auto 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto 13",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Macro Rate Slow to Fast"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Channels",
+      "channels": [
+        "H",
+        "S",
+        "B"
+      ]
+    },
+    {
+      "name": "8 Channels",
+      "channels": [
+        "Dim 2",
+        "Dim Curve",
+        "Dim Mode",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "12 Channels",
+      "channels": [
+        "Dim 2",
+        "Dim Curve",
+        "Dim Mode",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "Sh1",
+        "Color Macro",
+        "CTO",
+        "FX1",
+        "FX1 Rate"
+      ]
+    },
+    {
+      "name": "32 Channels",
+      "channels": [
+        "R",
+        "G",
+        "B 2",
+        "White"
+      ]
+    },
+    {
+      "name": "37 Channels",
+      "channels": [
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1,
+      1,
+      1
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Cyclops Lighting Official Library",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-15T14:26:51",
+      "text": "Created By Cyclops Lighting, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "cyclops-lighting",
+  "fixtureKey": "cpx-160",
+  "gwFixtureTypeID": "C3A66740-41E8-423A-864E-A3A96B184C6A"
+}

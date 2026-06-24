@@ -1,0 +1,493 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MOVILIGHT 100 CONT",
+  "shortName": "Movi100Con",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-01-12",
+    "lastModifyDate": "2026-02-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E2693890-4813-46B4-BC17-380290547F5D"
+    }
+  },
+  "comment": "Moving head with 6 RGBW 4 in 1 LEDs of 15W each with infinite optical rotation.",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            256
+          ],
+          "type": "Pan",
+          "angle": "-270deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            257,
+            65534
+          ],
+          "type": "Pan",
+          "angleStart": "-270deg",
+          "angleEnd": "270deg",
+          "comment": "Min to Max"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Pan",
+          "angle": "270deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            256
+          ],
+          "type": "Tilt",
+          "angle": "-110deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            257,
+            65534
+          ],
+          "type": "Tilt",
+          "angleStart": "-110deg",
+          "angleEnd": "110deg",
+          "comment": "Min to Max"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Tilt",
+          "angle": "110deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction",
+        "comment": "Not Used"
+      }
+    },
+    "FX1 Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Rotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.08333333333333334rpm",
+          "comment": "No rot"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Rotation",
+          "speed": "stop",
+          "comment": "CW Rotation Low > Fast"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Rotation",
+          "speed": "stop",
+          "comment": "CCW Rotation Low > Fast"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightness": 0,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightness": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "No Effect",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            6,
+            11
+          ],
+          "type": "Effect",
+          "effectName": "Green/Blue",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            12,
+            17
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            18,
+            23
+          ],
+          "type": "Effect",
+          "effectName": "Red/Blue",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            24,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "Red/Blue (Full)",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            30,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "RGB 50%",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            36,
+            41
+          ],
+          "type": "Effect",
+          "effectName": "Red/Blue 80%",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            42,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Red/Blue 50%",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            48,
+            53
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            54,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "Red/Green/Blue",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            60,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "White/Red/Green",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            66,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Red/Green",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            72,
+            77
+          ],
+          "type": "Effect",
+          "effectName": "Red/Green (Alt)",
+          "speedStart": 0,
+          "speedEnd": 0.3
+        },
+        {
+          "dmxRange": [
+            78,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            84,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Green/Blue 50%",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            90,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "W/R/G/B Mix",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            96,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "Auto 1",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            116,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "Auto 2",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            136,
+            155
+          ],
+          "type": "Effect",
+          "effectName": "Auto 3",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            156,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Auto 4",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            176,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Audio",
+          "speed": 0
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset (Hold 5s)"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow > Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "14 Channel",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "NoFeature",
+        "FX1 Rotate",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "FX1",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      241,
+      170,
+      167
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Moving head with 6 RGBW 4 in 1 LEDs of 15W each with infinite optical rotation.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-02-16T14:18:41",
+      "text": "foto"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d0110f85b81e4af3"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "movilight-100-cont",
+  "gwFixtureTypeID": "E2693890-4813-46B4-BC17-380290547F5D"
+}

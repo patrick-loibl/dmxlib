@@ -1,0 +1,457 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "E-Lite",
+  "shortName": "Elite",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-11",
+    "lastModifyDate": "2023-09-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 034D57FE-EAB1-4DCF-82A3-D6C81270B02F"
+    }
+  },
+  "comment": "LED Panel Light",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "fineChannelAliases": [
+        "WW fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "Max "
+        }
+      ]
+    },
+    "CW": {
+      "fineChannelAliases": [
+        "CW fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6000K"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Lightning"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1200Hz"
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2000Hz"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "4000Hz"
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "6000Hz"
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "25000Hz"
+        },
+        {
+          "dmxRange": [
+            131,
+            140
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode Off"
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 1"
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 2"
+        },
+        {
+          "dmxRange": [
+            161,
+            170
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 3"
+        },
+        {
+          "dmxRange": [
+            171,
+            180
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 4"
+        },
+        {
+          "dmxRange": [
+            181,
+            190
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            191,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "All Reset"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "Max "
+        }
+      ]
+    },
+    "CW 2": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "STD P",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "WW",
+        "WW fine",
+        "CW",
+        "CW fine",
+        "CTO",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "VW F",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "WW",
+        "WW fine",
+        "CW",
+        "CW fine"
+      ]
+    },
+    {
+      "name": "VW D",
+      "channels": [
+        "Dim 2",
+        "WW 2",
+        "CW 2"
+      ]
+    },
+    {
+      "name": "UNO",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      80,
+      500
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED Panel Light",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-09-11T02:54:11",
+      "text": "1.00"
+    }
+  },
+  "manufacturerKey": "silver-star",
+  "fixtureKey": "e-lite",
+  "gwFixtureTypeID": "034D57FE-EAB1-4DCF-82A3-D6C81270B02F"
+}

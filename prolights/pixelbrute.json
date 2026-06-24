@@ -1,0 +1,5887 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PixelBrute",
+  "shortName": "PBRUTE",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-04",
+    "lastModifyDate": "2026-04-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2F690BEC-4095-464F-AEED-9576A81CB1A3"
+    }
+  },
+  "rdm": {
+    "modelId": 53600
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1850K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "20000K"
+        }
+      ]
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "FullMinus"
+        },
+        {
+          "dmxRange": [
+            4,
+            126
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": -1,
+          "comment": "MinusGreen"
+        },
+        {
+          "dmxRange": [
+            127,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            253
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "PlusGreen"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "FullPlus"
+        }
+      ]
+    },
+    "CTC<>RGB": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "RGBW"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dynamic Beam": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Dynamic Beam)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Spot (Hard@100 - Soft@0)"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Dynamic Beam)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Dynamic Beam)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Flood (Hard@0 - Soft@100)"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Display ON"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 1,
+          "comment": "Display 15s"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 2,
+          "comment": "Flip Display ON"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 3,
+          "comment": "Flip Display OFF"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 4,
+          "comment": "Keylock ON"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 5,
+          "comment": "Keylock OFF"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Square Law"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Inverse Square Law"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "High Res @ Low"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Square Law"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Inverse Square Law"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "High Res @ Low"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            42,
+            45
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "HOLD"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "BLACKOUT"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "STAND ALONE"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "EMERGENCY"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CW 90"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "CW 180 "
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "CW 270"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Spektra ON"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Pure Colors"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Spektra OFF"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Unknown (CRIMode)",
+          "physical": 0,
+          "comment": "High Quality"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Unknown (CRIMode)",
+          "physical": 1,
+          "comment": "High Brightness"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "8000K"
+        },
+        {
+          "dmxRange": [
+            84,
+            85
+          ],
+          "type": "Maintenance",
+          "parameter": 6,
+          "comment": "10000K"
+        },
+        {
+          "dmxRange": [
+            86,
+            87
+          ],
+          "type": "Maintenance",
+          "parameter": 7,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            88,
+            89
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "0Hz",
+          "comment": "2 kHz"
+        },
+        {
+          "dmxRange": [
+            90,
+            91
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1Hz",
+          "comment": "10 kHz"
+        },
+        {
+          "dmxRange": [
+            92,
+            93
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "2Hz",
+          "comment": "20 kHz"
+        },
+        {
+          "dmxRange": [
+            94,
+            95
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "3Hz",
+          "comment": "25 kHz"
+        },
+        {
+          "dmxRange": [
+            96,
+            97
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 0,
+          "comment": "Constant Output  On"
+        },
+        {
+          "dmxRange": [
+            98,
+            99
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 1,
+          "comment": "Constant Output  Silent1"
+        },
+        {
+          "dmxRange": [
+            100,
+            101
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 2,
+          "comment": "Constant Output Silent2"
+        },
+        {
+          "dmxRange": [
+            102,
+            103
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 3,
+          "comment": "Constant Output  Off"
+        },
+        {
+          "dmxRange": [
+            104,
+            105
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 4,
+          "comment": "Dynamic Output Auto"
+        },
+        {
+          "dmxRange": [
+            106,
+            107
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 5,
+          "comment": "Dynamic Output On"
+        },
+        {
+          "dmxRange": [
+            108,
+            109
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 6,
+          "comment": "Dynamic Output Silent1"
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 7,
+          "comment": "Dynamic Output Silent2"
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "Unknown (FanMode)",
+          "physical": 8,
+          "comment": "Dynamic Output Off"
+        },
+        {
+          "dmxRange": [
+            114,
+            115
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "MASTER"
+        },
+        {
+          "dmxRange": [
+            116,
+            117
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "MASTER NO DMX"
+        },
+        {
+          "dmxRange": [
+            118,
+            119
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "SLAVE"
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            122,
+            123
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CCT"
+        },
+        {
+          "dmxRange": [
+            124,
+            125
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "HSI"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "COLOR MACRO"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "MANUAL COLORS"
+        },
+        {
+          "dmxRange": [
+            130,
+            131
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CCT"
+        },
+        {
+          "dmxRange": [
+            134,
+            135
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "HSI"
+        },
+        {
+          "dmxRange": [
+            136,
+            137
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "COLOR MACRO"
+        },
+        {
+          "dmxRange": [
+            138,
+            139
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "MANUAL COLORS"
+        },
+        {
+          "dmxRange": [
+            140,
+            141
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CCT"
+        },
+        {
+          "dmxRange": [
+            142,
+            143
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DYNAMIC DIMMER END ON"
+        },
+        {
+          "dmxRange": [
+            144,
+            145
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": " DYNAMIC DIMMER END OFF"
+        },
+        {
+          "dmxRange": [
+            146,
+            147
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "MEDIASERVER MODE OFF"
+        },
+        {
+          "dmxRange": [
+            148,
+            251
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "MEDIASERVER MODE ON"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset all Control Channel values used"
+        }
+      ]
+    },
+    "Lamp Power Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Automatic power allocation"
+        },
+        {
+          "dmxRange": [
+            10,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Hard Source Priority"
+        },
+        {
+          "dmxRange": [
+            30,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Balanced"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Soft Source Priority"
+        },
+        {
+          "dmxRange": [
+            52,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1850K"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "20000K"
+        }
+      ]
+    },
+    "Tint 2": {
+      "name": "Tint",
+      "fineChannelAliases": [
+        "Tint 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            511
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            512,
+            1023
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "FullMinus"
+        },
+        {
+          "dmxRange": [
+            1024,
+            32511
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": -1,
+          "comment": "MinusGreen"
+        },
+        {
+          "dmxRange": [
+            32512,
+            33023
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            33024,
+            65023
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "PlusGreen"
+        },
+        {
+          "dmxRange": [
+            65024,
+            65535
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "FullPlus"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dynamic Beam 2": {
+      "name": "Dynamic Beam",
+      "fineChannelAliases": [
+        "Dynamic Beam 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Dynamic Beam)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Spot (Hard@100 - Soft@0)"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (Dynamic Beam)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (Dynamic Beam)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Flood (Hard@0 - Soft@100)"
+        }
+      ]
+    },
+    "Crossfade CTC<>XY": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "XY"
+        }
+      ]
+    },
+    "X": {
+      "fineChannelAliases": [
+        "X fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "M"
+        }
+      ]
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 3": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 3 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1850K"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "20000K"
+        }
+      ]
+    },
+    "Tint 3": {
+      "name": "Tint",
+      "fineChannelAliases": [
+        "Tint 3 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            511
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            512,
+            1023
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "FullMinus"
+        },
+        {
+          "dmxRange": [
+            1024,
+            32511
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": -1,
+          "comment": "MinusGreen"
+        },
+        {
+          "dmxRange": [
+            32512,
+            33023
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            33024,
+            65023
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "PlusGreen"
+        },
+        {
+          "dmxRange": [
+            65024,
+            65535
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "FullPlus"
+        }
+      ]
+    },
+    "CTC<>RGB 2": {
+      "name": "CTC<>RGB",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>RGB)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "RGBW"
+        }
+      ]
+    },
+    "R 3": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW 3": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Crossfade CTC<>XY 2": {
+      "name": "Crossfade CTC<>XY",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CTC<>XY)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "XY"
+        }
+      ]
+    },
+    "X 2": {
+      "name": "X",
+      "fineChannelAliases": [
+        "X 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (CIE_X)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "M"
+        }
+      ]
+    },
+    "Y 2": {
+      "name": "Y",
+      "fineChannelAliases": [
+        "Y 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (CIE_Y)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW 4": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW 5": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Crossfade to Pixel Engine": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (MAIN<>PIXEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "SOFT MAIN"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (MAIN<>PIXEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (MAIN<>PIXEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "SOFT PIXEL"
+        }
+      ]
+    },
+    "Crossfade to Pixel Engine 2": {
+      "name": "Crossfade to Pixel Engine",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (MAIN<>PIXEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "HARD MAIN"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (MAIN<>PIXEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (MAIN<>PIXEL)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "HARD PIXEL"
+        }
+      ]
+    },
+    "Dim 8": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 4": {
+      "name": "CTC",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1850K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "20000K"
+        }
+      ]
+    },
+    "Tint 4": {
+      "name": "Tint",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "FullMinus"
+        },
+        {
+          "dmxRange": [
+            4,
+            126
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": -1,
+          "comment": "MinusGreen"
+        },
+        {
+          "dmxRange": [
+            127,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            253
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "PlusGreen"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "FullPlus"
+        }
+      ]
+    },
+    "R 7": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 9": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW 6": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim 9": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dummy": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dummy 2": {
+      "name": "Dummy",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dummy 3": {
+      "name": "Dummy",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "WW 7": {
+      "name": "WW",
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Basic - M1 - Linked RGBW 8bit 1x1",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW",
+        "Dynamic Beam",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M1 - Linked RGBW 8bit 2x2",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M1 - Linked RGBW 8bit 3x3",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M1 - Linked RGBW 8bit 6x6",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M2 - Linked RGBW 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M2 - Linked RGBW 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M2 - Linked RGBW 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M3 - Linked xy 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M3 - Linked xy 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M3 - Linked xy 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M3 - Linked xy 16bit 6x6",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M4 - Dual RGBW 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "CTC<>RGB 2",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 3",
+        "B 3 fine",
+        "WW 3",
+        "WW 3 fine",
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M4 - Dual RGBW 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "CTC<>RGB 2",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 3",
+        "B 3 fine",
+        "WW 3",
+        "WW 3 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M4 - Dual RGBW 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "CTC<>RGB 2",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 3",
+        "B 3 fine",
+        "WW 3",
+        "WW 3 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M5 - Dual xy 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "Crossfade CTC<>XY 2",
+        "X 2",
+        "X 2 fine",
+        "Y 2",
+        "Y 2 fine",
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M5 - Dual xy 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "Crossfade CTC<>XY 2",
+        "X 2",
+        "X 2 fine",
+        "Y 2",
+        "Y 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Basic - M5 - Dual xy 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "Crossfade CTC<>XY 2",
+        "X 2",
+        "X 2 fine",
+        "Y 2",
+        "Y 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - SOFT - Standard RGBW 8bit 1x1",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - HARD - Standard RGBW 8bit 1x1",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - SOFT - Standard RGBW 8bit 2x2",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - HARD - Standard RGBW 8bit 2x2",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - SOFT - Standard RGBW 8bit 3x3",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - HARD - Standard RGBW 8bit 3x3",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - SOFT - Standard RGBW 8bit 6x6",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M11 - HARD - Standard RGBW 8bit 6x6",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M12 - SOFT - Standard RGBW 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine"
+      ]
+    },
+    {
+      "name": "Advanced - M12 -  HARD - Standard RGBW 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine"
+      ]
+    },
+    {
+      "name": "Advanced - M12 - SOFT - Standard RGBW 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine"
+      ]
+    },
+    {
+      "name": "Advanced - M12 - HARD - Standard RGBW 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine"
+      ]
+    },
+    {
+      "name": "Advanced - M12 - SOFT - Standard RGBW 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine"
+      ]
+    },
+    {
+      "name": "Advanced - M12 - HARD - Standard RGBW 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - SOFT - Standard xy 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - HARD - Standard xy 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - SOFT - Standard xy 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - HARD - Standard xy 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - SOFT - Standard xy 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - HARD - Standard xy 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - SOFT - Standard xy 16bit 6x6",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M13 - HARD - Standard xy 16bit 6x6",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - SOFT - RGBW Pixel 8bit 1x1",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - HARD - RGBW Pixel 8bit 1x1",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - SOFT - RGBW Pixel 8bit 2x2",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - HARD - RGBW Pixel 8bit 2x2",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - SOFT - RGBW Pixel 8bit 3x3",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - HARD - RGBW Pixel 8bit 3x3",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - SOFT - RGBW Pixel 8bit 6x6",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - HARD - RGBW Pixel 8bit 6x6",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M14 - SOFT - RGBW Pixel 8bit 18x18",
+      "channels": [
+        "R 4",
+        "G",
+        "B",
+        "WW",
+        "R 5",
+        "G 4",
+        "B 4",
+        "WW 4",
+        "R 6",
+        "G 5",
+        "B 5",
+        "WW 5"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - SOFT - IRGBW Pixel 8bit 1x1",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - HARD - IRGBW Pixel 8bit 1x1",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - SOFT - IRGBW Pixel 8bit 2x2",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - HARD - IRGBW Pixel 8bit 2x2",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - SOFT - IRGBW Pixel 8bit 3x3",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - HARD - IRGBW Pixel 8bit 3x3",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - SOFT - IRGBW Pixel 8bit 6x6",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - M15 - HARD - IRGBW Pixel 8bit 6x6",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Advanced - Master",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode"
+      ]
+    },
+    {
+      "name": "MultiSource - M21 - Linked RGBW 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M21 - Linked RGBW 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M21 - Linked RGBW 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M22 - Linked xy 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M22 - Linked xy 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M22 - Linked xy 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dynamic Beam 2",
+        "Dynamic Beam 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M23 - Dual RGBW 16bit 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "CTC<>RGB 2",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 3",
+        "B 3 fine",
+        "WW 3",
+        "WW 3 fine",
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M23 -  Dual RGBW 16bit 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "CTC<>RGB 2",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 3",
+        "B 3 fine",
+        "WW 3",
+        "WW 3 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M23 -  Dual RGBW 16bit 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "CTC<>RGB",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "CTC<>RGB 2",
+        "R 3",
+        "R 3 fine",
+        "G 3",
+        "G 3 fine",
+        "B 3",
+        "B 3 fine",
+        "WW 3",
+        "WW 3 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M24 - Dual xy 16bit - 1x1",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "Crossfade CTC<>XY 2",
+        "X 2",
+        "X 2 fine",
+        "Y 2",
+        "Y 2 fine",
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M24 - Dual xy 16bit - 2x2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "Crossfade CTC<>XY 2",
+        "X 2",
+        "X 2 fine",
+        "Y 2",
+        "Y 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M24 - Dual xy 16bit - 3x3",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Tint 2",
+        "Tint 2 fine",
+        "Crossfade CTC<>XY",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC 3",
+        "CTC 3 fine",
+        "Tint 3",
+        "Tint 3 fine",
+        "Crossfade CTC<>XY 2",
+        "X 2",
+        "X 2 fine",
+        "Y 2",
+        "Y 2 fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        "Dim 4 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MultiSource - M25 - Dual RGBW 8bit 1x1",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "CTC<>RGB",
+        "R",
+        "G",
+        "B",
+        "WW",
+        "Dim 8",
+        "CTC 4",
+        "Tint 4",
+        "CTC<>RGB 2",
+        "R 7",
+        "G 4",
+        "B 4",
+        "WW 4",
+        "Dim 2",
+        "Dim 2 fine",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "Crossfade to Pixel Engine",
+        "Crossfade to Pixel Engine 2"
+      ]
+    },
+    {
+      "name": "MediaServer RGBW - Soft_18x18 - Hard_6x6",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW",
+        "R 7",
+        "G 4",
+        "B 4",
+        "WW 4",
+        "R 8",
+        "G 5",
+        "B 5",
+        "WW 5",
+        "R 9",
+        "G 6",
+        "B 6",
+        "WW 6"
+      ]
+    },
+    {
+      "name": "MediaServer RGB - Soft_18x18 - Hard_6x6",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dummy",
+        "R 7",
+        "G 4",
+        "B 4",
+        "Dummy 2",
+        "R 8",
+        "G 5",
+        "B 5",
+        "Dummy 3",
+        "R 9",
+        "G 6",
+        "B 6",
+        "WW 7"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      500,
+      60,
+      500
+    ],
+    "weight": 23.0,
+    "power": 1000,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm / 626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red_Soft",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green_Soft",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue_Soft",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White_Soft",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Red_Hard",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green_Hard",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue_Hard",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White_Hard",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Red_Mixed",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green_Mixed",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000"
+    },
+    {
+      "name": "Blue_Mixed",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff"
+    },
+    {
+      "name": "White_Mixed",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-22T14:28:52",
+      "text": "Rev 077 - Pixelbrute FW V.2.1  - 25 Modes, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "pixelbrute",
+  "gwFixtureTypeID": "2F690BEC-4095-464F-AEED-9576A81CB1A3"
+}

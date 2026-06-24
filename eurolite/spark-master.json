@@ -1,0 +1,134 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Spark Master",
+  "shortName": "Spark Master",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2022-04-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 07F05A4B-D212-409D-9378-03FAAE2FE5CB"
+    }
+  },
+  "comment": "SparkMaster: The Eurolite Spark Master is a spark effect for stages and events that uses special granules to create safe fountains up to 5 meters in height. Since the Spark Master does not use pyrotechnics, it can be operated without a license. ",
+  "availableChannels": {
+    "Spark Effect": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (SparkEffect)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (SparkEffect)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (SparkEffect)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            21,
+            49
+          ],
+          "type": "Unknown (WarmUp)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            100
+          ],
+          "type": "Unknown (WarmUp)",
+          "physical": 1,
+          "comment": "Warm up On"
+        },
+        {
+          "dmxRange": [
+            101,
+            149
+          ],
+          "type": "Unknown (Cleaning)",
+          "physical": 0,
+          "comment": "Cleaning Off"
+        },
+        {
+          "dmxRange": [
+            150,
+            255
+          ],
+          "type": "Unknown (Cleaning)",
+          "physical": 1,
+          "comment": "Cleaning"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2ch Mode",
+      "channels": [
+        "Spark Effect",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      245,
+      325,
+      250
+    ],
+    "weight": 10.8
+  },
+  "gwSpecs": {
+    "description": "The Eurolite Spark Master is a spark effect for stages and events that uses special granules to create safe fountains up to 5 meters in height. Since the Spark Master does not use pyrotechnics, it can be operated without a license.",
+    "operatingTemperature": [
+      -5,
+      45
+    ],
+    "revision": {
+      "date": "2022-04-13T07:46:09",
+      "text": "v1.0"
+    }
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "spark-master",
+  "gwFixtureTypeID": "07F05A4B-D212-409D-9378-03FAAE2FE5CB"
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FW 100",
+  "shortName": "FW 100",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-10-18",
+    "lastModifyDate": "2024-10-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 68B59B17-BC21-486D-A151-B531A842BBBC"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIn"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S>F"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1Ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2Ch",
+      "channels": [
+        "Dim 2",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      195,
+      285,
+      195
+    ],
+    "weight": 5.8,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 12000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200K",
+      "cie": "0.412500,0.439600,71.750000",
+      "hex": "#fada6b"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-18T06:42:35",
+      "text": "FW 100"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "056bd2c3fd776b47"
+  },
+  "manufacturerKey": "brighter",
+  "fixtureKey": "fw-100",
+  "gwFixtureTypeID": "68B59B17-BC21-486D-A151-B531A842BBBC"
+}

@@ -1,0 +1,767 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "200W LED Beam Moving Head",
+  "shortName": "200W LED Beam",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-20",
+    "lastModifyDate": "2025-07-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 65F9FDBF-17F1-4954-A4F5-5492D3D365A8"
+    }
+  },
+  "wheels": {
+    "Color": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 2",
+          "colors": [
+            "#e40500"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 3",
+          "colors": [
+            "#e4e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 4",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 5",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 6",
+          "colors": [
+            "#e47600"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 7",
+          "colors": [
+            "#e404e4"
+          ]
+        }
+      ]
+    },
+    "Gobo": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Empty",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "7597fcd34098c614"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 2",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "22e1c324aeb73847"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 3",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "0cea82172687e40b"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 4",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "b2b606985c629214"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 5",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "106c4751fdfaa87d"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 6",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "1a3c549a8f9b05cc"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 7",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "94010b5af45f9f36"
+        }
+      ]
+    },
+    "Prism": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Shutter": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "C1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "WheelRotation",
+          "wheel": "Color",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 2,
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 3,
+          "comment": "Yellow"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 4,
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 5,
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 6,
+          "comment": "Amber"
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 7,
+          "comment": "Magenta"
+        }
+      ]
+    },
+    "G1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "WheelRotation",
+          "wheel": "Gobo",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 2,
+          "comment": "Gobo 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 3,
+          "comment": "Gobo 2"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 4,
+          "comment": "Gobo 3"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 5,
+          "comment": "Gobo 4"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 6,
+          "comment": "Gobo 5"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 7,
+          "comment": "Gobo 6"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo",
+          "slotNumber": 8,
+          "comment": "Gobo 7"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 1,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo Shake Open"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 2,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 1 Shake"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 3,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 2 Shake"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 4,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 3 Shake"
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 5,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 4 Shake"
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 6,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 5 Shake"
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 7,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 6 Shake"
+        },
+        {
+          "dmxRange": [
+            150,
+            255
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo",
+          "slotNumber": 8,
+          "shakeSpeedStart": "0Hz",
+          "shakeSpeedEnd": "1Hz",
+          "comment": "Gobo 7 Shake"
+        }
+      ]
+    },
+    "Prism1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "Prism",
+          "comment": "No Prism"
+        },
+        {
+          "dmxRange": [
+            100,
+            127
+          ],
+          "type": "Prism",
+          "comment": "Prism"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Prism",
+          "comment": "Prism Rotation"
+        }
+      ]
+    },
+    "7-Color Effect": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (7-Color Effect)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (7-Color Effect)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "7-Color Effect"
+        }
+      ]
+    },
+    " AutoMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Other Channel Functions"
+        },
+        {
+          "dmxRange": [
+            30,
+            59
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Self Mode 01"
+        },
+        {
+          "dmxRange": [
+            60,
+            89
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Self Mode 02"
+        },
+        {
+          "dmxRange": [
+            90,
+            119
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Self Mode 03"
+        },
+        {
+          "dmxRange": [
+            120,
+            149
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Self Mode 04"
+        },
+        {
+          "dmxRange": [
+            150,
+            158
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            179
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Activated 01"
+        },
+        {
+          "dmxRange": [
+            180,
+            209
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Activated 02"
+        },
+        {
+          "dmxRange": [
+            210,
+            239
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Activated 03"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Unknown (Auto mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Activated 04"
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            21,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "X-Axis Running"
+        },
+        {
+          "dmxRange": [
+            101,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Y-Axis Running"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "13 Channel",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "StrobeM Shutter",
+        "C1",
+        "G1",
+        "Prism1",
+        "7-Color Effect",
+        " AutoMode",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 4.65,
+    "power": 75,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        11.0,
+        11.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Rudderstar 200W LED Beam Moving Head",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-20T22:53:13",
+      "text": "Version 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "da362fe7910c59ba"
+  },
+  "manufacturerKey": "rudderstar",
+  "fixtureKey": "200w-led-beam-moving-head",
+  "gwFixtureTypeID": "65F9FDBF-17F1-4954-A4F5-5492D3D365A8"
+}

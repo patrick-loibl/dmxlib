@@ -1,0 +1,263 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Strip Blinder Led RGB WW",
+  "shortName": "Led RGB WW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "5E4B937D-39E8-48EF-98D1-CC19A703B3F2"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      120,
+      160,
+      511
+    ],
+    "weight": 7.0,
+    "power": 30,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        87.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Base_Pixel10 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "LEDs_Pixel10 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "LEDs_Pixel10 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "LEDs_Pixel10 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "LEDs_Pixel10 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "LEDs_Pixel10 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Base_Pixel10 Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Beam ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1pix 8 bit 4 CH",
+      "shortName": "1pix 8 bit 4",
+      "channels": [
+        "LEDs_Pixel10 ColorAdd_R",
+        "LEDs_Pixel10 ColorAdd_G",
+        "LEDs_Pixel10 ColorAdd_B",
+        "LEDs_Pixel10 ColorAdd_W"
+      ]
+    },
+    {
+      "name": "1 pix 8 bit 6 CH",
+      "shortName": "1 pix 8 bit ",
+      "channels": [
+        "LEDs_Pixel10 ColorAdd_R",
+        "LEDs_Pixel10 ColorAdd_G",
+        "LEDs_Pixel10 ColorAdd_B",
+        "LEDs_Pixel10 ColorAdd_W",
+        "LEDs_Pixel10 Dimmer",
+        "Base_Pixel10 Shutter1"
+      ]
+    },
+    {
+      "name": "10 pix 8 bit 40 ch",
+      "shortName": "10 pix 8 bit",
+      "channels": [
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_W"
+      ]
+    },
+    {
+      "name": "5 Pix 8 bit 20Ch",
+      "shortName": "5 Pix 8 bit ",
+      "channels": [
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_W"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.638400,0.331200,100.000000",
+      "hex": "#ff1d01"
+    },
+    {
+      "name": "Green",
+      "cie": "0.297200,0.596800,100.000000",
+      "hex": "#00ff1c"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150900,0.057080,100.000000",
+      "hex": "#5e00ff"
+    },
+    {
+      "name": "WHITE",
+      "cie": "0.322500,0.336800,100.000000",
+      "hex": "#fffef6"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-08-13T12:19:05",
+      "text": "1.0.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5b6716ce206a4fa6"
+  },
+  "manufacturerKey": "stairville",
+  "fixtureKey": "strip-blinder-led-rgb-ww",
+  "gwFixtureTypeID": "5E4B937D-39E8-48EF-98D1-CC19A703B3F2"
+}

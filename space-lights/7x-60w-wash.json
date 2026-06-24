@@ -1,0 +1,264 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "7X 60W WASH",
+  "shortName": "7X 60W WASH",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-08-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3A7DE3A1-557F-4670-A188-061C19D3BC36"
+    }
+  },
+  "comment": "WATERPROOF 7X 60W WASH",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro2": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro3": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "CTO",
+        "Color Macro1",
+        "Color Macro2",
+        "Color Macro3",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 5.6,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    },
+    {
+      "name": "Red",
+      "cie": "0.639400,0.332300,100.000000",
+      "hex": "#ff2100"
+    },
+    {
+      "name": "Green",
+      "cie": "0.305200,0.650800,100.000000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.138700,0.056010,100.000000",
+      "hex": "#004cff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-08-06T13:54:09",
+      "text": "v1000"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "space-lights",
+  "fixtureKey": "7x-60w-wash",
+  "gwFixtureTypeID": "3A7DE3A1-557F-4670-A188-061C19D3BC36"
+}

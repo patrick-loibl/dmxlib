@@ -1,0 +1,310 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Lumicore",
+  "shortName": "LCore",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-03-25",
+    "lastModifyDate": "2026-06-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A4FC1407-AFDA-C921-BBFB-5112537DC456"
+    }
+  },
+  "comment": "LumiCore: ~CH~ LumiCore v2.4 Fixture Profiles",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "DMX XF": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (DMX XF)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Source 1"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (DMX XF)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (DMX XF)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Source 2"
+        }
+      ]
+    },
+    "DMX Input": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Idle / Do Nothing"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Input 1"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Input 2"
+        },
+        {
+          "dmxRange": [
+            24,
+            31
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Input 3"
+        },
+        {
+          "dmxRange": [
+            32,
+            39
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Input 4"
+        },
+        {
+          "dmxRange": [
+            40,
+            247
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Future Use"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Unknown (DMXInput)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Idle / Do Nothing"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Idle / Do Nothing"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Go"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Forward"
+        },
+        {
+          "dmxRange": [
+            24,
+            31
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Back"
+        },
+        {
+          "dmxRange": [
+            32,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        },
+        {
+          "dmxRange": [
+            40,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            140
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Record"
+        },
+        {
+          "dmxRange": [
+            141,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Idle / Do Nothing"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Idle"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Recover"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "X-Fade",
+      "channels": [
+        "DMX XF"
+      ]
+    },
+    {
+      "name": "Switch",
+      "channels": [
+        "DMX Input"
+      ]
+    },
+    {
+      "name": "Play",
+      "channels": [
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "Backup",
+      "channels": [
+        "Ctrl1 2"
+      ]
+    },
+    {
+      "name": "Master / Limit",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      44,
+      220
+    ]
+  },
+  "gwSpecs": {
+    "description": "~CH~ LumiCore v2.4 Fixture Profiles",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-19T19:40:40",
+      "text": "Created by Chris H., Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "luminex",
+  "fixtureKey": "lumicore",
+  "gwFixtureTypeID": "A4FC1407-AFDA-C921-BBFB-5112537DC456"
+}

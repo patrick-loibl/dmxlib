@@ -1,0 +1,309 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BT-COLORAY Multi",
+  "shortName": "Coloray Multi",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-02-16",
+    "lastModifyDate": "2024-10-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 19DB7BDC-DC3C-4FAD-91B7-44BF42DE1D8B"
+    }
+  },
+  "comment": "BT-Coloray Multi: Powerful 120W RGBW projector with a waterproof IP65 die-cast ALU-housing",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 200,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            199
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            202,
+            246
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "max"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "min"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "4Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "7Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Sh1",
+        "Intensity MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      188,
+      192,
+      188
+    ],
+    "weight": 5.28,
+    "DMXconnector": "XLR3",
+    "power": 144,
+    "bulb": {
+      "type": "460nm LED",
+      "lumens": 2283,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000",
+      "dominantWavelength": 460.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.300100,0.600000,71.520000",
+      "hex": "#01ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Powerful 120W RGBW projector with a waterproof IP65 die-cast ALU-housing",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-10T09:16:19",
+      "text": "20241010_Misdat"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7f57153eef26cf04"
+  },
+  "manufacturerKey": "briteq",
+  "fixtureKey": "bt-coloray-multi",
+  "gwFixtureTypeID": "19DB7BDC-DC3C-4FAD-91B7-44BF42DE1D8B"
+}

@@ -1,0 +1,197 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED IP Bar 320/8 RGB",
+  "shortName": "LED IP Bar 320/8 RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-29",
+    "lastModifyDate": "2025-03-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 41076085-D7FB-4592-91B8-63619410BABD"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Med"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "26ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      110,
+      145,
+      1112
+    ],
+    "power": 3,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        30.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150100,0.060040,7.224000",
+      "hex": "#0100ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-03-31T02:10:49",
+      "text": "v2 - Fixed positioning for pixels in 3D"
+    }
+  },
+  "manufacturerKey": "stairville",
+  "fixtureKey": "led-ip-bar-320-8-rgb",
+  "gwFixtureTypeID": "41076085-D7FB-4592-91B8-63619410BABD"
+}

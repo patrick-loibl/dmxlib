@@ -1,0 +1,229 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VP-1",
+  "shortName": "VP-1",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-12-02",
+    "lastModifyDate": "2022-12-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 748DD351-A717-4C2F-850A-E3A136BD02B6"
+    }
+  },
+  "comment": "VP-1 DMX Video BiLight Panel",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe fast"
+        }
+      ]
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTC by Dimmer"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3200 K"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "7800 K"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4278190080,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "4ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "3ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "CTC"
+      ]
+    },
+    {
+      "name": "2ch - Mode 2 (CW + WW)",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "2ch - Mode 1 (Dimmer + CTC)",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      400,
+      90,
+      400
+    ],
+    "weight": 5.5,
+    "power": 115,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 4380
+    },
+    "lens": {
+      "degreesMinMax": [
+        120.0,
+        150.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "WW",
+      "cie": "0.449600,0.408900,100.000000",
+      "hex": "#ffea82"
+    },
+    {
+      "name": "CW",
+      "cie": "0.292100,0.295500,93.000000",
+      "hex": "#f4f4ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-12-05T08:40:25",
+      "text": "r003"
+    }
+  },
+  "manufacturerKey": "varytec",
+  "fixtureKey": "vp-1",
+  "gwFixtureTypeID": "748DD351-A717-4C2F-850A-E3A136BD02B6"
+}

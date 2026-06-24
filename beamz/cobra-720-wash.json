@@ -1,0 +1,285 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Cobra 720 Wash",
+  "shortName": "Cobra720",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "394E4230-1703-4A82-9269-EA5640C65345"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      220,
+      300,
+      240
+    ],
+    "weight": 4.5,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Yoke PositionMSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed"
+        }
+      ]
+    },
+    "Head Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Head Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Head ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Head ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Head ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Head ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Head Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Head ColorEffects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "ColorEffects1"
+        }
+      ]
+    },
+    "Base Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "Control1 1"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "16 Ch",
+      "shortName": "16 Ch",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Yoke PositionMSpeed",
+        "Head Dimmer",
+        "Head Shutter1",
+        "Head ColorAdd_R",
+        "Head ColorAdd_G",
+        "Head ColorAdd_B",
+        "Head ColorAdd_W",
+        "Head Zoom",
+        "Head ColorEffects1",
+        null,
+        null,
+        "Base Control1"
+      ]
+    },
+    {
+      "name": "14 Ch",
+      "shortName": "14 Ch",
+      "channels": [
+        "Yoke Pan",
+        "Head Tilt",
+        "Yoke PositionMSpeed",
+        "Head Dimmer",
+        "Head Shutter1",
+        "Head ColorAdd_R",
+        "Head ColorAdd_G",
+        "Head ColorAdd_B",
+        "Head ColorAdd_W",
+        "Head Zoom",
+        "Head ColorEffects1",
+        null,
+        null,
+        "Base Control1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White 5600 K",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Moving Head Wash :: IP20 / 7 x 20 W RGBW / zoom 8 - 50 degrees",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -5,
+      45
+    ],
+    "revision": {
+      "date": "2026-03-02T14:08:31",
+      "text": "rev100 RELEASE"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e6806d2a9cc0ad4a"
+  },
+  "manufacturerKey": "beamz",
+  "fixtureKey": "cobra-720-wash",
+  "gwFixtureTypeID": "394E4230-1703-4A82-9269-EA5640C65345"
+}

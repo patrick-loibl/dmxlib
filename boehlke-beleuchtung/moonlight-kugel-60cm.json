@@ -1,0 +1,191 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Moonlight Kugel 60cm",
+  "shortName": "Moonlight Kugel 60cm",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "8B5119CF-4C53-4BBE-8CA9-657C67729691"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      610,
+      610,
+      610
+    ],
+    "power": 14,
+    "bulb": {
+      "type": "LED",
+      "lumens": 750,
+      "colorTemperature": 4000
+    },
+    "lens": {
+      "degreesMinMax": [
+        155.0,
+        205.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Beam ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "11: DIM RGBS",
+      "shortName": "11: DIM RGBS",
+      "channels": [
+        "Beam Dimmer",
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam Shutter1"
+      ]
+    },
+    {
+      "name": "3: RGBAW",
+      "shortName": "3: RGBAW",
+      "channels": [
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        null,
+        "Beam ColorAdd_W"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "RGBAW-Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "RGBAW-Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "RGBAW-Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "RGBAW-Amber",
+      "cie": "0.543600,0.406600,36.570000",
+      "hex": "#ff8000"
+    },
+    {
+      "name": "RGBAW-White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "None",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-09-14T16:59:24",
+      "text": "V1.6"
+    }
+  },
+  "manufacturerKey": "boehlke-beleuchtung",
+  "fixtureKey": "moonlight-kugel-60cm",
+  "gwFixtureTypeID": "8B5119CF-4C53-4BBE-8CA9-657C67729691"
+}

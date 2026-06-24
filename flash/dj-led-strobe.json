@@ -1,0 +1,331 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "DJ LED STROBE",
+  "shortName": "LED STROBE",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "865F5BC8-6D19-4808-85B0-5BDCF1863EB9"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      200,
+      150,
+      300
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Body ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Body ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Body ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Body ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Body Effects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Effects1 1"
+        }
+      ]
+    },
+    "Body Effects1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "Body Shutter2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Body Effects2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Effects2 1"
+        }
+      ]
+    },
+    "Body Effects2Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "RGB_beam ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGB_beam ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGB_beam ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "W_beam ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4ch",
+      "shortName": "4ch",
+      "channels": [
+        "Body ColorAdd_R",
+        "Body ColorAdd_G",
+        "Body ColorAdd_B",
+        "Body ColorAdd_W"
+      ]
+    },
+    {
+      "name": "11ch",
+      "shortName": "11ch",
+      "channels": [
+        "Body Dimmer",
+        "Body Shutter1",
+        "Body Effects1",
+        "Body Effects1Rate",
+        "Body ColorAdd_R",
+        "Body ColorAdd_G",
+        "Body ColorAdd_B",
+        "Body Shutter2",
+        "Body Effects2",
+        "Body Effects2Rate",
+        "Body ColorAdd_W"
+      ]
+    },
+    {
+      "name": "32ch",
+      "shortName": "32ch",
+      "channels": [
+        "RGB_beam ColorAdd_R",
+        "RGB_beam ColorAdd_G",
+        "RGB_beam ColorAdd_B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "W_beam ColorAdd_W"
+      ]
+    },
+    {
+      "name": "39ch",
+      "shortName": "39ch",
+      "channels": [
+        "Body Dimmer",
+        "Body Shutter1",
+        "Body Effects1",
+        "Body Effects1Rate",
+        "RGB_beam ColorAdd_R",
+        "RGB_beam ColorAdd_G",
+        "RGB_beam ColorAdd_B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Body Shutter2",
+        "Body Effects2",
+        "Body Effects2Rate",
+        "W_beam ColorAdd_W"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "https://flash-butrym.pl/pl/p/LED-STROBE/744\n\nF9700341",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-07-18T20:15:43",
+      "text": "MIXTURE"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fda426033af2072d"
+  },
+  "manufacturerKey": "flash",
+  "fixtureKey": "dj-led-strobe",
+  "gwFixtureTypeID": "865F5BC8-6D19-4808-85B0-5BDCF1863EB9"
+}

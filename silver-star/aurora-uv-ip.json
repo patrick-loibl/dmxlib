@@ -1,0 +1,265 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Aurora UV IP",
+  "shortName": "AuroraUV",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-14",
+    "lastModifyDate": "2026-02-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 75BECE1D-B24F-4448-BBCF-67595D9CE74F"
+    }
+  },
+  "comment": "365nm UV Par with IP65 rating",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            39
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            40,
+            69
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Med"
+        },
+        {
+          "dmxRange": [
+            70,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Lightning"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            10,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            30,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 1"
+        },
+        {
+          "dmxRange": [
+            70,
+            129
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 2"
+        },
+        {
+          "dmxRange": [
+            130,
+            189
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 3"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 4"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "UNO",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "DOS",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "STD_P",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "weight": 6.5,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "UV",
+      "cie": "0.189900,0.019010,2.250000",
+      "hex": "#8300ff",
+      "dominantWavelength": 365.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "365nm UV Par with IP65 rating",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2026-02-25T00:02:14",
+      "text": "V1_01"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a6d8ef9246d3f8d0"
+  },
+  "manufacturerKey": "silver-star",
+  "fixtureKey": "aurora-uv-ip",
+  "gwFixtureTypeID": "75BECE1D-B24F-4448-BBCF-67595D9CE74F"
+}

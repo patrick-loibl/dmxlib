@@ -1,0 +1,310 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "IrLED64 - 36x1RGB",
+  "shortName": "IrLED64 - 36x1RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-12-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 69120018-FA24-48EE-AB24-D7A69E184050"
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            165
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe S>F"
+        },
+        {
+          "dmxRange": [
+            166,
+            240
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Macro Speed"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Sound Active"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "No Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Amber",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Yellow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Cyan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            106,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Pink",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "Magenta",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "6000K",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "3000K",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            166,
+            240
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1-5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim",
+        "Strobe Rate",
+        "Color FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Amber",
+      "cie": "0.516600,0.460500,61.500000",
+      "hex": "#ffb900"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-12-16T11:01:39",
+      "text": "V1 No 3D"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "contest",
+  "fixtureKey": "irled64-36x1rgb",
+  "gwFixtureTypeID": "69120018-FA24-48EE-AB24-D7A69E184050"
+}

@@ -1,0 +1,291 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FLM 202",
+  "shortName": "FLM202",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-12-06",
+    "lastModifyDate": "2025-10-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 25D7E249-93B1-4C7B-8FA7-5EF6B0E56931"
+    }
+  },
+  "comment": "FLM 202 es un nuevo concepto de dispositivo flash LED que ofrece un potente efecto estrobo gracias a sus 8 diodos blancos de 25W cada uno, teniendo como ventaja poco consumo de energía, reduciendo así el calor y ofreciendo una larga vida útil. Puede ser controlado de manera autónoma y a través de DMX usando cinco canales que ofrecen la posibilidad de cambiar la intensidad, velocidad del estrobo o diferentes efectos. La unidad es ideal para clubes, conciertos en vivo y espectáculos.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min Dimmer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimmer"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max Dimmer"
+        }
+      ]
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Strobe"
+        },
+        {
+          "dmxRange": [
+            5,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Min Sequence",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "Sequence",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Max Sequence",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX2": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Min Full LED",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "Full LED",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Max Full LED",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX3": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Min Sequence + Full LED",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "Sequence + Full LED",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Max Sequence + Full LED",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "5 CHANNELS",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "FX1",
+        "FX2",
+        "FX3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      140,
+      90,
+      312
+    ],
+    "weight": 1.67,
+    "DMXconnector": "BNC",
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "FLM 202 es un nuevo concepto de dispositivo flash LED que ofrece un potente efecto estrobo gracias a sus 8 diodos blancos de 25W cada uno, teniendo como ventaja poco consumo de energía, reduciendo así el calor y ofreciendo una larga vida útil. Puede ser controlado de manera autónoma y a través de DMX usando cinco canales que ofrecen la posibilidad de cambiar la intensidad, velocidad del estrobo o diferentes efectos. La unidad es ideal para clubes, conciertos en vivo y espectáculos.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-14T14:39:54",
+      "text": "Version_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "32ae4d069ac2c0fd"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "flm-202",
+  "gwFixtureTypeID": "25D7E249-93B1-4C7B-8FA7-5EF6B0E56931"
+}

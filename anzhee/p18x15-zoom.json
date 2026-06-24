@@ -1,0 +1,267 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "P18x15-ZOOM",
+  "shortName": "Par ZOOM",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-12-09",
+    "lastModifyDate": "2023-01-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1180054F-CADE-4646-A8BB-711AD5C3320E"
+    }
+  },
+  "comment": "Anzhee P18x15-ZOOM",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            12
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            13,
+            13
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            14,
+            133
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            135,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            1,
+            126
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "AR2.S",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "Sh1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      240,
+      215,
+      180
+    ],
+    "power": 15,
+    "bulb": {
+      "type": "LED",
+      "lumens": 50000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.639400,0.330700,91.500000",
+      "hex": "#ff1100"
+    },
+    {
+      "name": "Green",
+      "cie": "0.230600,0.621800,24.250000",
+      "hex": "#00a422"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.155600,0.065040,12.500000",
+      "hex": "#3014ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.540000,0.409300,48.000000",
+      "hex": "#ff9201"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-01-29T22:30:40",
+      "text": "Anzhee"
+    }
+  },
+  "manufacturerKey": "anzhee",
+  "fixtureKey": "p18x15-zoom",
+  "gwFixtureTypeID": "1180054F-CADE-4646-A8BB-711AD5C3320E"
+}

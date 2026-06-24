@@ -1,0 +1,1799 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Hex 16 Strip",
+  "shortName": "Hex16",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-08",
+    "lastModifyDate": "2025-05-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8ACA6343-3205-4E62-83D9-C7EAEF2DAE78"
+    }
+  },
+  "comment": "LEDBAR016: 16 x 10w RGBAWUv LED Strip\nhttps://showtech.com.au/webdata/LEDBAR016/downloads/Datasheet.pdf\nAll other official reference webpages have been taken down.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Slow to Fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            30
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 0 to 100% B 0"
+        },
+        {
+          "dmxRange": [
+            31,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100 to 0% G 100% B 0"
+        },
+        {
+          "dmxRange": [
+            51,
+            70
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0 G 100% B 0 to 100%"
+        },
+        {
+          "dmxRange": [
+            71,
+            90
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0 G 100 to 0% B 100%"
+        },
+        {
+          "dmxRange": [
+            91,
+            110
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0 to 100% G 0 B 100%"
+        },
+        {
+          "dmxRange": [
+            111,
+            130
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 0 B 100 to 0%"
+        },
+        {
+          "dmxRange": [
+            131,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 0 to 100% B 0 to 100%"
+        },
+        {
+          "dmxRange": [
+            151,
+            170
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100 to 0% G 100 to 0% B 100%"
+        },
+        {
+          "dmxRange": [
+            171,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "R100% G100% B100% W100%"
+        },
+        {
+          "dmxRange": [
+            201,
+            205
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 1"
+        },
+        {
+          "dmxRange": [
+            206,
+            210
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 2"
+        },
+        {
+          "dmxRange": [
+            211,
+            215
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 3"
+        },
+        {
+          "dmxRange": [
+            216,
+            220
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 4"
+        },
+        {
+          "dmxRange": [
+            221,
+            225
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 5"
+        },
+        {
+          "dmxRange": [
+            226,
+            230
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 6"
+        },
+        {
+          "dmxRange": [
+            231,
+            235
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 7"
+        },
+        {
+          "dmxRange": [
+            236,
+            240
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 8"
+        },
+        {
+          "dmxRange": [
+            241,
+            245
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 9"
+        },
+        {
+          "dmxRange": [
+            246,
+            250
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 10"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Color Temperature 11"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            44
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            45,
+            61
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            62,
+            78
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            79,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            112
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            113,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            146
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            147,
+            163
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            164,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            197
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            198,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            215,
+            231
+          ],
+          "type": "Effect",
+          "effectName": "Fade Programs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            232,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto Programs 0 (1 to 12)",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "ColorEffectsSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorEffectsSpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorEffectsSpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorEffectsSpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Preset Speed from Display"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 1 (Fast)"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 2 (Medium)"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 3 (Slow)"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 2": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 2": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 3": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 3": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 4": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 4": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 5": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 5": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 5": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 6": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 6": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 6": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 7": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 7": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 7": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 8": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 8": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 8": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 9": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 9": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 9": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 9": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 9": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 9": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 10": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 10": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 10": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 10": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 10": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 10": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 11": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 11": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 11": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 11": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 11": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 11": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 12": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 12": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 12": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 12": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 12": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 12": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 13": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 13": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 13": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 13": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 13": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 13": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 14": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 14": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 14": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 14": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 14": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 14": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 15": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 15": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 15": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 15": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 15": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 15": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 16": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 16": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 16": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 16": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White 16": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV 16": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 8": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 9": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 10": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 11": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 12": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 13": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 14": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 15": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 16": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 17": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "H": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "S": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B 17": {
+      "name": "B",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Brightness)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Brightness)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Brightness)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "White",
+        "UV"
+      ]
+    },
+    {
+      "name": "8 Channel Mode",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "White",
+        "UV",
+        "Strobe Rate"
+      ]
+    },
+    {
+      "name": "12 Channel Mode",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "White",
+        "UV",
+        "Strobe Rate",
+        "Color Macro1",
+        "Color FX1",
+        "ColorEffectsSpeed",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "96 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "White",
+        "UV",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Amber 2",
+        "White 2",
+        "UV 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "Amber 3",
+        "White 3",
+        "UV 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "Amber 4",
+        "White 4",
+        "UV 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "Amber 5",
+        "White 5",
+        "UV 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "Amber 6",
+        "White 6",
+        "UV 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "Amber 7",
+        "White 7",
+        "UV 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "Amber 8",
+        "White 8",
+        "UV 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "Amber 9",
+        "White 9",
+        "UV 9",
+        "R 10",
+        "G 10",
+        "B 10",
+        "Amber 10",
+        "White 10",
+        "UV 10",
+        "R 11",
+        "G 11",
+        "B 11",
+        "Amber 11",
+        "White 11",
+        "UV 11",
+        "R 12",
+        "G 12",
+        "B 12",
+        "Amber 12",
+        "White 12",
+        "UV 12",
+        "R 13",
+        "G 13",
+        "B 13",
+        "Amber 13",
+        "White 13",
+        "UV 13",
+        "R 14",
+        "G 14",
+        "B 14",
+        "Amber 14",
+        "White 14",
+        "UV 14",
+        "R 15",
+        "G 15",
+        "B 15",
+        "Amber 15",
+        "White 15",
+        "UV 15",
+        "R 16",
+        "G 16",
+        "B 16",
+        "Amber 16",
+        "White 16",
+        "UV 16"
+      ]
+    },
+    {
+      "name": "101 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "White",
+        "UV",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Amber 2",
+        "White 2",
+        "UV 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "Amber 3",
+        "White 3",
+        "UV 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "Amber 4",
+        "White 4",
+        "UV 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "Amber 5",
+        "White 5",
+        "UV 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "Amber 6",
+        "White 6",
+        "UV 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "Amber 7",
+        "White 7",
+        "UV 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "Amber 8",
+        "White 8",
+        "UV 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "Amber 9",
+        "White 9",
+        "UV 9",
+        "R 10",
+        "G 10",
+        "B 10",
+        "Amber 10",
+        "White 10",
+        "UV 10",
+        "R 11",
+        "G 11",
+        "B 11",
+        "Amber 11",
+        "White 11",
+        "UV 11",
+        "R 12",
+        "G 12",
+        "B 12",
+        "Amber 12",
+        "White 12",
+        "UV 12",
+        "R 13",
+        "G 13",
+        "B 13",
+        "Amber 13",
+        "White 13",
+        "UV 13",
+        "R 14",
+        "G 14",
+        "B 14",
+        "Amber 14",
+        "White 14",
+        "UV 14",
+        "R 15",
+        "G 15",
+        "B 15",
+        "Amber 15",
+        "White 15",
+        "UV 15",
+        "R 16",
+        "G 16",
+        "B 16",
+        "Amber 16",
+        "White 16",
+        "UV 16",
+        "Color FX1",
+        "ColorEffectsSpeed",
+        "Dim 2",
+        "Strobe Rate",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "HSV Mode",
+      "channels": [
+        "H",
+        "S",
+        "B 17"
+      ]
+    },
+    {
+      "name": "HSI Mode",
+      "channels": [
+        "H",
+        "S",
+        "B 17"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      80,
+      100,
+      1081
+    ],
+    "weight": 5.1,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        22.0,
+        37.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "16 x 10w RGBAWUv LED Strip\nhttps://showtech.com.au/webdata/LEDBAR016/downloads/Datasheet.pdf\nAll other official reference webpages have been taken down.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-08T07:56:18",
+      "text": "Fixed Name (previous was LEDBAR016)"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7ce75c6acfcf0e39"
+  },
+  "manufacturerKey": "showpro",
+  "fixtureKey": "led-hex-16-strip",
+  "gwFixtureTypeID": "8ACA6343-3205-4E62-83D9-C7EAEF2DAE78"
+}

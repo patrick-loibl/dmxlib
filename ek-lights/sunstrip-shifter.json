@@ -1,0 +1,484 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Sunstrip Shifter",
+  "shortName": "SSShift",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-26",
+    "lastModifyDate": "2024-11-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 25BA0E36-F2C0-4FCC-9FA9-67F35A5D9C72"
+    }
+  },
+  "comment": "10 x 9W 3100K White and Amber LED Engine",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Red Shift": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Red Shift)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "On"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Unknown (Red Shift)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            126,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            32
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            33,
+            76
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            77,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            164
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            165,
+            208
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            209,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 1"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 2"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 3"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 4"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": " Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3CH",
+      "channels": [
+        "WW",
+        "Amber",
+        "Red Shift"
+      ]
+    },
+    {
+      "name": "5CH",
+      "channels": [
+        "Dim",
+        "WW",
+        "Amber",
+        "Sh1",
+        "Red Shift"
+      ]
+    },
+    {
+      "name": "6CH",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine",
+        "WW",
+        "Amber",
+        "Sh1",
+        "Red Shift"
+      ]
+    },
+    {
+      "name": "8CH",
+      "channels": [
+        "Dim",
+        "WW",
+        "Amber",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Red Shift",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "9CH",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine",
+        "WW",
+        "Amber",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Red Shift",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "10CH",
+      "channels": [
+        "WW"
+      ]
+    },
+    {
+      "name": "21CH",
+      "channels": [
+        "WW",
+        "Amber",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Red Shift"
+      ]
+    },
+    {
+      "name": "27CH",
+      "channels": [
+        "WW",
+        "Amber",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Red Shift",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      79,
+      158,
+      1000
+    ],
+    "weight": 9.5,
+    "power": 9,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5658,
+      "colorTemperature": 3100
+    },
+    "lens": {
+      "degreesMinMax": [
+        16.0,
+        37.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3100K White",
+      "cie": "0.421600,0.433900,69.180000",
+      "hex": "#ffd468"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.546600,0.404200,35.910000",
+      "hex": "#ff7d00"
+    }
+  ],
+  "gwSpecs": {
+    "description": "10 x 9W 3100K White and Amber LED Engine",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-11-26T04:26:09",
+      "text": "Rev 100"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a06449e3ee90565e"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "sunstrip-shifter",
+  "gwFixtureTypeID": "25BA0E36-F2C0-4FCC-9FA9-67F35A5D9C72"
+}

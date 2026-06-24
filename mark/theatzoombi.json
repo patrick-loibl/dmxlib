@@ -1,0 +1,251 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "TheatZoomBI",
+  "shortName": "TheatZBI",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-04",
+    "lastModifyDate": "2025-12-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A794E73E-4CE4-4591-AB86-03C7D6DF4050"
+    }
+  },
+  "comment": "Theatre Zoom BI: THEATRE ZOOM BI es un foco de escenario que incorpora dos tonalidades de luz blanca. Además, cuenta con zoom motorizado y efecto estrobo. Incluye 1 LED blanco de 200W WW/CW 2 en 1. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar por los submenús, seleccionando parámetros para zoom manual, curva de dimerización, tono de color e información interna.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Strobe1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Strobe"
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            6,
+            55
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Off"
+        },
+        {
+          "dmxRange": [
+            56,
+            105
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Fastest"
+        },
+        {
+          "dmxRange": [
+            106,
+            155
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Fast"
+        },
+        {
+          "dmxRange": [
+            156,
+            205
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Slow"
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Slowest"
+        }
+      ]
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 5600,
+          "colorTemperatureEnd": 3000,
+          "comment": "Color Temperature"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2Ch",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "3Ch",
+      "channels": [
+        "CW",
+        "WW",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "6Ch",
+      "channels": [
+        "Dim",
+        "WW",
+        "CW",
+        "Strobe1",
+        "Zoom",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "7Ch",
+      "channels": [
+        "Dim",
+        "CTO",
+        "WW",
+        "CW",
+        "Strobe1",
+        "Zoom",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      251,
+      458,
+      284
+    ],
+    "weight": 7.0,
+    "DMXconnector": "XLR5",
+    "power": 50,
+    "bulb": {
+      "type": "584nm LED",
+      "lumens": 2264,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        22.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Tunsten 1",
+      "cie": "0.429400,0.381000,100.000000",
+      "hex": "#ffe8a7",
+      "dominantWavelength": 584.2
+    },
+    {
+      "name": "ColdWhite",
+      "cie": "0.315000,0.336400,100.000000",
+      "hex": "#fdfff9"
+    }
+  ],
+  "gwSpecs": {
+    "description": "THEATRE ZOOM BI es un foco de escenario que incorpora dos tonalidades de luz blanca. Además, cuenta con zoom motorizado y efecto estrobo. Incluye 1 LED blanco de 200W WW/CW 2 en 1. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar por los submenús, seleccionando parámetros para zoom manual, curva de dimerización, tono de color e información interna.",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-12T08:19:47",
+      "text": "Version2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3db2d6b9b503fdfe"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "theatzoombi",
+  "gwFixtureTypeID": "A794E73E-4CE4-4591-AB86-03C7D6DF4050"
+}

@@ -1,0 +1,292 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SAGOMA PROFILE PL300SAPTZ",
+  "shortName": "PL300SAPTZ",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-04-25",
+    "lastModifyDate": "2026-03-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1F5B1D82-53DB-432F-B8C5-2783BE04BFE7"
+    }
+  },
+  "comment": "SAGOMA PROFILE PL300SAPTZ\nProfile 300W tunable LED with zoom\n300W WW + 300W CW COB LED\n2800K - 6500K tunable\nCRI 97, R9≥97, TLCI 98\n18° - 38° manually zoom",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "color temperatue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3600K"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4200K"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4500K"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4800K"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "5200K"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "no function"
+        }
+      ]
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Ch mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 Ch mode",
+      "channels": [
+        "Dim",
+        "color temperatue"
+      ]
+    },
+    {
+      "name": "3 Ch mode",
+      "channels": [
+        "Dim",
+        null,
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "5 Ch mode",
+      "channels": [
+        "Dim",
+        "color temperatue",
+        "WW",
+        "CW",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      342,
+      459,
+      221
+    ],
+    "weight": 11.0,
+    "DMXconnector": "XLR5",
+    "power": 50,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2108,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        23.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200",
+      "cie": "0.346700,0.364100,86.720000",
+      "hex": "#ffeecb"
+    },
+    {
+      "name": "6500",
+      "cie": "0.309100,0.325100,96.350000",
+      "hex": "#f9fbff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "SAGOMA PROFILE PL300SAPTZ\nProfile 300W tunable LED with zoom\n300W WW + 300W CW COB LED\n2800K - 6500K tunable\nCRI 97, R9≥97, TLCI 98\n18° - 38° manually zoom",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2026-03-25T13:06:02",
+      "text": "PROFILE PL300SAPTZ"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fbbe8bdb7d34b887"
+  },
+  "manufacturerKey": "pluslite",
+  "fixtureKey": "sagoma-profile-pl300saptz",
+  "gwFixtureTypeID": "1F5B1D82-53DB-432F-B8C5-2783BE04BFE7"
+}

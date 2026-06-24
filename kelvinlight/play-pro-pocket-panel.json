@@ -1,0 +1,118 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Play Pro Pocket Panel",
+  "shortName": "Play Pro Pocket Panel",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-01-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DC1212B1-FD09-414B-AF78-2E7572B93DD6"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "fineChannelAliases": [
+        "Tint fine"
+      ],
+      "dmxValueResolution": "8bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "CCT",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Ctrl1",
+        "CTC",
+        "CTC fine",
+        "Tint",
+        "Tint fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "power": 150,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-09T13:31:32",
+      "text": "CCT Mode TEsted"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "kelvinlight",
+  "fixtureKey": "play-pro-pocket-panel",
+  "gwFixtureTypeID": "DC1212B1-FD09-414B-AF78-2E7572B93DD6"
+}

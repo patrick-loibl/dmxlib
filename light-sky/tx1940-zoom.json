@@ -1,0 +1,927 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "TX1940 Zoom",
+  "shortName": "TX1940 Zoom",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-04-28",
+    "lastModifyDate": "2025-04-27",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 432AB138-1A32-494B-9973-76B2496AB04A"
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            26,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Zoom Reset"
+        },
+        {
+          "dmxRange": [
+            36,
+            45
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "P/T Reset"
+        },
+        {
+          "dmxRange": [
+            46,
+            55
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "All Reset"
+        },
+        {
+          "dmxRange": [
+            56,
+            65
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed1"
+        },
+        {
+          "dmxRange": [
+            66,
+            75
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed2"
+        },
+        {
+          "dmxRange": [
+            76,
+            85
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed3"
+        },
+        {
+          "dmxRange": [
+            86,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed4"
+        },
+        {
+          "dmxRange": [
+            96,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            49
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseClose"
+        },
+        {
+          "dmxRange": [
+            50,
+            89
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseOpen"
+        },
+        {
+          "dmxRange": [
+            90,
+            119
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse"
+        },
+        {
+          "dmxRange": [
+            120,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            180,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Ma"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset",
+        "comment": "Color Macro"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angle": "5deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angle": "55deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            16777215
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            16777216,
+            1677721599
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            1677721600,
+            1694498815
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1694498816,
+            4294967295
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        }
+      ]
+    },
+    "Function 2": {
+      "name": "Function",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "No Fuction"
+        },
+        {
+          "dmxRange": [
+            26,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Zoom Reset"
+        },
+        {
+          "dmxRange": [
+            36,
+            45
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "P/T Reset"
+        },
+        {
+          "dmxRange": [
+            46,
+            55
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "All  Reset"
+        },
+        {
+          "dmxRange": [
+            56,
+            65
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed1"
+        },
+        {
+          "dmxRange": [
+            66,
+            75
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed2"
+        },
+        {
+          "dmxRange": [
+            76,
+            85
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed3"
+        },
+        {
+          "dmxRange": [
+            86,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed4"
+        },
+        {
+          "dmxRange": [
+            96,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "NO Function",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            6,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Effect 1",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            16,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Effect 2",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            26,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Effect 3",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            36,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Effect 4",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            46,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Effect 5",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            56,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "Effect 6",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            66,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Effect 7",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            76,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Effect 8",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            86,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Effect 9",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            96,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "Effect 10",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            106,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "CTO"
+      }
+    },
+    "Zoom 2": {
+      "name": "Zoom",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "H": {
+      "fineChannelAliases": [
+        "H fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "S": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "13CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Function",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Color Macro1",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "23CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Function 2",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White 2",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 3",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 4",
+        "Color Macro1",
+        "FX1",
+        "CTO",
+        "Zoom 2"
+      ]
+    },
+    {
+      "name": "9CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Function",
+        "Dim",
+        "Sh1",
+        "CTO",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "12CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Function",
+        "H",
+        "H fine",
+        "S",
+        "Dim",
+        "Sh1",
+        "CTO",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      209,
+      150,
+      202
+    ],
+    "weight": 21.0,
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10715,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        5.0,
+        55.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150100,0.060130,7.237000",
+      "hex": "#0101ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-04-27T02:05:29",
+      "text": "V1.6"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7de88541703be687"
+  },
+  "manufacturerKey": "light-sky",
+  "fixtureKey": "tx1940-zoom",
+  "gwFixtureTypeID": "432AB138-1A32-494B-9973-76B2496AB04A"
+}

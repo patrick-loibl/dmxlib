@@ -1,0 +1,3185 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ARCHER W3",
+  "shortName": "ARCHER W3",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2025-11-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C9DAC871-C450-4822-A834-8BF6380F34D8"
+    }
+  },
+  "comment": "Basic Moving Head Wash 7x40w: Four dimmer curves, versatile \"thungsten\" and \"CMY\" channel lists,\nplus/minus green control, variable source refresh rate,\nand a silent cooling system: advanced features designed\nspecifically for broadcast and theater. Thanks to extreme zoom,\nsingle-pixel control, rapid movements, and the precision\nof LED sources, the ARCHER W3 and W8 are the perfect choice for\nthe most demanding lighting designers.",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            225
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Speed from Max to min"
+        },
+        {
+          "dmxRange": [
+            226,
+            235
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Blackout by movements"
+        },
+        {
+          "dmxRange": [
+            236,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "No functions"
+        }
+      ]
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimmer"
+        },
+        {
+          "dmxRange": [
+            256,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        }
+      ]
+    },
+    "Zoom": {
+      "fineChannelAliases": [
+        "Zoom fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Zoom"
+        },
+        {
+          "dmxRange": [
+            256,
+            65535
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "No Functions"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Cto "
+        }
+      ]
+    },
+    "Lime": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Lime",
+          "comment": "No Functions"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Lime",
+          "comment": "Minus green from no green removed to Max green removed"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Functions"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv-Square"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            81,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Functions"
+        }
+      ]
+    },
+    "LED Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "No Functions"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "900 Hz "
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1000 Hz "
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1100 Hz "
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1200 Hz "
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1300 Hz "
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1400 Hz"
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1500 Hz"
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "2500 Hz"
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "4000 Hz"
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "5000 Hz"
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "6000 Hz"
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "10 KHz "
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "15 KHz "
+        },
+        {
+          "dmxRange": [
+            71,
+            75
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "20 KHz"
+        },
+        {
+          "dmxRange": [
+            76,
+            80
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "25 KHz"
+        },
+        {
+          "dmxRange": [
+            81,
+            89
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "LED refresh"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Invert Pan ON"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Invert Pan OFF"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Invert Tilt ON"
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Invert Tilt OFF"
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Fan Silent"
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Fan Auto"
+        },
+        {
+          "dmxRange": [
+            150,
+            159
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Fan High"
+        },
+        {
+          "dmxRange": [
+            160,
+            169
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Pan/Tilt Reset"
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Zoom Reset"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Total Reset"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "No Funcrtions"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "P 2": {
+      "name": "P",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed 2": {
+      "name": "Pos MSpeed",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            225
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Speed from Max to min"
+        },
+        {
+          "dmxRange": [
+            226,
+            235
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "5 Blackout by movements"
+        },
+        {
+          "dmxRange": [
+            236,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "No functions"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Zoom 2": {
+      "name": "Zoom",
+      "fineChannelAliases": [
+        "Zoom 2 fine"
+      ],
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Foreground Color": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No functions"
+        },
+        {
+          "dmxRange": [
+            1,
+            4
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pale Yellow (LEE filter number 7)"
+        },
+        {
+          "dmxRange": [
+            5,
+            8
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Straw (LEE filter number 103)"
+        },
+        {
+          "dmxRange": [
+            9,
+            12
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Gold Tint (LEE filter number 151"
+        },
+        {
+          "dmxRange": [
+            13,
+            16
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Spring Yellow (LEE filter number 100)"
+        },
+        {
+          "dmxRange": [
+            17,
+            20
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Yellow (LEE filter number 10)"
+        },
+        {
+          "dmxRange": [
+            21,
+            24
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Yellow (LEE filter number 101)"
+        },
+        {
+          "dmxRange": [
+            25,
+            28
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Amber (LEE filter number 104)"
+        },
+        {
+          "dmxRange": [
+            29,
+            32
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Straw (LEE filter number 15)"
+        },
+        {
+          "dmxRange": [
+            33,
+            36
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Loving Amber (LEE filter number 179)"
+        },
+        {
+          "dmxRange": [
+            37,
+            40
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Gold Amber (LEE filter number 21)"
+        },
+        {
+          "dmxRange": [
+            41,
+            44
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Orange (LEE filter number 105)"
+        },
+        {
+          "dmxRange": [
+            45,
+            48
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Orange (LEE filter number 158)"
+        },
+        {
+          "dmxRange": [
+            49,
+            52
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Amber (LEE filter number 22)"
+        },
+        {
+          "dmxRange": [
+            53,
+            56
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Millenium Gold (LEE filter number 778)"
+        },
+        {
+          "dmxRange": [
+            57,
+            60
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Golden Amber (LEE filter number 135)"
+        },
+        {
+          "dmxRange": [
+            61,
+            64
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Scarlet (LEE filter number 24)"
+        },
+        {
+          "dmxRange": [
+            65,
+            68
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Primary Red (LEE filter number 106"
+        },
+        {
+          "dmxRange": [
+            69,
+            72
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bright Red (LEE filter number 26)"
+        },
+        {
+          "dmxRange": [
+            73,
+            76
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Red (LEE filter number 27)"
+        },
+        {
+          "dmxRange": [
+            77,
+            80
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fire (LEE filter number 19)"
+        },
+        {
+          "dmxRange": [
+            81,
+            84
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pink (LEE filter number 157)"
+        },
+        {
+          "dmxRange": [
+            85,
+            88
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Pink (LEE filter number 36)"
+        },
+        {
+          "dmxRange": [
+            89,
+            92
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Pink (LEE filter number 111)"
+        },
+        {
+          "dmxRange": [
+            93,
+            96
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bright Pink (LEE filter number 128)"
+        },
+        {
+          "dmxRange": [
+            97,
+            100
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bright Rose (LEE filter number 148)"
+        },
+        {
+          "dmxRange": [
+            101,
+            104
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Special Rose Pink (LEE filter number 332)"
+        },
+        {
+          "dmxRange": [
+            105,
+            108
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Vanity Fair (LEE filter number 793)"
+        },
+        {
+          "dmxRange": [
+            109,
+            112
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Magenta (LEE filter number 113)"
+        },
+        {
+          "dmxRange": [
+            113,
+            116
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Magenta (LEE filter number 46)"
+        },
+        {
+          "dmxRange": [
+            117,
+            120
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rose Purple (LEE filter number 48)"
+        },
+        {
+          "dmxRange": [
+            121,
+            124
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Mauve (LEE filter number 126)"
+        },
+        {
+          "dmxRange": [
+            125,
+            128
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Purple (LEE filter number 49)"
+        },
+        {
+          "dmxRange": [
+            129,
+            132
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lavender (LEE filter number 58)"
+        },
+        {
+          "dmxRange": [
+            133,
+            136
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Palace Blue (LEE filter number 199)"
+        },
+        {
+          "dmxRange": [
+            137,
+            140
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Blue (LEE filter number 119)"
+        },
+        {
+          "dmxRange": [
+            141,
+            144
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Blue (LEE filter number 132)"
+        },
+        {
+          "dmxRange": [
+            145,
+            148
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Blue (LEE filter number 120)"
+        },
+        {
+          "dmxRange": [
+            149,
+            152
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Daylight Blue (LEE filter number 165)"
+        },
+        {
+          "dmxRange": [
+            153,
+            156
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slate Blue (LEE filter number 161)"
+        },
+        {
+          "dmxRange": [
+            157,
+            160
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light Blue (LEE filter number 118)"
+        },
+        {
+          "dmxRange": [
+            161,
+            164
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sky Blue (LEE filter number 68)"
+        },
+        {
+          "dmxRange": [
+            165,
+            168
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pale Navy Blue (LEE filter number 143"
+        },
+        {
+          "dmxRange": [
+            169,
+            172
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Marine Blue (LEE filter number 131"
+        },
+        {
+          "dmxRange": [
+            173,
+            176
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Peacock Blue (LEE filter number 115)"
+        },
+        {
+          "dmxRange": [
+            177,
+            180
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lagoon Blue (LEE filter number 172)"
+        },
+        {
+          "dmxRange": [
+            181,
+            184
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Blue Green (LEE filter number 116)"
+        },
+        {
+          "dmxRange": [
+            185,
+            188
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Yellow Green (LEE filter number 90"
+        },
+        {
+          "dmxRange": [
+            189,
+            192
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Primary Green (LEE filter number 139)"
+        },
+        {
+          "dmxRange": [
+            193,
+            196
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fern Green (LEE filter number 122)"
+        },
+        {
+          "dmxRange": [
+            197,
+            200
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Moss Green (LEE filter number 89)"
+        },
+        {
+          "dmxRange": [
+            201,
+            204
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Green (LEE filter number 124)"
+        },
+        {
+          "dmxRange": [
+            205,
+            208
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lime Green (LEE filter number 88)"
+        },
+        {
+          "dmxRange": [
+            209,
+            212
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pale Green (LEE filter number 138)"
+        },
+        {
+          "dmxRange": [
+            213,
+            216
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Quarter CT Blue (LEE filter number 203)"
+        },
+        {
+          "dmxRange": [
+            217,
+            220
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Half CT Blue (LEE filter number 202"
+        },
+        {
+          "dmxRange": [
+            221,
+            224
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full CT Blue (LEE filter number 201)"
+        },
+        {
+          "dmxRange": [
+            225,
+            228
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Double CT Blue (LEE filter number 200)"
+        },
+        {
+          "dmxRange": [
+            229,
+            232
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Quarter CT Orange (LEE filter number 206)"
+        },
+        {
+          "dmxRange": [
+            233,
+            236
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Half CT Orange (LEE filter number 205)"
+        },
+        {
+          "dmxRange": [
+            237,
+            240
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full CT Orange (LEE filter number 204"
+        },
+        {
+          "dmxRange": [
+            241,
+            250
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rainbow color from slow to fast (from the first to the last color)"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Unknown (Foregroung)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full ON"
+        }
+      ]
+    },
+    "BackGound Color": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No functions"
+        },
+        {
+          "dmxRange": [
+            1,
+            4
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pale Yellow (LEE filter number 7)"
+        },
+        {
+          "dmxRange": [
+            5,
+            8
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Straw (LEE filter number 103)"
+        },
+        {
+          "dmxRange": [
+            9,
+            12
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Gold Tint (LEE filter number 151)"
+        },
+        {
+          "dmxRange": [
+            13,
+            16
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Spring Yellow (LEE filter number 100)"
+        },
+        {
+          "dmxRange": [
+            17,
+            20
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Yellow (LEE filter number 10)"
+        },
+        {
+          "dmxRange": [
+            21,
+            24
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Yellow (LEE filter number 101)"
+        },
+        {
+          "dmxRange": [
+            25,
+            28
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Amber (LEE filter number 104)"
+        },
+        {
+          "dmxRange": [
+            29,
+            32
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Straw (LEE filter number 15)"
+        },
+        {
+          "dmxRange": [
+            33,
+            36
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Loving Amber (LEE filter number 179)"
+        },
+        {
+          "dmxRange": [
+            37,
+            40
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Gold Amber (LEE filter number 21)"
+        },
+        {
+          "dmxRange": [
+            41,
+            44
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Orange (LEE filter number 105)"
+        },
+        {
+          "dmxRange": [
+            45,
+            48
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Orange (LEE filter number 158)"
+        },
+        {
+          "dmxRange": [
+            49,
+            52
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Amber (LEE filter number 22)"
+        },
+        {
+          "dmxRange": [
+            53,
+            56
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Millenium Gold (LEE filter number 778)"
+        },
+        {
+          "dmxRange": [
+            57,
+            60
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Golden Amber (LEE filter number 135"
+        },
+        {
+          "dmxRange": [
+            61,
+            64
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Scarlet (LEE filter number 24)"
+        },
+        {
+          "dmxRange": [
+            65,
+            68
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Primary Red (LEE filter number 106"
+        },
+        {
+          "dmxRange": [
+            69,
+            72
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bright Red (LEE filter number 26"
+        },
+        {
+          "dmxRange": [
+            73,
+            76
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Red (LEE filter number 27)"
+        },
+        {
+          "dmxRange": [
+            77,
+            80
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fire (LEE filter number 19)"
+        },
+        {
+          "dmxRange": [
+            81,
+            84
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pink (LEE filter number 157)"
+        },
+        {
+          "dmxRange": [
+            85,
+            88
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Pink (LEE filter number 36)"
+        },
+        {
+          "dmxRange": [
+            89,
+            92
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Pink (LEE filter number 111)"
+        },
+        {
+          "dmxRange": [
+            93,
+            96
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bright Pink (LEE filter number 128)"
+        },
+        {
+          "dmxRange": [
+            97,
+            100
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bright Rose (LEE filter number 148)"
+        },
+        {
+          "dmxRange": [
+            101,
+            104
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Special Rose Pink (LEE filter number 332)"
+        },
+        {
+          "dmxRange": [
+            105,
+            108
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Vanity Fair (LEE filter number 793)"
+        },
+        {
+          "dmxRange": [
+            109,
+            112
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Magenta (LEE filter number 113)"
+        },
+        {
+          "dmxRange": [
+            113,
+            116
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Magenta (LEE filter number 46)"
+        },
+        {
+          "dmxRange": [
+            117,
+            120
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rose Purple (LEE filter number 48)"
+        },
+        {
+          "dmxRange": [
+            121,
+            124
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Mauve (LEE filter number 126)"
+        },
+        {
+          "dmxRange": [
+            125,
+            128
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Purple (LEE filter number 49)"
+        },
+        {
+          "dmxRange": [
+            129,
+            132
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lavender (LEE filter number 58)"
+        },
+        {
+          "dmxRange": [
+            133,
+            136
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Palace Blue (LEE filter number 199)"
+        },
+        {
+          "dmxRange": [
+            137,
+            140
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Blue (LEE filter number 119)"
+        },
+        {
+          "dmxRange": [
+            141,
+            144
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Blue (LEE filter number 132)"
+        },
+        {
+          "dmxRange": [
+            145,
+            148
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deep Blue (LEE filter number 120)"
+        },
+        {
+          "dmxRange": [
+            149,
+            152
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Daylight Blue (LEE filter number 165)"
+        },
+        {
+          "dmxRange": [
+            153,
+            156
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slate Blue (LEE filter number 161)"
+        },
+        {
+          "dmxRange": [
+            157,
+            160
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light Blue (LEE filter number 118)"
+        },
+        {
+          "dmxRange": [
+            161,
+            164
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sky Blue (LEE filter number 68)"
+        },
+        {
+          "dmxRange": [
+            165,
+            168
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pale Navy Blue (LEE filter number 143)"
+        },
+        {
+          "dmxRange": [
+            169,
+            172
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Marine Blue (LEE filter number 131)"
+        },
+        {
+          "dmxRange": [
+            173,
+            176
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Peacock Blue (LEE filter number 115)"
+        },
+        {
+          "dmxRange": [
+            177,
+            180
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lagoon Blue (LEE filter number 172)"
+        },
+        {
+          "dmxRange": [
+            181,
+            184
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Medium Blue Green (LEE filter number 116)"
+        },
+        {
+          "dmxRange": [
+            185,
+            188
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Yellow Green (LEE filter number 90)"
+        },
+        {
+          "dmxRange": [
+            189,
+            192
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Primary Green (LEE filter number 139)"
+        },
+        {
+          "dmxRange": [
+            193,
+            196
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fern Green (LEE filter number 122)"
+        },
+        {
+          "dmxRange": [
+            197,
+            200
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Moss Green (LEE filter number 89)"
+        },
+        {
+          "dmxRange": [
+            201,
+            204
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dark Green (LEE filter number 124)"
+        },
+        {
+          "dmxRange": [
+            205,
+            208
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lime Green (LEE filter number 88)"
+        },
+        {
+          "dmxRange": [
+            209,
+            212
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pale Green (LEE filter number 138)"
+        },
+        {
+          "dmxRange": [
+            213,
+            216
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Quarter CT Blue (LEE filter number 203)"
+        },
+        {
+          "dmxRange": [
+            217,
+            220
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Half CT Blue (LEE filter number 202)"
+        },
+        {
+          "dmxRange": [
+            221,
+            224
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full CT Blue (LEE filter number 201)"
+        },
+        {
+          "dmxRange": [
+            225,
+            228
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Double CT Blue (LEE filter number 200)"
+        },
+        {
+          "dmxRange": [
+            229,
+            232
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Quarter CT Orange (LEE filter number 206)"
+        },
+        {
+          "dmxRange": [
+            233,
+            236
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Half CT Orange (LEE filter number 205)"
+        },
+        {
+          "dmxRange": [
+            237,
+            240
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full CT Orange (LEE filter number 204)"
+        },
+        {
+          "dmxRange": [
+            241,
+            250
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rainbow color from slow to fast (from the first to the last color)"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Unknown (BackGround)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full ON"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "No functions"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 2"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 3"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 4"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 5"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 6"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 7"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 8"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 9"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 10"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 11"
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 12"
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 13 "
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 14"
+        },
+        {
+          "dmxRange": [
+            150,
+            159
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 15"
+        },
+        {
+          "dmxRange": [
+            160,
+            169
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 16"
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 17"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 18"
+        },
+        {
+          "dmxRange": [
+            190,
+            199
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program 19 "
+        },
+        {
+          "dmxRange": [
+            200,
+            209
+          ],
+          "type": "ColorPreset",
+          "comment": "Pattern program20 "
+        },
+        {
+          "dmxRange": [
+            210,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "No functions"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            1,
+            4
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            9
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            10,
+            14
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            15,
+            19
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            25,
+            29
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            30,
+            34
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            35,
+            39
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static Step 1"
+        },
+        {
+          "dmxRange": [
+            40,
+            145
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Chase forward from fast to slow"
+        },
+        {
+          "dmxRange": [
+            146,
+            149
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            150,
+            155
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            156,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Chase forward from slow to fast"
+        }
+      ]
+    },
+    "Pattern Fade": {
+      "capability": {
+        "type": "Unknown (Macro Fade)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "P 3": {
+      "name": "P",
+      "fineChannelAliases": [
+        "P 3 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 3": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 3 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Zoom MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "White Macros": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No functions"
+        },
+        {
+          "dmxRange": [
+            1,
+            25
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            26,
+            50
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            51,
+            75
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            76,
+            100
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            101,
+            125
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4500K"
+        },
+        {
+          "dmxRange": [
+            126,
+            150
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "5000K"
+        },
+        {
+          "dmxRange": [
+            151,
+            175
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            176,
+            200
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            201,
+            225
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "8000K"
+        },
+        {
+          "dmxRange": [
+            226,
+            255
+          ],
+          "type": "Unknown (White Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "10000K"
+        }
+      ]
+    },
+    "Linear White": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Linear White)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No functions"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Unknown (Linear White)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Linear Color Temperature from 2700K to 10000K"
+        }
+      ]
+    },
+    "Minus Grees": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Minus Green)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Unknown (Minus Green)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Minus green from no green removed to Max green removed"
+        }
+      ]
+    },
+    "FX1 Fade": {
+      "capability": {
+        "type": "EffectDuration",
+        "durationStart": 0,
+        "durationEnd": 1
+      }
+    },
+    "Dim Mode 2": {
+      "name": "Dim Mode",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No functions: settings from display"
+        }
+      ]
+    },
+    "Dim Curve 2": {
+      "name": "Dim Curve",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv-Square"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            81,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No functions: settings from display"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 5": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 6": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 7": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "C": {
+      "fineChannelAliases": [
+        "C fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "M": {
+      "fineChannelAliases": [
+        "M fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Magenta"
+      }
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Yellow"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "TW",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Zoom",
+        "Zoom fine",
+        "CTO",
+        "Lime",
+        "Dim Mode",
+        "Dim Curve",
+        "LED Frequency"
+      ]
+    },
+    {
+      "name": "Basic 1",
+      "channels": [
+        "P 2",
+        "T 2",
+        "Pos MSpeed 2",
+        "Dim 2",
+        "Sh1 2",
+        "Zoom 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Foreground Color",
+        "BackGound Color",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Pattern Fade",
+        "LED Frequency"
+      ]
+    },
+    {
+      "name": "Standard",
+      "channels": [
+        "P 3",
+        "P 3 fine",
+        "T 3",
+        "T 3 fine",
+        "Pos MSpeed 2",
+        "Dim 2",
+        "Sh1 2",
+        "Zoom 2",
+        "Zoom MSpeed",
+        "R",
+        "G",
+        "B",
+        "White",
+        "White Macros",
+        "Linear White",
+        "Minus Grees",
+        "Foreground Color",
+        "BackGound Color",
+        "FX1 Fade",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Pattern Fade",
+        "Dim Mode 2",
+        "Dim Curve 2",
+        "LED Frequency"
+      ]
+    },
+    {
+      "name": "Extend",
+      "channels": [
+        "P 3",
+        "P 3 fine",
+        "T 3",
+        "T 3 fine",
+        "Pos MSpeed 2",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1 3",
+        "Zoom 2",
+        "Zoom 2 fine",
+        "Zoom MSpeed",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "White 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "White 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "White 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "White 7",
+        "White Macros",
+        "Linear White",
+        "Minus Grees",
+        "Foreground Color",
+        "BackGound Color",
+        "FX1 Fade",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Pattern Fade",
+        "Dim Mode 2",
+        "Dim Curve 2",
+        "LED Frequency"
+      ]
+    },
+    {
+      "name": "CMY",
+      "channels": [
+        "P 3",
+        "P 3 fine",
+        "T 3",
+        "T 3 fine",
+        "Pos MSpeed 2",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1 2",
+        "Zoom 2",
+        "Zoom 2 fine",
+        "Zoom MSpeed",
+        "C",
+        "C fine",
+        "M",
+        "M fine",
+        "Y",
+        "Y fine",
+        "White Macros",
+        "Linear White",
+        "Foreground Color",
+        "FX1 Fade",
+        "Dim Mode 2",
+        "Dim Curve 2",
+        "LED Frequency"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      180,
+      210,
+      250
+    ],
+    "weight": 7.5,
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2571,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300100,0.600000,71.520000",
+      "hex": "#01ff00"
+    },
+    {
+      "name": "Blu",
+      "cie": "0.150100,0.060040,7.224000",
+      "hex": "#0100ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Four dimmer curves, versatile \"thungsten\" and \"CMY\" channel lists,\nplus/minus green control, variable source refresh rate,\nand a silent cooling system: advanced features designed\nspecifically for broadcast and theater. Thanks to extreme zoom,\nsingle-pixel control, rapid movements, and the precision\nof LED sources, the ARCHER W3 and W8 are the perfect choice for\nthe most demanding lighting designers.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-06T09:33:00",
+      "text": "4.0.0.3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c69ae1adc2240b90"
+  },
+  "manufacturerKey": "sagitter",
+  "fixtureKey": "archer-w3",
+  "gwFixtureTypeID": "C9DAC871-C450-4822-A834-8BF6380F34D8"
+}

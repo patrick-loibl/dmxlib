@@ -1,0 +1,184 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Thunderwash 600 RGBW",
+  "shortName": "Thunder600RGBW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-06-22",
+    "lastModifyDate": "2021-07-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 25916E72-7E61-4581-AD7F-9E0BC15544F7"
+    }
+  },
+  "comment": "Thunder Wash 600 RGBW",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Open "
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Closed "
+        },
+        {
+          "dmxRange": [
+            11,
+            250
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Rate "
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Open "
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s",
+        "comment": "Duration "
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue "
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White "
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "7CH2",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Strobe Duration",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      370,
+      300,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 7500,
+      "colorTemperature": 5500
+    },
+    "lens": {
+      "degreesMinMax": [
+        40.0,
+        50.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.638200,0.331200,100.000000",
+      "hex": "#ff1d03"
+    },
+    {
+      "name": "G",
+      "cie": "0.298800,0.599000,100.000000",
+      "hex": "#00ff0d"
+    },
+    {
+      "name": "B",
+      "cie": "0.148800,0.059210,100.000000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "W",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-07-08T11:37:16",
+      "text": "Revision 0.4"
+    }
+  },
+  "manufacturerKey": "cameo",
+  "fixtureKey": "thunderwash-600-rgbw",
+  "gwFixtureTypeID": "25916E72-7E61-4581-AD7F-9E0BC15544F7"
+}

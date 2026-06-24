@@ -1,0 +1,299 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "HELD FCL Profile",
+  "shortName": "HELD FCL",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-03-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 64C91419-2673-4CD8-9140-DCAF91D02232"
+    }
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": []
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "fineChannelAliases": [
+        "Amber fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Lime": {
+      "fineChannelAliases": [
+        "Lime fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            11,
+            132
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "slow"
+        },
+        {
+          "dmxRange": [
+            133,
+            133
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "med"
+        },
+        {
+          "dmxRange": [
+            134,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "fast"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 2": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Lime 2": {
+      "name": "Lime",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "13 channel mode",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Amber",
+        "Amber fine",
+        "Lime",
+        "Lime fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "5 channel mode",
+      "channels": [
+        "R 2",
+        "G 2",
+        "B 2",
+        "Amber 2",
+        "Lime 2"
+      ]
+    },
+    {
+      "name": "7 channel mode",
+      "channels": [
+        "Dim 3",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Amber 2",
+        "Lime 2",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "8 channel mode",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Amber 2",
+        "Lime 2",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      342,
+      625,
+      342
+    ],
+    "weight": 9.0,
+    "power": 250,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2024-03-16T10:20:52",
+      "text": "modes_added"
+    }
+  },
+  "manufacturerKey": "litecraft",
+  "fixtureKey": "held-fcl-profile",
+  "gwFixtureTypeID": "64C91419-2673-4CD8-9140-DCAF91D02232"
+}

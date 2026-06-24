@@ -1,0 +1,786 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Strobo Tilt SPL 3000 IP65",
+  "shortName": "StroboSPL",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-02-20",
+    "lastModifyDate": "2026-02-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 85BC5457-4734-4B34-8D80-DA3104C3B0C8"
+    }
+  },
+  "availableChannels": {
+    "T": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        }
+      ]
+    },
+    "DimMaster": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (DimMaster)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (DimMaster)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (DimMaster)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            6,
+            114
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            115,
+            115
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "2.98Hz",
+          "comment": "Strobe Slow >"
+        },
+        {
+          "dmxRange": [
+            116,
+            194
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            195,
+            195
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "3.1Hz",
+          "speedEnd": "4.17Hz",
+          "comment": "Strobe Mid >"
+        },
+        {
+          "dmxRange": [
+            196,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "4.29Hz",
+          "speedEnd": "4.64Hz",
+          "comment": "Strobe Fast >"
+        }
+      ]
+    },
+    "Dim": {
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Zero"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "brightness": "100%",
+          "comment": "Full"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Zero"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightness": "100%",
+          "comment": "Full"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Zero"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightness": "100%",
+          "comment": "Full"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Zero"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightness": "100%",
+          "comment": "Full"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            1,
+            107
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            108
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Reset All"
+        },
+        {
+          "dmxRange": [
+            109,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65280,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65280,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            6,
+            114
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            115,
+            115
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "2.98Hz",
+          "comment": "Strobe Slow >"
+        },
+        {
+          "dmxRange": [
+            116,
+            194
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            195,
+            195
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "3.1Hz",
+          "speedEnd": "4.17Hz",
+          "comment": "Strobe Mid >"
+        },
+        {
+          "dmxRange": [
+            196,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "4.29Hz",
+          "speedEnd": "4.64Hz",
+          "comment": "Strobe Fast >"
+        }
+      ]
+    },
+    "Color Macro1 2": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Dimmer"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Effects"
+        }
+      ]
+    },
+    "Color Macro2": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate 2": {
+      "name": "Color Macro1 Rate",
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "61CH",
+      "channels": [
+        "T",
+        "Pos MSpeed",
+        "DimMaster",
+        "Sh1",
+        "White",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "R",
+        "G",
+        "B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "08 CH",
+      "channels": [
+        "T",
+        "DimMaster",
+        "Sh1",
+        "White",
+        "R",
+        "G",
+        "B",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "14 CH",
+      "channels": [
+        "T 2",
+        "T 2 fine",
+        "White",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "Sh1 2",
+        "Color Macro1 2",
+        "Color Macro2",
+        "Color Macro1 Rate 2",
+        "DimMaster"
+      ]
+    },
+    {
+      "name": "18 CH",
+      "channels": [
+        "T",
+        "Pos MSpeed",
+        "DimMaster",
+        "Sh1",
+        "White",
+        "Ctrl1 2",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "R",
+        "G",
+        "B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      156,
+      242,
+      478
+    ],
+    "weight": 12.5,
+    "power": 5,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    },
+    {
+      "name": "Red",
+      "cie": "0.627200,0.330000,21.940000",
+      "hex": "#ff1717"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwDmxProfiles": [
+    {
+      "name": "Linear",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -30,
+      50
+    ],
+    "revision": {
+      "date": "2026-02-20T22:16:54",
+      "text": "Reference by Manual v3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "0d2bedb28a9678ba"
+  },
+  "manufacturerKey": "lpl",
+  "fixtureKey": "strobo-tilt-spl-3000-ip65",
+  "gwFixtureTypeID": "85BC5457-4734-4B34-8D80-DA3104C3B0C8"
+}

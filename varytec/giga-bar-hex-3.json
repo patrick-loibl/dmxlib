@@ -1,9 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "Giga Bar HEX 3",
-  "categories": ["Color Changer", "Strobe", "Effect"],
+  "categories": [
+    "Color Changer",
+    "Strobe",
+    "Effect"
+  ],
   "meta": {
-    "authors": ["Erik Pade", "Flo Edelmann", "Chemin Rouge Evenements", "Luke Nelson"],
+    "authors": [
+      "Erik Pade",
+      "Flo Edelmann",
+      "Chemin Rouge Evenements",
+      "Luke Nelson"
+    ],
     "createDate": "2021-09-19",
     "lastModifyDate": "2023-02-28"
   },
@@ -19,12 +28,24 @@
     ]
   },
   "physical": {
-    "dimensions": [360, 150, 64],
+    "dimensions": [
+      360,
+      150,
+      64
+    ],
     "weight": 1.2,
     "power": 36,
     "DMXconnector": "3-pin",
     "bulb": {
-      "type": "3× 12W RGBAWUV LED"
+      "type": "3× 12W RGBAWUV LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        30.0
+      ]
     }
   },
   "availableChannels": {
@@ -72,11 +93,17 @@
     "Strobe": {
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [11, 255],
+          "dmxRange": [
+            11,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -87,25 +114,37 @@
     "Auto Programs": {
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [11, 100],
+          "dmxRange": [
+            11,
+            100
+          ],
           "type": "Effect",
           "effectPreset": "ColorFade",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [101, 200],
+          "dmxRange": [
+            101,
+            200
+          ],
           "type": "Effect",
           "effectPreset": "ColorJump",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [201, 255],
+          "dmxRange": [
+            201,
+            255
+          ],
           "type": "Effect",
           "effectName": "Sound control",
           "soundControlled": true,
@@ -118,14 +157,20 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction",
           "switchChannels": {
             "Program Speed / Sound Sensitivity": "Program Speed"
           }
         },
         {
-          "dmxRange": [11, 100],
+          "dmxRange": [
+            11,
+            100
+          ],
           "type": "Effect",
           "effectPreset": "ColorFade",
           "switchChannels": {
@@ -133,7 +178,10 @@
           }
         },
         {
-          "dmxRange": [101, 200],
+          "dmxRange": [
+            101,
+            200
+          ],
           "type": "Effect",
           "effectPreset": "ColorJump",
           "switchChannels": {
@@ -141,7 +189,10 @@
           }
         },
         {
-          "dmxRange": [201, 255],
+          "dmxRange": [
+            201,
+            255
+          ],
           "type": "Effect",
           "effectName": "Sound control",
           "soundControlled": true,
@@ -168,194 +219,455 @@
     "Color Macros": {
       "capabilities": [
         {
-          "dmxRange": [0, 14],
+          "dmxRange": [
+            0,
+            14
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [15, 22],
+          "dmxRange": [
+            15,
+            22
+          ],
           "type": "ColorPreset",
           "comment": "Red",
-          "colors": ["#ff0000"]
+          "colors": [
+            "#ff0000"
+          ]
         },
         {
-          "dmxRange": [23, 30],
+          "dmxRange": [
+            23,
+            30
+          ],
           "type": "ColorPreset",
           "comment": "Green",
-          "colors": ["#00ff00"]
+          "colors": [
+            "#00ff00"
+          ]
         },
         {
-          "dmxRange": [31, 40],
+          "dmxRange": [
+            31,
+            40
+          ],
           "type": "ColorPreset",
           "comment": "Blue",
-          "colors": ["#0000ff"]
+          "colors": [
+            "#0000ff"
+          ]
         },
         {
-          "dmxRange": [41, 47],
+          "dmxRange": [
+            41,
+            47
+          ],
           "type": "ColorPreset",
           "comment": "Pure White",
-          "colors": ["#fffffc"]
+          "colors": [
+            "#fffffc"
+          ]
         },
         {
-          "dmxRange": [48, 55],
+          "dmxRange": [
+            48,
+            55
+          ],
           "type": "ColorPreset",
           "comment": "Amber",
-          "colors": ["#ffbf00"]
+          "colors": [
+            "#ffbf00"
+          ]
         },
         {
-          "dmxRange": [56, 62],
+          "dmxRange": [
+            56,
+            62
+          ],
           "type": "ColorPreset",
           "comment": "UV",
-          "colors": ["#8800ff"]
+          "colors": [
+            "#8800ff"
+          ]
         },
         {
-          "dmxRange": [63, 70],
+          "dmxRange": [
+            63,
+            70
+          ],
           "type": "ColorPreset",
           "comment": "Green",
-          "colors": ["#00ff00"]
+          "colors": [
+            "#00ff00"
+          ]
         },
         {
-          "dmxRange": [71, 78],
+          "dmxRange": [
+            71,
+            78
+          ],
           "type": "ColorPreset",
           "comment": "Fuchsia",
-          "colors": ["#b83dae"]
+          "colors": [
+            "#b83dae"
+          ]
         },
         {
-          "dmxRange": [79, 86],
+          "dmxRange": [
+            79,
+            86
+          ],
           "type": "ColorPreset",
           "comment": "Pink",
-          "colors": ["#ffc0cb"]
+          "colors": [
+            "#ffc0cb"
+          ]
         },
         {
-          "dmxRange": [87, 94],
+          "dmxRange": [
+            87,
+            94
+          ],
           "type": "ColorPreset",
           "comment": "Orange",
-          "colors": ["#ff8000"]
+          "colors": [
+            "#ff8000"
+          ]
         },
         {
-          "dmxRange": [95, 102],
+          "dmxRange": [
+            95,
+            102
+          ],
           "type": "ColorPreset",
           "comment": "Purple",
-          "colors": ["#8e44c6"]
+          "colors": [
+            "#8e44c6"
+          ]
         },
         {
-          "dmxRange": [103, 110],
+          "dmxRange": [
+            103,
+            110
+          ],
           "type": "ColorPreset",
           "comment": "Cyan",
-          "colors": ["#00ffff"]
+          "colors": [
+            "#00ffff"
+          ]
         },
         {
-          "dmxRange": [111, 118],
+          "dmxRange": [
+            111,
+            118
+          ],
           "type": "ColorPreset",
           "comment": "Mint",
-          "colors": ["#aefac6"]
+          "colors": [
+            "#aefac6"
+          ]
         },
         {
-          "dmxRange": [119, 126],
+          "dmxRange": [
+            119,
+            126
+          ],
           "type": "ColorPreset",
           "comment": "Lime",
-          "colors": ["#bfff00"]
+          "colors": [
+            "#bfff00"
+          ]
         },
         {
-          "dmxRange": [127, 134],
+          "dmxRange": [
+            127,
+            134
+          ],
           "type": "ColorPreset",
           "comment": "Sky Blue",
-          "colors": ["#73abeb"]
+          "colors": [
+            "#73abeb"
+          ]
         },
         {
-          "dmxRange": [135, 142],
+          "dmxRange": [
+            135,
+            142
+          ],
           "type": "ColorPreset",
           "comment": "Terra Cotta",
-          "colors": ["#c9643b"]
+          "colors": [
+            "#c9643b"
+          ]
         },
         {
-          "dmxRange": [143, 150],
+          "dmxRange": [
+            143,
+            150
+          ],
           "type": "ColorPreset",
           "comment": "Turquoise",
-          "colors": ["#33d79a"]
+          "colors": [
+            "#33d79a"
+          ]
         },
         {
-          "dmxRange": [151, 158],
+          "dmxRange": [
+            151,
+            158
+          ],
           "type": "ColorPreset",
           "comment": "Tan",
-          "colors": ["#d2b48c"]
+          "colors": [
+            "#d2b48c"
+          ]
         },
         {
-          "dmxRange": [159, 166],
+          "dmxRange": [
+            159,
+            166
+          ],
           "type": "ColorPreset",
           "comment": "Gold",
-          "colors": ["#ffd700"]
+          "colors": [
+            "#ffd700"
+          ]
         },
         {
-          "dmxRange": [167, 174],
+          "dmxRange": [
+            167,
+            174
+          ],
           "type": "ColorPreset",
           "comment": "Magenta",
-          "colors": ["#ff00ff"]
+          "colors": [
+            "#ff00ff"
+          ]
         },
         {
-          "dmxRange": [175, 182],
+          "dmxRange": [
+            175,
+            182
+          ],
           "type": "ColorPreset",
           "comment": "Redviolet",
-          "colors": ["#b62e46"]
+          "colors": [
+            "#b62e46"
+          ]
         },
         {
-          "dmxRange": [183, 190],
+          "dmxRange": [
+            183,
+            190
+          ],
           "type": "ColorPreset",
           "comment": "Coral",
-          "colors": ["#ff7c7c"]
+          "colors": [
+            "#ff7c7c"
+          ]
         },
         {
-          "dmxRange": [191, 198],
+          "dmxRange": [
+            191,
+            198
+          ],
           "type": "ColorPreset",
           "comment": "Aqua",
-          "colors": ["#13eac9"]
+          "colors": [
+            "#13eac9"
+          ]
         },
         {
-          "dmxRange": [199, 206],
+          "dmxRange": [
+            199,
+            206
+          ],
           "type": "ColorPreset",
           "comment": "Aquamarine",
-          "colors": ["#7fffd4"]
+          "colors": [
+            "#7fffd4"
+          ]
         },
         {
-          "dmxRange": [207, 214],
+          "dmxRange": [
+            207,
+            214
+          ],
           "type": "ColorPreset",
           "comment": "Emerald",
-          "colors": ["#50c878"]
+          "colors": [
+            "#50c878"
+          ]
         },
         {
-          "dmxRange": [215, 222],
+          "dmxRange": [
+            215,
+            222
+          ],
           "type": "ColorPreset",
           "comment": "Lavender",
-          "colors": ["#cfb5e2"]
+          "colors": [
+            "#cfb5e2"
+          ]
         },
         {
-          "dmxRange": [223, 230],
+          "dmxRange": [
+            223,
+            230
+          ],
           "type": "ColorPreset",
           "comment": "Ice",
-          "colors": ["#d6fffa"]
+          "colors": [
+            "#d6fffa"
+          ]
         },
         {
-          "dmxRange": [231, 238],
+          "dmxRange": [
+            231,
+            238
+          ],
           "type": "ColorPreset",
           "comment": "Rosepink",
-          "colors": ["#f97a8c"]
+          "colors": [
+            "#f97a8c"
+          ]
         },
         {
-          "dmxRange": [239, 246],
+          "dmxRange": [
+            239,
+            246
+          ],
           "type": "ColorPreset",
           "comment": "Palegreen",
-          "colors": ["#abeca2"]
+          "colors": [
+            "#abeca2"
+          ]
         },
         {
-          "dmxRange": [247, 254],
+          "dmxRange": [
+            247,
+            254
+          ],
           "type": "ColorPreset",
           "comment": "Palepink",
-          "colors": ["#e8c3d4"]
+          "colors": [
+            "#e8c3d4"
+          ]
         },
         {
-          "dmxRange": [255, 255],
+          "dmxRange": [
+            255,
+            255
+          ],
           "type": "ColorPreset",
           "comment": "Babyblue",
-          "colors": ["#9ed7fc"]
+          "colors": [
+            "#9ed7fc"
+          ]
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "FX1 2": {
+      "name": "FX1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
         }
       ]
     }
@@ -427,5 +739,21 @@
   ],
   "fixtureKey": "giga-bar-hex-3",
   "manufacturerKey": "varytec",
-  "oflURL": "https://open-fixture-library.org/varytec/giga-bar-hex-3"
+  "oflURL": "https://open-fixture-library.org/varytec/giga-bar-hex-3",
+  "gwMedia": {
+    "thumbnail": "b824c6f771f5ab99"
+  },
+  "gwFixtureTypeID": "D1297D2C-6C04-4574-B26A-6D716AD06B74",
+  "gwSpecs": {
+    "description": "With 6in1 LEDs, RGBAW + UV LEDs\nEasy control via supplied IR remote control or the integrated display\nMetal bracket for upright and hanging mounting\nIncludes IR remote control for controlling the basic functions\nTechnical specifications:\n\nLight source: 3x 12 Watt RGBAW + UV 6in1 LED\nBeam angle: 25°\nElectronic shutter: 0 - 20 Hz\nElectronic dimmer: 0 - 100%\nControl: DMX (3/4/6/9/11 channels), master / slave, internal programs and color macros, music control\nIndividual colour adjustable on the device\nLC display with four buttons\nDMX input and output: XLR 3-pin\nCurrent input: IEC\nPower supply: 100 - 240 V ~ 50/60 Hz\nPower consumption: max. 36 watts\nHousing made of metal\nDimensions with bracket (W x D x H): 360 x 64 x 150 mm\nWeight: 1.2 kg\n\nUpdated Geometry by BaseTown",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-16T00:32:00",
+      "text": "BaseTown Rework on Geometry"
+    }
+  }
 }

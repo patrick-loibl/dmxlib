@@ -1,0 +1,273 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EVENT WASH LED 4415 AUV IP",
+  "shortName": "WASH4415",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-20",
+    "lastModifyDate": "2025-11-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 61C51A93-077F-4125-9BFB-FC7B3A05D15B"
+    }
+  },
+  "comment": "EVENT WASH LED 4415 +AUV IP: EVENT EVENT WASH LED 4415 +AUV IP65 F7200204",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "Dimmer mode"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Jump changing program"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Gradual changing program"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Pulsive changing program"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound activated on"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "10ch",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      170,
+      316,
+      490
+    ],
+    "weight": 13.2,
+    "power": 40,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "EVENT EVENT WASH LED 4415 +AUV IP65 F7200204",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-26T16:40:22",
+      "text": "flash_v2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bc0ce735e235f635"
+  },
+  "manufacturerKey": "flash",
+  "fixtureKey": "event-wash-led-4415-auv-ip",
+  "gwFixtureTypeID": "61C51A93-077F-4125-9BFB-FC7B3A05D15B"
+}

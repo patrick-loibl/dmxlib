@@ -1,0 +1,539 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Fresnel 200BI",
+  "shortName": "LP Fr200BI",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-12-02",
+    "lastModifyDate": "2025-12-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 225F9D62-CD9D-48A5-AFCF-53C17872DBD3"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            126
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Mid"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Zoom 2": {
+      "name": "Zoom",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Non"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CCT Macros"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            33
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fade-out strobe"
+        },
+        {
+          "dmxRange": [
+            34,
+            56
+          ],
+          "type": "Unknown (StrobeModePulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fade-in strobe"
+        },
+        {
+          "dmxRange": [
+            57,
+            79
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fade strobe"
+        },
+        {
+          "dmxRange": [
+            80,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "1-20 flashes per/s"
+        }
+      ]
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CCT Macros"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Quite"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Studio"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Live"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            6,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Exponential"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Logaritmic"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            105
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            106,
+            115
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Response"
+        },
+        {
+          "dmxRange": [
+            116,
+            145
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "D-RES (1-10)"
+        },
+        {
+          "dmxRange": [
+            146,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "PWM Frequency 2500mHz - 25kHz"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 4 fine"
+      ],
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "fineChannelAliases": [
+        "CW 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - 3CH",
+      "channels": [
+        "CW",
+        "WW",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "Mode 2 - 5CH",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CW",
+        "WW",
+        "Zoom 2"
+      ]
+    },
+    {
+      "name": "Mode 3 - 6CH",
+      "channels": [
+        "Dim 3",
+        "CW",
+        "WW",
+        "CTC",
+        "Zoom",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 4 - 9CH",
+      "channels": [
+        "Dim 3",
+        "CW",
+        "WW",
+        "CTC 2",
+        "Zoom",
+        "Sh1",
+        "Fan Mode",
+        "Dim Curve",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "Mode 5 - 12CH",
+      "channels": [
+        "Dim 4",
+        "Dim 4 fine",
+        "CW 2",
+        "CW 2 fine",
+        "WW 2",
+        "WW 2 fine",
+        "CTC 2",
+        "Zoom",
+        "Sh1",
+        "Fan Mode",
+        "Dim Curve",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      256,
+      380,
+      201
+    ],
+    "weight": 8.6,
+    "power": 5,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2815,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        38.0,
+        43.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LumiPro Fresnel 200BI",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-12-08T07:21:05",
+      "text": "LP V-1_3 - Fix Default Values"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f15501ffbba2fe33"
+  },
+  "manufacturerKey": "lumipro",
+  "fixtureKey": "fresnel-200bi",
+  "gwFixtureTypeID": "225F9D62-CD9D-48A5-AFCF-53C17872DBD3"
+}

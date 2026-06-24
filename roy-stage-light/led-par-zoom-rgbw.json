@@ -1,0 +1,280 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Par Zoom RGBW",
+  "shortName": "Par Zoom",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-01-25",
+    "lastModifyDate": "2023-02-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 01BA1D15-991B-4106-B3C3-EBD8B9CEE88B"
+    }
+  },
+  "comment": "LED par ZOOM RGBW 18x10w: A led light par with 18x10W RGBW Led's. Zoom rang of 10 to 60 degrees",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            1,
+            14
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            16,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        },
+        {
+          "dmxRange": [
+            1,
+            49
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Par"
+        },
+        {
+          "dmxRange": [
+            51,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Spot"
+        }
+      ]
+    },
+    "Zoom MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            74
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            75
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            76,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "High"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Zoom",
+        "Zoom MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "weight": 4.0,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "LED",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "A led light par with 18x10W RGBW Led's. Zoom rang of 10 to 60 degrees",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2023-02-25T18:12:09",
+      "text": "v1.1a"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a7acbf8aac4cf040"
+  },
+  "manufacturerKey": "roy-stage-light",
+  "fixtureKey": "led-par-zoom-rgbw",
+  "gwFixtureTypeID": "01BA1D15-991B-4106-B3C3-EBD8B9CEE88B"
+}

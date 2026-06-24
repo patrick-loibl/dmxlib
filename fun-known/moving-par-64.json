@@ -1,0 +1,270 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Moving PAR 64",
+  "shortName": "JPAR",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-30",
+    "lastModifyDate": "2025-03-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EC37BFC1-04AE-4243-BDF7-7228B5E2A23E"
+    }
+  },
+  "availableChannels": {
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            1,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            47
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            48,
+            48
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            49,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speed": 0,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speed": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capability": {
+        "type": "Unknown (FanMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Pos Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "P",
+        "T",
+        "P fine",
+        "T fine",
+        "Pos MSpeed",
+        "Fan Mode",
+        "Pos Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      410,
+      220
+    ],
+    "weight": 8.6,
+    "power": 1000,
+    "bulb": {
+      "type": "Halogen",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        45.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "PC",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-03-30T19:41:24",
+      "text": "ver 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1a880ca870a67dc2"
+  },
+  "manufacturerKey": "fun-known",
+  "fixtureKey": "moving-par-64",
+  "gwFixtureTypeID": "EC37BFC1-04AE-4243-BDF7-7228B5E2A23E"
+}

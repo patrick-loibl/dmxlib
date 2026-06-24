@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED TRI Mover Can",
+  "shortName": "CLMOVER1",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-11-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F22C3FE6-59AF-4B13-BE0F-BA0723E85B90"
+    }
+  },
+  "comment": "LED TRI Mover Can CLMOVER1",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "C1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "NewWheel",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Rotate1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            10,
+            120
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Left Rotate (fast to slow)"
+        },
+        {
+          "dmxRange": [
+            121,
+            134
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0.07833333333333332rpm",
+          "speedEnd": "0.08833333333333333rpm",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            135,
+            245
+          ],
+          "type": "PrismRotation",
+          "speed": "stop",
+          "comment": "Right rotate (fast to slow)"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "PrismRotation",
+          "speed": "stop",
+          "comment": "No rotate"
+        }
+      ]
+    },
+    "Strobe1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4CH",
+      "channels": [
+        "C1",
+        "Rotate1",
+        "Strobe1",
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-11-20T16:11:59",
+      "text": "untested"
+    }
+  },
+  "manufacturerKey": "cameo",
+  "fixtureKey": "led-tri-mover-can",
+  "gwFixtureTypeID": "F22C3FE6-59AF-4B13-BE0F-BA0723E85B90"
+}

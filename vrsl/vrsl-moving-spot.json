@@ -1,0 +1,398 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VRSL Moving Spot",
+  "shortName": "Moving Head",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-02",
+    "lastModifyDate": "2026-03-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 461E48F3-F8D2-4618-8984-5F77BF45EA7E"
+    }
+  },
+  "comment": "Basic Moving Head",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 2",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "ebff94aa873d4410"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 3",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "a477ba14411226aa"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 4",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "13ae9dc8479fb9b9"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 5",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "3f49d9bb619b38ff"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 6",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "0a06bb7067e5ef81"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 7",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "c859fd797748814b"
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 8",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "8328f251feae2e3c"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "NewWheel",
+          "speed": "stop",
+          "comment": "no spin"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "NewWheel",
+          "speedStart": "0.16666666666666669rpm",
+          "speedEnd": "60rpm",
+          "comment": "Clockwise"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "NewWheel",
+          "speedStart": "-0.16666666666666669rpm",
+          "speedEnd": "-60rpm",
+          "comment": "Counter Clockwise "
+        }
+      ]
+    },
+    "G1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            44
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 1,
+          "slotNumberEnd": 1.17,
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            45,
+            75
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 2.18,
+          "slotNumberEnd": 2.29,
+          "comment": "Swooshes"
+        },
+        {
+          "dmxRange": [
+            76,
+            104
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 3.3,
+          "slotNumberEnd": 3.41,
+          "comment": "Sticks"
+        },
+        {
+          "dmxRange": [
+            105,
+            135
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 4.41,
+          "slotNumberEnd": 4.53,
+          "comment": "5PointStar"
+        },
+        {
+          "dmxRange": [
+            136,
+            164
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 5.53,
+          "slotNumberEnd": 5.64,
+          "comment": "Triangles"
+        },
+        {
+          "dmxRange": [
+            165,
+            194
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 6.65,
+          "slotNumberEnd": 6.76,
+          "comment": "8PointStar"
+        },
+        {
+          "dmxRange": [
+            195,
+            224
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 7.76,
+          "slotNumberEnd": 7.88,
+          "comment": "Spiral"
+        },
+        {
+          "dmxRange": [
+            225,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumberStart": 8.88,
+          "slotNumberEnd": 9,
+          "comment": "ApolloOrb"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Zoom",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "Rotate",
+        "G1",
+        "Pos MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "bulb": {
+      "type": "LED",
+      "lumens": 12000,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        42.0,
+        46.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      0
+    ],
+    "revision": {
+      "date": "2026-03-31T03:45:53",
+      "text": "v20260330"
+    }
+  },
+  "manufacturerKey": "vrsl",
+  "fixtureKey": "vrsl-moving-spot",
+  "gwFixtureTypeID": "461E48F3-F8D2-4618-8984-5F77BF45EA7E"
+}

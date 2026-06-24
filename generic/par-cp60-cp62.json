@@ -1,0 +1,185 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR CP60 - CP62 ",
+  "shortName": "PAR CP61",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2026-03-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FDFF1671-4EDA-408E-83AC-3ED7E6D11EDB"
+    }
+  },
+  "comment": "PARCan with CP60 - CP62\nVirtual Color for Gel and Filters\nVirtual Pan/Tilt for Yoke and Head\nVirtual Zoom to change light bulb CP60 / CP61 / CP62\nAdded ACL Zoom",
+  "availableChannels": {
+    "P": {
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Zoom": {
+      "dmxValueResolution": "16bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            16383
+          ],
+          "type": "Zoom",
+          "angle": "8deg",
+          "comment": "ACL"
+        },
+        {
+          "dmxRange": [
+            16384,
+            17038
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            17039,
+            32767
+          ],
+          "type": "Zoom",
+          "angle": "10deg",
+          "comment": "CP60"
+        },
+        {
+          "dmxRange": [
+            32768,
+            33421
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            33422,
+            49151
+          ],
+          "type": "Zoom",
+          "angle": "12deg",
+          "comment": "CP61"
+        },
+        {
+          "dmxRange": [
+            49152,
+            49805
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            49806,
+            65535
+          ],
+          "type": "Zoom",
+          "angle": "25deg",
+          "comment": "CP62"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard mode",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "weight": 2.0,
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        12.0,
+        12.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.427300,0.396900,57.790000",
+      "hex": "#ffba78"
+    }
+  ],
+  "gwSpecs": {
+    "description": "PARCan with CP60 - CP62\nVirtual Color for Gel and Filters\nVirtual Pan/Tilt for Yoke and Head\nVirtual Zoom to change light bulb CP60 / CP61 / CP62\nAdded ACL Zoom",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      10,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-02T17:02:27",
+      "text": "v1 00"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "par-cp60-cp62",
+  "gwFixtureTypeID": "FDFF1671-4EDA-408E-83AC-3ED7E6D11EDB"
+}

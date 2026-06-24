@@ -1,0 +1,158 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Efresnel CW100",
+  "shortName": "EF CW100",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-11-11",
+    "lastModifyDate": "2020-11-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.0 fixture type ID: 193809ED-299D-45C9-AF8E-538B3B6839AC"
+    }
+  },
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Strobe1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Function": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Global MSpeed": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Intensity MSpeed": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Easy",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Basic 1",
+      "channels": [
+        "Dim",
+        "Dim fine"
+      ]
+    },
+    {
+      "name": "Basic 2",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Basic 3",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Standard",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "Function",
+        "Global MSpeed",
+        "Intensity MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      173,
+      182,
+      142
+    ],
+    "power": 38,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8370,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "revision": {
+      "date": "2020-11-11T20:52:53",
+      "text": "Revision 0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4a561e72668779fb"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "efresnel-cw100",
+  "gwFixtureTypeID": "193809ED-299D-45C9-AF8E-538B3B6839AC"
+}

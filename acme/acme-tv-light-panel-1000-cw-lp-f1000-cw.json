@@ -1,0 +1,237 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ACME TV LIGHT PANEL 1000 CW (LP-F1000 CW)",
+  "shortName": "(LP-F1000 CW)",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-01-04",
+    "lastModifyDate": "2024-08-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 39DD831E-B810-4C2B-BAC9-04E76AB33657"
+    }
+  },
+  "comment": "V LIGHT PANEL 1000 CW (LP-F1000 CW): ACME V LIGHT PANEL 1000 CW (LP-F1000 CW)",
+  "rdm": {
+    "modelId": 16640
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "Unknown (StrobeModeRandomPulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            65,
+            94
+          ],
+          "type": "Unknown (StrobeModeRandomPulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            95,
+            95
+          ],
+          "type": "Unknown (StrobeModeRandomPulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            129,
+            158
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 3"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Rand"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 4"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 1 DMX",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Mode 2 2 DMX(2A)",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 3 2 DMX(2B)",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "Mode 4 3 DMX",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      306,
+      144,
+      637
+    ],
+    "weight": 10.0,
+    "power": 185,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1221,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        110.0,
+        110.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "ACME V LIGHT PANEL 1000 CW (LP-F1000 CW)",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-08-13T06:43:34",
+      "text": "ACME TV LIGHT PANEL 1000 CW (LP-F1000 CW)"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2cff7085dd3e2f83"
+  },
+  "manufacturerKey": "acme",
+  "fixtureKey": "acme-tv-light-panel-1000-cw-lp-f1000-cw",
+  "gwFixtureTypeID": "39DD831E-B810-4C2B-BAC9-04E76AB33657"
+}

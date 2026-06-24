@@ -1,0 +1,347 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Pure Blinder",
+  "shortName": "PureBlinder",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-12-06",
+    "lastModifyDate": "2022-12-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FD69DCB5-1135-46BF-8190-C5429BEB1BE9"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            240
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RdmStr F to S"
+        }
+      ]
+    },
+    "WW 2": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            36,
+            41
+          ],
+          "type": "Effect",
+          "effectName": "Tungsten effect",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            42,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Round Up",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "Round Down",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            143
+          ],
+          "type": "Effect",
+          "effectName": "Round Up Down",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            144,
+            215
+          ],
+          "type": "Effect",
+          "effectName": "2-colors",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            216,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Random Effect",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv Square"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Tungsten Effect"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Tungsten Effect"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1Ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2Ch",
+      "channels": [
+        "WW",
+        "Amber"
+      ]
+    },
+    {
+      "name": "3Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "4Ch",
+      "channels": [
+        "WW 2",
+        "WW 2 fine",
+        "Amber",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "7Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "WW",
+        "Amber",
+        "Color FX1",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "8Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "WW",
+        "Amber",
+        "Color FX1",
+        "Dim Curve",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      112,
+      100,
+      170
+    ],
+    "weight": 3.5,
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warm",
+      "cie": "0.378800,0.369800,100.000000",
+      "hex": "#fff5c7"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.583100,0.352800,100.000000",
+      "hex": "#ff9150"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-12-06T10:40:00",
+      "text": "v1.1 initial"
+    }
+  },
+  "manufacturerKey": "bsl-lighting",
+  "fixtureKey": "pure-blinder",
+  "gwFixtureTypeID": "FD69DCB5-1135-46BF-8190-C5429BEB1BE9"
+}

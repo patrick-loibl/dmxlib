@@ -1,0 +1,190 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Blinder Outdoor Nexpro",
+  "shortName": "Blinder",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-04-09",
+    "lastModifyDate": "2025-04-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8E185BD1-FF8C-4E56-9934-0DE0B00A84D0"
+    }
+  },
+  "comment": "BlinderNexpro: Nexpro Blinder Outdoor",
+  "availableChannels": {
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "EffectMacros": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (EFFECTMACROS)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (EFFECTMACRORATE)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "12ch",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "EffectMacros",
+        "Rate"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "4Ch",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "6ch",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "8ch",
+      "channels": [
+        "CW",
+        "WW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      373,
+      170,
+      373
+    ],
+    "power": 400,
+    "bulb": {
+      "type": "LED",
+      "lumens": 7500,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        10.0,
+        20.2
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "CW",
+      "cie": "0.312727,0.329023,100.000020",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "WW",
+      "cie": "0.373604,0.384085,76.900823",
+      "hex": "#ffdfa9"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Nexpro Blinder Outdoor",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-09T07:24:48",
+      "text": "Full Mode"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a08b6599f54a2abf"
+  },
+  "manufacturerKey": "obas",
+  "fixtureKey": "blinder-outdoor-nexpro",
+  "gwFixtureTypeID": "8E185BD1-FF8C-4E56-9934-0DE0B00A84D0"
+}

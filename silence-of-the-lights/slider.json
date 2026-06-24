@@ -1,0 +1,238 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Slider",
+  "shortName": "Slider",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2026-02-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 151A8243-9482-47B8-87FC-DEE5D689D017"
+    }
+  },
+  "comment": "SOTL Slider",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Left"
+        },
+        {
+          "dmxRange": [
+            1,
+            32766
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65534
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Right"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Disable"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Enable"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 2": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 3": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 4": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard mode",
+      "channels": [
+        "P",
+        "P fine",
+        "Ctrl1",
+        "R",
+        "G",
+        "B",
+        "NoFeature",
+        "NoFeature 2",
+        "NoFeature 3",
+        "NoFeature 4"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "weight": 50.0,
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-02-09T23:51:56",
+      "text": "Final"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "silence-of-the-lights",
+  "fixtureKey": "slider",
+  "gwFixtureTypeID": "151A8243-9482-47B8-87FC-DEE5D689D017"
+}

@@ -1,0 +1,980 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Spin Eye RGBW 7x15w",
+  "shortName": "Spin Eye",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-22",
+    "lastModifyDate": "2024-05-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A7611DB5-1F9D-4D2E-BB48-AC569308F67C"
+    }
+  },
+  "wheels": {
+    "FORTEX": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Fortex",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            5,
+            102
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            103,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            104,
+            104
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            105,
+            211
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            212,
+            212
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            213,
+            213
+          ],
+          "type": "Unknown (StrobeModePulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            214,
+            250
+          ],
+          "type": "Unknown (StrobeModePulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            251
+          ],
+          "type": "Unknown (StrobeModePulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            252,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            12,
+            24
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Max speed - Pan Tilt"
+        },
+        {
+          "dmxRange": [
+            25,
+            37
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Regular speed - Pan Tilt"
+        },
+        {
+          "dmxRange": [
+            38,
+            42
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer curve linear"
+        },
+        {
+          "dmxRange": [
+            43,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer curve exponential"
+        },
+        {
+          "dmxRange": [
+            48,
+            52
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer curve logarithmic"
+        },
+        {
+          "dmxRange": [
+            53,
+            57
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer curve sinus"
+        },
+        {
+          "dmxRange": [
+            58,
+            62
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Delay curve 1"
+        },
+        {
+          "dmxRange": [
+            63,
+            67
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Delay curve 2"
+        },
+        {
+          "dmxRange": [
+            68,
+            72
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Delay curve 3"
+        },
+        {
+          "dmxRange": [
+            73,
+            77
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Power Default"
+        },
+        {
+          "dmxRange": [
+            78,
+            82
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Power 750W"
+        },
+        {
+          "dmxRange": [
+            83,
+            87
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Power 1000W"
+        },
+        {
+          "dmxRange": [
+            88,
+            92
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Power 1200W"
+        },
+        {
+          "dmxRange": [
+            93,
+            97
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Power 2000W"
+        },
+        {
+          "dmxRange": [
+            98,
+            102
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED Power 2500W (max)"
+        },
+        {
+          "dmxRange": [
+            103,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "empty"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Rotate1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "PrismRotation",
+          "angleStart": "0rpm",
+          "angleEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Anticlockwise Fast"
+        },
+        {
+          "dmxRange": [
+            129,
+            184
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            185,
+            185
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Anticlockwise Slow"
+        },
+        {
+          "dmxRange": [
+            186,
+            190
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            191,
+            192
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "STOP"
+        },
+        {
+          "dmxRange": [
+            193,
+            199
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Clockwise Slow"
+        },
+        {
+          "dmxRange": [
+            201,
+            254
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Clockwise Fast"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Effect",
+          "effectName": "OFF",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            2,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            12
+          ],
+          "type": "Effect",
+          "effectName": "Dot middle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            13,
+            22
+          ],
+          "type": "Effect",
+          "effectName": "Ring",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            23,
+            28
+          ],
+          "type": "Effect",
+          "effectName": "Full",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            29,
+            32
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            33,
+            52
+          ],
+          "type": "Effect",
+          "effectName": "Out-to-in",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            53,
+            62
+          ],
+          "type": "Effect",
+          "effectName": "Random",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            63,
+            67
+          ],
+          "type": "Effect",
+          "effectName": "2's rainbow ring",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            68,
+            72
+          ],
+          "type": "Effect",
+          "effectName": "3's rainbow ring",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            73,
+            77
+          ],
+          "type": "Effect",
+          "effectName": "3's dot-to-full",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            78,
+            82
+          ],
+          "type": "Effect",
+          "effectName": "4's dot-to-full",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            83,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "FX1 Fade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Hard"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Soft"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Background)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Background)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Background)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Open"
+        }
+      ]
+    },
+    "FX1 Adjust1": {
+      "capability": {
+        "type": "EffectParameter",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Empty"
+        },
+        {
+          "dmxRange": [
+            26,
+            76
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RESET"
+        },
+        {
+          "dmxRange": [
+            77,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Tilt Reset"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset All"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "27 Channel (default)",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "CW",
+        null,
+        "Color Macro1",
+        "Ctrl1",
+        "Zoom",
+        "Rotate1",
+        "FX1",
+        "FX1 Rate",
+        "FX1 Fade",
+        "R 2",
+        "G 2",
+        "B 2",
+        "CW 2",
+        "Dim 2",
+        "Dim 3",
+        "FX1 Adjust1",
+        null,
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      250,
+      200
+    ],
+    "weight": 8.0,
+    "power": 3000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5000,
+      "colorTemperature": 7000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2024-05-26T13:42:44",
+      "text": "v4.2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8a091648f2e17b3b"
+  },
+  "manufacturerKey": "roy-stage-light",
+  "fixtureKey": "spin-eye-rgbw-7x15w",
+  "gwFixtureTypeID": "A7611DB5-1F9D-4D2E-BB48-AC569308F67C"
+}

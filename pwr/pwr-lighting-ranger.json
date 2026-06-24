@@ -1,0 +1,436 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PWR Lighting Ranger",
+  "shortName": "Ranger",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-21",
+    "lastModifyDate": "2025-08-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9E8EB28A-86CE-46B5-9487-EF43DD999758"
+    }
+  },
+  "comment": "RGBW + A Blinder",
+  "availableChannels": {
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open Shutter"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            132
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            133,
+            133
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow Random"
+        },
+        {
+          "dmxRange": [
+            135,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast Random"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Thungsten 01s"
+        }
+      ]
+    },
+    "WW 2": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Curve"
+        },
+        {
+          "dmxRange": [
+            11,
+            71
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            72,
+            132
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square"
+        },
+        {
+          "dmxRange": [
+            133,
+            193
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv Square"
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        }
+      ]
+    },
+    "ChasePatt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            51
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Amber dim"
+        },
+        {
+          "dmxRange": [
+            52,
+            92
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Round Up"
+        },
+        {
+          "dmxRange": [
+            93,
+            133
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Round Down"
+        },
+        {
+          "dmxRange": [
+            134,
+            174
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Round Up Down"
+        },
+        {
+          "dmxRange": [
+            175,
+            215
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2 Color Bounce"
+        },
+        {
+          "dmxRange": [
+            216,
+            255
+          ],
+          "type": "Unknown (Chase)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Random"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Single",
+      "channels": [
+        "WW"
+      ]
+    },
+    {
+      "name": "Pixel (4)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW"
+      ]
+    },
+    {
+      "name": "Normal (7)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW",
+        "Amber",
+        "Sh1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "Full (12)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW 2",
+        "WW 2 fine",
+        "Amber",
+        "Sh1",
+        "Dim Mode",
+        "Dim 2",
+        "Dim 2 fine",
+        "Dim Curve",
+        "ChasePatt"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      133,
+      121,
+      180
+    ],
+    "weight": 1.7,
+    "power": 260,
+    "bulb": {
+      "type": "650nm / 450nm / 520nm LED",
+      "lumens": 3200,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.703885,0.293712,100.007254",
+      "hex": "#ff0000",
+      "dominantWavelength": 650.0
+    },
+    {
+      "name": "Blue",
+      "cie": "0.147705,0.051999,99.998474",
+      "hex": "#0000ff",
+      "dominantWavelength": 450.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.179606,0.700884,100.003763",
+      "hex": "#00ff00",
+      "dominantWavelength": 520.0
+    },
+    {
+      "name": "Ww",
+      "cie": "0.435093,0.403805,100.004921",
+      "hex": "#ffed90"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.614986,0.357810,100.006134",
+      "hex": "#ff7f00"
+    }
+  ],
+  "gwSpecs": {
+    "description": "RGBW + A Blinder",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2025-08-19T22:08:40",
+      "text": "Fixed Lamp specs"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "23b94f7f7a68b87b"
+  },
+  "manufacturerKey": "pwr",
+  "fixtureKey": "pwr-lighting-ranger",
+  "gwFixtureTypeID": "9E8EB28A-86CE-46B5-9487-EF43DD999758"
+}

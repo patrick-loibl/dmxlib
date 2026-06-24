@@ -1,0 +1,907 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MHSPOT30-FX",
+  "shortName": "Moving Head Spot",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2025-08-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7FD85636-8EDC-4FC6-AE3A-1CE8345512D7"
+    }
+  },
+  "comment": "2-in-1 Spot & Animation LED Moving Head: Simple moving head with spot and ring of LEDs\n14 / 16 DMX-channels (fine movement in 16Ch mode)\n7-color wheel + white and rainbow\n7-gobo wheel + open and gobo shake\n540° pan, 210° tilt\nStrobe max 20 Hz \nDimmer\nManual focus\n13° spot angle",
+  "wheels": {
+    "Gobo Wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "7 Gobos",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "7 colors",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Pan"
+      }
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "-105deg",
+        "angleEnd": "105deg",
+        "comment": "Tilt"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Pan/Tilt speed Fast->Slow"
+      }
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            8
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 0.03
+        },
+        {
+          "dmxRange": [
+            9,
+            17
+          ],
+          "type": "Effect",
+          "effectName": "White + Color 1 ",
+          "speedStart": 0.04,
+          "speedEnd": 0.07
+        },
+        {
+          "dmxRange": [
+            18,
+            26
+          ],
+          "type": "Effect",
+          "effectName": "Color 1 ",
+          "speedStart": 0.07,
+          "speedEnd": 0.1
+        },
+        {
+          "dmxRange": [
+            27,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Color 1 + Color 2",
+          "speedStart": 0.11,
+          "speedEnd": 0.14
+        },
+        {
+          "dmxRange": [
+            36,
+            44
+          ],
+          "type": "Effect",
+          "effectName": "Color 2",
+          "speedStart": 0.14,
+          "speedEnd": 0.17
+        },
+        {
+          "dmxRange": [
+            45,
+            53
+          ],
+          "type": "Effect",
+          "effectName": "Color 2 + Color 3",
+          "speedStart": 0.18,
+          "speedEnd": 0.21
+        },
+        {
+          "dmxRange": [
+            54,
+            62
+          ],
+          "type": "Effect",
+          "effectName": "Color 3",
+          "speedStart": 0.21,
+          "speedEnd": 0.24
+        },
+        {
+          "dmxRange": [
+            63,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Color 3 + Color 4",
+          "speedStart": 0.25,
+          "speedEnd": 0.28
+        },
+        {
+          "dmxRange": [
+            72,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Color 4",
+          "speedStart": 0.28,
+          "speedEnd": 0.31
+        },
+        {
+          "dmxRange": [
+            81,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Color 4 + Color 5",
+          "speedStart": 0.32,
+          "speedEnd": 0.35
+        },
+        {
+          "dmxRange": [
+            90,
+            98
+          ],
+          "type": "Effect",
+          "effectName": " Color 5",
+          "speedStart": 0.35,
+          "speedEnd": 0.38
+        },
+        {
+          "dmxRange": [
+            99,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "Color 5 + Color 6 ",
+          "speedStart": 0.39,
+          "speedEnd": 0.42
+        },
+        {
+          "dmxRange": [
+            108,
+            116
+          ],
+          "type": "Effect",
+          "effectName": "Color 6",
+          "speedStart": 0.42,
+          "speedEnd": 0.45
+        },
+        {
+          "dmxRange": [
+            117,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "Color 6 + Color 7",
+          "speedStart": 0.46,
+          "speedEnd": 0.49
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "Effect",
+          "effectName": " Color 7",
+          "speedStart": 0.49,
+          "speedEnd": 0.5
+        },
+        {
+          "dmxRange": [
+            128,
+            189
+          ],
+          "type": "Effect",
+          "effectName": "Color Wheel CW rotation fast->slow",
+          "speedStart": 0.5,
+          "speedEnd": 0.74
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "Stop",
+          "speedStart": 0.75,
+          "speedEnd": 0.76
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Wheel CCW rotation slow->fast",
+          "speedStart": 0.76,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Select Effects": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 1"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 2"
+        },
+        {
+          "dmxRange": [
+            24,
+            31
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 3"
+        },
+        {
+          "dmxRange": [
+            32,
+            39
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 4"
+        },
+        {
+          "dmxRange": [
+            40,
+            47
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 5"
+        },
+        {
+          "dmxRange": [
+            48,
+            55
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 6"
+        },
+        {
+          "dmxRange": [
+            56,
+            63
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 7"
+        },
+        {
+          "dmxRange": [
+            64,
+            71
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "White Shake"
+        },
+        {
+          "dmxRange": [
+            72,
+            79
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 1 Shake"
+        },
+        {
+          "dmxRange": [
+            80,
+            87
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 2 Shake"
+        },
+        {
+          "dmxRange": [
+            88,
+            95
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 3 Shake"
+        },
+        {
+          "dmxRange": [
+            96,
+            103
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 4 Shake"
+        },
+        {
+          "dmxRange": [
+            104,
+            111
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 5 Shake"
+        },
+        {
+          "dmxRange": [
+            112,
+            119
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 6 Shake"
+        },
+        {
+          "dmxRange": [
+            120,
+            127
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo 7 Shake"
+        },
+        {
+          "dmxRange": [
+            128,
+            189
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo Scroll - Fast to Slow"
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 0,
+          "comment": "Gobo Scroll - Slow to Fast"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe from Slow to Fast"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer 0-100%"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "Closed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            11
+          ],
+          "type": "Effect",
+          "effectName": "Part 1 Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            12,
+            17
+          ],
+          "type": "Effect",
+          "effectName": "Part 1 Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            18,
+            23
+          ],
+          "type": "Effect",
+          "effectName": "Part 1 Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            24,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "Part 2 Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Part 2 Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            36,
+            41
+          ],
+          "type": "Effect",
+          "effectName": "Part 2 Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            42,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Part 3 Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            53
+          ],
+          "type": "Effect",
+          "effectName": "Part 3 Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            54,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "Part 3 Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "Part 4 Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            66,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Part 4 Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            77
+          ],
+          "type": "Effect",
+          "effectName": "Part 4 Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            78,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "Opposite Two Part Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Opposite Two Part Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            90,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Opposite Two Part Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            101
+          ],
+          "type": "Effect",
+          "effectName": "The other Opposite Two Part Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            102,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "The other Opposite Two Part Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            113
+          ],
+          "type": "Effect",
+          "effectName": "The other Opposite Two Part Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            114,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "All Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "All Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            131
+          ],
+          "type": "Effect",
+          "effectName": "All Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            132,
+            179
+          ],
+          "type": "Effect",
+          "effectName": "All Full color",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            180,
+            217
+          ],
+          "type": "Effect",
+          "effectName": "Color Gradual Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            218,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Jump Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            82
+          ],
+          "type": "Effect",
+          "effectName": "Sound Activity",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            83,
+            112
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            113,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "Auto Run",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            169,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            239
+          ],
+          "type": "Effect",
+          "effectName": "Reset",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "P 2": {
+      "name": "P",
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Pan fine"
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Tilt"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "9-channel mode",
+      "channels": [
+        "P",
+        "T",
+        "Pos MSpeed",
+        "C1",
+        "Select Effects",
+        "Strobe Rate",
+        "Dim",
+        "FX1",
+        "FX2"
+      ]
+    },
+    {
+      "name": "11-channel mode",
+      "channels": [
+        "P",
+        "P 2",
+        "T 2",
+        "T",
+        "Pos MSpeed",
+        "C1",
+        "Select Effects",
+        "Strobe Rate",
+        "Dim",
+        "FX1",
+        "FX2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      145,
+      80,
+      157
+    ],
+    "weight": 2.74,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Simple moving head with spot and ring of LEDs\n14 / 16 DMX-channels (fine movement in 16Ch mode)\n7-color wheel + white and rainbow\n7-gobo wheel + open and gobo shake\n540° pan, 210° tilt\nStrobe max 20 Hz \nDimmer\nManual focus\n13° spot angle",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -25,
+      45
+    ],
+    "revision": {
+      "date": "2025-08-23T12:38:02",
+      "text": "Rev1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7195d0e8bdff82ad"
+  },
+  "manufacturerKey": "ibiza-light",
+  "fixtureKey": "mhspot30-fx",
+  "gwFixtureTypeID": "7FD85636-8EDC-4FC6-AE3A-1CE8345512D7"
+}

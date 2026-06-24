@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Astra",
+  "shortName": "Astra Series",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2022-08-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 09A83DCD-616D-48F7-84B5-1487EC88119A"
+    }
+  },
+  "comment": "Litepanels Astra Series",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTO": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Daylight"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Tungsten"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "On"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        }
+      ]
+    },
+    "Fan Mode 2": {
+      "name": "Fan Mode",
+      "capability": {
+        "type": "Unknown (FanMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Astra 6x Bi Color",
+      "channels": [
+        "Dim",
+        "CTO",
+        "Fan Mode"
+      ]
+    },
+    {
+      "name": "Astra 3x Bi Color",
+      "channels": [
+        "Dim",
+        "CTO",
+        "Fan Mode 2"
+      ]
+    },
+    {
+      "name": "Astra 6x Daylight",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Astra 3x Daylight",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Astra Soft Daylight",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Astra Soft Tungsten",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Astra BiFocus Daylight",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "Astra BiFocus Tungsten",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      134,
+      450,
+      423
+    ],
+    "weight": 3.2,
+    "power": 105,
+    "bulb": {
+      "type": "LED",
+      "lumens": 6612,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Main LED",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Rectangle",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-08-22T17:42:35",
+      "text": "1.0.01 - Initial Public release, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e8394dd52073a7e0"
+  },
+  "manufacturerKey": "litepanels",
+  "fixtureKey": "astra",
+  "gwFixtureTypeID": "09A83DCD-616D-48F7-84B5-1487EC88119A"
+}

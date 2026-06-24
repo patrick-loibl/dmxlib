@@ -1,0 +1,159 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FW 200",
+  "shortName": "FW 200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-09-10",
+    "lastModifyDate": "2024-09-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0D3A973C-90B5-4ABF-B619-1E88FD99ED24"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIn"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Wide to Narrow"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S>F"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2Ch",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "3Ch",
+      "channels": [
+        "Dim 2",
+        "Zoom",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      195,
+      390,
+      195
+    ],
+    "weight": 8.4,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 24000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200K",
+      "cie": "0.412500,0.439600,71.750000",
+      "hex": "#fada6b"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-10T07:48:39",
+      "text": "FW 200"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a953d6f04e66b135"
+  },
+  "manufacturerKey": "brighter",
+  "fixtureKey": "fw-200",
+  "gwFixtureTypeID": "0D3A973C-90B5-4ABF-B619-1E88FD99ED24"
+}

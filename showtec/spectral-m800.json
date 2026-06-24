@@ -1,0 +1,246 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Spectral M800",
+  "shortName": "S M800",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2026-04-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 371E5A2E-AD2D-4883-AE9B-E44ACBCC0484"
+    }
+  },
+  "comment": "A led Par with 16 degree beam.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "H": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "S": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Program": {
+      "capability": {
+        "type": "Unknown (Programs)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Program Speed": {
+      "capability": {
+        "type": "Unknown (ProgramSpeed)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "ARC1S",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "ARC1D",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "ARC1",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "HSV",
+      "channels": [
+        "H",
+        "S",
+        "Dim"
+      ]
+    },
+    {
+      "name": "Tour (Classic Strobe)",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Color Macro1",
+        "Sh1",
+        "Program",
+        "Program Speed",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "Tour (Special Strobe)",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Color Macro1",
+        "Sh1 2",
+        "Program",
+        "Program Speed",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      230,
+      238
+    ],
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "A led Par with 16 degree beam.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-15T12:15:41",
+      "text": "Fixed Tour mode"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7346d141fead22c6"
+  },
+  "manufacturerKey": "showtec",
+  "fixtureKey": "spectral-m800",
+  "gwFixtureTypeID": "371E5A2E-AD2D-4883-AE9B-E44ACBCC0484"
+}

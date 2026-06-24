@@ -1,0 +1,163 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR 64",
+  "shortName": "PAR 64",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-02-21",
+    "lastModifyDate": "2025-12-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4E0C7CBF-99F2-4858-9673-5826BA78CE4A"
+    }
+  },
+  "comment": "Led Par 64 WW_CW Zoom: A generic conventional PAR 64 created for BlenderDMX.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Led Par 64",
+      "channels": [
+        "Dim",
+        "WW",
+        "White",
+        "Strobe1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      264,
+      415,
+      264
+    ],
+    "weight": 2.0,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        50.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "A generic conventional PAR 64 created for BlenderDMX.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-18T07:15:08",
+      "text": "HarmanyLX Led Par64 Zoom WW_CW, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c377f32476505cbf"
+  },
+  "manufacturerKey": "harmanylx",
+  "fixtureKey": "par-64",
+  "gwFixtureTypeID": "4E0C7CBF-99F2-4858-9673-5826BA78CE4A"
+}

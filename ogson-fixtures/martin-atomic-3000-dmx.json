@@ -1,0 +1,382 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Martin Atomic 3000 DMX",
+  "shortName": "Atomic",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-07-07",
+    "lastModifyDate": "2023-07-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BB30DBC9-BF1A-4841-90AB-186F4D1810E8"
+    }
+  },
+  "availableChannels": {
+    "Sh1": {
+      "highlightValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Intensity",
+          "brightness": 0,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0.01,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "0 ms"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "650 ms"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "highlightValue": 6,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0Hz",
+          "comment": "No flash"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.5Hz",
+          "comment": "5 Hz"
+        },
+        {
+          "dmxRange": [
+            7,
+            129
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "12Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            131,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "25Hz",
+          "comment": "25 Hz"
+        }
+      ]
+    },
+    "StrobeM Strobe": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macros off"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "5 Hz"
+        },
+        {
+          "dmxRange": [
+            7,
+            23
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            24,
+            24
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            25,
+            41
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            42,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "25 Hz"
+        },
+        {
+          "dmxRange": [
+            43,
+            43
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "5 Hz"
+        },
+        {
+          "dmxRange": [
+            44,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            65,
+            84
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "25 Hz"
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "Dimmer effect",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "Lightning",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Spikes",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 channel",
+      "channels": [
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 3 channel",
+      "channels": [
+        "Dim",
+        "Strobe Duration",
+        "Strobe Rate"
+      ]
+    },
+    {
+      "name": "Mode 4 channel",
+      "channels": [
+        "Dim",
+        "Strobe Duration",
+        "Strobe Rate",
+        "StrobeM Strobe"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      245,
+      256,
+      442
+    ],
+    "power": 3000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 180000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        82.0,
+        135.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-07-17T18:32:34",
+      "text": "ogi_v2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "960914f3e45140a0"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "martin-atomic-3000-dmx",
+  "gwFixtureTypeID": "BB30DBC9-BF1A-4841-90AB-186F4D1810E8"
+}

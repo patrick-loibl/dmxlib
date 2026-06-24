@@ -1,0 +1,236 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BPP200",
+  "shortName": "LED PAR",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2026-02-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A4E9E020-FB82-4392-8C91-F79252B1D3D9"
+    }
+  },
+  "comment": "BPP200 PAR64 12x18W 6-1 HEXA IR DMX ",
+  "availableChannels": {
+    "P": {
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "10 Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV",
+        "Dim",
+        "Strobe Rate",
+        "Ctrl1",
+        "Color Mix MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Amber",
+      "cie": "0.481900,0.440900,47.000000",
+      "hex": "#f4a726"
+    },
+    {
+      "name": "UV",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-02-28T13:57:04",
+      "text": "V01 Release"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "beamz-pro",
+  "fixtureKey": "bpp200",
+  "gwFixtureTypeID": "A4E9E020-FB82-4392-8C91-F79252B1D3D9"
+}

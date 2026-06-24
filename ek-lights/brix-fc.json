@@ -1,0 +1,1330 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Brix FC",
+  "shortName": "Brix",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-05-13",
+    "lastModifyDate": "2025-05-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 97023E0E-F01A-4FD2-809B-4134C1C140E0"
+    }
+  },
+  "comment": "Outdoor-rated RGBW COB LED blinder with modular design for deploying large arrays. Reproduces the look and feel of the classic halogen 4-cell blinder.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            30
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            32,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            132,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            201,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            11,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "CTC",
+          "switchChannels": {
+            "4_Body_ColorMacro2": "Color Macro2"
+          }
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "ColorPreset",
+          "comment": "CW Rainbow Effect",
+          "switchChannels": {
+            "4_Body_ColorMacro2": "Color Macro2 2"
+          }
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "ColorPreset",
+          "comment": "CCW Rainbow Effect",
+          "switchChannels": {
+            "4_Body_ColorMacro2": "Color Macro2 3"
+          }
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "ColorPresets",
+          "switchChannels": {
+            "4_Body_ColorMacro2": "Color Macro2 4"
+          }
+        },
+        {
+          "dmxRange": [
+            100,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "HALO DWE",
+          "switchChannels": {
+            "4_Body_ColorMacro2": "Color Macro2 5"
+          }
+        }
+      ]
+    },
+    "Color Macro2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            223
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 2000,
+          "colorTemperatureEnd": 2999,
+          "comment": "2000K -> 3000K"
+        },
+        {
+          "dmxRange": [
+            224,
+            231
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 3000,
+          "colorTemperatureEnd": 3999,
+          "comment": "3000K -> 4000K"
+        },
+        {
+          "dmxRange": [
+            232,
+            239
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 4000,
+          "colorTemperatureEnd": 5599,
+          "comment": "4000K -> 5600K"
+        },
+        {
+          "dmxRange": [
+            240,
+            247
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 5600,
+          "colorTemperatureEnd": 8000,
+          "comment": "5600K -> 8000K"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 8000,
+          "comment": "8000K"
+        }
+      ]
+    },
+    "Color Macro2 2": {
+      "name": "Color Macro2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "CW Rainbow Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorPreset",
+          "comment": "CW Rainbow Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "CW Rainbow Fast"
+        }
+      ]
+    },
+    "Color Macro2 3": {
+      "name": "Color Macro2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "CCW Rainbow Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorPreset",
+          "comment": "CCW Rainbow Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "CCW Rainbow Fast"
+        }
+      ]
+    },
+    "Color Macro2 4": {
+      "name": "Color Macro2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            28
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 0-100% B 0%"
+        },
+        {
+          "dmxRange": [
+            29,
+            56
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100-0% G 100% B 0%"
+        },
+        {
+          "dmxRange": [
+            57,
+            84
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0% G 100% B 0-100%"
+        },
+        {
+          "dmxRange": [
+            85,
+            112
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0% G 100-0% B 100%"
+        },
+        {
+          "dmxRange": [
+            113,
+            140
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0-100% G 0% B 100%"
+        },
+        {
+          "dmxRange": [
+            141,
+            168
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 0% B 100-0%"
+        },
+        {
+          "dmxRange": [
+            169,
+            196
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 0-100% B 0-100%"
+        },
+        {
+          "dmxRange": [
+            197,
+            224
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100-0% G 100-0% B 100%"
+        },
+        {
+          "dmxRange": [
+            225,
+            225
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100% G 100% B 100% W 100%"
+        },
+        {
+          "dmxRange": [
+            226,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Color Macro2 5": {
+      "name": "Color Macro2",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Dim 0"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Dim 100"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 1",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 2",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 3",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 4",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 5",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 6",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 7",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 8",
+          "speed": 8
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 9",
+          "speed": 9
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 10",
+          "speed": 10
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 11",
+          "speed": 11
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 12",
+          "speed": 12
+        },
+        {
+          "dmxRange": [
+            131,
+            140
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 13",
+          "speed": 13
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 14",
+          "speed": 14
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 15",
+          "speed": 15
+        },
+        {
+          "dmxRange": [
+            161,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 16",
+          "speed": 16
+        },
+        {
+          "dmxRange": [
+            171,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 17",
+          "speed": 17
+        },
+        {
+          "dmxRange": [
+            181,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 18",
+          "speed": 18
+        },
+        {
+          "dmxRange": [
+            191,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 19",
+          "speed": 19
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 20",
+          "speed": 20
+        },
+        {
+          "dmxRange": [
+            211,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 21",
+          "speed": 21
+        },
+        {
+          "dmxRange": [
+            221,
+            230
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 22",
+          "speed": 22
+        },
+        {
+          "dmxRange": [
+            231,
+            240
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 23",
+          "speed": 23
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "RAndom Pattern",
+          "speed": 0
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            1,
+            28
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            29,
+            29
+          ],
+          "type": "Rotation",
+          "angle": "360deg",
+          "comment": "Index max"
+        },
+        {
+          "dmxRange": [
+            30,
+            30
+          ],
+          "type": "EffectSpeed",
+          "speed": "0Hz",
+          "comment": "Slow Speed"
+        },
+        {
+          "dmxRange": [
+            31,
+            139
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0.01Hz",
+          "speedEnd": "0.99Hz",
+          "comment": "Speed"
+        },
+        {
+          "dmxRange": [
+            140,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speed": "1Hz",
+          "comment": "Fast Speed"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            12
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            13,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            26,
+            38
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            51
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            52,
+            64
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            65,
+            77
+          ],
+          "type": "Effect",
+          "effectName": "Green+Blue",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            78,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Red+Blue",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            91,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green ",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            104,
+            116
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green+Blue",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            117,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "Red+White",
+          "speed": 8
+        },
+        {
+          "dmxRange": [
+            130,
+            142
+          ],
+          "type": "Effect",
+          "effectName": "Green+White",
+          "speed": 9
+        },
+        {
+          "dmxRange": [
+            143,
+            155
+          ],
+          "type": "Effect",
+          "effectName": "Blue+White",
+          "speed": 10
+        },
+        {
+          "dmxRange": [
+            156,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green+White",
+          "speed": 11
+        },
+        {
+          "dmxRange": [
+            169,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "Red+Blue+White",
+          "speed": 12
+        },
+        {
+          "dmxRange": [
+            182,
+            194
+          ],
+          "type": "Effect",
+          "effectName": "Green+Blue+White",
+          "speed": 13
+        },
+        {
+          "dmxRange": [
+            195,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green+Blue+White",
+          "speed": 14
+        },
+        {
+          "dmxRange": [
+            208,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "2000K",
+          "speed": 15
+        },
+        {
+          "dmxRange": [
+            221,
+            233
+          ],
+          "type": "Effect",
+          "effectName": "3000K",
+          "speed": 16
+        },
+        {
+          "dmxRange": [
+            234,
+            246
+          ],
+          "type": "Effect",
+          "effectName": "4000K",
+          "speed": 17
+        },
+        {
+          "dmxRange": [
+            247,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Cycling",
+          "speed": 18
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color FX1 2": {
+      "name": "Color FX1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            12
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            13,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            26,
+            38
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            51
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            52,
+            64
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            65,
+            77
+          ],
+          "type": "Effect",
+          "effectName": "Green+Blue",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            78,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Red+Blue",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            91,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green ",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            104,
+            116
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green+Blue",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            117,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "Red+White",
+          "speed": 8
+        },
+        {
+          "dmxRange": [
+            130,
+            142
+          ],
+          "type": "Effect",
+          "effectName": "Green+White",
+          "speed": 9
+        },
+        {
+          "dmxRange": [
+            143,
+            155
+          ],
+          "type": "Effect",
+          "effectName": "Blue+White",
+          "speed": 10
+        },
+        {
+          "dmxRange": [
+            156,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green+White",
+          "speed": 11
+        },
+        {
+          "dmxRange": [
+            169,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "Red+Blue+White",
+          "speed": 12
+        },
+        {
+          "dmxRange": [
+            182,
+            194
+          ],
+          "type": "Effect",
+          "effectName": "Green+Blue+White",
+          "speed": 13
+        },
+        {
+          "dmxRange": [
+            195,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "Red+Green+Blue+White",
+          "speed": 14
+        },
+        {
+          "dmxRange": [
+            208,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "2000K",
+          "speed": 15
+        },
+        {
+          "dmxRange": [
+            221,
+            233
+          ],
+          "type": "Effect",
+          "effectName": "3000K",
+          "speed": 16
+        },
+        {
+          "dmxRange": [
+            234,
+            246
+          ],
+          "type": "Effect",
+          "effectName": "4000K",
+          "speed": 17
+        },
+        {
+          "dmxRange": [
+            247,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Cycling",
+          "speed": 18
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DimmerFade as from menu"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fast Dimmer Fade"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Fade"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Slow Dimmer Fade"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Halo_1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Halo_4ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Standard_STD 4ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "Standard_STD 6ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Standard - STD 15ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Color Macro1",
+        "4_Body_ColorMacro2",
+        "FX1",
+        "FX1 Rate",
+        "Color FX1",
+        "Dim 3",
+        "Color FX1 2",
+        "Dim 4",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "Extended_EXT 16ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "Extended_EXT 19ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim",
+        "Sh1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "Extended_EXT 25ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "FX1",
+        "FX1 Rate",
+        "Color FX1",
+        "Dim",
+        "Color FX1 2",
+        "Dim 3",
+        "Dim 4",
+        "Sh1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      133,
+      175,
+      619
+    ],
+    "weight": 8.0,
+    "power": 75,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1348,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        27.0,
+        47.5
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Outdoor-rated RGBW COB LED blinder with modular design for deploying large arrays. Reproduces the look and feel of the classic halogen 4-cell blinder.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-14T05:41:36",
+      "text": "Adjusted"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1bd489ad25d08938"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "brix-fc",
+  "gwFixtureTypeID": "97023E0E-F01A-4FD2-809B-4134C1C140E0"
+}

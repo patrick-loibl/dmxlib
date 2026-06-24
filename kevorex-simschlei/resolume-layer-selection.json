@@ -1,0 +1,2841 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Resolume Layer Selection",
+  "shortName": "Resolume",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-01-26",
+    "lastModifyDate": "2026-01-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0CD8C3B8-4596-49A0-AF3C-9F86CCE43A87"
+    }
+  },
+  "comment": "Resolume: A fixture for Resolume Arena 7 to control the composition and layers.",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Speed": {
+      "fineChannelAliases": [
+        "Speed fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            257
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "0%",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            258,
+            6167
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            6168,
+            6682
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "2000%",
+          "comment": "----"
+        },
+        {
+          "dmxRange": [
+            6683,
+            9251
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            9252,
+            10023
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "4000%",
+          "comment": "---"
+        },
+        {
+          "dmxRange": [
+            10024,
+            11821
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            11822,
+            13364
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "6000%",
+          "comment": "--"
+        },
+        {
+          "dmxRange": [
+            13365,
+            14134
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            14135,
+            14392
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "8000%",
+          "comment": "-"
+        },
+        {
+          "dmxRange": [
+            14393,
+            16190
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            16191,
+            16448
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "10000%",
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            16449,
+            24671
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            24672,
+            24929
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "20000%",
+          "comment": "+"
+        },
+        {
+          "dmxRange": [
+            24930,
+            37521
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            37522,
+            37779
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "40000%",
+          "comment": "++"
+        },
+        {
+          "dmxRange": [
+            37780,
+            48058
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            48059,
+            48316
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "60000%",
+          "comment": "+++"
+        },
+        {
+          "dmxRange": [
+            48317,
+            57053
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            57054,
+            57311
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "80000%",
+          "comment": "++++"
+        },
+        {
+          "dmxRange": [
+            57312,
+            65534
+          ],
+          "type": "Unknown (Speed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (Speed)",
+          "physical": "100000%",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "fineChannelAliases": [
+        "Pos MSpeed fine"
+      ],
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Clip": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Change"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 1"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 2"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 3"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 4"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 5"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 6"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 7"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 8"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 9"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 10"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 11"
+        },
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 12"
+        },
+        {
+          "dmxRange": [
+            13,
+            13
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 13"
+        },
+        {
+          "dmxRange": [
+            14,
+            14
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 14"
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 15"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 16"
+        },
+        {
+          "dmxRange": [
+            17,
+            17
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 17"
+        },
+        {
+          "dmxRange": [
+            18,
+            18
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 18"
+        },
+        {
+          "dmxRange": [
+            19,
+            19
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 19"
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 20"
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 21"
+        },
+        {
+          "dmxRange": [
+            22,
+            22
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 22"
+        },
+        {
+          "dmxRange": [
+            23,
+            23
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 23"
+        },
+        {
+          "dmxRange": [
+            24,
+            24
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 24"
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 25"
+        },
+        {
+          "dmxRange": [
+            26,
+            26
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 26"
+        },
+        {
+          "dmxRange": [
+            27,
+            27
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 27"
+        },
+        {
+          "dmxRange": [
+            28,
+            28
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 28"
+        },
+        {
+          "dmxRange": [
+            29,
+            29
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 29"
+        },
+        {
+          "dmxRange": [
+            30,
+            30
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 30"
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 31"
+        },
+        {
+          "dmxRange": [
+            32,
+            32
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 32"
+        },
+        {
+          "dmxRange": [
+            33,
+            33
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 33"
+        },
+        {
+          "dmxRange": [
+            34,
+            34
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 34"
+        },
+        {
+          "dmxRange": [
+            35,
+            35
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 35"
+        },
+        {
+          "dmxRange": [
+            36,
+            36
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 36"
+        },
+        {
+          "dmxRange": [
+            37,
+            37
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 37"
+        },
+        {
+          "dmxRange": [
+            38,
+            38
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 38"
+        },
+        {
+          "dmxRange": [
+            39,
+            39
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 39"
+        },
+        {
+          "dmxRange": [
+            40,
+            40
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 40"
+        },
+        {
+          "dmxRange": [
+            41,
+            41
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 41"
+        },
+        {
+          "dmxRange": [
+            42,
+            42
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 42"
+        },
+        {
+          "dmxRange": [
+            43,
+            43
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 43"
+        },
+        {
+          "dmxRange": [
+            44,
+            44
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 44"
+        },
+        {
+          "dmxRange": [
+            45,
+            45
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 45"
+        },
+        {
+          "dmxRange": [
+            46,
+            46
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 46"
+        },
+        {
+          "dmxRange": [
+            47,
+            47
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 47"
+        },
+        {
+          "dmxRange": [
+            48,
+            48
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 48"
+        },
+        {
+          "dmxRange": [
+            49,
+            49
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 49"
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 50"
+        },
+        {
+          "dmxRange": [
+            51,
+            51
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 51"
+        },
+        {
+          "dmxRange": [
+            52,
+            52
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 52"
+        },
+        {
+          "dmxRange": [
+            53,
+            53
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 53"
+        },
+        {
+          "dmxRange": [
+            54,
+            54
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 54"
+        },
+        {
+          "dmxRange": [
+            55,
+            55
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 55"
+        },
+        {
+          "dmxRange": [
+            56,
+            56
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 56"
+        },
+        {
+          "dmxRange": [
+            57,
+            57
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 57"
+        },
+        {
+          "dmxRange": [
+            58,
+            58
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 58"
+        },
+        {
+          "dmxRange": [
+            59,
+            59
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 59"
+        },
+        {
+          "dmxRange": [
+            60,
+            60
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 60"
+        },
+        {
+          "dmxRange": [
+            61,
+            61
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 61"
+        },
+        {
+          "dmxRange": [
+            62,
+            62
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 62"
+        },
+        {
+          "dmxRange": [
+            63,
+            63
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 63"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 64"
+        },
+        {
+          "dmxRange": [
+            65,
+            65
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 65"
+        },
+        {
+          "dmxRange": [
+            66,
+            66
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 66"
+        },
+        {
+          "dmxRange": [
+            67,
+            67
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 67"
+        },
+        {
+          "dmxRange": [
+            68,
+            68
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 68"
+        },
+        {
+          "dmxRange": [
+            69,
+            69
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 69"
+        },
+        {
+          "dmxRange": [
+            70,
+            70
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 70"
+        },
+        {
+          "dmxRange": [
+            71,
+            71
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 71"
+        },
+        {
+          "dmxRange": [
+            72,
+            72
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 72"
+        },
+        {
+          "dmxRange": [
+            73,
+            73
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 73"
+        },
+        {
+          "dmxRange": [
+            74,
+            74
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 74"
+        },
+        {
+          "dmxRange": [
+            75,
+            75
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 75"
+        },
+        {
+          "dmxRange": [
+            76,
+            76
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 76"
+        },
+        {
+          "dmxRange": [
+            77,
+            77
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 77"
+        },
+        {
+          "dmxRange": [
+            78,
+            78
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 78"
+        },
+        {
+          "dmxRange": [
+            79,
+            79
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 89"
+        },
+        {
+          "dmxRange": [
+            80,
+            80
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 80"
+        },
+        {
+          "dmxRange": [
+            81,
+            81
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 81"
+        },
+        {
+          "dmxRange": [
+            82,
+            82
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 82"
+        },
+        {
+          "dmxRange": [
+            83,
+            83
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 83"
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 84"
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 85"
+        },
+        {
+          "dmxRange": [
+            86,
+            86
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 86"
+        },
+        {
+          "dmxRange": [
+            87,
+            87
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 87"
+        },
+        {
+          "dmxRange": [
+            88,
+            88
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 88"
+        },
+        {
+          "dmxRange": [
+            89,
+            89
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 89"
+        },
+        {
+          "dmxRange": [
+            90,
+            90
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 90"
+        },
+        {
+          "dmxRange": [
+            91,
+            91
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 91"
+        },
+        {
+          "dmxRange": [
+            92,
+            92
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 92"
+        },
+        {
+          "dmxRange": [
+            93,
+            93
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 93"
+        },
+        {
+          "dmxRange": [
+            94,
+            94
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 94"
+        },
+        {
+          "dmxRange": [
+            95,
+            95
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 95"
+        },
+        {
+          "dmxRange": [
+            96,
+            96
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 96"
+        },
+        {
+          "dmxRange": [
+            97,
+            97
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 97"
+        },
+        {
+          "dmxRange": [
+            98,
+            98
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 98"
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 99"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 100"
+        },
+        {
+          "dmxRange": [
+            101,
+            101
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 101"
+        },
+        {
+          "dmxRange": [
+            102,
+            102
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 102"
+        },
+        {
+          "dmxRange": [
+            103,
+            103
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 103"
+        },
+        {
+          "dmxRange": [
+            104,
+            104
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 104"
+        },
+        {
+          "dmxRange": [
+            105,
+            105
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 105"
+        },
+        {
+          "dmxRange": [
+            106,
+            106
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 106"
+        },
+        {
+          "dmxRange": [
+            107,
+            107
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 107"
+        },
+        {
+          "dmxRange": [
+            108,
+            108
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 108"
+        },
+        {
+          "dmxRange": [
+            109,
+            109
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 109"
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 110"
+        },
+        {
+          "dmxRange": [
+            111,
+            111
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 111"
+        },
+        {
+          "dmxRange": [
+            112,
+            112
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 112"
+        },
+        {
+          "dmxRange": [
+            113,
+            113
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 113"
+        },
+        {
+          "dmxRange": [
+            114,
+            114
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 114"
+        },
+        {
+          "dmxRange": [
+            115,
+            115
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 115"
+        },
+        {
+          "dmxRange": [
+            116,
+            116
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 116"
+        },
+        {
+          "dmxRange": [
+            117,
+            117
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 117"
+        },
+        {
+          "dmxRange": [
+            118,
+            118
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 118"
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 119"
+        },
+        {
+          "dmxRange": [
+            120,
+            120
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 120"
+        },
+        {
+          "dmxRange": [
+            121,
+            121
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 121"
+        },
+        {
+          "dmxRange": [
+            122,
+            122
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 122"
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 123"
+        },
+        {
+          "dmxRange": [
+            124,
+            124
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 124"
+        },
+        {
+          "dmxRange": [
+            125,
+            125
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 125"
+        },
+        {
+          "dmxRange": [
+            126,
+            126
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 126"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 127"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 128"
+        },
+        {
+          "dmxRange": [
+            129,
+            129
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 129"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 130"
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 131"
+        },
+        {
+          "dmxRange": [
+            132,
+            132
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 132"
+        },
+        {
+          "dmxRange": [
+            133,
+            133
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 133"
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 134"
+        },
+        {
+          "dmxRange": [
+            135,
+            135
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 135"
+        },
+        {
+          "dmxRange": [
+            136,
+            136
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 136"
+        },
+        {
+          "dmxRange": [
+            137,
+            137
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 137"
+        },
+        {
+          "dmxRange": [
+            138,
+            138
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 138"
+        },
+        {
+          "dmxRange": [
+            139,
+            139
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 139"
+        },
+        {
+          "dmxRange": [
+            140,
+            140
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 140"
+        },
+        {
+          "dmxRange": [
+            141,
+            141
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 141"
+        },
+        {
+          "dmxRange": [
+            142,
+            142
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 142"
+        },
+        {
+          "dmxRange": [
+            143,
+            143
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 143"
+        },
+        {
+          "dmxRange": [
+            144,
+            144
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 144"
+        },
+        {
+          "dmxRange": [
+            145,
+            145
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 145"
+        },
+        {
+          "dmxRange": [
+            146,
+            146
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 146"
+        },
+        {
+          "dmxRange": [
+            147,
+            147
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 147"
+        },
+        {
+          "dmxRange": [
+            148,
+            148
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 148"
+        },
+        {
+          "dmxRange": [
+            149,
+            149
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 149"
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 150"
+        },
+        {
+          "dmxRange": [
+            151,
+            151
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 151"
+        },
+        {
+          "dmxRange": [
+            152,
+            152
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 152"
+        },
+        {
+          "dmxRange": [
+            153,
+            153
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 153"
+        },
+        {
+          "dmxRange": [
+            154,
+            154
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 154"
+        },
+        {
+          "dmxRange": [
+            155,
+            155
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 155"
+        },
+        {
+          "dmxRange": [
+            156,
+            156
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 156"
+        },
+        {
+          "dmxRange": [
+            157,
+            157
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 157"
+        },
+        {
+          "dmxRange": [
+            158,
+            158
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 158"
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 159"
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 160"
+        },
+        {
+          "dmxRange": [
+            161,
+            161
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 161"
+        },
+        {
+          "dmxRange": [
+            162,
+            162
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 162"
+        },
+        {
+          "dmxRange": [
+            163,
+            163
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 163"
+        },
+        {
+          "dmxRange": [
+            164,
+            164
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 164"
+        },
+        {
+          "dmxRange": [
+            165,
+            165
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 165"
+        },
+        {
+          "dmxRange": [
+            166,
+            166
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 166"
+        },
+        {
+          "dmxRange": [
+            167,
+            167
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 167"
+        },
+        {
+          "dmxRange": [
+            168,
+            168
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 168"
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 169"
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 170"
+        },
+        {
+          "dmxRange": [
+            171,
+            171
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 171"
+        },
+        {
+          "dmxRange": [
+            172,
+            172
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 172"
+        },
+        {
+          "dmxRange": [
+            173,
+            173
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 173"
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 174"
+        },
+        {
+          "dmxRange": [
+            175,
+            175
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 175"
+        },
+        {
+          "dmxRange": [
+            176,
+            176
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 176"
+        },
+        {
+          "dmxRange": [
+            177,
+            177
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 177"
+        },
+        {
+          "dmxRange": [
+            178,
+            178
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 178"
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 179"
+        },
+        {
+          "dmxRange": [
+            180,
+            180
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 180"
+        },
+        {
+          "dmxRange": [
+            181,
+            181
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 181"
+        },
+        {
+          "dmxRange": [
+            182,
+            182
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 182"
+        },
+        {
+          "dmxRange": [
+            183,
+            183
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 183"
+        },
+        {
+          "dmxRange": [
+            184,
+            184
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 184"
+        },
+        {
+          "dmxRange": [
+            185,
+            185
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 185"
+        },
+        {
+          "dmxRange": [
+            186,
+            186
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 186"
+        },
+        {
+          "dmxRange": [
+            187,
+            187
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 187"
+        },
+        {
+          "dmxRange": [
+            188,
+            188
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 188"
+        },
+        {
+          "dmxRange": [
+            189,
+            189
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 189"
+        },
+        {
+          "dmxRange": [
+            190,
+            190
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 190"
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 191"
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 192"
+        },
+        {
+          "dmxRange": [
+            193,
+            193
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 193"
+        },
+        {
+          "dmxRange": [
+            194,
+            194
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 194"
+        },
+        {
+          "dmxRange": [
+            195,
+            195
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 195"
+        },
+        {
+          "dmxRange": [
+            196,
+            196
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 196"
+        },
+        {
+          "dmxRange": [
+            197,
+            197
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 197"
+        },
+        {
+          "dmxRange": [
+            198,
+            198
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 198"
+        },
+        {
+          "dmxRange": [
+            199,
+            199
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 199"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 200"
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 201"
+        },
+        {
+          "dmxRange": [
+            202,
+            202
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 202"
+        },
+        {
+          "dmxRange": [
+            203,
+            203
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 203"
+        },
+        {
+          "dmxRange": [
+            204,
+            204
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 204"
+        },
+        {
+          "dmxRange": [
+            205,
+            205
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 205"
+        },
+        {
+          "dmxRange": [
+            206,
+            206
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 206"
+        },
+        {
+          "dmxRange": [
+            207,
+            207
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 207"
+        },
+        {
+          "dmxRange": [
+            208,
+            208
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 208"
+        },
+        {
+          "dmxRange": [
+            209,
+            209
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 209"
+        },
+        {
+          "dmxRange": [
+            210,
+            210
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 210"
+        },
+        {
+          "dmxRange": [
+            211,
+            211
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 211"
+        },
+        {
+          "dmxRange": [
+            212,
+            212
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 212"
+        },
+        {
+          "dmxRange": [
+            213,
+            213
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 213"
+        },
+        {
+          "dmxRange": [
+            214,
+            214
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 214"
+        },
+        {
+          "dmxRange": [
+            215,
+            215
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 215"
+        },
+        {
+          "dmxRange": [
+            216,
+            216
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 216"
+        },
+        {
+          "dmxRange": [
+            217,
+            217
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 217"
+        },
+        {
+          "dmxRange": [
+            218,
+            218
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 218"
+        },
+        {
+          "dmxRange": [
+            219,
+            219
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 219"
+        },
+        {
+          "dmxRange": [
+            220,
+            220
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 220"
+        },
+        {
+          "dmxRange": [
+            221,
+            221
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 221"
+        },
+        {
+          "dmxRange": [
+            222,
+            222
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 222"
+        },
+        {
+          "dmxRange": [
+            223,
+            223
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 223"
+        },
+        {
+          "dmxRange": [
+            224,
+            224
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 224"
+        },
+        {
+          "dmxRange": [
+            225,
+            225
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 225"
+        },
+        {
+          "dmxRange": [
+            226,
+            226
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 226"
+        },
+        {
+          "dmxRange": [
+            227,
+            227
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 227"
+        },
+        {
+          "dmxRange": [
+            228,
+            228
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 228"
+        },
+        {
+          "dmxRange": [
+            229,
+            229
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 229"
+        },
+        {
+          "dmxRange": [
+            230,
+            230
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 230"
+        },
+        {
+          "dmxRange": [
+            231,
+            231
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 231"
+        },
+        {
+          "dmxRange": [
+            232,
+            232
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 232"
+        },
+        {
+          "dmxRange": [
+            233,
+            233
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 233"
+        },
+        {
+          "dmxRange": [
+            234,
+            234
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 234"
+        },
+        {
+          "dmxRange": [
+            235,
+            235
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 235"
+        },
+        {
+          "dmxRange": [
+            236,
+            236
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 236"
+        },
+        {
+          "dmxRange": [
+            237,
+            237
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 237"
+        },
+        {
+          "dmxRange": [
+            238,
+            238
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 238"
+        },
+        {
+          "dmxRange": [
+            239,
+            239
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 239"
+        },
+        {
+          "dmxRange": [
+            240,
+            240
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 240"
+        },
+        {
+          "dmxRange": [
+            241,
+            241
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 241"
+        },
+        {
+          "dmxRange": [
+            242,
+            242
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 242"
+        },
+        {
+          "dmxRange": [
+            243,
+            243
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 243"
+        },
+        {
+          "dmxRange": [
+            244,
+            244
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 244"
+        },
+        {
+          "dmxRange": [
+            245,
+            245
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 245"
+        },
+        {
+          "dmxRange": [
+            246,
+            246
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 246"
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 247"
+        },
+        {
+          "dmxRange": [
+            248,
+            248
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 248"
+        },
+        {
+          "dmxRange": [
+            249,
+            249
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 249"
+        },
+        {
+          "dmxRange": [
+            250,
+            250
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 250"
+        },
+        {
+          "dmxRange": [
+            251,
+            251
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 251"
+        },
+        {
+          "dmxRange": [
+            252,
+            252
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 252"
+        },
+        {
+          "dmxRange": [
+            253,
+            253
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 253"
+        },
+        {
+          "dmxRange": [
+            254,
+            254
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 254"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Clip)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Column 255"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Composition 8-bit",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Speed",
+        "Speed fine",
+        "Pos MSpeed",
+        "Pos MSpeed fine"
+      ]
+    },
+    {
+      "name": "Layer 8-bit",
+      "channels": [
+        "Clip"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "A fixture for Resolume Arena 7 to control the composition and layers.",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-01-13T14:50:26",
+      "text": "130125"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4c70bc9f4b3e24a7"
+  },
+  "manufacturerKey": "kevorex-simschlei",
+  "fixtureKey": "resolume-layer-selection",
+  "gwFixtureTypeID": "0CD8C3B8-4596-49A0-AF3C-9F86CCE43A87",
+  "physical": {}
+}

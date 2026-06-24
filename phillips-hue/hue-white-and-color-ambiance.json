@@ -1,0 +1,178 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Hue White and Color Ambiance",
+  "shortName": "Hue RGBW Bulb",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-10-28",
+    "lastModifyDate": "2024-10-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4D97B9C0-DBF9-4D95-9F08-294432B7DEF9"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8bit - RGB",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "8bit-dimmable - DIM RGB",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "16bit - RRf GGf BBf",
+      "channels": [
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      69,
+      87,
+      69
+    ],
+    "weight": 0.72,
+    "power": 14,
+    "bulb": {
+      "type": "LED",
+      "lumens": 750,
+      "colorTemperature": 5500
+    },
+    "lens": {
+      "degreesMinMax": [
+        155.0,
+        205.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-10-28T16:57:10",
+      "text": "New fixture type based on Hue White and Color Ambiance from Phillips Hue"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8f8908755a504335"
+  },
+  "manufacturerKey": "phillips-hue",
+  "fixtureKey": "hue-white-and-color-ambiance",
+  "gwFixtureTypeID": "4D97B9C0-DBF9-4D95-9F08-294432B7DEF9"
+}

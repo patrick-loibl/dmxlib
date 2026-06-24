@@ -1,0 +1,1461 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VL2600 Wash",
+  "shortName": "VL2600Wash",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-08-23",
+    "lastModifyDate": "2022-11-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 34517739-5EE8-11E8-A3BB-525400685065"
+    }
+  },
+  "comment": "Vari-lite VL2600 Wash includes an internal, beam-shaping framing system and has an adjustable beam edge feature (PC or Fresnel).",
+  "rdm": {
+    "modelId": 309,
+    "softwareVersion": "0x1"
+  },
+  "wheels": {
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dark Blue",
+          "colors": [
+            "#02609e"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Kelly Green",
+          "colors": [
+            "#006b5a"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Amber",
+          "colors": [
+            "#e45c02"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Congo Blue",
+          "colors": [
+            "#002c53"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "CTB",
+          "colors": [
+            "#3790c4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "highlightValue": 32767,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "highlightValue": 32767,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Zoom": {
+      "fineChannelAliases": [
+        "Zoom fine"
+      ],
+      "highlightValue": 32767,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            65534
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "C": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "Y": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Yellow"
+      }
+    },
+    "M": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Magenta"
+      }
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 1,
+          "comment": "Open - Color"
+        },
+        {
+          "dmxRange": [
+            16,
+            48
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 2,
+          "comment": "Red - Color"
+        },
+        {
+          "dmxRange": [
+            49,
+            80
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 3,
+          "comment": "Dark Blue - Color"
+        },
+        {
+          "dmxRange": [
+            81,
+            112
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 4,
+          "comment": "Yellow - Color"
+        },
+        {
+          "dmxRange": [
+            113,
+            144
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 5,
+          "comment": "Kelly Green - Color"
+        },
+        {
+          "dmxRange": [
+            145,
+            176
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 6,
+          "comment": "Amber - Color"
+        },
+        {
+          "dmxRange": [
+            177,
+            208
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 7,
+          "comment": "Congo Blue - Color"
+        },
+        {
+          "dmxRange": [
+            209,
+            240
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTB - Color"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 1,
+          "comment": "Open - Color"
+        }
+      ]
+    },
+    "C1 Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Movement Using Shortest (Quickest) Path - Custom"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Movement Using Normal (Longest) Path - Custom"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Wheel Spin Forward - Rotate CW"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stop - Stop Loop"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Wheel Spin Reverse - Rotate CCW"
+        },
+        {
+          "dmxRange": [
+            26,
+            56
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Shake Shortest Path S > F - Custom"
+        },
+        {
+          "dmxRange": [
+            57,
+            87
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Shake Normal Path S > F - Custom"
+        },
+        {
+          "dmxRange": [
+            88,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        }
+      ]
+    },
+    "Blade1A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade1B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade2A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade2B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade3A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade3B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade4A": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade4B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade1 Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "BladeRotation",
+          "blade": "Top",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "BladeRotation",
+          "blade": "Top",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Frost1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed - Shutter Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe - Strobe"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random - Strobe Random"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random Sync - Strobe Random"
+        },
+        {
+          "dmxRange": [
+            26,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            40
+          ],
+          "type": "NoFunction",
+          "comment": "Idle - Custom"
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear - Custom"
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            121,
+            160
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            161,
+            181
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "PL Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            182,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "For Future Use - Custom"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto CTB On - Custom"
+        },
+        {
+          "dmxRange": [
+            211,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto CTB Off - Custom"
+        },
+        {
+          "dmxRange": [
+            221,
+            225
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "For Future Use - Custom"
+        },
+        {
+          "dmxRange": [
+            226,
+            230
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "For Future Use - Custom"
+        },
+        {
+          "dmxRange": [
+            231,
+            235
+          ],
+          "type": "Unknown (ZoomMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Soft Zoom Start On - Custom"
+        },
+        {
+          "dmxRange": [
+            236,
+            240
+          ],
+          "type": "Unknown (ZoomMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Soft Zoom Start Off - Custom"
+        },
+        {
+          "dmxRange": [
+            241,
+            245
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Snap On - Custom"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Snap Off - Custom"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Focus MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Fans": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            4,
+            255
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Highest > Lowest - Speed"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction",
+          "comment": "Idle - Custom"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Full Luminaire Recal - Reset"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fixture Shutdown - Custom"
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display - Menu On - Custom"
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display - Menu Off - Custom"
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ReCal Position - Reset"
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ReCal Color - Reset"
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved Values - Custom"
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ReCal Beam - Reset"
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ReCal Optics - Reset"
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ReCal Dim/Strobe - Reset"
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset Fixture To Defaults - Reset"
+        },
+        {
+          "dmxRange": [
+            71,
+            75
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Full Luminaire Reboot - Reset"
+        },
+        {
+          "dmxRange": [
+            76,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fixture Status On/Off - Custom"
+        },
+        {
+          "dmxRange": [
+            81,
+            85
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            86,
+            90
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Studio Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Side Hang Disable - Custom"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Side Hang Enable - Custom"
+        },
+        {
+          "dmxRange": [
+            111,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            40
+          ],
+          "type": "NoFunction",
+          "comment": "Idle - Custom"
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear - Custom"
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            121,
+            160
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            161,
+            181
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "PL Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            182,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "For Future Use - Custom"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto CTB On - Custom"
+        },
+        {
+          "dmxRange": [
+            211,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto CTB Off - Custom"
+        },
+        {
+          "dmxRange": [
+            221,
+            225
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "For Future use - Custom"
+        },
+        {
+          "dmxRange": [
+            226,
+            230
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "For Future use - Custom"
+        },
+        {
+          "dmxRange": [
+            231,
+            235
+          ],
+          "type": "Unknown (ZoomMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Soft Zoom Start On - Custom"
+        },
+        {
+          "dmxRange": [
+            236,
+            240
+          ],
+          "type": "Unknown (ZoomMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Soft Zoom Start Off - Custom"
+        },
+        {
+          "dmxRange": [
+            241,
+            245
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Snap On - Custom"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Snap Off - Custom"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "16Bit Enhanced",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Zoom",
+        "Zoom fine",
+        "C",
+        "Y",
+        "M",
+        "CTO",
+        "C1",
+        "C1 Mode",
+        "Blade1A",
+        "Blade1B",
+        "Blade2A",
+        "Blade2B",
+        "Blade3A",
+        "Blade3B",
+        "Blade4A",
+        "Blade4B",
+        "Blade1 Rot",
+        "Frost1",
+        "Strobe Rate",
+        "Sh1",
+        "Ctrl1",
+        "Pos MSpeed",
+        "Focus MSpeed",
+        "Color Mix MSpeed",
+        "Fans",
+        "Function"
+      ]
+    },
+    {
+      "name": "16Bit",
+      "rdmPersonalityIndex": 2,
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Zoom",
+        "Zoom fine",
+        "C",
+        "Y",
+        "M",
+        "CTO",
+        "C1",
+        "C1 Mode",
+        "Blade1A",
+        "Blade1B",
+        "Blade2A",
+        "Blade2B",
+        "Blade3A",
+        "Blade3B",
+        "Blade4A",
+        "Blade4B",
+        "Blade1 Rot",
+        "Frost1",
+        "Strobe Rate",
+        "Sh1",
+        "Ctrl1 2",
+        "Fans",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      254,
+      533,
+      305
+    ],
+    "weight": 30.2,
+    "power": 820,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 7200
+    },
+    "lens": {
+      "degreesMinMax": [
+        33.8,
+        37.5
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Vari-lite VL2600 Wash includes an internal, beam-shaping framing system and has an adjustable beam edge feature (PC or Fresnel).",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-11-02T01:46:20",
+      "text": "Update upload by GDTFservice.com, powered by Crescit, commissioned by Vari-Lite."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "51f3ec1d90c4f82a"
+  },
+  "manufacturerKey": "vari-lite",
+  "fixtureKey": "vl2600-wash",
+  "gwFixtureTypeID": "34517739-5EE8-11E8-A3BB-525400685065"
+}

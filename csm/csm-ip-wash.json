@@ -1,0 +1,190 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CSM IP Wash",
+  "shortName": "CSM IP Wash",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2019-11-22",
+    "lastModifyDate": "2024-04-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 39D45B75-32D2-42E5-8AF6-A2B25BF515DE"
+    }
+  },
+  "comment": "RGBW Led Par with Dimmer",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "NoFeature": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 2": {
+      "name": "NoFeature",
+      "highlightValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "R": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode D (9ch)",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "NoFeature",
+        "NoFeature 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber"
+      ]
+    },
+    {
+      "name": "Mode A (5ch)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "power": 500,
+    "bulb": {
+      "type": "LED",
+      "lumens": 20000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        40.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "RGBW Led Par with Dimmer",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-29T00:10:16",
+      "text": "Latest, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "csm",
+  "fixtureKey": "csm-ip-wash",
+  "gwFixtureTypeID": "39D45B75-32D2-42E5-8AF6-A2B25BF515DE"
+}

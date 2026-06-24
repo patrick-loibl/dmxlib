@@ -1,0 +1,243 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Aqua 120W RGBWAUV",
+  "shortName": "Aqua 120",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-08",
+    "lastModifyDate": "2025-09-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8402AF8F-3B88-4A27-814D-D10E18AEBC43"
+    }
+  },
+  "comment": "Aqua 120 IP65 LED PAR floodlight 120W RGBWA+UV: Professional IP65 PAR LED floodlight with high power output\nAnchoring bracket with rubber strap and anchor plugs for easy integration in installations\n120W RGBWA+UV RGBWA+UV LEDs\nHigh luminous flux: Red 776, Green 1148, Blue 233, White 1391, Amber 526 and UV 248 Lux\n4 dimmer curves (Linear, Exponential, Logarithmic, S-curve)\nEasy setup via TFT display with 4 touch buttons\nFully RDM compatible\nFlicker-free operation, ideal for TV and film productions\nREAN by Neutrik connectors for DMX signal and power supply",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294901760,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            5,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Color macro mode"
+        },
+        {
+          "dmxRange": [
+            81,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color jump mode"
+        },
+        {
+          "dmxRange": [
+            151,
+            151
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            152,
+            220
+          ],
+          "type": "ColorPreset",
+          "comment": "color fade mode"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound mode"
+        }
+      ]
+    },
+    "Shaper Macros Speed": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "10CH",
+      "channels": [
+        "Dim 2",
+        "StrobeM Strobe",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV",
+        "Color Macro1",
+        "Shaper Macros Speed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      215,
+      150,
+      215
+    ],
+    "weight": 5.0,
+    "power": 130,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Amber",
+      "cie": "0.516600,0.460500,61.500000",
+      "hex": "#ffb900"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Professional IP65 PAR LED floodlight with high power output\nAnchoring bracket with rubber strap and anchor plugs for easy integration in installations\n120W RGBWA+UV RGBWA+UV LEDs\nHigh luminous flux: Red 776, Green 1148, Blue 233, White 1391, Amber 526 and UV 248 Lux\n4 dimmer curves (Linear, Exponential, Logarithmic, S-curve)\nEasy setup via TFT display with 4 touch buttons\nFully RDM compatible\nFlicker-free operation, ideal for TV and film productions\nREAN by Neutrik connectors for DMX signal and power supply",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-09T14:11:31",
+      "text": "v1_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1244ed882cd0e4db"
+  },
+  "manufacturerKey": "triton-blue",
+  "fixtureKey": "aqua-120w-rgbwauv",
+  "gwFixtureTypeID": "8402AF8F-3B88-4A27-814D-D10E18AEBC43"
+}

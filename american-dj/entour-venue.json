@@ -1,0 +1,188 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Entour Venue",
+  "shortName": "EntourVenue",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-31",
+    "lastModifyDate": "2025-07-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C0C61C00-4611-45BC-8715-D2AFBEFBD71A"
+    }
+  },
+  "availableChannels": {
+    "Haze1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 0,
+          "comment": "No Output Volume"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 100,
+          "comment": "100 percent output"
+        }
+      ]
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Rotation",
+          "speed": 5,
+          "comment": "5 percent Speed"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 6,
+          "speedEnd": 100,
+          "comment": "6 to 100 percent Speed"
+        }
+      ]
+    },
+    "Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (Duration)",
+          "physical": "3s",
+          "comment": "3 seconds"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Unknown (Duration)",
+          "physicalStart": "3s",
+          "physicalEnd": "250s",
+          "comment": "3-250 Seconds"
+        }
+      ]
+    },
+    "Interval": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (Interval)",
+          "physical": 0,
+          "comment": "0 Seconds"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Unknown (Interval)",
+          "physicalStart": 5,
+          "physicalEnd": 250,
+          "comment": "5-250 Seconds"
+        }
+      ]
+    },
+    "Haze1 2": {
+      "name": "Haze1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 5,
+          "comment": "No Output Volume and 5 percent Fan"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 100,
+          "comment": "100 percent output"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4 Channel Mode",
+      "channels": [
+        "Haze1",
+        "Fan1",
+        "Duration",
+        "Interval"
+      ]
+    },
+    {
+      "name": "2 Channel Mode ",
+      "channels": [
+        "Haze1",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Haze1 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      434,
+      253,
+      394
+    ],
+    "weight": 10.6
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-31T14:49:52",
+      "text": "DMX OK"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2b6aaa2db5b90a1a"
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "entour-venue",
+  "gwFixtureTypeID": "C0C61C00-4611-45BC-8715-D2AFBEFBD71A"
+}

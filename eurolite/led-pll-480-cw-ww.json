@@ -1,0 +1,252 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED PLL-480 CW/WW",
+  "shortName": "PLL-480 CW/WW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-03-14",
+    "lastModifyDate": "2023-03-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7079C1BB-8EAE-4FBD-9168-335752ABFAA3"
+    }
+  },
+  "comment": "eurolite LED PLL-480 CW/WW Panel: Fixture based on Eurolite LED PLL-480 CW/WW Panel",
+  "availableChannels": {
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "25Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Middle"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Slow"
+        }
+      ]
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            2147483646
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967294
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "WW",
+        "CW",
+        "Dim",
+        "Sh1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      330,
+      125,
+      640
+    ],
+    "weight": 13.65,
+    "power": 240,
+    "bulb": {
+      "type": "LED",
+      "lumens": 18000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        125.0,
+        125.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter WW",
+      "cie": "0.421600,0.433900,69.180000",
+      "hex": "#ffd468"
+    },
+    {
+      "name": "Emitter CW",
+      "cie": "0.302000,0.308600,84.440000",
+      "hex": "#edebff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Fixture based on Eurolite LED PLL-480 CW/WW Panel",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      40
+    ],
+    "revision": {
+      "date": "2023-03-14T12:53:16",
+      "text": "Rev 2.3"
+    }
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "led-pll-480-cw-ww",
+  "gwFixtureTypeID": "7079C1BB-8EAE-4FBD-9168-335752ABFAA3"
+}

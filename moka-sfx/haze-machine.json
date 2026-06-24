@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Haze Machine",
+  "shortName": "Haze Machine",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-10-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4FCAEDF3-A584-4228-8066-DCD7AB24FBFB"
+    }
+  },
+  "comment": "Pro Morning Haze Machine",
+  "availableChannels": {
+    "Haze1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "No Fog"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Max Fog"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Low"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "High"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2Ch",
+      "channels": [
+        "Haze1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-16T11:25:12",
+      "text": "Rev 1-1"
+    }
+  },
+  "manufacturerKey": "moka-sfx",
+  "fixtureKey": "haze-machine",
+  "gwFixtureTypeID": "4FCAEDF3-A584-4228-8066-DCD7AB24FBFB"
+}

@@ -1,0 +1,282 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Beam 280 S",
+  "shortName": "Beam 280 S",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2025-04-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1F4BDC7E-846C-4066-A15D-15D12BAC7FE8"
+    }
+  },
+  "wheels": {
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Color Wheel",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Gobos": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Prism": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Pulse1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Pulse",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "C1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Color Wheel",
+        "slotNumber": 1
+      }
+    },
+    "Color Mix Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Select Spin": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Gobos",
+        "slotNumber": "0.16666666666666669rpm"
+      }
+    },
+    "Select Shake": {
+      "capability": {
+        "type": "WheelShake",
+        "wheel": "Gobos",
+        "slotNumber": 1,
+        "shakeSpeedStart": "0Hz",
+        "shakeSpeedEnd": "1Hz"
+      }
+    },
+    "Frost1": {
+      "capability": {
+        "type": "Frost",
+        "frostIntensityStart": 0,
+        "frostIntensityEnd": 1
+      }
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1
+      }
+    },
+    "Prism1": {
+      "capability": {
+        "type": "Prism",
+        "comment": "Wheel Slot 1"
+      }
+    },
+    "Rotate1": {
+      "capability": {
+        "type": "PrismRotation",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "P",
+        "T",
+        "P fine",
+        "T fine",
+        "Pos MSpeed",
+        "Pulse1",
+        "Dim",
+        "C1",
+        "Color Mix Mode",
+        "Select Spin",
+        "Select Shake",
+        "Frost1",
+        "Focus1",
+        "Prism1",
+        "Rotate1",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 5.6,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-25T12:48:10",
+      "text": "1.0.0.3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "nlighting",
+  "fixtureKey": "beam-280-s",
+  "gwFixtureTypeID": "1F4BDC7E-846C-4066-A15D-15D12BAC7FE8"
+}

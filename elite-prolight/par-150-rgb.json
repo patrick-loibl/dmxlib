@@ -1,0 +1,277 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR 150 RGB",
+  "shortName": "PAR 150 RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-24",
+    "lastModifyDate": "2025-07-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3627D5FD-53EC-48F5-AF7F-FA8E4F0A3470"
+    }
+  },
+  "comment": "LED PAR 54X3W RGB 3in1: Compact, vibrant, and efficient — the PAR 150 RGB brings bold colour to your stage. Featuring 54 x 3W RGB 3-in-1 LEDs, this lightweight fixture delivers stunning output with smooth colour blending. Its durable die-cast aluminium body and advanced heat dissipation ensure stable, long-lasting performance.\nWith flexible lens angle options and both 4CH (Basic) and 8CH (Standard) DMX control modes, it adapts to a wide range of professional setups. Ideal for DJs, stage shows, exhibitions, or ambient lighting — the PAR 150 RGB is built for impact.\n",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction",
+        "comment": "No FEATURE"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No STROBE"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "MIN STROBE"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "MAX STROBE"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Programme Color"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Gradual Change"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Fade"
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Color Jump"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound Mode"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3CH Basic Mode",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "8CH Standard Mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "NoFeature",
+        "Sh1",
+        "Color Macro1 Rate",
+        "Color Macro1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      205,
+      165,
+      205
+    ],
+    "weight": 2.6,
+    "power": 200,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 25000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "description": "Compact, vibrant, and efficient — the PAR 150 RGB brings bold colour to your stage. Featuring 54 x 3W RGB 3-in-1 LEDs, this lightweight fixture delivers stunning output with smooth colour blending. Its durable die-cast aluminium body and advanced heat dissipation ensure stable, long-lasting performance.\nWith flexible lens angle options and both 4CH (Basic) and 8CH (Standard) DMX control modes, it adapts to a wide range of professional setups. Ideal for DJs, stage shows, exhibitions, or ambient lighting — the PAR 150 RGB is built for impact.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-24T09:21:35",
+      "text": "Ver1_07_25_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "6abd7c041094192d"
+  },
+  "manufacturerKey": "elite-prolight",
+  "fixtureKey": "par-150-rgb",
+  "gwFixtureTypeID": "3627D5FD-53EC-48F5-AF7F-FA8E4F0A3470"
+}

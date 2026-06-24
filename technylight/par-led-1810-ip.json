@@ -1,0 +1,188 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Par led 1810 IP",
+  "shortName": "1810 IP",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-08",
+    "lastModifyDate": "2024-08-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D69C4DB9-9972-4F57-8B2F-B6FA6B752CAD"
+    }
+  },
+  "comment": "A generic par light",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "StrobeM Strobe": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Min strob"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Max Strob"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "StrobeM Strobe",
+        "Color Macro1 Rate",
+        "Color Macro1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      305,
+      350
+    ],
+    "weight": 4.4,
+    "power": 84,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1540,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.641200,0.328300,100.000000",
+      "hex": "#ff000a"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.301900,0.598200,100.000000",
+      "hex": "#21ff02"
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.150000,0.058440,100.000000",
+      "hex": "#2e00ff"
+    },
+    {
+      "name": "WHITE",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "A generic par light",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -30,
+      40
+    ],
+    "revision": {
+      "date": "2024-08-13T15:08:59",
+      "text": "2.0.0"
+    }
+  },
+  "manufacturerKey": "technylight",
+  "fixtureKey": "par-led-1810-ip",
+  "gwFixtureTypeID": "D69C4DB9-9972-4F57-8B2F-B6FA6B752CAD"
+}

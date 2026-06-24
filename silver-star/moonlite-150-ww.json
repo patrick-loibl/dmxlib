@@ -1,0 +1,300 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Moonlite 150 WW",
+  "shortName": "MoonL150WW",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-18",
+    "lastModifyDate": "2023-09-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3C6B7A57-5F9A-41F9-9BDD-1B874D9E0E9E"
+    }
+  },
+  "comment": "RGBALC DMX controlled houselight fixture",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Lightning"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Off"
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Dim4"
+        },
+        {
+          "dmxRange": [
+            121,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1200Hz"
+        },
+        {
+          "dmxRange": [
+            161,
+            170
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2400Hz"
+        },
+        {
+          "dmxRange": [
+            171,
+            180
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "4000Hz"
+        },
+        {
+          "dmxRange": [
+            181,
+            190
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "6000Hz"
+        },
+        {
+          "dmxRange": [
+            191,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "25000Hz"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "All Reset"
+        },
+        {
+          "dmxRange": [
+            211,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "STD P",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "Dos",
+      "channels": [
+        "Dim",
+        "Dim fine"
+      ]
+    },
+    {
+      "name": "Uno",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      170,
+      432,
+      175
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200K",
+      "cie": "0.421600,0.433900,69.180000",
+      "hex": "#ffd468"
+    }
+  ],
+  "gwSpecs": {
+    "description": "RGBALC DMX controlled houselight fixture",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-09-18T05:12:19",
+      "text": "1.00"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2ab684fdd8b5ba5d"
+  },
+  "manufacturerKey": "silver-star",
+  "fixtureKey": "moonlite-150-ww",
+  "gwFixtureTypeID": "3C6B7A57-5F9A-41F9-9BDD-1B874D9E0E9E"
+}

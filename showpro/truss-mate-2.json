@@ -1,0 +1,309 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Truss Mate 2",
+  "shortName": "TM2",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-11-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BCA155DE-2657-4B6C-9DC8-1FAAE9296855"
+    }
+  },
+  "comment": "LED Truss Mate 2 Battery Pack: The LED Trussmate II has 3 powerful 3W RGB leds, tight 15degree optics, M10 & M12 rigging options and 3pin XLR DMX in & out, all in a compact die-cast housing and combines them with a battery power system providing you with 7hrs of full RGB operation. The unit also comes with an IR remote control, making it the ultimate in stand alone truss warming or uplighting solutions.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Macros",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            17,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Strobe Fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ColorPreset",
+          "comment": "0-100%"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ColorPreset",
+          "comment": "100-0%"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ColorPreset",
+          "comment": "100% -0-100%"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ColorPreset",
+          "comment": "Colors Fade"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ColorPreset",
+          "comment": "3Colors Snap"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ColorPreset",
+          "comment": "7Colors Snap"
+        },
+        {
+          "dmxRange": [
+            224,
+            225
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound Control"
+        },
+        {
+          "dmxRange": [
+            226,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Preset dimmer speed from display menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode 1 (fast speed)"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode 2 (middle speed)"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode 3 (slow speed)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "8 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Color FX1",
+        "Strobe Duration",
+        "Color Macro1",
+        "Dim",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "weight": 1.29,
+    "power": 9,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "The LED Trussmate II has 3 powerful 3W RGB leds, tight 15degree optics, M10 & M12 rigging options and 3pin XLR DMX in & out, all in a compact die-cast housing and combines them with a battery power system providing you with 7hrs of full RGB operation. The unit also comes with an IR remote control, making it the ultimate in stand alone truss warming or uplighting solutions.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      45
+    ],
+    "revision": {
+      "date": "2025-11-01T10:08:54",
+      "text": "Initial Release"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7304db85c19463cd"
+  },
+  "manufacturerKey": "showpro",
+  "fixtureKey": "truss-mate-2",
+  "gwFixtureTypeID": "BCA155DE-2657-4B6C-9DC8-1FAAE9296855"
+}

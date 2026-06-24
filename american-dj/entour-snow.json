@@ -1,0 +1,161 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Entour Snow",
+  "shortName": "",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-12-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: A03691E9-A106-4CCC-B425-6A31FE1B74E5"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            249
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "0%-100%"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Auto"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            249
+          ],
+          "type": "Unknown (Output)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "0%-100%"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Unknown (Auto Random)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Auto Random"
+        }
+      ]
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            1,
+            124
+          ],
+          "type": "Rotation",
+          "speed": 0.5,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            125,
+            255
+          ],
+          "type": "Rotation",
+          "speed": 1,
+          "comment": "100%"
+        }
+      ]
+    },
+    "Snow": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            124
+          ],
+          "type": "Unknown (Snow)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            125,
+            255
+          ],
+          "type": "Unknown (Snow)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "On"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3 Channel",
+      "channels": [
+        "Dim 2",
+        "Fan1",
+        "Snow"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      550,
+      257,
+      391
+    ],
+    "weight": 13.5
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-12-04T20:04:35",
+      "text": "2021.12.04e"
+    }
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "entour-snow",
+  "gwFixtureTypeID": "A03691E9-A106-4CCC-B425-6A31FE1B74E5"
+}

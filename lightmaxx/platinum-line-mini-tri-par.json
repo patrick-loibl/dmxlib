@@ -1,0 +1,190 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Platinum Line Mini Tri PAR",
+  "shortName": "Tri PAR",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-07-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2A97321F-EA18-4697-B490-9DFCDFB2AF69"
+    }
+  },
+  "comment": "As part of our Platinum Line we now present the next generation of LED PAR spotlights. Tri-LED 3 in 1 is now the new system and leaves nothing to be desired. The new lens system allows RGB colour mixing even before the lens and creates a ready mixed colour when the light is emitted.\n3 Watt Tri-LEDs provide an enormous brightness that is equal to that of a conventional 300 Watt spotlight. Equipped with 2 brackets, the lamp can also be used as a floor spot. Its compact size allows for unobtrusive use at all events.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "0Hz"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "20Hz"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Ctrl1",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      160,
+      170,
+      160
+    ],
+    "weight": 2.0,
+    "power": 150,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "As part of our Platinum Line we now present the next generation of LED PAR spotlights. Tri-LED 3 in 1 is now the new system and leaves nothing to be desired. The new lens system allows RGB colour mixing even before the lens and creates a ready mixed colour when the light is emitted.\n3 Watt Tri-LEDs provide an enormous brightness that is equal to that of a conventional 300 Watt spotlight. Equipped with 2 brackets, the lamp can also be used as a floor spot. Its compact size allows for unobtrusive use at all events.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-07-08T12:43:37",
+      "text": "2024-07-08_v1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "lightmaxx",
+  "fixtureKey": "platinum-line-mini-tri-par",
+  "gwFixtureTypeID": "2A97321F-EA18-4697-B490-9DFCDFB2AF69"
+}

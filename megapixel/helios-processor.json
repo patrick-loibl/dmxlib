@@ -1,0 +1,215 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Helios Processor",
+  "shortName": "Helios",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-09-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5BABDC15-EBF8-4145-B591-4508EABE6348"
+    }
+  },
+  "availableChannels": {
+    "Blackout Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Display On"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Display Off"
+        }
+      ]
+    },
+    "Playmode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Freeze Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Freeze On"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Gamma": {
+      "capability": {
+        "type": "Unknown (Gamma)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Test Pattern": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Test Pattern)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Unknown (Test Pattern)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Test Pattern"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Test Pattern 2": {
+      "name": "Test Pattern",
+      "fineChannelAliases": [
+        "Test Pattern 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Test Pattern)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Normal Operation"
+        },
+        {
+          "dmxRange": [
+            1,
+            65535
+          ],
+          "type": "Unknown (Test Pattern)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Test Pattern"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Server",
+      "channels": [
+        "Blackout Mode",
+        "Playmode",
+        "Dim",
+        "Gamma",
+        "Test Pattern",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "Helios Group",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Test Pattern 2",
+        "Test Pattern 2 fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-09T22:09:39",
+      "text": "Rev 2"
+    }
+  },
+  "manufacturerKey": "megapixel",
+  "fixtureKey": "helios-processor",
+  "gwFixtureTypeID": "5BABDC15-EBF8-4145-B591-4508EABE6348"
+}

@@ -1,0 +1,272 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RoboRadar",
+  "shortName": "RoboRadar",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-24",
+    "lastModifyDate": "2023-05-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 23B3AE11-1A77-4629-9860-593199422265"
+    }
+  },
+  "comment": "RoboRadar Downlight",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            49
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            51,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2700 WW"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6000 CW"
+        }
+      ]
+    },
+    "P": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "50 / 50"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "50 / 50"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Fixture Calibration Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Basic 15",
+      "channels": [
+        "Dim",
+        "CTC",
+        "P",
+        "T",
+        "Pos Reset",
+        "Fixture Calibration Reset"
+      ]
+    },
+    {
+      "name": "Basic 24",
+      "channels": [
+        "Dim",
+        "CTC",
+        "P",
+        "T",
+        "Pos Reset",
+        "Fixture Calibration Reset"
+      ]
+    },
+    {
+      "name": "Basic 36",
+      "channels": [
+        "Dim",
+        "CTC",
+        "P",
+        "T",
+        "Pos Reset",
+        "Fixture Calibration Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      176,
+      156,
+      176
+    ],
+    "weight": 1.47,
+    "power": 20,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1650,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      35
+    ],
+    "revision": {
+      "date": "2023-05-03T13:08:08",
+      "text": "added picture"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3dc0e6047ff5e419"
+  },
+  "manufacturerKey": "on-lichttechnik",
+  "fixtureKey": "roboradar",
+  "gwFixtureTypeID": "23B3AE11-1A77-4629-9860-593199422265"
+}

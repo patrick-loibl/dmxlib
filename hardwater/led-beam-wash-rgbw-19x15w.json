@@ -1,0 +1,716 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Beam Wash RGBW 19x15w",
+  "shortName": "LED Beam Wash",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-05-20",
+    "lastModifyDate": "2023-05-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3B91D1D8-024A-40E2-916C-61F133AEC70A"
+    }
+  },
+  "comment": "LED Beam Wash 19x15w RGBW with Zoom: SHEHDS 19x15W LED Beam/Wash Fixture",
+  "rdm": {
+    "modelId": 16387
+  },
+  "wheels": {
+    "Color Macro": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40100"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White (W LED only)",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cyan",
+          "colors": [
+            "#07e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#e404e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Pink",
+          "colors": [
+            "#8a6877"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Light Green",
+          "colors": [
+            "#b1f2c8"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Light Blue",
+          "colors": [
+            "#007c94"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White (RGB Color Mix)",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White (RGBW) Color Mix",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Fast to Slow"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "55 Degrees"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "8 Degrees"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            2,
+            126
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Med"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            9
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 0
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 8
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 9
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 10
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 11
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Macro",
+          "slotNumber": 12
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Activation"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto Mode 1"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto Mode 2"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound Active Mode"
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        }
+      ]
+    },
+    "Color Macro1 Rate 2": {
+      "name": "Color Macro1 Rate",
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Color Macro Speed"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "24Ch Extended",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Function",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "16Ch Standard",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Zoom",
+        "Color Macro1",
+        "Color Macro1 Rate 2",
+        "Function",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      210,
+      200
+    ],
+    "weight": 7.95,
+    "power": 180,
+    "bulb": {
+      "type": "LED",
+      "lumens": 15000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        55.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "SHEHDS 19x15W LED Beam/Wash Fixture",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2023-05-21T05:55:45",
+      "text": "Version 2.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f846b9ab79cd5ead"
+  },
+  "manufacturerKey": "hardwater",
+  "fixtureKey": "led-beam-wash-rgbw-19x15w",
+  "gwFixtureTypeID": "3B91D1D8-024A-40E2-916C-61F133AEC70A"
+}

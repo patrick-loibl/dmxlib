@@ -1,0 +1,291 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FRESLED Compact PL100TZC",
+  "shortName": "PL100TZC",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-04-25",
+    "lastModifyDate": "2026-03-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7A83EFE3-73E8-4151-8A49-7E1BA9C3BF63"
+    }
+  },
+  "comment": "FRESLED Compact PL100TZC\n100Watt tunable LED fresnel zoom Compact\n100W WW + 100W CW tunable LED Constant Output\n2700K - 6000K\nCRI 95, TLCI ≥96 (full on, 4000K)\n25° - 80° manual zoom\nDMX, RDM\n",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "max"
+        }
+      ]
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "color temperatue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3600K"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4200K"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4500K"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4800K"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "5200K"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "Unknown (temp)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "no function"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Ch Mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 Ch mode",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3 Ch Mode",
+      "channels": [
+        "Dim",
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "5 Ch Mode ",
+      "channels": [
+        "Dim",
+        "color temperatue",
+        "WW",
+        "CW",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      150,
+      260,
+      100
+    ],
+    "weight": 4.0,
+    "DMXconnector": "XLR5",
+    "power": 50,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2108,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        23.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200",
+      "cie": "0.346700,0.364100,86.720000",
+      "hex": "#ffeecb"
+    },
+    {
+      "name": "6500",
+      "cie": "0.309100,0.325100,96.350000",
+      "hex": "#f9fbff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "FRESLED Compact PL100TZC\n100Watt tunable LED fresnel zoom Compact\n100W WW + 100W CW tunable LED Constant Output\n2700K - 6000K\nCRI 95, TLCI ≥96 (full on, 4000K)\n25° - 80° manual zoom\nDMX, RDM",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2026-03-25T13:23:15",
+      "text": "PL100TZC"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1d347e473d04ca33"
+  },
+  "manufacturerKey": "pluslite",
+  "fixtureKey": "fresled-compact-pl100tzc",
+  "gwFixtureTypeID": "7A83EFE3-73E8-4151-8A49-7E1BA9C3BF63"
+}

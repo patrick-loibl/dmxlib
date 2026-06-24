@@ -1,0 +1,205 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Power Color - Fresnel - 13 mode",
+  "shortName": "",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-07-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 70FF544F-DC99-476A-A837-6C0E997DD188"
+    }
+  },
+  "comment": "RVE - POWER COLOR - Fresnel: Fresnel with zoom",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Lime": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "C": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        }
+      ]
+    },
+    "Wheel Index": {
+      "capability": {
+        "type": "WheelRotation",
+        "wheel": "NewWheel",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Wheel Index 2": {
+      "name": "Wheel Index",
+      "capability": {
+        "type": "WheelRotation",
+        "wheel": "NewWheel",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Color Macro1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "switchChannels": {}
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "13",
+      "channels": [
+        "Dim",
+        "StrobeM Strobe",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Lime",
+        "C",
+        "CTC",
+        "Wheel Index 2",
+        "Color Macro1",
+        "Dim Curve",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Fresnel with zoom",
+    "operatingTemperature": [
+      -5,
+      45
+    ],
+    "revision": {
+      "date": "2025-07-28T14:49:27",
+      "text": "test of RVE RGBAL  ZOOM 350W fresnel, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "rve",
+  "fixtureKey": "power-color-fresnel-13-mode",
+  "gwFixtureTypeID": "70FF544F-DC99-476A-A837-6C0E997DD188"
+}

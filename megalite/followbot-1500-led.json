@@ -1,0 +1,293 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Followbot 1500 LED",
+  "shortName": "Followbot1500LED",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-03-10",
+    "lastModifyDate": "2026-03-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 38F6E9A0-1825-11F1-8D75-42010A37C007"
+    }
+  },
+  "comment": "Followbot 1500 LED is powered by a high-output 1500W LED light engine, delivering intense brightness ideal for long throws of 200 feet or more. Designed as a manually operated followspot, it features manual zoom and focus for precise beam control.\n\nTwo rotary knobs provide hands-on adjustment of the motorized frost and beam softener, while a side control panel allows accurate dimming or dousing. When connected via DMX, operators can remotely control intensity, strobe, and blackout functions from any DMX controller. A built-in gobo and color filter slot supports custom color filters or high-temperature gobos for striking projection effects.\n\nThe front bezel accommodates an optional color carousel for expanded creative flexibility. The Followbot 1500 LED ships complete with a heavy-duty tripod and protective flight case, making it a powerful and tour-ready solution for professional applications.",
+  "wheels": {
+    "COLOR WHEEL": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orange",
+          "colors": [
+            "#e49301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Purple",
+          "colors": [
+            "#8f3ba4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Aqua",
+          "colors": [
+            "#9cd1e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Strobe S > F"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Pulse S > F"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Reverse Pulse S > F"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random S > F"
+        }
+      ]
+    },
+    "Iris": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Iris",
+          "openPercentStart": 0,
+          "openPercentEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Iris",
+          "openPercentStart": 0,
+          "openPercentEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Iris",
+          "openPercentStart": 0,
+          "openPercentEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Frost1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Frost",
+          "frostIntensity": 1,
+          "comment": "Frost Open"
+        },
+        {
+          "dmxRange": [
+            86,
+            171
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Light Frost"
+        },
+        {
+          "dmxRange": [
+            172,
+            255
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Deep Frost"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Iris",
+        "Frost1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      368,
+      1418,
+      400
+    ],
+    "weight": 44.5,
+    "power": 1486,
+    "bulb": {
+      "type": "LED",
+      "lumens": 15471,
+      "colorTemperature": 7446
+    },
+    "lens": {
+      "degreesMinMax": [
+        12.4,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Followbot 1500 LED is powered by a high-output 1500W LED light engine, delivering intense brightness ideal for long throws of 200 feet or more. Designed as a manually operated followspot, it features manual zoom and focus for precise beam control.\n\nTwo rotary knobs provide hands-on adjustment of the motorized frost and beam softener, while a side control panel allows accurate dimming or dousing. When connected via DMX, operators can remotely control intensity, strobe, and blackout functions from any DMX controller. A built-in gobo and color filter slot supports custom color filters or high-temperature gobos for striking projection effects.\n\nThe front bezel accommodates an optional color carousel for expanded creative flexibility. The Followbot 1500 LED ships complete with a heavy-duty tripod and protective flight case, making it a powerful and tour-ready solution for professional applications.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-10T05:53:30",
+      "text": "Initial Upload"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "af4b32402ef3d2fa"
+  },
+  "manufacturerKey": "megalite",
+  "fixtureKey": "followbot-1500-led",
+  "gwFixtureTypeID": "38F6E9A0-1825-11F1-8D75-42010A37C007"
+}

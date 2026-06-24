@@ -1,0 +1,289 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "F400Z ",
+  "shortName": "F400Z ",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "B622E369-8414-4203-9217-6A8EDD8CB02D"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      230,
+      320,
+      230
+    ],
+    "weight": 10.2,
+    "DMXconnector": "XLR5",
+    "power": 400,
+    "bulb": {
+      "type": "623nm LED",
+      "lumens": 10600,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        7.0,
+        7.0
+      ]
+    }
+  },
+  "wheels": {
+    "CTO": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "5800K",
+          "colors": [
+            "#fff1eb"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3200K",
+          "colors": [
+            "#ffc58f"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Head Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Dimmer fine"
+      ]
+    },
+    "Head Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            203
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        }
+      ]
+    },
+    "Head ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Head CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Head Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Base Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            149
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            150,
+            169
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerMode"
+        },
+        {
+          "dmxRange": [
+            170,
+            249
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 1"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "FixtureGlobalReset"
+        }
+      ]
+    },
+    "Head PositionMSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed"
+        }
+      ]
+    },
+    "Head DimmerCurve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve 1"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 2 - 11CH",
+      "shortName": "Mode 2 - 11C",
+      "channels": [
+        "Head Dimmer",
+        "Head Dimmer fine",
+        "Head Shutter1",
+        "Head ColorAdd_W",
+        "Head CTO",
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Head Zoom",
+        "Base Control1"
+      ]
+    },
+    {
+      "name": "Mode 3 - 13CH",
+      "shortName": "Mode 3 - 13C",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Head PositionMSpeed",
+        "Head Zoom",
+        "Head Dimmer",
+        "Head Dimmer fine",
+        "Head Shutter1",
+        "Head ColorAdd_W",
+        "Head CTO",
+        "Head DimmerCurve",
+        "Base Control1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff",
+      "dominantWavelength": 623.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "PRstage F400Z is a professional LED spotlight with a high color rendering index of RA>95, delivering natural and vibrant colors on any stage.\nIt supports two control modes — 11 and 13 CH, making it a versatile solution for various applications.\nKey features include:\nLamp reset via menu or console,\nSmooth 0–100% dimming,\nConstant current drive for stable operation,\nIntelligent power adjustment based on temperature sensor,\nAutomatic fan speed control.\nPRstage F400Z is perfect for concerts, bars, and theater stages where not only power but flawless color reproduction is essential.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-09-03T05:58:40",
+      "text": "Ver 1-71"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1d53e3c34975fbc6"
+  },
+  "manufacturerKey": "prstage",
+  "fixtureKey": "f400z",
+  "gwFixtureTypeID": "B622E369-8414-4203-9217-6A8EDD8CB02D"
+}

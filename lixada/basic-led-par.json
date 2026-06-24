@@ -1,0 +1,202 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Basic LED PAR",
+  "shortName": "12 LED PAR",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "8954EB61-DBE6-4090-A198-C3762BC61ED7"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 3",
+          "colors": [
+            "#a1c7ff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam StrobeRate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "StrobeSpeed"
+        }
+      ]
+    },
+    "Beam ColorMixMSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed"
+        }
+      ]
+    },
+    "Beam ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Beam Color1WheelIndex": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard mode",
+      "shortName": "Standard mod",
+      "channels": [
+        "Beam Dimmer",
+        "Beam StrobeRate",
+        "Beam Color1WheelIndex",
+        "Beam ColorMixMSpeed",
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_W"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-06-11T23:24:14",
+      "text": "V.1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "lixada",
+  "fixtureKey": "basic-led-par",
+  "gwFixtureTypeID": "8954EB61-DBE6-4090-A198-C3762BC61ED7"
+}

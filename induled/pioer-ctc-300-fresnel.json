@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Pioer CTC 300 Fresnel",
+  "shortName": "CTC300F",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-04-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B71BC499-0A3B-43E2-8753-D1E1A65BF208"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer %"
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "CCT"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom %"
+      }
+    },
+    "Strobe Frequency": {
+      "highlightValue": 128,
+      "capability": {
+        "type": "Unknown (StrobeFrequency)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz",
+        "comment": "Strobe %"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White",
+        "comment": "WW %"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White",
+        "comment": "CW %"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Channels",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "6 Channels",
+      "channels": [
+        "Dim",
+        "Strobe Frequency",
+        "WW",
+        "CW",
+        "Zoom",
+        "CTC"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      200,
+      200
+    ],
+    "weight": 11.0,
+    "power": 150,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "300W WW LED",
+      "cie": "0.333500,0.352800,90.750000",
+      "hex": "#fdf4dc"
+    },
+    {
+      "name": "300W CW LED",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-02T16:29:27",
+      "text": "Rev. 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "825ec39d68907d9e"
+  },
+  "manufacturerKey": "induled",
+  "fixtureKey": "pioer-ctc-300-fresnel",
+  "gwFixtureTypeID": "B71BC499-0A3B-43E2-8753-D1E1A65BF208"
+}

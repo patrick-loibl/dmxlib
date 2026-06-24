@@ -1,0 +1,1607 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PanoramaIPWBX",
+  "shortName": "IPWBX",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-05",
+    "lastModifyDate": "2025-03-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 31BE4B9C-30E0-4399-B21C-C8CBF7CD6066"
+    }
+  },
+  "comment": "PanoramaIP WBX is a stunning IP65 high-output, LED wash light with pixel ring designed to bring the workhorse LED wash light to outdoor events. Featuring 19 of Osrams new 40 W RGBW Ostar LEDs, it delivers a massive output with a huge colour range and an extensive toolkit of effects.",
+  "rdm": {
+    "modelId": 98
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speed": 0,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            1,
+            246
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "PanTiltSpeed",
+          "speed": 1,
+          "comment": "Sklow"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "MoveInBlack"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speed": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speed": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "MainClosed"
+        },
+        {
+          "dmxRange": [
+            11,
+            82
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "comment": "Main_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            83,
+            92
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            93,
+            93
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Main_Open"
+        },
+        {
+          "dmxRange": [
+            94,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Main_PulseEffects"
+        },
+        {
+          "dmxRange": [
+            164,
+            173
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Main_Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "MainRND_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Main_Open"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "FG_Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "comment": "FG_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            164,
+            173
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "FG_Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "FG_RND_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "FG_Open"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "CTC": {
+      "defaultValue": 0,
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "NoFeature",
+          "switchChannels": {
+            "0_Main Module_ColorAdd_R": "R",
+            "0_Main Module_ColorAdd_G": "G",
+            "0_Main Module_ColorAdd_B": "B",
+            "0_Main Module_ColorAdd_W": "White"
+          }
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 2000,
+          "colorTemperatureEnd": 10000,
+          "comment": "2000K-10000k",
+          "switchChannels": {}
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angle": "36deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angle": "4.5deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "NoPattern",
+          "speed": 0,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "StaticPatterns",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Main Module_Effects2": "FX2"
+          }
+        },
+        {
+          "dmxRange": [
+            64,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "DynamicPattern",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Main Module_Effects2": "FX2 2"
+          }
+        }
+      ]
+    },
+    "FX2": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "Static Patterns",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX2 2": {
+      "name": "FX2",
+      "capability": {
+        "type": "Effect",
+        "effectName": "Dynamic Patterns",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Pos": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Rotation",
+          "angle": "0deg",
+          "comment": "Index 0"
+        },
+        {
+          "dmxRange": [
+            1,
+            22
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            23,
+            23
+          ],
+          "type": "Rotation",
+          "angle": "360deg",
+          "comment": "Index 360"
+        },
+        {
+          "dmxRange": [
+            24,
+            137
+          ],
+          "type": "Rotation",
+          "speedStart": "-0.8333333333333333rpm",
+          "speedEnd": "-10rpm",
+          "comment": "Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            138,
+            141
+          ],
+          "type": "Rotation",
+          "speed": "stop",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            142,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": "0.8333333333333333rpm",
+          "speedEnd": "10rpm",
+          "comment": "Slow2Fast"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "ResetAll"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "PositionReset"
+        },
+        {
+          "dmxRange": [
+            24,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            55
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "OtherReset"
+        },
+        {
+          "dmxRange": [
+            56,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "DisplayOn"
+        },
+        {
+          "dmxRange": [
+            64,
+            71
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "DisplayOff"
+        },
+        {
+          "dmxRange": [
+            72,
+            87
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 6,
+          "comment": "Hibernation"
+        },
+        {
+          "dmxRange": [
+            96,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "BG_Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "comment": "BG_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            164,
+            173
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "BG_Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "BG_RND_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "BG_Open"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Intensity MSpeed 2": {
+      "name": "Intensity MSpeed",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speed": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speed": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 4": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Ring_Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            82
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "comment": "Ring_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            83,
+            92
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            93,
+            93
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Ring_Open"
+        },
+        {
+          "dmxRange": [
+            94,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Ring_PulseEffects"
+        },
+        {
+          "dmxRange": [
+            164,
+            173
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Ring_Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "Ring_RND_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Ring_Open"
+        }
+      ]
+    },
+    "Sh1 5": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "RING_FG_Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "comment": "RING_FG_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            164,
+            174
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "RING_FG_Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "RING_FG_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "RING_FG_Open"
+        }
+      ]
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "FX1 2": {
+      "name": "FX1",
+      "defaultValue": 0,
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "NoPattern",
+          "speed": 0,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "StaticPatterns",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Ring Module_Effects2": "FX2 3"
+          }
+        },
+        {
+          "dmxRange": [
+            64,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "DynamicPattern",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Ring Module_Effects2": "FX2 4"
+          }
+        }
+      ]
+    },
+    "FX2 3": {
+      "name": "FX2",
+      "capability": {
+        "type": "Effect",
+        "effectName": "Static Patterns",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX2 4": {
+      "name": "FX2",
+      "capability": {
+        "type": "Effect",
+        "effectName": "Dynamic Patterns",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Pos 2": {
+      "name": "FX1 Pos",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Rotation",
+          "angle": "0deg",
+          "comment": "Index 0"
+        },
+        {
+          "dmxRange": [
+            1,
+            22
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            23,
+            23
+          ],
+          "type": "Rotation",
+          "angle": "360deg",
+          "comment": "Index 360"
+        },
+        {
+          "dmxRange": [
+            24,
+            137
+          ],
+          "type": "Rotation",
+          "speedStart": "-0.8333333333333333rpm",
+          "speedEnd": "-10rpm",
+          "comment": "Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            138,
+            141
+          ],
+          "type": "Rotation",
+          "speed": "stop",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            142,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": "0.8333333333333333rpm",
+          "speedEnd": "10rpm",
+          "comment": "Slow2Fast"
+        }
+      ]
+    },
+    "Dim Mode 2": {
+      "name": "Dim Mode",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 6": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "RING_BG_Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "comment": "RING_BG_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            164,
+            173
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "RING_BG_Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "RING_BG_Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "RING_BG_Open"
+        }
+      ]
+    },
+    "R 4": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim Mode 3": {
+      "name": "Dim Mode",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 8": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "V2-FX",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Intensity MSpeed",
+        "Dim 2",
+        "Sh1",
+        "Sh1 2",
+        "0_Main Module_ColorAdd_R",
+        "0_Main Module_ColorAdd_G",
+        "0_Main Module_ColorAdd_B",
+        "0_Main Module_ColorAdd_W",
+        "CTC",
+        "Zoom",
+        "FX1",
+        "0_Main Module_Effects2",
+        "FX1 Pos",
+        "Dim Mode",
+        "Ctrl1",
+        "Dim 3",
+        "Sh1 3",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "Dim 4",
+        "Intensity MSpeed 2",
+        "Dim 5",
+        "Sh1 4",
+        "Sh1 5",
+        "R 3",
+        "G 3",
+        "B 3",
+        "FX1 2",
+        "0_Ring Module_Effects2",
+        "FX1 Pos 2",
+        "Dim Mode 2",
+        "Dim 6",
+        "Sh1 6",
+        "R 4",
+        "G 4",
+        "B 4"
+      ]
+    },
+    {
+      "name": "V2-PixFX",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Intensity MSpeed",
+        "Dim 2",
+        "Sh1",
+        "Sh1 2",
+        "0_Main Module_ColorAdd_R",
+        "0_Main Module_ColorAdd_G",
+        "0_Main Module_ColorAdd_B",
+        "0_Main Module_ColorAdd_W",
+        "CTC",
+        "Zoom",
+        "FX1",
+        "0_Main Module_Effects2",
+        "FX1 Pos",
+        "Dim Mode 3",
+        "Ctrl1",
+        "Dim 4",
+        "Sh1 3",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "Dim 5",
+        "Intensity MSpeed 2",
+        "Dim 6",
+        "Sh1 4",
+        "Sh1 5",
+        "R 3",
+        "G 3",
+        "B 3",
+        "FX1 2",
+        "0_Ring Module_Effects2",
+        "FX1 Pos 2",
+        "Dim Mode",
+        "Dim 7",
+        "Sh1 6",
+        "R 4",
+        "G 4",
+        "B 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "White 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      344,
+      288,
+      387
+    ],
+    "weight": 35.0,
+    "DMXconnector": "XLR5",
+    "power": 550,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5083,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        21.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red Led",
+      "cie": "0.700000,0.299000,21.444000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green Led",
+      "cie": "0.155000,0.698000,38.343000",
+      "hex": "#00d11c"
+    },
+    {
+      "name": "Blue Led",
+      "cie": "0.154000,0.023000,10.033000",
+      "hex": "#8500ff"
+    },
+    {
+      "name": "White Led",
+      "cie": "0.301000,0.300000,64.391000",
+      "hex": "#d7cee8"
+    },
+    {
+      "name": "Red Led Ring",
+      "cie": "0.700000,0.299000,21.444000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green Led Ring",
+      "cie": "0.155000,0.698000,38.343000",
+      "hex": "#00d11c"
+    },
+    {
+      "name": "Blue Led Ring",
+      "cie": "0.154000,0.023000,10.033000",
+      "hex": "#8500ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "PanoramaIP WBX is a stunning IP65 high-output, LED wash light with pixel ring designed to bring the workhorse LED wash light to outdoor events. Featuring 19 of Osrams new 40 W RGBW Ostar LEDs, it delivers a massive output with a huge colour range and an extensive toolkit of effects.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2025-03-05T10:22:22",
+      "text": "Rev 04 - Added Snap Feature"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fb6c5c69eec5b379"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "panoramaipwbx",
+  "gwFixtureTypeID": "31BE4B9C-30E0-4399-B21C-C8CBF7CD6066"
+}

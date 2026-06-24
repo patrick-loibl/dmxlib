@@ -1,0 +1,928 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "XLED FX",
+  "shortName": "XLEDFX",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-15",
+    "lastModifyDate": "2025-01-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1E0553C2-7F5D-8019-51BC-6559C9C0004E"
+    }
+  },
+  "rdm": {
+    "modelId": 2220
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Strobe"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Strobe"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Min Duration"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Max Duration"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Pulse Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Pulse Open"
+        }
+      ]
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Pulse Close"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Pulse Close"
+        }
+      ]
+    },
+    "Sh1 4": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Pulse"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Pulse"
+        }
+      ]
+    },
+    "Sh1 5": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min Rnd"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max Rnd"
+        }
+      ]
+    },
+    "Sh1 6": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (LightningRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min LightningRate"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (LightningRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (LightningRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max LightningRate"
+        }
+      ]
+    },
+    "Sh1 7": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (Shutter1Audio)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Audio 100%"
+      }
+    },
+    "Strobe Mode": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal",
+          "switchChannels": {
+            "1_Yoke_Shutter1": "Sh1"
+          }
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "Unknown (StrobeModePulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse Open",
+          "switchChannels": {
+            "1_Yoke_Shutter1": "Sh1 2"
+          }
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse Close",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse",
+          "switchChannels": {
+            "1_Yoke_Shutter1": "Sh1 4"
+          }
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rnd",
+          "switchChannels": {
+            "1_Yoke_Shutter1": "Sh1 5"
+          }
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "Unknown (StrobeModeLightning)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lightning",
+          "switchChannels": {
+            "1_Yoke_Shutter1": "Sh1 6"
+          }
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rnd (2)",
+          "switchChannels": {
+            "1_Yoke_Shutter1": "Sh1 7"
+          }
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 8": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 9": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 10": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 8": {
+      "name": "Sh1",
+      "highlightValue": 12,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Strobe"
+        },
+        {
+          "dmxRange": [
+            17,
+            118
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Strobe"
+        },
+        {
+          "dmxRange": [
+            120,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open (2)"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min Rnd"
+        },
+        {
+          "dmxRange": [
+            129,
+            182
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            183,
+            183
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max Rnd"
+        },
+        {
+          "dmxRange": [
+            184,
+            190
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open (3)"
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Unknown (Shutter1Audio)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Unknown (Shutter1Audio)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min Audio"
+        },
+        {
+          "dmxRange": [
+            193,
+            246
+          ],
+          "type": "Unknown (Shutter1Audio)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "Unknown (Shutter1Audio)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max Audio"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open (4)"
+        }
+      ]
+    },
+    "EffectMacros": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 0,
+          "comment": "No Effect"
+        },
+        {
+          "dmxRange": [
+            10,
+            28
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 1,
+          "comment": "Effect 1"
+        },
+        {
+          "dmxRange": [
+            29,
+            48
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 2,
+          "comment": "Effect 2"
+        },
+        {
+          "dmxRange": [
+            49,
+            68
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 3,
+          "comment": "Effect 3"
+        },
+        {
+          "dmxRange": [
+            69,
+            88
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 4,
+          "comment": "Effect 4"
+        },
+        {
+          "dmxRange": [
+            89,
+            108
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 5,
+          "comment": "Effect 5"
+        },
+        {
+          "dmxRange": [
+            109,
+            128
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 6,
+          "comment": "Effect 6"
+        },
+        {
+          "dmxRange": [
+            129,
+            148
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 7,
+          "comment": "Effect 7"
+        },
+        {
+          "dmxRange": [
+            149,
+            168
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 8,
+          "comment": "Effect 8"
+        },
+        {
+          "dmxRange": [
+            169,
+            188
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 9,
+          "comment": "Effect 9"
+        },
+        {
+          "dmxRange": [
+            189,
+            208
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 10,
+          "comment": "Effect 10"
+        },
+        {
+          "dmxRange": [
+            209,
+            228
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 11,
+          "comment": "Effect 11"
+        },
+        {
+          "dmxRange": [
+            229,
+            247
+          ],
+          "type": "Unknown (EffectMacroSelect)",
+          "physical": 12,
+          "comment": "Effect 12"
+        },
+        {
+          "dmxRange": [
+            248,
+            248
+          ],
+          "type": "Unknown (EffectMacroAudio)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            249,
+            255
+          ],
+          "type": "Unknown (EffectMacroAudio)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Audio trig"
+        }
+      ]
+    },
+    "Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (EffectMacroRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min Rate"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (EffectMacroRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (EffectMacroRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max Rate"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Short rise time"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Medium rise time"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Long rise time"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Extra long rise time"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2 channel",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "4 channel",
+      "channels": [
+        "Dim",
+        "Strobe Duration",
+        "1_Yoke_Shutter1",
+        "Strobe Mode"
+      ]
+    },
+    {
+      "name": "14 channel",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4",
+        "Dim 5",
+        "Dim 6",
+        "Dim 7",
+        "Dim 8",
+        "Dim 9",
+        "Dim 10",
+        "Sh1 8",
+        "EffectMacros",
+        "Rate",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      83,
+      273,
+      219
+    ],
+    "weight": 3.4,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        90.0,
+        110.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-13T18:45:31",
+      "text": "InitialRelease"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c40399f08d995db9"
+  },
+  "manufacturerKey": "bright",
+  "fixtureKey": "xled-fx",
+  "gwFixtureTypeID": "1E0553C2-7F5D-8019-51BC-6559C9C0004E"
+}

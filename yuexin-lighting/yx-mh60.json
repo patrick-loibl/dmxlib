@@ -1,0 +1,606 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "YX-MH60",
+  "shortName": "MH60",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-07-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 106998D6-C4D4-4EE4-BCB2-5874F10F3FC7"
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            225
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max to Min Speed"
+        },
+        {
+          "dmxRange": [
+            226,
+            235
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Blackout by movement"
+        },
+        {
+          "dmxRange": [
+            236,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "No Function"
+        }
+      ]
+    },
+    "P Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            128,
+            189
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "FWD"
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "BWD"
+        }
+      ]
+    },
+    "T Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            128,
+            189
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "FWD"
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "BWD"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Off"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe slow to fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse effect in sequences"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random Strobe slow to fast"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED On"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            8,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "Red to Yellow"
+        },
+        {
+          "dmxRange": [
+            40,
+            71
+          ],
+          "type": "ColorPreset",
+          "comment": "Yellow to Green"
+        },
+        {
+          "dmxRange": [
+            72,
+            103
+          ],
+          "type": "ColorPreset",
+          "comment": "Green to Cyan"
+        },
+        {
+          "dmxRange": [
+            104,
+            135
+          ],
+          "type": "ColorPreset",
+          "comment": "Cyan to Blue"
+        },
+        {
+          "dmxRange": [
+            136,
+            167
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue to Magenta"
+        },
+        {
+          "dmxRange": [
+            168,
+            199
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta to Red"
+        },
+        {
+          "dmxRange": [
+            200,
+            231
+          ],
+          "type": "ColorPreset",
+          "comment": "Red to White"
+        },
+        {
+          "dmxRange": [
+            232,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Cross fade colors slow to fast"
+        }
+      ]
+    },
+    "FX1 Fade": {
+      "capability": {
+        "type": "EffectDuration",
+        "durationStart": 0,
+        "durationEnd": 1,
+        "comment": "Fade Chase"
+      }
+    },
+    "Color Ctrl": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "Color Presets Dimmer"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            80,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "All Motor Reset"
+        },
+        {
+          "dmxRange": [
+            85,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 1"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 2"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 3"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 4"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 5"
+        },
+        {
+          "dmxRange": [
+            200,
+            219
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 6"
+        },
+        {
+          "dmxRange": [
+            220,
+            239
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 7"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto 8"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "P Rotate",
+        "T Rotate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe1",
+        "Dim",
+        "Color Macro1",
+        "FX1 Fade",
+        "Color Ctrl",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-07-24T00:40:57",
+      "text": "initial commit"
+    }
+  },
+  "manufacturerKey": "yuexin-lighting",
+  "fixtureKey": "yx-mh60",
+  "gwFixtureTypeID": "106998D6-C4D4-4EE4-BCB2-5874F10F3FC7"
+}

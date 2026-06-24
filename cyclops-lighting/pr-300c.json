@@ -1,0 +1,137 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PR - 300C",
+  "shortName": "PR300C",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-04-14",
+    "lastModifyDate": "2026-04-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1A32287B-34A4-4010-00F6-7319B409E74F"
+    }
+  },
+  "comment": "Cyclops Lighting Official Library",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1 channel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 channels",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3 channels",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1,
+      1,
+      1
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Cyclops Lighting Official Library",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-15T14:48:50",
+      "text": "Created By Cyclops Lighting, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "cyclops-lighting",
+  "fixtureKey": "pr-300c",
+  "gwFixtureTypeID": "1A32287B-34A4-4010-00F6-7319B409E74F"
+}

@@ -1,0 +1,385 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SISMA Z4",
+  "shortName": "SISMA Z4",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "1F334759-CABB-4CA4-B2CD-279A03B8145B"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      116,
+      240,
+      301
+    ],
+    "weight": 9.0,
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        54.0,
+        60.0
+      ]
+    }
+  },
+  "wheels": {
+    "ColorMacro1": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Virtual Color Macro",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Head ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorAdd_R fine"
+      ]
+    },
+    "Head ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorAdd_G fine"
+      ]
+    },
+    "Head ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorAdd_B fine"
+      ]
+    },
+    "Head ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorAdd_W fine"
+      ]
+    },
+    "Head CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Head ColorMacro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            2,
+            239
+          ],
+          "type": "WheelSlot"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Head Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            131
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            132,
+            175
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse"
+        },
+        {
+          "dmxRange": [
+            176,
+            247
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            248,
+            252
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            253,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "randomTiming": true
+        }
+      ]
+    },
+    "Head Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Dimmer fine"
+      ]
+    },
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Head LEDFrequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "DIMMER MODE/ REFRESH RATE"
+        }
+      ]
+    },
+    "Head Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            8
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            9,
+            17
+          ],
+          "type": "Maintenance",
+          "comment": "RESET P/T"
+        },
+        {
+          "dmxRange": [
+            18,
+            26
+          ],
+          "type": "Zoom"
+        },
+        {
+          "dmxRange": [
+            27,
+            35
+          ],
+          "type": "Maintenance",
+          "comment": "RESET ALL"
+        },
+        {
+          "dmxRange": [
+            36,
+            53
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            54,
+            62
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            63,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION 1"
+        }
+      ]
+    },
+    "Head Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Head NoFeature": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "RESERVED"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1 - 21Ch",
+      "shortName": "Mode1 - 21Ch",
+      "channels": [
+        "Head ColorAdd_R",
+        "Head ColorAdd_R fine",
+        "Head ColorAdd_G",
+        "Head ColorAdd_G fine",
+        "Head ColorAdd_B",
+        "Head ColorAdd_B fine",
+        "Head ColorAdd_W",
+        "Head ColorAdd_W fine",
+        "Head CTC",
+        "Head ColorMacro1",
+        "Head Shutter1",
+        "Head Dimmer",
+        "Head Dimmer fine",
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Head LEDFrequency",
+        "Head Control1",
+        "Head Zoom",
+        "Head NoFeature"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "SISMA Z4 is a compact, high-output LED wash beam moving head offering an extremely wide zoom range that quickly transforms from a narrow beam of light for dramatic aerial effects to a flood of evenly distributed light with saturated, vibrant colors. Its 60W RGBW Osram LED chips offer industry-leading output while maintaining a lightweight, compact form factor complemented by precise, ultra-fast pan/tilt movements. Its advanced color control can offer, precision-based concentrated colors without compromise to brightness. Sisma is the ultimate dually-capable fixture for dynamic lighting effects that can raise the bar for creative design.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      50
+    ],
+    "revision": {
+      "date": "2025-03-21T08:23:42",
+      "text": "Initial upload by GDTFservice powered by Crescit commissioned by Volux"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bad53f4f64ff5d87"
+  },
+  "manufacturerKey": "volux",
+  "fixtureKey": "sisma-z4",
+  "gwFixtureTypeID": "1F334759-CABB-4CA4-B2CD-279A03B8145B"
+}

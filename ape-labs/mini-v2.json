@@ -1,0 +1,165 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Mini v2",
+  "shortName": "Mini v2",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-01-05",
+    "lastModifyDate": "2026-06-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2EDF6BA7-7145-47B1-AEDF-CBF0D5261748"
+    }
+  },
+  "comment": "Ape Labs Mini v2",
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (Musik Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "7 CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "WW",
+        "Dim",
+        "Strobe1",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      125,
+      48,
+      125
+    ],
+    "weight": 0.86,
+    "power": 15,
+    "bulb": {
+      "type": "LED",
+      "lumens": 545,
+      "colorTemperature": 5500
+    },
+    "lens": {
+      "degreesMinMax": [
+        10.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-21T16:51:46",
+      "text": "Apelabs"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "579d85812a155027"
+  },
+  "manufacturerKey": "ape-labs",
+  "fixtureKey": "mini-v2",
+  "gwFixtureTypeID": "2EDF6BA7-7145-47B1-AEDF-CBF0D5261748"
+}

@@ -1,0 +1,911 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "HYPERION",
+  "shortName": "HYPERION",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-02-13",
+    "lastModifyDate": "2025-11-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D2A01E42-5A72-4EF8-908B-98BB346D3018"
+    }
+  },
+  "comment": "ASTERA HYPERION",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full -G"
+        },
+        {
+          "dmxRange": [
+            6,
+            127
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "99% to 1% -G"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "99% to 1% +G"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full +G"
+        }
+      ]
+    },
+    "XF": {
+      "capability": {
+        "type": "Unknown (Color XF)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": " Random Fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random Medium"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random Slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Variable Strobe 1 to 25 Hz"
+        }
+      ]
+    },
+    "Pixel1_1 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Pixel1_1 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Pixel1_1 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Pixel1_1 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Pixel1_1 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Pixel1_1 Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Pixel1_1 CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Pixel1_1 Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Pixel1_1 color XF": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "White/Color XF"
+        }
+      ]
+    },
+    "PIXEL8 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "PIXEL8 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "PIXEL8 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "PIXEL8 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "PIXEL32 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "PIXEL32 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "PIXEL32 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "PIXEL32 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "PIXEL32 CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "PIXEL32 Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "PIXEL32 ColorMixMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "CrossFade"
+        }
+      ]
+    },
+    "Tube 32pix - Mode 116 Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "MODE 89 : D CCT GM CRO RGB",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "MODE 91 : D16 CCT GM C RGB",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "MODE 94 : D CCT GM CRO RGB S",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "MODE 137 : D16 CCT GM C RGB S",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "MODE 103 : D CCT GM CRO RGB (PIXEL=8; STROBE=SINGLE)",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 1 - 1Pix RGB Strob OFF",
+      "shortName": "Mode 1 - 1Pi",
+      "channels": [
+        "Pixel1_1 ColorAdd_R",
+        "Pixel1_1 ColorAdd_G",
+        "Pixel1_1 ColorAdd_B"
+      ]
+    },
+    {
+      "name": "Mode 2 - 1Pix RGBW Strob OFF",
+      "shortName": "Mode 2 - 1Pi",
+      "channels": [
+        "Pixel1_1 ColorAdd_R",
+        "Pixel1_1 ColorAdd_G",
+        "Pixel1_1 ColorAdd_B",
+        "Pixel1_1 ColorAdd_W"
+      ]
+    },
+    {
+      "name": "Mode 9 - 1Pix RGBWS",
+      "shortName": "Mode 9 - 1Pi",
+      "channels": [
+        "Pixel1_1 ColorAdd_R",
+        "Pixel1_1 ColorAdd_G",
+        "Pixel1_1 ColorAdd_B",
+        "Pixel1_1 ColorAdd_W",
+        "Pixel1_1 Shutter1"
+      ]
+    },
+    {
+      "name": "Mode 116 - 32Pix D CCT GM CRO RGB S",
+      "shortName": "Mode 116 - 3",
+      "channels": [
+        "PIXEL32 Dimmer",
+        "PIXEL32 CTC",
+        "PIXEL32 Tint",
+        "PIXEL32 ColorMixMode",
+        "PIXEL32 ColorAdd_R",
+        "PIXEL32 ColorAdd_G",
+        "PIXEL32 ColorAdd_B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Tube 32pix - Mode 116 Shutter1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      2031,
+      42,
+      42
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    },
+    "weight": 0.77
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-12T13:27:48",
+      "text": "ADDED MODES _ CREATED BY TOINE"
+    }
+  },
+  "manufacturerKey": "astera",
+  "fixtureKey": "hyperion",
+  "gwFixtureTypeID": "D2A01E42-5A72-4EF8-908B-98BB346D3018",
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "W",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ]
+}

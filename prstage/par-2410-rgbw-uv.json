@@ -1,0 +1,268 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR 2410 RGBW+UV",
+  "shortName": "PAR2410",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-02-03",
+    "lastModifyDate": "2026-02-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 879391D5-1F88-452D-91AD-6FE17FEA9DEB"
+    }
+  },
+  "comment": "Classic PAR 24*10w RGBW+UV",
+  "rdm": {
+    "modelId": 32773
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe 1HZ"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stobe 25HZ"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "8 Color"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Jump"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Gradient"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Pulse"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65280,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - 10 CH",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "UV",
+        "NoFeature",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate"
+      ]
+    },
+    {
+      "name": "Mode 2 - 5CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "UV"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      257,
+      128,
+      287
+    ],
+    "weight": 2.8,
+    "power": 375,
+    "bulb": {
+      "type": "LED",
+      "lumens": 6000,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        45.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150200,0.060090,7.233000",
+      "hex": "#0200ff"
+    },
+    {
+      "name": "W",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "UV",
+      "cie": "0.208100,0.067170,4.750000",
+      "hex": "#6b00c2"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Classic PAR 24*10w RGBW+UV",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2026-02-10T11:55:01",
+      "text": "Ver 1_3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "590c3db1c660ddf5"
+  },
+  "manufacturerKey": "prstage",
+  "fixtureKey": "par-2410-rgbw-uv",
+  "gwFixtureTypeID": "879391D5-1F88-452D-91AD-6FE17FEA9DEB"
+}

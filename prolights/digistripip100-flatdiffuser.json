@@ -1,0 +1,877 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "DigiStripIP100_FlatDiffuser",
+  "shortName": "DIGIIP100_FD",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2023-05-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DE1D283B-44B1-4AA4-B37A-F28BF99ADE2B"
+    }
+  },
+  "comment": "DigiStrip IP100 is a linear LED 10 mm pixel pitch video fixture for the rental market with an extensive range of optical accessories for a wide variety of looks (black and white and transparent). Each 1 meter long strip features 100 RGB / FC LEDs with individual pixel control and a 100° viewing angle",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "comment": "FG Strobe Min"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.98Hz",
+          "speedEnd": "19.92Hz",
+          "comment": "FG Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "20Hz",
+          "comment": "FG Strobe Max"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer speed mode off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 1 - Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 1 - Mid"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 1 - Slow"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "comment": "BG Strobe Min"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.98Hz",
+          "speedEnd": "19.92Hz",
+          "comment": "BG Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "20Hz",
+          "comment": "BG Strobe Max"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorPreset",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_1"
+        },
+        {
+          "dmxRange": [
+            21,
+            29
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_2"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_3"
+        },
+        {
+          "dmxRange": [
+            40,
+            48
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_4"
+        },
+        {
+          "dmxRange": [
+            49,
+            57
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_5"
+        },
+        {
+          "dmxRange": [
+            58,
+            67
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_6"
+        },
+        {
+          "dmxRange": [
+            68,
+            76
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_7"
+        },
+        {
+          "dmxRange": [
+            77,
+            86
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_8"
+        },
+        {
+          "dmxRange": [
+            87,
+            95
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_9"
+        },
+        {
+          "dmxRange": [
+            96,
+            104
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_10"
+        },
+        {
+          "dmxRange": [
+            105,
+            114
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_11"
+        },
+        {
+          "dmxRange": [
+            115,
+            123
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_12"
+        },
+        {
+          "dmxRange": [
+            124,
+            133
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_13"
+        },
+        {
+          "dmxRange": [
+            134,
+            142
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_14"
+        },
+        {
+          "dmxRange": [
+            143,
+            151
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_15"
+        },
+        {
+          "dmxRange": [
+            152,
+            161
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_16"
+        },
+        {
+          "dmxRange": [
+            162,
+            170
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_17"
+        },
+        {
+          "dmxRange": [
+            171,
+            179
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_18"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_19"
+        },
+        {
+          "dmxRange": [
+            190,
+            198
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_20"
+        },
+        {
+          "dmxRange": [
+            199,
+            208
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_21"
+        },
+        {
+          "dmxRange": [
+            209,
+            217
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_22"
+        },
+        {
+          "dmxRange": [
+            218,
+            226
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_23"
+        },
+        {
+          "dmxRange": [
+            227,
+            236
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_24"
+        },
+        {
+          "dmxRange": [
+            237,
+            245
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_25"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Macro_1to25"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physical": 0,
+          "comment": "Slow Rate"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0.01,
+          "physicalEnd": 1,
+          "comment": "Rate"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physical": 1,
+          "comment": "Max Rate"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 9": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 9": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 9": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 10": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 10": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 10": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 8": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 9": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 10": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 11": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 12": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "13ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Dim Mode",
+        "R",
+        "G",
+        "B",
+        "Dim 2",
+        "Sh1 2",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Color Macro1",
+        "Color Macro1 Rate"
+      ]
+    },
+    {
+      "name": "PixelToPixel_300ch",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "10Section_30ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "R 10",
+        "G 10",
+        "B 10"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      34,
+      87,
+      1001
+    ],
+    "weight": 2.7,
+    "DMXconnector": "XLR5",
+    "power": 25,
+    "bulb": {
+      "type": "LED",
+      "lumens": 319,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        136.8,
+        198.4
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red Led",
+      "cie": "0.694000,0.304000,22.665000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green Led",
+      "cie": "0.150000,0.739000,63.292000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue Led",
+      "cie": "0.129000,0.070000,14.577000",
+      "hex": "#0051ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "DigiStrip IP100 is a linear LED 10 mm pixel pitch video fixture for the rental market with an extensive range of optical accessories for a wide variety of looks (black and white and transparent). Each 1 meter long strip features 100 RGB / FC LEDs with individual pixel control and a 100° viewing angle",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2023-05-25T08:13:52",
+      "text": "Rev 0.7"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f52ffd1ed73ab59c"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "digistripip100-flatdiffuser",
+  "gwFixtureTypeID": "DE1D283B-44B1-4AA4-B37A-F28BF99ADE2B"
+}

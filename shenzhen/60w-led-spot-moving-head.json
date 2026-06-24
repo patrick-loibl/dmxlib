@@ -1,0 +1,335 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "60W LED Spot Moving Head",
+  "shortName": "60W Chinese Movinghead",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "E0BB09EA-28AE-44C1-A0AE-1253FA4D585C"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      80,
+      140,
+      167
+    ],
+    "weight": 3.0,
+    "power": 85,
+    "DMXconnector": "XLR3",
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        18.0,
+        25.0
+      ]
+    }
+  },
+  "wheels": {
+    "COLOR": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "OPEN",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "RED",
+          "colors": [
+            "#ff0000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "GREEN",
+          "colors": [
+            "#00ff00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "BLUE",
+          "colors": [
+            "#0000ff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "YELLOW",
+          "colors": [
+            "#ffff00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "MAGENTA",
+          "colors": [
+            "#ff01ff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "CYAN",
+          "colors": [
+            "#add8e6"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "ORANGE",
+          "colors": [
+            "#ffa500"
+          ]
+        }
+      ]
+    },
+    "GOBO": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "OPEN",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "WATER",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "8d3ac5855973dfcb"
+        },
+        {
+          "type": "Color",
+          "name": "OCTOPUS",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "98f1020c66c6b460"
+        },
+        {
+          "type": "Color",
+          "name": "BELLS",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "a3c33fcec47bbea4"
+        },
+        {
+          "type": "Color",
+          "name": "SURFACES",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "0609da894a750c03"
+        },
+        {
+          "type": "Color",
+          "name": "3xDOTS",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "6e56392d78c16d13"
+        },
+        {
+          "type": "Color",
+          "name": "SPACE",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "8eb9a16f724132fe"
+        },
+        {
+          "type": "Color",
+          "name": "CIRCLE",
+          "colors": [
+            "#ffffff"
+          ],
+          "gwGobo": "8cb6c52aaf235e15"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Yoke Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Tilt fine"
+      ]
+    },
+    "Head Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Head Shutter1Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            8,
+            127
+          ],
+          "type": "StrobeSpeed"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        }
+      ]
+    },
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Head PositionMSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed"
+        }
+      ]
+    },
+    "Head AnimationSystem1Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Functions"
+        }
+      ]
+    },
+    "Head FixtureGlobalReset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "FixtureGlobalReset 1"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "11CH",
+      "shortName": "11CH",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Yoke Tilt",
+        "Yoke Tilt fine",
+        "Head Color1",
+        null,
+        "Head Shutter1Strobe",
+        "Beam Dimmer",
+        "Head PositionMSpeed",
+        "Head AnimationSystem1Macro",
+        "Head FixtureGlobalReset"
+      ]
+    },
+    {
+      "name": "9CH",
+      "shortName": "9CH",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Tilt",
+        "Head Color1",
+        null,
+        "Head Shutter1Strobe",
+        "Beam Dimmer",
+        "Head PositionMSpeed",
+        "Head AnimationSystem1Macro",
+        "Head FixtureGlobalReset"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "60 W LED Moving Head\n7 fixed gobos + open\n7 colours + white\nDimmer and strobe function\nDMX and Master/Slave control",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-02-15T23:17:09",
+      "text": "JOOGLE"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "487871e9e3032da8"
+  },
+  "manufacturerKey": "shenzhen",
+  "fixtureKey": "60w-led-spot-moving-head",
+  "gwFixtureTypeID": "E0BB09EA-28AE-44C1-A0AE-1253FA4D585C"
+}

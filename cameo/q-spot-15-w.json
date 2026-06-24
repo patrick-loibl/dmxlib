@@ -1,0 +1,163 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Q-Spot 15 W",
+  "shortName": "Q15W",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-29",
+    "lastModifyDate": "2023-12-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D3D256CF-10FC-4E95-9594-770858988DB3"
+    }
+  },
+  "rdm": {
+    "modelId": 5015
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            11,
+            33
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0.5Hz",
+          "speedEnd": "6Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            34,
+            56
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.5Hz",
+          "speedEnd": "6Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            57,
+            79
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.5Hz",
+          "speedEnd": "6Hz",
+          "randomTiming": true,
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            80,
+            102
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "12Hz",
+          "randomTiming": true,
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            103,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "12Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "20Hz",
+          "comment": "Slow to Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      89,
+      172,
+      89
+    ],
+    "weight": 1.2,
+    "DMXconnector": "XLR3",
+    "power": 15,
+    "bulb": {
+      "type": "LED",
+      "lumens": 435,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        4.5,
+        4.5
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2023-12-29T14:54:22",
+      "text": "Release 1.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bc41ed7723fff699"
+  },
+  "manufacturerKey": "cameo",
+  "fixtureKey": "q-spot-15-w",
+  "gwFixtureTypeID": "D3D256CF-10FC-4E95-9594-770858988DB3"
+}

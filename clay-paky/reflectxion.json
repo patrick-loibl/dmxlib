@@ -1,0 +1,263 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ReflectXion",
+  "shortName": "ReflectXion",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-18",
+    "lastModifyDate": "2026-03-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DF9926A9-6E08-41F0-AA2C-280E613BF856"
+    }
+  },
+  "comment": "ReflectXion is a moving mirror offering 540° PAN and unique, continuous TILT movement at adjustable speeds. The ReflectXion’s mirror is the same on both sides, giving you two highly reflective surfaces with which to direct light beams.",
+  "rdm": {
+    "modelId": 76
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "stop",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "40rpm",
+          "physicalEnd": "0.08rpm",
+          "comment": "Forward Fast>Slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "stop",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "-0.08rpm",
+          "physicalEnd": "-40rpm",
+          "comment": "Backward Slow>Fast"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Home-Zero"
+        },
+        {
+          "dmxRange": [
+            12,
+            24
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "P/T Speed Fast"
+        },
+        {
+          "dmxRange": [
+            25,
+            37
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "P/T Speed Normal"
+        },
+        {
+          "dmxRange": [
+            38,
+            42
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "P/T Reset"
+        },
+        {
+          "dmxRange": [
+            43,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TiltRot Speed Normal"
+        },
+        {
+          "dmxRange": [
+            48,
+            52
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TiltRot Speed Rock'n'Roll"
+        },
+        {
+          "dmxRange": [
+            53,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "T Rotate",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      120,
+      345,
+      391
+    ],
+    "weight": 13.5,
+    "DMXconnector": "BNC"
+  },
+  "gwSpecs": {
+    "description": "ReflectXion is a moving mirror offering 540° PAN and unique, continuous TILT movement at adjustable speeds. The ReflectXion’s mirror is the same on both sides, giving you two highly reflective surfaces with which to direct light beams.",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2026-03-30T10:38:10",
+      "text": "ClayPaky FW 3_4_011"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e6ef75b5f785c9bd"
+  },
+  "manufacturerKey": "clay-paky",
+  "fixtureKey": "reflectxion",
+  "gwFixtureTypeID": "DF9926A9-6E08-41F0-AA2C-280E613BF856"
+}

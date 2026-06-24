@@ -1,0 +1,541 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Versapar",
+  "shortName": "Versapar",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-06",
+    "lastModifyDate": "2025-11-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B27A38B5-DA2E-40C9-ADEE-B70BD3B827E6"
+    }
+  },
+  "comment": "12x10W RGBW/FC LED.\nWide zoom range from 10° - 60° (1:6 zoom).\nHD dimming with selectable PWM.\nSilent operation for studio application.\nVersaPar is a LED zoom PAR designed for rental companies. The multi-purpose concept combining high brightness, wide zoom range and advanced colour mixing make this a unique fixture. VersaPar is equipped with 10° - 60° unrivalled zoom range, high efficiency, perfect chromatic uniformity, HDL dimming technology and totally silent operation.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            13,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ColorPreset",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Macros"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            13,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        }
+      ]
+    },
+    "Sh1 4": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Auto Speed Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Auto Speed"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Auto Speed Fast"
+        }
+      ]
+    },
+    "Color FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "RGB Mode",
+          "speed": 0,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 3"
+          }
+        },
+        {
+          "dmxRange": [
+            11,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Effect 0-100%",
+          "speedStart": 1,
+          "speedEnd": 10,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 3"
+          }
+        },
+        {
+          "dmxRange": [
+            51,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Effect 100-0%",
+          "speedStart": 11,
+          "speedEnd": 20,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 3"
+          }
+        },
+        {
+          "dmxRange": [
+            91,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Effect 100-0-100%",
+          "speedStart": 21,
+          "speedEnd": 30,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 3"
+          }
+        },
+        {
+          "dmxRange": [
+            131,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Auto fade transition",
+          "speedStart": 31,
+          "speedEnd": 40,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 4"
+          }
+        },
+        {
+          "dmxRange": [
+            171,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "Auto snap transition 4 colors",
+          "speedStart": 41,
+          "speedEnd": 50,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 4"
+          }
+        },
+        {
+          "dmxRange": [
+            211,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto snap transition 15 colors",
+          "speedStart": 51,
+          "speedEnd": 60,
+          "switchChannels": {
+            "2_Body_Shutter1": "Sh1 4"
+          }
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Dimmer Speed as from menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Slow"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "5ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "7ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "9ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Color Macro1",
+        "2_Body_Shutter1",
+        "Color FX1",
+        "Dim Mode",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      185,
+      231,
+      185
+    ],
+    "weight": 5.5,
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "description": "12x10W RGBW/FC LED.\nWide zoom range from 10° - 60° (1:6 zoom).\nHD dimming with selectable PWM.\nSilent operation for studio application.\nVersaPar is a LED zoom PAR designed for rental companies. The multi-purpose concept combining high brightness, wide zoom range and advanced colour mixing make this a unique fixture. VersaPar is equipped with 10° - 60° unrivalled zoom range, high efficiency, perfect chromatic uniformity, HDL dimming technology and totally silent operation.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-06T16:06:37",
+      "text": "Rev 001 - Preliminary"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "68ec88324fa1b44f"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "versapar",
+  "gwFixtureTypeID": "B27A38B5-DA2E-40C9-ADEE-B70BD3B827E6"
+}

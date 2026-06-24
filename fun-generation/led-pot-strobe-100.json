@@ -1,0 +1,170 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Pot Strobe 100",
+  "shortName": "PotStrobe100",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-05-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4D6A7EFE-7D7E-4AEF-88D2-F612801F6425"
+    }
+  },
+  "comment": "LED Strobe with 126 0.2W LEDs (45° beam degree @ 900lux in 1m distance; CRI Ra: 84; Color temp: 6100 K, Dim: 0 - 100%; Strobe: 0-20 Hz",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DMX Control"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fade Animation (0%-100%)"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound to Light (0%-100%)"
+        }
+      ]
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No strobe"
+        },
+        {
+          "dmxRange": [
+            2,
+            84
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "0 Hz"
+        },
+        {
+          "dmxRange": [
+            85,
+            168
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "10 Hz"
+        },
+        {
+          "dmxRange": [
+            169,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "20 Hz"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3ch",
+      "channels": [
+        "Dim",
+        "Dim Mode",
+        "StrobeM Strobe"
+      ]
+    },
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      172,
+      138,
+      168
+    ],
+    "weight": 0.8,
+    "power": 30,
+    "bulb": {
+      "type": "474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED Strobe with 126 0.2W LEDs (45° beam degree @ 900lux in 1m distance; CRI Ra: 84; Color temp: 6100 K, Dim: 0 - 100%; Strobe: 0-20 Hz",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2025-05-30T14:22:37",
+      "text": "Rev1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4e88028659b71ec9"
+  },
+  "manufacturerKey": "fun-generation",
+  "fixtureKey": "led-pot-strobe-100",
+  "gwFixtureTypeID": "4D6A7EFE-7D7E-4AEF-88D2-F612801F6425"
+}

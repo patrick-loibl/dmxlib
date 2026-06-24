@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "F1600 Pro Faze ",
+  "shortName": "F1600 ",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-07-27",
+    "lastModifyDate": "2024-09-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5E63EE71-29DD-4562-9E83-FDAEE26B337B"
+    }
+  },
+  "comment": "F1600 Pro Faze Machine in Flightcase: The F1600 is controlled with 2 DMX channels. It is possible to control the internal fan and the output independently. With the help of the fan the smoke output will be thinly distributed in the venue. The direction of the smoke can also easily be changed with the adjustable air baffle.",
+  "availableChannels": {
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "No function1"
+        },
+        {
+          "dmxRange": [
+            51,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Smoke output 0/100"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capability": {
+        "type": "Unknown (FanMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2 Channels",
+      "channels": [
+        "Dim",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      330,
+      320,
+      490
+    ],
+    "weight": 15.8
+  },
+  "gwSpecs": {
+    "description": "The F1600 is controlled with 2 DMX channels. It is possible to control the internal fan and the output independently. With the help of the fan the smoke output will be thinly distributed in the venue. The direction of the smoke can also easily be changed with the adjustable air baffle.",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-26T16:47:00",
+      "text": "F1600"
+    }
+  },
+  "manufacturerKey": "beamz",
+  "fixtureKey": "f1600-pro-faze",
+  "gwFixtureTypeID": "5E63EE71-29DD-4562-9E83-FDAEE26B337B"
+}

@@ -1,0 +1,180 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Brutt LED Skypix V2",
+  "shortName": "BruttW4",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-25",
+    "lastModifyDate": "2025-11-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E2C2BEA7-D062-4745-8AC5-64E2EACF127D"
+    }
+  },
+  "rdm": {
+    "modelId": 38
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            8
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            9,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "15Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "12CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "08CH",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "02CH",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      400,
+      262,
+      400
+    ],
+    "weight": 6.8,
+    "power": 99,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6200
+    },
+    "lens": {
+      "degreesMinMax": [
+        30.0,
+        30.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "LedWarm",
+      "cie": "0.432300,0.413000,100.000000",
+      "hex": "#fff189"
+    },
+    {
+      "name": "LedCool",
+      "cie": "0.300000,0.337500,100.000000",
+      "hex": "#e8fffd"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-11-25T21:51:11",
+      "text": "Tested_-REAL-3D-MA2-MA3, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c816396c3bb59c03"
+  },
+  "manufacturerKey": "lpl",
+  "fixtureKey": "brutt-led-skypix-v2",
+  "gwFixtureTypeID": "E2C2BEA7-D062-4745-8AC5-64E2EACF127D"
+}

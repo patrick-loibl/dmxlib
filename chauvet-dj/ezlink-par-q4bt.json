@@ -1,0 +1,305 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EZLink Par Q4BT",
+  "shortName": "Q4BT",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-07-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FD62B5BA-4B5B-4D58-8241-97BDEF605275"
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            17,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to Fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            106
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            107,
+            157
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            158,
+            208
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            209,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "Effect",
+          "effectName": "Program speed slow to fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "sound-active program",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber"
+      ]
+    },
+    {
+      "name": "8Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Sh1",
+        "FX1",
+        "FX2",
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      145,
+      143,
+      143
+    ],
+    "weight": 1.3,
+    "power": 3,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm LED",
+      "lumens": 65646,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        34.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "Amber",
+      "cie": "0.516600,0.460500,61.500000",
+      "hex": "#ffb900"
+    }
+  ],
+  "gwDmxProfiles": [
+    {
+      "name": "DMX Profile 1",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-01T06:08:13",
+      "text": "6-4 Geometry and Model Adjustments for 3D Visualisation"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8a0d834357c106d0"
+  },
+  "manufacturerKey": "chauvet-dj",
+  "fixtureKey": "ezlink-par-q4bt",
+  "gwFixtureTypeID": "FD62B5BA-4B5B-4D58-8241-97BDEF605275"
+}

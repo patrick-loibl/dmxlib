@@ -1,0 +1,267 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Fresnel WW 3100K",
+  "shortName": "Fresnel WW",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-26",
+    "lastModifyDate": "2024-05-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2146A0E3-4C33-4827-93E5-B75E5CD8FCAD"
+    }
+  },
+  "comment": "Expolite LED Fresnel WW 3100K",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "NoFunction",
+          "comment": "Strobe S > F - Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "NoFunction",
+          "comment": "Lightning Effect - Strobe"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "18Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random - Strobe Random"
+        }
+      ]
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Zoom Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            201,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Zoom Reset"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "STD P",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Zoom",
+        "Zoom Reset"
+      ]
+    },
+    {
+      "name": "DOS",
+      "channels": [
+        "Dim",
+        "Dim fine"
+      ]
+    },
+    {
+      "name": "UNO",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      371,
+      197,
+      371
+    ],
+    "weight": 6.6,
+    "power": 230,
+    "bulb": {
+      "type": "585nm LED",
+      "lumens": 6736,
+      "colorTemperature": 3334
+    },
+    "lens": {
+      "degreesMinMax": [
+        30.0,
+        41.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White At 25Deg",
+      "cie": "0.413000,0.384000,100.000000",
+      "hex": "#ffeeac",
+      "dominantWavelength": 585.0
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2024-05-22T19:01:52",
+      "text": "Copied from Chauvet Ovation ED-200WW"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "b80eb98976effa59"
+  },
+  "manufacturerKey": "expolite",
+  "fixtureKey": "led-fresnel-ww-3100k",
+  "gwFixtureTypeID": "2146A0E3-4C33-4827-93E5-B75E5CD8FCAD"
+}

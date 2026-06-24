@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Polar500",
+  "shortName": "Polar500",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-09",
+    "lastModifyDate": "2024-04-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5D526649-2FBC-4FAE-9F20-B40E7011BB4E"
+    }
+  },
+  "comment": "POLAR500 is a LED strobe engineered to offer a true explosion of light and a range of dynamic effects - all in a unique fixture. The light source is composed of 90 SMD 6.500 K 0,5 W LED allowing for a full-on continuous operation and capable to offer an equal output of conventional 500 W strobe from just one-sixth of the nominal power.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Function": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "5ch",
+      "channels": [
+        "Dim",
+        "FX1",
+        "StrobeM Strobe",
+        "Function",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      187,
+      80,
+      418
+    ],
+    "weight": 1.5,
+    "DMXconnector": "XLR5",
+    "power": 50,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1800,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        110.0,
+        149.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White Leds",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "POLAR500 is a LED strobe engineered to offer a true explosion of light and a range of dynamic effects - all in a unique fixture. The light source is composed of 90 SMD 6.500 K 0,5 W LED allowing for a full-on continuous operation and capable to offer an equal output of conventional 500 W strobe from just one-sixth of the nominal power.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2024-04-25T19:37:39",
+      "text": "Version 2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "eb2eb035fe76cec0"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "polar500",
+  "gwFixtureTypeID": "5D526649-2FBC-4FAE-9F20-B40E7011BB4E"
+}

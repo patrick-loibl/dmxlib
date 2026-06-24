@@ -1,0 +1,214 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RGBWAUV_18x18",
+  "shortName": "RGBWAUV_18x18",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-09-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 4AC1002B-19D2-44AF-B33E-2E705D1B3655"
+    }
+  },
+  "comment": "Led Par 18x18W RGBWAUV",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "OPEN"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strob Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strob"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strob Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "DMXconnector": "XLR3",
+    "power": 330,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        35.0,
+        35.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.448100,0.404800,100.000000",
+      "hex": "#ffe987"
+    },
+    {
+      "name": "UV",
+      "cie": "0.234400,0.090310,4.750000",
+      "hex": "#6c00a4"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Led Par 18x18W RGBWAUV",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-09-26T22:34:41",
+      "text": "VER.2"
+    }
+  },
+  "manufacturerKey": "tiptop",
+  "fixtureKey": "rgbwauv-18x18",
+  "gwFixtureTypeID": "4AC1002B-19D2-44AF-B33E-2E705D1B3655"
+}

@@ -1,0 +1,229 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "THA-100F",
+  "shortName": "THA-100F",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-05-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8760C7B5-D817-4F9B-98FF-73F8EF7526C0"
+    }
+  },
+  "comment": "THA-100F Theater Spot: Eurolite THA-100F Theater Spot 100W COB LED 3200K \n",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Control Board setting"
+        },
+        {
+          "dmxRange": [
+            16,
+            45
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear (halogen emulation)"
+        },
+        {
+          "dmxRange": [
+            46,
+            75
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square (halogen emulation)"
+        },
+        {
+          "dmxRange": [
+            76,
+            105
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inverse square (halogen emulation)"
+        },
+        {
+          "dmxRange": [
+            106,
+            135
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-shaped (halogen emulation)"
+        },
+        {
+          "dmxRange": [
+            136,
+            165
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": " Linear (LED emulation)"
+        },
+        {
+          "dmxRange": [
+            166,
+            195
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square (LED emulation)"
+        },
+        {
+          "dmxRange": [
+            196,
+            225
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": " Inverse square (LED emulation)"
+        },
+        {
+          "dmxRange": [
+            226,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-shaped (LED emulation)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3 Channel Mode",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      305,
+      370,
+      387
+    ],
+    "weight": 5.5,
+    "DMXconnector": "XLR5",
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        28.0,
+        30.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Eurolite THA-100F Theater Spot 100W COB LED 3200K",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-23T07:10:27",
+      "text": "Release 2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "565e2a9a012ac273"
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "tha-100f",
+  "gwFixtureTypeID": "8760C7B5-D817-4F9B-98FF-73F8EF7526C0"
+}

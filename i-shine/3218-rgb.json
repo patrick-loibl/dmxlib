@@ -1,0 +1,257 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "3218 RGB",
+  "shortName": "3218 RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-09-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 2F8B4FD8-6FB4-4C83-91CA-01F162F74BC2"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "OPEN"
+        },
+        {
+          "dmxRange": [
+            6,
+            40
+          ],
+          "type": "ColorPreset",
+          "comment": "RED"
+        },
+        {
+          "dmxRange": [
+            41,
+            76
+          ],
+          "type": "ColorPreset",
+          "comment": "GREEN"
+        },
+        {
+          "dmxRange": [
+            77,
+            112
+          ],
+          "type": "ColorPreset",
+          "comment": "BLUE"
+        },
+        {
+          "dmxRange": [
+            113,
+            148
+          ],
+          "type": "ColorPreset",
+          "comment": "AMBER"
+        },
+        {
+          "dmxRange": [
+            149,
+            184
+          ],
+          "type": "ColorPreset",
+          "comment": "CYAN"
+        },
+        {
+          "dmxRange": [
+            185,
+            220
+          ],
+          "type": "ColorPreset",
+          "comment": "MAGENTA"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "WHITE"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "OPEN"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strob Min"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strob"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strob Max"
+        }
+      ]
+    },
+    "Ctrl2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl3": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Color Macro1",
+        "Sh1",
+        "Ctrl2",
+        "Ctrl3",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.639900,0.330100,21.280000",
+      "hex": "#ff0100"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.150100,0.060130,7.237000",
+      "hex": "#0101ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-09-26T18:30:18",
+      "text": "VER3"
+    }
+  },
+  "manufacturerKey": "i-shine",
+  "fixtureKey": "3218-rgb",
+  "gwFixtureTypeID": "2F8B4FD8-6FB4-4C83-91CA-01F162F74BC2"
+}

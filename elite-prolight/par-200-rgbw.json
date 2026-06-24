@@ -1,0 +1,287 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR 200 RGBW",
+  "shortName": "PAR 200 RGBW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-24",
+    "lastModifyDate": "2025-07-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 346641EA-E434-41A6-BE3F-C7D2DEB0A9A5"
+    }
+  },
+  "comment": "LED PAR 60X3W RGBW: Introducing the PAR 200 RGBW – a sleek, cost-effective solution that brings vibrant performance within reach. Equipped with 60 x 3W RGBW LEDs, it delivers rich, dynamic color output ideal for stage, event, or architectural lighting. The newly designed housing offers a modern look with efficient heat dissipation for reliable, long-lasting use. With multiple lens angle options, it adapts seamlessly to various lighting needs, while its economic price point makes it a smart choice for\nprofessionals seeking value without compromising on\nquality.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No STROBE"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "MIN STROBE"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "MAX STROBE"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Programme Color"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Gradual Change"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Fade"
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Color Jump"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound Mode"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4CH Basic Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "8CH Standard Mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White 2",
+        "Sh1",
+        "Color Macro1 Rate",
+        "Color Macro1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      205,
+      210,
+      205
+    ],
+    "weight": 3.4,
+    "power": 200,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 25000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "description": "Introducing the PAR 200 RGBW – a sleek, cost-effective solution that brings vibrant performance within reach. Equipped with 60 x 3W RGBW LEDs, it delivers rich, dynamic color output ideal for stage, event, or architectural lighting. The newly designed housing offers a modern look with efficient heat dissipation for reliable, long-lasting use. With multiple lens angle options, it adapts seamlessly to various lighting needs, while its economic price point makes it a smart choice for\nprofessionals seeking value without compromising on\nquality.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-24T08:00:44",
+      "text": "Ver1_07_25"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bb237d63a61bf318"
+  },
+  "manufacturerKey": "elite-prolight",
+  "fixtureKey": "par-200-rgbw",
+  "gwFixtureTypeID": "346641EA-E434-41A6-BE3F-C7D2DEB0A9A5"
+}

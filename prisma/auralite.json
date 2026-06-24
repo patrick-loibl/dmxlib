@@ -1,0 +1,194 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "AuraLite",
+  "shortName": "AuraLite",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-12-30",
+    "lastModifyDate": "2025-12-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B8A05F0A-7762-4203-A06C-DB23FD978E36"
+    }
+  },
+  "comment": "Prisma Aura Lite: Wash fixture (RGBW) - minimal universal GDTF",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "PanTilt Speed": {
+      "capability": {
+        "type": "Unknown (PanTiltSpeed)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (Effect1)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Macro Speed": {
+      "capability": {
+        "type": "Unknown (Effect1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "16ch",
+      "channels": [
+        "P",
+        "T",
+        "PanTilt Speed",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Zoom",
+        "Macro",
+        "Macro Speed",
+        "P fine",
+        "T fine",
+        "Ctrl1",
+        "CTO"
+      ]
+    }
+  ],
+  "physical": {
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "LED",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Wash fixture (RGBW) - minimal universal GDTF",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-30T10:06:15",
+      "text": "FixtureTest"
+    }
+  },
+  "manufacturerKey": "prisma",
+  "fixtureKey": "auralite",
+  "gwFixtureTypeID": "B8A05F0A-7762-4203-A06C-DB23FD978E36"
+}

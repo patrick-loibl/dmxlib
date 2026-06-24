@@ -1,0 +1,222 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Drama EW200",
+  "shortName": "Dramaew200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-28",
+    "lastModifyDate": "2024-08-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 39485260-616F-11EF-ABC8-525400685065"
+    }
+  },
+  "comment": "Drama EW200 is powered by a 200W COB LED",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Strobe S > F - Strobe"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Pulse On S > F - Strobe Pulse Open"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Pulse Off S > F - Strobe Pulse Closed"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random S > F - Strobe Random"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Dimming - Custom"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square Law Dimming - Custom"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inverse Square Law Dimming - Custom"
+        },
+        {
+          "dmxRange": [
+            150,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Type Dimming - Custom"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 Channel Mode",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3 Channel Mode",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      369,
+      180,
+      369
+    ],
+    "weight": 4.9,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 9053,
+      "colorTemperature": 6024
+    },
+    "lens": {
+      "degreesMinMax": [
+        17.1,
+        19.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Drama EW200 is powered by a 200W COB LED",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      5,
+      65
+    ],
+    "revision": {
+      "date": "2024-08-28T10:22:30",
+      "text": "Initial upload by GDTFservice.com, powered by Crescit, commissioned by MegaLite"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a6e1fea33ff27c44"
+  },
+  "manufacturerKey": "megalite",
+  "fixtureKey": "drama-ew200",
+  "gwFixtureTypeID": "39485260-616F-11EF-ABC8-525400685065"
+}

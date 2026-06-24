@@ -1,0 +1,538 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED BAR 424 RGBUV",
+  "shortName": "BAR 424 RGBUV ",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-06-04",
+    "lastModifyDate": "2025-09-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0E2630B6-3DB9-4B8C-A86A-E19AA81DA7B6"
+    }
+  },
+  "comment": "PRSTAGE LED BAR 424RGBUV is a high-output linear LED fixture featuring 42 multi-chip 4 W LEDs (Red, Green, Blue, UV at 395 nm) with RGBUV mixing, offering over 16 million color variations and long LED lifespan (~50,000 h).\n\nThe fixture delivers smooth 0–100% linear dimming, a wide 60° beam angle, and an adjustable electronic strobe ranging from 1 to 20 flashes per second. Cooling is actively managed (the fan can be disabled via the menu), and built-in thermal protection enhances longevity.\nIts versatile control includes DMX512, sound activation, auto-run programs, and a Master-Slave mode. Available channel modes are 8, and 32 DMX channels. It offers 3-pin XLR DMX In/Out, an LCD display with four navigation buttons, and includes two adjustable barn doors plus a matte plastic diffuser for beam shaping.\n\nPowered via PowerCON (input + through output) from AC 90–240 V (50/60 Hz), it consumes up to 200 W. The robust metal housing measures 610 × 88 × 150 mm and weighs just 3.2 kg",
+  "rdm": {
+    "modelId": 33025
+  },
+  "wheels": {
+    "Fan Control": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Fan On",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "d707806b02407268"
+        },
+        {
+          "type": "Color",
+          "name": "Theatre Mode Fan Off",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "353a6d2fbb6ec8a0"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            214
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random strobe"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Feature"
+        },
+        {
+          "dmxRange": [
+            10,
+            59
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 1"
+        },
+        {
+          "dmxRange": [
+            60,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 2"
+        },
+        {
+          "dmxRange": [
+            85,
+            109
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 3"
+        },
+        {
+          "dmxRange": [
+            110,
+            134
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 4"
+        },
+        {
+          "dmxRange": [
+            135,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 5"
+        },
+        {
+          "dmxRange": [
+            160,
+            184
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 6"
+        },
+        {
+          "dmxRange": [
+            185,
+            209
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 7"
+        },
+        {
+          "dmxRange": [
+            210,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Mode 8"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan On"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Theatre Mode Fan (off)"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV 2": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV 3": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV 4": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV 5": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV 6": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "UV 7": {
+      "name": "UV",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "UV",
+        "Sh1",
+        "Dim Mode",
+        "Fan Mode"
+      ]
+    },
+    {
+      "name": "Mode2",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Dim Mode",
+        "R",
+        "G",
+        "B",
+        "UV",
+        "R 2",
+        "G 2",
+        "B 2",
+        "UV 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "UV 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "UV 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "UV 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "UV 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "UV 7",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      88,
+      150,
+      614
+    ],
+    "weight": 3.45,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.695800,0.309000,100.000000",
+      "hex": "#ff0000",
+      "dominantWavelength": 628.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.153500,0.703300,100.000000",
+      "hex": "#00ff2a",
+      "dominantWavelength": 517.0
+    },
+    {
+      "name": "Blue",
+      "cie": "0.147600,0.049020,100.000000",
+      "hex": "#3e00ff",
+      "dominantWavelength": 458.0
+    },
+    {
+      "name": "UV",
+      "cie": "0.215600,0.065040,7.500000",
+      "hex": "#8f00f0",
+      "dominantWavelength": 395.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "PRSTAGE LED BAR 424RGBUV is a high-output linear LED fixture featuring 42 multi-chip 4 W LEDs (Red, Green, Blue, UV at 395 nm) with RGBUV mixing, offering over 16 million color variations and long LED lifespan (~50,000 h).\n\nThe fixture delivers smooth 0–100% linear dimming, a wide 60° beam angle, and an adjustable electronic strobe ranging from 1 to 20 flashes per second. Cooling is actively managed (the fan can be disabled via the menu), and built-in thermal protection enhances longevity.\nIts versatile control includes DMX512, sound activation, auto-run programs, and a Master-Slave mode. Available channel modes are 8, and 32 DMX channels. It offers 3-pin XLR DMX In/Out, an LCD display with four navigation buttons, and includes two adjustable barn doors plus a matte plastic diffuser for beam shaping.\n\nPowered via PowerCON (input + through output) from AC 90–240 V (50/60 Hz), it consumes up to 200 W. The robust metal housing measures 610 × 88 × 150 mm and weighs just 3.2 kg",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-05T13:11:26",
+      "text": "Ver 1_6"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5fd7ca901ecc254d"
+  },
+  "manufacturerKey": "prstage",
+  "fixtureKey": "led-bar-424-rgbuv",
+  "gwFixtureTypeID": "0E2630B6-3DB9-4B8C-A86A-E19AA81DA7B6"
+}

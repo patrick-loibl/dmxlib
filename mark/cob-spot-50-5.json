@@ -1,0 +1,226 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COB SPOT 50 5",
+  "shortName": "COBSpot505",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-26",
+    "lastModifyDate": "2025-11-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 150F0D60-08C8-4B4A-BBCF-FC12B5024AC1"
+    }
+  },
+  "comment": "COB SPOT 50 5 es un proyector que incluye 1x LED COB RGBWA (5 en 1) de 50W. Este dispositivo permite obtener ricas variaciones de color mezclando estos 5 tonos. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como dimmer manual, colores fijos y dos modos de estrobo con control de velocidad. El dispositivo incluye el modo DMX (9 canales) con nivel de dimmerización individual, función estrobo y programa automático.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber",
+        "comment": "Amber"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        }
+      ]
+    },
+    "Color FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Jump Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Effect",
+          "effectName": "Macro Color",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color FX2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Effect",
+        "effectName": "Macro Speed S > F",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "9 CHANNELS",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "Strobe1",
+        "Color FX1",
+        "Color FX2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      155,
+      90,
+      155
+    ],
+    "weight": 1.1,
+    "power": 10,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 5999,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        6.0,
+        11.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "COB SPOT 50 5 es un proyector que incluye 1x LED COB RGBWA (5 en 1) de 50W. Este dispositivo permite obtener ricas variaciones de color mezclando estos 5 tonos. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como dimmer manual, colores fijos y dos modos de estrobo con control de velocidad. El dispositivo incluye el modo DMX (9 canales) con nivel de dimmerización individual, función estrobo y programa automático.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-26T15:48:04",
+      "text": "Version_2_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bcfbd7db840fc74f"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "cob-spot-50-5",
+  "gwFixtureTypeID": "150F0D60-08C8-4B4A-BBCF-FC12B5024AC1"
+}

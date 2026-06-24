@@ -1,0 +1,274 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CLS-18 flood",
+  "shortName": "CLS-18",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-01-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 96BB3193-BFB9-4A85-8EFB-C2CDF81D3764"
+    }
+  },
+  "comment": "test: simple flood light with 3 RGBW LED zones",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "Unknown (SHUTTERAUDIO)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Audio 100%"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open (2)"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4Ch RGBW(D)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "6Ch RGBW_DS",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim 2",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "12Ch 3 Segment RGBW(D)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      150,
+      100,
+      300
+    ],
+    "weight": 5.5,
+    "power": 48,
+    "bulb": {
+      "type": "LED",
+      "lumens": 333,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        30.0,
+        65.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "simple flood light with 3 RGBW LED zones",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-15T13:27:57",
+      "text": "rev16(4_6_12Ch final)"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "588aac328b1835ab"
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "cls-18-flood",
+  "gwFixtureTypeID": "96BB3193-BFB9-4A85-8EFB-C2CDF81D3764"
+}

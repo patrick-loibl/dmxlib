@@ -1,0 +1,230 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COMPAR 10",
+  "shortName": "COMPAR10",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-03",
+    "lastModifyDate": "2026-05-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9A31AD35-7B2C-4923-B2E7-FF1E4C396DCC"
+    }
+  },
+  "comment": "Static LED Wash Light :: IP20 / 6  x 15 W RGBWA\n12.000 lux @ 1m\nDMX operation: 2, 3, 3 (RGB), 4, 5, 8 channels\nIntelligent Temperature Monitoring), reduces light output to prevent overheating and controls the fan speed\n\nProjection intensity:\n- Red: 1500lux @ 1m\n- Green: 3000lux @ 1m\n- Blue: 3700lux @ 1m\n- White: 4100lux @ 1m\n- Full power: 12000lux @ 1m\n\nConnectors:\n- DMX: 3p XLR male and female\n- Power: IEC power connector\nPower:\n- Voltage: AC100-240V 50/60Hz\n- Power: 50W\n- Fuse: F3AL 250V\nPhysical:\n- dimensions: 170 x 170 x 90 mm\n- weight: 1.8 kg\n",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Static 1 tr 31"
+        },
+        {
+          "dmxRange": [
+            81,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Jump"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Fade"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "8CH Mode",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "3CH Mode 1",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "4CH Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "5CH Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      130,
+      100,
+      130
+    ],
+    "weight": 1.8,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 500,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        45.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270005",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520003",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.543600,0.406600,36.570006",
+      "hex": "#ff8000"
+    },
+    {
+      "name": "CoolWhite",
+      "cie": "0.312700,0.329000,100.000013",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Static LED Wash Light :: IP20 / 6  x 15 W RGBWA\n12.000 lux @ 1m\nDMX operation: 2, 3, 3 (RGB), 4, 5, 8 channels\nIntelligent Temperature Monitoring), reduces light output to prevent overheating and controls the fan speed\n\nProjection intensity:\n- Red: 1500lux @ 1m\n- Green: 3000lux @ 1m\n- Blue: 3700lux @ 1m\n- White: 4100lux @ 1m\n- Full power: 12000lux @ 1m\n\nConnectors:\n- DMX: 3p XLR male and female\n- Power: IEC power connector\nPower:\n- Voltage: AC100-240V 50/60Hz\n- Power: 50W\n- Fuse: F3AL 250V\nPhysical:\n- dimensions: 170 x 170 x 90 mm\n- weight: 1.8 kg",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-10T08:55:24",
+      "text": "rev 004"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7f617d2e6ade8b7e"
+  },
+  "manufacturerKey": "ayra",
+  "fixtureKey": "compar-10",
+  "gwFixtureTypeID": "9A31AD35-7B2C-4923-B2E7-FF1E4C396DCC"
+}

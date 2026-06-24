@@ -1,0 +1,289 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Blinder II",
+  "shortName": "Blind2",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-07",
+    "lastModifyDate": "2023-09-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 04867927-5406-4199-944F-7F683C650CBB"
+    }
+  },
+  "comment": "2x 100W LED Blinder unit",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Program 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Program 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Program 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Program 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Program 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Program 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Onboard Menu Selection"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Curve"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve 1"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve 2"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve 3"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 Channel Mode",
+      "channels": [
+        "Dim",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "4 Channel Mode",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "7 Channel Mode",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      214,
+      116,
+      372
+    ],
+    "weight": 4.5,
+    "power": 100,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 12566,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3000K",
+      "cie": "0.431100,0.433200,65.310000",
+      "hex": "#ffcc61"
+    }
+  ],
+  "gwSpecs": {
+    "description": "2x 100W LED Blinder unit",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-09-08T00:28:41",
+      "text": "1.01"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f092cdea4583e990"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "blinder-ii",
+  "gwFixtureTypeID": "04867927-5406-4199-944F-7F683C650CBB"
+}

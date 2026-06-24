@@ -1,0 +1,240 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PINSPOT LED QUAD DMX",
+  "shortName": "PINSPOTLEDQ",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-07-11",
+    "lastModifyDate": "2023-07-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D7DA2305-1B42-41E8-81D4-C94C0841C3F6"
+    }
+  },
+  "comment": "The ADJ Pinspot LED Quad DMX is a 8-Watt Quad Color (4-IN-1) Pinspot with red, green, blue and white diodes on one LED. It produces sharp 15-degree beams on light, and is designed to spot tables, decor, architecture or used for special effects.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "0 Percent"
+        },
+        {
+          "dmxRange": [
+            1,
+            62
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            63,
+            63
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "25 Percent"
+        },
+        {
+          "dmxRange": [
+            64,
+            126
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "50 Percent"
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "75 Percent"
+        },
+        {
+          "dmxRange": [
+            192,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "100 Percent"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "No Strobing"
+        },
+        {
+          "dmxRange": [
+            8,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "SLOW - FAST"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6 Channel Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      64,
+      190,
+      64
+    ],
+    "weight": 1.0,
+    "power": 8,
+    "bulb": {
+      "type": "LED",
+      "lumens": 112,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.696000,0.303000,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green ",
+      "cie": "0.163000,0.724000,100.000000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.146000,0.037000,100.000000",
+      "hex": "#8700ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.301000,0.305000,100.000000",
+      "hex": "#fffcff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "The ADJ Pinspot LED Quad DMX is a 8-Watt Quad Color (4-IN-1) Pinspot with red, green, blue and white diodes on one LED. It produces sharp 15-degree beams on light, and is designed to spot tables, decor, architecture or used for special effects.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-07-13T16:35:02",
+      "text": "2023-13-07 First Release"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "b6c4a06cc205837a"
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "pinspot-led-quad-dmx",
+  "gwFixtureTypeID": "D7DA2305-1B42-41E8-81D4-C94C0841C3F6"
+}

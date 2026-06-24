@@ -1,0 +1,893 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SIDIUS ZOOM 555",
+  "shortName": "SidiusZ555",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-06-02",
+    "lastModifyDate": "2026-06-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B6C8C566-E629-4CAB-A8E2-09CB194370BA"
+    }
+  },
+  "comment": "SIDIUS ZOOM 555 es una cabeza móvil que incluye 37 LEDs RGBW de 15W. Esta serie de brillantes LEDs permite obtener un rico espectro de colores mezclando R, G, B, W. Sus motores de alta calidad ofrecen movimientos suaves en 8 y 16 bits con amplio desplazamiento. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar a través de los menús, seleccionando parámetros tales como: Pan/Tilt reverse o función de reinicio. Incluye 3 modos DMX (12, 20 y 32 canales), dimerización de los colores primarios (con función de mezcla), zoom y función estrobo. Asimismo, la matriz completa de LEDs puede ser dividida en 4 zonas diferentes y controlar un color específico en cada una de ellas.",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Pan"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Tilt"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "F > S"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            214
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "S > F"
+        }
+      ]
+    },
+    "Beam Shaper": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 2"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 3"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 4"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 5"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 6"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 7"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 8"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 9"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 10"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 11"
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 12"
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 13"
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 14"
+        },
+        {
+          "dmxRange": [
+            150,
+            159
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 15"
+        },
+        {
+          "dmxRange": [
+            160,
+            169
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape 16"
+        },
+        {
+          "dmxRange": [
+            170,
+            178
+          ],
+          "type": "Effect",
+          "effectName": "Jump Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            187
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 1"
+        },
+        {
+          "dmxRange": [
+            188,
+            196
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 2"
+        },
+        {
+          "dmxRange": [
+            197,
+            205
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 3"
+        },
+        {
+          "dmxRange": [
+            206,
+            214
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 4"
+        },
+        {
+          "dmxRange": [
+            215,
+            223
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 5"
+        },
+        {
+          "dmxRange": [
+            224,
+            232
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 6"
+        },
+        {
+          "dmxRange": [
+            233,
+            241
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 7"
+        },
+        {
+          "dmxRange": [
+            242,
+            250
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 8"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Macro 9"
+        }
+      ]
+    },
+    "Shaper Macros Speed": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "F > S"
+      }
+    },
+    "Beam Shaper <>": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            149
+          ],
+          "type": "Unknown (BeamShaperPos)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Index"
+        },
+        {
+          "dmxRange": [
+            150,
+            159
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 1"
+        },
+        {
+          "dmxRange": [
+            160,
+            169
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 2"
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 3"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 4"
+        },
+        {
+          "dmxRange": [
+            190,
+            199
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 5"
+        },
+        {
+          "dmxRange": [
+            200,
+            209
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 6"
+        },
+        {
+          "dmxRange": [
+            210,
+            219
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 7"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Mode 8"
+        }
+      ]
+    },
+    "Beam Shaper Rotate": {
+      "capability": {
+        "type": "Unknown (BeamShaperPosRotate)",
+        "physicalStart": "0rpm",
+        "physicalEnd": "0.16666666666666669rpm",
+        "comment": "F > S"
+      }
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "CTO"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 1"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 2"
+        },
+        {
+          "dmxRange": [
+            150,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Instant Dimmer"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gradual Dimmer Fast"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gradual Dimmer Normal"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gradual Dimmer Slow"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gradual Dimmer Very Slow"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "R > G > B > R > W > B",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "12 CHANNELS",
+      "channels": [
+        "P",
+        "T",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Strobe1",
+        "Beam Shaper",
+        "Shaper Macros Speed",
+        "Beam Shaper <>",
+        "Beam Shaper Rotate",
+        "CTO",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "20 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Strobe1",
+        "Dim Mode",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "Beam Shaper",
+        "Shaper Macros Speed",
+        "Beam Shaper <>",
+        "Beam Shaper Rotate",
+        "CTO",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "32 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Strobe1",
+        "Dim Mode",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "White 4",
+        "C1",
+        "Beam Shaper",
+        "Shaper Macros Speed",
+        "Beam Shaper <>",
+        "Beam Shaper Rotate",
+        "CTO",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ],
+    "weight": 18.0,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 130,
+      "colorTemperature": 15500
+    },
+    "lens": {
+      "degreesMinMax": [
+        53.0,
+        63.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "SIDIUS ZOOM 555 es una cabeza móvil que incluye 37 LEDs RGBW de 15W. Esta serie de brillantes LEDs permite obtener un rico espectro de colores mezclando R, G, B, W. Sus motores de alta calidad ofrecen movimientos suaves en 8 y 16 bits con amplio desplazamiento. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar a través de los menús, seleccionando parámetros tales como: Pan/Tilt reverse o función de reinicio. Incluye 3 modos DMX (12, 20 y 32 canales), dimerización de los colores primarios (con función de mezcla), zoom y función estrobo. Asimismo, la matriz completa de LEDs puede ser dividida en 4 zonas diferentes y controlar un color específico en cada una de ellas.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2026-06-02T10:52:44",
+      "text": "Version1_3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "81ac3fe36e927e49"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "sidius-zoom-555",
+  "gwFixtureTypeID": "B6C8C566-E629-4CAB-A8E2-09CB194370BA"
+}

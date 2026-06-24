@@ -1,0 +1,301 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Bee Eye RGBW Moving Head",
+  "shortName": "Bee Eye",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-31",
+    "lastModifyDate": "2023-12-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 97325B60-2B21-43D7-9989-98B4B252FF38"
+    }
+  },
+  "comment": "Bee Eye 6x15W RGBW Moving Head",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Iris": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Iris",
+          "openPercentStart": 0,
+          "openPercentEnd": 1,
+          "comment": "Eye Position"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Iris",
+          "openPercentStart": 0,
+          "openPercentEnd": 1,
+          "comment": "Eye CW Rotation"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Iris",
+          "openPercentStart": 0,
+          "openPercentEnd": 1,
+          "comment": "Eye CCW Rotation"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "StrobeM Strobe": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Pos FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Color Combination",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Color Jump",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Color Gradient 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Gradient 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Pos FX Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Iris",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "StrobeM Strobe",
+        "Pos FX",
+        "Pos FX Rate",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      225,
+      70,
+      225
+    ],
+    "weight": 4.0,
+    "power": 90,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1500,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        51.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-12-31T04:09:14",
+      "text": "Rev 4"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7bc07e55cfa3a14d"
+  },
+  "manufacturerKey": "shehds",
+  "fixtureKey": "bee-eye-rgbw-moving-head",
+  "gwFixtureTypeID": "97325B60-2B21-43D7-9989-98B4B252FF38"
+}

@@ -1,0 +1,2825 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EclPanelIPHard2x1",
+  "shortName": "PanelHard2x1",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "B37C8EC8-45DC-4B91-AB86-6CAA0CC825A5"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      343,
+      144,
+      687
+    ],
+    "weight": 19.8,
+    "power": 550,
+    "bulb": {
+      "type": "624nm / 526nm / 441nm / 465nm / 603nm / 582nm LED",
+      "lumens": 27187,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        36.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Dimmer fine"
+      ]
+    },
+    "Body ColorRGB_Red": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorRGB_Red fine"
+      ]
+    },
+    "Body ColorRGB_Green": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorRGB_Green fine"
+      ]
+    },
+    "Body ColorRGB_Blue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorRGB_Blue fine"
+      ]
+    },
+    "Body CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body CTC fine"
+      ]
+    },
+    "Body Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Body CTC<>RGB": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "Open_Nofeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "NoFunction",
+          "comment": "Open_Nofeature 1"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open_Nofeature 2"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Body Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            9
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerSpeed"
+        },
+        {
+          "dmxRange": [
+            10,
+            21
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve"
+        },
+        {
+          "dmxRange": [
+            22,
+            25
+          ],
+          "type": "Maintenance",
+          "comment": "Tungsten Emulation"
+        },
+        {
+          "dmxRange": [
+            26,
+            29
+          ],
+          "type": "Maintenance",
+          "comment": "DynamicSmoothing"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "comment": "ColorSpace"
+        },
+        {
+          "dmxRange": [
+            40,
+            43
+          ],
+          "type": "Maintenance",
+          "comment": "LedMode"
+        },
+        {
+          "dmxRange": [
+            44,
+            61
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            62,
+            81
+          ],
+          "type": "Maintenance",
+          "comment": "SignalFault"
+        },
+        {
+          "dmxRange": [
+            82,
+            99
+          ],
+          "type": "Maintenance",
+          "comment": "StartupBehaviour"
+        },
+        {
+          "dmxRange": [
+            100,
+            121
+          ],
+          "type": "Maintenance",
+          "comment": "LEDFrequency"
+        },
+        {
+          "dmxRange": [
+            122,
+            129
+          ],
+          "type": "Maintenance",
+          "comment": "PowerLimit"
+        },
+        {
+          "dmxRange": [
+            130,
+            133
+          ],
+          "type": "Maintenance",
+          "comment": "InvertMapping"
+        },
+        {
+          "dmxRange": [
+            134,
+            161
+          ],
+          "type": "Generic",
+          "comment": "DisplaySettings"
+        },
+        {
+          "dmxRange": [
+            162,
+            179
+          ],
+          "type": "Maintenance",
+          "comment": "Standalone Mode"
+        },
+        {
+          "dmxRange": [
+            180,
+            219
+          ],
+          "type": "Maintenance",
+          "comment": "Standalone Preset Mode"
+        },
+        {
+          "dmxRange": [
+            220,
+            227
+          ],
+          "type": "Maintenance",
+          "comment": "Configuration Preset"
+        },
+        {
+          "dmxRange": [
+            228,
+            229
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve TWC"
+        },
+        {
+          "dmxRange": [
+            230,
+            231
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerSpeed FAST"
+        },
+        {
+          "dmxRange": [
+            232,
+            235
+          ],
+          "type": "Maintenance",
+          "comment": "Dimmer Minimum End"
+        },
+        {
+          "dmxRange": [
+            236,
+            241
+          ],
+          "type": "NoFunction",
+          "comment": "TBD1"
+        },
+        {
+          "dmxRange": [
+            242,
+            251
+          ],
+          "type": "Maintenance",
+          "comment": "Controls Default"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "TBD2"
+        }
+      ]
+    },
+    "Body CTCRangeSelector": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            30,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "Body WhitePoint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Generic",
+          "comment": "Default WhitePoint "
+        },
+        {
+          "dmxRange": [
+            2,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body WhitePoint fine"
+      ]
+    },
+    "Body TransitionType": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            89
+          ],
+          "type": "Generic",
+          "comment": "TransitionType"
+        },
+        {
+          "dmxRange": [
+            90,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "TBD"
+        }
+      ]
+    },
+    "Body Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Maintenance",
+          "comment": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            41
+          ],
+          "type": "Maintenance",
+          "comment": "User Presets"
+        },
+        {
+          "dmxRange": [
+            42,
+            167
+          ],
+          "type": "NoFunction",
+          "comment": "TBD1"
+        },
+        {
+          "dmxRange": [
+            168,
+            219
+          ],
+          "type": "Maintenance",
+          "comment": "Factory Presets"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "TBD2"
+        }
+      ]
+    },
+    "Body FanMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            119
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "Body Dummy": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Dummy 1"
+        }
+      ]
+    },
+    "Body Effects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX  Selector"
+        }
+      ]
+    },
+    "Body Effects2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Party Effect - CCT"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Candle - CCT Range"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Clouds - Offset"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Club Lights - Color Variety"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "comment": "FX Color Chase - Offset"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "comment": "FX Cop Car - Colors"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Effect",
+          "comment": "FX Fire - CCT Range"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Effect",
+          "comment": "FX Fireworks - Colors"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Effect",
+          "comment": "FX Strobe - Speed"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - Frequency"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "comment": "FX Paparazzi - Frequency"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - Frequency"
+        },
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "Effect",
+          "comment": "FX Television - CCT Range "
+        },
+        {
+          "dmxRange": [
+            13,
+            13
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Decay"
+        },
+        {
+          "dmxRange": [
+            14,
+            14
+          ],
+          "type": "Effect",
+          "comment": "FX - Fluo Flicker - Speed  "
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "Effect",
+          "comment": "FX Process - Speed  "
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - Speed  "
+        },
+        {
+          "dmxRange": [
+            17,
+            254
+          ],
+          "type": "Effect",
+          "comment": "FX Party Effect - Saturation"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - Random Frequency"
+        }
+      ]
+    },
+    "Body Effects3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Party Effect - Speed"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Candle - Speed"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Clouds - Speed"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Club Lights - Speed"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "comment": "FX Color Chase - Speed"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "comment": "FX Cop Car - Flash Pattern"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Effect",
+          "comment": "FX Fire - Speed"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Effect",
+          "comment": "FX Fireworks - Speed"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Effect",
+          "comment": "FX Strobe - CCT"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - Speed "
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "comment": "FX Paparazzi - Flash Type"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - Pulse Duration"
+        },
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "Effect",
+          "comment": "FX Television - Speed"
+        },
+        {
+          "dmxRange": [
+            13,
+            13
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Auto Trigger"
+        },
+        {
+          "dmxRange": [
+            14,
+            14
+          ],
+          "type": "Effect",
+          "comment": "FX - Fluo Flicker - Frequency"
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "Effect",
+          "comment": "FX Process - Direction"
+        },
+        {
+          "dmxRange": [
+            16,
+            249
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - Min Intensity Level"
+        },
+        {
+          "dmxRange": [
+            250,
+            254
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Manual Trigger"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - Random Speed"
+        }
+      ]
+    },
+    "Body Effects4": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Clouds - NoFeature"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Color Chase - CCT"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Cop Car - Speed"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Strobe - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - CCT"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "comment": "FX Paparazzi - CCT"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - CCT"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - CCT"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Effect",
+          "comment": "FX Fluo Flicker - CCT"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Effect",
+          "comment": "FX Process - CCT"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - CCT"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "Effect",
+          "comment": "FX Color Chase - Saturation"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Clouds - Sync Loop"
+        }
+      ]
+    },
+    "Body Effects5": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Color Chase - NoFeature"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Strobe - Crossfade to Color"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Paparazzi - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Effect",
+          "comment": "FX Fluo Flicker - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Effect",
+          "comment": "FX Process - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            8,
+            254
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - Green Magenta Point"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Color Chase - Sync Loop"
+        }
+      ]
+    },
+    "Body Effects6": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Strobe - Hue"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - NoFeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - Crossfade to Color"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Crossfade to Color"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "comment": "FX Fluo Flicker - Crossfade to Color"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "comment": "FX Process - Crossfade to Color"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - Crossfade to Color"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Lightning - Sync Loop"
+        }
+      ]
+    },
+    "Body Effects7": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Strobe - Saturation"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - Hue"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Hue"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Fluo Flicker - Hue"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "comment": "FX Process - Hue"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - Hue"
+        }
+      ]
+    },
+    "Body Effects8": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "comment": "FX Pulsing - Saturation"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "comment": "FX Explosion - Saturation"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "comment": "FX Fluo Flicker - Saturation"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "comment": "FX Process - Saturation"
+        },
+        {
+          "dmxRange": [
+            4,
+            255
+          ],
+          "type": "Effect",
+          "comment": "FX Welding - Saturation"
+        }
+      ]
+    },
+    "Body RGB<>GEL": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "RGB<>GEL"
+        }
+      ]
+    },
+    "Body GelSource": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            89
+          ],
+          "type": "Generic",
+          "comment": "GelSource"
+        },
+        {
+          "dmxRange": [
+            90,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 1"
+        }
+      ]
+    },
+    "Body GelCategory": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "Generic",
+          "comment": "GelBrandCategory"
+        },
+        {
+          "dmxRange": [
+            100,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 1"
+        }
+      ]
+    },
+    "Body GelSelector": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Generic",
+          "comment": "RC Color Correction"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Generic",
+          "comment": "RC CalC"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Generic",
+          "comment": "RC StSelect"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Generic",
+          "comment": "RC C-Lux"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Generic",
+          "comment": "Lee Color Correction"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Generic",
+          "comment": "Lee Color Filters"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Generic",
+          "comment": "Lee 600 Series"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Generic",
+          "comment": "Lee Cosmetic Filters"
+        },
+        {
+          "dmxRange": [
+            8,
+            19
+          ],
+          "type": "Generic",
+          "comment": "Lee 700 Series"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 7"
+        },
+        {
+          "dmxRange": [
+            22,
+            35
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 3"
+        },
+        {
+          "dmxRange": [
+            36,
+            67
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 8"
+        },
+        {
+          "dmxRange": [
+            68,
+            68
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 1"
+        },
+        {
+          "dmxRange": [
+            69,
+            79
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 2"
+        },
+        {
+          "dmxRange": [
+            80,
+            83
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 5"
+        },
+        {
+          "dmxRange": [
+            84,
+            93
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 9"
+        },
+        {
+          "dmxRange": [
+            94,
+            179
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 4"
+        },
+        {
+          "dmxRange": [
+            180,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 6"
+        }
+      ]
+    },
+    "Body CTC<>XY": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Body CIE_X": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "CIE_X 1"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body CIE_X fine"
+      ]
+    },
+    "Body CIE_Y": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "CIE_Y 1"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body CIE_Y fine"
+      ]
+    },
+    "Body CIE_Brightness": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "CIE_Brightness 1"
+        }
+      ]
+    },
+    "Body ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_R fine"
+      ]
+    },
+    "Body ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_B fine"
+      ]
+    },
+    "Body ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_G fine"
+      ]
+    },
+    "Body ColorAdd_BM": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "ColorAdd_BM"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_BM fine"
+      ]
+    },
+    "Body ColorAdd_GY": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Lime"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_GY fine"
+      ]
+    },
+    "Body ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_WW fine"
+      ]
+    },
+    "Pixel2V ColorRGB_Red": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel2V ColorRGB_Green": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel2V ColorRGB_Blue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel2V Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Pixel2H ColorRGB_Red": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel2H ColorRGB_Green": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel2H ColorRGB_Blue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel2H Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Pixel4 ColorRGB_Red": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel4 ColorRGB_Green": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel4 ColorRGB_Blue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel4 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Pixel8 ColorRGB_Red": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel8 ColorRGB_Green": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel8 ColorRGB_Blue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Pixel8 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "8 Body Offset 1-5 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "8 Body Offset 1-5 Dimmer fine"
+      ]
+    },
+    "Pixel8 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ],
+      "fineChannelAliases": [
+        "Pixel8 ColorAdd_R fine"
+      ]
+    },
+    "Pixel8 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ],
+      "fineChannelAliases": [
+        "Pixel8 ColorAdd_G fine"
+      ]
+    },
+    "Pixel8 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ],
+      "fineChannelAliases": [
+        "Pixel8 ColorAdd_B fine"
+      ]
+    },
+    "Pixel8 ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Pixel8 ColorAdd_WW fine"
+      ]
+    },
+    "Pixel8 CIE_X": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "CIE_X 1"
+        }
+      ]
+    },
+    "Pixel8 CIE_Y": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "CIE_Y 1"
+        }
+      ]
+    },
+    "8 Body Offset 1-4 FanMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            119
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "8 Body Offset 1-4 Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            11
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerSpeed"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "NoFunction",
+          "comment": "TBD1"
+        },
+        {
+          "dmxRange": [
+            14,
+            23
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve"
+        },
+        {
+          "dmxRange": [
+            24,
+            35
+          ],
+          "type": "NoFunction",
+          "comment": "TBD2"
+        },
+        {
+          "dmxRange": [
+            36,
+            39
+          ],
+          "type": "Maintenance",
+          "comment": "Tungsten Emulation"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "NoFunction",
+          "comment": "TBD3"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Maintenance",
+          "comment": "HighCRI"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "NoFunction",
+          "comment": "TBD12"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Maintenance",
+          "comment": "HighBrightness"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "NoFunction",
+          "comment": "TBD4"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Maintenance",
+          "comment": "ColorSpace"
+        },
+        {
+          "dmxRange": [
+            60,
+            81
+          ],
+          "type": "NoFunction",
+          "comment": "TBD5"
+        },
+        {
+          "dmxRange": [
+            82,
+            97
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            98,
+            105
+          ],
+          "type": "NoFunction",
+          "comment": "TBD6"
+        },
+        {
+          "dmxRange": [
+            106,
+            111
+          ],
+          "type": "Maintenance",
+          "comment": "SignalFault"
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "NoFunction",
+          "comment": "TBD7"
+        },
+        {
+          "dmxRange": [
+            114,
+            119
+          ],
+          "type": "Maintenance",
+          "comment": "SignalFault2"
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "NoFunction",
+          "comment": "TBD13"
+        },
+        {
+          "dmxRange": [
+            122,
+            125
+          ],
+          "type": "Maintenance",
+          "comment": "StartupBehaviour"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "NoFunction",
+          "comment": "TBD14"
+        },
+        {
+          "dmxRange": [
+            128,
+            131
+          ],
+          "type": "Maintenance",
+          "comment": "StartupBehaviour2"
+        },
+        {
+          "dmxRange": [
+            132,
+            135
+          ],
+          "type": "NoFunction",
+          "comment": "TBD15"
+        },
+        {
+          "dmxRange": [
+            136,
+            157
+          ],
+          "type": "Maintenance",
+          "comment": "LEDFrequency"
+        },
+        {
+          "dmxRange": [
+            158,
+            161
+          ],
+          "type": "NoFunction",
+          "comment": "TBD8"
+        },
+        {
+          "dmxRange": [
+            162,
+            169
+          ],
+          "type": "Maintenance",
+          "comment": "LampPowerMode"
+        },
+        {
+          "dmxRange": [
+            170,
+            171
+          ],
+          "type": "NoFunction",
+          "comment": "TBD9"
+        },
+        {
+          "dmxRange": [
+            172,
+            195
+          ],
+          "type": "Generic",
+          "comment": "DisplaySettings"
+        },
+        {
+          "dmxRange": [
+            196,
+            249
+          ],
+          "type": "NoFunction",
+          "comment": "TBD10"
+        },
+        {
+          "dmxRange": [
+            250,
+            251
+          ],
+          "type": "Maintenance",
+          "comment": "Controls Default"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "TBD11"
+        }
+      ]
+    },
+    "Body ColorModelMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "comment": "ControlMode"
+        },
+        {
+          "dmxRange": [
+            50,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "Body ColorEffects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Generic",
+          "comment": "Hue"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Generic",
+          "comment": "CIE_X"
+        },
+        {
+          "dmxRange": [
+            6,
+            89
+          ],
+          "type": "Generic",
+          "comment": "GelSource"
+        },
+        {
+          "dmxRange": [
+            90,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "Body ColorEffects2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Generic",
+          "comment": "Saturation"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Generic",
+          "comment": "CIE_Y"
+        },
+        {
+          "dmxRange": [
+            4,
+            99
+          ],
+          "type": "Generic",
+          "comment": "GelBrandCategory"
+        },
+        {
+          "dmxRange": [
+            100,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "Body ColorEffects3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Generic",
+          "comment": "Intensity"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Generic",
+          "comment": "RC Color Correction"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Generic",
+          "comment": "RC CalC"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Generic",
+          "comment": "RC StSelect"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Generic",
+          "comment": "RC C-Lux"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Generic",
+          "comment": "Lee Color Correction"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Generic",
+          "comment": "Lee Color Filters"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Generic",
+          "comment": "Lee 600 Series"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "Generic",
+          "comment": "Lee Cosmetic Filters"
+        },
+        {
+          "dmxRange": [
+            12,
+            19
+          ],
+          "type": "Generic",
+          "comment": "Lee 700 Series"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 6"
+        },
+        {
+          "dmxRange": [
+            22,
+            35
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 2"
+        },
+        {
+          "dmxRange": [
+            36,
+            67
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 7"
+        },
+        {
+          "dmxRange": [
+            68,
+            68
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 1"
+        },
+        {
+          "dmxRange": [
+            69,
+            79
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature2"
+        },
+        {
+          "dmxRange": [
+            80,
+            83
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 4"
+        },
+        {
+          "dmxRange": [
+            84,
+            93
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 8"
+        },
+        {
+          "dmxRange": [
+            94,
+            179
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 3"
+        },
+        {
+          "dmxRange": [
+            180,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 5"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "UNO_1ch",
+      "shortName": "UNO_1ch",
+      "channels": [
+        "Body Dimmer"
+      ]
+    },
+    {
+      "name": "DUO_2ch",
+      "shortName": "DUO_2ch",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine"
+      ]
+    },
+    {
+      "name": "IRGB_4ch",
+      "shortName": "IRGB_4ch",
+      "channels": [
+        "Body Dimmer",
+        "Body ColorRGB_Red",
+        "Body ColorRGB_Green",
+        "Body ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "Standard_11ch",
+      "shortName": "Standard_11c",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body CTC",
+        "Body CTC fine",
+        "Body Tint",
+        "Body CTC<>RGB",
+        "Body ColorRGB_Red",
+        "Body ColorRGB_Green",
+        "Body ColorRGB_Blue",
+        "Body Shutter1",
+        "Body Control1"
+      ]
+    },
+    {
+      "name": "M16 - CCT + RGB 16bit_21ch",
+      "shortName": "M16 - CCT + ",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body CTC",
+        "Body CTC fine",
+        "Body Tint",
+        "Body CTC<>RGB",
+        "Body ColorRGB_Red",
+        "Body ColorRGB_Red fine",
+        "Body ColorRGB_Green",
+        "Body ColorRGB_Green fine",
+        "Body ColorRGB_Blue",
+        "Body ColorRGB_Blue fine",
+        "Body CTCRangeSelector",
+        "Body WhitePoint",
+        "Body WhitePoint fine",
+        "Body TransitionType",
+        "Body Shutter1",
+        "Body Control1",
+        "Body Function",
+        "Body FanMode",
+        "Body Dummy"
+      ]
+    },
+    {
+      "name": "M16FX - CCT + RGB 16bit_29ch",
+      "shortName": "M16FX - CCT ",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body CTC",
+        "Body CTC fine",
+        "Body Tint",
+        "Body CTC<>RGB",
+        "Body ColorRGB_Red",
+        "Body ColorRGB_Red fine",
+        "Body ColorRGB_Green",
+        "Body ColorRGB_Green fine",
+        "Body ColorRGB_Blue",
+        "Body ColorRGB_Blue fine",
+        "Body Effects1",
+        "Body Effects2",
+        "Body Effects3",
+        "Body Effects4",
+        "Body Effects5",
+        "Body Effects6",
+        "Body Effects7",
+        "Body Effects8",
+        "Body CTCRangeSelector",
+        "Body WhitePoint",
+        "Body WhitePoint fine",
+        "Body TransitionType",
+        "Body Shutter1",
+        "Body Control1",
+        "Body Function",
+        "Body FanMode",
+        "Body Dummy"
+      ]
+    },
+    {
+      "name": "M18 - CCT + RGB + GEL 16bit_25ch",
+      "shortName": "M18 - CCT + ",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body CTC",
+        "Body CTC fine",
+        "Body Tint",
+        "Body CTC<>RGB",
+        "Body ColorRGB_Red",
+        "Body ColorRGB_Red fine",
+        "Body ColorRGB_Green",
+        "Body ColorRGB_Green fine",
+        "Body ColorRGB_Blue",
+        "Body ColorRGB_Blue fine",
+        "Body RGB<>GEL",
+        "Body GelSource",
+        "Body GelCategory",
+        "Body GelSelector",
+        "Body CTCRangeSelector",
+        "Body WhitePoint",
+        "Body WhitePoint fine",
+        "Body TransitionType",
+        "Body Shutter1",
+        "Body Control1",
+        "Body Function",
+        "Body FanMode",
+        "Body Dummy"
+      ]
+    },
+    {
+      "name": "M28 - CCT + XY 16bit_17ch",
+      "shortName": "M28 - CCT + ",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body CTC",
+        "Body CTC fine",
+        "Body Tint",
+        "Body CTC<>XY",
+        "Body CIE_X",
+        "Body CIE_X fine",
+        "Body CIE_Y",
+        "Body CIE_Y fine",
+        "Body CTCRangeSelector",
+        "Body TransitionType",
+        "Body Shutter1",
+        "Body Control1",
+        "Body Function",
+        "Body FanMode",
+        "Body Dummy"
+      ]
+    },
+    {
+      "name": "M36 - RAW 16bit_19ch",
+      "shortName": "M36 - RAW 16",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body ColorAdd_R",
+        "Body ColorAdd_R fine",
+        "Body ColorAdd_B",
+        "Body ColorAdd_B fine",
+        "Body ColorAdd_G",
+        "Body ColorAdd_G fine",
+        "Body ColorAdd_BM",
+        "Body ColorAdd_BM fine",
+        "Body ColorAdd_GY",
+        "Body ColorAdd_GY fine",
+        "Body ColorAdd_WW",
+        "Body ColorAdd_WW fine",
+        "Body Shutter1",
+        "Body Control1",
+        "Body Function",
+        "Body FanMode",
+        "Body Dummy"
+      ]
+    },
+    {
+      "name": "PIXEL 2V",
+      "shortName": "PIXEL 2V",
+      "channels": [
+        "Pixel2V ColorRGB_Red",
+        "Pixel2V ColorRGB_Green",
+        "Pixel2V ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 2H",
+      "shortName": "PIXEL 2H",
+      "channels": [
+        "Pixel2H ColorRGB_Red",
+        "Pixel2H ColorRGB_Green",
+        "Pixel2H ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 4",
+      "shortName": "PIXEL 4",
+      "channels": [
+        "Pixel4 ColorRGB_Red",
+        "Pixel4 ColorRGB_Green",
+        "Pixel4 ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 8",
+      "shortName": "PIXEL 8",
+      "channels": [
+        "Pixel8 ColorRGB_Red",
+        "Pixel8 ColorRGB_Green",
+        "Pixel8 ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 2V + I",
+      "shortName": "PIXEL 2V + I",
+      "channels": [
+        "Pixel2V Dimmer",
+        "Pixel2V ColorRGB_Red",
+        "Pixel2V ColorRGB_Green",
+        "Pixel2V ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 2H + I",
+      "shortName": "PIXEL 2H + I",
+      "channels": [
+        "Pixel2H Dimmer",
+        "Pixel2H ColorRGB_Red",
+        "Pixel2H ColorRGB_Green",
+        "Pixel2H ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 4 + I",
+      "shortName": "PIXEL 4 + I",
+      "channels": [
+        "Pixel4 Dimmer",
+        "Pixel4 ColorRGB_Red",
+        "Pixel4 ColorRGB_Green",
+        "Pixel4 ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 8 + I",
+      "shortName": "PIXEL 8 + I",
+      "channels": [
+        "Pixel8 Dimmer",
+        "Pixel8 ColorRGB_Red",
+        "Pixel8 ColorRGB_Green",
+        "Pixel8 ColorRGB_Blue"
+      ]
+    },
+    {
+      "name": "PIXEL 8 RGBW MD",
+      "shortName": "PIXEL 8 RGBW",
+      "channels": [
+        "8 Body Offset 1-5 Dimmer",
+        "8 Body Offset 1-5 Dimmer fine",
+        "Pixel8 ColorAdd_R",
+        "Pixel8 ColorAdd_G",
+        "Pixel8 ColorAdd_B",
+        "Pixel8 ColorAdd_WW"
+      ]
+    },
+    {
+      "name": "PIXEL 8 RGBW 16bit",
+      "shortName": "PIXEL 8 RGBW",
+      "channels": [
+        "Pixel8 ColorAdd_R",
+        "Pixel8 ColorAdd_R fine",
+        "Pixel8 ColorAdd_G",
+        "Pixel8 ColorAdd_G fine",
+        "Pixel8 ColorAdd_B",
+        "Pixel8 ColorAdd_B fine",
+        "Pixel8 ColorAdd_WW",
+        "Pixel8 ColorAdd_WW fine"
+      ]
+    },
+    {
+      "name": "PIXEL XY + I",
+      "shortName": "PIXEL XY + I",
+      "channels": [
+        "Pixel8 Dimmer",
+        "Pixel8 CIE_X",
+        "Pixel8 CIE_Y",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "8 Body Offset 1-4 FanMode",
+        "8 Body Offset 1-4 Control1"
+      ]
+    },
+    {
+      "name": "Multimode 8bit",
+      "shortName": "Multimode 8b",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body ColorModelMode",
+        "Body ColorEffects1",
+        "Body ColorEffects2",
+        "Body ColorEffects3",
+        "Body Effects1",
+        "Body Effects2",
+        "Body Effects3",
+        "Body Effects4",
+        "Body Effects5",
+        "Body Effects6",
+        "Body Effects7",
+        "Body Effects8",
+        "Body Shutter1",
+        "Body Control1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red_RAW",
+      "cie": "0.697000,0.301000,39.222000",
+      "hex": "#ff0000",
+      "dominantWavelength": 624.0
+    },
+    {
+      "name": "Green_RAW",
+      "cie": "0.163000,0.719000,90.051000",
+      "hex": "#00ff00",
+      "dominantWavelength": 526.0
+    },
+    {
+      "name": "Blue_RAW",
+      "cie": "0.161000,0.019000,7.673000",
+      "hex": "#9d00ff",
+      "dominantWavelength": 441.0
+    },
+    {
+      "name": "Royal Blue_RAW",
+      "cie": "0.133000,0.066000,14.782000",
+      "hex": "#0047ff",
+      "dominantWavelength": 465.0
+    },
+    {
+      "name": "Mint_RAW",
+      "cie": "0.405000,0.548000,100.000000",
+      "hex": "#e9ff00",
+      "dominantWavelength": 603.0
+    },
+    {
+      "name": "Warm White_RAW",
+      "cie": "0.445000,0.419000,97.220000",
+      "hex": "#ffec79",
+      "dominantWavelength": 582.0
+    },
+    {
+      "name": "Red_RGB",
+      "cie": "0.688200,0.306400,33.616000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green_RGB",
+      "cie": "0.179400,0.713800,67.232000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue_RGB",
+      "cie": "0.153400,0.039700,10.847000",
+      "hex": "#5600ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "The EclPanel IPHard2x1 is a 2x1 format IP65 Hard Light, featuring an LED source optimized for long throw film applications. This unit is designed to deliver quality lighting in all weather conditions. Its optical system, equipped with a 6-color LED array and collimator  lenses controllable in 8 sections, producing a 20° native beam angle. This configuration enhances lux intensity for long throw uses and broadens the light spectrum, resulting in superior light quality. The EclPanel IPHard can be transformed into a soft light source by attaching optical modifiers to its accessory points",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-09-01T13:11:34",
+      "text": "Rev 042 - RAW emitters order fixed"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3b210d0d4afaa634"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "eclpaneliphard2x1",
+  "gwFixtureTypeID": "B37C8EC8-45DC-4B91-AB86-6CAA0CC825A5"
+}

@@ -1,0 +1,127 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VL600 Acclaim PLE WW 70Deg",
+  "shortName": "acclaimledpleww70deg",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-08-24",
+    "lastModifyDate": "2022-11-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4CEE6ECE-177C-11ED-BEBD-525400685065"
+    }
+  },
+  "comment": "Strand Acclaim LED PLE WW works with the industry-standard PLT and SPX lens systems,",
+  "rdm": {
+    "modelId": 275,
+    "softwareVersion": "0x1"
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F - Strobe"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8-Bit Mode",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "16-Bit Mode",
+      "rdmPersonalityIndex": 2,
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      279,
+      432,
+      305
+    ],
+    "weight": 6.0,
+    "power": 195,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        63.0,
+        70.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Strand Acclaim LED PLE WW works with the industry-standard PLT and SPX lens systems,",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2022-11-02T02:26:37",
+      "text": "Update upload by GDTFservice.com, powered by Crescit, commissioned by Strand."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "069d777573906181"
+  },
+  "manufacturerKey": "vari-lite",
+  "fixtureKey": "vl600-acclaim-ple-ww-70deg",
+  "gwFixtureTypeID": "4CEE6ECE-177C-11ED-BEBD-525400685065"
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "UV P40 IP",
+  "shortName": "UV P40 IP",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-02-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B5A1F78B-C3AB-479B-9D51-37B06D5068A1"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Shutter": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "LED Frequency": {
+      "capability": {
+        "type": "Unknown (LEDFrequency)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2CH",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "3CH",
+      "channels": [
+        "StrobeM Shutter",
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "6CH",
+      "channels": [
+        "StrobeM Shutter",
+        "Dim 2",
+        "Dim 2 fine",
+        "Dim Mode",
+        "Dim Curve",
+        "LED Frequency"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "power": 30,
+    "bulb": {
+      "type": "365nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "UV",
+      "cie": "0.176200,0.023800,3.250000",
+      "hex": "#7700ff",
+      "dominantWavelength": 365.0
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-24T12:41:17",
+      "text": "v1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "tourpro",
+  "fixtureKey": "uv-p40-ip",
+  "gwFixtureTypeID": "B5A1F78B-C3AB-479B-9D51-37B06D5068A1"
+}

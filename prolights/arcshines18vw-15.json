@@ -1,0 +1,887 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ArcShineS18VW_15",
+  "shortName": "ASS18VW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-05-13",
+    "lastModifyDate": "2024-05-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3D46E463-8B19-4B95-BC9F-EFF86AE941BB"
+    }
+  },
+  "comment": "The ArcShine S18VW and ArcShine S9VW are a series of slim linear LED fixtures, designed for interior and exterior applications (IP66) such as flood lighting, wall washing and accent lighting.\nThere are two sizes available, one with 18 LEDs (100 cm) and the other with 9 (50 cm) LED emitters, 2W each, with Variable White colour mixing. Its die-cast aluminium body with tempered glass make them perfect additions to urban structures or historical buildings. \nOptic: 15° lenses capable of delivering multiple angles with optional holographic filters.\nOptional holographic symmetric and elliptical filters available: 20°, 60°, 10°x60°, 30°x60°.\nThe ArcShine range has an on-board power supply and DMX/RDM control. The 100 cm version is controllable in two sections.",
+  "rdm": {
+    "modelId": 53381
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6500K"
+        }
+      ]
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Read by menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Dimmer speed Auto"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Dimmer speed Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Dimmer speed Medium"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Dimmer speed Slow"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseInStrobe"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseOutStrobe"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        }
+      ]
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 2800,
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 6500,
+          "comment": "6500"
+        }
+      ]
+    },
+    "Crossfade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorXFade)",
+          "physical": "0%",
+          "comment": "CCT"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorXFade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorXFade)",
+          "physical": "10000%",
+          "comment": "ColorMix"
+        }
+      ]
+    },
+    "CW 2": {
+      "name": "CW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim Mode 2": {
+      "name": "Dim Mode",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "PresetAsMenu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mid"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Slow"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "NoFunction",
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "NoFunction",
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "NoFunction",
+          "comment": "Square Law"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "NoFunction",
+          "comment": "Inverse Square Law"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "NoFunction",
+          "comment": "600 Hz"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "NoFunction",
+          "comment": "1200 Hz"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "NoFunction",
+          "comment": "2000 Hz"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "NoFunction",
+          "comment": "4000 Hz"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "NoFunction",
+          "comment": "6000 Hz"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "NoFunction",
+          "comment": "25 kHz"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Hold"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "BlackOut"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "StandAlone"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Master DMX"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Master NO DMX"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "SLAVE"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Effects"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "Static Colors"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Maintenance",
+          "parameter": 6,
+          "comment": "White Preset"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 7,
+          "comment": "Color Maros"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 8,
+          "comment": "Manual Colors"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Invert Mapping OFF"
+        },
+        {
+          "dmxRange": [
+            54,
+            253
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Invert Mapping ON"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "FactoryDefault"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseInStrobe"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseOutStrobe"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        }
+      ]
+    },
+    "WW 3": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 3": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "3ch",
+      "channels": [
+        "CW",
+        "WW",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "4ch",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine",
+        "CTC",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "9ch",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine",
+        "Sh1",
+        "CTC 2",
+        "Crossfade",
+        "CW 2",
+        "WW 2",
+        "Dim Mode 2",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "9ch2",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Sh1 2",
+        "WW",
+        "CW",
+        "WW 3",
+        "CW 3",
+        "Dim Mode 2",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      60,
+      87,
+      1000
+    ],
+    "weight": 3.5,
+    "power": 2,
+    "bulb": {
+      "type": "484nm / 583nm LED",
+      "lumens": 124,
+      "colorTemperature": 4200
+    },
+    "lens": {
+      "degreesMinMax": [
+        19.1,
+        47.5
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "CW LED",
+      "cie": "0.305000,0.324000,100.000000",
+      "hex": "#f8ffff",
+      "dominantWavelength": 484.0
+    },
+    {
+      "name": "WW LED",
+      "cie": "0.452000,0.414000,87.317000",
+      "hex": "#ffdd74",
+      "dominantWavelength": 583.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "The ArcShine S18VW and ArcShine S9VW are a series of slim linear LED fixtures, designed for interior and exterior applications (IP66) such as flood lighting, wall washing and accent lighting.\nThere are two sizes available, one with 18 LEDs (100 cm) and the other with 9 (50 cm) LED emitters, 2W each, with Variable White colour mixing. Its die-cast aluminium body with tempered glass make them perfect additions to urban structures or historical buildings. \nOptic: 15° lenses capable of delivering multiple angles with optional holographic filters.\nOptional holographic symmetric and elliptical filters available: 20°, 60°, 10°x60°, 30°x60°.\nThe ArcShine range has an on-board power supply and DMX/RDM control. The 100 cm version is controllable in two sections.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-05-13T14:25:38",
+      "text": "Rev 0.05"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c86bd1119d8b9d3e"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "arcshines18vw-15",
+  "gwFixtureTypeID": "3D46E463-8B19-4B95-BC9F-EFF86AE941BB"
+}

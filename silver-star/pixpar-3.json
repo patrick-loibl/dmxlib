@@ -1,0 +1,931 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PixPar 3",
+  "shortName": "PxPr3",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-26",
+    "lastModifyDate": "2024-11-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D88DA12B-28D8-47E2-A1DD-02E676CA8F55"
+    }
+  },
+  "comment": "IP65 LED Par w/ 40W LED engine",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "H": {
+      "fineChannelAliases": [
+        "H fine"
+      ],
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "S": {
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            30
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            31,
+            50
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            51,
+            70
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            71,
+            90
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3500K"
+        },
+        {
+          "dmxRange": [
+            91,
+            110
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            111,
+            130
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "4200K"
+        },
+        {
+          "dmxRange": [
+            131,
+            150
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "4500K"
+        },
+        {
+          "dmxRange": [
+            151,
+            170
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            171,
+            190
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            191,
+            210
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            211,
+            230
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "7200K"
+        },
+        {
+          "dmxRange": [
+            231,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "8000K"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Lightning"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Mid"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            201,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Zoom Reset"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Menu Set"
+        },
+        {
+          "dmxRange": [
+            10,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            30,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 1"
+        },
+        {
+          "dmxRange": [
+            70,
+            129
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 2"
+        },
+        {
+          "dmxRange": [
+            130,
+            189
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 3"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim 4"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            21
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            22,
+            170
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Macro"
+        },
+        {
+          "dmxRange": [
+            171,
+            195
+          ],
+          "type": "ColorPreset",
+          "comment": "All LEDs On"
+        },
+        {
+          "dmxRange": [
+            196,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            201,
+            205
+          ],
+          "type": "ColorPreset",
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            206,
+            210
+          ],
+          "type": "ColorPreset",
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            211,
+            215
+          ],
+          "type": "ColorPreset",
+          "comment": "3500K"
+        },
+        {
+          "dmxRange": [
+            216,
+            220
+          ],
+          "type": "ColorPreset",
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            221,
+            225
+          ],
+          "type": "ColorPreset",
+          "comment": "4200K"
+        },
+        {
+          "dmxRange": [
+            226,
+            230
+          ],
+          "type": "ColorPreset",
+          "comment": "4500K"
+        },
+        {
+          "dmxRange": [
+            231,
+            235
+          ],
+          "type": "ColorPreset",
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            236,
+            240
+          ],
+          "type": "ColorPreset",
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            241,
+            245
+          ],
+          "type": "ColorPreset",
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            246,
+            250
+          ],
+          "type": "ColorPreset",
+          "comment": "7200K"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "8000K"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Auto 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Auto 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Auto 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Auto 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Auto 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Auto 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Auto 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Auto 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Auto 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            140
+          ],
+          "type": "Effect",
+          "effectName": "Auto 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Program 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Program 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Program 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "Program 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Program 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Program 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "Program 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            211,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Program 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            221,
+            230
+          ],
+          "type": "Effect",
+          "effectName": "Program 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            231,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Program 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "HSIC",
+      "channels": [
+        "Dim",
+        "H",
+        "H fine",
+        "S",
+        "CTC",
+        "Sh1",
+        "Zoom",
+        "Ctrl1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "SSP",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Zoom",
+        "Ctrl1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "Tour",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Color Macro1",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Zoom",
+        "Ctrl1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "TR16",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "White",
+        "White fine",
+        "Color Macro1",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Zoom",
+        "Ctrl1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      210,
+      375,
+      210
+    ],
+    "weight": 7.3,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "IP65 LED Par w/ 40W LED engine",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-11-26T04:24:02",
+      "text": "Rev 100"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e0352526c07da4f6"
+  },
+  "manufacturerKey": "silver-star",
+  "fixtureKey": "pixpar-3",
+  "gwFixtureTypeID": "D88DA12B-28D8-47E2-A1DD-02E676CA8F55"
+}

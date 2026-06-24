@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "DALI House Light",
+  "shortName": "House",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-11",
+    "lastModifyDate": "2025-11-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 29EEB904-1587-438D-90D5-2B2105FAA92E"
+    }
+  },
+  "comment": "Generic House Light fixture for use with DALI-DMX Interface Controls. Dimmer set to stop at DMX 250 to not trigger DALI Ignore Command",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Intensity",
+          "brightness": 0,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            255
+          ],
+          "type": "Intensity",
+          "brightness": 1,
+          "comment": "on"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      50,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        90.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Generic House Light fixture for use with DALI-DMX Interface Controls. Dimmer set to stop at DMX 250 to not trigger DALI Ignore Command",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-10T13:46:41",
+      "text": "_V1_HVT_Switch_def_off"
+    }
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "dali-house-light",
+  "gwFixtureTypeID": "29EEB904-1587-438D-90D5-2B2105FAA92E"
+}

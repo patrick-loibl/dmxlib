@@ -1,0 +1,261 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "2-Lite Blinder LED WW_CW",
+  "shortName": "2Lite ww/CW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-04-17",
+    "lastModifyDate": "2026-06-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 284780D9-213E-4AFE-8A06-FD0F69368C91"
+    }
+  },
+  "comment": "Chine 2-Lite Blinder LED WW/CW",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": ">"
+        },
+        {
+          "dmxRange": [
+            12,
+            126
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": ">>"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": ">>>"
+        }
+      ]
+    },
+    "Color Mix Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            40,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color jump"
+        },
+        {
+          "dmxRange": [
+            80,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color gradient"
+        },
+        {
+          "dmxRange": [
+            120,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color pulse change"
+        },
+        {
+          "dmxRange": [
+            160,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color mutation"
+        },
+        {
+          "dmxRange": [
+            200,
+            239
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Automatic mode"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound mode"
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8 Channel",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Color Mix Mode",
+        "Color Mix MSpeed",
+        "WW",
+        "CW",
+        "WW 2",
+        "CW 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      550
+    ],
+    "weight": 2.15,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        75.0,
+        75.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-08T08:40:40",
+      "text": "Final"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a9ee02ad929fbfc4"
+  },
+  "manufacturerKey": "markeeigenbau",
+  "fixtureKey": "2-lite-blinder-led-ww-cw",
+  "gwFixtureTypeID": "284780D9-213E-4AFE-8A06-FD0F69368C91"
+}

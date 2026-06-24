@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "TP01CW",
+  "shortName": "TP01CW",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-16",
+    "lastModifyDate": "2020-09-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.0 fixture type ID: 07511D32-D057-4EB6-BDCB-33D77D450CE9"
+    }
+  },
+  "comment": "Terbly TP01CW: 180W High CRI LED Panel.",
+  "rdm": {
+    "modelId": 1266
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "defaultValue": 0,
+      "highlightValue": 65280,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Dim Curve": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Curve Setting"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "defaultValue": 0,
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "3Channel",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "1Channel",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      509,
+      499,
+      675
+    ],
+    "power": 180,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        66.0,
+        80.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "180W High CRI LED Panel.",
+    "beamType": "Wash",
+    "revision": {
+      "date": "2020-09-07T02:07:08",
+      "text": "Offical"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "accf1149b23120e1"
+  },
+  "manufacturerKey": "terbly",
+  "fixtureKey": "tp01cw",
+  "gwFixtureTypeID": "07511D32-D057-4EB6-BDCB-33D77D450CE9"
+}

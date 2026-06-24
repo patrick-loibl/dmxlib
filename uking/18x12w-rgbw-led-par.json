@@ -1,0 +1,316 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "18x12W RGBW LED PAR",
+  "shortName": "RGBW LED PAR 18x12",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-12-28",
+    "lastModifyDate": "2026-06-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 40D3CBDB-7B61-4A83-97CF-C002FA6BA99C"
+    }
+  },
+  "comment": "18x12 RGBW LED PAR: RGBW 18x12W LED PAR",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimmer"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Red Dimmer"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Green Dimmer"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Blue Dimmer"
+        }
+      ]
+    },
+    "White": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "White Dimmer"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "DMX 8-CH Control",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Different Color Output",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Colors Jump Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Colors Gradient",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Effect",
+          "effectName": "Colors Pulse Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8Ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      228,
+      120,
+      228
+    ],
+    "weight": 2.59,
+    "power": 216,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 6720,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        45.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "description": "RGBW 18x12W LED PAR",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2026-06-03T15:52:20",
+      "text": "1003"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d1111443e658b6e4"
+  },
+  "manufacturerKey": "uking",
+  "fixtureKey": "18x12w-rgbw-led-par",
+  "gwFixtureTypeID": "40D3CBDB-7B61-4A83-97CF-C002FA6BA99C"
+}

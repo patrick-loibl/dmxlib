@@ -2,9 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "POLAR3000",
   "shortName": "PLPolar3000",
-  "categories": ["Strobe", "Blinder"],
+  "categories": [
+    "Strobe",
+    "Blinder",
+    "Moving Head"
+  ],
   "meta": {
-    "authors": ["TAP"],
+    "authors": [
+      "TAP"
+    ],
     "createDate": "2019-02-16",
     "lastModifyDate": "2019-02-16"
   },
@@ -17,20 +23,36 @@
     ]
   },
   "physical": {
-    "dimensions": [455, 221, 80],
+    "dimensions": [
+      455,
+      221,
+      80
+    ],
     "weight": 4.5,
     "power": 462,
     "DMXconnector": "3-pin and 5-pin",
     "bulb": {
       "type": "882x0.5W SMD LEDs",
-      "colorTemperature": 6500
+      "colorTemperature": 6500,
+      "lumens": 14871
     },
     "lens": {
-      "degreesMinMax": [120, 120]
+      "degreesMinMax": [
+        120,
+        120
+      ]
     },
     "matrixPixels": {
-      "dimensions": [62, 151, 0],
-      "spacing": [0, 0, 0]
+      "dimensions": [
+        62,
+        151,
+        0
+      ],
+      "spacing": [
+        0,
+        0,
+        0
+      ]
     }
   },
   "matrix": {
@@ -48,46 +70,73 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [11, 40],
+          "dmxRange": [
+            11,
+            40
+          ],
           "type": "Effect",
           "effectName": "Auto 1"
         },
         {
-          "dmxRange": [41, 70],
+          "dmxRange": [
+            41,
+            70
+          ],
           "type": "Effect",
           "effectName": "Auto 2"
         },
         {
-          "dmxRange": [71, 100],
+          "dmxRange": [
+            71,
+            100
+          ],
           "type": "Effect",
           "effectName": "Auto 3"
         },
         {
-          "dmxRange": [101, 130],
+          "dmxRange": [
+            101,
+            130
+          ],
           "type": "Effect",
           "effectName": "Auto 4"
         },
         {
-          "dmxRange": [131, 160],
+          "dmxRange": [
+            131,
+            160
+          ],
           "type": "Effect",
           "effectName": "Auto 5"
         },
         {
-          "dmxRange": [161, 190],
+          "dmxRange": [
+            161,
+            190
+          ],
           "type": "Effect",
           "effectName": "Auto 6"
         },
         {
-          "dmxRange": [191, 220],
+          "dmxRange": [
+            191,
+            220
+          ],
           "type": "Effect",
           "effectName": "Auto 7"
         },
         {
-          "dmxRange": [221, 255],
+          "dmxRange": [
+            221,
+            255
+          ],
           "type": "Effect",
           "effectName": "Auto 0"
         }
@@ -104,11 +153,17 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [1, 255],
+          "dmxRange": [
+            1,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -119,31 +174,391 @@
     "Dimmer Mode": {
       "capabilities": [
         {
-          "dmxRange": [0, 51],
+          "dmxRange": [
+            0,
+            51
+          ],
           "type": "NoFunction",
           "comment": "Menu setting dimmer mode"
         },
         {
-          "dmxRange": [52, 101],
+          "dmxRange": [
+            52,
+            101
+          ],
           "type": "Maintenance",
           "comment": "Dimmer mode off"
         },
         {
-          "dmxRange": [102, 152],
+          "dmxRange": [
+            102,
+            152
+          ],
           "type": "Maintenance",
           "comment": "Dimmer mode 1"
         },
         {
-          "dmxRange": [153, 203],
+          "dmxRange": [
+            153,
+            203
+          ],
           "type": "Maintenance",
           "comment": "Dimmer mode 2"
         },
         {
-          "dmxRange": [204, 255],
+          "dmxRange": [
+            204,
+            255
+          ],
           "type": "Maintenance",
           "comment": "Dimmer mode 3"
         }
       ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.6Hz",
+          "speedEnd": "15Hz",
+          "comment": "Slow2Fast"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "AsFromMenu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 1"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 2"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 3"
+        }
+      ]
+    },
+    "P": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Program 1",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            41,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Program 2",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            71,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Program 3",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            101,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Program 4",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            131,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Program 5",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            161,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Program 6",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            191,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Program 7",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Program 8",
+          "speed": 0
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0.9Hz",
+        "speedEnd": "15Hz",
+        "comment": "Slow2Fast"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1 2": {
+      "name": "FX1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Program 1",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            41,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Program 2",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            71,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Program 3",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            101,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Program 4",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            131,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Program 5",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            161,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Program 6",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            191,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Program 7",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Program 8",
+          "speed": 0
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
     }
   },
   "templateChannels": {
@@ -207,9 +622,48 @@
         "Strobe",
         "Dimmer Mode"
       ]
+    },
+    {
+      "name": "11ch",
+      "channels": [
+        "Dim",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "FX1 2",
+        "FX1 Rate",
+        "Dim 3",
+        "Sh1",
+        "Dim Mode"
+      ]
     }
   ],
   "fixtureKey": "polar3000",
   "manufacturerKey": "prolights",
-  "oflURL": "https://open-fixture-library.org/prolights/polar3000"
+  "oflURL": "https://open-fixture-library.org/prolights/polar3000",
+  "gwMedia": {
+    "thumbnail": "c91010d3eb254798"
+  },
+  "gwEmitters": [
+    {
+      "name": "White Leds",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwFixtureTypeID": "411C65B4-30AB-47C9-8E41-9DB51D6A4023",
+  "gwSpecs": {
+    "description": "POLAR3000 is a revolutionary LED strobe, engineered to offer a true explosion of light and a range of dynamic effects - all in a unique fixture. The light source is composed by 892 SMD 6.500 K x 0,5 W LEDs allows a full-ON continuous operation with 6 independent section controls. Fully capable to offer an equal output of conventional 3.000 W Xenon strobe from just a sixth of the nominal power.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-03-05T10:52:12",
+      "text": "Rev 06 - Added Snap Feature"
+    }
+  }
 }

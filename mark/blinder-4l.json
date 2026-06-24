@@ -1,0 +1,270 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BLINDER 4L",
+  "shortName": "BL4L",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-28",
+    "lastModifyDate": "2025-07-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9E5C2590-A32D-432B-9E58-FF8D05CB630D"
+    }
+  },
+  "comment": "BLINDER 2L es una cegadora que incluye 4 LEDs COB de color blanco + blanco cálido de hasta 100W cada uno que permiten obtener una gran potencia lumínica, muy adecuada en espectáculos en vivo, aplicaciones de touring, etc. Dispone una pantalla con toda la información y botones para navegar a través de menús, seleccionando parámetros tales como velocidad de estrobo funcionando en modo automático, programas internos o sensibilidad de audio. El bastidor permite la orientación en ambos ejes, pudiendo variar el ángulo de emisión y redirigir los focos en ángulos distintos del perpendicular habitual. El dispositivo incluye el modo DMX (12 canales) con control individual de cada LED, selección de temperatura de color y modo de uso o estrobo general.",
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Frame_Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Frame_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Frame_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Macro 3",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Frame_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Frame_Effects1Rate": "FX1 Rate 3"
+          }
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "No function"
+      }
+    },
+    "FX1 Rate 2": {
+      "name": "FX1 Rate",
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "S > F"
+      }
+    },
+    "FX1 Rate 3": {
+      "name": "FX1 Rate",
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "No function"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White",
+        "comment": "Cool White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White",
+        "comment": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White",
+        "comment": "Cool White"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White",
+        "comment": "Warm White"
+      }
+    },
+    "CW 3": {
+      "name": "CW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White",
+        "comment": "Cool White"
+      }
+    },
+    "WW 3": {
+      "name": "WW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White",
+        "comment": "Warm White"
+      }
+    },
+    "CW 4": {
+      "name": "CW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White",
+        "comment": "Cool White"
+      }
+    },
+    "WW 4": {
+      "name": "WW",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White",
+        "comment": "Warm White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "12 CHANNELS",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "FX1",
+        "0_Frame_Effects1Rate",
+        "CW",
+        "WW",
+        "CW 2",
+        "WW 2",
+        "CW 3",
+        "WW 3",
+        "CW 4",
+        "WW 4"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      40,
+      370,
+      350
+    ],
+    "weight": 10.1,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2500,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "BLINDER 2L es una cegadora que incluye 4 LEDs COB de color blanco + blanco cálido de hasta 100W cada uno que permiten obtener una gran potencia lumínica, muy adecuada en espectáculos en vivo, aplicaciones de touring, etc. Dispone una pantalla con toda la información y botones para navegar a través de menús, seleccionando parámetros tales como velocidad de estrobo funcionando en modo automático, programas internos o sensibilidad de audio. El bastidor permite la orientación en ambos ejes, pudiendo variar el ángulo de emisión y redirigir los focos en ángulos distintos del perpendicular habitual. El dispositivo incluye el modo DMX (12 canales) con control individual de cada LED, selección de temperatura de color y modo de uso o estrobo general.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-21T15:49:32",
+      "text": "Version_1_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "875f28f594425949"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "blinder-4l",
+  "gwFixtureTypeID": "9E5C2590-A32D-432B-9E58-FF8D05CB630D"
+}

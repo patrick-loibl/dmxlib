@@ -1,0 +1,154 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RGB Tube 2m",
+  "shortName": "",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-06-14",
+    "lastModifyDate": "2025-10-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 88CAEF84-131A-4E37-AE10-91A0ABFE6CE6"
+    }
+  },
+  "comment": "RGB Glowing Tube 2m",
+  "availableChannels": {
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            24
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            25,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "RGB Simple",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "RGB Full",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine"
+      ]
+    },
+    {
+      "name": "RGB Full Extra",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Dim",
+        "Dim fine",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      50,
+      2000,
+      50
+    ],
+    "weight": 2.0,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "None",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-13T16:06:55",
+      "text": "v000"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3497a3158c10faee"
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "rgb-tube-2m",
+  "gwFixtureTypeID": "88CAEF84-131A-4E37-AE10-91A0ABFE6CE6"
+}

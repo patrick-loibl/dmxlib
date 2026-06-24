@@ -1,0 +1,1219 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ZQ02360 120W LED Moving Head Beam with Halo",
+  "shortName": "ZQ02360 LED Beam",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-12-31",
+    "lastModifyDate": "2024-12-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 726DE7EE-60DA-4B27-84C3-0A57B9E68DED"
+    }
+  },
+  "comment": "120W moving head beam with 7 gobos, 7 colors, 3-facet prism, and RGBW Halo Strip",
+  "wheels": {
+    "ColorWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#6b7282"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40100"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#008000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#000da6"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#fce600"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#89006b"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orange",
+          "colors": [
+            "#eb5900"
+          ]
+        }
+      ]
+    },
+    "Gobo Wheel": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Gobo 1",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "15f1ec2bb9235a23"
+        },
+        {
+          "type": "Color",
+          "name": "Gobo 2",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "91e13bc0f37fa5a2"
+        },
+        {
+          "type": "Color",
+          "name": "Gobo 3",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "7552c89dfb9e6b96"
+        },
+        {
+          "type": "Color",
+          "name": "Gobo 4",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "f5ccee91f0f8c5b4"
+        },
+        {
+          "type": "Color",
+          "name": "Gobo 5",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "b4aaad12853f4731"
+        },
+        {
+          "type": "Color",
+          "name": "Gobo 6",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "8846fcdd2effe147"
+        }
+      ]
+    },
+    "Prism": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3-facet Prism",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 1,
+        "speedEnd": 0.01,
+        "comment": "Fast to Slow"
+      }
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            126
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "50 %"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Effect Slow toFast"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe random rate"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            18
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            36
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            37,
+            54
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            55,
+            73
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            74,
+            91
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            92,
+            109
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            110,
+            127
+          ],
+          "type": "WheelSlot",
+          "wheel": "ColorWheel",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "WheelRotation",
+          "wheel": "ColorWheel",
+          "speedStart": "60rpm",
+          "speedEnd": "1.6666666666666665rpm",
+          "comment": "Rotate CW fast to slow"
+        },
+        {
+          "dmxRange": [
+            191,
+            192
+          ],
+          "type": "WheelRotation",
+          "wheel": "ColorWheel",
+          "speed": "stop",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            193,
+            254
+          ],
+          "type": "WheelRotation",
+          "wheel": "ColorWheel",
+          "speedStart": "-1.6666666666666665rpm",
+          "speedEnd": "-60rpm",
+          "comment": "Rotate CCW slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelRotation",
+          "wheel": "ColorWheel",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        }
+      ]
+    },
+    "G1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 1,
+          "comment": "No Gobo"
+        },
+        {
+          "dmxRange": [
+            12,
+            18
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            19,
+            25
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            26,
+            33
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            34,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            41,
+            47
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            48,
+            54
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            55,
+            65
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 1,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Empty Gobo shake"
+        },
+        {
+          "dmxRange": [
+            66,
+            76
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 2,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Gobo 1 shake"
+        },
+        {
+          "dmxRange": [
+            77,
+            87
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 3,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Gobo 2 shake"
+        },
+        {
+          "dmxRange": [
+            88,
+            98
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 4,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Gobo 3 shake"
+        },
+        {
+          "dmxRange": [
+            99,
+            109
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 5,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Gobo 4 shake"
+        },
+        {
+          "dmxRange": [
+            110,
+            120
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 6,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Gobo 5 shake"
+        },
+        {
+          "dmxRange": [
+            121,
+            131
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 7,
+          "shakeSpeedStart": "1Hz",
+          "shakeSpeedEnd": "10Hz",
+          "comment": "Gobo 6 shake"
+        },
+        {
+          "dmxRange": [
+            132,
+            191
+          ],
+          "type": "WheelShake",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 7,
+          "shakeSpeed": "10Hz",
+          "comment": "Gobo 6 shake max"
+        },
+        {
+          "dmxRange": [
+            192,
+            201
+          ],
+          "type": "WheelSlot",
+          "wheel": "Gobo Wheel",
+          "slotNumber": 1,
+          "comment": "Empty gobo"
+        },
+        {
+          "dmxRange": [
+            202,
+            227
+          ],
+          "type": "WheelRotation",
+          "wheel": "Gobo Wheel",
+          "speedStart": "60rpm",
+          "speedEnd": "1.6666666666666665rpm",
+          "comment": "Rotate CW fast to slow"
+        },
+        {
+          "dmxRange": [
+            228,
+            254
+          ],
+          "type": "WheelRotation",
+          "wheel": "Gobo Wheel",
+          "speedStart": "-1.6666666666666665rpm",
+          "speedEnd": "-60rpm",
+          "comment": "Rotate CCW slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelRotation",
+          "wheel": "Gobo Wheel",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        }
+      ]
+    },
+    "Prism1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Prism",
+          "comment": "Prism OUT"
+        },
+        {
+          "dmxRange": [
+            10,
+            128
+          ],
+          "type": "Prism",
+          "comment": "3-facet Prism"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "PrismRotation",
+          "speedStart": "1.6666666666666665rpm",
+          "speedEnd": "60rpm",
+          "comment": "Rotate CW slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        }
+      ]
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1,
+        "comment": "0%"
+      }
+    },
+    "FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Halo LEDs OFF",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            21
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            22,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            33
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            34,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "Magenta",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Cyan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            51
+          ],
+          "type": "Effect",
+          "effectName": "Yellow-green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            52,
+            57
+          ],
+          "type": "Effect",
+          "effectName": "Purple",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            58,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "Fuscia",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "Yellow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Light Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            81
+          ],
+          "type": "Effect",
+          "effectName": "Color jump",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            82,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "Color pulse",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            93
+          ],
+          "type": "Effect",
+          "effectName": "Color gradient",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            94,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "Rotating rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "Rainbow gradient",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            106,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            117
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            118,
+            123
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            124,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            141
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            142,
+            147
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            148,
+            153
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            154,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            166,
+            171
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            172,
+            177
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            178,
+            183
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            184,
+            189
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 14",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            190,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            196,
+            201
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 16",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            202,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 17",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            208,
+            213
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 18",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            214,
+            219
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 19",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Chase effect 20",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX2 Rate": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            209
+          ],
+          "type": "Effect",
+          "effectName": "Automatic operation",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            210,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound-activated",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Effect reset"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "XY reset"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset all"
+        },
+        {
+          "dmxRange": [
+            40,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "12Ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Sh1",
+        "C1",
+        "G1",
+        "Prism1",
+        "Focus1",
+        "FX2",
+        "FX2 Rate",
+        "FX3",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      204,
+      286,
+      226
+    ],
+    "weight": 5.27,
+    "power": 280,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 9870,
+      "colorTemperature": 7000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        20.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.282203,0.293425,100.000000",
+      "hex": "#eeffff",
+      "dominantWavelength": 480.640015
+    }
+  ],
+  "gwSpecs": {
+    "description": "120W moving head beam with 7 gobos, 7 colors, 3-facet prism, and RGBW Halo Strip",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2024-12-31T18:30:58",
+      "text": "2024-R002"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bb5c35747ddfcc49"
+  },
+  "manufacturerKey": "uking",
+  "fixtureKey": "zq02360-120w-led-moving-head-beam-with-halo",
+  "gwFixtureTypeID": "726DE7EE-60DA-4B27-84C3-0A57B9E68DED"
+}

@@ -1,0 +1,194 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Blinder WW2",
+  "shortName": "Blinder WW2",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-15",
+    "lastModifyDate": "2022-02-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: AD396969-A2BD-4826-9B58-C9AB936C7695"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            41
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            42,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            85,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            128,
+            170
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            171,
+            213
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            214,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            32,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "2 Channel Mode",
+      "channels": [
+        "Dim 2",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "3 Channel Mode",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "4 Channel Mode 1",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Sh1",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      182,
+      293,
+      486
+    ],
+    "weight": 5.1,
+    "power": 120,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5900,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        80.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2022-02-09T01:49:17",
+      "text": "Blinder WW2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ca059db015761c52"
+  },
+  "manufacturerKey": "ckc-lighting",
+  "fixtureKey": "blinder-ww2",
+  "gwFixtureTypeID": "AD396969-A2BD-4826-9B58-C9AB936C7695"
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Manipulator",
+  "shortName": "Manpl",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-01-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B5EF5046-AA19-43E5-9A7D-F74A592E8174"
+    }
+  },
+  "comment": "Sliding rail motion system",
+  "availableChannels": {
+    "Track Position": {
+      "fineChannelAliases": [
+        "Track Position fine"
+      ],
+      "capability": {
+        "type": "Unknown (Track Position)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Track Speed": {
+      "capability": {
+        "type": "Unknown (Track Speed)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Motor Enable": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            100
+          ],
+          "type": "Unknown (Motor Enable)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Disable"
+        },
+        {
+          "dmxRange": [
+            101,
+            126
+          ],
+          "type": "Unknown (Motor Enable)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            128
+          ],
+          "type": "Unknown (Motor Enable)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Enable"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Unknown (Motor Enable)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Top Limit": {
+      "capability": {
+        "type": "Unknown (Top Limit)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Bottom Limit": {
+      "capability": {
+        "type": "Unknown (Bottom Limit)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "00",
+      "channels": [
+        "Track Position",
+        "Track Position fine",
+        "Track Speed",
+        "Motor Enable",
+        "Top Limit",
+        "Bottom Limit"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      80,
+      83,
+      2000
+    ],
+    "weight": 15.1
+  },
+  "gwSpecs": {
+    "description": "Sliding rail motion system",
+    "operatingTemperature": [
+      5,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-09T13:13:09",
+      "text": "R2 Not tested IRL"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "01546871d34b60b5"
+  },
+  "manufacturerKey": "wahlberg",
+  "fixtureKey": "manipulator",
+  "gwFixtureTypeID": "B5EF5046-AA19-43E5-9A7D-F74A592E8174"
+}

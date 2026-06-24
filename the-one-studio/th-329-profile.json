@@ -1,0 +1,191 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "TH-329 PROFILE",
+  "shortName": "TH-329 PROFILE",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-05-27",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D2118BB6-9BBA-4959-B24F-9A6B9BF811C4"
+    }
+  },
+  "comment": "TH-329 PROFILE 200 WW+CW",
+  "wheels": {
+    "Color": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#dd8e3a"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wheel Slot 2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "C1": {
+      "fineChannelAliases": [
+        "C1 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 0,
+          "comment": "Color 1"
+        },
+        {
+          "dmxRange": [
+            256,
+            65535
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumber": 0,
+          "comment": "Color 2"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Strobe from fast to slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Closing pluse in sequences"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Opening pluse in sequences"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Random strobe speed frome fast to slow"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "5 Channel Mode",
+      "channels": [
+        "Dim",
+        "C1",
+        "C1 fine",
+        "Dim Mode",
+        "Strobe Duration"
+      ]
+    },
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-05-27T06:45:06",
+      "text": "Ver 1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5bf6523ebbcfbb63"
+  },
+  "manufacturerKey": "the-one-studio",
+  "fixtureKey": "th-329-profile",
+  "gwFixtureTypeID": "D2118BB6-9BBA-4959-B24F-9A6B9BF811C4"
+}

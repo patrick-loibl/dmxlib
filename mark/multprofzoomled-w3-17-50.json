@@ -1,0 +1,218 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MultProfZoomLed W3 17-50",
+  "shortName": "Multi Profile Zoom LED RGB17-50",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-04",
+    "lastModifyDate": "2025-12-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4AAF3673-9AD2-46DA-BF91-1D2C55A30DEE"
+    }
+  },
+  "comment": "Multi Profile Zoom LED RGB17-50: MULTIPROFILE ZOOM LED W3 17-50 es un proyector de iluminación que incluye 1 LED tipo COB de 200 W y color blanco. Este potente LED permite obtener un homogéneo tono blanco con una temperatura de color de 3200 K. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar por los menús, seleccionando parámetros tales como dos diferentes efectos de estrobo, modos de audio y nivel manual. Sus cuchillas y zoom y enfoque manuales permiten obtener el efecto deseado en un escenario. Además, el dispositivo incluye asas en la parte trasera para dirigir el haz. El dispositivo incluye el modo DMX (1, 2, 3 canales) con dimerización y funciones de estrobo.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        }
+      ]
+    },
+    "StrobeM Pulse": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            21,
+            200
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse S>F"
+        },
+        {
+          "dmxRange": [
+            201,
+            240
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Mode Strobe S>F"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Mode Pulse S>F"
+        }
+      ]
+    },
+    "Strobe1 2": {
+      "name": "Strobe1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow > Fast"
+        }
+      ]
+    },
+    "StrobeM Pulse 2": {
+      "name": "StrobeM Pulse",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            21,
+            255
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow > Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "A2CH",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "B2CH",
+      "channels": [
+        "Dim",
+        "StrobeM Pulse"
+      ]
+    },
+    {
+      "name": "3CH",
+      "channels": [
+        "Dim",
+        "Strobe1 2",
+        "StrobeM Pulse 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      547,
+      941,
+      352
+    ],
+    "weight": 11.5,
+    "DMXconnector": "XLR5",
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2264,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        22.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "MULTIPROFILE ZOOM LED W3 17-50 es un proyector de iluminación que incluye 1 LED tipo COB de 200 W y color blanco. Este potente LED permite obtener un homogéneo tono blanco con una temperatura de color de 3200 K. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar por los menús, seleccionando parámetros tales como dos diferentes efectos de estrobo, modos de audio y nivel manual. Sus cuchillas y zoom y enfoque manuales permiten obtener el efecto deseado en un escenario. Además, el dispositivo incluye asas en la parte trasera para dirigir el haz. El dispositivo incluye el modo DMX (1, 2, 3 canales) con dimerización y funciones de estrobo.",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-15T14:14:01",
+      "text": "Version1_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c23e05dde6eca7cb"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "multprofzoomled-w3-17-50",
+  "gwFixtureTypeID": "4AAF3673-9AD2-46DA-BF91-1D2C55A30DEE"
+}

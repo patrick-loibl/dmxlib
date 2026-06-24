@@ -1,0 +1,275 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "UV Flood 36",
+  "shortName": "UV Flood",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-29",
+    "lastModifyDate": "2023-12-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 183E7B60-9F0A-4DC7-8C06-2F316137FD50"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "UV": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            32,
+            32
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            33,
+            94
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            95,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            129,
+            158
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            191
+          ],
+          "type": "Unknown (StrobeModePulse)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            193,
+            222
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            223,
+            223
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STANDARD"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAGE"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ARCHTECTURAL"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "THEATRE"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DEFAULT"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel",
+      "channels": [
+        "UV"
+      ]
+    },
+    {
+      "name": "2 Channel",
+      "channels": [
+        "UV",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "3 Channel",
+      "channels": [
+        "UV",
+        "Strobe1",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "weight": 2.2,
+    "power": 36,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        57.0,
+        93.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "ADJ UV Flood 36",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-12-29T14:52:29",
+      "text": "Release 1.2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9826f0e54bc4c0f2"
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "uv-flood-36",
+  "gwFixtureTypeID": "183E7B60-9F0A-4DC7-8C06-2F316137FD50"
+}

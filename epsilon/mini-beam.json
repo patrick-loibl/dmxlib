@@ -1,0 +1,265 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Mini Beam",
+  "shortName": "Mini Beam",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2025-10-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FC7930B7-B9FE-408E-95DE-CBB153CEF748"
+    }
+  },
+  "comment": "Single color white square spotlight",
+  "availableChannels": {
+    "P": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Tilt - HOME"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Mode - UNKNOWN": {
+      "capability": {
+        "type": "Unknown (mode)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "UNKNOWN"
+      }
+    },
+    "StrobeM Shutter": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter1 - CLOSED"
+        },
+        {
+          "dmxRange": [
+            2,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            10,
+            222
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Min to Max"
+        },
+        {
+          "dmxRange": [
+            223,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe MAX"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter OPEN"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer - Min to Max"
+      }
+    },
+    "Mode - UNKNOWN 2": {
+      "name": "Mode - UNKNOWN",
+      "capability": {
+        "type": "Unknown (mode)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "UNKNOWN"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "P",
+        "T",
+        "Mode - UNKNOWN",
+        "StrobeM Shutter",
+        "Dim",
+        "Mode - UNKNOWN 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 5.6,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.311200,0.333300,100.000000",
+      "hex": "#fafffc"
+    }
+  ],
+  "gwDmxProfiles": [
+    {
+      "name": "Shutter 1",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    },
+    {
+      "name": "Dimmer 1",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    },
+    {
+      "name": "Pan",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    },
+    {
+      "name": "Tilt",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "Single color white square spotlight",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-10T22:12:07",
+      "text": "rev5-1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ed18a062fc3f2ebb"
+  },
+  "manufacturerKey": "epsilon",
+  "fixtureKey": "mini-beam",
+  "gwFixtureTypeID": "FC7930B7-B9FE-408E-95DE-CBB153CEF748"
+}

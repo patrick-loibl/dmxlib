@@ -1,9 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "LP001",
-  "categories": ["Color Changer"],
+  "categories": [
+    "Color Changer"
+  ],
   "meta": {
-    "authors": ["simo"],
+    "authors": [
+      "simo"
+    ],
     "createDate": "2019-08-26",
     "lastModifyDate": "2019-08-26"
   },
@@ -17,11 +21,23 @@
     ]
   },
   "physical": {
-    "dimensions": [255, 255, 365],
+    "dimensions": [
+      255,
+      255,
+      365
+    ],
     "weight": 2.8,
     "power": 180,
     "bulb": {
-      "type": "54× 3W LEDs (12 red, 18 green, 18 blue, 6 white)"
+      "type": "54× 3W LEDs (12 red, 18 green, 18 blue, 6 white)",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
     }
   },
   "availableChannels": {
@@ -35,11 +51,17 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [1, 255],
+          "dmxRange": [
+            1,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -51,31 +73,49 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [11, 50],
+          "dmxRange": [
+            11,
+            50
+          ],
           "type": "Effect",
           "effectName": "Manual color selection"
         },
         {
-          "dmxRange": [51, 100],
+          "dmxRange": [
+            51,
+            100
+          ],
           "type": "Effect",
           "effectName": "Color transition"
         },
         {
-          "dmxRange": [101, 150],
+          "dmxRange": [
+            101,
+            150
+          ],
           "type": "Effect",
           "effectName": "Color shade"
         },
         {
-          "dmxRange": [151, 200],
+          "dmxRange": [
+            151,
+            200
+          ],
           "type": "Effect",
           "effectName": "Color pulse"
         },
         {
-          "dmxRange": [201, 255],
+          "dmxRange": [
+            201,
+            255
+          ],
           "type": "Effect",
           "effectName": "Sound mode",
           "soundControlled": true
@@ -86,11 +126,17 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [1, 255],
+          "dmxRange": [
+            1,
+            255
+          ],
           "type": "ColorPreset",
           "helpWanted": "Which color can be selected at which DMX value?"
         }
@@ -123,6 +169,42 @@
         "type": "ColorIntensity",
         "color": "White"
       }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "StrobeM Strobe": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
     }
   },
   "modes": [
@@ -139,9 +221,61 @@
         "Blue",
         "White"
       ]
+    },
+    {
+      "name": "Standard mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "StrobeM Strobe"
+      ]
     }
   ],
   "fixtureKey": "lp001",
   "manufacturerKey": "big-dipper",
-  "oflURL": "https://open-fixture-library.org/big-dipper/lp001"
+  "oflURL": "https://open-fixture-library.org/big-dipper/lp001",
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwFixtureTypeID": "5EDCDD66-C926-45A4-935A-60372D6FF94D",
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-01-12T09:45:41",
+      "text": "PAR Test"
+    }
+  }
 }

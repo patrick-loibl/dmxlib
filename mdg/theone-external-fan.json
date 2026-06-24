@@ -1,0 +1,277 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "theONE external fan",
+  "shortName": "theONE",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-22",
+    "lastModifyDate": "2025-09-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 21AB2B27-B514-44D4-8E4A-1EE3387C8ACA"
+    }
+  },
+  "comment": "With extra channel at end for external fan",
+  "rdm": {
+    "modelId": 1
+  },
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Unit Off"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Unit On"
+        }
+      ]
+    },
+    "OutputMode": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (OutputMode)",
+          "physical": 0,
+          "comment": "Mode haze",
+          "switchChannels": {
+            "0_Body_OutputLevel": "Output Level"
+          }
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (OutputMode)",
+          "physical": 1,
+          "comment": "Mode fog",
+          "switchChannels": {
+            "0_Body_OutputLevel": "Output Level 2"
+          }
+        }
+      ]
+    },
+    "Output Level": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Haze 1%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Haze 100%"
+        }
+      ]
+    },
+    "Output Level 2": {
+      "name": "Output Level",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog 1%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog 100%"
+        }
+      ]
+    },
+    "Output": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (Output)",
+          "physical": 0,
+          "comment": "Output Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (Output)",
+          "physical": 1,
+          "comment": "Output On"
+        }
+      ]
+    },
+    "Fan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min Fan"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max Fan"
+        }
+      ]
+    },
+    "Fan 2": {
+      "name": "Fan",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min Fan (External)"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max Fan (External)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 0",
+      "channels": [
+        "Ctrl1",
+        "OutputMode",
+        "0_Body_OutputLevel",
+        "Output",
+        "Fan",
+        "Fan 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      887,
+      1091,
+      762
+    ],
+    "weight": 33.5
+  },
+  "gwSpecs": {
+    "description": "With extra channel at end for external fan",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-12T17:30:24",
+      "text": "Added channel for external fan"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e9ef8e19468f8874"
+  },
+  "manufacturerKey": "mdg",
+  "fixtureKey": "theone-external-fan",
+  "gwFixtureTypeID": "21AB2B27-B514-44D4-8E4A-1EE3387C8ACA"
+}

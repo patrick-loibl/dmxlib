@@ -1,0 +1,126 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Vari-White range",
+  "shortName": "Vari-White range",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-01-18",
+    "lastModifyDate": "2025-11-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2A57BC17-4C2F-491F-9859-791E14777D29"
+    }
+  },
+  "comment": "De Sisti Vari-White range ",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "CCT mode Selestion": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCT Linear"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCT Tabular"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "CTC",
+        "CCT mode Selestion"
+      ]
+    },
+    {
+      "name": "16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "CCT mode Selestion"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "De Sisti Vari-White range",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-20T10:06:38",
+      "text": "REV1"
+    }
+  },
+  "manufacturerKey": "de-sisti",
+  "fixtureKey": "vari-white-range",
+  "gwFixtureTypeID": "2A57BC17-4C2F-491F-9859-791E14777D29"
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SAGOMA PL100PZT Tunable",
+  "shortName": "PL100PZT Tunable",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-04-25",
+    "lastModifyDate": "2026-03-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 78AF02B5-6BB3-4E80-BFEB-CF34EF719B2B"
+    }
+  },
+  "comment": "100W tunable LED profile with zoom\n100W WW + 100W CW COB LED Constant \nOuput 2,700K - 6,000K\n2/5CH for tunable white mode, 1/2/3 CH for single color mode",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "color temperatue": {
+      "capability": {
+        "type": "Unknown (temp)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2 Ch Tunable W mode",
+      "channels": [
+        "Dim",
+        "color temperatue"
+      ]
+    },
+    {
+      "name": "5 Ch Tunable W mode",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "WW",
+        "CW",
+        "color temperatue"
+      ]
+    },
+    {
+      "name": "1 CH Single W mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 CH Single W mode",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3 CH Single W mode",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      342,
+      459,
+      221
+    ],
+    "weight": 3.0,
+    "DMXconnector": "XLR5",
+    "power": 50,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2108,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        23.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200",
+      "cie": "0.346700,0.364100,86.720000",
+      "hex": "#ffeecb"
+    },
+    {
+      "name": "6500",
+      "cie": "0.309100,0.325100,96.350000",
+      "hex": "#f9fbff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "100W tunable LED profile with zoom\n100W WW + 100W CW COB LED Constant \nOuput 2,700K - 6,000K\n2/5CH for tunable white mode, 1/2/3 CH for single color mode",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2026-03-25T09:33:53",
+      "text": "Last Version 24_03_2026"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fbbe8bdb7d34b887"
+  },
+  "manufacturerKey": "pluslite",
+  "fixtureKey": "sagoma-pl100pzt-tunable",
+  "gwFixtureTypeID": "78AF02B5-6BB3-4E80-BFEB-CF34EF719B2B"
+}

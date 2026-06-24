@@ -1,0 +1,184 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MS60R",
+  "shortName": "MS60R",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "5745FD55-DE90-4540-99D1-254EE46C67F2"
+    }
+  },
+  "physical": {
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Body Effect1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Effect Select"
+        }
+      ]
+    },
+    "Body Control": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "comment": "Type"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Body Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Maintenance",
+          "comment": "Frequency"
+        },
+        {
+          "dmxRange": [
+            2,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "Mode"
+        }
+      ]
+    },
+    "Body Control2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Generic",
+          "comment": "Speed"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Times"
+        }
+      ]
+    },
+    "Body Control3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Mode"
+        }
+      ]
+    },
+    "Body Control4": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Generic",
+          "comment": "Mode"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Mode 1"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 8",
+      "shortName": "Mode 8",
+      "channels": [
+        "Body Dimmer",
+        "Body Effect1",
+        "Body Control",
+        "Body Control1",
+        "Body Control2",
+        "Body Control3",
+        "Body Control4"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "A simple LED fixture for  MS60R",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-21T09:09:36",
+      "text": "ms60rgdfrdf"
+    }
+  },
+  "manufacturerKey": "godox",
+  "fixtureKey": "ms60r",
+  "gwFixtureTypeID": "5745FD55-DE90-4540-99D1-254EE46C67F2"
+}

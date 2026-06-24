@@ -1,0 +1,167 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Forza 60 II",
+  "shortName": "Forza 60 II",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-08",
+    "lastModifyDate": "2023-06-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 91DD89B9-B83F-474F-B9F9-E9A8AD1E2723"
+    }
+  },
+  "comment": "NANLITE Forza 60 II: Forza 60 II LED Spot Light",
+  "rdm": {
+    "modelId": 520
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN OFF"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Random Fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Random Medium"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Random Slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Variable Strobe (0_4 Hz -- 25 Hz)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "DAYLIGHT 8bit",
+      "channels": [
+        "Dim",
+        "Fan Mode",
+        "Strobe Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      84,
+      200,
+      108
+    ],
+    "weight": 0.84,
+    "power": 72,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8271,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        65.0,
+        149.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.207400,0.473400,100.000000",
+      "hex": "#00ffc1"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Forza 60 II LED Spot Light",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2023-06-12T15:46:37",
+      "text": "DMX V1.0 12.Jun.2023"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "200672987a675bb7"
+  },
+  "manufacturerKey": "nanlite",
+  "fixtureKey": "forza-60-ii",
+  "gwFixtureTypeID": "91DD89B9-B83F-474F-B9F9-E9A8AD1E2723"
+}

@@ -1,0 +1,186 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Powerbar 4",
+  "shortName": "Powerbar 4",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-12-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 283C73CF-1199-4C37-A411-721687F3AF80"
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "6 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "4 channel pix",
+      "channels": [
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "16 channel pix",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      185,
+      160,
+      1070
+    ],
+    "weight": 4.74,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-12-20T10:06:06",
+      "text": "pm-201220241106"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3ce2b09f593fff4b"
+  },
+  "manufacturerKey": "litecraft",
+  "fixtureKey": "powerbar-4",
+  "gwFixtureTypeID": "283C73CF-1199-4C37-A411-721687F3AF80"
+}

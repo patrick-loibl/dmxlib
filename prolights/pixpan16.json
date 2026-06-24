@@ -1,9 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "PIXPAN16",
-  "categories": ["Matrix", "Color Changer"],
+  "categories": [
+    "Matrix",
+    "Color Changer"
+  ],
   "meta": {
-    "authors": ["Felix Edelmann"],
+    "authors": [
+      "Felix Edelmann"
+    ],
     "createDate": "2018-02-02",
     "lastModifyDate": "2018-08-09"
   },
@@ -19,7 +24,11 @@
     ]
   },
   "physical": {
-    "dimensions": [460, 460, 120],
+    "dimensions": [
+      460,
+      460,
+      120
+    ],
     "weight": 8,
     "power": 390,
     "DMXconnector": "3-pin and 5-pin",
@@ -27,7 +36,10 @@
       "type": "4x4 30W RGBW/FC COB-LEDs"
     },
     "lens": {
-      "degreesMinMax": [60, 60]
+      "degreesMinMax": [
+        60,
+        60
+      ]
     }
   },
   "matrix": {
@@ -70,21 +82,33 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [1, 5],
+          "dmxRange": [
+            1,
+            5
+          ],
           "type": "Effect",
           "effectName": "Random Auto Show"
         },
         {
-          "dmxRange": [6, 10],
+          "dmxRange": [
+            6,
+            10
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [11, 255],
+          "dmxRange": [
+            11,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -96,71 +120,113 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [11, 30],
+          "dmxRange": [
+            11,
+            30
+          ],
           "type": "Effect",
           "effectName": "Chase 1"
         },
         {
-          "dmxRange": [31, 50],
+          "dmxRange": [
+            31,
+            50
+          ],
           "type": "Effect",
           "effectName": "Chase 2"
         },
         {
-          "dmxRange": [51, 70],
+          "dmxRange": [
+            51,
+            70
+          ],
           "type": "Effect",
           "effectName": "Chase 3"
         },
         {
-          "dmxRange": [71, 90],
+          "dmxRange": [
+            71,
+            90
+          ],
           "type": "Effect",
           "effectName": "Chase 4"
         },
         {
-          "dmxRange": [91, 110],
+          "dmxRange": [
+            91,
+            110
+          ],
           "type": "Effect",
           "effectName": "Chase 5"
         },
         {
-          "dmxRange": [111, 130],
+          "dmxRange": [
+            111,
+            130
+          ],
           "type": "Effect",
           "effectName": "Chase 6"
         },
         {
-          "dmxRange": [131, 150],
+          "dmxRange": [
+            131,
+            150
+          ],
           "type": "Effect",
           "effectName": "Chase 7"
         },
         {
-          "dmxRange": [151, 170],
+          "dmxRange": [
+            151,
+            170
+          ],
           "type": "Effect",
           "effectName": "Chase 8"
         },
         {
-          "dmxRange": [171, 190],
+          "dmxRange": [
+            171,
+            190
+          ],
           "type": "Effect",
           "effectName": "Chase 9"
         },
         {
-          "dmxRange": [191, 210],
+          "dmxRange": [
+            191,
+            210
+          ],
           "type": "Effect",
           "effectName": "Chase 10"
         },
         {
-          "dmxRange": [211, 230],
+          "dmxRange": [
+            211,
+            230
+          ],
           "type": "Effect",
           "effectName": "Chase 11"
         },
         {
-          "dmxRange": [231, 250],
+          "dmxRange": [
+            231,
+            250
+          ],
           "type": "Effect",
           "effectName": "Chase 12"
         },
         {
-          "dmxRange": [251, 255],
+          "dmxRange": [
+            251,
+            255
+          ],
           "type": "Effect",
           "effectName": "Random auto show (1-12)"
         }
@@ -171,11 +237,17 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 10],
+          "dmxRange": [
+            0,
+            10
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [11, 255],
+          "dmxRange": [
+            11,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -188,6 +260,57 @@
         "type": "EffectSpeed",
         "speedStart": "slow",
         "speedEnd": "fast"
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "no function": {
+      "capability": {
+        "type": "Unknown (chase)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Play Speed": {
+      "capability": {
+        "type": "Unknown (PlaySpeed)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
       }
     }
   },
@@ -267,5 +390,26 @@
   ],
   "fixtureKey": "pixpan16",
   "manufacturerKey": "prolights",
-  "oflURL": "https://open-fixture-library.org/prolights/pixpan16"
+  "oflURL": "https://open-fixture-library.org/prolights/pixpan16",
+  "gwMedia": {
+    "thumbnail": "c713329629eb15a8"
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwFixtureTypeID": "5201ABF5-6FB0-4339-9A59-341990812080",
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-02-10T09:46:29",
+      "text": "2026_02_10"
+    }
+  }
 }

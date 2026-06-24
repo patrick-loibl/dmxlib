@@ -1,0 +1,276 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MultProfZoomLed RGBW 17-50",
+  "shortName": "MPrfZLEDRGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-04",
+    "lastModifyDate": "2025-12-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: AEE35D15-5F2F-4B4E-B849-5558DCF14545"
+    }
+  },
+  "comment": "Multi Profile Zoom LED RGB17-50: Recorte LED con una apertura variable desde 17 a 50 grados. Incluye un LED COB RGBW de 200W.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 47,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 1…10 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Effect Slow to Fast"
+        }
+      ]
+    },
+    "Color FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            6,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Color Change Crossfade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Color Change Fading",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Change Audio",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "Stop",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "Min",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "Min > Max",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Max",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8Ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Color FX1",
+        "Color FX2",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "4Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      547,
+      941,
+      352
+    ],
+    "weight": 11.5,
+    "DMXconnector": "XLR5",
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        22.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.643100,0.330000,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.298100,0.591400,100.000000",
+      "hex": "#0aff28"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.058040,100.000000",
+      "hex": "#3400ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Recorte LED con una apertura variable desde 17 a 50 grados. Incluye un LED COB RGBW de 200W.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-15T11:39:54",
+      "text": "Version2_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c23e05dde6eca7cb"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "multprofzoomled-rgbw-17-50",
+  "gwFixtureTypeID": "AEE35D15-5F2F-4B4E-B849-5558DCF14545"
+}

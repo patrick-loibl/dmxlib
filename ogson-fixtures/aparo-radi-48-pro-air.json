@@ -1,0 +1,260 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "APARO Radi-48 Pro Air",
+  "shortName": "APARO",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-06",
+    "lastModifyDate": "2025-12-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 68DEBF84-DC87-4970-900B-6B8D0A7831E3"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "max"
+        }
+      ]
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No effect"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-100 Green"
+        },
+        {
+          "dmxRange": [
+            21,
+            119
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-99 to -1 Green"
+        },
+        {
+          "dmxRange": [
+            120,
+            145
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral/No Effect"
+        },
+        {
+          "dmxRange": [
+            146,
+            244
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+1 to +99 Green"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+100 Green"
+        }
+      ]
+    },
+    "Crossfade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Crossfade)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Color"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 2 CCT+RGB 8bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "Crossfade",
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      70,
+      2000
+    ],
+    "weight": 15.8,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 68514,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        67.0,
+        112.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red_LED",
+      "cie": "0.695800,0.302200,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green_LED",
+      "cie": "0.150800,0.705600,100.000000",
+      "hex": "#00ff2a"
+    },
+    {
+      "name": "Blue_LED",
+      "cie": "0.147300,0.042800,100.000000",
+      "hex": "#7600ff"
+    },
+    {
+      "name": "WarmWhite_LED",
+      "cie": "0.469400,0.411500,100.000000",
+      "hex": "#ffe571"
+    },
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.299000,0.313700,100.000000",
+      "hex": "#f8ffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-12-09T12:51:07",
+      "text": "ogi_v3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9666e80f45bd2183"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "aparo-radi-48-pro-air",
+  "gwFixtureTypeID": "68DEBF84-DC87-4970-900B-6B8D0A7831E3"
+}

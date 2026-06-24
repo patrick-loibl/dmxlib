@@ -1,0 +1,316 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PARLED 1218 6in1 ip65",
+  "shortName": "PARLed IP",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-12-28",
+    "lastModifyDate": "2025-11-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: AD5B8184-BCC8-4F8E-8D15-A9122CEAD70E"
+    }
+  },
+  "comment": "LED PAR : PARLED RGBWA+UV 18x12W 6-in-1 ",
+  "wheels": {
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Red ",
+          "colors": [
+            "#9f0000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#008d19"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000c3"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e2e4e2"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Amber",
+          "colors": [
+            "#b15900"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "UV",
+          "colors": [
+            "#6156fd"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to fast"
+        }
+      ]
+    },
+    "Function": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            124
+          ],
+          "type": "Effect",
+          "effectName": "Static color mixing",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            125,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "Color Gradient",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Pulse",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Amber 2": {
+      "name": "Amber",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV 2": {
+      "name": "UV",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "10Ch",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "Function",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber 2",
+        "UV 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      228,
+      120,
+      228
+    ],
+    "weight": 2.59,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Amber",
+      "cie": "0.516600,0.460500,61.500000",
+      "hex": "#ffb900",
+      "dominantWavelength": 570.0
+    },
+    {
+      "name": "UV",
+      "cie": "0.180000,0.088950,12.000000",
+      "hex": "#5e31ff",
+      "dominantWavelength": 420.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "PARLED RGBWA+UV 18x12W 6-in-1",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-11-12T07:16:52",
+      "text": "PARLED 1218 6in1 ip65"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ef5f2707d5861c54"
+  },
+  "manufacturerKey": "clxsquad",
+  "fixtureKey": "parled-1218-6in1-ip65",
+  "gwFixtureTypeID": "AD5B8184-BCC8-4F8E-8D15-A9122CEAD70E"
+}

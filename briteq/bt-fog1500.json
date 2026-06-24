@@ -1,0 +1,123 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BT-FOG1500",
+  "shortName": "Fog1k5",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-07-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0F3AEB0F-8C6C-40B5-A5AB-DEBF684322F5"
+    }
+  },
+  "comment": "Professional 1500W fogger with an extremely strong output",
+  "rdm": {
+    "modelId": 81
+  },
+  "availableChannels": {
+    "Fog1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "No fog"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal mode"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Continious mode"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1Ch",
+      "channels": [
+        "Fog1"
+      ]
+    },
+    {
+      "name": "2Ch",
+      "channels": [
+        "Fog1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      240,
+      150,
+      435
+    ],
+    "weight": 8.0
+  },
+  "gwSpecs": {
+    "description": "Professional 1500W fogger with an extremely strong output",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-07-10T14:37:56",
+      "text": "20240710"
+    }
+  },
+  "manufacturerKey": "briteq",
+  "fixtureKey": "bt-fog1500",
+  "gwFixtureTypeID": "0F3AEB0F-8C6C-40B5-A5AB-DEBF684322F5"
+}

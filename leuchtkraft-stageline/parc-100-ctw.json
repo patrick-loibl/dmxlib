@@ -1,0 +1,118 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PARC-100-CTW",
+  "shortName": "PARC",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2023-01-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9793E70B-2911-4B83-BFD5-EC8C4C1BA4B5"
+    }
+  },
+  "comment": "Leuchtkraft PARC-100-CTW",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Strobe Rate": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow to Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "CW",
+        "WW",
+        "Strobe Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      185,
+      250,
+      185
+    ],
+    "weight": 6.5,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        27.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-01-16T17:32:56",
+      "text": "V_1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "048782a8abcffcef"
+  },
+  "manufacturerKey": "leuchtkraft-stageline",
+  "fixtureKey": "parc-100-ctw",
+  "gwFixtureTypeID": "9793E70B-2911-4B83-BFD5-EC8C4C1BA4B5"
+}

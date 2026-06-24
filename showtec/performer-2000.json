@@ -1,0 +1,284 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Performer 2000",
+  "shortName": "Performer 2000",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-24",
+    "lastModifyDate": "2022-02-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 530BC70D-8C7C-46B0-A344-15C1226A8E73"
+    }
+  },
+  "comment": "Performer 2000 LED: EclFresnel 2K is the LED replacement for a standard tungsten 2.000 W Fresnel. Featuring the output characteristics of a traditional Fresnel but with beam control, functional barn doors and a power source that focuses on outstanding colour rendition. The EclFresnel 2K adds all the advantages of LED to the Fresnel.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.5Hz",
+          "comment": "Slow - Fast"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse Slow - Fast"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random Slow - Fast"
+        }
+      ]
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom"
+      }
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            1,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Motor Reset"
+        },
+        {
+          "dmxRange": [
+            202,
+            219
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            220,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Motor Reset"
+        },
+        {
+          "dmxRange": [
+            221,
+            221
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            222,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "STDP / 5 Ch",
+      "channels": [
+        "Dim",
+        "Dim Mode",
+        "Sh1",
+        "Zoom",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      364,
+      456,
+      280
+    ],
+    "weight": 7.2,
+    "DMXconnector": "XLR5",
+    "power": 505,
+    "bulb": {
+      "type": "LED",
+      "lumens": 25303,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        28.1,
+        40.7
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White Led",
+      "cie": "0.435000,0.406000,100.000000",
+      "hex": "#ffee8e"
+    }
+  ],
+  "gwSpecs": {
+    "description": "EclFresnel 2K is the LED replacement for a standard tungsten 2.000 W Fresnel. Featuring the output characteristics of a traditional Fresnel but with beam control, functional barn doors and a power source that focuses on outstanding colour rendition. The EclFresnel 2K adds all the advantages of LED to the Fresnel.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2022-02-02T15:52:59",
+      "text": "Out for RWT"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5244cfb5c92f8af6"
+  },
+  "manufacturerKey": "showtec",
+  "fixtureKey": "performer-2000",
+  "gwFixtureTypeID": "530BC70D-8C7C-46B0-A344-15C1226A8E73"
+}

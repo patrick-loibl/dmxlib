@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COB SPOT 200 LW",
+  "shortName": "COBSpot200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-07-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D3CB4358-EBCF-4D1A-B51A-4BD29DAABA02"
+    }
+  },
+  "comment": "COB 200 4 IP es un proyector potente que incluye 1x COB RGBW LED (4 en 1) de 150W. Este dispositivo permite obtener ricas variaciones de color mezclando estos 4 tonos. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como dimmer manual, colores fijos y dos modos de luz estroboscópica con control de velocidad. Su alto rango de IP (IP65) permite ser utilizado en aplicaciones de exterior, gracias a sus conectores con protecciones y la carcasa sellada. El dispositivo incluye el modo DMX (8 canales) con nivel de atenuación individual, función estrobo y programa automático con control de velocidad.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2 CHANNELS",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "weight": 7.0,
+    "power": 30,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "COB 200 4 IP es un proyector potente que incluye 1x COB RGBW LED (4 en 1) de 150W. Este dispositivo permite obtener ricas variaciones de color mezclando estos 4 tonos. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como dimmer manual, colores fijos y dos modos de luz estroboscópica con control de velocidad. Su alto rango de IP (IP65) permite ser utilizado en aplicaciones de exterior, gracias a sus conectores con protecciones y la carcasa sellada. El dispositivo incluye el modo DMX (8 canales) con nivel de atenuación individual, función estrobo y programa automático con control de velocidad.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-23T07:43:45",
+      "text": "Version_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "805f55545a93b72c"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "cob-spot-200-lw",
+  "gwFixtureTypeID": "D3CB4358-EBCF-4D1A-B51A-4BD29DAABA02"
+}

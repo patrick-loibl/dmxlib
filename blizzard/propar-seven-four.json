@@ -1,0 +1,241 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ProPar Seven Four",
+  "shortName": "Propar 7-4",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2022-09-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 22C6FAFE-2186-4447-B1DA-5FD0638BF5B7"
+    }
+  },
+  "comment": "Blizzard Lighting Propar Seven Four RGBW Par Light: 7x3w RGBW LED Par can light. DMX 4ch or 7ch modes. ",
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            17,
+            126
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ColorPreset",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "7Ch",
+      "channels": [
+        "Dim",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White",
+        "Strobe1",
+        "Color Macro1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      140,
+      230,
+      140
+    ],
+    "weight": 1.5,
+    "power": 23,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1200,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "7x3w RGBW LED Par can light. DMX 4ch or 7ch modes.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-09-26T18:59:20",
+      "text": "Rev 1.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "44916c385c327cf9"
+  },
+  "manufacturerKey": "blizzard",
+  "fixtureKey": "propar-seven-four",
+  "gwFixtureTypeID": "22C6FAFE-2186-4447-B1DA-5FD0638BF5B7"
+}

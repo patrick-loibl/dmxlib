@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Me2 WPE",
+  "shortName": "Me2",
+  "categories": [
+    "Smoke"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-22",
+    "lastModifyDate": "2024-09-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F61ED694-197A-45B5-9C64-7D50FFF3AFC3"
+    }
+  },
+  "rdm": {
+    "modelId": 1
+  },
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Unit Off"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Unit On"
+        }
+      ]
+    },
+    "Output Level": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog 1%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog 100%"
+        }
+      ]
+    },
+    "Fog": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutput": 0,
+          "comment": "Fog Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutput": 1,
+          "comment": "Fog On"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 0",
+      "channels": [
+        "Ctrl1",
+        "Output Level",
+        "Fog"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      333,
+      607,
+      488
+    ],
+    "weight": 26.3
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-01T14:13:10",
+      "text": "Release_1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2c18f9f7bf5ab424"
+  },
+  "manufacturerKey": "mdg",
+  "fixtureKey": "me2-wpe",
+  "gwFixtureTypeID": "F61ED694-197A-45B5-9C64-7D50FFF3AFC3"
+}

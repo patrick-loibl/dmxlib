@@ -1,0 +1,305 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CPX314-II LED PAR",
+  "shortName": "CPX314-II PAR",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-20",
+    "lastModifyDate": "2025-03-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 867DAF24-F958-40F5-A04F-A27009D139DF"
+    }
+  },
+  "comment": "143 IP LED PAR CPX314-II: 14 x 3 watt RGB  IP LED Par",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off Dimmer speed"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 1"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 2"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 3"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 4"
+        }
+      ]
+    },
+    "H": {
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "S": {
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "Unknown (HSB_Brightness)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "strobe slow to fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "STAG 10ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Color FX1",
+        "Color Mix MSpeed",
+        "Dim Mode",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "HSV 3ch",
+      "channels": [
+        "H",
+        "S",
+        "B 2"
+      ]
+    },
+    {
+      "name": "ACR 1",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "AC1 D",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "Ac1 S",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      235,
+      165,
+      235
+    ],
+    "weight": 4.5,
+    "power": 30,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "14 x 3 watt RGB  IP LED Par",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-03-20T09:18:06",
+      "text": "chenged strobe mode at AC1S, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4c06362f82d92b0b"
+  },
+  "manufacturerKey": "cyclops-lighting",
+  "fixtureKey": "cpx314-ii-led-par",
+  "gwFixtureTypeID": "867DAF24-F958-40F5-A04F-A27009D139DF"
+}

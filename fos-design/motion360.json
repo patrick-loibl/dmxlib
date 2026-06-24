@@ -1,0 +1,275 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Motion360",
+  "shortName": "",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-02-15",
+    "lastModifyDate": "2025-05-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BAADF00D-4AF7-7A40-1311-87023777E4FF"
+    }
+  },
+  "comment": "v1.4",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Position"
+      }
+    },
+    "Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "Unknown (speed)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "speed STOP"
+        },
+        {
+          "dmxRange": [
+            3,
+            255
+          ],
+          "type": "Unknown (speed)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "speed"
+        }
+      ]
+    },
+    "Rotate Direction": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            125
+          ],
+          "type": "Unknown (Rotate Direction)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "left"
+        },
+        {
+          "dmxRange": [
+            126,
+            129
+          ],
+          "type": "Unknown (Rotate Direction)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "stop"
+        },
+        {
+          "dmxRange": [
+            130,
+            255
+          ],
+          "type": "Unknown (Rotate Direction)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "right"
+        }
+      ]
+    },
+    "Power": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            224
+          ],
+          "type": "Unknown (Power)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Work STOP"
+        },
+        {
+          "dmxRange": [
+            225,
+            240
+          ],
+          "type": "Unknown (Power)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Work Start"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Unknown (Power)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Work STOP"
+        }
+      ]
+    },
+    "Invert": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (Invert)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "invert OFF"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (Invert)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "invert ON"
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "HOME RESET"
+        }
+      ]
+    },
+    "Position Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "Unknown (Position Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "QUICK"
+        },
+        {
+          "dmxRange": [
+            3,
+            127
+          ],
+          "type": "Unknown (Position Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "BACK LEFT"
+        },
+        {
+          "dmxRange": [
+            128,
+            130
+          ],
+          "type": "Unknown (Position Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "STAY"
+        },
+        {
+          "dmxRange": [
+            131,
+            255
+          ],
+          "type": "Unknown (Position Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "BACK RIGHT"
+        }
+      ]
+    },
+    "Pos Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            243
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "SAVE"
+        },
+        {
+          "dmxRange": [
+            244,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "START OFFSET"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "mode1",
+      "channels": [
+        "P",
+        "P fine",
+        "Speed",
+        "Rotate Direction",
+        "Power",
+        "Invert",
+        "Fixture Global Reset",
+        "Position Mode",
+        "Pos Reset"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "v1.4",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-05-15T12:19:03",
+      "text": "v2_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c4db41a462bbaecb"
+  },
+  "manufacturerKey": "fos-design",
+  "fixtureKey": "motion360",
+  "gwFixtureTypeID": "BAADF00D-4AF7-7A40-1311-87023777E4FF",
+  "physical": {}
+}

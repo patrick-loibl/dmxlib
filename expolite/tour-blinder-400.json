@@ -1,0 +1,242 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Tour Blinder 400",
+  "shortName": "TB 400",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-28",
+    "lastModifyDate": "2022-02-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 3A3F8346-C0F7-4423-8E31-7345F6607C9B"
+    }
+  },
+  "comment": "LED, 5600K, 400W",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "9 Ch",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe1",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4",
+        "Dim 5",
+        "FX1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "4 Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 3",
+        "Dim 4",
+        "Dim 5"
+      ]
+    },
+    {
+      "name": "3 Ch",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "1 Ch",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      40,
+      370,
+      350
+    ],
+    "weight": 9.0,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2500,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Led1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Led2",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Led3",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Led4",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED, 5600K, 400W",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -25,
+      45
+    ],
+    "revision": {
+      "date": "2022-02-02T15:44:48",
+      "text": "Final"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1fe745947c25c99c"
+  },
+  "manufacturerKey": "expolite",
+  "fixtureKey": "tour-blinder-400",
+  "gwFixtureTypeID": "3A3F8346-C0F7-4423-8E31-7345F6607C9B"
+}

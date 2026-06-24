@@ -1,0 +1,127 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FOS PAR COB 200W LED TW",
+  "shortName": "PARCOBTW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-24",
+    "lastModifyDate": "2023-02-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C3F1E196-020D-4364-AE7D-C5B05989B662"
+    }
+  },
+  "comment": "2 Channels b2CH \n4 Channels a4CH ",
+  "availableChannels": {
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2ch",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "4ch",
+      "channels": [
+        "Dim 2",
+        "WW",
+        "CW",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      186,
+      257,
+      210
+    ],
+    "weight": 4.9,
+    "DMXconnector": "XLR5",
+    "power": 155,
+    "bulb": {
+      "type": "LED",
+      "lumens": 3809,
+      "colorTemperature": 5000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        31.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "CW leds",
+      "cie": "0.299000,0.304000,100.000000",
+      "hex": "#fffcff"
+    },
+    {
+      "name": "WW leds",
+      "cie": "0.416000,0.401000,100.000000",
+      "hex": "#fff29d"
+    }
+  ],
+  "gwSpecs": {
+    "description": "2 Channels b2CH \n4 Channels a4CH",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2023-02-24T15:39:26",
+      "text": "V 1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "58ed840c63508c4f"
+  },
+  "manufacturerKey": "fos-technologies",
+  "fixtureKey": "fos-par-cob-200w-led-tw",
+  "gwFixtureTypeID": "C3F1E196-020D-4364-AE7D-C5B05989B662"
+}

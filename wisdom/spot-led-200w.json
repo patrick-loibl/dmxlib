@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Spot Led 200W",
+  "shortName": "Spot Led",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-01-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DA5D780B-F4E2-44BE-AC99-7B25FDE13B5F"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      222,
+      325,
+      222
+    ],
+    "weight": 6.0,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-28T14:13:36",
+      "text": "Final"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "135003f5f8349efe"
+  },
+  "manufacturerKey": "wisdom",
+  "fixtureKey": "spot-led-200w",
+  "gwFixtureTypeID": "DA5D780B-F4E2-44BE-AC99-7B25FDE13B5F"
+}

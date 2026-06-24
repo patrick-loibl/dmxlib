@@ -1,0 +1,296 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RGB STROBE",
+  "shortName": "STROBE",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-02-23",
+    "lastModifyDate": "2022-09-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 96918343-1A30-4CFA-B93F-2FBF712035EC"
+    }
+  },
+  "comment": "RGB STROBE 9CH: 9CH STROBE",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "RED": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "RED DIM"
+      }
+    },
+    "GREEN": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "GREEN DIM"
+      }
+    },
+    "BLUE DIM": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "BLUE DIM"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "DINMMER"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "StrobeSpeed",
+          "speed": 0,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0.289,
+          "speedEnd": 25,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            10,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "Color change macro"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Color fade macro"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color pulse macro"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Color macro mixed"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "No fuction"
+        }
+      ]
+    },
+    "speed": {
+      "capability": {
+        "type": "Unknown (Auto speeds)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "speed"
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve set by menu"
+        },
+        {
+          "dmxRange": [
+            10,
+            50
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve1"
+        },
+        {
+          "dmxRange": [
+            51,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve2"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve3"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve4"
+        },
+        {
+          "dmxRange": [
+            204,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve5"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve6"
+        }
+      ]
+    },
+    "color temperature": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Unknown",
+        "slotNumber": 0,
+        "comment": "color temperature"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "RED",
+        "GREEN",
+        "BLUE DIM",
+        "Dim",
+        "Strobe1",
+        "Color Macro1",
+        "speed",
+        "Dim Curve",
+        "color temperature"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      315,
+      500
+    ],
+    "weight": 7.0,
+    "DMXconnector": "XLR5",
+    "power": 150,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2933,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        35.0,
+        63.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "9CH STROBE",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2022-09-20T13:49:59",
+      "text": "2022 09 20 v1.3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c4b5a0937fe754f0"
+  },
+  "manufacturerKey": "min",
+  "fixtureKey": "rgb-strobe",
+  "gwFixtureTypeID": "96918343-1A30-4CFA-B93F-2FBF712035EC"
+}

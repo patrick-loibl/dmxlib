@@ -1,0 +1,223 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MKL 180P RGBW",
+  "shortName": "MKL 180P RGBW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-12-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 333CB5B8-BBD2-44FE-8FA5-C4D11AED77E6"
+    }
+  },
+  "comment": "Proyector LED integrado por 18 LEDS RGBW de 10 W cada uno. Control DMX de 9 canales Link de powercon y DMX de 3 puntas",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow > Fast"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            21,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Close"
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Slow > Fast"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "DMX Control ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "Static Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            179
+          ],
+          "type": "Effect",
+          "effectName": "Jump Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            180,
+            239
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Change Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "9 CH",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe1",
+        "Sh1",
+        "FX1 Rate",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      98,
+      181
+    ],
+    "weight": 3.6,
+    "power": 180,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        45.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Proyector LED integrado por 18 LEDS RGBW de 10 W cada uno. Control DMX de 9 canales Link de powercon y DMX de 3 puntas",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-05T10:34:05",
+      "text": "Version1_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d4e99ea929799575"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "mkl-180p-rgbw",
+  "gwFixtureTypeID": "333CB5B8-BBD2-44FE-8FA5-C4D11AED77E6"
+}

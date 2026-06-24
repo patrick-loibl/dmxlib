@@ -1,0 +1,239 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Xoop EL151",
+  "shortName": "EL151",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-03",
+    "lastModifyDate": "2026-03-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 37E98D08-9929-4416-85B2-375E8B87B9A0"
+    }
+  },
+  "wheels": {
+    "CCT Presets": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "2800K",
+          "colors": [
+            "#94683c"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3000K",
+          "colors": [
+            "#906a45"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3200K",
+          "colors": [
+            "#8e6b49"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4000K",
+          "colors": [
+            "#846e57"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4300K",
+          "colors": [
+            "#826e59"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "5600K",
+          "colors": [
+            "#f4e1cf"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "CCT": {
+      "highlightValue": 28,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 2.166667,
+          "slotNumberEnd": 2.333333
+        },
+        {
+          "dmxRange": [
+            4,
+            84
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumber": 0
+        },
+        {
+          "dmxRange": [
+            85,
+            87
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 5.666667,
+          "slotNumberEnd": 5.833333
+        },
+        {
+          "dmxRange": [
+            88,
+            201
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumber": 0
+        },
+        {
+          "dmxRange": [
+            202,
+            204
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 6.833333,
+          "slotNumberEnd": 7,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            205,
+            255
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "LED 100%"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65534,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2ch (Macro+Dimmer)",
+      "channels": [
+        "CCT",
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch (CW+WW)",
+      "channels": [
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "3 CH",
+      "channels": [
+        "Dim",
+        "CW 2",
+        "WW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      142,
+      120,
+      340
+    ],
+    "weight": 9.0,
+    "bulb": {
+      "type": "450nm / 644nm LED",
+      "lumens": 10000
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Cold White",
+      "cie": "0.337600,0.357600,100.000000",
+      "hex": "#ffffe1",
+      "dominantWavelength": 450.0
+    },
+    {
+      "name": "Warm White",
+      "cie": "0.451700,0.407700,100.000000",
+      "hex": "#ffe982",
+      "dominantWavelength": 644.0
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-13T06:50:02",
+      "text": "Copy from EL151- 3CH Mode Add"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "40b744d5a32c6aa1"
+  },
+  "manufacturerKey": "xoop-lighting",
+  "fixtureKey": "xoop-el151",
+  "gwFixtureTypeID": "37E98D08-9929-4416-85B2-375E8B87B9A0"
+}

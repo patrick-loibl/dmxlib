@@ -1,0 +1,287 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "NSF-100 Vertical Fog Machine",
+  "shortName": "NSF-100",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-10-31",
+    "lastModifyDate": "2024-11-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5C6C65CF-818D-4178-8A3F-16CEE230F1A6"
+    }
+  },
+  "comment": "NSF-100 Vertical Fog Fountain: Dimmer default to 0",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Fog1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "On"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dim 1-100"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dim 1-100"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dim 1-100"
+        }
+      ]
+    },
+    "Cycle": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (COLORMIXCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Unknown (COLORMIXCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Dim 1-100"
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow To Fast"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Slow to Fast"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dim 1-100"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "Fog1",
+        "R",
+        "G",
+        "B",
+        "Cycle",
+        "Color Mix MSpeed",
+        "Sh1",
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      290,
+      185,
+      255
+    ]
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.728299,0.271700,13.991373",
+      "hex": "#ff0000",
+      "dominantWavelength": 630.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.074300,0.833799,55.747923",
+      "hex": "#00ff00",
+      "dominantWavelength": 500.0
+    },
+    {
+      "name": "Blue",
+      "cie": "0.116211,0.073577,8.678326",
+      "hex": "#004bff",
+      "dominantWavelength": 450.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Dimmer default to 0",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-11-19T19:25:05",
+      "text": "Updatet Channel Sets   Bug Fixes, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "nsf-100-vertical-fog-machine",
+  "gwFixtureTypeID": "5C6C65CF-818D-4178-8A3F-16CEE230F1A6"
+}

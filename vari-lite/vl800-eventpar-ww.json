@@ -1,0 +1,421 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VL800 EventPAR WW",
+  "shortName": "VL800EventPARWW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-08-24",
+    "lastModifyDate": "2022-11-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 08CB111A-251B-4076-8638-325ED92D5D6E"
+    }
+  },
+  "comment": "Vari-Lite VL800 EventPAR WW is an LED retro-style event PAR perfect for a modern replacement of classic tungsten PAR fixtures",
+  "rdm": {
+    "modelId": 60,
+    "softwareVersion": "0x1"
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed - Shutter Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe - Strobe"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random - Strobe Random"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random Sync - Strobe Pulse Random"
+        },
+        {
+          "dmxRange": [
+            26,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction",
+          "comment": "Idle - Custom"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Full Luminaire ReCal - Reset"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "NoFunction",
+          "comment": "Fixture Shutdown - Custom"
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display - Menu On - Custom"
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display - Menu Off - Custom"
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimming Curve Linear - Custom"
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimming Curve S-Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimming Curve Square Curve - Custom"
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Snap On - Custom"
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Snap Off - Custom"
+        },
+        {
+          "dmxRange": [
+            71,
+            75
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Calibration On - Custom"
+        },
+        {
+          "dmxRange": [
+            76,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Calibration Off - Custom"
+        },
+        {
+          "dmxRange": [
+            81,
+            85
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            86,
+            90
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Studio Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Whisper Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan On - Custom"
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Auto - Custom"
+        },
+        {
+          "dmxRange": [
+            131,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "16Bit Mode",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe Rate",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "8Bit Mode",
+      "rdmPersonalityIndex": 2,
+      "channels": [
+        "Dim 2",
+        "Strobe Rate",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "Single Channel Mode",
+      "rdmPersonalityIndex": 3,
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      255,
+      420,
+      250
+    ],
+    "weight": 6.5,
+    "power": 240,
+    "bulb": {
+      "type": "LED",
+      "lumens": 340000,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        18.0,
+        20.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Vari-Lite VL800 EventPAR WW is an LED retro-style event PAR perfect for a modern replacement of classic tungsten PAR fixtures",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-11-02T01:19:57",
+      "text": "Update upload by GDTFservice.com, powered by Crescit, commissioned by Vari-Lite."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "0d71c448c24b516a"
+  },
+  "manufacturerKey": "vari-lite",
+  "fixtureKey": "vl800-eventpar-ww",
+  "gwFixtureTypeID": "08CB111A-251B-4076-8638-325ED92D5D6E"
+}

@@ -1,0 +1,253 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MMS-100 Motion",
+  "shortName": "MMS-100",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-07-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 5AAEF8B2-1962-4107-AA1F-50027A87BBF7"
+    }
+  },
+  "comment": "Projector Mirror",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Control Trigger": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (control trigger)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Trigger control channel"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Unknown (control trigger)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fine correction OFF"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (control trigger)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fine correction ON"
+        }
+      ]
+    },
+    "control": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Safe"
+        },
+        {
+          "dmxRange": [
+            4,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "pan and tilt mspeed off"
+        },
+        {
+          "dmxRange": [
+            8,
+            27
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "(reserved)"
+        },
+        {
+          "dmxRange": [
+            28,
+            31
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display Off"
+        },
+        {
+          "dmxRange": [
+            32,
+            35
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display Dim"
+        },
+        {
+          "dmxRange": [
+            36,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display Bright"
+        },
+        {
+          "dmxRange": [
+            40,
+            43
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display Preview"
+        },
+        {
+          "dmxRange": [
+            44,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "(reserved)"
+        },
+        {
+          "dmxRange": [
+            64,
+            67
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Home All"
+        },
+        {
+          "dmxRange": [
+            68,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "(reserved)"
+        },
+        {
+          "dmxRange": [
+            80,
+            83
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Shutdown"
+        },
+        {
+          "dmxRange": [
+            84,
+            87
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Graphics System Reset"
+        },
+        {
+          "dmxRange": [
+            88,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "(reserved)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Normal",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Control Trigger",
+        "control"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "description": "Projector Mirror",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-07-28T17:06:41",
+      "text": "R1.02"
+    }
+  },
+  "manufacturerKey": "high-end-systems",
+  "fixtureKey": "mms-100-motion",
+  "gwFixtureTypeID": "5AAEF8B2-1962-4107-AA1F-50027A87BBF7"
+}

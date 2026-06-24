@@ -1,0 +1,950 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Studio PAR DTW",
+  "shortName": "DTW-PAR",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-01-06",
+    "lastModifyDate": "2022-06-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 924D18CB-CBB4-4BA3-8B03-042B56358733"
+    }
+  },
+  "comment": "Studio PAR DTW / CLPSTDTW: 12x10 W WW,CW,A LED STUDIO PAR WITH DIM-TO-WARM CONTROL",
+  "rdm": {
+    "modelId": 33
+  },
+  "wheels": {
+    "Virtual CCT": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "open",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "1600K",
+          "colors": [
+            "#bf4c00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2000K",
+          "colors": [
+            "#ab5d00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2500K",
+          "colors": [
+            "#ae5a2b"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3000K",
+          "colors": [
+            "#9e633e"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3200K",
+          "colors": [
+            "#9d6346"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3500K",
+          "colors": [
+            "#886c58"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4000K",
+          "colors": [
+            "#f1e3bc"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4500K",
+          "colors": [
+            "#e0e6d7"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "5000K",
+          "colors": [
+            "#667380"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "5600K",
+          "colors": [
+            "#607483"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "6000K",
+          "colors": [
+            "#577591"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "6500K",
+          "colors": [
+            "#507596"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "6800K",
+          "colors": [
+            "#5172a5"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6800K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1600K"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound Control OFF (Mic Sensitivity)"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound Control ON Low to High"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            6,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            250
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            251,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 0
+        },
+        {
+          "dmxRange": [
+            6,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            121,
+            140
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 8
+        },
+        {
+          "dmxRange": [
+            141,
+            160
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 9
+        },
+        {
+          "dmxRange": [
+            161,
+            180
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 10
+        },
+        {
+          "dmxRange": [
+            181,
+            200
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 11
+        },
+        {
+          "dmxRange": [
+            201,
+            220
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 12
+        },
+        {
+          "dmxRange": [
+            221,
+            240
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 13
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Virtual CCT",
+          "slotNumber": 14
+        }
+      ]
+    },
+    "CTO 2": {
+      "name": "CTO",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "off"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6800K"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "1600K"
+        }
+      ]
+    },
+    "Ctrl2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound Control OFF (Mic Sensitivity)"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound Control ON Low to High"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            1,
+            77
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            78,
+            78
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Response LED (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            79,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Response Halogen (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            81,
+            81
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            82,
+            82
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DTW (Redshift) on (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            83,
+            83
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DTW (Redshift) off (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            86
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            87,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            102,
+            102
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Silent Fan (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            103,
+            103
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            104
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto Fan (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            105,
+            105
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            106,
+            106
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            107,
+            167
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            168
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Linear (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Exponential (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            171,
+            171
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            172,
+            172
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Logarithmic (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            173,
+            173
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve S-Curve (Hold 3s)"
+        },
+        {
+          "dmxRange": [
+            175,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "no function"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH Mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2CH Mode",
+      "channels": [
+        "Dim",
+        "CTO"
+      ]
+    },
+    {
+      "name": "3 CH Mode Sound to Light",
+      "channels": [
+        "Dim",
+        "CTO",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "3CH Mode DIR",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "3CH Mode CCT",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "CTO"
+      ]
+    },
+    {
+      "name": "9CH Mode",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "C1",
+        "CTO 2",
+        "Ctrl2",
+        "Ctrl1 2"
+      ]
+    },
+    {
+      "name": "13 CH Mode",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine",
+        "Strobe1",
+        "R 2",
+        "R 2 fine",
+        "G 2",
+        "G 2 fine",
+        "B 2",
+        "B 2 fine",
+        "C1",
+        "CTO 2",
+        "Ctrl2",
+        "Ctrl1 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      219,
+      185,
+      200
+    ],
+    "weight": 4.7,
+    "DMXconnector": "XLR5",
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 300,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        18.0,
+        30.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Cold White",
+      "cie": "0.271800,0.332900,98.570000",
+      "hex": "#bdffff"
+    },
+    {
+      "name": "Warm White",
+      "cie": "0.399900,0.392900,100.000000",
+      "hex": "#fff5ac"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.551800,0.422600,55.570000",
+      "hex": "#ff9e00"
+    }
+  ],
+  "gwSpecs": {
+    "description": "12x10 W WW,CW,A LED STUDIO PAR WITH DIM-TO-WARM CONTROL",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-06-15T13:44:10",
+      "text": "Firmware 1U V103-GDTF 1.2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "541b32bdbf3c4052"
+  },
+  "manufacturerKey": "cameo",
+  "fixtureKey": "studio-par-dtw",
+  "gwFixtureTypeID": "924D18CB-CBB4-4BA3-8B03-042B56358733"
+}

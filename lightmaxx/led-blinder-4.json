@@ -1,9 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "LED Blinder 4",
-  "categories": ["Blinder"],
+  "categories": [
+    "Blinder",
+    "Dimmer"
+  ],
   "meta": {
-    "authors": ["Leon Dietrich"],
+    "authors": [
+      "Leon Dietrich"
+    ],
     "createDate": "2026-02-02",
     "lastModifyDate": "2026-02-02"
   },
@@ -16,7 +21,11 @@
     ]
   },
   "physical": {
-    "dimensions": [195, 315, 315],
+    "dimensions": [
+      195,
+      315,
+      315
+    ],
     "weight": 4.5,
     "power": 210,
     "DMXconnector": "3-pin",
@@ -54,12 +63,18 @@
     "Strobe": {
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [1, 255],
+          "dmxRange": [
+            1,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -70,28 +85,40 @@
     "Effect": {
       "capabilities": [
         {
-          "dmxRange": [0, 70],
+          "dmxRange": [
+            0,
+            70
+          ],
           "type": "Effect",
           "effectName": "on-off-iterate",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [71, 140],
+          "dmxRange": [
+            71,
+            140
+          ],
           "type": "Effect",
           "effectName": "fade-iterate",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [141, 200],
+          "dmxRange": [
+            141,
+            200
+          ],
           "type": "Effect",
           "effectName": "fade rotated",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [201, 255],
+          "dmxRange": [
+            201,
+            255
+          ],
           "type": "Effect",
           "effectName": "on-off rotated",
           "speedStart": "slow",
@@ -102,6 +129,113 @@
     "No function": {
       "capability": {
         "type": "NoFunction"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min to Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Min to Max"
+        }
+      ]
+    },
+    "Ctrl2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "Min to Max"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Min to Max"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Min to Max"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Min to Max"
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Min to Max"
       }
     }
   },
@@ -123,5 +257,19 @@
   ],
   "fixtureKey": "led-blinder-4",
   "manufacturerKey": "lightmaxx",
-  "oflURL": "https://open-fixture-library.org/lightmaxx/led-blinder-4"
+  "oflURL": "https://open-fixture-library.org/lightmaxx/led-blinder-4",
+  "gwMedia": {
+    "thumbnail": "c62a63fbc8114732"
+  },
+  "gwFixtureTypeID": "D9E133DF-752E-421E-8E94-8178A7D417A8",
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-17T21:49:25",
+      "text": "V1_1"
+    }
+  }
 }

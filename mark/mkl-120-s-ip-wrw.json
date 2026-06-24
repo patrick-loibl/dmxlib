@@ -1,0 +1,176 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MKL 120 S IP WRW",
+  "shortName": "MKL 120 S  IP WRW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-12-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A1166AD4-C94A-49E0-8FCA-A58BC9A0328B"
+    }
+  },
+  "comment": "MKL 120 S  IP WRW: Proyector LED compuesto por 12 LEDS de doble tonalidad (blanco frio - blanco cálido) de 8 W.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Slow > Fast"
+      }
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Color Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Color Jump",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Color Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Slow > Fast"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "3 CH",
+      "channels": [
+        "Dim",
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "6 CH",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "CW",
+        "WW",
+        "Color FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      98,
+      181
+    ],
+    "weight": 2.6,
+    "power": 96,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        45.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Proyector LED compuesto por 12 LEDS de doble tonalidad (blanco frio - blanco cálido) de 8 W.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-04T14:22:53",
+      "text": "Version_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c03f51d079455010"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "mkl-120-s-ip-wrw",
+  "gwFixtureTypeID": "A1166AD4-C94A-49E0-8FCA-A58BC9A0328B"
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Astra Soft Bi-Color",
+  "shortName": "AstSoft BiC",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-02-16",
+    "lastModifyDate": "2021-02-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: FFF5E116-C9F2-4EEA-9A86-FC24E5268031"
+    }
+  },
+  "comment": "Astra Soft Bi-Color LED Panel: Litepanels' Astra Soft Bi-Color LED Panel provides wide, soft, color-accurate white light to beautifully illuminate your talent. Adjustable from 3200K to 5600K, Astra Soft Bi-Color LED Panel adapts to fit your lighting needs, all in a lightweight and compact fixture.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "5600K"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capability": {
+        "type": "Unknown (FanMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2 Channel",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "3 Channel",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      320,
+      134,
+      320
+    ],
+    "weight": 3.2,
+    "power": 105,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        94.0,
+        158.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "LED",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Litepanels' Astra Soft Bi-Color LED Panel provides wide, soft, color-accurate white light to beautifully illuminate your talent. Adjustable from 3200K to 5600K, Astra Soft Bi-Color LED Panel adapts to fit your lighting needs, all in a lightweight and compact fixture.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-02-16T08:39:51",
+      "text": "Feb. 2021, based on DMX Control Modules Manual"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "16c793b92bb1f7ab"
+  },
+  "manufacturerKey": "litepanels",
+  "fixtureKey": "astra-soft-bi-color",
+  "gwFixtureTypeID": "FFF5E116-C9F2-4EEA-9A86-FC24E5268031"
+}

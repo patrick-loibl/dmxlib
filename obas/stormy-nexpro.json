@@ -1,0 +1,270 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Stormy Nexpro",
+  "shortName": "Stormy",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-04-09",
+    "lastModifyDate": "2025-04-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: AA2B2C26-8524-483F-8C69-ACD1FE65B1E9"
+    }
+  },
+  "comment": "Stormy 3000: NEXPRO Stormy 3000K",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "Random1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        }
+      ]
+    },
+    "BG-Red": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "BG-Green": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "BG-Blue": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "BG-White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "31ch",
+      "channels": [
+        "Dim 2",
+        "G",
+        "B",
+        "White",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Sh1",
+        "Strobe Duration",
+        "Random1",
+        "FX1",
+        "FX1 Rate",
+        "Color FX1"
+      ]
+    },
+    {
+      "name": "15ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Strobe Duration",
+        "Random1",
+        "FX1",
+        "FX1 Rate",
+        "Color FX1",
+        "BG-Red",
+        "BG-Green",
+        "BG-Blue",
+        "BG-White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      300,
+      155,
+      455
+    ],
+    "weight": 12.5,
+    "power": 500,
+    "bulb": {
+      "type": "LED",
+      "lumens": 7500,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        80.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.640000,0.330000,21.267290",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Emitter 2",
+      "cie": "0.300000,0.600000,71.515220",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Emitter 3",
+      "cie": "0.150000,0.060000,7.217500",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "Emitter 4",
+      "cie": "0.312727,0.329023,100.000010",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "NEXPRO Stormy 3000K",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-09T07:13:55",
+      "text": "2 mode"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ca86c38a5b43ef29"
+  },
+  "manufacturerKey": "obas",
+  "fixtureKey": "stormy-nexpro",
+  "gwFixtureTypeID": "AA2B2C26-8524-483F-8C69-ACD1FE65B1E9"
+}

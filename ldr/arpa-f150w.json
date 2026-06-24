@@ -1,0 +1,228 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Arpa F150W",
+  "shortName": "Arpa F150W",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-04-17",
+    "lastModifyDate": "2024-04-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 74D215E5-96B1-4FDF-8616-94F158D0A926"
+    }
+  },
+  "comment": "Arpa F150 LED 3.200K",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dummy": {
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 1"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 2"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 3"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 4"
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 5"
+        },
+        {
+          "dmxRange": [
+            121,
+            140
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 6"
+        },
+        {
+          "dmxRange": [
+            141,
+            160
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 7"
+        },
+        {
+          "dmxRange": [
+            161,
+            180
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 8"
+        },
+        {
+          "dmxRange": [
+            181,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 9"
+        },
+        {
+          "dmxRange": [
+            201,
+            220
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe Speed 10"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1ch 8bit",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "8bit + strobe",
+      "channels": [
+        "Dim",
+        "Dummy",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "16bit + strobe",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "weight": 5.0,
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      80
+    ],
+    "revision": {
+      "date": "2024-04-17T10:16:35",
+      "text": "Finished"
+    }
+  },
+  "manufacturerKey": "ldr",
+  "fixtureKey": "arpa-f150w",
+  "gwFixtureTypeID": "74D215E5-96B1-4FDF-8616-94F158D0A926"
+}

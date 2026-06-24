@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Halo RGB",
+  "shortName": "LED HALO",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-05-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 32140187-9AFF-4F1D-90A5-C026FCE4E9DE"
+    }
+  },
+  "comment": "Custom LED Halo",
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "Unknown (redred)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "rgb shutter",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "R",
+        "B",
+        "G"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      320,
+      20,
+      320
+    ]
+  },
+  "gwDmxProfiles": [
+    {
+      "name": "DMX Profile 1",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2026-05-07T18:43:19",
+      "text": "1001"
+    }
+  },
+  "manufacturerKey": "mandalagroup",
+  "fixtureKey": "halo-rgb",
+  "gwFixtureTypeID": "32140187-9AFF-4F1D-90A5-C026FCE4E9DE"
+}

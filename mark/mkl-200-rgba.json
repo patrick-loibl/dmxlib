@@ -1,0 +1,218 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MKL 200 RGBA",
+  "shortName": "MKL 200 RGBA",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-12-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7B746D70-C227-44F4-AD92-689F5E8BE373"
+    }
+  },
+  "comment": "Proyector LED IP65 de 60º de apertura integrado por 1 LED COB RGBA de 200W.",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow > Fast"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "DMX Control ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "Static Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            179
+          ],
+          "type": "Effect",
+          "effectName": "Jump Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            180,
+            239
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Change Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Slow > Fast"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4 CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber"
+      ]
+    },
+    {
+      "name": "8 CH",
+      "channels": [
+        "Dim 2",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      98,
+      181
+    ],
+    "weight": 5.1,
+    "power": 96,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        45.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Proyector LED IP65 de 60º de apertura integrado por 1 LED COB RGBA de 200W.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-04T16:55:47",
+      "text": "Version_1 RENAMED"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fe4b7ca9c525bac7"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "mkl-200-rgba",
+  "gwFixtureTypeID": "7B746D70-C227-44F4-AD92-689F5E8BE373"
+}

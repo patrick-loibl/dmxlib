@@ -1,0 +1,173 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LumiPro House Pendant 110 BI",
+  "shortName": "LP House 110 BI",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-28",
+    "lastModifyDate": "2025-12-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F7ABAA5D-E506-406A-A3B5-4D9C8E7870A9"
+    }
+  },
+  "comment": "LumiPro House Pendant 110 BI",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4278190080,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "StrobeM Shutter": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (StrobeModeShutter)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 2CH",
+      "channels": [
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "Mode 2 4CH",
+      "channels": [
+        "CW",
+        "WW",
+        "Dim 2",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 3 2CH",
+      "channels": [
+        "CTC",
+        "StrobeM Shutter"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      170,
+      302,
+      170
+    ],
+    "weight": 5.0,
+    "power": 100,
+    "bulb": {
+      "type": "586nm / 360nm LED",
+      "lumens": 7819,
+      "colorTemperature": 4500
+    },
+    "lens": {
+      "degreesMinMax": [
+        23.0,
+        44.1
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warm White Led",
+      "cie": "0.454000,0.402000,87.339000",
+      "hex": "#ffd97e",
+      "dominantWavelength": 586.0
+    },
+    {
+      "name": "Cold White Led",
+      "cie": "0.314000,0.320000,100.000000",
+      "hex": "#fffcff",
+      "dominantWavelength": 360.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "LumiPro House Pendant 110 BI",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-12-08T07:36:46",
+      "text": "LP V-1_3 - Fix Virtual Dimmer"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e3418cf93ab30f36"
+  },
+  "manufacturerKey": "lumipro",
+  "fixtureKey": "lumipro-house-pendant-110-bi",
+  "gwFixtureTypeID": "F7ABAA5D-E506-406A-A3B5-4D9C8E7870A9"
+}

@@ -1,0 +1,292 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED COB 200 RGBW ",
+  "shortName": "COB 200",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-10-30",
+    "lastModifyDate": "2025-11-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3D7C76F0-8BF4-4D79-9F2D-46BB516FC51B"
+    }
+  },
+  "comment": "PRstage. COB 200 RGBW official file.",
+  "rdm": {
+    "modelId": 33313
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max "
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Close "
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open "
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Jump"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Gradient"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Explosion flash"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Voice Control"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - 4CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "Mode 2 - 8CH",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      185,
+      325,
+      185
+    ],
+    "weight": 7.4,
+    "DMXconnector": "XLR5",
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 3400,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red ",
+      "cie": "0.699800,0.299700,37.530000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green ",
+      "cie": "0.161900,0.693800,72.452500",
+      "hex": "#00ff28"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White ",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "PRstage. COB 200 RGBW official file.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-11-10T09:25:42",
+      "text": "Ver 1_01"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4e4dd64bd11ccb81"
+  },
+  "manufacturerKey": "prstage",
+  "fixtureKey": "led-cob-200-rgbw",
+  "gwFixtureTypeID": "3D7C76F0-8BF4-4D79-9F2D-46BB516FC51B"
+}

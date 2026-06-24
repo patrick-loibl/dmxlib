@@ -1,0 +1,176 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Color Curtain",
+  "shortName": "Curtain",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-06",
+    "lastModifyDate": "2023-11-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F4EE265C-79E5-4A29-A6AA-4C510D56EA46"
+    }
+  },
+  "comment": "LED Curtain with 4 High-Perfomance RGBW LED´s and Quick DMX.\nMade by Manual",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            8
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            9,
+            88
+          ],
+          "type": "Effect",
+          "effectName": "Static Light (Selection via Channel 8)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            89,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "Color Change (Speed via Channel 8)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            169,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "Color Fade (Speed via Channel 8)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Control (Sensitivity via Channel 8)",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Function": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Strobe Mode",
+        "Color FX1",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      400,
+      130,
+      400
+    ],
+    "weight": 4.6,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED Curtain with 4 High-Perfomance RGBW LED´s and Quick DMX.\nMade by Manual",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-11-07T18:42:02",
+      "text": "Ver. 1.2"
+    }
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "led-color-curtain",
+  "gwFixtureTypeID": "F4EE265C-79E5-4A29-A6AA-4C510D56EA46"
+}

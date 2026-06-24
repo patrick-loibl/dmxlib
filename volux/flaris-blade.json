@@ -1,0 +1,1472 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Flaris Blade",
+  "shortName": "Flaris Blade",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "5722E155-1A3D-11F0-AFEE-42010A37C004"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      90,
+      183,
+      998
+    ],
+    "weight": 8.9,
+    "power": 2,
+    "bulb": {
+      "type": "LED",
+      "lumens": 44800,
+      "colorTemperature": 7250
+    },
+    "lens": {
+      "degreesMinMax": [
+        108.0,
+        120.0
+      ]
+    }
+  },
+  "wheels": {
+    "RGBW FOREGROUND COLOR": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Virtual Color Wheel",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    },
+    "RGBW BACKGROUND COLOR": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Virtual Color Wheel",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            131,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp"
+        },
+        {
+          "dmxRange": [
+            180,
+            229
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown"
+        },
+        {
+          "dmxRange": [
+            230,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Strobe Effects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Effect",
+          "comment": "MACRO 1 - STROBE FX"
+        }
+      ]
+    },
+    "Strobe Effects1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            3,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "RGBW ColorMacro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "RGBW ColorMacro1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "NoFunction",
+          "comment": "NO FUNCTION"
+        },
+        {
+          "dmxRange": [
+            3,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Foreground Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Background Color2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Strobe ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "RGBW ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_1 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_1 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_1 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_1 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_2 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_2 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_2 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_2 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_3 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_3 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_3 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_3 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_4 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_4 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_4 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_4 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_5 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_5 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_5 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_5 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_6 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_6 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_6 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_6 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_7 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_7 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_7 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_7 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_8 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_8 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_8 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_8 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_9 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_9 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_9 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_9 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_10 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_10 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_10 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_10 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_11 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_11 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_11 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_11 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_12 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_12 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_12 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_12 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_13 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_13 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_13 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_13 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_14 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_14 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_14 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_14 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_15 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_15 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_15 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_15 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "RGBW Beam_16 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "RGBW Beam_16 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "RGBW Beam_16 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "RGBW Beam_16 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Strobe Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "RGBW Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Strobe_1 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_2 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_3 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_4 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_5 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_6 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_7 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_8 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_9 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_10 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_11 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_12 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_13 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_14 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_15 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Strobe_16 ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1 - 13Ch DMX (Macro FX)",
+      "shortName": "Mode1 - 13Ch",
+      "channels": [
+        "Body Dimmer",
+        "Body Shutter1",
+        "Strobe Effects1",
+        "Strobe Effects1Rate",
+        "RGBW ColorMacro1",
+        "RGBW ColorMacro1Rate",
+        "Foreground Color1",
+        "Background Color2",
+        "Strobe ColorAdd_CW",
+        "RGBW ColorAdd_R",
+        "RGBW ColorAdd_G",
+        "RGBW ColorAdd_B",
+        "RGBW ColorAdd_W"
+      ]
+    },
+    {
+      "name": "Mode2 - 64Ch DMX - RGBW Segments",
+      "shortName": "Mode2 - 64Ch",
+      "channels": [
+        "RGBW Beam_1 ColorAdd_R",
+        "RGBW Beam_1 ColorAdd_G",
+        "RGBW Beam_1 ColorAdd_B",
+        "RGBW Beam_1 ColorAdd_W",
+        "RGBW Beam_2 ColorAdd_R",
+        "RGBW Beam_2 ColorAdd_G",
+        "RGBW Beam_2 ColorAdd_B",
+        "RGBW Beam_2 ColorAdd_W",
+        "RGBW Beam_3 ColorAdd_R",
+        "RGBW Beam_3 ColorAdd_G",
+        "RGBW Beam_3 ColorAdd_B",
+        "RGBW Beam_3 ColorAdd_W",
+        "RGBW Beam_4 ColorAdd_R",
+        "RGBW Beam_4 ColorAdd_G",
+        "RGBW Beam_4 ColorAdd_B",
+        "RGBW Beam_4 ColorAdd_W",
+        "RGBW Beam_5 ColorAdd_R",
+        "RGBW Beam_5 ColorAdd_G",
+        "RGBW Beam_5 ColorAdd_B",
+        "RGBW Beam_5 ColorAdd_W",
+        "RGBW Beam_6 ColorAdd_R",
+        "RGBW Beam_6 ColorAdd_G",
+        "RGBW Beam_6 ColorAdd_B",
+        "RGBW Beam_6 ColorAdd_W",
+        "RGBW Beam_7 ColorAdd_R",
+        "RGBW Beam_7 ColorAdd_G",
+        "RGBW Beam_7 ColorAdd_B",
+        "RGBW Beam_7 ColorAdd_W",
+        "RGBW Beam_8 ColorAdd_R",
+        "RGBW Beam_8 ColorAdd_G",
+        "RGBW Beam_8 ColorAdd_B",
+        "RGBW Beam_8 ColorAdd_W",
+        "RGBW Beam_9 ColorAdd_R",
+        "RGBW Beam_9 ColorAdd_G",
+        "RGBW Beam_9 ColorAdd_B",
+        "RGBW Beam_9 ColorAdd_W",
+        "RGBW Beam_10 ColorAdd_R",
+        "RGBW Beam_10 ColorAdd_G",
+        "RGBW Beam_10 ColorAdd_B",
+        "RGBW Beam_10 ColorAdd_W",
+        "RGBW Beam_11 ColorAdd_R",
+        "RGBW Beam_11 ColorAdd_G",
+        "RGBW Beam_11 ColorAdd_B",
+        "RGBW Beam_11 ColorAdd_W",
+        "RGBW Beam_12 ColorAdd_R",
+        "RGBW Beam_12 ColorAdd_G",
+        "RGBW Beam_12 ColorAdd_B",
+        "RGBW Beam_12 ColorAdd_W",
+        "RGBW Beam_13 ColorAdd_R",
+        "RGBW Beam_13 ColorAdd_G",
+        "RGBW Beam_13 ColorAdd_B",
+        "RGBW Beam_13 ColorAdd_W",
+        "RGBW Beam_14 ColorAdd_R",
+        "RGBW Beam_14 ColorAdd_G",
+        "RGBW Beam_14 ColorAdd_B",
+        "RGBW Beam_14 ColorAdd_W",
+        "RGBW Beam_15 ColorAdd_R",
+        "RGBW Beam_15 ColorAdd_G",
+        "RGBW Beam_15 ColorAdd_B",
+        "RGBW Beam_15 ColorAdd_W",
+        "RGBW Beam_16 ColorAdd_R",
+        "RGBW Beam_16 ColorAdd_G",
+        "RGBW Beam_16 ColorAdd_B",
+        "RGBW Beam_16 ColorAdd_W"
+      ]
+    },
+    {
+      "name": "Mode3 - 89Ch DMX (Extended + Pixel)",
+      "shortName": "Mode3 - 89Ch",
+      "channels": [
+        "Strobe Dimmer",
+        "RGBW Dimmer",
+        "Body Shutter1",
+        "Strobe Effects1",
+        "Strobe Effects1Rate",
+        "RGBW ColorMacro1",
+        "RGBW ColorMacro1Rate",
+        "Foreground Color1",
+        "Background Color2",
+        "Strobe_1 ColorAdd_CW",
+        "Strobe_2 ColorAdd_CW",
+        "Strobe_3 ColorAdd_CW",
+        "Strobe_4 ColorAdd_CW",
+        "Strobe_5 ColorAdd_CW",
+        "Strobe_6 ColorAdd_CW",
+        "Strobe_7 ColorAdd_CW",
+        "Strobe_8 ColorAdd_CW",
+        "Strobe_9 ColorAdd_CW",
+        "Strobe_10 ColorAdd_CW",
+        "Strobe_11 ColorAdd_CW",
+        "Strobe_12 ColorAdd_CW",
+        "Strobe_13 ColorAdd_CW",
+        "Strobe_14 ColorAdd_CW",
+        "Strobe_15 ColorAdd_CW",
+        "Strobe_16 ColorAdd_CW",
+        "RGBW Beam_1 ColorAdd_R",
+        "RGBW Beam_1 ColorAdd_G",
+        "RGBW Beam_1 ColorAdd_B",
+        "RGBW Beam_1 ColorAdd_W",
+        "RGBW Beam_2 ColorAdd_R",
+        "RGBW Beam_2 ColorAdd_G",
+        "RGBW Beam_2 ColorAdd_B",
+        "RGBW Beam_2 ColorAdd_W",
+        "RGBW Beam_3 ColorAdd_R",
+        "RGBW Beam_3 ColorAdd_G",
+        "RGBW Beam_3 ColorAdd_B",
+        "RGBW Beam_3 ColorAdd_W",
+        "RGBW Beam_4 ColorAdd_R",
+        "RGBW Beam_4 ColorAdd_G",
+        "RGBW Beam_4 ColorAdd_B",
+        "RGBW Beam_4 ColorAdd_W",
+        "RGBW Beam_5 ColorAdd_R",
+        "RGBW Beam_5 ColorAdd_G",
+        "RGBW Beam_5 ColorAdd_B",
+        "RGBW Beam_5 ColorAdd_W",
+        "RGBW Beam_6 ColorAdd_R",
+        "RGBW Beam_6 ColorAdd_G",
+        "RGBW Beam_6 ColorAdd_B",
+        "RGBW Beam_6 ColorAdd_W",
+        "RGBW Beam_7 ColorAdd_R",
+        "RGBW Beam_7 ColorAdd_G",
+        "RGBW Beam_7 ColorAdd_B",
+        "RGBW Beam_7 ColorAdd_W",
+        "RGBW Beam_8 ColorAdd_R",
+        "RGBW Beam_8 ColorAdd_G",
+        "RGBW Beam_8 ColorAdd_B",
+        "RGBW Beam_8 ColorAdd_W",
+        "RGBW Beam_9 ColorAdd_R",
+        "RGBW Beam_9 ColorAdd_G",
+        "RGBW Beam_9 ColorAdd_B",
+        "RGBW Beam_9 ColorAdd_W",
+        "RGBW Beam_10 ColorAdd_R",
+        "RGBW Beam_10 ColorAdd_G",
+        "RGBW Beam_10 ColorAdd_B",
+        "RGBW Beam_10 ColorAdd_W",
+        "RGBW Beam_11 ColorAdd_R",
+        "RGBW Beam_11 ColorAdd_G",
+        "RGBW Beam_11 ColorAdd_B",
+        "RGBW Beam_11 ColorAdd_W",
+        "RGBW Beam_12 ColorAdd_R",
+        "RGBW Beam_12 ColorAdd_G",
+        "RGBW Beam_12 ColorAdd_B",
+        "RGBW Beam_12 ColorAdd_W",
+        "RGBW Beam_13 ColorAdd_R",
+        "RGBW Beam_13 ColorAdd_G",
+        "RGBW Beam_13 ColorAdd_B",
+        "RGBW Beam_13 ColorAdd_W",
+        "RGBW Beam_14 ColorAdd_R",
+        "RGBW Beam_14 ColorAdd_G",
+        "RGBW Beam_14 ColorAdd_B",
+        "RGBW Beam_14 ColorAdd_W",
+        "RGBW Beam_15 ColorAdd_R",
+        "RGBW Beam_15 ColorAdd_G",
+        "RGBW Beam_15 ColorAdd_B",
+        "RGBW Beam_15 ColorAdd_W",
+        "RGBW Beam_16 ColorAdd_R",
+        "RGBW Beam_16 ColorAdd_G",
+        "RGBW Beam_16 ColorAdd_B",
+        "RGBW Beam_16 ColorAdd_W"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "Flaris Blade is an IP65-rated hybrid linear fixture that offers RGBW pixel mapping combined with powerful white light strobe/blinder functionality in a single, robust form factor. It features a center strobe of 5W cool white LEDs surrounded by 224 x 2W RGBW LEDs that are independently pixel mappable into 16 segments that can be controlled via DMX or Art-Net for endless variety in color, strobe, and pixel mapping effects. The LEDs are tightly knit together at a pixel pitch of just 5mm emitting into the same tube for seamless segments. A slide-in diffusion filter is included that delivers fluid direct-view looks guaranteed to be free of pixelation. The housing offers flexible rigging capabilities along with integrated multi-unit linking hardware.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-06-15T22:12:45",
+      "text": " Initial Upload By Q2Q Technologies commissioned by Volux"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f50dceffa1e1c5a0"
+  },
+  "manufacturerKey": "volux",
+  "fixtureKey": "flaris-blade",
+  "gwFixtureTypeID": "5722E155-1A3D-11F0-AFEE-42010A37C004"
+}

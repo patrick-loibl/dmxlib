@@ -1,0 +1,319 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Sunrise2L",
+  "shortName": "Sun2L",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-06",
+    "lastModifyDate": "2025-03-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EDBF9B81-DE7E-4523-9615-70FA776F1755"
+    }
+  },
+  "comment": "SunRise 2L is the first LED blinder with equalling the brightness of conventional projectors based around DWE 2x650W halogen lamps, which are used in most events. SunRise 2L is equipped with 2x85W COB LED 3.084 K with high CRI (>82) and an optical glass able to reproduce the performance of the fluorescent bulbs in terms of the projection angle, colour temperature, dimmer ramp and brightness. SunRise 2L is an ideal projector for rental purposes and offers extensive technical advantages such as: reducing energy consumption by x6, simplifies installation and reduces costs of consumable materials such as lamps, wiring, dimmer channels and power boxes, and at last, does not produce heat and thus no deterioration of mechanics. The electronic SunRise 2L also offers many other key points such as the option to control each LED independently in pixel2pixel and can be taken advantage of a dedicated channel to the strobe, in addition to the selection of different dimmer curves.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 1",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 2",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 3",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            121,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 4",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            171,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 5",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 6",
+          "speed": 5
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow rate"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Effect Rate"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Rate"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "As From Menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "DimmerSpeed OFF"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Fast Speed"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Mid Speed"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Slow Speed"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "4ch",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        null,
+        "Sh1"
+      ]
+    },
+    {
+      "name": "7ch",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        null,
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      153,
+      96,
+      310
+    ],
+    "weight": 4.5,
+    "power": 85,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5232,
+      "colorTemperature": 3100
+    },
+    "lens": {
+      "degreesMinMax": [
+        65.0,
+        91.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "WhiteLed",
+      "cie": "0.471500,0.415100,100.000000",
+      "hex": "#ffe56b"
+    }
+  ],
+  "gwSpecs": {
+    "description": "SunRise 2L is the first LED blinder with equalling the brightness of conventional projectors based around DWE 2x650W halogen lamps, which are used in most events. SunRise 2L is equipped with 2x85W COB LED 3.084 K with high CRI (>82) and an optical glass able to reproduce the performance of the fluorescent bulbs in terms of the projection angle, colour temperature, dimmer ramp and brightness. SunRise 2L is an ideal projector for rental purposes and offers extensive technical advantages such as: reducing energy consumption by x6, simplifies installation and reduces costs of consumable materials such as lamps, wiring, dimmer channels and power boxes, and at last, does not produce heat and thus no deterioration of mechanics. The electronic SunRise 2L also offers many other key points such as the option to control each LED independently in pixel2pixel and can be taken advantage of a dedicated channel to the strobe, in addition to the selection of different dimmer curves.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2025-03-06T12:34:33",
+      "text": "Rev 04 - Added Snap Feature"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e63c0100e444bd55"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "sunrise2l",
+  "gwFixtureTypeID": "EDBF9B81-DE7E-4523-9615-70FA776F1755"
+}

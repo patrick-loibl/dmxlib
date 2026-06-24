@@ -1,0 +1,605 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "P250 WW",
+  "shortName": "P250 WW",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-17",
+    "lastModifyDate": "2025-09-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4BCE5F61-2060-4712-B99F-2FAEFF40E9A7"
+    }
+  },
+  "comment": "P250 WW(3000K/5600K)",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "100%"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 50,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Shutter closed"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "No function (shutter open)"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            65,
+            94
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            95,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "shutter open2"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min pulse"
+        },
+        {
+          "dmxRange": [
+            129,
+            158
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max pulse"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "shutter open3"
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "min random"
+        },
+        {
+          "dmxRange": [
+            193,
+            222
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            223,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "max random"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "shutter open4"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "NoFunction",
+          "comment": "Idle"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Mode Low"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Mode High"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Mode Auto"
+        },
+        {
+          "dmxRange": [
+            80,
+            100
+          ],
+          "type": "NoFunction",
+          "comment": "Idle"
+        },
+        {
+          "dmxRange": [
+            101,
+            105
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "900Hz",
+          "comment": "900"
+        },
+        {
+          "dmxRange": [
+            106,
+            110
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1000Hz",
+          "comment": "1000"
+        },
+        {
+          "dmxRange": [
+            111,
+            115
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1100Hz",
+          "comment": "1100"
+        },
+        {
+          "dmxRange": [
+            116,
+            120
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1200Hz",
+          "comment": "1200"
+        },
+        {
+          "dmxRange": [
+            121,
+            125
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1300Hz",
+          "comment": "1300"
+        },
+        {
+          "dmxRange": [
+            126,
+            130
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1400Hz",
+          "comment": "1400"
+        },
+        {
+          "dmxRange": [
+            131,
+            135
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1500Hz",
+          "comment": "1500"
+        },
+        {
+          "dmxRange": [
+            136,
+            140
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "2500Hz",
+          "comment": "2500"
+        },
+        {
+          "dmxRange": [
+            141,
+            145
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "4000Hz",
+          "comment": "4000"
+        },
+        {
+          "dmxRange": [
+            146,
+            150
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "5000Hz",
+          "comment": "5000"
+        },
+        {
+          "dmxRange": [
+            151,
+            155
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "10000Hz",
+          "comment": "10000"
+        },
+        {
+          "dmxRange": [
+            156,
+            160
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "15000Hz",
+          "comment": "15000"
+        },
+        {
+          "dmxRange": [
+            161,
+            165
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "20000Hz",
+          "comment": "20000"
+        },
+        {
+          "dmxRange": [
+            166,
+            170
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "25000Hz",
+          "comment": "25000"
+        },
+        {
+          "dmxRange": [
+            171,
+            200
+          ],
+          "type": "NoFunction",
+          "comment": "Idle"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Linear (Default)"
+        },
+        {
+          "dmxRange": [
+            211,
+            220
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Square"
+        },
+        {
+          "dmxRange": [
+            221,
+            230
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve Inverse Square"
+        },
+        {
+          "dmxRange": [
+            231,
+            240
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve S-Curve"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Idle"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage 2"
+        },
+        {
+          "dmxRange": [
+            121,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Idle"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "100%"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard 5CH",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Dim Mode",
+        "Function"
+      ]
+    },
+    {
+      "name": "Dimmer 1CH",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      217,
+      354,
+      255
+    ],
+    "weight": 7.0,
+    "power": 250,
+    "bulb": {
+      "type": "LED",
+      "lumens": 11900,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        40.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -40,
+      45
+    ],
+    "revision": {
+      "date": "2025-09-17T09:39:28",
+      "text": "Revision 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8bc5ede16a7f5ca9"
+  },
+  "manufacturerKey": "ckc-lighting",
+  "fixtureKey": "p250-ww",
+  "gwFixtureTypeID": "4BCE5F61-2060-4712-B99F-2FAEFF40E9A7"
+}

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": " ACME STAGE PAR UV (BL-100 UV)",
+  "shortName": "BL-100 UV",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-14",
+    "lastModifyDate": "2024-09-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D0AA8E42-67AF-471D-93DC-952723E69A92"
+    }
+  },
+  "comment": "ACME STAGE PAR UV (BL-100 UV): ACME BL-100 UV  100W LED",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Strobe"
+        },
+        {
+          "dmxRange": [
+            7,
+            122
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Strobe"
+        },
+        {
+          "dmxRange": [
+            124,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            128,
+            168
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran1"
+        },
+        {
+          "dmxRange": [
+            169,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran2"
+        },
+        {
+          "dmxRange": [
+            189,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran3"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1 2 DMX",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Mode2 1 DMX",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      246,
+      150
+    ],
+    "power": 100,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "ACME BL-100 UV  100W LED",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-09T01:42:22",
+      "text": " ACME STAGE PAR UV (BL-100 UV)"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8c1d7561881778be"
+  },
+  "manufacturerKey": "acme",
+  "fixtureKey": "acme-stage-par-uv-bl-100-uv",
+  "gwFixtureTypeID": "D0AA8E42-67AF-471D-93DC-952723E69A92"
+}

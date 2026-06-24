@@ -1,0 +1,817 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ZCL 360i",
+  "shortName": "ZCL 360i",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2026-01-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 66E9469D-C70B-4312-BC7C-DD7EF26B5F05"
+    }
+  },
+  "comment": "ELATION© ZCL 360i™",
+  "wheels": {
+    "Color presets": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Off",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Color Preset 01",
+          "colors": [
+            "#f2e689"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Color Preset 02",
+          "colors": [
+            "#cb2e6e"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Color Preset 03",
+          "colors": [
+            "#008d4f"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "highlightValue": 33023,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "highlightValue": 33023,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "P Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            128,
+            189
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "60rpm",
+          "physicalEnd": "0rpm",
+          "comment": "PAN Clockwise from FAST to SLOW"
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "stop",
+          "comment": "NO Rotation"
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "60rpm",
+          "comment": "PAN Counter-Clockwise from SLOW to FAST"
+        }
+      ]
+    },
+    "T Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            128,
+            189
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "60rpm",
+          "physicalEnd": "0rpm",
+          "comment": "TILT Clockwise from FAST to SLOW"
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "stop",
+          "comment": "NO Rotation"
+        },
+        {
+          "dmxRange": [
+            194,
+            255
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "60rpm",
+          "comment": "TILT Counter-Clockwise from SLOW to FAST"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "C1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color presets",
+          "slotNumberStart": 1,
+          "slotNumberEnd": 1.25
+        },
+        {
+          "dmxRange": [
+            1,
+            4
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color presets",
+          "slotNumberStart": 2.25,
+          "slotNumberEnd": 2.5
+        },
+        {
+          "dmxRange": [
+            5,
+            8
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color presets",
+          "slotNumberStart": 3.5,
+          "slotNumberEnd": 3.75
+        },
+        {
+          "dmxRange": [
+            9,
+            12
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color presets",
+          "slotNumberStart": 4.75,
+          "slotNumberEnd": 5
+        },
+        {
+          "dmxRange": [
+            13,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color presets",
+          "slotNumber": 0
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            1,
+            20
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 01"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 02"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 03"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 04"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 05"
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 06"
+        },
+        {
+          "dmxRange": [
+            121,
+            140
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 07"
+        },
+        {
+          "dmxRange": [
+            141,
+            160
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 08"
+        },
+        {
+          "dmxRange": [
+            161,
+            180
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 09"
+        },
+        {
+          "dmxRange": [
+            181,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 10"
+        },
+        {
+          "dmxRange": [
+            201,
+            230
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 11"
+        },
+        {
+          "dmxRange": [
+            231,
+            240
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 12"
+        },
+        {
+          "dmxRange": [
+            241,
+            250
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro 13"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Gradient Color Macro"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Pos FX Fade": {
+      "capability": {
+        "type": "EffectDuration",
+        "durationStart": 0,
+        "durationEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Setting"
+        }
+      ]
+    },
+    "PanTilt Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 1"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 2"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 3"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 4"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 5"
+        },
+        {
+          "dmxRange": [
+            200,
+            219
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 6"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Internal Program 7"
+        }
+      ]
+    },
+    "P 2": {
+      "name": "P",
+      "highlightValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "highlightValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Extend",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "P Rotate",
+        "T Rotate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "Sh1",
+        "Dim",
+        "Dim fine",
+        "Zoom",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Pos FX Fade",
+        "Dim Curve",
+        "PanTilt Mode",
+        "Function"
+      ]
+    },
+    {
+      "name": "Stand",
+      "channels": [
+        "P 2",
+        "T 2",
+        "P Rotate",
+        "T Rotate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "Sh1",
+        "Dim",
+        "Dim fine",
+        "Zoom",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Pos FX Fade",
+        "Dim Curve",
+        "PanTilt Mode",
+        "Function"
+      ]
+    },
+    {
+      "name": "Basic",
+      "channels": [
+        "P 2",
+        "T 2",
+        "P Rotate",
+        "T Rotate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "Sh1",
+        "Dim 2",
+        "Zoom",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Pos FX Fade",
+        "PanTilt Mode",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      155,
+      150,
+      155
+    ],
+    "weight": 5.9,
+    "power": 90,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2026-01-02T13:15:18",
+      "text": "20260103"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "elation",
+  "fixtureKey": "zcl-360i",
+  "gwFixtureTypeID": "66E9469D-C70B-4312-BC7C-DD7EF26B5F05"
+}

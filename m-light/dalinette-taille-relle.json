@@ -1,0 +1,139 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Dalinette taille relle",
+  "shortName": "Led RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "D1F9A676-22C4-1002-4990-76F9DB20718E"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      29,
+      143,
+      143
+    ],
+    "weight": 0.3,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Led Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Led ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            61
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        },
+        {
+          "dmxRange": [
+            62,
+            255
+          ],
+          "type": "Generic",
+          "comment": "limit"
+        }
+      ]
+    },
+    "Led ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            61
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        },
+        {
+          "dmxRange": [
+            62,
+            255
+          ],
+          "type": "Generic",
+          "comment": "limit"
+        }
+      ]
+    },
+    "Led ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            61
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        },
+        {
+          "dmxRange": [
+            62,
+            255
+          ],
+          "type": "Generic",
+          "comment": "limit"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "DMXMode 1",
+      "shortName": "DMXMode 1",
+      "channels": [
+        "Led ColorAdd_R",
+        "Led ColorAdd_G",
+        "Led ColorAdd_B"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "Led RGB 0.5 x 0.5 with virtual / Dimmer 256 Leds RGB avec Virtual Dimmer",
+    "beamType": "Glow",
+    "operatingTemperature": [
+      35,
+      40
+    ],
+    "revision": {
+      "date": "2025-02-13T15:06:58",
+      "text": "V1.2, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "49d8256b0c8bae26"
+  },
+  "manufacturerKey": "m-light",
+  "fixtureKey": "dalinette-taille-relle",
+  "gwFixtureTypeID": "D1F9A676-22C4-1002-4990-76F9DB20718E"
+}

@@ -1,0 +1,430 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BLINDER 200 RGB",
+  "shortName": "Bl200RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-09",
+    "lastModifyDate": "2026-05-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E20DA525-3CDF-45F5-8471-C04E463DABEF"
+    }
+  },
+  "comment": "BLINDER 200 RGB es una cegadora que incluye 2 LEDs COB RGB 3en1 de  100W cada uno que permiten obtener una gran potencia lumínica, muy adecuada en espectáculos en vivo, aplicaciones de touring, etc. Dispone una pantalla con toda la información y botones para navegar a través de menús, seleccionando parámetros tales como velocidad de estrobo funcionando en modo automático, programas internos o sensibilidad de audio. El bastidor permite la orientación en ambos ejes, pudiendo variar el ángulo de emisión y redirigir los focos en ángulos distintos del perpendicular habitual. El dispositivo incluye el modo DMX (4 y 8 canales) con control individual de cada LED, selección de color o mezcla y modo de uso o estrobo general.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "1_Body _Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Color",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "1_Body _Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Jump Color Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "1_Body _Effects1Rate": "FX1 Rate 3"
+          }
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Color Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "1_Body _Effects1Rate": "FX1 Rate 3"
+          }
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Color Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "1_Body _Effects1Rate": "FX1 Rate 3"
+          }
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "1_Body _Effects1Rate": "FX1 Rate 4"
+          }
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "No function"
+      }
+    },
+    "FX1 Rate 2": {
+      "name": "FX1 Rate",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Yellow"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Cyan"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "White"
+        }
+      ]
+    },
+    "FX1 Rate 3": {
+      "name": "FX1 Rate",
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "S > F"
+      }
+    },
+    "FX1 Rate 4": {
+      "name": "FX1 Rate",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            30
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Red Strobe"
+        },
+        {
+          "dmxRange": [
+            31,
+            61
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Green Strobe"
+        },
+        {
+          "dmxRange": [
+            62,
+            92
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Blue Strobe"
+        },
+        {
+          "dmxRange": [
+            93,
+            123
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "White Strobe"
+        },
+        {
+          "dmxRange": [
+            124,
+            154
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Yellow Strobe"
+        },
+        {
+          "dmxRange": [
+            155,
+            185
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Magenta Strobe"
+        },
+        {
+          "dmxRange": [
+            186,
+            217
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Cyan Strobe"
+        },
+        {
+          "dmxRange": [
+            218,
+            247
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "White Strobe"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Jump Color Change"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 CHANNELS",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "7 CHANNELS",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "Strobe1",
+        "FX1",
+        "1_Body _Effects1Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      183,
+      164,
+      396
+    ],
+    "weight": 3.25,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "BLINDER 200 RGB es una cegadora que incluye 2 LEDs COB RGB 3en1 de  100W cada uno que permiten obtener una gran potencia lumínica, muy adecuada en espectáculos en vivo, aplicaciones de touring, etc. Dispone una pantalla con toda la información y botones para navegar a través de menús, seleccionando parámetros tales como velocidad de estrobo funcionando en modo automático, programas internos o sensibilidad de audio. El bastidor permite la orientación en ambos ejes, pudiendo variar el ángulo de emisión y redirigir los focos en ángulos distintos del perpendicular habitual. El dispositivo incluye el modo DMX (4 y 8 canales) con control individual de cada LED, selección de color o mezcla y modo de uso o estrobo general.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-21T06:53:51",
+      "text": "Uopdated Highlight Values"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8d6c763ccd4c2d71"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "blinder-200-rgb",
+  "gwFixtureTypeID": "E20DA525-3CDF-45F5-8471-C04E463DABEF"
+}

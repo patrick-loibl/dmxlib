@@ -1,0 +1,292 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COLORado 1 Quad Zoom VW",
+  "shortName": "COLORado1QuadZoomvw",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "0E5AFA1D-653B-11E8-A5DF-525400685065"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      178,
+      293,
+      235
+    ],
+    "weight": 7.0,
+    "power": 117,
+    "bulb": {
+      "type": "584nm / 447nm / 447nm LED",
+      "lumens": 5237,
+      "colorTemperature": 3283
+    },
+    "lens": {
+      "degreesMinMax": [
+        13.0,
+        23.0
+      ]
+    }
+  },
+  "wheels": {
+    "WHITE MACROS": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "White 1",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 2",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 3",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 4",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 5",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Dimmer fine"
+      ]
+    },
+    "Body ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_WW fine"
+      ]
+    },
+    "Body ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_CW fine"
+      ]
+    },
+    "Body ColorMacro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction",
+          "comment": "WHITE MACROS"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Body Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Body ZoomMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            200
+          ],
+          "type": "NoFunction",
+          "comment": "ZOOM CONTROL"
+        },
+        {
+          "dmxRange": [
+            201,
+            220
+          ],
+          "type": "Zoom"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "ZOOM CONTROL 3"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "STD P",
+      "shortName": "STD P",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body ColorAdd_WW",
+        "Body ColorAdd_WW fine",
+        "Body ColorAdd_CW",
+        "Body ColorAdd_CW fine",
+        "Body ColorMacro1",
+        "Body Shutter1",
+        "Body Zoom",
+        "Body ZoomMode"
+      ]
+    },
+    {
+      "name": "STD Y",
+      "shortName": "STD Y",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body ColorAdd_WW",
+        "Body ColorAdd_WW fine",
+        "Body ColorAdd_CW",
+        "Body ColorAdd_CW fine",
+        "Body ColorMacro1",
+        "Body Shutter1",
+        "Body Zoom",
+        "Body ZoomMode"
+      ]
+    },
+    {
+      "name": "STD W",
+      "shortName": "STD W",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body ColorMacro1",
+        "Body Shutter1",
+        "Body Zoom",
+        "Body ZoomMode"
+      ]
+    },
+    {
+      "name": "UNO",
+      "shortName": "UNO",
+      "channels": [
+        "Body Dimmer"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Warm White",
+      "cie": "0.460000,0.416000,100.000000",
+      "hex": "#ffe973",
+      "dominantWavelength": 584.0
+    },
+    {
+      "name": "Cool White",
+      "cie": "0.291000,0.284000,100.000000",
+      "hex": "#fff9ff",
+      "dominantWavelength": 447.0
+    },
+    {
+      "name": "White",
+      "cie": "0.338000,0.320000,100.000000",
+      "hex": "#fff3fd",
+      "dominantWavelength": 447.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Colorado 1-Quad Zoom VWis a bright indoor/outdoor PAR-style variable white wash light featuring seven 15 W Osram quad-LEDs with tunable color temperature, from 2800 K to 9010 K, to match tungsten sources up to and beyond daylight. A zoom range of 15 to 49 deg, and five dimming curves allow the creative use of the fixture as a beam, wide flood, and wash. It maintains its IP65 rating with IP rated DMX cables, but standard 5-pin XLR DMX cables work perfectly for indoor use.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-20T14:41:16",
+      "text": "Beta 1.0.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f2154741699ebcdf"
+  },
+  "manufacturerKey": "chauvet-professional",
+  "fixtureKey": "colorado-1-quad-zoom-vw",
+  "gwFixtureTypeID": "0E5AFA1D-653B-11E8-A5DF-525400685065"
+}

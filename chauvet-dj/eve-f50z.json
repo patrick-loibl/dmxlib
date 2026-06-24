@@ -1,0 +1,185 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EVE-F50Z",
+  "shortName": "EVE-F50Z",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-06-17",
+    "lastModifyDate": "2021-06-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 69E2E200-3AEA-447B-9488-C9BF54B50CDF"
+    }
+  },
+  "comment": "Chauvet DJ EVE-F50Z",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed set from display"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode 1 - fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode 2 - medium"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode 3 - slow"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1-CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3-CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "weight": 3.9,
+    "DMXconnector": "XLR3",
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1342,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        17.0,
+        69.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-06-17T11:51:03",
+      "text": "Chauvet DJ EVE-F50Z"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5d2e8951a318240b"
+  },
+  "manufacturerKey": "chauvet-dj",
+  "fixtureKey": "eve-f50z",
+  "gwFixtureTypeID": "69E2E200-3AEA-447B-9488-C9BF54B50CDF"
+}

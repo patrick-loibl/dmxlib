@@ -1,9 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "Actionpanel Dual Color",
-  "categories": ["Dimmer"],
+  "categories": [
+    "Dimmer"
+  ],
   "meta": {
-    "authors": ["Dyami Caliri"],
+    "authors": [
+      "Dyami Caliri"
+    ],
     "createDate": "2023-10-24",
     "lastModifyDate": "2023-10-24"
   },
@@ -16,17 +20,29 @@
     ]
   },
   "physical": {
-    "dimensions": [205, 205, 105],
+    "dimensions": [
+      205,
+      205,
+      105
+    ],
     "weight": 2,
     "power": 60,
     "DMXconnector": "5-pin",
     "bulb": {
       "type": "LED"
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
     }
   },
   "availableChannels": {
     "Dimmer": {
-      "fineChannelAliases": ["Dimmer fine"],
+      "fineChannelAliases": [
+        "Dimmer fine"
+      ],
       "dmxValueResolution": "8bit",
       "defaultValue": 0,
       "highlightValue": 255,
@@ -35,7 +51,9 @@
       }
     },
     "CCT": {
-      "fineChannelAliases": ["CCT fine"],
+      "fineChannelAliases": [
+        "CCT fine"
+      ],
       "capability": {
         "type": "ColorTemperature",
         "colorTemperatureStart": "6500K",
@@ -46,11 +64,17 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 5],
+          "dmxRange": [
+            0,
+            5
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [6, 255],
+          "dmxRange": [
+            6,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "1Hz",
@@ -60,21 +84,90 @@
     },
     "Strobe 16bit": {
       "name": "Strobe",
-      "fineChannelAliases": ["Strobe 16bit fine"],
+      "fineChannelAliases": [
+        "Strobe 16bit fine"
+      ],
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 1300],
+          "dmxRange": [
+            0,
+            1300
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [1301, 65535],
+          "dmxRange": [
+            1301,
+            65535
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "1Hz",
           "speedEnd": "25Hz"
         }
       ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "LED Frequency": {
+      "fineChannelAliases": [
+        "LED Frequency fine"
+      ],
+      "capability": {
+        "type": "Unknown (LEDFrequency)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    },
+    "Lamp Ctrl": {
+      "fineChannelAliases": [
+        "Lamp Ctrl fine"
+      ],
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
     }
   },
   "modes": [
@@ -116,5 +209,33 @@
   ],
   "fixtureKey": "actionpanel-dual-color",
   "manufacturerKey": "lupo",
-  "oflURL": "https://open-fixture-library.org/lupo/actionpanel-dual-color"
+  "oflURL": "https://open-fixture-library.org/lupo/actionpanel-dual-color",
+  "gwMedia": {
+    "thumbnail": "16b94b1673ed86da"
+  },
+  "gwEmitters": [
+    {
+      "name": "White LED COLD",
+      "cie": "0.329800,0.333200,100.000000",
+      "hex": "#fffaf6"
+    },
+    {
+      "name": "White LED WARM",
+      "cie": "0.419200,0.389900,100.000000",
+      "hex": "#ffeea4"
+    }
+  ],
+  "gwFixtureTypeID": "89FD736C-C390-4441-940A-6626F7643341",
+  "gwSpecs": {
+    "description": "LUPO ACTIONPANEL DUAL COLOR",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-07-19T11:32:45",
+      "text": "0002"
+    }
+  }
 }

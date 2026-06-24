@@ -1,0 +1,283 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PIXEL BAR 500",
+  "shortName": "PIX  500",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-02-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4240580F-964E-4B0A-B31A-7B03005698F6"
+    }
+  },
+  "comment": "LED PIXEL BAR: LED PIXEL BAR, Multiple Modes",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIN"
+        },
+        {
+          "dmxRange": [
+            256,
+            65279
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            65280,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MAX"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIN"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MAX"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIN"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MAX"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIN"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MAX"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MIN"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "MAX"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "32 Pixel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "16 Pixel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "8 Pixel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      15,
+      40,
+      500
+    ],
+    "weight": 2.0,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.300400,0.599700,71.560000",
+      "hex": "#07ff00"
+    },
+    {
+      "name": "BRUE",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED PIXEL BAR, Multiple Modes",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -4,
+      40
+    ],
+    "revision": {
+      "date": "2026-02-03T10:59:55",
+      "text": "V-02a"
+    }
+  },
+  "manufacturerKey": "laguna-lighting",
+  "fixtureKey": "pixel-bar-500",
+  "gwFixtureTypeID": "4240580F-964E-4B0A-B31A-7B03005698F6"
+}

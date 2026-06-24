@@ -1,0 +1,319 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Sunrise2",
+  "shortName": "Sun2",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-10",
+    "lastModifyDate": "2025-03-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 67CCEB3A-3967-4DD7-851B-F6FFCEEB1EAE"
+    }
+  },
+  "comment": "Sunrise 2 is the first blinder with LED source which equals the brightness of conventional projectors based around DWE 2x650W halogen lamps. It's equipped with 2x100W COB LED 3.200 K and an optical glass that is able to reproduce the projection angle, colour temperature, dimmer ramp and brightness of a fluorescent bulb. The electronic Sunrise 2 also offers many other key points such as the option to control each LED independently in pixel2pixel and can be taken advantage of a dedicated channel to the strobe, in addition to the selection of different dimmer curves.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 1",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 2",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 3",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            121,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 4",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            171,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 5",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 6",
+          "speed": 5
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow rate"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Effect Rate"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Rate"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "As From Menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "DimmerSpeed OFF"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Fast Speed"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Mid Speed"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Slow Speed"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "4ch",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        null,
+        "Sh1"
+      ]
+    },
+    {
+      "name": "7ch",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        null,
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      105,
+      400
+    ],
+    "weight": 6.8,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 11334,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        58.0,
+        85.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "WhiteLed",
+      "cie": "0.433000,0.402000,100.000000",
+      "hex": "#ffed93"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Sunrise 2 is the first blinder with LED source which equals the brightness of conventional projectors based around DWE 2x650W halogen lamps. It's equipped with 2x100W COB LED 3.200 K and an optical glass that is able to reproduce the projection angle, colour temperature, dimmer ramp and brightness of a fluorescent bulb. The electronic Sunrise 2 also offers many other key points such as the option to control each LED independently in pixel2pixel and can be taken advantage of a dedicated channel to the strobe, in addition to the selection of different dimmer curves.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-03-10T11:38:26",
+      "text": "Rev 01"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "cfc7826a6f05c257"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "sunrise2",
+  "gwFixtureTypeID": "67CCEB3A-3967-4DD7-851B-F6FFCEEB1EAE"
+}

@@ -1,0 +1,794 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Dalis 862",
+  "shortName": "Dalis 862",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-03-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A60898AA-5AE0-4D7D-865C-D6B9A0F6D0C4"
+    }
+  },
+  "comment": "Dalis 862 footlight: Offering a true tunable white from 2200K to 6500K, Dalis 862 footlight incorporates 48 patented asymmetric\nreflectors arranged in a double row. Each row can be controlled independently offering long or short throw\ncapacities and creating upstage or downstage lighting",
+  "rdm": {
+    "modelId": 8516
+  },
+  "wheels": {
+    "Blue Position": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Red Position": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "fineChannelAliases": [
+        "CW fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            32767
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White",
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65534
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White",
+          "comment": "Max"
+        }
+      ]
+    },
+    "WW": {
+      "fineChannelAliases": [
+        "WW fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            32767
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65534
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "defaultValue": 0,
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "OFF",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "1s",
+          "durationEnd": "85s",
+          "comment": "ON",
+          "switchChannels": {
+            "0_Base_StrobeRate": "Strobe Rate"
+          }
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "StrobeSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "Speed",
+          "speedStart": 0.1,
+          "speedEnd": 4,
+          "comment": "Dimmer timing"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Speed",
+          "speed": 0,
+          "comment": "OFF"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RDM ON"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RDM OFF"
+        }
+      ]
+    },
+    "C1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 1"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 2"
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 3"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 4"
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 5"
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 6"
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 7"
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 8"
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 9"
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 10"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 11"
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 12"
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 13"
+        },
+        {
+          "dmxRange": [
+            131,
+            140
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 14"
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 15"
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Fixed 16"
+        },
+        {
+          "dmxRange": [
+            161,
+            170
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Flash 1"
+        },
+        {
+          "dmxRange": [
+            171,
+            180
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Flash 2"
+        },
+        {
+          "dmxRange": [
+            181,
+            190
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Flash 3"
+        },
+        {
+          "dmxRange": [
+            191,
+            200
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Flash 4"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0,
+          "comment": "Flash 5"
+        },
+        {
+          "dmxRange": [
+            211,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Blue Position",
+          "slotNumber": 0
+        }
+      ]
+    },
+    "C2": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 1"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 2"
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 3"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 4"
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 5"
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 6"
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 7"
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 8"
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 9"
+        },
+        {
+          "dmxRange": [
+            91,
+            100
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 10"
+        },
+        {
+          "dmxRange": [
+            101,
+            110
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 11"
+        },
+        {
+          "dmxRange": [
+            111,
+            120
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 12"
+        },
+        {
+          "dmxRange": [
+            121,
+            130
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 13"
+        },
+        {
+          "dmxRange": [
+            131,
+            140
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 14"
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 15"
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Fixed 16"
+        },
+        {
+          "dmxRange": [
+            161,
+            170
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Flash 1"
+        },
+        {
+          "dmxRange": [
+            171,
+            180
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Flash 2"
+        },
+        {
+          "dmxRange": [
+            181,
+            190
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Flash 3"
+        },
+        {
+          "dmxRange": [
+            191,
+            200
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Flash 4"
+        },
+        {
+          "dmxRange": [
+            201,
+            210
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0,
+          "comment": "Flash 5"
+        },
+        {
+          "dmxRange": [
+            211,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Red Position",
+          "slotNumber": 0
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode2: Full 1 group 16bits",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CW",
+        "CW fine",
+        "WW",
+        "WW fine",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe Duration",
+        "0_Base_StrobeRate",
+        "Intensity MSpeed",
+        "Ctrl1",
+        "C1",
+        "C2",
+        "Dim 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      159,
+      140,
+      1006
+    ],
+    "weight": 9.5,
+    "DMXconnector": "XLR5",
+    "power": 1000,
+    "bulb": {
+      "type": "587nm / 484nm LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warm White",
+      "cie": "0.498600,0.411800,100.000000",
+      "hex": "#ffdb56",
+      "dominantWavelength": 587.0
+    },
+    {
+      "name": "Cool White",
+      "cie": "0.315300,0.322500,100.000000",
+      "hex": "#fffcff",
+      "dominantWavelength": 484.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Offering a true tunable white from 2200K to 6500K, Dalis 862 footlight incorporates 48 patented asymmetric\nreflectors arranged in a double row. Each row can be controlled independently offering long or short throw\ncapacities and creating upstage or downstage lighting",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      5,
+      40
+    ],
+    "revision": {
+      "date": "2024-03-04T13:58:06",
+      "text": "04.03.2024 - 5"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "827c3199a161b4ca"
+  },
+  "manufacturerKey": "robert-juliat",
+  "fixtureKey": "dalis-862",
+  "gwFixtureTypeID": "A60898AA-5AE0-4D7D-865C-D6B9A0F6D0C4"
+}

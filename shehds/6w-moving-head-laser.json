@@ -1,0 +1,516 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "6W Moving Head Laser",
+  "shortName": "6W Moving Head Laser",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2026-05-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 525E1895-93A1-4C86-96E6-F2854E00EA02"
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset after 3sec"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "OPEN"
+        },
+        {
+          "dmxRange": [
+            1,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            11,
+            129
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Med"
+        },
+        {
+          "dmxRange": [
+            131,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "Full Color"
+        },
+        {
+          "dmxRange": [
+            5,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            10,
+            14
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            15,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "Red + Blue"
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue + Green"
+        },
+        {
+          "dmxRange": [
+            25,
+            29
+          ],
+          "type": "ColorPreset",
+          "comment": "Red + Green"
+        },
+        {
+          "dmxRange": [
+            30,
+            34
+          ],
+          "type": "ColorPreset",
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            35,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "All Color Change"
+        },
+        {
+          "dmxRange": [
+            40,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Move Mode"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Function 2": {
+      "name": "Function",
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "Pattern Group"
+      }
+    },
+    "Function 3": {
+      "name": "Function",
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "Pattern Select"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Shaper Macros": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "Auto Zoom",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Rot Z": {
+      "capability": {
+        "type": "Unknown (Rot_Z)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Rot X": {
+      "capability": {
+        "type": "Unknown (Rot_X)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Rot Y": {
+      "capability": {
+        "type": "Unknown (Rot_Y)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "X": {
+      "capability": {
+        "type": "Unknown (XYZ_X)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Y": {
+      "capability": {
+        "type": "Unknown (XYZ_Y)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Beam Shaper Macro": {
+      "capability": {
+        "type": "Unknown (BeamShaperMacro)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Twisted Waves"
+      }
+    },
+    "Beam Shaper": {
+      "capability": {
+        "type": "Unknown (BeamShaper)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Draw Effect"
+      }
+    },
+    "Function 4": {
+      "name": "Function",
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "Built-in Program"
+      }
+    },
+    "Play Speed": {
+      "capability": {
+        "type": "Unknown (PlaySpeed)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Program Speed"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "26CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Function",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Function 2",
+        "Function 3",
+        "Zoom",
+        "Shaper Macros",
+        "Rot Z",
+        "Rot X",
+        "Rot Y",
+        "X",
+        "Y",
+        "Beam Shaper Macro",
+        "Beam Shaper",
+        "Function 4",
+        "Play Speed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      100,
+      250
+    ],
+    "weight": 5.6,
+    "power": 2000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-12T07:18:56",
+      "text": "essai01"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2d443c927152d4af"
+  },
+  "manufacturerKey": "shehds",
+  "fixtureKey": "6w-moving-head-laser",
+  "gwFixtureTypeID": "525E1895-93A1-4C86-96E6-F2854E00EA02"
+}

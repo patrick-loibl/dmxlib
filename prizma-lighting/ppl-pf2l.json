@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PPL-PF2L",
+  "shortName": "PF2L",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-12-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: C7804691-BAB9-49A5-9EA6-2111CC013B05"
+    }
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": []
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "MODE 1",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      206,
+      765,
+      177
+    ],
+    "weight": 9.5,
+    "DMXconnector": "XLR3",
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 149000,
+      "colorTemperature": 4177
+    },
+    "lens": {
+      "degreesMinMax": [
+        26.0,
+        26.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "dimmer",
+      "cie": "0.376000,0.384500,100.000000",
+      "hex": "#fffabd"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      20,
+      50
+    ],
+    "revision": {
+      "date": "2021-12-08T09:21:18",
+      "text": "PPL-PF2L -4"
+    }
+  },
+  "manufacturerKey": "prizma-lighting",
+  "fixtureKey": "ppl-pf2l",
+  "gwFixtureTypeID": "C7804691-BAB9-49A5-9EA6-2111CC013B05"
+}

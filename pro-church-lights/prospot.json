@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ProSpot",
+  "shortName": "PCL ProSpot",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-10-15",
+    "lastModifyDate": "2026-01-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 202BD6C1-B0E7-431E-8FE7-F9F822ABFAE0"
+    }
+  },
+  "comment": "Pro Church Lights Pro Spot: LED SPOT FIXTURE",
+  "rdm": {
+    "modelId": 3
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Delay"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Delay"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Custom Dimmer Delay"
+        }
+      ]
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 CH",
+      "channels": [
+        "Dim",
+        "Dim Mode",
+        "StrobeM Strobe"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      635,
+      184,
+      184
+    ],
+    "weight": 4.0,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED SPOT FIXTURE",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-01-29T21:55:10",
+      "text": "2026v1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "df7f4c46be441b8e"
+  },
+  "manufacturerKey": "pro-church-lights",
+  "fixtureKey": "prospot",
+  "gwFixtureTypeID": "202BD6C1-B0E7-431E-8FE7-F9F822ABFAE0"
+}

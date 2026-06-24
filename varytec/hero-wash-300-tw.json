@@ -1,0 +1,868 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Hero Wash 300 TW",
+  "shortName": "Hero 300 W",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-18",
+    "lastModifyDate": "2025-09-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D7C0635D-0C7C-4A63-B266-D4A2CF1B7A9D"
+    }
+  },
+  "comment": "Moving Head Wash, 19x15W WW/CW LEDs, 2500K - 6100K, CRI >94",
+  "wheels": {
+    "Color Macros": {
+      "slots": []
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "fast -> slow"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "wide"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            80
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "pulse open slow -> fast"
+        },
+        {
+          "dmxRange": [
+            81,
+            140
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "pulse close slow -> fast"
+        },
+        {
+          "dmxRange": [
+            141,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "impuls slow -> fast"
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "strobe slow -> fast"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        }
+      ]
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 3": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 3": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CTO": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 0,
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 2500,
+          "comment": "2500K"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 6100,
+          "comment": "6100K"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "open",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            6,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "static pattern 1",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "static pattern 2",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            26,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "static pattern 3",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            36,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "static pattern 4",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            46,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "static pattern 5",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            56,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "static pattern 6",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            66,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "open",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            76,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 7",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            91,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 8",
+          "speed": 8
+        },
+        {
+          "dmxRange": [
+            106,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 9",
+          "speed": 9
+        },
+        {
+          "dmxRange": [
+            121,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 10",
+          "speed": 10
+        },
+        {
+          "dmxRange": [
+            136,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 11",
+          "speed": 11
+        },
+        {
+          "dmxRange": [
+            151,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 12",
+          "speed": 12
+        },
+        {
+          "dmxRange": [
+            166,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 13",
+          "speed": 13
+        },
+        {
+          "dmxRange": [
+            181,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 14",
+          "speed": 14
+        },
+        {
+          "dmxRange": [
+            196,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 15",
+          "speed": 15
+        },
+        {
+          "dmxRange": [
+            211,
+            225
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 16",
+          "speed": 16
+        },
+        {
+          "dmxRange": [
+            226,
+            240
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 17",
+          "speed": 17
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "dynamic pattern 18",
+          "speed": 18
+        }
+      ]
+    },
+    "FX1 Fade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "no fade"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "with fade"
+        }
+      ]
+    },
+    "FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "off",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            10,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 1",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 2",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            70,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 3",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            100,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 4",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            130,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 5",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            160,
+            189
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 6",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            190,
+            219
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 7",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "zoom effect 8",
+          "speed": 8
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "off",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "position effect 1",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "position effect 2",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "position effect 3",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "position effect 4",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "position effect 5",
+          "speed": 5
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "position effect 6",
+          "speed": 6
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "position effect 7",
+          "speed": 7
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "position effect 8",
+          "speed": 8
+        },
+        {
+          "dmxRange": [
+            91,
+            230
+          ],
+          "type": "Effect",
+          "effectName": "sound to light",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            231,
+            240
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "reset"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "no function"
+        }
+      ]
+    },
+    "P 2": {
+      "name": "P",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "19Ch Mode",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Sh1",
+        "CW",
+        "WW",
+        "CW 2",
+        "WW 2",
+        "CW 3",
+        "WW 3",
+        "CTO",
+        "FX1",
+        "FX1 Fade",
+        "FX2",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "13Ch Mode",
+      "channels": [
+        "P 2",
+        "T 2",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Sh1",
+        "CW",
+        "WW",
+        "CTO",
+        "FX1",
+        "FX1 Fade",
+        "FX2",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      230,
+      170,
+      230
+    ],
+    "weight": 10.0,
+    "power": 15,
+    "bulb": {
+      "type": "LED",
+      "lumens": 360,
+      "colorTemperature": 6100
+    },
+    "lens": {
+      "degreesMinMax": [
+        6.0,
+        10.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warm White",
+      "cie": "0.476990,0.413690,100.000000",
+      "hex": "#ffe368"
+    },
+    {
+      "name": "Cold White",
+      "cie": "0.320240,0.330040,100.000000",
+      "hex": "#fffdfc"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Moving Head Wash, 19x15W WW/CW LEDs, 2500K - 6100K, CRI >94",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-19T08:11:44",
+      "text": "DMX Modes created"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "43f3eed85d7691d7"
+  },
+  "manufacturerKey": "varytec",
+  "fixtureKey": "hero-wash-300-tw",
+  "gwFixtureTypeID": "D7C0635D-0C7C-4A63-B266-D4A2CF1B7A9D"
+}

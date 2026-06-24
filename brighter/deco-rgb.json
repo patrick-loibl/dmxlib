@@ -1,0 +1,324 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Deco RGB",
+  "shortName": "Deco RGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "48482AEB-6B5B-4A67-8D0A-167D4200D80D"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      543,
+      260,
+      543
+    ],
+    "weight": 7.5,
+    "power": 750,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 16400,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        160.0,
+        160.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Array HSB_Hue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "HSB_Hue"
+        }
+      ]
+    },
+    "Array HSB_Saturation": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "HSB_Saturation"
+        }
+      ]
+    },
+    "Array HSB_Brightness": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "HSB_Brightness"
+        }
+      ]
+    },
+    "Array ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Array ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Array ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Array ColorMacro1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Array ColorMacro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Head Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Array Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Array Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Aura Section ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Aura Section ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Aura Section ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Aura Section Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4Ch",
+      "shortName": "4Ch",
+      "channels": [
+        "Beam Dimmer",
+        "Array HSB_Hue",
+        "Array HSB_Saturation",
+        "Array HSB_Brightness"
+      ]
+    },
+    {
+      "name": "6Ch",
+      "shortName": "6Ch",
+      "channels": [
+        "Beam Dimmer",
+        "Array ColorAdd_R",
+        "Array ColorAdd_G",
+        "Array ColorAdd_B",
+        "Array ColorMacro1Rate",
+        "Array ColorMacro1"
+      ]
+    },
+    {
+      "name": "9Ch",
+      "shortName": "9Ch",
+      "channels": [
+        "Head Dimmer",
+        "Array Shutter1",
+        "Beam Dimmer",
+        "Array ColorAdd_R",
+        "Array ColorAdd_G",
+        "Array ColorAdd_B",
+        "Array ColorMacro1Rate",
+        "Array ColorMacro1",
+        "Array Color1"
+      ]
+    },
+    {
+      "name": "97Ch",
+      "shortName": "97Ch",
+      "channels": [
+        "Beam Dimmer",
+        "Aura Section ColorAdd_R",
+        "Aura Section ColorAdd_G",
+        "Aura Section ColorAdd_B"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "3200K Bulb",
+      "cie": "0.399400,0.429000,88.250000",
+      "hex": "#fff086"
+    },
+    {
+      "name": "Aura Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Aura Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Aura Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-10T08:46:50",
+      "text": "Deco RGB"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1a9e3f875eb221bf"
+  },
+  "manufacturerKey": "brighter",
+  "fixtureKey": "deco-rgb",
+  "gwFixtureTypeID": "48482AEB-6B5B-4A67-8D0A-167D4200D80D"
+}

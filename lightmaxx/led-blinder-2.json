@@ -1,0 +1,146 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Blinder 2",
+  "shortName": "Blinder 2",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2023-01-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FAB5CFD1-F516-4105-AE76-72BD2CC8244F"
+    }
+  },
+  "comment": "2 Fach LED Blinder 2",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min to Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Min to Max"
+        }
+      ]
+    },
+    "Ctrl2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "Min to Max"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Min to Max"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Min to Max"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Blinder",
+      "channels": [
+        "Dim",
+        "Strobe Rate",
+        "Ctrl1",
+        "Ctrl2",
+        "Dim 2",
+        "Dim 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      175,
+      185,
+      315
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-01-16T17:25:55",
+      "text": "V_1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c62a63fbc8114732"
+  },
+  "manufacturerKey": "lightmaxx",
+  "fixtureKey": "led-blinder-2",
+  "gwFixtureTypeID": "FAB5CFD1-F516-4105-AE76-72BD2CC8244F"
+}

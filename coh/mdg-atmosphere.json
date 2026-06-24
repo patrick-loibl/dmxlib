@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MDG ATMOSPHERE",
+  "shortName": "ATMOSPHERE",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-10-28",
+    "lastModifyDate": "2025-10-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FEC18594-3852-4D01-A7DE-B90BF5D895FC"
+    }
+  },
+  "comment": "ATMOSPHERE",
+  "rdm": {
+    "modelId": 1
+  },
+  "availableChannels": {
+    "Heater": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (HEATER)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "HEAT OFF"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (HEATER)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "HEAT ON"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Haze1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            128
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "HAZE OFF"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "HAZE ON"
+        }
+      ]
+    },
+    "Fans": {
+      "capability": {
+        "type": "Unknown (Fans)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 0",
+      "channels": [
+        "Heater",
+        "Dim",
+        "Haze1",
+        "Fans"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      656,
+      304,
+      177
+    ],
+    "weight": 19.0
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-28T16:12:55",
+      "text": "V 1_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3ff1026efb48932d"
+  },
+  "manufacturerKey": "coh",
+  "fixtureKey": "mdg-atmosphere",
+  "gwFixtureTypeID": "FEC18594-3852-4D01-A7DE-B90BF5D895FC"
+}

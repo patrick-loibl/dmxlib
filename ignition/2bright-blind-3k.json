@@ -1,0 +1,275 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "2Bright Blind 3K",
+  "shortName": "2Blind3k",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-26",
+    "lastModifyDate": "2025-04-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 47DB6B2F-3C33-4228-8DBA-2F68B31E5ED4"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min Dimmer"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max Dimmer"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (Full On)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Funktion"
+        },
+        {
+          "dmxRange": [
+            6,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer behaviour LED"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer behaviour Halogen"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            6,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Course"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Exponential Course"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Logarithmic Course"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve Course"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "01 CH",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 CH Mode 1",
+      "channels": [
+        "Dim",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "2 CH Mode 2",
+      "channels": [
+        "Dim 3",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3 CH",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 4"
+      ]
+    },
+    {
+      "name": "6 CH",
+      "channels": [
+        "Dim",
+        "Sh1 2",
+        "Dim 2",
+        "Dim 4",
+        "Dim Mode",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      230,
+      405
+    ],
+    "weight": 9.0,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5900,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        80.0,
+        90.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.463592,0.417505,100.005044",
+      "hex": "#ffe96f"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-22T11:43:41",
+      "text": "V6_Tested"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "115cd013315db01b"
+  },
+  "manufacturerKey": "ignition",
+  "fixtureKey": "2bright-blind-3k",
+  "gwFixtureTypeID": "47DB6B2F-3C33-4228-8DBA-2F68B31E5ED4"
+}

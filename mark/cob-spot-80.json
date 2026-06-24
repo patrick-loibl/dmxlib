@@ -1,0 +1,223 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COB SPOT 80",
+  "shortName": "COBSpot80",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-26",
+    "lastModifyDate": "2025-12-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 35DF48E2-0339-4D4E-8B64-DDD516BB503D"
+    }
+  },
+  "comment": "Este foco integra un proyector LED de 80W con mezcla de color RGBW. Mediante su contro simple y avanzado, el usuario puede disponer de multiples opciones creativas.  Ademas tiene la opción de modos de contro automáticos.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Macro Speed S > F"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Jump Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4 CHANNELS",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "8 CHANNELS",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe1",
+        "FX1 Rate",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      210,
+      240,
+      260
+    ],
+    "weight": 3.5,
+    "power": 10,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 5999,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        6.0,
+        11.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Este foco integra un proyector LED de 80W con mezcla de color RGBW. Mediante su contro simple y avanzado, el usuario puede disponer de multiples opciones creativas.  Ademas tiene la opción de modos de contro automáticos.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-04T07:49:30",
+      "text": "Version_2_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c366acb026f4d26b"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "cob-spot-80",
+  "gwFixtureTypeID": "35DF48E2-0339-4D4E-8B64-DDD516BB503D"
+}

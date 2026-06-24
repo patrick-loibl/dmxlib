@@ -1,0 +1,416 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SoftLED400 VW",
+  "shortName": "Soft400 VW",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-04-03",
+    "lastModifyDate": "2026-04-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F99FBE16-6DE4-4AC1-BF7C-11FBC46840B3"
+    }
+  },
+  "comment": "Soft LED 400 VW: Softlight Unit",
+  "rdm": {
+    "modelId": 258
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "min to max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "6000K"
+        }
+      ]
+    },
+    "CTC Preset": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "from CTC Channel"
+        },
+        {
+          "dmxRange": [
+            11,
+            30
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 3200,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            31,
+            50
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 4000,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            51,
+            70
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5000,
+          "comment": "5000K"
+        },
+        {
+          "dmxRange": [
+            71,
+            90
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5600,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            91,
+            110
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 6000,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            111,
+            160
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5500,
+          "comment": "User1"
+        },
+        {
+          "dmxRange": [
+            161,
+            185
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5500,
+          "comment": "User2"
+        },
+        {
+          "dmxRange": [
+            186,
+            210
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5500,
+          "comment": "User3"
+        },
+        {
+          "dmxRange": [
+            211,
+            235
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5500,
+          "comment": "User4"
+        },
+        {
+          "dmxRange": [
+            236,
+            255
+          ],
+          "type": "Unknown (CTCPreset)",
+          "physical": 5500,
+          "comment": "User5"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min to max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "P": {
+      "dmxValueResolution": "16bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            32766
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65534
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "T": {
+      "dmxValueResolution": "16bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            32766
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65534
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "5ch",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "CTC",
+        "CTC Preset",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3ch",
+      "channels": [
+        "Dim 2",
+        "CTC",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim 2",
+        "CTC"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      577,
+      245,
+      1200
+    ],
+    "weight": 15.5,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        120.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200K",
+      "cie": "0.367600,0.381000,79.300000",
+      "hex": "#ffe3b0"
+    },
+    {
+      "name": "6000K",
+      "cie": "0.286800,0.328900,92.650000",
+      "hex": "#d3ffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Softlight Unit",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -15,
+      35
+    ],
+    "revision": {
+      "date": "2026-04-03T16:31:21",
+      "text": "Add Vitual Movement"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7640325aaf2fe541"
+  },
+  "manufacturerKey": "clf",
+  "fixtureKey": "softled400-vw",
+  "gwFixtureTypeID": "F99FBE16-6DE4-4AC1-BF7C-11FBC46840B3"
+}

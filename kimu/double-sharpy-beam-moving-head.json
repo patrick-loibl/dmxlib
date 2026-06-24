@@ -1,0 +1,911 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Double Sharpy_Beam Moving Head",
+  "shortName": "Sharpy/Beam Moving Head",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-03-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 513B7E5A-13A3-49AC-8E55-EB63E86D7C47"
+    }
+  },
+  "comment": "Double Sharpy/Beam Moving Head : 2 sided moving head with infinite Rotation and Tilt. GDTF file is made for visulizer without collor effect but with every invidual rgbw pixel and beam",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "quadrat",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "f764c89dcced7ff6"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "G1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "NewWheel",
+        "slotNumber": 2
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "P Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "stop",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            130,
+            193
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "-45rpm",
+          "physicalEnd": "0rpm",
+          "comment": "CCW Rotation Fast to Slow"
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            196,
+            255
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "45rpm",
+          "comment": "CW Rotation Slow to Fast"
+        }
+      ]
+    },
+    "T Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "stop",
+          "comment": "No Rotatiton"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            130,
+            193
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "-45rpm",
+          "physicalEnd": "0rpm",
+          "comment": "CCW Rotaiton"
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            196,
+            255
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "45rpm",
+          "comment": "CW Rotation"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Shutter": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (StrobeModeShutter)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Unknown (StrobeModeShutter)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Shutter 2": {
+      "name": "StrobeM Shutter",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 2": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Fixture Calibration Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 3": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 4": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 5": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 6": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 7": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 8": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "R 9": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 9": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 9": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 10": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 10": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 10": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 11": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 11": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 11": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 12": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 12": {
+      "name": "G",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 12": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 13": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 13": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 13": {
+      "name": "B",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 14": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 14": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 14": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 15": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 15": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 15": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 16": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 16": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 16": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 17": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 17": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 17": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 18": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 18": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 18": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber 9": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Amber 10": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Amber 11": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Amber 12": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Amber 13": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Beam",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "P Rotate",
+        "T Rotate",
+        "Dim",
+        "StrobeM Shutter",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 2",
+        "StrobeM Shutter 2",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Amber 2",
+        null,
+        null,
+        null,
+        null,
+        "Fixture Calibration Reset",
+        "R 3",
+        "G 3",
+        "B 3",
+        "Amber 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "Amber 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "Amber 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "Amber 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "Amber 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "Amber 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "R 10",
+        "G 10",
+        "B 10",
+        "R 11",
+        "G 11",
+        "B 11",
+        "R 12",
+        "G 12",
+        "B 12",
+        "R 13",
+        "G 13",
+        "B 13",
+        "R 14",
+        "G 14",
+        "B 14",
+        "R 15",
+        "G 15",
+        "B 15",
+        "R 16",
+        "G 16",
+        "B 16",
+        "R 17",
+        "G 17",
+        "B 17",
+        "R 18",
+        "G 18",
+        "B 18",
+        "Amber 9",
+        "Amber 10",
+        "Amber 11",
+        "Amber 12",
+        "Amber 13"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      88,
+      238,
+      500
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 30000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        10.0,
+        10.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "r",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "g",
+      "cie": "0.300100,0.600000,71.520000",
+      "hex": "#01ff00"
+    },
+    {
+      "name": "b",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "amber",
+      "cie": "0.332600,0.377600,100.000000",
+      "hex": "#f8ffd4"
+    }
+  ],
+  "gwSpecs": {
+    "description": "2 sided moving head with infinite Rotation and Tilt. GDTF file is made for visulizer without collor effect but with every invidual rgbw pixel and beam",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-20T09:42:52",
+      "text": "Revision 9"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8258ba4d1e47085a"
+  },
+  "manufacturerKey": "kimu",
+  "fixtureKey": "double-sharpy-beam-moving-head",
+  "gwFixtureTypeID": "513B7E5A-13A3-49AC-8E55-EB63E86D7C47"
+}

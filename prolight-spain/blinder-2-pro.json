@@ -1,0 +1,275 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BLINDER 2 PRO",
+  "shortName": "BLINDER2",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-06-22",
+    "lastModifyDate": "2026-06-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.0 fixture type ID: D948BFBC-5B11-43A7-B03B-61EAF751D1A2"
+    }
+  },
+  "comment": "Cegadora de LED doble de 200W blanco cálido",
+  "availableChannels": {
+    "Dim": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Strobe1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "No macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Macro 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound activated",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0m/s",
+          "speedEnd": "1m/s",
+          "comment": "min speed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0m/s",
+          "speedEnd": "1m/s",
+          "comment": "slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0m/s",
+          "speedEnd": "1m/s",
+          "comment": "max speed"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "defaultValue": 255,
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "defaultValue": 255,
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "defaultValue": 0,
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "defaultValue": 0,
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6ch A001",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "FX1",
+        "FX1 Rate",
+        "Dim 2",
+        "Dim 3"
+      ]
+    },
+    {
+      "name": "2ch d001",
+      "channels": [
+        "Dim 4",
+        "Dim 5"
+      ]
+    },
+    {
+      "name": "1ch h001",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      90,
+      155,
+      320
+    ],
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        105.0,
+        105.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Led1",
+      "cie": "0.348300,0.369000,87.750000",
+      "hex": "#fff0c8"
+    },
+    {
+      "name": "Led2",
+      "cie": "0.348300,0.369000,87.750000",
+      "hex": "#fff0c8"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Cegadora de LED doble de 200W blanco cálido",
+    "beamType": "Wash"
+  },
+  "gwMedia": {
+    "thumbnail": "315884a5a34a372d"
+  },
+  "manufacturerKey": "prolight-spain",
+  "fixtureKey": "blinder-2-pro",
+  "gwFixtureTypeID": "D948BFBC-5B11-43A7-B03B-61EAF751D1A2"
+}

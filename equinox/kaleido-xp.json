@@ -1,0 +1,358 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Kaleido XP",
+  "shortName": "Kaleido XP",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-08-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7EA184DC-7837-4E4E-ADA1-6571A7C61770"
+    }
+  },
+  "comment": "100W decorative effects fixture with 3 facet rotating prism\n\nNotes:\n1. The DMX values in the manual seem to be wrong for the prism rotation.  This profile has the right values from testing\n2. The beam doesn't show in grandMA3 3D view\n\nVersions:\n1.000 Initial Release",
+  "wheels": {
+    "Prism": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Prism",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Slowest"
+        },
+        {
+          "dmxRange": [
+            9,
+            246
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe S > F"
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Fastest"
+        },
+        {
+          "dmxRange": [
+            248,
+            248
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Sound Slowest"
+        },
+        {
+          "dmxRange": [
+            249,
+            254
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Sound S > F"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Sound Fastest"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "Manual Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Manual with Shake",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "Out > In Fastest",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            129,
+            188
+          ],
+          "type": "Effect",
+          "effectName": "Out > In F > S",
+          "speedStart": 0.02,
+          "speedEnd": 0.98
+        },
+        {
+          "dmxRange": [
+            189,
+            189
+          ],
+          "type": "Effect",
+          "effectName": "Out > In Slowest",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            190,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "Stop",
+          "speedStart": 0,
+          "speedEnd": 0.75
+        },
+        {
+          "dmxRange": [
+            194,
+            194
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            195,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "In > Out Slowest",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            196,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "In > Out S > F",
+          "speedStart": 0.02,
+          "speedEnd": 0.98
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "In > Out Fastest",
+          "speed": 1
+        }
+      ]
+    },
+    "Prism1 Pos": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            1,
+            55
+          ],
+          "type": "PrismRotation",
+          "angleStart": "0rpm",
+          "angleEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            56,
+            56
+          ],
+          "type": "PrismRotation",
+          "angle": "stop",
+          "comment": "CW Fastest"
+        },
+        {
+          "dmxRange": [
+            57,
+            119
+          ],
+          "type": "PrismRotation",
+          "angleStart": "0.006666666666666667rpm",
+          "angleEnd": "0.07833333333333332rpm",
+          "comment": "CW F > S"
+        },
+        {
+          "dmxRange": [
+            120,
+            134
+          ],
+          "type": "PrismRotation",
+          "angle": "0.07833333333333332rpm",
+          "comment": "CW Slowest"
+        },
+        {
+          "dmxRange": [
+            135,
+            135
+          ],
+          "type": "PrismRotation",
+          "angleStart": "0rpm",
+          "angleEnd": "0.16666666666666669rpm",
+          "comment": "ACW Slowest"
+        },
+        {
+          "dmxRange": [
+            136,
+            200
+          ],
+          "type": "PrismRotation",
+          "angleStart": "0rpm",
+          "angleEnd": "0.16666666666666669rpm",
+          "comment": "ACW S > F"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "PrismRotation",
+          "angleStart": "0rpm",
+          "angleEnd": "0.16666666666666669rpm",
+          "comment": "ACW Fastest"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4ch mode",
+      "channels": [
+        "Dim",
+        "Strobe Frequency",
+        "Prism1 Pos",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      140,
+      340,
+      240
+    ],
+    "weight": 4.2
+  },
+  "gwSpecs": {
+    "description": "100W decorative effects fixture with 3 facet rotating prism\n\nNotes:\n1. The DMX values in the manual seem to be wrong for the prism rotation.  This profile has the right values from testing\n2. The beam doesn't show in grandMA3 3D view\n\nVersions:\n1.000 Initial Release",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-08-25T19:08:15",
+      "text": "v1.000 Release version"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7ef3316884d9e648"
+  },
+  "manufacturerKey": "equinox",
+  "fixtureKey": "kaleido-xp",
+  "gwFixtureTypeID": "7EA184DC-7837-4E4E-ADA1-6571A7C61770"
+}

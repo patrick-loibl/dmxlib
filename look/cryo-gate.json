@@ -1,0 +1,234 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Cryo-Gate",
+  "shortName": "Cryo-Gate",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-04-18",
+    "lastModifyDate": "2024-04-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EDED6B4B-D315-4BE6-B3F0-CD516AC261B6"
+    }
+  },
+  "comment": "Low Smoke Emulator",
+  "availableChannels": {
+    "Fog1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            253
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Output Control"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Full"
+        }
+      ]
+    },
+    "Air Flow": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Air Flow)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Airvent Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            253
+          ],
+          "type": "Unknown (Air Flow)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Airvent Control"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Unknown (Air Flow)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Airvent Open"
+        }
+      ]
+    },
+    "C02": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            64
+          ],
+          "type": "Unknown (C02)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            65,
+            129
+          ],
+          "type": "Unknown (C02)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "1kg/min"
+        },
+        {
+          "dmxRange": [
+            130,
+            194
+          ],
+          "type": "Unknown (C02)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2kg/min"
+        },
+        {
+          "dmxRange": [
+            195,
+            255
+          ],
+          "type": "Unknown (C02)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "3kg/min"
+        }
+      ]
+    },
+    "Aux": {
+      "capability": {
+        "type": "Unknown (Aux)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "AUX"
+      }
+    },
+    "Standby": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "Unknown (Standby)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "RESERVED"
+        },
+        {
+          "dmxRange": [
+            26,
+            100
+          ],
+          "type": "Unknown (Standby)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Activated"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Unknown (Standby)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Deactivated"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "DMXMode 1",
+      "channels": [
+        "Fog1",
+        "Air Flow",
+        "C02"
+      ]
+    },
+    {
+      "name": "DMXMode 2",
+      "channels": [
+        "Fog1",
+        "Air Flow",
+        "C02",
+        "Aux"
+      ]
+    },
+    {
+      "name": "DMXMode 3",
+      "channels": [
+        "Fog1",
+        "Air Flow",
+        "C02",
+        "Aux",
+        "Standby"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      375,
+      277,
+      560
+    ],
+    "weight": 30.0
+  },
+  "gwSpecs": {
+    "description": "Low Smoke Emulator",
+    "operatingTemperature": [
+      5,
+      45
+    ],
+    "revision": {
+      "date": "2024-04-20T01:56:09",
+      "text": "Revision 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "93d4dd84bd254059"
+  },
+  "manufacturerKey": "look",
+  "fixtureKey": "cryo-gate",
+  "gwFixtureTypeID": "EDED6B4B-D315-4BE6-B3F0-CD516AC261B6"
+}

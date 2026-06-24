@@ -1,0 +1,269 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "19PCS 15W Beam Wash LED Mover",
+  "shortName": "LED Wash CW/WW",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2026-03-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 40155A28-1CCC-48B2-AC4A-1D7C0349792B"
+    }
+  },
+  "comment": "LED Wash CW/WW",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos FX": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "WW": {
+      "fineChannelAliases": [
+        "WW fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "fineChannelAliases": [
+        "CW fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            74
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        },
+        {
+          "dmxRange": [
+            75,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "WW 2": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 2 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "fineChannelAliases": [
+        "CW 2 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 3": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 3 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 3": {
+      "name": "CW",
+      "fineChannelAliases": [
+        "CW 3 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "CTB": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "28-Channel Mode",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos FX",
+        "Dim",
+        "Dim fine",
+        "StrobeM Strobe",
+        "WW",
+        "WW fine",
+        "CW",
+        "CW fine",
+        "WW 2",
+        "WW 2 fine",
+        "CW 2",
+        "CW 2 fine",
+        "WW 3",
+        "WW 3 fine",
+        "CW 3",
+        "CW 3 fine",
+        "CTB",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Zoom",
+        "Function"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ],
+    "weight": 5.6,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "WW",
+      "cie": "0.394700,0.440100,99.380000",
+      "hex": "#ffff87"
+    },
+    {
+      "name": "CW",
+      "cie": "0.285900,0.302000,100.000000",
+      "hex": "#edffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-22T20:06:32",
+      "text": "final"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "boulder",
+  "fixtureKey": "19pcs-15w-beam-wash-led-mover",
+  "gwFixtureTypeID": "40155A28-1CCC-48B2-AC4A-1D7C0349792B"
+}

@@ -1,0 +1,5176 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "WLED RGB Effect Mode",
+  "shortName": "WLED FX",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-05-10",
+    "lastModifyDate": "2026-05-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B40119E9-7D0A-47D2-A0EE-FA5D19739E74"
+    }
+  },
+  "comment": "WLED RGB Effect Mode with subfixtures: Fixture for controlling LED systems using the awesome open source WLED project. Based off v16.\n\n-community GDTF, not affiliated with the WLED project-\n\n15-channel Effect mode per https://kno.wled.ge/interfaces/e1.31-dmx. \nEffect names from https://kno.wled.ge/features/effects/ (incl. v16 table). \nIDs [48, 53, 114, 142, 169, 170, 171] are not listed there and use Unlisted_ID_nnn. \nBuilt-in palette labels from https://kno.wled.ge/features/palettes/ (IDs 0-70); DMX channel 5 matches palette ID; DMX 71-255 are grouped as Custom_or_Undefined (custom uploads etc.). \nWheel slot names use Annex C Table C1-safe prefixes 2D_ / AUD_ / 2DAUD_ from the Flags column.\nDMX channel 2 is one effect-ID byte (0-219); one wheel lists all effects in ID order (required so logical channels do not overlap on the same DMX address). \nPrimary RGB on beam Primary; Secondary/Tertiary RGB on subfixture geometries. \nRequires WLED 0.14+ effect DMX layout. Not realtime; single universe.\n",
+  "wheels": {
+    "WLED_Effects": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Solid",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blink",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Breathe",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wipe",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wipe_Random",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Random_Colors",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sweep",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dynamic",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colorloop",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Scan",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Scan_Dual",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fade",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Theater",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Theater_Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Running",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Saw",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Twinkle",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dissolve",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dissolve_Rnd",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sparkle",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sparkle_Dark",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "SparklePlus",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Strobe",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Strobe_Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Strobe_Mega",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blink_Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Android",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase_Random",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase_Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase_Flash",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase_Flash_Rnd",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Rainbow_Runner",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colorful",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Traffic_Light",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sweep_Random",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Aurora",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Stream",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Scanner",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Lighthouse",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Fireworks",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Rain",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Tetrix",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fire_Flicker",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Gradient",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Loading",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_048",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fairy",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Two_Dots",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fairytwinkle",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Running_Dual",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_053",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chase_3",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Tri_Wipe",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Tri_Fade",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Lightning",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "ICU",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Multi_Comet",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Scanner_Dual",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Stream_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Oscillate",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Pride_2015",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Juggle",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Palette",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fire_2012",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colorwaves",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Bpm",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fill_Noise",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Noise_1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Noise_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Noise_3",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Noise_4",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colortwinkles",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Lake",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Meteor",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Meteor_Smooth",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Railway",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Ripple",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Twinklefox",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Twinklecat",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Halloween_Eyes",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Solid_Pattern",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Solid_Pattern_Tri",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Spots",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Spots_Fade",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Glitter",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Candle",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fireworks_Starburst",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Fireworks_1D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Bouncing_Balls",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sinelon",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sinelon_Dual",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sinelon_Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Popcorn",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Drip",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Plasma",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Percent",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Ripple_Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Heartbeat",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Pacifica",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Candle_Multi",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Solid_Glitter",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sunrise",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Phased",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Twinkleup",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Noise_Pal",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sine",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Phased_Noise",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Flow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Chunchun",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dancing_Shadows",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Washing_Machine",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_114",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blends",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "TV_Simulator",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dynamic_Smooth",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Spaceships",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Crazy_Bees",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Ghost_Rider",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Blobs",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Scrolling_Text",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Drift_Rose",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Distortion_Waves",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Soap",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Octopus",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Waving_Cell",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Pixels",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Pixelwave",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Juggles",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Matripix",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Gravimeter",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Plasmoid",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Puddles",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Midnoise",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Noisemeter",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Freqwave",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Freqmatrix",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_GEQ",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Waterfall",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Freqpixels",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_142",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Noisefire",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Puddlepeak",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Noisemove",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Noise2D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Perlin_Move",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Ripple_Peak",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Firenoise",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Squared_Swirl",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PacMan",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_DNA",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Matrix",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Metaballs",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Freqmap",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Gravcenter",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Gravcentric",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Gravfreq",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_DJ_Light",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_Funky_Plank",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Shimmer",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Pulser",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Blurz",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Drift",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_Waverly",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Sun_Radiation",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Colored_Bursts",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Julia",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_169",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_170",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Unlisted_ID_171",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Game_Of_Life",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Tartan",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Polar_Lights",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_Swirl",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Lissajous",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Frizzles",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Plasma_Ball",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Flow_Stripe",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Hiphotic",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Sindots",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_DNA_Spiral",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_Black_Hole",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Wavesins",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_Rocktaves",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_Akemi",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Volcano",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Fire",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Fireworks",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Vortex",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Fuzzy_Noise",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Ballpit",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Box",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_PS_Attractor",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Impact",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Waterfall",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_PS_Spray",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_PS_GEQ_2D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_PS_GEQ_Nova",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Ghost_Rider",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2DAUD_PS_Blobs",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_DripDrop",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Pinball",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Dancing_Shadows",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Fireworks_1D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Sparkler",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Hourglass",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Spray_1D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_1D_Balance",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Chase",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Starburst",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_PS_GEQ_1D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Fire_1D",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_PS_Sonic_Stream",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "AUD_PS_Sonic_Boom",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PS_Springy",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "2D_PS_Galaxy",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Color_Clouds",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Slow_Transition",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "WLED_Palettes": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Default",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Random_Cycle",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Color_1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colors_1_and_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Color_Gradient",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colors_Only",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Party",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cloud",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Lava",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Ocean",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Forest",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Rainbow",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Rainbow_Bands",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sunset",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Rivendell",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Breeze",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red_and_Blue",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellowout",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Analogous",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Splash",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Pastel",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sunset_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Beach",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Vintage",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Departure",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Landscape",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Beech",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sherbet",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Hult",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Hult_64",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Drywet",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Jul",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Grintage",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Rewhi",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Tertiary",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fire",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Icefire",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cyane",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Light_Pink",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Autumn",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magred",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yelmag",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yelblu",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orange_and_Teal",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Tiamat",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "April_Night",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orangery",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "C9",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Sakura",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Aurora",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Atlantica",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "C9_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "C9_New",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Temperature",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Aurora_2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Retro_Clown",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Candy",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Toxy_Reaf",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Fairy_Reaf",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Semi_Blue",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Pink_Candy",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red_Reaf",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Aqua_Flash",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yelblu_Hot",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Lite_Light",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red_Flash",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blink_Red",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red_Shift",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red_Tide",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Candy2",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Custom_or_Undefined",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "Solid",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Effect",
+          "effectName": "Blink",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Effect",
+          "effectName": "Breathe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Effect",
+          "effectName": "Wipe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "Wipe_Random",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "Random_Colors",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Effect",
+          "effectName": "Sweep",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "Dynamic",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Effect",
+          "effectName": "Colorloop",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Scan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "Effect",
+          "effectName": "Scan_Dual",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "Effect",
+          "effectName": "Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            13,
+            13
+          ],
+          "type": "Effect",
+          "effectName": "Theater",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            14,
+            14
+          ],
+          "type": "Effect",
+          "effectName": "Theater_Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Running",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "Effect",
+          "effectName": "Saw",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            17,
+            17
+          ],
+          "type": "Effect",
+          "effectName": "Twinkle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            18,
+            18
+          ],
+          "type": "Effect",
+          "effectName": "Dissolve",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            19
+          ],
+          "type": "Effect",
+          "effectName": "Dissolve_Rnd",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Sparkle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "Effect",
+          "effectName": "Sparkle_Dark",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            22,
+            22
+          ],
+          "type": "Effect",
+          "effectName": "SparklePlus",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            23,
+            23
+          ],
+          "type": "Effect",
+          "effectName": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            24,
+            24
+          ],
+          "type": "Effect",
+          "effectName": "Strobe_Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Strobe_Mega",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            26
+          ],
+          "type": "Effect",
+          "effectName": "Blink_Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            27,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "Android",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            28
+          ],
+          "type": "Effect",
+          "effectName": "Chase",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            29,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "Chase_Random",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Chase_Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "Chase_Flash",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            32,
+            32
+          ],
+          "type": "Effect",
+          "effectName": "Chase_Flash_Rnd",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            33,
+            33
+          ],
+          "type": "Effect",
+          "effectName": "Rainbow_Runner",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            34,
+            34
+          ],
+          "type": "Effect",
+          "effectName": "Colorful",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            35,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Traffic_Light",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            36,
+            36
+          ],
+          "type": "Effect",
+          "effectName": "Sweep_Random",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            37,
+            37
+          ],
+          "type": "Effect",
+          "effectName": "Chase_2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            38,
+            38
+          ],
+          "type": "Effect",
+          "effectName": "Aurora",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "Stream",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Scanner",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            41
+          ],
+          "type": "Effect",
+          "effectName": "Lighthouse",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            42,
+            42
+          ],
+          "type": "Effect",
+          "effectName": "2D_Fireworks",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            43,
+            43
+          ],
+          "type": "Effect",
+          "effectName": "2D_Rain",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            44,
+            44
+          ],
+          "type": "Effect",
+          "effectName": "Tetrix",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            45,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Fire_Flicker",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            46
+          ],
+          "type": "Effect",
+          "effectName": "Gradient",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            47,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Loading",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            48
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_048",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            49,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "Fairy",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Two_Dots",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            51
+          ],
+          "type": "Effect",
+          "effectName": "Fairytwinkle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            52,
+            52
+          ],
+          "type": "Effect",
+          "effectName": "Running_Dual",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            53,
+            53
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_053",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            54,
+            54
+          ],
+          "type": "Effect",
+          "effectName": "Chase_3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            55,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Tri_Wipe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            56
+          ],
+          "type": "Effect",
+          "effectName": "Tri_Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            57,
+            57
+          ],
+          "type": "Effect",
+          "effectName": "Lightning",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            58,
+            58
+          ],
+          "type": "Effect",
+          "effectName": "ICU",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            59,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "Multi_Comet",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Scanner_Dual",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            61
+          ],
+          "type": "Effect",
+          "effectName": "Stream_2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            62,
+            62
+          ],
+          "type": "Effect",
+          "effectName": "Oscillate",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            63,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "Pride_2015",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "Effect",
+          "effectName": "Juggle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            65,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "Palette",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            66,
+            66
+          ],
+          "type": "Effect",
+          "effectName": "Fire_2012",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            67,
+            67
+          ],
+          "type": "Effect",
+          "effectName": "Colorwaves",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            68,
+            68
+          ],
+          "type": "Effect",
+          "effectName": "Bpm",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            69,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "Fill_Noise",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Noise_1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Noise_2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            72
+          ],
+          "type": "Effect",
+          "effectName": "Noise_3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            73,
+            73
+          ],
+          "type": "Effect",
+          "effectName": "Noise_4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            74,
+            74
+          ],
+          "type": "Effect",
+          "effectName": "Colortwinkles",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Lake",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            76
+          ],
+          "type": "Effect",
+          "effectName": "Meteor",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            77,
+            77
+          ],
+          "type": "Effect",
+          "effectName": "Meteor_Smooth",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            78,
+            78
+          ],
+          "type": "Effect",
+          "effectName": "Railway",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            79,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "2D_Ripple",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Twinklefox",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            81
+          ],
+          "type": "Effect",
+          "effectName": "Twinklecat",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            82,
+            82
+          ],
+          "type": "Effect",
+          "effectName": "2D_Halloween_Eyes",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            83,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "Solid_Pattern",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "Solid_Pattern_Tri",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Spots",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            86
+          ],
+          "type": "Effect",
+          "effectName": "Spots_Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            87,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "Glitter",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            88
+          ],
+          "type": "Effect",
+          "effectName": "Candle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            89,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Fireworks_Starburst",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            90,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "2D_Fireworks_1D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            91
+          ],
+          "type": "Effect",
+          "effectName": "Bouncing_Balls",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            92,
+            92
+          ],
+          "type": "Effect",
+          "effectName": "Sinelon",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            93,
+            93
+          ],
+          "type": "Effect",
+          "effectName": "Sinelon_Dual",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            94,
+            94
+          ],
+          "type": "Effect",
+          "effectName": "Sinelon_Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            95,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Popcorn",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            96
+          ],
+          "type": "Effect",
+          "effectName": "Drip",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            97,
+            97
+          ],
+          "type": "Effect",
+          "effectName": "Plasma",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            98,
+            98
+          ],
+          "type": "Effect",
+          "effectName": "Percent",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "2D_Ripple_Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Heartbeat",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            101
+          ],
+          "type": "Effect",
+          "effectName": "Pacifica",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            102,
+            102
+          ],
+          "type": "Effect",
+          "effectName": "Candle_Multi",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            103,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "Solid_Glitter",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            104
+          ],
+          "type": "Effect",
+          "effectName": "Sunrise",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            105,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "Phased",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            106,
+            106
+          ],
+          "type": "Effect",
+          "effectName": "Twinkleup",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            107,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "Noise_Pal",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            108
+          ],
+          "type": "Effect",
+          "effectName": "Sine",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            109,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Phased_Noise",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Flow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            111,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "Chunchun",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            112
+          ],
+          "type": "Effect",
+          "effectName": "Dancing_Shadows",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            113,
+            113
+          ],
+          "type": "Effect",
+          "effectName": "Washing_Machine",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            114,
+            114
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_114",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            115,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "Blends",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            116,
+            116
+          ],
+          "type": "Effect",
+          "effectName": "TV_Simulator",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            117,
+            117
+          ],
+          "type": "Effect",
+          "effectName": "Dynamic_Smooth",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            118,
+            118
+          ],
+          "type": "Effect",
+          "effectName": "2D_Spaceships",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "2D_Crazy_Bees",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "2D_Ghost_Rider",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            121
+          ],
+          "type": "Effect",
+          "effectName": "2D_Blobs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            122,
+            122
+          ],
+          "type": "Effect",
+          "effectName": "2D_Scrolling_Text",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "Effect",
+          "effectName": "2D_Drift_Rose",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            124,
+            124
+          ],
+          "type": "Effect",
+          "effectName": "2D_Distortion_Waves",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            125,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "2D_Soap",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            126
+          ],
+          "type": "Effect",
+          "effectName": "2D_Octopus",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "2D_Waving_Cell",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Pixels",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            129,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Pixelwave",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Juggles",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Matripix",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            132,
+            132
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Gravimeter",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            133,
+            133
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Plasmoid",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Puddles",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            135,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Midnoise",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            136
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Noisemeter",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            137,
+            137
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Freqwave",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            138,
+            138
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Freqmatrix",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            139,
+            139
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_GEQ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            140
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Waterfall",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            141
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Freqpixels",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            142,
+            142
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_142",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            143,
+            143
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Noisefire",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            144,
+            144
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Puddlepeak",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            145,
+            145
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Noisemove",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            146,
+            146
+          ],
+          "type": "Effect",
+          "effectName": "2D_Noise2D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            147,
+            147
+          ],
+          "type": "Effect",
+          "effectName": "Perlin_Move",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            148,
+            148
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Ripple_Peak",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            149,
+            149
+          ],
+          "type": "Effect",
+          "effectName": "2D_Firenoise",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "2D_Squared_Swirl",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            151
+          ],
+          "type": "Effect",
+          "effectName": "PacMan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            152,
+            152
+          ],
+          "type": "Effect",
+          "effectName": "2D_DNA",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            153,
+            153
+          ],
+          "type": "Effect",
+          "effectName": "2D_Matrix",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            154,
+            154
+          ],
+          "type": "Effect",
+          "effectName": "2D_Metaballs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            155,
+            155
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Freqmap",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            156,
+            156
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Gravcenter",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            157,
+            157
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Gravcentric",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            158,
+            158
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Gravfreq",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "AUD_DJ_Light",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_Funky_Plank",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            161
+          ],
+          "type": "Effect",
+          "effectName": "Shimmer",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            162,
+            162
+          ],
+          "type": "Effect",
+          "effectName": "2D_Pulser",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            163,
+            163
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Blurz",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            164,
+            164
+          ],
+          "type": "Effect",
+          "effectName": "2D_Drift",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            165,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_Waverly",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            166,
+            166
+          ],
+          "type": "Effect",
+          "effectName": "2D_Sun_Radiation",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            167,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "2D_Colored_Bursts",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "2D_Julia",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_169",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_170",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            171
+          ],
+          "type": "Effect",
+          "effectName": "Unlisted_ID_171",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            172,
+            172
+          ],
+          "type": "Effect",
+          "effectName": "2D_Game_Of_Life",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            173,
+            173
+          ],
+          "type": "Effect",
+          "effectName": "2D_Tartan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "2D_Polar_Lights",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_Swirl",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            176
+          ],
+          "type": "Effect",
+          "effectName": "2D_Lissajous",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            177,
+            177
+          ],
+          "type": "Effect",
+          "effectName": "2D_Frizzles",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            178,
+            178
+          ],
+          "type": "Effect",
+          "effectName": "2D_Plasma_Ball",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "Effect",
+          "effectName": "Flow_Stripe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            180,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "2D_Hiphotic",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "2D_Sindots",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            182,
+            182
+          ],
+          "type": "Effect",
+          "effectName": "2D_DNA_Spiral",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            183,
+            183
+          ],
+          "type": "Effect",
+          "effectName": "2D_Black_Hole",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            184,
+            184
+          ],
+          "type": "Effect",
+          "effectName": "Wavesins",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            185,
+            185
+          ],
+          "type": "Effect",
+          "effectName": "AUD_Rocktaves",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            186,
+            186
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_Akemi",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            187,
+            187
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Volcano",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            188,
+            188
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Fire",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            189,
+            189
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Fireworks",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            190,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Vortex",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Fuzzy_Noise",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Ballpit",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            193,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Box",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            194,
+            194
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_PS_Attractor",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            195,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Impact",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            196,
+            196
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Waterfall",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            197,
+            197
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_PS_Spray",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            198,
+            198
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_PS_GEQ_2D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            199,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_PS_GEQ_Nova",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Ghost_Rider",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Effect",
+          "effectName": "2DAUD_PS_Blobs",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            202,
+            202
+          ],
+          "type": "Effect",
+          "effectName": "PS_DripDrop",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            203,
+            203
+          ],
+          "type": "Effect",
+          "effectName": "PS_Pinball",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            204,
+            204
+          ],
+          "type": "Effect",
+          "effectName": "PS_Dancing_Shadows",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            205,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "PS_Fireworks_1D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            206,
+            206
+          ],
+          "type": "Effect",
+          "effectName": "PS_Sparkler",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            207,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "PS_Hourglass",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            208,
+            208
+          ],
+          "type": "Effect",
+          "effectName": "PS_Spray_1D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            209,
+            209
+          ],
+          "type": "Effect",
+          "effectName": "PS_1D_Balance",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            210,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "PS_Chase",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            211,
+            211
+          ],
+          "type": "Effect",
+          "effectName": "PS_Starburst",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            212,
+            212
+          ],
+          "type": "Effect",
+          "effectName": "AUD_PS_GEQ_1D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            213,
+            213
+          ],
+          "type": "Effect",
+          "effectName": "PS_Fire_1D",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            214,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "AUD_PS_Sonic_Stream",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            215,
+            215
+          ],
+          "type": "Effect",
+          "effectName": "AUD_PS_Sonic_Boom",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            216,
+            216
+          ],
+          "type": "Effect",
+          "effectName": "PS_Springy",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            217,
+            217
+          ],
+          "type": "Effect",
+          "effectName": "2D_PS_Galaxy",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            218,
+            218
+          ],
+          "type": "Effect",
+          "effectName": "Color_Clouds",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            219,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Slow_Transition",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX1 Adjust1": {
+      "capability": {
+        "type": "EffectParameter",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "FX1 Adjust2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Random_Cycle"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color_1"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Colors_1_and_2"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color_Gradient"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Colors_Only"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Party"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Cloud"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Lava"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Ocean"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Forest"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Rainbow"
+        },
+        {
+          "dmxRange": [
+            12,
+            12
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Rainbow_Bands"
+        },
+        {
+          "dmxRange": [
+            13,
+            13
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sunset"
+        },
+        {
+          "dmxRange": [
+            14,
+            14
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Rivendell"
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Breeze"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red_and_Blue"
+        },
+        {
+          "dmxRange": [
+            17,
+            17
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Yellowout"
+        },
+        {
+          "dmxRange": [
+            18,
+            18
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Analogous"
+        },
+        {
+          "dmxRange": [
+            19,
+            19
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Splash"
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pastel"
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sunset_2"
+        },
+        {
+          "dmxRange": [
+            22,
+            22
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Beach"
+        },
+        {
+          "dmxRange": [
+            23,
+            23
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Vintage"
+        },
+        {
+          "dmxRange": [
+            24,
+            24
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Departure"
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Landscape"
+        },
+        {
+          "dmxRange": [
+            26,
+            26
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Beech"
+        },
+        {
+          "dmxRange": [
+            27,
+            27
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sherbet"
+        },
+        {
+          "dmxRange": [
+            28,
+            28
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Hult"
+        },
+        {
+          "dmxRange": [
+            29,
+            29
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Hult_64"
+        },
+        {
+          "dmxRange": [
+            30,
+            30
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Drywet"
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Jul"
+        },
+        {
+          "dmxRange": [
+            32,
+            32
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Grintage"
+        },
+        {
+          "dmxRange": [
+            33,
+            33
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Rewhi"
+        },
+        {
+          "dmxRange": [
+            34,
+            34
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Tertiary"
+        },
+        {
+          "dmxRange": [
+            35,
+            35
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fire"
+        },
+        {
+          "dmxRange": [
+            36,
+            36
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Icefire"
+        },
+        {
+          "dmxRange": [
+            37,
+            37
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Cyane"
+        },
+        {
+          "dmxRange": [
+            38,
+            38
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Light_Pink"
+        },
+        {
+          "dmxRange": [
+            39,
+            39
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Autumn"
+        },
+        {
+          "dmxRange": [
+            40,
+            40
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            41,
+            41
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Magred"
+        },
+        {
+          "dmxRange": [
+            42,
+            42
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Yelmag"
+        },
+        {
+          "dmxRange": [
+            43,
+            43
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Yelblu"
+        },
+        {
+          "dmxRange": [
+            44,
+            44
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Orange_and_Teal"
+        },
+        {
+          "dmxRange": [
+            45,
+            45
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Tiamat"
+        },
+        {
+          "dmxRange": [
+            46,
+            46
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "April_Night"
+        },
+        {
+          "dmxRange": [
+            47,
+            47
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Orangery"
+        },
+        {
+          "dmxRange": [
+            48,
+            48
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "C9"
+        },
+        {
+          "dmxRange": [
+            49,
+            49
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sakura"
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Aurora"
+        },
+        {
+          "dmxRange": [
+            51,
+            51
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Atlantica"
+        },
+        {
+          "dmxRange": [
+            52,
+            52
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "C9_2"
+        },
+        {
+          "dmxRange": [
+            53,
+            53
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "C9_New"
+        },
+        {
+          "dmxRange": [
+            54,
+            54
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Temperature"
+        },
+        {
+          "dmxRange": [
+            55,
+            55
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Aurora_2"
+        },
+        {
+          "dmxRange": [
+            56,
+            56
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Retro_Clown"
+        },
+        {
+          "dmxRange": [
+            57,
+            57
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Candy"
+        },
+        {
+          "dmxRange": [
+            58,
+            58
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Toxy_Reaf"
+        },
+        {
+          "dmxRange": [
+            59,
+            59
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fairy_Reaf"
+        },
+        {
+          "dmxRange": [
+            60,
+            60
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Semi_Blue"
+        },
+        {
+          "dmxRange": [
+            61,
+            61
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pink_Candy"
+        },
+        {
+          "dmxRange": [
+            62,
+            62
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red_Reaf"
+        },
+        {
+          "dmxRange": [
+            63,
+            63
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Aqua_Flash"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Yelblu_Hot"
+        },
+        {
+          "dmxRange": [
+            65,
+            65
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Lite_Light"
+        },
+        {
+          "dmxRange": [
+            66,
+            66
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red_Flash"
+        },
+        {
+          "dmxRange": [
+            67,
+            67
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Blink_Red"
+        },
+        {
+          "dmxRange": [
+            68,
+            68
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red_Shift"
+        },
+        {
+          "dmxRange": [
+            69,
+            69
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red_Tide"
+        },
+        {
+          "dmxRange": [
+            70,
+            70
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Candy2"
+        },
+        {
+          "dmxRange": [
+            71,
+            255
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Custom_or_Undefined"
+        }
+      ]
+    },
+    "FX1 Adjust3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reverse"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mirror"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "RGB Effect Mode 15ch",
+      "channels": [
+        "Dim",
+        "FX1",
+        "FX1 Rate",
+        "FX1 Adjust1",
+        "FX1 Adjust2",
+        "FX1 Adjust3",
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3"
+      ]
+    }
+  ],
+  "physical": {
+    "power": 25,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        120.0,
+        120.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Fixture for controlling LED systems using the awesome open source WLED project. Based off v16.\n\n-community GDTF, not affiliated with the WLED project-\n\n15-channel Effect mode per https://kno.wled.ge/interfaces/e1.31-dmx. \nEffect names from https://kno.wled.ge/features/effects/ (incl. v16 table). \nIDs [48, 53, 114, 142, 169, 170, 171] are not listed there and use Unlisted_ID_nnn. \nBuilt-in palette labels from https://kno.wled.ge/features/palettes/ (IDs 0-70); DMX channel 5 matches palette ID; DMX 71-255 are grouped as Custom_or_Undefined (custom uploads etc.). \nWheel slot names use Annex C Table C1-safe prefixes 2D_ / AUD_ / 2DAUD_ from the Flags column.\nDMX channel 2 is one effect-ID byte (0-219); one wheel lists all effects in ID order (required so logical channels do not overlap on the same DMX address). \nPrimary RGB on beam Primary; Secondary/Tertiary RGB on subfixture geometries. \nRequires WLED 0.14+ effect DMX layout. Not realtime; single universe.",
+    "beamType": "Glow",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-12T00:22:36",
+      "text": "rev-09"
+    }
+  },
+  "manufacturerKey": "wled-project",
+  "fixtureKey": "wled-rgb-effect-mode",
+  "gwFixtureTypeID": "B40119E9-7D0A-47D2-A0EE-FA5D19739E74"
+}

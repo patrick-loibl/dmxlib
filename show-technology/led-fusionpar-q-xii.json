@@ -1,0 +1,348 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED FusionPAR Q XII",
+  "shortName": "FPAR Q XII",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-10-08",
+    "lastModifyDate": "2024-11-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1575587A-F933-4507-93DB-279EB602EF0A"
+    }
+  },
+  "comment": "Added Virtual Dimmer on 4Ch\n\nOutdoor-rated Quad-colour (4-in-one), RGBW LED wash light designed for professional touring and production companies.\nW-DMX receiver onboard",
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Color Mix Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Color Ctrl": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            6,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            40,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            70,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "5000K"
+        },
+        {
+          "dmxRange": [
+            100,
+            129
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            130,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "7000K"
+        },
+        {
+          "dmxRange": [
+            160,
+            189
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "8000K"
+        },
+        {
+          "dmxRange": [
+            190,
+            219
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "9000K"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "10000K"
+        }
+      ]
+    },
+    "NoFeature": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            11,
+            60
+          ],
+          "type": "NoFunction",
+          "comment": "Auto Program 1"
+        },
+        {
+          "dmxRange": [
+            61,
+            110
+          ],
+          "type": "NoFunction",
+          "comment": "Auto Program 2"
+        },
+        {
+          "dmxRange": [
+            111,
+            160
+          ],
+          "type": "NoFunction",
+          "comment": "Auto Program 3"
+        },
+        {
+          "dmxRange": [
+            161,
+            210
+          ],
+          "type": "NoFunction",
+          "comment": "Auto Program 4"
+        },
+        {
+          "dmxRange": [
+            211,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Auto Program 5"
+        }
+      ]
+    },
+    "Global MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "11 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe1",
+        "Color Mix Mode",
+        "Color Ctrl",
+        "NoFeature",
+        "Global MSpeed",
+        "Intensity MSpeed"
+      ]
+    },
+    {
+      "name": "6 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "4 Channels",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      184,
+      281,
+      242
+    ],
+    "power": 104,
+    "bulb": {
+      "type": "LED",
+      "lumens": 22800,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        24.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.637500,0.332800,100.000000",
+      "hex": "#ff2a00"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.596300,100.000000",
+      "hex": "#13ff16"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.058670,100.000000",
+      "hex": "#6a00ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Added Virtual Dimmer on 4Ch\n\nOutdoor-rated Quad-colour (4-in-one), RGBW LED wash light designed for professional touring and production companies.\nW-DMX receiver onboard",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-11-29T01:48:22",
+      "text": "gdtf"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fd2651dec9830431"
+  },
+  "manufacturerKey": "show-technology",
+  "fixtureKey": "led-fusionpar-q-xii",
+  "gwFixtureTypeID": "1575587A-F933-4507-93DB-279EB602EF0A"
+}

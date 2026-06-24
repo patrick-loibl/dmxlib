@@ -1,0 +1,579 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BEAM295",
+  "shortName": "BM295",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-05-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 78A893B9-8EBE-49C9-AD4D-98E4ABD43688"
+    }
+  },
+  "comment": "BEAM295W",
+  "wheels": {
+    "color P": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "W",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "R",
+          "colors": [
+            "#da0a00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "A",
+          "colors": [
+            "#b45512"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "C",
+          "colors": [
+            "#008963"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "G",
+          "colors": [
+            "#008a00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "B",
+          "colors": [
+            "#0062d7"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "M",
+          "colors": [
+            "#ba4093"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "CTO",
+          "colors": [
+            "#806e67"
+          ]
+        }
+      ]
+    },
+    "GOBO": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "OPEN",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "G1",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "84ad97424d3b498a"
+        },
+        {
+          "type": "Color",
+          "name": "G2",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "443cfa39a7249514"
+        },
+        {
+          "type": "Color",
+          "name": "G3",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "cc365f082c540d69"
+        },
+        {
+          "type": "Color",
+          "name": "G4",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "a4171edeb11596f9"
+        },
+        {
+          "type": "Color",
+          "name": "G6",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "d60a12d01c681749"
+        }
+      ]
+    },
+    "prism": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "open",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "8p",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4T",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 100,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "off"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "on"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        }
+      ]
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            71,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "color P",
+          "slotNumber": 8
+        }
+      ]
+    },
+    "G1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            51,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": 6
+        }
+      ]
+    },
+    "Prism1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Prism",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            51,
+            150
+          ],
+          "type": "Prism",
+          "comment": "8p"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "Prism",
+          "comment": "4T"
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "safe"
+        },
+        {
+          "dmxRange": [
+            1,
+            239
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "reset all"
+        }
+      ]
+    },
+    "Rotate1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "none"
+        },
+        {
+          "dmxRange": [
+            1,
+            99
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            100,
+            150
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0.16666666666666669rpm",
+          "speedEnd": "15rpm",
+          "comment": "rot1"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0.16666666666666669rpm",
+          "speedEnd": "15rpm",
+          "comment": "rot2"
+        }
+      ]
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "14 CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "C1",
+        "G1",
+        "Prism1",
+        "Rotate1",
+        "Fixture Global Reset",
+        "Focus1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 10.0,
+    "power": 300,
+    "bulb": {
+      "type": "LED",
+      "lumens": 12000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        40.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    },
+    {
+      "name": "C",
+      "cie": "0.155600,0.396000,100.000000",
+      "hex": "#00ffff"
+    },
+    {
+      "name": "M",
+      "cie": "0.585000,0.281300,100.000000",
+      "hex": "#ff00ac"
+    },
+    {
+      "name": "Y",
+      "cie": "0.463100,0.508600,100.000000",
+      "hex": "#ffff00"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -20,
+      50
+    ],
+    "revision": {
+      "date": "2024-05-15T14:41:22",
+      "text": "test_3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "arro",
+  "fixtureKey": "beam295",
+  "gwFixtureTypeID": "78A893B9-8EBE-49C9-AD4D-98E4ABD43688"
+}

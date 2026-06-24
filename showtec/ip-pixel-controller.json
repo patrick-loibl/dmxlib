@@ -1,0 +1,752 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "IP Pixel Controller",
+  "shortName": "IP Pixel Controller",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-10-01",
+    "lastModifyDate": "2026-04-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A849641D-3B44-11F0-AFEE-42010A37C004"
+    }
+  },
+  "comment": "IP Pixel Controller is an IP65-rated controller for the IP Pixelstrip 40 and IP Pixelstrip 80. Each of its four outputs can control up to 4 metres of any mixed setup of IP Pixelstrips, for a maximum total of 16 metres. It accepts DMX, Art-Net, sACN and Klingnet protocols.When using Art-Net or sACN, the controller can address every single RGB LED in each 4 m string, requiring up to 3840 channels / 8 DMX universes. The integrated section control modes enable users to easily group pixels to reduce the required number of DMX channels. It also offers a 8- and 12-channel control modes for smaller stage setups.The supported Kling-Net protocol allows easy control via the arKaos software. The controller also offers Stand-alone operation with Master/Slave, Manual modes and built-in programs.Dedicated cables carry both power and data signals from the controller to the IP Pixelstrips. A Power Pro True cable is included, as well as a quicklock bracket for easy installation. Its IP65 rating protects against dust and moisture for harsh environments such as temporary outdoor use.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Off - Custom",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Effect",
+          "effectName": "Program 1 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            24,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "Program 2 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            32,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "Program 3 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Program 4 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Program 5 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "Program 6 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Program 7 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Program 8 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "Program 9 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Program 10 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "Program 11 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "Program 12 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "Program 13 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Program 14 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "Program 15 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            143
+          ],
+          "type": "Effect",
+          "effectName": "Program 16 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            144,
+            151
+          ],
+          "type": "Effect",
+          "effectName": "Program 17 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            152,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "Program 18 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "Program 19 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Program 20 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            183
+          ],
+          "type": "Effect",
+          "effectName": "Program 21 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            184,
+            191
+          ],
+          "type": "Effect",
+          "effectName": "Program 22 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "Program 23 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "Program 24 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            208,
+            215
+          ],
+          "type": "Effect",
+          "effectName": "Program 25 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            216,
+            223
+          ],
+          "type": "Effect",
+          "effectName": "Program 26 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            231
+          ],
+          "type": "Effect",
+          "effectName": "Program 27 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            232,
+            239
+          ],
+          "type": "Effect",
+          "effectName": "Program 28 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            240,
+            247
+          ],
+          "type": "Effect",
+          "effectName": "Program 29 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Program 1-29 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            128
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal  - Custom"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inverted - Custom"
+        }
+      ]
+    },
+    "FX1 Adjust1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Narrow > Wide"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectParameter",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Wide"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "8Ch Mode",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "FX1",
+        "FX1 Rate",
+        "Function"
+      ]
+    },
+    {
+      "name": "12Ch Mode",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "FX1",
+        "FX1 Rate",
+        "Function",
+        "FX1 Adjust1",
+        "R 2",
+        "G 2",
+        "B 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      324,
+      90,
+      219
+    ]
+  },
+  "gwSpecs": {
+    "description": "IP Pixel Controller is an IP65-rated controller for the IP Pixelstrip 40 and IP Pixelstrip 80. Each of its four outputs can control up to 4 metres of any mixed setup of IP Pixelstrips, for a maximum total of 16 metres. It accepts DMX, Art-Net, sACN and Klingnet protocols.When using Art-Net or sACN, the controller can address every single RGB LED in each 4 m string, requiring up to 3840 channels / 8 DMX universes. The integrated section control modes enable users to easily group pixels to reduce the required number of DMX channels. It also offers a 8- and 12-channel control modes for smaller stage setups.The supported Kling-Net protocol allows easy control via the arKaos software. The controller also offers Stand-alone operation with Master/Slave, Manual modes and built-in programs.Dedicated cables carry both power and data signals from the controller to the IP Pixelstrips. A Power Pro True cable is included, as well as a quicklock bracket for easy installation. Its IP65 rating protects against dust and moisture for harsh environments such as temporary outdoor use.",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-21T09:12:02",
+      "text": "Initial upload by GDTFservice.com commissioned by Showtec"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "07487ac46ef80940"
+  },
+  "manufacturerKey": "showtec",
+  "fixtureKey": "ip-pixel-controller",
+  "gwFixtureTypeID": "A849641D-3B44-11F0-AFEE-42010A37C004"
+}

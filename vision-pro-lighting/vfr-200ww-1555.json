@@ -1,0 +1,177 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "VFR 200WW-1555",
+  "shortName": "VFR200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-01-17",
+    "lastModifyDate": "2021-01-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: 81D21C99-2DBC-41A0-BBA6-FD2604916826"
+    }
+  },
+  "comment": "VFR 200WW 15-55 Fresnel: 200W COB LED lamp enabling 1-20 flashes per second with up to 18,000 lumens and more than 50,000 hours lifetime",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dim"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Zoom"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Tight"
+        }
+      ]
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "Dim",
+        "Zoom",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Mode 2",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      320,
+      520,
+      320
+    ],
+    "weight": 8.4,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 18000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        55.0,
+        55.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "COB LED Source",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "200W COB LED lamp enabling 1-20 flashes per second with up to 18,000 lumens and more than 50,000 hours lifetime",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2021-01-17T12:04:24",
+      "text": "20210117"
+    }
+  },
+  "manufacturerKey": "vision-pro-lighting",
+  "fixtureKey": "vfr-200ww-1555",
+  "gwFixtureTypeID": "81D21C99-2DBC-41A0-BBA6-FD2604916826"
+}

@@ -1,0 +1,342 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "GalleryWashDATVW",
+  "shortName": "GWDATVW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "6367DAC5-DFB3-4085-A899-818A7B954878"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      103,
+      99,
+      123
+    ],
+    "weight": 1.0,
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 3689,
+      "colorTemperature": 4200
+    },
+    "lens": {
+      "degreesMinMax": [
+        86.2,
+        144.2
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Beam Dimmer fine"
+      ]
+    },
+    "Beam CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Body Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            9
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve"
+        },
+        {
+          "dmxRange": [
+            10,
+            17
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerSpeed"
+        },
+        {
+          "dmxRange": [
+            18,
+            29
+          ],
+          "type": "Maintenance",
+          "comment": "LedFrequency"
+        },
+        {
+          "dmxRange": [
+            30,
+            35
+          ],
+          "type": "Maintenance",
+          "comment": "DMXLostSettings"
+        },
+        {
+          "dmxRange": [
+            36,
+            41
+          ],
+          "type": "Maintenance",
+          "comment": "StandAloneMode"
+        },
+        {
+          "dmxRange": [
+            42,
+            45
+          ],
+          "type": "Maintenance",
+          "comment": "StandAloneType"
+        },
+        {
+          "dmxRange": [
+            46,
+            251
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            252,
+            253
+          ],
+          "type": "Maintenance",
+          "comment": "FactoryDefault"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved2"
+        }
+      ]
+    },
+    "Beam Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "NoFunction",
+          "comment": "Open 1"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Beam ColorXfade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "ColorXfade 1"
+        }
+      ]
+    },
+    "Yoke ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke ColorAdd_WW fine"
+      ]
+    },
+    "Body ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body ColorAdd_CW fine"
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Uno_1ch",
+      "shortName": "Uno_1ch",
+      "channels": [
+        "Beam Dimmer"
+      ]
+    },
+    {
+      "name": "Basic_3ch",
+      "shortName": "Basic_3ch",
+      "channels": [
+        "Beam Dimmer",
+        "Beam CTC",
+        "Body Control1"
+      ]
+    },
+    {
+      "name": "Standard_5ch",
+      "shortName": "Standard_5ch",
+      "channels": [
+        "Beam Dimmer",
+        "Beam Dimmer fine",
+        "Beam Shutter1",
+        "Beam CTC",
+        "Body Control1"
+      ]
+    },
+    {
+      "name": "Extended_10ch",
+      "shortName": "Extended_10c",
+      "channels": [
+        "Beam Dimmer",
+        "Beam Dimmer fine",
+        "Beam Shutter1",
+        "Beam CTC",
+        "Beam ColorXfade",
+        "Yoke ColorAdd_WW",
+        "Yoke ColorAdd_WW fine",
+        "Body ColorAdd_CW",
+        "Body ColorAdd_CW fine",
+        "Body Control1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Warm White",
+      "cie": "0.458000,0.406000,88.042000",
+      "hex": "#ffda78"
+    },
+    {
+      "name": "Cold White",
+      "cie": "0.316000,0.322000,100.000000",
+      "hex": "#fffcff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Compact LED wall wash with 60W LED VariableWhite\n\nGallery WashDAT is a compact and efficient LED wallwash luminaire, purpose-designed for precise, uniform illumination of walls, exhibits, and shelving in galleries, events, and venues.\nIts advanced optical system combines a custom linear LED source with an asymmetrical reflector, significantly reducing the required number of fixtures by enabling greater spacing without compromising visual comfort or uniformity.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-06-19T13:02:14",
+      "text": "Rev 002"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1b561724f39deb68"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "gallerywashdatvw",
+  "gwFixtureTypeID": "6367DAC5-DFB3-4085-A899-818A7B954878"
+}

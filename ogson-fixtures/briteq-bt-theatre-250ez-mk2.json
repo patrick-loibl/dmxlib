@@ -1,0 +1,290 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BRITEQ BT-THEATRE 250EZ Mk2",
+  "shortName": "Theatre 250EZ",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-15",
+    "lastModifyDate": "2024-01-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 377C08AA-1B15-41AA-9593-DD52F0991775"
+    }
+  },
+  "comment": "BT-Theatre 250EZ: Very powerful 250Watt LED theater spot with electronic 14° to 54° zoom and excellent very low noise cooling.",
+  "rdm": {
+    "modelId": 66
+  },
+  "availableChannels": {
+    "P": {
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            7,
+            124
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            125,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            126,
+            135
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            136,
+            136
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            137,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1Ch Dim 8bit",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2Ch D+F 8bit",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "2Ch D+S 8bit",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "3Ch D+S+F 8bit",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "2Ch Dim 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "3Ch D+S 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "4Ch D+S+F 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      259,
+      376,
+      250
+    ],
+    "weight": 9.0,
+    "power": 250,
+    "bulb": {
+      "type": "631nm LED",
+      "lumens": 24941,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        24.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warm white",
+      "cie": "0.423300,0.400000,100.000000",
+      "hex": "#fff09a",
+      "dominantWavelength": 631.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Very powerful 250Watt LED theater spot with electronic 14° to 54° zoom and excellent very low noise cooling.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-01-02T21:11:19",
+      "text": "ogi_v4"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c96ff5e9dd1bd546"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "briteq-bt-theatre-250ez-mk2",
+  "gwFixtureTypeID": "377C08AA-1B15-41AA-9593-DD52F0991775"
+}

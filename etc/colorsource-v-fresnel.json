@@ -1,0 +1,349 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Colorsource V Fresnel",
+  "shortName": "Colorsource V Fres",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-08-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E8D59449-0944-4364-9B55-C6F5E8BEFCD6"
+    }
+  },
+  "comment": "Colorsource V Fresnel : Colorsource V Fresnel",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "I": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (ColourAdd_I)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "L": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (ColourAdd_L)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe open"
+        },
+        {
+          "dmxRange": [
+            1,
+            40
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Boost Black"
+        },
+        {
+          "dmxRange": [
+            41,
+            80
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Boost White"
+        },
+        {
+          "dmxRange": [
+            81,
+            120
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ramp"
+        },
+        {
+          "dmxRange": [
+            121,
+            160
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            161,
+            200
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lightning"
+        },
+        {
+          "dmxRange": [
+            201,
+            240
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            241,
+            241
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe Closed"
+        },
+        {
+          "dmxRange": [
+            242,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            1,
+            18
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            249
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 100,
+          "comment": "Variable"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Direct Mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "I",
+        "L",
+        "StrobeM Strobe",
+        "Zoom",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "Standard Mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "StrobeM Strobe",
+        "Zoom",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "6ch Mode",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "StrobeM Strobe",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "RGB Mode",
+      "channels": [
+        null,
+        "R",
+        "G",
+        "B",
+        null,
+        "Zoom"
+      ]
+    },
+    {
+      "name": "1ch Mode",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ],
+    "weight": 6.24
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.641200,0.328600,100.000000",
+      "hex": "#ff0006"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.598500,100.000000",
+      "hex": "#09ff0a"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.060880,100.000000",
+      "hex": "#5a00ff"
+    },
+    {
+      "name": "Indigo",
+      "cie": "0.148100,0.039630,100.000000",
+      "hex": "#a000ff"
+    },
+    {
+      "name": "Lime",
+      "cie": "0.371900,0.590900,100.000000",
+      "hex": "#b7ff00"
+    }
+  ],
+  "gwDmxProfiles": [
+    {
+      "name": "Direct Mode",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "description": "Colorsource V Fresnel",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-08-17T21:13:02",
+      "text": "Ver 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9ef20b03551a92ac"
+  },
+  "manufacturerKey": "etc",
+  "fixtureKey": "colorsource-v-fresnel",
+  "gwFixtureTypeID": "E8D59449-0944-4364-9B55-C6F5E8BEFCD6"
+}

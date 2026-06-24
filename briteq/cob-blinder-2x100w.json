@@ -1,0 +1,207 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COB BLINDER 2x100W",
+  "shortName": "COB Blinder",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-02-27",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2B3BD9C5-FF0E-4BC4-B52D-7F05C7C48665"
+    }
+  },
+  "comment": "Powerful 2x 100W COB blinder",
+  "rdm": {
+    "modelId": 4
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "No strobe"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe <>"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max strobe"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fixture setting"
+        },
+        {
+          "dmxRange": [
+            16,
+            135
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear curve"
+        },
+        {
+          "dmxRange": [
+            136,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square curve"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1Ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2Ch",
+      "channels": [
+        "Dim",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "4Ch",
+      "channels": [
+        "Dim",
+        null,
+        "Strobe1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      225,
+      200,
+      400
+    ],
+    "weight": 4.4,
+    "power": 100,
+    "bulb": {
+      "type": "672nm LED",
+      "lumens": 10000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.393300,0.394100,100.000000",
+      "hex": "#fff7ae",
+      "dominantWavelength": 672.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Powerful 2x 100W COB blinder",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-27T10:49:57",
+      "text": "20240227_MisDat"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7278a4dcc01183ff"
+  },
+  "manufacturerKey": "briteq",
+  "fixtureKey": "cob-blinder-2x100w",
+  "gwFixtureTypeID": "2B3BD9C5-FF0E-4BC4-B52D-7F05C7C48665"
+}

@@ -1,0 +1,812 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PALCO 3-6-12",
+  "shortName": "PALCO Wash",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-01-28",
+    "lastModifyDate": "2026-05-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 71C8C0F4-3500-1002-ADF1-5EF3CDBFEB17"
+    }
+  },
+  "comment": "PALCO 3-6-12 Wash: SGM PALCO 3-6-12 Wash Created by ACT",
+  "availableChannels": {
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            151
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Variable Strobe"
+        },
+        {
+          "dmxRange": [
+            152,
+            175
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Pulse - Open"
+        },
+        {
+          "dmxRange": [
+            176,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Pulse - Closed"
+        },
+        {
+          "dmxRange": [
+            200,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Variable Random Strobe"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Defaulted Calibrated White"
+        },
+        {
+          "dmxRange": [
+            1,
+            4
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Raw"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2000K thru 10000K"
+        }
+      ]
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "Strobe Rate": {
+      "capability": {
+        "type": "StrobeSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "No Effect",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Flicker",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            14
+          ],
+          "type": "Effect",
+          "effectName": "RandomStrobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            15,
+            19
+          ],
+          "type": "Effect",
+          "effectName": "RandomStrobePixels",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "Effect",
+          "effectName": "Flicker_Color",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            25,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "RandomStrobeColor",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            34
+          ],
+          "type": "Effect",
+          "effectName": "SpikeColors",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            35,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "SpikePanel",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            44
+          ],
+          "type": "Effect",
+          "effectName": "PreRed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            45,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "PreGreen",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            54
+          ],
+          "type": "Effect",
+          "effectName": "PreBlue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            55,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "RGBFlicker",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            64
+          ],
+          "type": "Effect",
+          "effectName": "Lightning",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            65,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "RollEffectRGB",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            74
+          ],
+          "type": "Effect",
+          "effectName": "Fire",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Ice",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "MagentaRedBlue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "RandomColorFade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            90,
+            94
+          ],
+          "type": "Effect",
+          "effectName": "HalogenAttack",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            95,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "HalogenDecay",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "No Effect",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Congo/Color 1"
+        },
+        {
+          "dmxRange": [
+            10,
+            14
+          ],
+          "type": "ColorPreset",
+          "comment": "Red/Color 2"
+        },
+        {
+          "dmxRange": [
+            15,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "Green/Color 3"
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue/Color 4"
+        },
+        {
+          "dmxRange": [
+            25,
+            29
+          ],
+          "type": "ColorPreset",
+          "comment": "Orange/Color 5"
+        },
+        {
+          "dmxRange": [
+            30,
+            34
+          ],
+          "type": "ColorPreset",
+          "comment": "Light Green/Color 6"
+        },
+        {
+          "dmxRange": [
+            35,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "Pink/ Color 7"
+        },
+        {
+          "dmxRange": [
+            40,
+            44
+          ],
+          "type": "ColorPreset",
+          "comment": "Light Blue/Color 8"
+        },
+        {
+          "dmxRange": [
+            45,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": "Purple/Color 9"
+        },
+        {
+          "dmxRange": [
+            50,
+            54
+          ],
+          "type": "ColorPreset",
+          "comment": "Neon Green/Color 10"
+        },
+        {
+          "dmxRange": [
+            55,
+            59
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta/Color 11"
+        },
+        {
+          "dmxRange": [
+            60,
+            64
+          ],
+          "type": "ColorPreset",
+          "comment": "Cyan/Color 12"
+        },
+        {
+          "dmxRange": [
+            65,
+            69
+          ],
+          "type": "ColorPreset",
+          "comment": "Yellow/Color 13"
+        },
+        {
+          "dmxRange": [
+            70,
+            74
+          ],
+          "type": "ColorPreset",
+          "comment": "CTC/Color 14"
+        },
+        {
+          "dmxRange": [
+            75,
+            79
+          ],
+          "type": "ColorPreset",
+          "comment": "Scroll (CCW) Slow + Fast"
+        },
+        {
+          "dmxRange": [
+            80,
+            84
+          ],
+          "type": "ColorPreset",
+          "comment": "Scroll (CW) Slow + Fast"
+        },
+        {
+          "dmxRange": [
+            85,
+            89
+          ],
+          "type": "ColorPreset",
+          "comment": "Random color (see color filter chart)"
+        },
+        {
+          "dmxRange": [
+            90,
+            180
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Filter Emulation"
+        },
+        {
+          "dmxRange": [
+            181,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma Filtered"
+        },
+        {
+          "dmxRange": [
+            5,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma Raw"
+        },
+        {
+          "dmxRange": [
+            10,
+            14
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma Halogen"
+        },
+        {
+          "dmxRange": [
+            15,
+            19
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Filtered"
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Raw"
+        },
+        {
+          "dmxRange": [
+            25,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Halogen"
+        },
+        {
+          "dmxRange": [
+            30,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma Filtered"
+        }
+      ]
+    },
+    "Color Path": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (Color Path)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "SGM Standard"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (Color Path)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "SGM VersaPath"
+        }
+      ]
+    },
+    "LED Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Default (244kHz)"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "26kHz-10kHz"
+        }
+      ]
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Default (Auto)"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "0-100%"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "PALCO 3-6-12 Standard 10ch",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "Dim fine",
+        "CTC",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine"
+      ]
+    },
+    {
+      "name": "PALCO-3 Extended 29ch",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Dim Curve",
+        "CTC",
+        "Color Path",
+        "LED Frequency",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "PALCO-6 Extended 47ch",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Dim Curve",
+        "CTC",
+        "Color Path",
+        "LED Frequency",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "PALCO-12 Extended 83ch",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Dim Curve",
+        "CTC",
+        "Color Path",
+        "LED Frequency",
+        "Fan1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1,
+      1,
+      1
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "SGM PALCO 3-6-12 Wash Created by ACT",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-26T21:25:42",
+      "text": "5-26-2026"
+    }
+  },
+  "manufacturerKey": "sgm",
+  "fixtureKey": "palco-3-6-12",
+  "gwFixtureTypeID": "71C8C0F4-3500-1002-ADF1-5EF3CDBFEB17"
+}

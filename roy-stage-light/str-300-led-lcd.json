@@ -1,0 +1,156 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "STR-300-LED LCD",
+  "shortName": "Strobe",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-05-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 14C79BCE-AF03-4996-9AFF-FBBF7B3F61E0"
+    }
+  },
+  "comment": "Strobe: A 4 sectioned strobe / blinder fixture",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "NoFeature 2": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "10CH",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        null,
+        null,
+        null,
+        "NoFeature",
+        "Sh1",
+        "NoFeature 2",
+        "Color Macro1",
+        "Color Macro1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      440,
+      240,
+      140
+    ],
+    "power": 75,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "LED",
+      "cie": "0.346900,0.364700,100.000000",
+      "hex": "#fffed8"
+    }
+  ],
+  "gwSpecs": {
+    "description": "A 4 sectioned strobe / blinder fixture",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-21T21:13:46",
+      "text": "Version 1"
+    }
+  },
+  "manufacturerKey": "roy-stage-light",
+  "fixtureKey": "str-300-led-lcd",
+  "gwFixtureTypeID": "14C79BCE-AF03-4996-9AFF-FBBF7B3F61E0"
+}

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Profile 200",
+  "shortName": "Profile 200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-09-10",
+    "lastModifyDate": "2024-09-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A8DC42DD-7091-4527-872E-BFB2B2F6E26E"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S>F"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1Ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2Ch",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      276,
+      705,
+      276
+    ],
+    "weight": 9.2,
+    "power": 250,
+    "bulb": {
+      "type": "LED",
+      "lumens": 20000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3200K",
+      "cie": "0.412500,0.439600,71.750000",
+      "hex": "#fada6b"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-09-10T07:26:51",
+      "text": "Profile 200"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "6804fecd722bc460"
+  },
+  "manufacturerKey": "brighter",
+  "fixtureKey": "profile-200",
+  "gwFixtureTypeID": "A8DC42DD-7091-4527-872E-BFB2B2F6E26E"
+}

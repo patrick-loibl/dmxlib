@@ -1,0 +1,586 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Showcase Camera",
+  "shortName": "Camera",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-10-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E241F619-89F8-439B-B57A-E4C45155FEB8"
+    }
+  },
+  "comment": "DMX personality for Vectorworks Showcase Camera control. Showcase Camera have 2 modes, Relative and Absolute.\nRelative Cameras use orbital movement using DMX to control direction and speed of camera movement.\nAbsolute Cameras use DMX to set the camera position within a fixed range of movement (+/- 1000m on any given axis). \n",
+  "availableChannels": {
+    "Acivation": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            124
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Deactivate Camera"
+        },
+        {
+          "dmxRange": [
+            125,
+            126
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Activate Camera"
+        }
+      ]
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Pan",
+          "angle": "0deg",
+          "comment": "No Pan"
+        },
+        {
+          "dmxRange": [
+            1,
+            48
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "-360deg",
+          "comment": "Pan Left"
+        },
+        {
+          "dmxRange": [
+            49,
+            51
+          ],
+          "type": "Pan",
+          "angle": "0deg",
+          "comment": "No Pan"
+        },
+        {
+          "dmxRange": [
+            52,
+            99
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "360deg",
+          "comment": "Pan Right"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "Pan",
+          "angle": "0deg",
+          "comment": "No Pan"
+        },
+        {
+          "dmxRange": [
+            101,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angle": "0deg",
+          "comment": "No Tilt"
+        },
+        {
+          "dmxRange": [
+            1,
+            654
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            655,
+            31456
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "-360deg",
+          "comment": "Tilt Down"
+        },
+        {
+          "dmxRange": [
+            31457,
+            32111
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32112,
+            33422
+          ],
+          "type": "Tilt",
+          "angle": "0deg",
+          "comment": "No Tilt"
+        },
+        {
+          "dmxRange": [
+            33423,
+            34077
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            34078,
+            64879
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "360deg",
+          "comment": "Tilt up"
+        },
+        {
+          "dmxRange": [
+            64880,
+            65534
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Tilt",
+          "angle": "0deg",
+          "comment": "No Tilt"
+        }
+      ]
+    },
+    "Oribit X/Y plane": {
+      "fineChannelAliases": [
+        "Oribit X/Y plane fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Orbit X/Y plane)",
+          "physical": "stop",
+          "comment": "No Orbit"
+        },
+        {
+          "dmxRange": [
+            1,
+            48
+          ],
+          "type": "Unknown (Orbit X/Y plane)",
+          "physicalStart": "0.16666666666666669rpm",
+          "physicalEnd": "0rpm",
+          "comment": "Orbit Left"
+        },
+        {
+          "dmxRange": [
+            49,
+            51
+          ],
+          "type": "Unknown (Orbit X/Y plane)",
+          "physical": "stop",
+          "comment": "No Orbit"
+        },
+        {
+          "dmxRange": [
+            52,
+            99
+          ],
+          "type": "Unknown (Orbit X/Y plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Orbit Right"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "Unknown (Orbit X/Y plane)",
+          "physical": "stop",
+          "comment": "No Orbit"
+        },
+        {
+          "dmxRange": [
+            101,
+            65535
+          ],
+          "type": "Unknown (Orbit X/Y plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        }
+      ]
+    },
+    "Orbit Z plane": {
+      "fineChannelAliases": [
+        "Orbit Z plane fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physical": "stop",
+          "comment": "No Orbit"
+        },
+        {
+          "dmxRange": [
+            1,
+            654
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            655,
+            31457
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physicalStart": "0.16666666666666669rpm",
+          "physicalEnd": "0rpm",
+          "comment": "Orbit Up"
+        },
+        {
+          "dmxRange": [
+            31458,
+            32111
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            32112,
+            33423
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physical": "stop",
+          "comment": "No Orbit"
+        },
+        {
+          "dmxRange": [
+            33424,
+            34077
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            34078,
+            64880
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Orbit Down"
+        },
+        {
+          "dmxRange": [
+            64881,
+            65534
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (Orbit Z plane)",
+          "physical": "stop",
+          "comment": "No Orbit"
+        }
+      ]
+    },
+    "Zoom": {
+      "fineChannelAliases": [
+        "Zoom fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angle": "0deg",
+          "comment": "No Zoom"
+        },
+        {
+          "dmxRange": [
+            1,
+            654
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            655,
+            31456
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Zoom In"
+        },
+        {
+          "dmxRange": [
+            31457,
+            32111
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32112,
+            33422
+          ],
+          "type": "Zoom",
+          "angle": "0deg",
+          "comment": "No Zoom"
+        },
+        {
+          "dmxRange": [
+            33423,
+            34077
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            34078,
+            64879
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Zoom Out"
+        },
+        {
+          "dmxRange": [
+            64880,
+            65534
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Zoom",
+          "angle": "0deg",
+          "comment": "No Zoom"
+        }
+      ]
+    },
+    "X": {
+      "fineChannelAliases": [
+        "X fine",
+        "X fine^2"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_X)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m",
+        "comment": "X Position "
+      }
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine",
+        "Y fine^2"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Y)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m",
+        "comment": "Y position"
+      }
+    },
+    "Z": {
+      "fineChannelAliases": [
+        "Z fine",
+        "Z fine^2"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Z)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m",
+        "comment": "Z Position"
+      }
+    },
+    "P 2": {
+      "name": "P",
+      "fineChannelAliases": [
+        "P 2 fine",
+        "P 2 fine^2"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Pan"
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine",
+        "T 2 fine^2"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Tilt"
+      }
+    },
+    "FOV": {
+      "fineChannelAliases": [
+        "FOV fine",
+        "FOV fine^2"
+      ],
+      "capability": {
+        "type": "Unknown (FieldOfView)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg",
+        "comment": "FOV"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Relative ",
+      "channels": [
+        "Acivation",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Oribit X/Y plane",
+        "Oribit X/Y plane fine",
+        "Orbit Z plane",
+        "Orbit Z plane fine",
+        "Zoom",
+        "Zoom fine"
+      ]
+    },
+    {
+      "name": "Absolute",
+      "channels": [
+        "X",
+        "X fine",
+        "X fine^2",
+        "Y",
+        "Y fine",
+        "Y fine^2",
+        "Z",
+        "Z fine",
+        "Z fine^2",
+        "P 2",
+        "P 2 fine",
+        "P 2 fine^2",
+        "T 2",
+        "T 2 fine",
+        "T 2 fine^2",
+        "FOV",
+        "FOV fine",
+        "FOV fine^2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      150,
+      300
+    ]
+  },
+  "gwSpecs": {
+    "description": "DMX personality for Vectorworks Showcase Camera control. Showcase Camera have 2 modes, Relative and Absolute.\nRelative Cameras use orbital movement using DMX to control direction and speed of camera movement.\nAbsolute Cameras use DMX to set the camera position within a fixed range of movement (+/- 1000m on any given axis).",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-18T16:39:03",
+      "text": "Initial Release for Showcase in VW2025, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "vectorworks-inc",
+  "fixtureKey": "showcase-camera",
+  "gwFixtureTypeID": "E241F619-89F8-439B-B57A-E4C45155FEB8"
+}

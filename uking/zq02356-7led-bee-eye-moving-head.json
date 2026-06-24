@@ -1,0 +1,942 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ZQ02356 7LED Bee-Eye Moving Head",
+  "shortName": "ZQ02356 BeeEye",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-06-03",
+    "lastModifyDate": "2026-06-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A7B23560-25D7-4C05-8E1F-02356D3F57A9"
+    }
+  },
+  "comment": "UKing ZQ02356 7x25W RGBW Bee-Eye Focusing Wash Moving Head: UKing ZQ02356 — 7x25W RGBW bee-eye wash moving head. Pan 540deg / Tilt 205deg (16-bit), Zoom 4.5-45deg, lens rotate. NOTE: the manual header lists Tilt 540deg but the DMX channel table lists 0-205deg; the 205deg channel-table value is used here. Source: uking-online.com product page + DMX chart.",
+  "availableChannels": {
+    "Pan": {
+      "fineChannelAliases": [
+        "Pan fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Tilt": {
+      "fineChannelAliases": [
+        "Tilt fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "PT Speed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Lens Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Index 0-60deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            199
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Rotate anticlockwise"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Rotate clockwise"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            201,
+            215
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random low"
+        },
+        {
+          "dmxRange": [
+            216,
+            234
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random mid"
+        },
+        {
+          "dmxRange": [
+            235,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random high"
+        }
+      ]
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W": {
+      "fineChannelAliases": [
+        "W fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": "0K",
+        "colorTemperatureEnd": "1K"
+      }
+    },
+    "Effect": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Effect 2": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dyn FX": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dyn Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Forward"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Reverse"
+        }
+      ]
+    },
+    "Bg R": {
+      "capability": {
+        "type": "Unknown (BackgroundRed)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Bg G": {
+      "capability": {
+        "type": "Unknown (BackgroundGreen)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Bg B": {
+      "capability": {
+        "type": "Unknown (BackgroundBlue)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Bg W": {
+      "capability": {
+        "type": "Unknown (BackgroundWhite)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        }
+      ]
+    },
+    "Macro": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Strobe 2": {
+      "name": "Strobe",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Shutter closed"
+        },
+        {
+          "dmxRange": [
+            4,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe sync"
+        },
+        {
+          "dmxRange": [
+            104,
+            107
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            108,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Divide"
+        },
+        {
+          "dmxRange": [
+            208,
+            212
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            213,
+            225
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random low"
+        },
+        {
+          "dmxRange": [
+            226,
+            238
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random mid"
+        },
+        {
+          "dmxRange": [
+            239,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random high"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Function": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Lens Rot 2": {
+      "name": "Lens Rot",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Index"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Forward"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "PrismRotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Reverse"
+        }
+      ]
+    },
+    "Pat Rot": {
+      "capability": {
+        "type": "Unknown (PatternRotate)",
+        "physicalStart": "0rpm",
+        "physicalEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Pat Spd": {
+      "capability": {
+        "type": "Unknown (PatternSpeed)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    },
+    "Pat Fade": {
+      "capability": {
+        "type": "Unknown (PatternFade)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Pat R": {
+      "capability": {
+        "type": "Unknown (PatternRed)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Pat G": {
+      "capability": {
+        "type": "Unknown (PatternGreen)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Pat B": {
+      "capability": {
+        "type": "Unknown (PatternBlue)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Pat W": {
+      "capability": {
+        "type": "Unknown (PatternWhite)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Pat Dim": {
+      "capability": {
+        "type": "Unknown (PatternDimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Bg Dim": {
+      "capability": {
+        "type": "Unknown (BackgroundDimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Pat Trans": {
+      "capability": {
+        "type": "Unknown (PatternTransition)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Pat Ang": {
+      "capability": {
+        "type": "Unknown (PatternAngle)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Prosp Strobe": {
+      "capability": {
+        "type": "Unknown (ProspectStrobe)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    },
+    "Bg Strobe": {
+      "capability": {
+        "type": "Unknown (BackgroundStrobe)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    },
+    "Bg Sel": {
+      "capability": {
+        "type": "Unknown (BackgroundSelection)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 2": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 3": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 4": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 5": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 6": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 7": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "W 8": {
+      "name": "W",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "23CH",
+      "channels": [
+        "Pan",
+        "Pan fine",
+        "Tilt",
+        "Tilt fine",
+        "PT Speed",
+        "Zoom",
+        "Lens Rot",
+        "Dim",
+        "Strobe",
+        "R",
+        "G",
+        "B",
+        "W",
+        "CTC",
+        "Effect",
+        "Effect 2",
+        "Dyn FX",
+        "Dyn Speed",
+        "Bg R",
+        "Bg G",
+        "Bg B",
+        "Bg W",
+        "Reset"
+      ]
+    },
+    {
+      "name": "35CH",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "W",
+        "W fine",
+        "CTC",
+        "Macro",
+        "Strobe 2",
+        "Dim 2",
+        "Dim 2 fine",
+        "Pan",
+        "Pan fine",
+        "Tilt",
+        "Tilt fine",
+        "Function",
+        "Reset",
+        "Zoom",
+        "Lens Rot 2",
+        "Pat Rot",
+        "Pat Spd",
+        "Pat Fade",
+        "Pat R",
+        "Pat G",
+        "Pat B",
+        "Pat W",
+        "Pat Dim",
+        "Bg Dim",
+        "Pat Trans",
+        "Pat Ang",
+        "Prosp Strobe",
+        "Bg Strobe",
+        "Bg Sel"
+      ]
+    },
+    {
+      "name": "51CH",
+      "channels": [
+        "Pan",
+        "Pan fine",
+        "Tilt",
+        "Tilt fine",
+        "PT Speed",
+        "Zoom",
+        "Lens Rot",
+        "Dim",
+        "Strobe",
+        "R",
+        "G",
+        "B",
+        "W",
+        "CTC",
+        "Effect",
+        "Effect 2",
+        "Dyn FX",
+        "Dyn Speed",
+        "Bg R",
+        "Bg G",
+        "Bg B",
+        "Bg W",
+        "Reset",
+        "R 2",
+        "G 2",
+        "B 2",
+        "W 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "W 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "W 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "W 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "W 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "W 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "W 8"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      135,
+      250
+    ],
+    "weight": 8.5,
+    "power": 25,
+    "bulb": {
+      "type": "LED",
+      "lumens": 850,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        18.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "UKing ZQ02356 — 7x25W RGBW bee-eye wash moving head. Pan 540deg / Tilt 205deg (16-bit), Zoom 4.5-45deg, lens rotate. NOTE: the manual header lists Tilt 540deg but the DMX channel table lists 0-205deg; the 205deg channel-table value is used here. Source: uking-online.com product page + DMX chart.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2026-06-03T22:34:25",
+      "text": "UKing ZQ02356 v1.0, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "uking",
+  "fixtureKey": "zq02356-7led-bee-eye-moving-head",
+  "gwFixtureTypeID": "A7B23560-25D7-4C05-8E1F-02356D3F57A9"
+}

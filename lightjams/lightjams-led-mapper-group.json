@@ -1,0 +1,282 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Lightjams LED Mapper Group",
+  "shortName": "Lightjams LED Mapper Group",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-05-21",
+    "lastModifyDate": "2026-05-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6E36C414-D741-4729-90FE-C3246E446DB3"
+    }
+  },
+  "comment": "Lightjams LED Mapper (LJLM) Group: Contains the various group modes using the DMX value mode RAW",
+  "availableChannels": {
+    "Activation": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "NoFunction",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "On"
+        }
+      ]
+    },
+    "Intensity": {
+      "fineChannelAliases": [
+        "Intensity fine"
+      ],
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Color Filter Red": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Color Filter Green": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Color Filter Blue": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            24
+          ],
+          "type": "NoFunction",
+          "comment": "Paused"
+        },
+        {
+          "dmxRange": [
+            25,
+            254
+          ],
+          "type": "NoFunction",
+          "comment": "1x"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "10x"
+        }
+      ]
+    },
+    "Sequence Number": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Sequence number"
+        }
+      ]
+    },
+    "Step Number": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction",
+          "comment": "Auto play"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Step number"
+        }
+      ]
+    },
+    "Transition Duration Override Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "NoFunction",
+          "comment": "No"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Overriden"
+        }
+      ]
+    },
+    "Transition Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "NoFunction",
+          "comment": "Instant"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "NoFunction",
+          "comment": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "20s"
+        }
+      ]
+    },
+    "Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction",
+          "comment": "off"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "strobe slow to fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Group Remote",
+      "channels": [
+        "Activation",
+        "Intensity",
+        "Intensity fine",
+        "Color Filter Red",
+        "Color Filter Green",
+        "Color Filter Blue",
+        "Speed",
+        "Sequence Number",
+        "Step Number",
+        "Transition Duration Override Mode",
+        "Transition Duration",
+        "Strobe"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      20000,
+      20000,
+      20000
+    ]
+  },
+  "gwDmxProfiles": [
+    {
+      "name": "Real8",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.996094",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        },
+        {
+          "DMXPercentage": "1.000000",
+          "CFC0": "1.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    },
+    {
+      "name": "Real16",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.999985",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        },
+        {
+          "DMXPercentage": "1.000000",
+          "CFC0": "1.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "Contains the various group modes using the DMX value mode RAW",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-21T15:18:02",
+      "text": "v925"
+    }
+  },
+  "manufacturerKey": "lightjams",
+  "fixtureKey": "lightjams-led-mapper-group",
+  "gwFixtureTypeID": "6E36C414-D741-4729-90FE-C3246E446DB3"
+}

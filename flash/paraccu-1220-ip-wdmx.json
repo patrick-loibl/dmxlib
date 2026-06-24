@@ -1,0 +1,260 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "parACCU 1220 IP WDMX",
+  "shortName": "parACCU",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-12-12",
+    "lastModifyDate": "2024-12-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 7923219E-2171-4EE7-9649-4E0BC21D4A0D"
+    }
+  },
+  "comment": "EVENT parACCU 1220 IP WDMX\nF7100344",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 152,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "6ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "8ch",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "11ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV",
+        "Sh1",
+        "CTC 2",
+        "Color Macro1",
+        "Color Macro1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.682700,0.309800,16.580000",
+      "hex": "#f70000",
+      "dominantWavelength": 619.5
+    },
+    {
+      "name": "Green",
+      "cie": "0.190600,0.728700,39.290000",
+      "hex": "#00d100",
+      "dominantWavelength": 531.3
+    },
+    {
+      "name": "Blue",
+      "cie": "0.143500,0.048100,5.550000",
+      "hex": "#0000fd",
+      "dominantWavelength": 464.3
+    },
+    {
+      "name": "White",
+      "cie": "0.314100,0.328100,40.020000",
+      "hex": "#aba9aa",
+      "dominantWavelength": 488.2
+    },
+    {
+      "name": "Amber",
+      "cie": "0.565500,0.428200,16.800000",
+      "hex": "#b55900",
+      "dominantWavelength": 589.0
+    },
+    {
+      "name": "Uv",
+      "cie": "0.200000,0.058740,0.359200",
+      "hex": "#ff00ff",
+      "dominantWavelength": 387.7
+    }
+  ],
+  "gwSpecs": {
+    "description": "EVENT parACCU 1220 IP WDMX\nF7100344",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-12-12T14:12:37",
+      "text": "FLASH_v5"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fd7245e349e9fbea"
+  },
+  "manufacturerKey": "flash",
+  "fixtureKey": "paraccu-1220-ip-wdmx",
+  "gwFixtureTypeID": "7923219E-2171-4EE7-9649-4E0BC21D4A0D"
+}

@@ -1,0 +1,273 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Kaleidoscope Laser Moving Head",
+  "shortName": "Kaleido",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-01-01",
+    "lastModifyDate": "2024-01-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3F4420D7-86C2-4025-8617-AAD30FA923F4"
+    }
+  },
+  "comment": "Kaleidoscope Laser Moving Head, 2-Sided Fixture",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "capability": {
+        "type": "StrobeSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dimmer Laser": {
+      "capability": {
+        "type": "Unknown (DimmerLaser)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Pos FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Self-Walking 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "Self-Walking 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Control",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Pos FX 2": {
+      "name": "Pos FX",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Ring Color",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            110,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Ring Self-Walking",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Strobe Rate",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dimmer Laser",
+        "Pos FX",
+        "Pos FX 2",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      145,
+      52,
+      145
+    ],
+    "weight": 2.0,
+    "power": 30,
+    "bulb": {
+      "type": "LED",
+      "lumens": 500,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Kaleidoscope Laser Moving Head, 2-Sided Fixture",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-01-01T00:34:54",
+      "text": "Rev 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "80cca222554c9731"
+  },
+  "manufacturerKey": "uking",
+  "fixtureKey": "kaleidoscope-laser-moving-head",
+  "gwFixtureTypeID": "3F4420D7-86C2-4025-8617-AAD30FA923F4"
+}

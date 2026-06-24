@@ -1,0 +1,132 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Evoke 1200",
+  "shortName": "Evoke 1200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-12",
+    "lastModifyDate": "2023-06-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6F17B551-6B8A-42CA-AA0A-99C5C3D56139"
+    }
+  },
+  "comment": "NANLUX Evoke 1200: Evoke 1200 LED Spot Light",
+  "rdm": {
+    "modelId": 1281
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN OFF"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "DAYLIGHT 8bit",
+      "channels": [
+        "Dim",
+        "Fan Mode"
+      ]
+    },
+    {
+      "name": "DAYLIGHT 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      210,
+      455,
+      341
+    ],
+    "weight": 6.94,
+    "power": 1260,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 97753,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        65.0,
+        149.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.332800,0.335700,100.000000",
+      "hex": "#fffaf3"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Evoke 1200 LED Spot Light",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2023-06-12T16:40:56",
+      "text": "DMX V1.0 12.Jun.2023"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c308ecf3b94f1647"
+  },
+  "manufacturerKey": "nanlux",
+  "fixtureKey": "evoke-1200",
+  "gwFixtureTypeID": "6F17B551-6B8A-42CA-AA0A-99C5C3D56139"
+}

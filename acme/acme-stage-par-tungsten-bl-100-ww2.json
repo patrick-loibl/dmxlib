@@ -1,0 +1,244 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": " ACME STAGE PAR TUNGSTEN (BL-100 WW2)",
+  "shortName": "BL-100WW2",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-14",
+    "lastModifyDate": "2024-09-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: AC258235-C319-4CBE-A4B2-7C8DD5DEA718"
+    }
+  },
+  "comment": "ACME STAGE PAR TUNGSTEN (BL-100 WW2）: ACME STAGE PAR TUNGSTEN (BL-100 WW2）100W LED",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Strobe"
+        },
+        {
+          "dmxRange": [
+            7,
+            122
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Strobe"
+        },
+        {
+          "dmxRange": [
+            124,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            128,
+            168
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran1"
+        },
+        {
+          "dmxRange": [
+            169,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran2"
+        },
+        {
+          "dmxRange": [
+            189,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran3"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Smooth"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Und"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1 4 DMX",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "Mode2 2 DMX",
+      "channels": [
+        "Dim 2",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Mode3 1 DMX",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      246,
+      150
+    ],
+    "power": 100,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "ACME STAGE PAR TUNGSTEN (BL-100 WW2）100W LED",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-09T01:55:46",
+      "text": " ACME STAGE PAR TUNGSTEN (BL-100 WW2)"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "e1189b2127b935ac"
+  },
+  "manufacturerKey": "acme",
+  "fixtureKey": "acme-stage-par-tungsten-bl-100-ww2",
+  "gwFixtureTypeID": "AC258235-C319-4CBE-A4B2-7C8DD5DEA718"
+}

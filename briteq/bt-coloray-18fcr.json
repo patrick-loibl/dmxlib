@@ -1,9 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "BT-COLORAY 18FCR",
-  "categories": ["Color Changer"],
+  "categories": [
+    "Color Changer"
+  ],
   "meta": {
-    "authors": ["Felix Edelmann"],
+    "authors": [
+      "Felix Edelmann"
+    ],
     "createDate": "2019-03-06",
     "lastModifyDate": "2019-03-06"
   },
@@ -16,15 +20,24 @@
     ]
   },
   "physical": {
-    "dimensions": [273, 305, 192],
+    "dimensions": [
+      273,
+      305,
+      192
+    ],
     "weight": 5.28,
     "power": 123,
     "DMXconnector": "3-pin",
     "bulb": {
-      "type": "18x 8W RGBW LED"
+      "type": "18x 8W RGBW LED",
+      "lumens": 2283,
+      "colorTemperature": 6000
     },
     "lens": {
-      "degreesMinMax": [20, 20]
+      "degreesMinMax": [
+        20,
+        20
+      ]
     }
   },
   "availableChannels": {
@@ -60,18 +73,27 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 200],
+          "dmxRange": [
+            0,
+            200
+          ],
           "type": "Intensity"
         },
         {
-          "dmxRange": [201, 247],
+          "dmxRange": [
+            201,
+            247
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [248, 255],
+          "dmxRange": [
+            248,
+            255
+          ],
           "type": "Intensity",
           "brightness": "bright"
         }
@@ -87,11 +109,17 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 4],
+          "dmxRange": [
+            0,
+            4
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [5, 255],
+          "dmxRange": [
+            5,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -106,6 +134,190 @@
         "speedStart": "fast",
         "speedEnd": "slow"
       }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 200,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            199
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            202,
+            246
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "max"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "min"
+        }
+      ]
     }
   },
   "modes": [
@@ -147,5 +359,44 @@
   ],
   "fixtureKey": "bt-coloray-18fcr",
   "manufacturerKey": "briteq",
-  "oflURL": "https://open-fixture-library.org/briteq/bt-coloray-18fcr"
+  "oflURL": "https://open-fixture-library.org/briteq/bt-coloray-18fcr",
+  "gwMedia": {
+    "thumbnail": "44c72d52d7fb0c49"
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000",
+      "dominantWavelength": 460.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.300100,0.600000,71.520000",
+      "hex": "#01ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150100,0.060040,7.224000",
+      "hex": "#0100ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwFixtureTypeID": "911E3B56-1F4C-45E5-B5E1-6904B48F0D53",
+  "gwSpecs": {
+    "description": "Outdoor projector with 18x8W RGBW LED, 20° beam angle, Neutrik TRUE1 Powercon, 3P or 5P XLR connectors and IP-fan cooling",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-10T09:09:53",
+      "text": "20241010_Misdat"
+    }
+  }
 }

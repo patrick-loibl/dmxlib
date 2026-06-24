@@ -1,0 +1,228 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Aqua 200 RGB IP65",
+  "shortName": "Aqua 200",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-09",
+    "lastModifyDate": "2025-09-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9F2BD613-067C-4D24-85FB-E0B770D17BEE"
+    }
+  },
+  "comment": "Aqua 200 RGB IP65 COB LED PAR floodlight 200W WW + CW. A: High-power IP65 LED PAR floodlight for professional applications\nAnchor bracket with elastic band and plugs for easy integration into installations\n200W Cool White + Warm White COB LEDs\nCCT: 3200k (WW) 6000k (CW)\nHigh luminous flux: 5500-6500 (CW) and 5000-5500 (WW)\n4 dimming curves (linear, exponential, logarithmic, S-curve)\nEasy configuration via TFT screen with 4 touch buttons\nFully RDM compatible\nFlicker-free operation, ideal for TV and film productions\nREAN by Neutrik connectors for DMX signal and power supply",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294901760,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            5,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Color macro mode"
+        },
+        {
+          "dmxRange": [
+            81,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color jump mode"
+        },
+        {
+          "dmxRange": [
+            151,
+            151
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            152,
+            220
+          ],
+          "type": "ColorPreset",
+          "comment": "color fade mode"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound mode"
+        }
+      ]
+    },
+    "Shaper Macros Speed": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Sensitivity"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber"
+      ]
+    },
+    {
+      "name": "8CH",
+      "channels": [
+        "Dim 2",
+        "StrobeM Strobe",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Color Macro1",
+        "Shaper Macros Speed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      215,
+      150,
+      215
+    ],
+    "weight": 5.0,
+    "power": 130,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Amber",
+      "cie": "0.516600,0.460500,61.500000",
+      "hex": "#ffb900"
+    }
+  ],
+  "gwSpecs": {
+    "description": "High-power IP65 LED PAR floodlight for professional applications\nAnchor bracket with elastic band and plugs for easy integration into installations\n200W Cool White + Warm White COB LEDs\nCCT: 3200k (WW) 6000k (CW)\nHigh luminous flux: 5500-6500 (CW) and 5000-5500 (WW)\n4 dimming curves (linear, exponential, logarithmic, S-curve)\nEasy configuration via TFT screen with 4 touch buttons\nFully RDM compatible\nFlicker-free operation, ideal for TV and film productions\nREAN by Neutrik connectors for DMX signal and power supply",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-09T13:53:53",
+      "text": "v1_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a48933955b47220a"
+  },
+  "manufacturerKey": "triton-blue",
+  "fixtureKey": "aqua-200-rgb-ip65",
+  "gwFixtureTypeID": "9F2BD613-067C-4D24-85FB-E0B770D17BEE"
+}

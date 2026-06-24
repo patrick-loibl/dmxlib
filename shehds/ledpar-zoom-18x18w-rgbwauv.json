@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LEDPAR Zoom 18x18W RGBWAUV",
+  "shortName": "LedZoom",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-04-06",
+    "lastModifyDate": "2023-11-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E4FC1425-DAB6-4CD8-8D33-35E47F0AB56B"
+    }
+  },
+  "comment": "LedZoom RGBWAUV Shehds: Led Par 64 RGBAWUVZ by Shehds",
+  "wheels": {
+    "UV Color": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Black",
+          "colors": [
+            "#000000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "UV",
+          "colors": [
+            "#7600b7"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "C1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "UV Color",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Strobe1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Macros": {
+      "capability": {
+        "type": "Unknown (Macros)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        },
+        {
+          "dmxRange": [
+            1,
+            126
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            128,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        }
+      ]
+    },
+    "Fixture Mode": {
+      "capability": {
+        "type": "Unknown (Fixture Mode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Intensity MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "12 Ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "C1",
+        "Strobe1",
+        "Macros",
+        "Zoom",
+        "Fixture Mode",
+        "Intensity MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "weight": 4.5,
+    "power": 280,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 5500
+    },
+    "lens": {
+      "degreesMinMax": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "RY",
+      "cie": "0.558500,0.394800,33.460000",
+      "hex": "#ff7300"
+    },
+    {
+      "name": "W",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Led Par 64 RGBAWUVZ by Shehds",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-11-15T16:22:51",
+      "text": "1.5 by Gui manque shunter pour 3D"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "cc251f403234d5f7"
+  },
+  "manufacturerKey": "shehds",
+  "fixtureKey": "ledpar-zoom-18x18w-rgbwauv",
+  "gwFixtureTypeID": "E4FC1425-DAB6-4CD8-8D33-35E47F0AB56B"
+}

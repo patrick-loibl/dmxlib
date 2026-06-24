@@ -1,0 +1,229 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Dot Blinder",
+  "shortName": "Dot Blinder",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-21",
+    "lastModifyDate": "2026-05-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0FEB0587-1B0F-48DA-A73B-B9B834AE15FD"
+    }
+  },
+  "comment": "La Roy Dot Blinder: RGBW + A Blinder",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open Shutter"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            132
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            133,
+            133
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow Random"
+        },
+        {
+          "dmxRange": [
+            135,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast Random"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Full (12)",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "White",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      133,
+      121,
+      180
+    ],
+    "weight": 1.7,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.703885,0.293712,100.007254",
+      "hex": "#ff0000",
+      "dominantWavelength": 650.0
+    },
+    {
+      "name": "Blue",
+      "cie": "0.147705,0.051999,99.998474",
+      "hex": "#0000ff",
+      "dominantWavelength": 450.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.179606,0.700884,100.003763",
+      "hex": "#00ff00",
+      "dominantWavelength": 520.0
+    },
+    {
+      "name": "Ww",
+      "cie": "0.435093,0.403805,100.004921",
+      "hex": "#ffed90"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.614986,0.357810,100.006134",
+      "hex": "#ff7f00"
+    }
+  ],
+  "gwSpecs": {
+    "description": "RGBW + A Blinder",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-11T13:49:11",
+      "text": "Initial"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "23b94f7f7a68b87b"
+  },
+  "manufacturerKey": "la-roy",
+  "fixtureKey": "dot-blinder",
+  "gwFixtureTypeID": "0FEB0587-1B0F-48DA-A73B-B9B834AE15FD"
+}

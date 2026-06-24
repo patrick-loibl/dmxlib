@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Wall RGB 20x20",
+  "shortName": "LED20x20",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "001B2163-FDBF-0000-072D-C1C799182746"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      1000,
+      50,
+      1000
+    ],
+    "power": 1,
+    "bulb": {
+      "type": "LED",
+      "lumens": 100
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        20.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Pixel Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Pixel ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Pixel ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Pixel ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "shortName": "Default",
+      "channels": [
+        "Pixel ColorAdd_R",
+        "Pixel ColorAdd_G",
+        "Pixel ColorAdd_B"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED wall element with 20x20 RGB LEDs",
+    "beamType": "None",
+    "revision": {
+      "date": "2019-03-27T16:03:08",
+      "text": "Updated fixture type to GDTF 1.0, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "led-wall-rgb-20x20",
+  "gwFixtureTypeID": "001B2163-FDBF-0000-072D-C1C799182746"
+}

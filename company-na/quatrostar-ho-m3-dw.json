@@ -1,0 +1,271 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Quatrostar HO M3 DW",
+  "shortName": "QS M3 DW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-05-16",
+    "lastModifyDate": "2025-04-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 05B4C744-62FB-4E66-B433-ECEDC96FA662"
+    }
+  },
+  "comment": "Company NA Quatrostar HO M3 DW",
+  "availableChannels": {
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2104533974
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "-90 deg"
+        },
+        {
+          "dmxRange": [
+            2104533975,
+            2147483646
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2190433319
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2190433320,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "90 deg"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 100,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "WW": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "highlightValue": 100,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "highlightValue": 100,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 3": {
+      "name": "WW",
+      "highlightValue": 100,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 3": {
+      "name": "CW",
+      "highlightValue": 100,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW 4": {
+      "name": "WW",
+      "fineChannelAliases": [
+        "WW 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 4": {
+      "name": "CW",
+      "fineChannelAliases": [
+        "CW 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 (2 ch)",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "Mode 2 (2 ch)",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "Mode 3 (3pix 6 ch)",
+      "channels": [
+        "WW",
+        "CW",
+        "WW 2",
+        "CW 2",
+        "WW 3",
+        "CW 3"
+      ]
+    },
+    {
+      "name": "Mode 4 (1pix 16b 4 ch)",
+      "channels": [
+        "WW 4",
+        "WW 4 fine",
+        "CW 4",
+        "CW 4 fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      97,
+      131,
+      297
+    ],
+    "weight": 2.6,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 430,
+      "colorTemperature": 5700
+    },
+    "lens": {
+      "degreesMinMax": [
+        22.0,
+        40.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Cold White",
+      "cie": "0.304900,0.329000,97.660000",
+      "hex": "#f2ffff"
+    },
+    {
+      "name": "Warm White",
+      "cie": "0.320100,0.341200,99.210000",
+      "hex": "#fffff2"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-09T13:19:05",
+      "text": "1_3_6"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "70ca50d09b197358"
+  },
+  "manufacturerKey": "company-na",
+  "fixtureKey": "quatrostar-ho-m3-dw",
+  "gwFixtureTypeID": "05B4C744-62FB-4E66-B433-ECEDC96FA662"
+}

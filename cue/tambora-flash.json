@@ -1,0 +1,967 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Tambora Flash",
+  "shortName": "TamboraFlash",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-12-19",
+    "lastModifyDate": "2025-07-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 64A216B7-BC56-4A1F-ACB6-0742284B858A"
+    }
+  },
+  "comment": "It is the only hybrid fixture on the market that can act simultaneously as a strobe, wash, and blinder, specifically designed with a modular approach for use in a linear array, to offer new creative opportunities to lighting designers.\n\nThe strobe section is based on two strips of very powerful white LEDs and a large beam angle aperture, capable of bringing a real impact of light into the show.",
+  "rdm": {
+    "modelId": 12464,
+    "softwareVersion": "0x0"
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTO Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "8000K"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2700K"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            5,
+            102
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            103,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            104,
+            107
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            108,
+            108
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0.5…0.5 mean?",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            109,
+            206
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            207,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 25…25 mean?",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            208,
+            212
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            213,
+            225
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            226,
+            238
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            239,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightness": 0,
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightness": 1,
+          "comment": "100%"
+        }
+      ]
+    },
+    "Color Crossfade": {
+      "capability": {
+        "type": "Unknown (ColorCrossfade)",
+        "physicalStart": "0m/s",
+        "physicalEnd": "1m/s",
+        "comment": "Crossfade Fast Slow"
+      }
+    },
+    "Attack Fade": {
+      "capability": {
+        "type": "Unknown (AttackFade)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Fade Fast Slow"
+      }
+    },
+    "Release Fade": {
+      "capability": {
+        "type": "Unknown (Release Fade)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Fade Fast Slow"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan  Auto*"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan  Silent"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan  Theatre"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan  Constant"
+        },
+        {
+          "dmxRange": [
+            10,
+            37
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            38,
+            42
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve  1*"
+        },
+        {
+          "dmxRange": [
+            43,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve  2"
+        },
+        {
+          "dmxRange": [
+            48,
+            52
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve  3"
+        },
+        {
+          "dmxRange": [
+            53,
+            55
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve  4"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Curve  5"
+        },
+        {
+          "dmxRange": [
+            58,
+            62
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma 1"
+        },
+        {
+          "dmxRange": [
+            63,
+            67
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma 1_5"
+        },
+        {
+          "dmxRange": [
+            68,
+            72
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Gamma 2_2*"
+        },
+        {
+          "dmxRange": [
+            73,
+            78
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Fade OFF*"
+        },
+        {
+          "dmxRange": [
+            79,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Fade ON"
+        },
+        {
+          "dmxRange": [
+            85,
+            86
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pixel Rev Map  OFF*"
+        },
+        {
+          "dmxRange": [
+            87,
+            88
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pixel Rev Map  ON"
+        },
+        {
+          "dmxRange": [
+            89,
+            90
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Strobe Rev Map  OFF*"
+        },
+        {
+          "dmxRange": [
+            91,
+            92
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Strobe Rev Map  ON"
+        },
+        {
+          "dmxRange": [
+            93,
+            97
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pixel Map OFF*"
+        },
+        {
+          "dmxRange": [
+            98,
+            102
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pixel Map RGB"
+        },
+        {
+          "dmxRange": [
+            103,
+            107
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pixel Map RGBW"
+        },
+        {
+          "dmxRange": [
+            108,
+            112
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red Shift On"
+        },
+        {
+          "dmxRange": [
+            113,
+            117
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red Shift Off"
+        },
+        {
+          "dmxRange": [
+            118,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Strobe Pixel Map OFF*"
+        },
+        {
+          "dmxRange": [
+            121,
+            122
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Strobe Pixel Map ON"
+        },
+        {
+          "dmxRange": [
+            123,
+            124
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Calib OFF*"
+        },
+        {
+          "dmxRange": [
+            125,
+            126
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Calib Factory"
+        },
+        {
+          "dmxRange": [
+            127,
+            167
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Color Calib Custom"
+        },
+        {
+          "dmxRange": [
+            168,
+            188
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "600Hz"
+        },
+        {
+          "dmxRange": [
+            189,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1200Hz"
+        },
+        {
+          "dmxRange": [
+            200,
+            210
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2000Hz*"
+        },
+        {
+          "dmxRange": [
+            211,
+            221
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "4000Hz"
+        },
+        {
+          "dmxRange": [
+            222,
+            232
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "6000Hz"
+        },
+        {
+          "dmxRange": [
+            233,
+            243
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "25000Hz"
+        },
+        {
+          "dmxRange": [
+            244,
+            248
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display  OFF*"
+        },
+        {
+          "dmxRange": [
+            249,
+            253
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display  ON"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default Recall"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No Effect"
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Ramp Up"
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Ramp Down"
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Ramp Up to Down"
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Lightning"
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Spikes"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "brightness": "100%",
+          "comment": "100%"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "Strobe Frequency": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            254
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard RGBW + Pix RGBW + Strb Engine",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "CTO",
+        "Sh1",
+        "Dim",
+        "Dim fine",
+        "Color Crossfade",
+        "Attack Fade",
+        "Release Fade",
+        "Ctrl1",
+        "Sh1 2",
+        "Dim 2",
+        "Strobe Duration",
+        "Strobe Frequency",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      180,
+      128,
+      500
+    ],
+    "weight": 10.5,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "It is the only hybrid fixture on the market that can act simultaneously as a strobe, wash, and blinder, specifically designed with a modular approach for use in a linear array, to offer new creative opportunities to lighting designers.\n\nThe strobe section is based on two strips of very powerful white LEDs and a large beam angle aperture, capable of bringing a real impact of light into the show.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-07-04T19:27:16",
+      "text": "okok"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "669ff5d25a084d32"
+  },
+  "manufacturerKey": "cue",
+  "fixtureKey": "tambora-flash",
+  "gwFixtureTypeID": "64A216B7-BC56-4A1F-ACB6-0742284B858A"
+}

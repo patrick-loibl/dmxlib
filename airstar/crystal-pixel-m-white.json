@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Crystal Pixel M White",
+  "shortName": "Crystal Pixel M White",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-08-16",
+    "lastModifyDate": "2023-08-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 972DB834-2EF7-4122-A672-15BC8995904E"
+    }
+  },
+  "comment": "Crystal Pixel White has 12 white pixels : 6 columns and 2 rows. \nThere are 4 sizes available. Only the 130cm size is modelized however all sizes work the same.\nFixing system is not modelized as well since several options are also available.  ",
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Ctrl2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "One Pixel Mode",
+      "channels": [
+        "Ctrl1",
+        "Dim",
+        "FX1 Rate",
+        "Ctrl2"
+      ]
+    },
+    {
+      "name": "Pixel Mode",
+      "channels": [
+        "Ctrl1 2",
+        "Dim",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1300,
+      1300,
+      1300
+    ],
+    "weight": 10.5,
+    "power": 500,
+    "bulb": {
+      "type": "LED",
+      "lumens": 60000,
+      "colorTemperature": 4000
+    },
+    "lens": {
+      "degreesMinMax": [
+        360.0,
+        360.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White 4000K",
+      "cie": "0.381800,0.379600,100.000000",
+      "hex": "#fff7be"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Crystal Pixel White has 12 white pixels : 6 columns and 2 rows. \nThere are 4 sizes available. Only the 130cm size is modelized however all sizes work the same.\nFixing system is not modelized as well since several options are also available.",
+    "beamType": "Glow",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2023-08-16T10:32:42",
+      "text": "1.0.2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "07437fc022fd773f"
+  },
+  "manufacturerKey": "airstar",
+  "fixtureKey": "crystal-pixel-m-white",
+  "gwFixtureTypeID": "972DB834-2EF7-4122-A672-15BC8995904E"
+}

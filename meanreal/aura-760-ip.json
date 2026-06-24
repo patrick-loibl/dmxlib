@@ -1,0 +1,818 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Aura 760 ip",
+  "shortName": "Aura 760 ip",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-04-22",
+    "lastModifyDate": "2026-04-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 617A6ABD-BD0E-8021-DA3C-D0987A4DBEB6"
+    }
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Beam Shaper": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (BeamShaperPosRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Index"
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "Unknown (BeamShaperPos)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "<<<"
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Unknown (BeamShaperPos)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Unknown (BeamShaperPos)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": ">>>"
+        }
+      ]
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "BeamMaster": {
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Unknown (BeamMaster)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open Shutter"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            5,
+            198
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            199,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow Random"
+        },
+        {
+          "dmxRange": [
+            201,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast Random"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (Attribute)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "ColorTemp": {
+      "capability": {
+        "type": "Unknown (ColorTemp)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "G1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "NewWheel",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "ChasePatt": {
+      "capability": {
+        "type": "Unknown (Chase)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ChaseSpd": {
+      "capability": {
+        "type": "Unknown (ChaseSpeed)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (Attribute)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open Shutter"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            5,
+            198
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            199,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow Random"
+        },
+        {
+          "dmxRange": [
+            201,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast Random"
+        }
+      ]
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (Attribute)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "ChasePatt 2": {
+      "name": "ChasePatt",
+      "capability": {
+        "type": "Unknown (Chase)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ChaseSpd 2": {
+      "name": "ChaseSpd",
+      "capability": {
+        "type": "Unknown (ChaseSpeed)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            26,
+            76
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Effect Reset"
+        },
+        {
+          "dmxRange": [
+            77,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "XY Reset"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            134
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan mute"
+        },
+        {
+          "dmxRange": [
+            135,
+            139
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Standard"
+        },
+        {
+          "dmxRange": [
+            140,
+            144
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Full"
+        },
+        {
+          "dmxRange": [
+            145,
+            191
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Full Reset"
+        }
+      ]
+    },
+    "R 4": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Unknown (Attribute)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "highlightValue": 104,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            5,
+            102
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            103,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        },
+        {
+          "dmxRange": [
+            104,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open Shutter"
+        },
+        {
+          "dmxRange": [
+            208,
+            212
+          ],
+          "type": "NoFunction",
+          "comment": "Open Shutter"
+        },
+        {
+          "dmxRange": [
+            213,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow Random"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Open Shutter"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "30ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Beam Shaper",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "ColorTemp",
+        "Color Macro",
+        "G1",
+        "ChasePatt",
+        "ChaseSpd",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "Dim 2",
+        "Sh1 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "ChasePatt 2",
+        "ChaseSpd 2",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "78ch",
+      "channels": [
+        "R 4",
+        "R 4 fine",
+        "G 4",
+        "G 4 fine",
+        "B 4",
+        "B 4 fine",
+        "White 3",
+        "White 3 fine",
+        "ColorTemp",
+        "Color Macro",
+        "Sh1 3",
+        "Dim",
+        "Dim fine",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        null,
+        "Ctrl1",
+        "Zoom",
+        "Beam Shaper",
+        "R",
+        "G",
+        "B",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      200,
+      228
+    ],
+    "power": 42,
+    "bulb": {
+      "type": "LED",
+      "lumens": 857,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        17.1,
+        27.8
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-09T22:01:02",
+      "text": "30ch and 78ch"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7f6fff60e5d3e7c6"
+  },
+  "manufacturerKey": "meanreal",
+  "fixtureKey": "aura-760-ip",
+  "gwFixtureTypeID": "617A6ABD-BD0E-8021-DA3C-D0987A4DBEB6"
+}

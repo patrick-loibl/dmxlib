@@ -1,0 +1,178 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CPX 118-OP",
+  "shortName": "CPX 118-OP",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-04-14",
+    "lastModifyDate": "2026-04-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D88F2649-33F3-1002-CF12-A1E9BF151A21"
+    }
+  },
+  "comment": "Cyclops Lighting Official Library",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            8
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            9,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe 0Hz to 20 Hz"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            8
+          ],
+          "type": "Effect",
+          "effectName": "Default",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            9,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Auto 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Auto 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Auto 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "Auto 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Function": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "2 Channels",
+      "channels": [
+        "Dim",
+        "Strobe"
+      ]
+    },
+    {
+      "name": "5 Channels",
+      "channels": [
+        "Dim",
+        "Strobe",
+        "FX1",
+        "FX1 Rate",
+        "Function"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "Cyclops Lighting Official Library",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-15T14:24:39",
+      "text": "Created By Cyclops Lighting, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "cyclops-lighting",
+  "fixtureKey": "cpx-118-op",
+  "gwFixtureTypeID": "D88F2649-33F3-1002-CF12-A1E9BF151A21",
+  "physical": {}
+}

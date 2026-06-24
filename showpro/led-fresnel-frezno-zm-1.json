@@ -1,0 +1,232 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Fresnel Frezno ZM-1",
+  "shortName": "ZM1",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-05-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: AD734555-CBAF-4856-9FF3-DF48B97241D7"
+    }
+  },
+  "comment": "Frezno ZM-1",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            98
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lightning Slow"
+        },
+        {
+          "dmxRange": [
+            111,
+            178
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Lightning Fast"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            190,
+            190
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Random Slow"
+        },
+        {
+          "dmxRange": [
+            191,
+            254
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Random Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Uno",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Dos",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "STDp 3ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "weight": 5.5,
+    "power": 105,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 4000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        40.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-15T01:33:38",
+      "text": "Creation"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "showpro",
+  "fixtureKey": "led-fresnel-frezno-zm-1",
+  "gwFixtureTypeID": "AD734555-CBAF-4856-9FF3-DF48B97241D7"
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RGBW Strobe",
+  "shortName": "RGBW Strobe",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-10-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DED6F611-7BD6-4642-9211-6CF944EBC1DF"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Frequency": {
+      "capability": {
+        "type": "Unknown (StrobeFrequency)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    },
+    "R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        },
+        {
+          "dmxRange": [
+            1,
+            5
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            6,
+            250
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Beam Flash Intensity"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "White Full On"
+        }
+      ]
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Strobe Frequency 2": {
+      "name": "Strobe Frequency",
+      "capability": {
+        "type": "Unknown (StrobeFrequency)",
+        "physicalStart": "0Hz",
+        "physicalEnd": "1Hz"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "11 Channels",
+      "channels": [
+        "Dim",
+        "Strobe Frequency",
+        null,
+        null,
+        "R",
+        "G",
+        "B",
+        "Strobe Frequency 2",
+        null,
+        null,
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      160,
+      265,
+      490
+    ],
+    "weight": 12.65,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-17T14:54:14",
+      "text": "Red channel fixed"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "928f358fc4280238"
+  },
+  "manufacturerKey": "afx",
+  "fixtureKey": "rgbw-strobe",
+  "gwFixtureTypeID": "DED6F611-7BD6-4642-9211-6CF944EBC1DF"
+}

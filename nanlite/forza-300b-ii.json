@@ -1,0 +1,281 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Forza 300B II",
+  "shortName": "Forza 300B II",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-08",
+    "lastModifyDate": "2023-06-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F1FD3011-481C-41C1-8FBA-5622C77954CE"
+    }
+  },
+  "comment": "NANLITE Forza 300B II: Forza 300B II LED Bi-Color Spot Light",
+  "rdm": {
+    "modelId": 524
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral/No Effect"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-80 Green"
+        },
+        {
+          "dmxRange": [
+            21,
+            99
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "-79 to -1 Green"
+        },
+        {
+          "dmxRange": [
+            100,
+            165
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral/No Effect"
+        },
+        {
+          "dmxRange": [
+            166,
+            244
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+1 to +79 Green"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "+80 Green"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Smart"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full Speed"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Low Speed"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Off"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Random Fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Random Medium"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Random Slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Variable Strobe"
+        }
+      ]
+    },
+    "Reserved": {
+      "capability": {
+        "type": "Unknown (Reserved)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Reserved_2": {
+      "capability": {
+        "type": "Unknown (Reserved_2)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "DAYLIGHT 8bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "Fan Mode",
+        "Strobe Rate",
+        "Reserved",
+        "Reserved_2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      123,
+      330,
+      228
+    ],
+    "weight": 2.9,
+    "power": 350,
+    "bulb": {
+      "type": "LED",
+      "lumens": 27259,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        140.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.191400,0.450300,100.000000",
+      "hex": "#00ffd4"
+    },
+    {
+      "name": "WarmWhite_LED",
+      "cie": "0.263300,0.530900,100.000000",
+      "hex": "#00ff85"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Forza 300B II LED Bi-Color Spot Light",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2023-06-12T15:22:23",
+      "text": "DMX V1.0 12.Jun.2023"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d59f9989d708d471"
+  },
+  "manufacturerKey": "nanlite",
+  "fixtureKey": "forza-300b-ii",
+  "gwFixtureTypeID": "F1FD3011-481C-41C1-8FBA-5622C77954CE"
+}

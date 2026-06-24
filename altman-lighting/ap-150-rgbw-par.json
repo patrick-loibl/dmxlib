@@ -1,0 +1,279 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "AP-150 RGBW Par",
+  "shortName": "AP-150",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-11-19",
+    "lastModifyDate": "2020-11-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.0 fixture type ID: 21A58226-9904-460F-9CC2-5D0BFC933960"
+    }
+  },
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Zoom": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Sh1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Function": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Fans": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "Unknown (Fans)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "H": {
+      "fineChannelAliases": [
+        "H fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "S": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "CTC": {
+      "defaultValue": 0,
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "RGBW 16Bit direct",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "White",
+        "White fine",
+        "Zoom",
+        "Color Macro1",
+        "Sh1",
+        "Function",
+        "Fans"
+      ]
+    },
+    {
+      "name": "RGBW 8Bit direct",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Zoom",
+        "Color Macro1",
+        "Sh1",
+        "Function",
+        "Fans"
+      ]
+    },
+    {
+      "name": "HSIC Mode",
+      "channels": [
+        "Dim",
+        "H",
+        "H fine",
+        "S",
+        "CTC",
+        "Zoom",
+        "Color Macro1",
+        "Sh1",
+        "Function",
+        "Fans"
+      ]
+    },
+    {
+      "name": "RGB mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Zoom",
+        "Color Macro1",
+        "Sh1",
+        "Function",
+        "Fans"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      231,
+      232,
+      230
+    ],
+    "power": 135,
+    "bulb": {
+      "type": "LED",
+      "lumens": 86275,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        12.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300100,0.599900,71.530000",
+      "hex": "#02ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "revision": {
+      "date": "2020-11-19T22:51:51",
+      "text": "Revision 0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "12391873fa22f368"
+  },
+  "manufacturerKey": "altman-lighting",
+  "fixtureKey": "ap-150-rgbw-par",
+  "gwFixtureTypeID": "21A58226-9904-460F-9CC2-5D0BFC933960"
+}

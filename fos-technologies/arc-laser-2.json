@@ -1,0 +1,294 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ARC Laser 2",
+  "shortName": "ARC Laser 2",
+  "categories": [
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-04-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BA502A4B-D3B1-48F2-8651-5FFF885929B6"
+    }
+  },
+  "wheels": {
+    "GOBO": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "PUNTINI",
+          "colors": [
+            "#e4e4e4"
+          ],
+          "gwGobo": "50f5191b6a8ebbfb"
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Laser OFF"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AUTO Fast Mode"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AUTO Slow Mode"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AUTO White Mode"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX Manual Mode"
+        }
+      ]
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe Slow"
+        }
+      ]
+    },
+    "Wheel Spin": {
+      "capability": {
+        "type": "WheelRotation",
+        "wheel": "GOBO",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "GOBO",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Rot Fast"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "GOBO",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "GOBO",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Rot Stop"
+        }
+      ]
+    },
+    "Dir": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": "stop",
+          "comment": "Clockwise ROT"
+        },
+        {
+          "dmxRange": [
+            100,
+            199
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": "stop",
+          "comment": "Stop ROT"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "GOBO",
+          "slotNumber": "stop",
+          "comment": "Counter Clockwise ROT"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard mode",
+      "channels": [
+        "Ctrl1",
+        "R",
+        "G",
+        "B",
+        "StrobeM Strobe",
+        "Rotate",
+        "Dir"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      95,
+      240,
+      125
+    ],
+    "weight": 2.4,
+    "power": 100000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 699999,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-24T23:09:29",
+      "text": "Rev1.6"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "32e18003cd70c988"
+  },
+  "manufacturerKey": "fos-technologies",
+  "fixtureKey": "arc-laser-2",
+  "gwFixtureTypeID": "BA502A4B-D3B1-48F2-8651-5FFF885929B6"
+}

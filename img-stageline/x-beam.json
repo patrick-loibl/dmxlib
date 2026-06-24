@@ -1,0 +1,564 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "X-Beam",
+  "shortName": "X-Beam",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2025-12-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 77405BAC-CE27-4B50-B51D-8A06BFE26859"
+    }
+  },
+  "comment": "X-Beam-410LED",
+  "wheels": {
+    "Colour Wheel": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40100"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White/Red",
+          "colors": [
+            "#aa0201"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red/Yellow",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow/Blue",
+          "colors": [
+            "#0600e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue/White",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            83
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            85,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            131
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            132,
+            139
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            140,
+            181
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse Open"
+        },
+        {
+          "dmxRange": [
+            182,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            231
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse Close"
+        },
+        {
+          "dmxRange": [
+            232,
+            239
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            240,
+            247
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random "
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Wheel Spin": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            17
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 1
+        },
+        {
+          "dmxRange": [
+            18,
+            34
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            35,
+            52
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            53,
+            69
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            70,
+            87
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            88,
+            104
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            105,
+            122
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            123,
+            139
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 8
+        },
+        {
+          "dmxRange": [
+            140,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Colour Wheel",
+          "slotNumber": 0
+        }
+      ]
+    },
+    "Beam Effect Index Rotate Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "P 2": {
+      "name": "P",
+      "fineChannelAliases": [
+        "P 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            21587
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            21588,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dummy": {
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "7CH",
+      "channels": [
+        "P",
+        "T",
+        "Dim",
+        "Sh1",
+        "Wheel Spin",
+        "Beam Effect Index Rotate Mode",
+        "FX1"
+      ]
+    },
+    {
+      "name": "14CH",
+      "channels": [
+        "P 2",
+        "P 2 fine",
+        "T 2",
+        "T 2 fine",
+        "Dummy",
+        "Dim",
+        "Sh1",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4",
+        "Dim 5",
+        "Wheel Spin",
+        "Beam Effect Index Rotate Mode",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      230,
+      290
+    ],
+    "weight": 4.2,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        6.0,
+        6.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150100,0.060130,7.237000",
+      "hex": "#0101ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-30T10:59:00",
+      "text": "14CH add"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "img-stageline",
+  "fixtureKey": "x-beam",
+  "gwFixtureTypeID": "77405BAC-CE27-4B50-B51D-8A06BFE26859"
+}

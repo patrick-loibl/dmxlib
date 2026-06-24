@@ -1,0 +1,944 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "19x15W LED RGBW Wash_Zoom 17 Kanal",
+  "shortName": "19x15 Wash",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-04-28",
+    "lastModifyDate": "2025-05-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 78622934-3099-42D2-92C7-BF0E1312D190"
+    }
+  },
+  "comment": "LED Beam+Wash 19x15W RGBW Zoom Light",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Standard mode"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max speed time"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min speed time"
+        }
+      ]
+    },
+    "Zoom": {
+      "highlightValue": 127,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "narrow"
+        },
+        {
+          "dmxRange": [
+            2,
+            253
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "wide"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter closed"
+        },
+        {
+          "dmxRange": [
+            32,
+            34
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.3Hz",
+          "speedEnd": "0.41Hz",
+          "comment": "Slow to fast - Slow"
+        },
+        {
+          "dmxRange": [
+            35,
+            36
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.46Hz",
+          "speedEnd": "0.51Hz"
+        },
+        {
+          "dmxRange": [
+            37,
+            39
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.56Hz",
+          "speedEnd": "0.67Hz"
+        },
+        {
+          "dmxRange": [
+            40,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.72Hz",
+          "speedEnd": "0.83Hz"
+        },
+        {
+          "dmxRange": [
+            43,
+            46
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1.04Hz",
+          "speedEnd": "2.78Hz"
+        },
+        {
+          "dmxRange": [
+            47,
+            50
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "3.41Hz",
+          "speedEnd": "4.8Hz"
+        },
+        {
+          "dmxRange": [
+            51,
+            53
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "5.17Hz",
+          "speedEnd": "6Hz"
+        },
+        {
+          "dmxRange": [
+            54,
+            56
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "6.5Hz",
+          "speedEnd": "8Hz"
+        },
+        {
+          "dmxRange": [
+            57,
+            59
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "9Hz",
+          "speedEnd": "11Hz"
+        },
+        {
+          "dmxRange": [
+            60,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "13Hz",
+          "speedEnd": "20Hz",
+          "comment": "Slow to fast - Fast"
+        },
+        {
+          "dmxRange": [
+            64,
+            66
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.3Hz",
+          "speedEnd": "0.41Hz",
+          "comment": "Slow to fast - Slow"
+        },
+        {
+          "dmxRange": [
+            67,
+            68
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.46Hz",
+          "speedEnd": "0.51Hz"
+        },
+        {
+          "dmxRange": [
+            69,
+            71
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.56Hz",
+          "speedEnd": "0.67Hz"
+        },
+        {
+          "dmxRange": [
+            72,
+            74
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.72Hz",
+          "speedEnd": "0.83Hz"
+        },
+        {
+          "dmxRange": [
+            75,
+            78
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1.04Hz",
+          "speedEnd": "2.78Hz"
+        },
+        {
+          "dmxRange": [
+            79,
+            82
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "3.41Hz",
+          "speedEnd": "4.8Hz"
+        },
+        {
+          "dmxRange": [
+            83,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "5.17Hz",
+          "speedEnd": "6Hz"
+        },
+        {
+          "dmxRange": [
+            86,
+            88
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "6.5Hz",
+          "speedEnd": "8Hz"
+        },
+        {
+          "dmxRange": [
+            89,
+            91
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "9Hz",
+          "speedEnd": "11Hz"
+        },
+        {
+          "dmxRange": [
+            92,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "13Hz",
+          "speedEnd": "20Hz",
+          "comment": "Slow to fast - Fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            111
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Zone + Rainbow effects slow to fast"
+        },
+        {
+          "dmxRange": [
+            112,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Zone + Rainbow effects fast to slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.119Hz",
+          "speedEnd": "0.179Hz",
+          "comment": "Slow to fast - Slow"
+        },
+        {
+          "dmxRange": [
+            131,
+            132
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.208Hz",
+          "speedEnd": "0.238Hz"
+        },
+        {
+          "dmxRange": [
+            133,
+            134
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.27Hz",
+          "speedEnd": "0.294Hz"
+        },
+        {
+          "dmxRange": [
+            135,
+            136
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.323Hz",
+          "speedEnd": "0.357Hz"
+        },
+        {
+          "dmxRange": [
+            137,
+            138
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.385Hz",
+          "speedEnd": "0.417Hz"
+        },
+        {
+          "dmxRange": [
+            139,
+            140
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.455Hz",
+          "speedEnd": "0.476Hz"
+        },
+        {
+          "dmxRange": [
+            141,
+            143
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0.526Hz",
+          "speedEnd": "0.667Hz",
+          "comment": "Slow to fast - Fast"
+        },
+        {
+          "dmxRange": [
+            144,
+            145
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.667Hz",
+          "speedEnd": "0.588Hz",
+          "comment": "Fast to slow - Slow"
+        },
+        {
+          "dmxRange": [
+            146,
+            147
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.526Hz",
+          "speedEnd": "0.476Hz"
+        },
+        {
+          "dmxRange": [
+            148,
+            149
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.455Hz",
+          "speedEnd": "0.417Hz"
+        },
+        {
+          "dmxRange": [
+            150,
+            151
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.385Hz",
+          "speedEnd": "0.357Hz"
+        },
+        {
+          "dmxRange": [
+            152,
+            153
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.323Hz",
+          "speedEnd": "0.294Hz"
+        },
+        {
+          "dmxRange": [
+            154,
+            155
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.27Hz",
+          "speedEnd": "0.238Hz"
+        },
+        {
+          "dmxRange": [
+            156,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0.208Hz",
+          "speedEnd": "0.119Hz",
+          "comment": "Fast to slow - Fast"
+        },
+        {
+          "dmxRange": [
+            160,
+            175
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.14Hz",
+          "speedEnd": "17.25Hz",
+          "randomTiming": true,
+          "comment": "Random zone effect slow to fast"
+        },
+        {
+          "dmxRange": [
+            176,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.14Hz",
+          "speedEnd": "17.25Hz",
+          "randomTiming": true,
+          "comment": "Random zone + strobe effect slow to fast"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.14Hz",
+          "speedEnd": "17.25Hz",
+          "randomTiming": true,
+          "comment": "Random strobe slow to fast (all zones)"
+        },
+        {
+          "dmxRange": [
+            224,
+            239
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.14Hz",
+          "speedEnd": "17.25Hz",
+          "randomTiming": true,
+          "comment": "Random strobe slow to fast (random LEDs)"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter open"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "P 2": {
+      "name": "P",
+      "fineChannelAliases": [
+        "P 2 fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos MSpeed 2": {
+      "name": "Pos MSpeed",
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Zoom 2": {
+      "name": "Zoom",
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Media Content1": {
+      "capability": {
+        "type": "Unknown (MediaContent1)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "rest": {
+      "capability": {
+        "type": "Unknown (rest)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "24 Channels",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim 4",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        null,
+        null,
+        null,
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "17 Channel",
+      "channels": [
+        "P 2",
+        "P 2 fine",
+        "T 2",
+        "T 2 fine",
+        "Pos MSpeed 2",
+        "Dim 5",
+        "Sh1 2",
+        "R 4",
+        "G 4",
+        "B 4",
+        "White 4",
+        "Zoom 2",
+        "Color FX1",
+        "Color Mix MSpeed",
+        "Media Content1",
+        "rest"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      203,
+      156,
+      209
+    ],
+    "weight": 7.95,
+    "power": 15,
+    "bulb": {
+      "type": "LED",
+      "lumens": 100,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        40.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-28T06:02:16",
+      "text": "SHEHDS 17 Kanal"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a73dddc84545aea7"
+  },
+  "manufacturerKey": "shehds",
+  "fixtureKey": "19x15w-led-rgbw-wash-zoom-17-kanal",
+  "gwFixtureTypeID": "78622934-3099-42D2-92C7-BF0E1312D190"
+}

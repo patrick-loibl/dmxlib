@@ -1,0 +1,131 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CwWw Dimmer",
+  "shortName": "CwWwD",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-06-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5A22BF5B-1A26-4C54-BFFB-FEAE5C57930E"
+    }
+  },
+  "comment": "Generic CwWwD",
+  "availableChannels": {
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "CwWwD",
+      "channels": [
+        "CW",
+        "WW",
+        "Dim"
+      ]
+    },
+    {
+      "name": "WwCwD",
+      "channels": [
+        "WW",
+        "CW",
+        "Dim"
+      ]
+    },
+    {
+      "name": "CwWw 16 Bit Dimmer",
+      "channels": [
+        "CW",
+        "WW",
+        "Dim",
+        "Dim fine"
+      ]
+    },
+    {
+      "name": "WwWw 16 Bit Dimmer",
+      "channels": [
+        "WW",
+        "CW",
+        "Dim",
+        "Dim fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "power": 30,
+    "bulb": {
+      "type": "474nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite",
+      "cie": "0.330200,0.339080,97.750000",
+      "hex": "#fff9ef",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "WarmWhite",
+      "cie": "0.451860,0.408630,97.750000",
+      "hex": "#ffe77f",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-06-02T08:32:54",
+      "text": "Added 16 bit Dimmer modes"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "cwww-dimmer",
+  "gwFixtureTypeID": "5A22BF5B-1A26-4C54-BFFB-FEAE5C57930E"
+}

@@ -1,0 +1,289 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ST 100 INDOR",
+  "shortName": "ST 100",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "B01D5AB6-6D20-4556-ADCA-28827E5119EA"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "weight": 10.0,
+    "power": 1800,
+    "bulb": {
+      "type": "LED",
+      "lumens": 17000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        -1.0,
+        120.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam  Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam  Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Beam  ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam  ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam  ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam  Effects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "RGB Effect"
+        }
+      ]
+    },
+    "Beam  Effects1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "White LED Shutter2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "White LED ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "White LED Effects2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "White LED Effect"
+        }
+      ]
+    },
+    "White LED Effects2Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "Beam  Shutter3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Beam  Effects3": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "RGBW Effect"
+        }
+      ]
+    },
+    "Beam  Effects3Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "Beam  Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Beam  dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "BG Dimmer"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard-16CH",
+      "shortName": "Standard-16C",
+      "channels": [
+        "Beam  Dimmer",
+        "Beam  Shutter1",
+        "Beam  ColorAdd_R",
+        "Beam  ColorAdd_G",
+        "Beam  ColorAdd_B",
+        "Beam  Effects1",
+        "Beam  Effects1Rate",
+        "White LED Shutter2",
+        "White LED ColorAdd_W",
+        "White LED Effects2",
+        "White LED Effects2Rate",
+        "Beam  Shutter3",
+        "Beam  Effects3",
+        "Beam  Effects3Rate",
+        "Beam  Color1",
+        "Beam  dim"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.641200,0.329100,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150100,0.060130,7.237000",
+      "hex": "#0101ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-04T12:38:20",
+      "text": "ST 100 INDOR"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "efc93907900565df"
+  },
+  "manufacturerKey": "lotus-light",
+  "fixtureKey": "st-100-indor",
+  "gwFixtureTypeID": "B01D5AB6-6D20-4556-ADCA-28827E5119EA"
+}

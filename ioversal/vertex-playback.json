@@ -1,0 +1,263 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Vertex Playback",
+  "shortName": "VertexPlayback",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-13",
+    "lastModifyDate": "2024-02-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F7739716-CEB1-4B67-B390-B5D6422BA8EB"
+    }
+  },
+  "comment": "ioversal Vertex Playback Control",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "close"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "open"
+        }
+      ]
+    },
+    "Activate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Unknown (Activate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "deactivate"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Unknown (Activate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "activate"
+        }
+      ]
+    },
+    "Transport mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (TransportMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Idle"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (TransportMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Play Once"
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "Unknown (TransportMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Play Loop"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Unknown (TransportMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pause"
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Unknown (TransportMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            51,
+            255
+          ],
+          "type": "Unknown (TransportMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Play Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            1,
+            61
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            62,
+            62
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "half speed"
+        },
+        {
+          "dmxRange": [
+            63,
+            124
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            125,
+            130
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "normal 1x"
+        },
+        {
+          "dmxRange": [
+            131,
+            255
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "1x-4x"
+        }
+      ]
+    },
+    "Cue Selection": {
+      "fineChannelAliases": [
+        "Cue Selection fine"
+      ],
+      "capability": {
+        "type": "Unknown (CueSelection)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Frame Selection": {
+      "fineChannelAliases": [
+        "Frame Selection fine"
+      ],
+      "capability": {
+        "type": "Unknown (FrameSelection)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Playback",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Activate",
+        "Transport mode",
+        "Play Speed",
+        "Cue Selection",
+        "Cue Selection fine",
+        "Frame Selection",
+        "Frame Selection fine"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "ioversal Vertex Playback Control",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-18T15:05:49",
+      "text": "20240218"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "b5ff2a0fe69120dd"
+  },
+  "manufacturerKey": "ioversal",
+  "fixtureKey": "vertex-playback",
+  "gwFixtureTypeID": "F7739716-CEB1-4B67-B390-B5D6422BA8EB",
+  "physical": {}
+}

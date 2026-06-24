@@ -1,0 +1,487 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Stage X F RGBACL",
+  "shortName": "Stage X RGBACL",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2026-05-06",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9E8DFC9E-357A-4B45-B2F0-6186C9607311"
+    }
+  },
+  "comment": "TSF1214502-7MUXRN Stage X F RGBACL: Stage X RGBACL represents an innovative addition to stage lighting. It is an excellent choice for anyone looking for a versatile customizable and eco friendly spotlight for their performances or events. Developed and produced by Arena Luci in Italy, this spotlight features high efficiency RGBACL LED technology that ensures a bright and clear spotlight with minimal energy consumption. Its compact size and customizable  features make it versatile and easy to use, adapting to any lighting need.\nOne single unit can be set to operate as either RGBACL color changer or tunable white ( with green-magenta correction ) spot. You can adjust brightness and beam angle to perfectly complement your performance, ensuring that you always have the right amount of light on stage. Thanks to premium heat dissipation, it operates silently , ensuring a seamless experience. Stage X RGBACL is the ideal choice for theater artists, production companies and event organizers seeking an effective and eco friendly solution.",
+  "rdm": {
+    "modelId": 512
+  },
+  "availableChannels": {
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "fineChannelAliases": [
+        "Amber fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "C": {
+      "fineChannelAliases": [
+        "C fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "Lime": {
+      "fineChannelAliases": [
+        "Lime fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Zoom": {
+      "dmxValueResolution": "16bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Warm White"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Natural White"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Cold White"
+        }
+      ]
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Green"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Tint 2": {
+      "name": "Tint",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Greeen"
+        }
+      ]
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "C",
+        "Lime",
+        "Dim",
+        "Sh1",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "Mode 2",
+      "channels": [
+        "CTC",
+        "Tint",
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 3",
+      "channels": [
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Amber",
+        "Amber fine",
+        "C",
+        "C fine",
+        "Lime",
+        "Lime fine",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 4",
+      "channels": [
+        "CTC",
+        "Tint 2",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 5",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "CW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "weight": 7.0,
+    "power": 130,
+    "bulb": {
+      "type": "590nm / 568nm / 625nm / 525nm / 489nm / 451nm LED",
+      "lumens": 7000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        8.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "PC Amber",
+      "cie": "0.487500,0.425700,100.000000",
+      "hex": "#ffe44e",
+      "dominantWavelength": 590.0
+    },
+    {
+      "name": "PC Green",
+      "cie": "0.331900,0.574400,100.000000",
+      "hex": "#8aff02",
+      "dominantWavelength": 568.0
+    },
+    {
+      "name": "RED",
+      "cie": "0.613100,0.340700,100.000000",
+      "hex": "#ff6838",
+      "dominantWavelength": 625.0
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.264400,0.648800,100.000000",
+      "hex": "#00ff00",
+      "dominantWavelength": 525.0
+    },
+    {
+      "name": "CYAN",
+      "cie": "0.138700,0.364000,100.000000",
+      "hex": "#00ffff",
+      "dominantWavelength": 489.0
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.136900,0.083540,100.000000",
+      "hex": "#00d6ff",
+      "dominantWavelength": 451.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Stage X RGBACL represents an innovative addition to stage lighting. It is an excellent choice for anyone looking for a versatile customizable and eco friendly spotlight for their performances or events. Developed and produced by Arena Luci in Italy, this spotlight features high efficiency RGBACL LED technology that ensures a bright and clear spotlight with minimal energy consumption. Its compact size and customizable  features make it versatile and easy to use, adapting to any lighting need.\nOne single unit can be set to operate as either RGBACL color changer or tunable white ( with green-magenta correction ) spot. You can adjust brightness and beam angle to perfectly complement your performance, ensuring that you always have the right amount of light on stage. Thanks to premium heat dissipation, it operates silently , ensuring a seamless experience. Stage X RGBACL is the ideal choice for theater artists, production companies and event organizers seeking an effective and eco friendly solution.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-06T15:10:16",
+      "text": "0003"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2a11f3dc570985dc"
+  },
+  "manufacturerKey": "arena-luci",
+  "fixtureKey": "stage-x-f-rgbacl",
+  "gwFixtureTypeID": "9E8DFC9E-357A-4B45-B2F0-6186C9607311"
+}

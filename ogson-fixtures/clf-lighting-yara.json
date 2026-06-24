@@ -1,0 +1,1039 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CLF Lighting Yara",
+  "shortName": "Yara",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-07-07",
+    "lastModifyDate": "2023-07-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 18BC18AE-9F34-4624-BFE7-9B101577F870"
+    }
+  },
+  "comment": "Yara LEDPAR",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            24
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Open"
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            26,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            65,
+            69
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            70,
+            70
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            71,
+            83
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            85,
+            89
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            90,
+            90
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            91,
+            103
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            104
+          ],
+          "type": "Unknown (StrobeModePulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            105,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            111,
+            123
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            124,
+            124
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            125,
+            129
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "Unknown (StrobeModeRandomPulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            131,
+            143
+          ],
+          "type": "Unknown (StrobeModeRandomPulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            144,
+            144
+          ],
+          "type": "Unknown (StrobeModeRandomPulseOpen)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            145,
+            149
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "Unknown (StrobeModeRandomPulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            151,
+            163
+          ],
+          "type": "Unknown (StrobeModeRandomPulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            164,
+            164
+          ],
+          "type": "Unknown (StrobeModeRandomPulseClose)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            165,
+            169
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            171,
+            183
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            184,
+            184
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            185,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            190
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            191,
+            203
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            204,
+            204
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            205,
+            209
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            210,
+            210
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            211,
+            223
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            224
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            225,
+            229
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            230,
+            230
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            231,
+            243
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            244,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "CTO": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "8000 K"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2000 K"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Color Macro2": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 2"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 3"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 4"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 5"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 6"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 7"
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 8"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 9"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto program 10"
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 1"
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 2"
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 3"
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 4"
+        },
+        {
+          "dmxRange": [
+            150,
+            159
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 5"
+        },
+        {
+          "dmxRange": [
+            160,
+            169
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 6"
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 7"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 8"
+        },
+        {
+          "dmxRange": [
+            190,
+            199
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 9"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Custom program 10"
+        }
+      ]
+    },
+    "Color Macro2 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (ColorMacro2Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            94
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            95,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Manual calibration output mode"
+        },
+        {
+          "dmxRange": [
+            100,
+            104
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Raw color output mode"
+        },
+        {
+          "dmxRange": [
+            105,
+            109
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal dimming"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Smooth dimming"
+        },
+        {
+          "dmxRange": [
+            125,
+            129
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            130,
+            134
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "600 Hz Refresh rate"
+        },
+        {
+          "dmxRange": [
+            135,
+            139
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1200Hz Refresh rate"
+        },
+        {
+          "dmxRange": [
+            140,
+            144
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "2400Hz Refresh rate"
+        },
+        {
+          "dmxRange": [
+            145,
+            149
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "4800Hz Refresh rate"
+        },
+        {
+          "dmxRange": [
+            150,
+            249
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Illuminate display "
+        }
+      ]
+    },
+    "H": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "S": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 4ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "Mode 6ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 7ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "CTO"
+      ]
+    },
+    {
+      "name": "Mode 11ch",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "CTO",
+        "Color Macro1",
+        "Color Macro2",
+        "Color Macro2 Rate",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "HSI",
+      "channels": [
+        "H",
+        "S",
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      179,
+      300,
+      259
+    ],
+    "weight": 3.8,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.642200,0.327500,100.000000",
+      "hex": "#ff000a"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.300900,0.599500,100.000000",
+      "hex": "#13ff00"
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.149100,0.061860,100.000000",
+      "hex": "#004bff"
+    },
+    {
+      "name": "WHITE",
+      "cie": "0.310300,0.329600,100.000000",
+      "hex": "#fbffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Yara LEDPAR",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2023-07-07T16:15:56",
+      "text": "ogi_v1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ae8facc6937dc127"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "clf-lighting-yara",
+  "gwFixtureTypeID": "18BC18AE-9F34-4624-BFE7-9B101577F870"
+}

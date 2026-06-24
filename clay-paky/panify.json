@@ -1,0 +1,267 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Panify",
+  "shortName": "Panify",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-02-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 06F9AD5D-A8B5-44AC-BDB4-6F5BEFEC0A27"
+    }
+  },
+  "comment": "Panify is a new solution for more creative possibilities, allowing you to turn every static, non-moving fixture into dynamic effects. The Panify is not limited to fixtures and could be used to turn scenery, signs, screens, and more. The unit is IP66-rated and can be used and hung in any position.",
+  "rdm": {
+    "modelId": 301
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "P Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "stop",
+          "comment": "No Rotation"
+        },
+        {
+          "dmxRange": [
+            3,
+            255
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "1rpm",
+          "physicalEnd": "43rpm",
+          "comment": "Slow>Fast"
+        }
+      ]
+    },
+    "PanDirection": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            125
+          ],
+          "type": "Unknown (PanDirection)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CW"
+        },
+        {
+          "dmxRange": [
+            126,
+            129
+          ],
+          "type": "Unknown (PanDirection)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            130,
+            255
+          ],
+          "type": "Unknown (PanDirection)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCW"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Home-Zero"
+        },
+        {
+          "dmxRange": [
+            12,
+            37
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            38,
+            42
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display ON #"
+        },
+        {
+          "dmxRange": [
+            43,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Display OFF"
+        },
+        {
+          "dmxRange": [
+            48,
+            52
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Reset"
+        },
+        {
+          "dmxRange": [
+            53,
+            57
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Speed Normal"
+        },
+        {
+          "dmxRange": [
+            58,
+            62
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Speed Fast #"
+        },
+        {
+          "dmxRange": [
+            63,
+            67
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Speed Boost"
+        },
+        {
+          "dmxRange": [
+            68,
+            72
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Speed Slow"
+        },
+        {
+          "dmxRange": [
+            73,
+            77
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan Speed Slower"
+        },
+        {
+          "dmxRange": [
+            78,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard",
+      "channels": [
+        "P",
+        "P fine",
+        "P Rotate",
+        "PanDirection",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      290,
+      139,
+      385
+    ],
+    "weight": 13.8
+  },
+  "gwSpecs": {
+    "description": "Panify is a new solution for more creative possibilities, allowing you to turn every static, non-moving fixture into dynamic effects. The Panify is not limited to fixtures and could be used to turn scenery, signs, screens, and more. The unit is IP66-rated and can be used and hung in any position.",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2026-02-05T09:24:37",
+      "text": "ClayPaky FW 1_8"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "cd240759c0cfd689"
+  },
+  "manufacturerKey": "clay-paky",
+  "fixtureKey": "panify",
+  "gwFixtureTypeID": "06F9AD5D-A8B5-44AC-BDB4-6F5BEFEC0A27"
+}

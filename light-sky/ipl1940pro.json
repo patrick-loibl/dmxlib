@@ -1,0 +1,754 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "IPL1940Pro",
+  "shortName": "IPL1940Pro",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "C60AB988-9138-4ABE-A9C0-3C08C834F1B3"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      334,
+      323,
+      334
+    ],
+    "weight": 29.0,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 7000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Base Function": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "Maintenance",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Maintenance",
+          "comment": "Zoom reset"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Maintenance",
+          "comment": "Pan/Tilt reset"
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Maintenance",
+          "comment": "system reset"
+        },
+        {
+          "dmxRange": [
+            51,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "No Function1"
+        }
+      ]
+    },
+    "Head Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Head zoom ROTA": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Generic",
+          "comment": "Angle"
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "Generic",
+          "comment": "CW Rotation Fast to Slow"
+        },
+        {
+          "dmxRange": [
+            191,
+            192
+          ],
+          "type": "Generic",
+          "comment": "Stop Rotation"
+        },
+        {
+          "dmxRange": [
+            193,
+            255
+          ],
+          "type": "Generic",
+          "comment": "CCW Rotation Slow to Fast"
+        }
+      ]
+    },
+    "Head Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Dimmer fine"
+      ]
+    },
+    "Head Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            49
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse"
+        },
+        {
+          "dmxRange": [
+            50,
+            89
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown"
+        },
+        {
+          "dmxRange": [
+            90,
+            119
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp"
+        },
+        {
+          "dmxRange": [
+            120,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            180,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Head ColorMacro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Head CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Head static effect": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Static Effect"
+        }
+      ]
+    },
+    "Head move effect": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Move Effect"
+        }
+      ]
+    },
+    "Head move effect speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Effect Speed"
+        }
+      ]
+    },
+    "Head background color": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Color"
+        }
+      ]
+    },
+    "Head background dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Background Dimmer"
+        }
+      ]
+    },
+    "Head ColorSub_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorSub_R fine"
+      ]
+    },
+    "Head ColorSub_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorSub_G fine"
+      ]
+    },
+    "Head ColorSub_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorSub_B fine"
+      ]
+    },
+    "Head ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head ColorAdd_W fine"
+      ]
+    },
+    "Head auar dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Auar Dimmer"
+        }
+      ]
+    },
+    "Head Auar Color Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Auar Color "
+        }
+      ]
+    },
+    "Head Auar Effect Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Auar Effect "
+        }
+      ]
+    },
+    "Head Auar Effect Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Auar Effect Speed"
+        }
+      ]
+    },
+    "Base Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "Reset"
+        }
+      ]
+    },
+    "Head Zoom Rot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Zoom"
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "Zoom"
+        },
+        {
+          "dmxRange": [
+            191,
+            192
+          ],
+          "type": "Zoom"
+        },
+        {
+          "dmxRange": [
+            193,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Head Shape Selection": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape Selection"
+        }
+      ]
+    },
+    "Head Shape Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape Speed 1"
+        }
+      ]
+    },
+    "Head Shape Fade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape Fade 1"
+        }
+      ]
+    },
+    "Head Shape R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape R 1"
+        }
+      ]
+    },
+    "Head Shape G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape G 1"
+        }
+      ]
+    },
+    "Head Shape B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape B 1"
+        }
+      ]
+    },
+    "Head Shape W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape W 1"
+        }
+      ]
+    },
+    "Head Shape Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape Dimmer 1"
+        }
+      ]
+    },
+    "Head Back Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Back Dimmer 1"
+        }
+      ]
+    },
+    "Head Shape Transition": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape Transition 1"
+        }
+      ]
+    },
+    "Head Shape Offset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Shape Offset 1"
+        }
+      ]
+    },
+    "Head Foreground Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Foreground Strobe 1"
+        }
+      ]
+    },
+    "Head Background Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Background Strobe 1"
+        }
+      ]
+    },
+    "Head Background Select": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "Background Select 1"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1:26CH",
+      "shortName": "Mode1:26CH",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Base Function",
+        "Head Zoom",
+        "Head zoom ROTA",
+        "Head Dimmer",
+        "Head Dimmer fine",
+        "Head Shutter1",
+        "Head ColorMacro1",
+        "Head CTO",
+        "Head static effect",
+        "Head move effect",
+        "Head move effect speed",
+        null,
+        "Head background color",
+        "Head background dimmer",
+        "Head ColorSub_R",
+        "Head ColorSub_G",
+        "Head ColorSub_B",
+        "Head ColorAdd_W",
+        "Head auar dimmer",
+        "Head Auar Color Macro",
+        "Head Auar Effect Macro",
+        "Head Auar Effect Speed"
+      ]
+    },
+    {
+      "name": "Mode2 39CH",
+      "shortName": "Mode2 39CH",
+      "channels": [
+        "Head ColorSub_R",
+        "Head ColorSub_R fine",
+        "Head ColorSub_G",
+        "Head ColorSub_G fine",
+        "Head ColorSub_B",
+        "Head ColorSub_B fine",
+        "Head ColorAdd_W",
+        "Head ColorAdd_W fine",
+        "Head CTO",
+        "Head ColorMacro1",
+        "Head Shutter1",
+        "Head Dimmer",
+        "Head Dimmer fine",
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Base Function",
+        "Base Reset",
+        "Head Zoom",
+        "Head Zoom Rot",
+        "Head Shape Selection",
+        "Head Shape Speed",
+        "Head Shape Fade",
+        "Head Shape R",
+        "Head Shape G",
+        "Head Shape B",
+        "Head Shape W",
+        "Head Shape Dimmer",
+        "Head Back Dimmer",
+        "Head Shape Transition",
+        "Head Shape Offset",
+        "Head Foreground Strobe",
+        "Head Background Strobe",
+        "Head Background Select",
+        "Head auar dimmer",
+        "Head Auar Color Macro",
+        "Head Auar Effect Macro",
+        "Head Auar Effect Speed"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -30,
+      60
+    ],
+    "revision": {
+      "date": "2022-11-03T09:30:39",
+      "text": "2022.11.5"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "86c31bec9f75d143"
+  },
+  "manufacturerKey": "light-sky",
+  "fixtureKey": "ipl1940pro",
+  "gwFixtureTypeID": "C60AB988-9138-4ABE-A9C0-3C08C834F1B3"
+}

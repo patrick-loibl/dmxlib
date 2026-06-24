@@ -1,0 +1,139 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PATT 2013",
+  "shortName": "PATT2013",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-29",
+    "lastModifyDate": "2023-03-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F5B07246-A49C-4CB5-9704-EA8FA1D6E70C"
+    }
+  },
+  "comment": "Patt 2013 is the first in a series of retro style lighting – designed specifically to further the current trend for tungsten eye-candy on stage and set - for bands, television, film and general prop lighting. ",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483646
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Needs external dimmer - mode with 8 bit dimmer channel",
+      "channels": [
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "Needs external dimmer - mode with 16 bit dimmer channel 1",
+      "channels": [
+        "Dim 3",
+        "Dim 3 fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      553,
+      287,
+      598
+    ],
+    "weight": 7.2,
+    "power": 750,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 400,
+      "colorTemperature": 3050
+    },
+    "lens": {
+      "degreesMinMax": [
+        17.0,
+        75.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Patt 2013 is the first in a series of retro style lighting – designed specifically to further the current trend for tungsten eye-candy on stage and set - for bands, television, film and general prop lighting.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2023-03-10T06:50:52",
+      "text": "2023-03-10  Geometry and wiring object reivison"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "eb6250209024e05f"
+  },
+  "manufacturerKey": "robe",
+  "fixtureKey": "patt-2013",
+  "gwFixtureTypeID": "F5B07246-A49C-4CB5-9704-EA8FA1D6E70C"
+}

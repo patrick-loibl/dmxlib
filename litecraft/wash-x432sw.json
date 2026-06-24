@@ -1,0 +1,228 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Wash x432sw",
+  "shortName": "x432",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-03",
+    "lastModifyDate": "2025-05-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FA2A1683-319C-4CBD-9E63-C5D33437E324"
+    }
+  },
+  "comment": "Litecraft Wash x432sw: ITECRAFT liefert mit dem WashX.432 sw ein neues Washlight auf LED-Basis, welches speziell, aber nicht nur, für den Messebau entwickelt und entsprechend ausgestattet wurde.\n\nDas Gerät verfügt über insgesamt 432 LEDs, die sich zur Hälfte in kaltweiße und warmweiße LEDs aufteilen. Damit erlaubt das Gerät zu jeder Zeit eine flexible Farbtemperatur-Anpassung im Bereich zwischen 3.000 und 6.000 Kelvin.\n\nDie Auswahl der entsprechenden Farbtemperatur und der jeweiligen Makros wurde für jeden denkbaren Einsatz besonders einfach gestaltet. Der klassische Messebauer, der in der Regel gerne auf DMX verzichtet, kann sowohl die Farbtemperatur als auch die Helligkeit über die beiden JogWheels auf der Rückseite des Gerätes einstellen und speichern. Egal, ob das Gerät nun täglich ein- und ausgeschaltet wird oder zu einer Messe reist – nach dem Einschalten stehen die zuvor eingestellten Werte direkt zur Verfügung. Dabei gibt das Display dem Anwender Feedback zu Makro und Helligkeit, um die Einstellung auch bei vielen Geräten gleich halten zu können. Eine Anpassung ist jederzeit über das JogWheel möglich und lässt sich mit einem Druck speichern.\n\nIn der Veranstaltungstechnik, wo DMX 512 zum Standard gehört, bleibt man gerne flexibel und kann jedes Gerät schnell an die gewünschte Situation anpassen. Hier sorgen die XLR-Steckverbinder in 5-poliger Ausführung für sichere Konnektivität. Und sollte eine Verkabelung mal schwierig umsetzbar sein, kann das optionale LUMENRADIO CRMX-Modul auf der Rückseite des Gerätes eingesteckt und direkt verwendet werden.\n\nDie DMX-Modi und auch alle anderen Einstellmöglichkeiten wurden bewusst reduziert. Neben der Startadresse ist die Auswahl von zwei DMX-Modi möglich – zum einen Farbtemperatur-Makros und Helligkeit und alternativ die separate Kontrolle der kaltweißen und warmweißen LEDs.\n\nDie vielen LEDs im WashX.432 sw wollen natürlich entsprechend gekühlt werden. Die aktive und temperaturgesteuerte Kühlung entwickelt nahezu keine Geräuschkulisse, was das Gerät auch für den Einbau in geräuschsensiblen Umgebungen zum perfekten Partner macht. Zur weiteren Ausstattung gehören natürlich Torblenden sowie ein Farbfilterrahmen für beispielsweise Diffusionsfilter oder auch klassische Farbfilter.\n\nWas die Konnektivität des Gerätes betrifft, wird gerade im Bereich Messebau die einfache Verkabelung mittel powerIP Ein- und Ausgang sehr geschätzt. Die unschöne Verkabelung mittels Mehrfachsteckdosen (die sich gerade bei kleineren Messeständen im Sichtbereich befinden) entfällt.",
+  "rdm": {
+    "modelId": 64
+  },
+  "wheels": {
+    "CCT Presets": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "2800K",
+          "colors": [
+            "#94683c"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3000K",
+          "colors": [
+            "#906a45"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3200K",
+          "colors": [
+            "#8e6b49"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4000K",
+          "colors": [
+            "#846e57"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4300K",
+          "colors": [
+            "#826e59"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "5600K",
+          "colors": [
+            "#f4e1cf"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "CCT": {
+      "highlightValue": 28,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 2.166667,
+          "slotNumberEnd": 2.333333
+        },
+        {
+          "dmxRange": [
+            4,
+            84
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumber": 0
+        },
+        {
+          "dmxRange": [
+            85,
+            87
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 5.666667,
+          "slotNumberEnd": 5.833333
+        },
+        {
+          "dmxRange": [
+            88,
+            201
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumber": 0
+        },
+        {
+          "dmxRange": [
+            202,
+            204
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 6.833333,
+          "slotNumberEnd": 7,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            205,
+            255
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "LED 100%"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294901760,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "2ch (Macro+Dimmer)",
+      "channels": [
+        "CCT",
+        "Dim"
+      ]
+    },
+    {
+      "name": "2ch (CW+WW)",
+      "channels": [
+        "CW",
+        "WW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      142,
+      120,
+      340
+    ],
+    "weight": 9.0,
+    "bulb": {
+      "type": "450nm / 644nm LED",
+      "lumens": 10000
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Cold White",
+      "cie": "0.337600,0.357600,100.000000",
+      "hex": "#ffffe1",
+      "dominantWavelength": 450.0
+    },
+    {
+      "name": "Warm White",
+      "cie": "0.451700,0.407700,100.000000",
+      "hex": "#ffe982",
+      "dominantWavelength": 644.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "ITECRAFT liefert mit dem WashX.432 sw ein neues Washlight auf LED-Basis, welches speziell, aber nicht nur, für den Messebau entwickelt und entsprechend ausgestattet wurde.\n\nDas Gerät verfügt über insgesamt 432 LEDs, die sich zur Hälfte in kaltweiße und warmweiße LEDs aufteilen. Damit erlaubt das Gerät zu jeder Zeit eine flexible Farbtemperatur-Anpassung im Bereich zwischen 3.000 und 6.000 Kelvin.\n\nDie Auswahl der entsprechenden Farbtemperatur und der jeweiligen Makros wurde für jeden denkbaren Einsatz besonders einfach gestaltet. Der klassische Messebauer, der in der Regel gerne auf DMX verzichtet, kann sowohl die Farbtemperatur als auch die Helligkeit über die beiden JogWheels auf der Rückseite des Gerätes einstellen und speichern. Egal, ob das Gerät nun täglich ein- und ausgeschaltet wird oder zu einer Messe reist – nach dem Einschalten stehen die zuvor eingestellten Werte direkt zur Verfügung. Dabei gibt das Display dem Anwender Feedback zu Makro und Helligkeit, um die Einstellung auch bei vielen Geräten gleich halten zu können. Eine Anpassung ist jederzeit über das JogWheel möglich und lässt sich mit einem Druck speichern.\n\nIn der Veranstaltungstechnik, wo DMX 512 zum Standard gehört, bleibt man gerne flexibel und kann jedes Gerät schnell an die gewünschte Situation anpassen. Hier sorgen die XLR-Steckverbinder in 5-poliger Ausführung für sichere Konnektivität. Und sollte eine Verkabelung mal schwierig umsetzbar sein, kann das optionale LUMENRADIO CRMX-Modul auf der Rückseite des Gerätes eingesteckt und direkt verwendet werden.\n\nDie DMX-Modi und auch alle anderen Einstellmöglichkeiten wurden bewusst reduziert. Neben der Startadresse ist die Auswahl von zwei DMX-Modi möglich – zum einen Farbtemperatur-Makros und Helligkeit und alternativ die separate Kontrolle der kaltweißen und warmweißen LEDs.\n\nDie vielen LEDs im WashX.432 sw wollen natürlich entsprechend gekühlt werden. Die aktive und temperaturgesteuerte Kühlung entwickelt nahezu keine Geräuschkulisse, was das Gerät auch für den Einbau in geräuschsensiblen Umgebungen zum perfekten Partner macht. Zur weiteren Ausstattung gehören natürlich Torblenden sowie ein Farbfilterrahmen für beispielsweise Diffusionsfilter oder auch klassische Farbfilter.\n\nWas die Konnektivität des Gerätes betrifft, wird gerade im Bereich Messebau die einfache Verkabelung mittel powerIP Ein- und Ausgang sehr geschätzt. Die unschöne Verkabelung mittels Mehrfachsteckdosen (die sich gerade bei kleineren Messeständen im Sichtbereich befinden) entfällt.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-05-02T21:11:37",
+      "text": "Fixed Virtual Dimmer"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "40b744d5a32c6aa1"
+  },
+  "manufacturerKey": "litecraft",
+  "fixtureKey": "wash-x432sw",
+  "gwFixtureTypeID": "FA2A1683-319C-4CBD-9E63-C5D33437E324"
+}

@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SPARXTAR",
+  "shortName": "SPARXTAR",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-11-21",
+    "lastModifyDate": "2024-10-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0C53CF32-4E9A-4A4D-916C-942953CDDBE9"
+    }
+  },
+  "rdm": {
+    "modelId": 1024
+  },
+  "availableChannels": {
+    "Safety": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DISARM"
+        },
+        {
+          "dmxRange": [
+            100,
+            154
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ARM"
+        },
+        {
+          "dmxRange": [
+            155,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min Height"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max Height"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Output"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Empty heater"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Output On"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Device",
+      "channels": [
+        "Safety",
+        "Dim",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      318,
+      243,
+      300
+    ],
+    "weight": 11.7,
+    "DMXconnector": "BNC"
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      -10,
+      50
+    ],
+    "revision": {
+      "date": "2024-10-23T20:41:26",
+      "text": "rev_03"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "445af79865be4ef5"
+  },
+  "manufacturerKey": "magicfx",
+  "fixtureKey": "sparxtar",
+  "gwFixtureTypeID": "0C53CF32-4E9A-4A4D-916C-942953CDDBE9"
+}

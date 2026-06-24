@@ -1,0 +1,688 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CPX 418-OP",
+  "shortName": "CPX 418-OP",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-04-14",
+    "lastModifyDate": "2026-04-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 82DB4DD7-EADD-46A3-AEA5-67E3E76DFFD2"
+    }
+  },
+  "comment": "Cyclops Lighting Official Library",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0.1,
+          "speedEnd": 10,
+          "comment": "Strobe from slow to fast"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "No Color"
+        },
+        {
+          "dmxRange": [
+            20,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "Color Mix"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "OFF",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color Macros",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "H": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "S": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (HSB_Brightness)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Strobe 2": {
+      "name": "Strobe",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0.1,
+          "speedEnd": 10,
+          "comment": "Strobe from slow to fast"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "linear / no delay"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "fast delay"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "medium delay"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "slow delay"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "slowest delay"
+        }
+      ]
+    },
+    "C1 2": {
+      "name": "C1",
+      "highlightValue": 13,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            200
+          ],
+          "type": "WheelRotation",
+          "wheel": "Unknown",
+          "angleStart": 0,
+          "angleEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            205
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 1"
+        },
+        {
+          "dmxRange": [
+            206,
+            210
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 2"
+        },
+        {
+          "dmxRange": [
+            211,
+            215
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 3"
+        },
+        {
+          "dmxRange": [
+            216,
+            220
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 4"
+        },
+        {
+          "dmxRange": [
+            221,
+            225
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 5"
+        },
+        {
+          "dmxRange": [
+            226,
+            230
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 6"
+        },
+        {
+          "dmxRange": [
+            231,
+            235
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 7"
+        },
+        {
+          "dmxRange": [
+            236,
+            240
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 8"
+        },
+        {
+          "dmxRange": [
+            241,
+            245
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 9"
+        },
+        {
+          "dmxRange": [
+            246,
+            250
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 10"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Unknown",
+          "slotNumber": 0,
+          "comment": "White 11"
+        }
+      ]
+    },
+    "Color FX1 2": {
+      "name": "Color FX1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "OFF",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            23
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            24,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            151
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            152,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            183
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            184,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            215
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            216,
+            231
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 14",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            232,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "AUTO 15",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "Color FX1",
+        "Strobe"
+      ]
+    },
+    {
+      "name": "3 Channel",
+      "channels": [
+        "H",
+        "S",
+        "B 2"
+      ]
+    },
+    {
+      "name": "4 Channels",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "6 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "11 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1 2",
+        "Strobe 2",
+        "Color FX1 2",
+        "Dim Curve",
+        "Color Mix MSpeed",
+        "NoFeature"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "weight": 94.0,
+    "power": 30,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150719",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176815",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750008",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    }
+  ],
+  "gwSpecs": {
+    "description": "Cyclops Lighting Official Library",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -30,
+      45
+    ],
+    "revision": {
+      "date": "2026-04-15T14:37:55",
+      "text": "Created By Cyclops Lighting, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "cyclops-lighting",
+  "fixtureKey": "cpx-418-op",
+  "gwFixtureTypeID": "82DB4DD7-EADD-46A3-AEA5-67E3E76DFFD2"
+}

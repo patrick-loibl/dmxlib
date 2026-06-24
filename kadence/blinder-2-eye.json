@@ -1,0 +1,145 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Blinder 2 Eye",
+  "shortName": "Blinder 2 Eye",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-15",
+    "lastModifyDate": "2024-05-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 921198DC-A61B-4247-8B89-51BC4647AF8B"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Speed of Strobe"
+        }
+      ]
+    },
+    "StrobeM Shutter": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Normal Speed"
+        },
+        {
+          "dmxRange": [
+            21,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Speed Increase"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "5 Channel Mode 1",
+      "channels": [
+        "Dim",
+        "White",
+        "WW",
+        "Sh1",
+        "StrobeM Shutter"
+      ]
+    },
+    {
+      "name": "2 Channel Mode",
+      "channels": [
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      182,
+      293,
+      486
+    ],
+    "weight": 5.1,
+    "power": 120,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5900,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        80.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2024-05-30T09:49:33",
+      "text": "Ver 2.3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ca059db015761c52"
+  },
+  "manufacturerKey": "kadence",
+  "fixtureKey": "blinder-2-eye",
+  "gwFixtureTypeID": "921198DC-A61B-4247-8B89-51BC4647AF8B"
+}

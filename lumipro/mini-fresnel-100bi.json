@@ -1,0 +1,218 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Mini Fresnel 100BI",
+  "shortName": "MiniFres100BI",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "E5C2F6AA-80AA-4B61-B79B-4362B4BF1424"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      171,
+      257,
+      155
+    ],
+    "weight": 2.1,
+    "DMXconnector": "XLR5",
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1634,
+      "colorTemperature": 4000
+    },
+    "lens": {
+      "degreesMinMax": [
+        42.5,
+        58.4
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Beam Dimmer fine"
+      ]
+    },
+    "Beam ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Beam ColorAdd_CW fine"
+      ]
+    },
+    "Beam ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Beam ColorAdd_WW fine"
+      ]
+    },
+    "Beam CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Beam FanMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Rotation"
+        }
+      ]
+    },
+    "Beam DimmerCurve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve 1"
+        }
+      ]
+    },
+    "Beam Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "Control1 1"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - 2ch",
+      "shortName": "Mode 1 - 2ch",
+      "channels": [
+        "Beam ColorAdd_CW",
+        "Beam ColorAdd_WW"
+      ]
+    },
+    {
+      "name": "Mode 2 - 4ch",
+      "shortName": "Mode 2 - 4ch",
+      "channels": [
+        "Beam ColorAdd_CW",
+        "Beam ColorAdd_CW fine",
+        "Beam ColorAdd_WW",
+        "Beam ColorAdd_WW fine"
+      ]
+    },
+    {
+      "name": "Mode 3 - 5ch",
+      "shortName": "Mode 3 - 5ch",
+      "channels": [
+        "Beam Dimmer",
+        "Beam ColorAdd_CW",
+        "Beam ColorAdd_WW",
+        "Beam CTC"
+      ]
+    },
+    {
+      "name": "Mode 4 - 8ch",
+      "shortName": "Mode 4 - 8ch",
+      "channels": [
+        "Beam Dimmer",
+        "Beam ColorAdd_CW",
+        "Beam ColorAdd_WW",
+        "Beam CTC",
+        null,
+        "Beam FanMode",
+        "Beam DimmerCurve",
+        "Beam Control1"
+      ]
+    },
+    {
+      "name": "Mode",
+      "shortName": "Mode",
+      "channels": [
+        "Beam Dimmer",
+        "Beam Dimmer fine",
+        "Beam ColorAdd_CW",
+        "Beam ColorAdd_CW fine",
+        "Beam ColorAdd_WW",
+        "Beam ColorAdd_WW fine",
+        "Beam CTC",
+        null,
+        "Beam FanMode",
+        "Beam DimmerCurve",
+        "Beam Control1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Cold White Led",
+      "cie": "0.329000,0.332000,66.248000",
+      "hex": "#e3d1ce"
+    },
+    {
+      "name": "Warm White Led",
+      "cie": "0.461000,0.409000,48.825000",
+      "hex": "#faa857"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LumiPro Mini Fresnel 100BI",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2026-06-08T04:47:05",
+      "text": "LP V-1"
+    }
+  },
+  "manufacturerKey": "lumipro",
+  "fixtureKey": "mini-fresnel-100bi",
+  "gwFixtureTypeID": "E5C2F6AA-80AA-4B61-B79B-4362B4BF1424"
+}

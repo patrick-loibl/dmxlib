@@ -1,0 +1,462 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "XLED",
+  "shortName": "XLED",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-16",
+    "lastModifyDate": "2025-01-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D96DD526-17B7-47EA-8CF8-60E3BD3B8110"
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Strobe"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Strobe"
+        }
+      ]
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "ColorMix": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "ColorPreset",
+          "comment": "Red 100%/green up/blue 0%"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "ColorPreset",
+          "comment": "Red 100%/green 100%/blue 0%"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "ColorPreset",
+          "comment": "Red 0%/green 100%/blue up"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "Red 0%/green down/blue 100%"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "ColorPreset",
+          "comment": "Red up/green 0%/blue 100%"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "ColorPreset",
+          "comment": "Red 100%/green 0%/blue down"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "ColorPreset",
+          "comment": "Red 100%/green up/blue up"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "ColorPreset",
+          "comment": "Red down/green down/blue 100%"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "ColorPreset",
+          "comment": "RGBW 100%"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Unknown (ColorMixWhite)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Unknown (ColorMixWhite)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min ColorMixWhite"
+        },
+        {
+          "dmxRange": [
+            202,
+            254
+          ],
+          "type": "Unknown (ColorMixWhite)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMixWhite)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max ColorMixWhite"
+        }
+      ]
+    },
+    "ColorMix2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            18
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            49
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physical": 1,
+          "comment": "RGBW hard chase"
+        },
+        {
+          "dmxRange": [
+            50,
+            90
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physical": 2,
+          "comment": "15 colors hard chase"
+        },
+        {
+          "dmxRange": [
+            91,
+            131
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physical": 3,
+          "comment": "RGBW soft chase"
+        },
+        {
+          "dmxRange": [
+            132,
+            172
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physical": 4,
+          "comment": "15 colors soft chase"
+        },
+        {
+          "dmxRange": [
+            173,
+            213
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physical": 5,
+          "comment": "Random fading"
+        },
+        {
+          "dmxRange": [
+            214,
+            255
+          ],
+          "type": "Unknown (ColorMixMacroSelect)",
+          "physical": 6,
+          "comment": "Sound trig"
+        }
+      ]
+    },
+    "ColorMixMacroRate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMixMacroRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min Macro Rate"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMixMacroRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMixMacroRate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max Macro Rate"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 channel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "4 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "6 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim 2",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "9 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White 2",
+        "Dim 2",
+        "Sh1",
+        "ColorMix",
+        "ColorMix2",
+        "ColorMixMacroRate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      83,
+      273,
+      219
+    ],
+    "weight": 3.4,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R__3 channel",
+      "cie": "0.640000,0.330000,21.267290",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G__3 channel",
+      "cie": "0.300000,0.600000,71.515220",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B__3 channel",
+      "cie": "0.150000,0.060000,7.217500",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "R__4 channel",
+      "cie": "0.640000,0.330000,21.267290",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G__4 channel",
+      "cie": "0.300000,0.600000,71.515220",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B__4 channel",
+      "cie": "0.150000,0.060000,7.217500",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "W__4 channel",
+      "cie": "0.312727,0.329023,100.000010",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-15T23:17:13",
+      "text": "InitialRelease"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8fa39dbe2dd1ca65"
+  },
+  "manufacturerKey": "bright",
+  "fixtureKey": "xled",
+  "gwFixtureTypeID": "D96DD526-17B7-47EA-8CF8-60E3BD3B8110"
+}

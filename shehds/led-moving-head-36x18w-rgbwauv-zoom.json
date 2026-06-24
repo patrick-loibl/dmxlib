@@ -1,0 +1,312 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED MOVING HEAD 36x18W RGBWAUV ZOOM",
+  "shortName": "LED MOVING HEAD 36x18W RGBWAUV ZOOM",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-04-03",
+    "lastModifyDate": "2024-03-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4ECB78E6-8ED7-48E5-9CA2-CA291B409917"
+    }
+  },
+  "comment": "LED MOVING HEAD 36x18W 6in1 RGBWAUV ZOOM\n\nhttps://www.shehds.com/products/good-quality-36x18w-rgbwa-uv-6in1-indoor-led-par-zoom-light-colorful-wash-zoom-lights\n\n18ch mode, without auto modes (ch13 ch14) or Color Macro in ch18. RGBCwA to 255 for Highlight. \n\nZoom (ch12) home at 35*/128 and Movement Speed (ch3) home at 128.",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32895
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32896,
+            32896
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32897,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Speed"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Zoom": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom"
+      }
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        }
+      ]
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            41
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 2200,
+          "colorTemperatureEnd": 8000,
+          "comment": "CTO"
+        },
+        {
+          "dmxRange": [
+            42,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "18ch",
+      "channels": [
+        "P",
+        "T",
+        "Pos MSpeed",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "CW",
+        "Amber",
+        "UV",
+        "Sh1",
+        "Zoom",
+        null,
+        null,
+        "P fine",
+        "T fine",
+        "Fixture Global Reset",
+        "CTO"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      310,
+      120,
+      310
+    ],
+    "weight": 9.6,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED MOVING HEAD 36x18W 6in1 RGBWAUV ZOOM\n\nhttps://www.shehds.com/products/good-quality-36x18w-rgbwa-uv-6in1-indoor-led-par-zoom-light-colorful-wash-zoom-lights\n\n18ch mode, without auto modes (ch13 ch14) or Color Macro in ch18. RGBCwA to 255 for Highlight. \n\nZoom (ch12) home at 35*/128 and Movement Speed (ch3) home at 128.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-03-14T19:50:54",
+      "text": "Mar142024_4"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "cef8c6b30c32a219"
+  },
+  "manufacturerKey": "shehds",
+  "fixtureKey": "led-moving-head-36x18w-rgbwauv-zoom",
+  "gwFixtureTypeID": "4ECB78E6-8ED7-48E5-9CA2-CA291B409917"
+}

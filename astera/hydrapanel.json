@@ -1,0 +1,265 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "HYDRAPANEL",
+  "shortName": "HYDRA",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-02-13",
+    "lastModifyDate": "2025-02-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: ECC52A04-F7DD-4FE7-8315-D9E8DCFE5FA8"
+    }
+  },
+  "comment": "ASTERA HYDRAPANEL",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full -G"
+        },
+        {
+          "dmxRange": [
+            6,
+            127
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "99% to 1% -G"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Neutral"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "99% to 1% +G"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full +G"
+        }
+      ]
+    },
+    "XF": {
+      "capability": {
+        "type": "Unknown (Color XF)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": " Random Fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random Medium"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random Slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Variable Strobe 1 to 25 Hz"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "MODE 89 : D CCT GM CRO RGB",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "MODE 91 : D16 CCT GM C RGB",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "MODE 94 : D CCT GM CRO RGB S",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "MODE 137 : D16 CCT GM C RGB S",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "Tint",
+        "XF",
+        "R",
+        "G",
+        "B",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      84,
+      43,
+      165
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-02-13T13:20:44",
+      "text": "CREATED BY TOINE"
+    }
+  },
+  "manufacturerKey": "astera",
+  "fixtureKey": "hydrapanel",
+  "gwFixtureTypeID": "ECC52A04-F7DD-4FE7-8315-D9E8DCFE5FA8"
+}

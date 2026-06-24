@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LiteMat Spectrum Mode 12",
+  "shortName": "LiteMat",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "7D8BFD66-8E85-410F-897A-60C9B24FF66B"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      250,
+      300,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Dimmer fine"
+      ]
+    },
+    "Body Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Tint fine"
+      ]
+    },
+    "Body HSB_Saturation": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "HSB_Saturation 1"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body HSB_Saturation fine"
+      ]
+    },
+    "Body HSB_Hue": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "HSB_Hue 1"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body HSB_Hue fine"
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "shortName": "Default",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        null,
+        null,
+        "Body Tint",
+        "Body Tint fine",
+        "Body HSB_Saturation",
+        "Body HSB_Saturation fine",
+        "Body HSB_Hue",
+        "Body HSB_Hue fine"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-04-07T13:49:01",
+      "text": "Lite"
+    }
+  },
+  "manufacturerKey": "litegear",
+  "fixtureKey": "litemat-spectrum-mode-12",
+  "gwFixtureTypeID": "7D8BFD66-8E85-410F-897A-60C9B24FF66B"
+}

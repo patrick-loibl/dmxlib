@@ -1,0 +1,219 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Fresno ZM-1 HD",
+  "shortName": "FZM1HD",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-10-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5A8A8A8E-ECF6-4C5E-BF0C-77802D726F19"
+    }
+  },
+  "comment": "The SilverStar 16-bit dim LED fresnel",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physical": "0Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physical": "0.01Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            98
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physical": 0,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            110
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physical": 0.01,
+          "comment": "Strobe Lighting Slow"
+        },
+        {
+          "dmxRange": [
+            111,
+            178
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "Unknown (StrobeModeEffect)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe Lighting Fast"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physical": 0,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            190
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physical": 0.01,
+          "comment": "Strobe Random Slow"
+        },
+        {
+          "dmxRange": [
+            191,
+            254
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeModeRandom)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe Random Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Uno",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Dos",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "STD Profile",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Strobe Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      261,
+      383,
+      251
+    ],
+    "weight": 6.1,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        60.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "The SilverStar 16-bit dim LED fresnel",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2025-10-15T23:23:54",
+      "text": "Revision 3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "51a0f0d6d97db41c"
+  },
+  "manufacturerKey": "silver-star",
+  "fixtureKey": "fresno-zm-1-hd",
+  "gwFixtureTypeID": "5A8A8A8E-ECF6-4C5E-BF0C-77802D726F19"
+}

@@ -1,9 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "LED Flat Par 18x18W",
-  "categories": ["Color Changer"],
+  "categories": [
+    "Color Changer"
+  ],
   "meta": {
-    "authors": ["V. Mateev"],
+    "authors": [
+      "V. Mateev"
+    ],
     "createDate": "2022-10-18",
     "lastModifyDate": "2026-01-30"
   },
@@ -19,12 +23,24 @@
     ]
   },
   "physical": {
-    "dimensions": [200, 115, 265],
+    "dimensions": [
+      200,
+      115,
+      265
+    ],
     "weight": 4,
     "power": 324,
     "DMXconnector": "3-pin",
     "bulb": {
-      "type": "18x18W LEDs"
+      "type": "18x18W LEDs",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        40.0
+      ]
     }
   },
   "availableChannels": {
@@ -72,12 +88,18 @@
     "Strobe": {
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [1, 255],
+          "dmxRange": [
+            1,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "0Hz",
@@ -88,26 +110,41 @@
     "Program": {
       "capabilities": [
         {
-          "dmxRange": [0, 50],
+          "dmxRange": [
+            0,
+            50
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [51, 100],
+          "dmxRange": [
+            51,
+            100
+          ],
           "type": "Effect",
           "effectPreset": "ColorJump"
         },
         {
-          "dmxRange": [101, 150],
+          "dmxRange": [
+            101,
+            150
+          ],
           "type": "Effect",
           "effectPreset": "ColorFade"
         },
         {
-          "dmxRange": [151, 200],
+          "dmxRange": [
+            151,
+            200
+          ],
           "type": "Effect",
           "effectName": "Color Pulse"
         },
         {
-          "dmxRange": [201, 255],
+          "dmxRange": [
+            201,
+            255
+          ],
           "type": "Effect",
           "effectName": "Sound Control",
           "soundControlled": true
@@ -120,6 +157,156 @@
         "speedStart": "slow",
         "speedEnd": "fast"
       }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "ColorMix": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physical": 1,
+          "comment": "Colour Jump"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physical": 2,
+          "comment": "Colour Gradient"
+        },
+        {
+          "dmxRange": [
+            151,
+            199
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physical": 3,
+          "comment": "Colour Pulse"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Unknown (COLOURMIXAUDIOSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Unknown (COLOURMIXAUDIOSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound Control"
+        }
+      ]
+    },
+    "ColorMixMacroRate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (COLORMIXMACRORATE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Macro Rate"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (COLORMIXMACRORATE)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (COLORMIXMACRORATE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Macro Rate"
+        }
+      ]
     }
   },
   "modes": [
@@ -154,5 +341,18 @@
   ],
   "fixtureKey": "led-flat-par-18x18w",
   "manufacturerKey": "shehds",
-  "oflURL": "https://open-fixture-library.org/shehds/led-flat-par-18x18w"
+  "oflURL": "https://open-fixture-library.org/shehds/led-flat-par-18x18w",
+  "gwFixtureTypeID": "D78DDB27-9C31-46DA-91FC-38ADEF6B3A4D",
+  "gwSpecs": {
+    "description": "Shehds LED Flat Par 18x18W",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-25T01:46:31",
+      "text": "Added both fixture modes 10ch (a) and 6ch (d).  MA3D Strobe Hz   Capture validated., Uploaded to GDTF Share."
+    }
+  }
 }

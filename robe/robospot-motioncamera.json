@@ -1,0 +1,251 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RoboSpot MotionCamera",
+  "shortName": "MotionCamera",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-01-23",
+    "lastModifyDate": "2024-06-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 161BB73E-9F90-4768-B56E-F44467FD02D7"
+    }
+  },
+  "comment": "RoboSpot™ MotionCamera: The RoboSpot MotionCamera is a revolutionary moving head fixture featuring an integrated HD camera remotely controlled via DMX to pan, tilt, zoom and autofocus.\nFeaturing a full HD camera with high light sensitivity capabilities down to 0.3 Lux illumination levels, the fixture provides a “first person view” for the followspot operator to track the performer across the stage. Video signals are instantly transferred to the RoboSpot BaseStation via a high-speed Ethernet cat5 cable.",
+  "rdm": {
+    "modelId": 231,
+    "softwareVersion": "0x1"
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Standard mode"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            20,
+            24
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 0,
+          "comment": "Display ON"
+        },
+        {
+          "dmxRange": [
+            25,
+            29
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physical": 1,
+          "comment": "Display OFF"
+        },
+        {
+          "dmxRange": [
+            30,
+            34
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pan/Tilt speed mode"
+        },
+        {
+          "dmxRange": [
+            35,
+            49
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pan/Tilt time mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan/Tilt reset"
+        }
+      ]
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 2": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - standard",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1",
+        "NoFeature",
+        "NoFeature 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      94,
+      244,
+      276
+    ],
+    "weight": 5.7
+  },
+  "gwSpecs": {
+    "description": "The RoboSpot MotionCamera is a revolutionary moving head fixture featuring an integrated HD camera remotely controlled via DMX to pan, tilt, zoom and autofocus.\nFeaturing a full HD camera with high light sensitivity capabilities down to 0.3 Lux illumination levels, the fixture provides a “first person view” for the followspot operator to track the performer across the stage. Video signals are instantly transferred to the RoboSpot BaseStation via a high-speed Ethernet cat5 cable.",
+    "operatingTemperature": [
+      -5,
+      45
+    ],
+    "revision": {
+      "date": "2024-06-14T10:09:06",
+      "text": "2024-06-14  3D models revision"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4e4e5b41797cf3e0"
+  },
+  "manufacturerKey": "robe",
+  "fixtureKey": "robospot-motioncamera",
+  "gwFixtureTypeID": "161BB73E-9F90-4768-B56E-F44467FD02D7"
+}

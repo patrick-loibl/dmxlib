@@ -1,0 +1,502 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ELP CL LED Profile",
+  "shortName": "ELP CL",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-09-08",
+    "lastModifyDate": "2025-01-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BA3195DE-D4D1-40C0-97E4-53F7C464C786"
+    }
+  },
+  "comment": "Martin ELP CL LED Profile: Elipsoid Profile RGBLA",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Blackout"
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            20,
+            89
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe (0-10hz)"
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            100,
+            169
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Pulse sequences"
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            180,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random Strobe (Slow-Fast)"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min Time"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max Time"
+        }
+      ]
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Lime": {
+      "fineChannelAliases": [
+        "Lime fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "Amber": {
+      "fineChannelAliases": [
+        "Amber fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "2000K-2700K"
+        },
+        {
+          "dmxRange": [
+            20,
+            28
+          ],
+          "type": "ColorPreset",
+          "comment": "2700K-3200K"
+        },
+        {
+          "dmxRange": [
+            29,
+            37
+          ],
+          "type": "ColorPreset",
+          "comment": "3200K-4200K"
+        },
+        {
+          "dmxRange": [
+            38,
+            46
+          ],
+          "type": "ColorPreset",
+          "comment": "4200K-5600K"
+        },
+        {
+          "dmxRange": [
+            47,
+            55
+          ],
+          "type": "ColorPreset",
+          "comment": "5600K-8000K"
+        },
+        {
+          "dmxRange": [
+            56,
+            65
+          ],
+          "type": "ColorPreset",
+          "comment": "8000K-10000K"
+        },
+        {
+          "dmxRange": [
+            66,
+            74
+          ],
+          "type": "ColorPreset",
+          "comment": "Light Pink"
+        },
+        {
+          "dmxRange": [
+            75,
+            84
+          ],
+          "type": "ColorPreset",
+          "comment": "Pale Amber Gold"
+        },
+        {
+          "dmxRange": [
+            85,
+            93
+          ],
+          "type": "ColorPreset",
+          "comment": "Yellow"
+        },
+        {
+          "dmxRange": [
+            94,
+            103
+          ],
+          "type": "ColorPreset",
+          "comment": "Deep Straw"
+        },
+        {
+          "dmxRange": [
+            104,
+            112
+          ],
+          "type": "ColorPreset",
+          "comment": "Deep Amber"
+        },
+        {
+          "dmxRange": [
+            113,
+            122
+          ],
+          "type": "ColorPreset",
+          "comment": "Orange"
+        },
+        {
+          "dmxRange": [
+            123,
+            131
+          ],
+          "type": "ColorPreset",
+          "comment": "Primary Red"
+        },
+        {
+          "dmxRange": [
+            132,
+            141
+          ],
+          "type": "ColorPreset",
+          "comment": "Medium Pink"
+        },
+        {
+          "dmxRange": [
+            142,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Dark Pink"
+        },
+        {
+          "dmxRange": [
+            151,
+            160
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            161,
+            169
+          ],
+          "type": "ColorPreset",
+          "comment": "Medium Purple"
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "ColorPreset",
+          "comment": "Dark Lavender"
+        },
+        {
+          "dmxRange": [
+            180,
+            188
+          ],
+          "type": "ColorPreset",
+          "comment": "Deep Purple"
+        },
+        {
+          "dmxRange": [
+            189,
+            198
+          ],
+          "type": "ColorPreset",
+          "comment": "Sky Blue"
+        },
+        {
+          "dmxRange": [
+            199,
+            207
+          ],
+          "type": "ColorPreset",
+          "comment": "Light Blue"
+        },
+        {
+          "dmxRange": [
+            208,
+            217
+          ],
+          "type": "ColorPreset",
+          "comment": "Medium Blue"
+        },
+        {
+          "dmxRange": [
+            218,
+            226
+          ],
+          "type": "ColorPreset",
+          "comment": "Deep Blue"
+        },
+        {
+          "dmxRange": [
+            227,
+            236
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue Green"
+        },
+        {
+          "dmxRange": [
+            237,
+            245
+          ],
+          "type": "ColorPreset",
+          "comment": "Moss Green"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Primary Green"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "10 Channel",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "Intensity MSpeed",
+        "CTC",
+        "R",
+        "G",
+        "B",
+        "Lime",
+        "Amber",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "17 Channel",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "Dim fine",
+        "Intensity MSpeed",
+        "CTC",
+        "CTC fine",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Lime",
+        "Lime fine",
+        "Amber",
+        "Amber fine",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "5 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Lime",
+        "Amber"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      200,
+      700
+    ]
+  },
+  "gwSpecs": {
+    "description": "Elipsoid Profile RGBLA",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-01-22T00:42:50",
+      "text": "ELP CL with working Modes"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "martin",
+  "fixtureKey": "elp-cl-led-profile",
+  "gwFixtureTypeID": "BA3195DE-D4D1-40C0-97E4-53F7C464C786"
+}

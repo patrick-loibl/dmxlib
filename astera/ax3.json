@@ -1,0 +1,253 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "AX3",
+  "shortName": "AX3",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "19D06EB0-2614-4CFC-9E8B-CF2C60D6B4C6"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      48,
+      58,
+      61
+    ],
+    "weight": 0.68,
+    "power": 15,
+    "bulb": {
+      "type": "LED",
+      "lumens": 430,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        13.0,
+        15.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam 1 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam 1 ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam 1 ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam 1 ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam 1 ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Beam 1 Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            7,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Beam 1 CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Beam 1 Tint": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Beam 1 color XF": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Generic",
+          "comment": "White/Color XF"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - 1Pix RGB Strob OFF",
+      "shortName": "Mode 1 - 1Pi",
+      "channels": [
+        "Beam 1 ColorAdd_R",
+        "Beam 1 ColorAdd_G",
+        "Beam 1 ColorAdd_B"
+      ]
+    },
+    {
+      "name": "Mode 2 - 1Pix RGBW Strob OFF",
+      "shortName": "Mode 2 - 1Pi",
+      "channels": [
+        "Beam 1 ColorAdd_R",
+        "Beam 1 ColorAdd_G",
+        "Beam 1 ColorAdd_B",
+        "Beam 1 ColorAdd_W"
+      ]
+    },
+    {
+      "name": "Mode 8 - 1Pix RGBS",
+      "shortName": "Mode 8 - 1Pi",
+      "channels": [
+        "Beam 1 ColorAdd_R",
+        "Beam 1 ColorAdd_G",
+        "Beam 1 ColorAdd_B",
+        "Beam 1 Shutter1"
+      ]
+    },
+    {
+      "name": "Mode 9 - 1Pix RGBWS",
+      "shortName": "Mode 9 - 1Pi",
+      "channels": [
+        "Beam 1 ColorAdd_R",
+        "Beam 1 ColorAdd_G",
+        "Beam 1 ColorAdd_B",
+        "Beam 1 ColorAdd_W",
+        "Beam 1 Shutter1"
+      ]
+    },
+    {
+      "name": "Mode 94 - 1Pix D CCT GM CRO RGB S",
+      "shortName": "Mode 94 - 1P",
+      "channels": [
+        "Beam 1 Dimmer",
+        "Beam 1 CTC",
+        "Beam 1 Tint",
+        "Beam 1 color XF",
+        "Beam 1 ColorAdd_R",
+        "Beam 1 ColorAdd_G",
+        "Beam 1 ColorAdd_B",
+        "Beam 1 Shutter1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "W",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-07-01T00:17:47",
+      "text": "V1.2"
+    }
+  },
+  "manufacturerKey": "astera",
+  "fixtureKey": "ax3",
+  "gwFixtureTypeID": "19D06EB0-2614-4CFC-9E8B-CF2C60D6B4C6"
+}

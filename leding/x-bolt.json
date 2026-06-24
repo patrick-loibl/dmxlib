@@ -1,0 +1,386 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "X-Bolt",
+  "shortName": "X-Bolt",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-10-30",
+    "lastModifyDate": "2024-10-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EA0F06FE-A456-1004-A085-25715795C873"
+    }
+  },
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            239
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            240,
+            240
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        },
+        {
+          "dmxRange": [
+            241,
+            241
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "min random"
+        },
+        {
+          "dmxRange": [
+            242,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "max random"
+        }
+      ]
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "COLORMIXMACRO": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            35
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            36,
+            41
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Tungsten"
+        },
+        {
+          "dmxRange": [
+            42,
+            71
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse up"
+        },
+        {
+          "dmxRange": [
+            72,
+            107
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse down"
+        },
+        {
+          "dmxRange": [
+            108,
+            143
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pulse"
+        },
+        {
+          "dmxRange": [
+            144,
+            215
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color chase"
+        },
+        {
+          "dmxRange": [
+            216,
+            255
+          ],
+          "type": "Unknown (COLORMIXMACROSELECT)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Random"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "linear"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "square"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "inv square"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-curve"
+        }
+      ]
+    },
+    "Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Unknown (DIMMERSPEED)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (DIMMERSPEED)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "tungsten"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Ch",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3 Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "9 Ch",
+      "channels": [
+        "Dim",
+        "Amber"
+      ]
+    },
+    {
+      "name": "13 Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "COLORMIXMACRO",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "14 Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "COLORMIXMACRO",
+        "Dim Curve",
+        "Speed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      345,
+      169,
+      345
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-30T16:46:25",
+      "text": "v001"
+    }
+  },
+  "manufacturerKey": "leding",
+  "fixtureKey": "x-bolt",
+  "gwFixtureTypeID": "EA0F06FE-A456-1004-A085-25715795C873"
+}

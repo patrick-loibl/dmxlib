@@ -1,0 +1,238 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BLINDER 200",
+  "shortName": "BLINDER 200",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-25",
+    "lastModifyDate": "2025-07-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6C6B30EB-EE66-42A0-9F03-6C36991ABBE2"
+    }
+  },
+  "comment": "BLINDER 2X100W WW: Introducing the BLINDER 200 WW, a versatile lighting fixture with two 100W warm white LED lamps. With its ultra-smooth dimming and intuitive DMX control, it empowers users to create stunning lighting effects with ease. Whether in 2 or 6-channel mode, it adapts seamlessly to various configurations. Built with durable iron shell protection and efficient fan control, it guarantees reliability and endurance, making it the ideal choice for dynamic lighting installations.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            3,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "Empty Channel Set"
+        },
+        {
+          "dmxRange": [
+            6,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Jump"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Gradient"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Pulse Changes"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound Mode"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8CH Standard Mode",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G"
+      ]
+    },
+    {
+      "name": "2CH Basic Mode",
+      "channels": [
+        "R",
+        "G"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      90,
+      320,
+      155
+    ],
+    "weight": 10.2,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 25000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Led1",
+      "cie": "0.367500,0.386000,100.000000",
+      "hex": "#fffdbf"
+    },
+    {
+      "name": "Led2",
+      "cie": "0.367500,0.386000,100.000000",
+      "hex": "#fffdbf"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Introducing the BLINDER 200 WW, a versatile lighting fixture with two 100W warm white LED lamps. With its ultra-smooth dimming and intuitive DMX control, it empowers users to create stunning lighting effects with ease. Whether in 2 or 6-channel mode, it adapts seamlessly to various configurations. Built with durable iron shell protection and efficient fan control, it guarantees reliability and endurance, making it the ideal choice for dynamic lighting installations.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-25T08:20:27",
+      "text": "Ver1_07_25"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a1439b9208ef45d2"
+  },
+  "manufacturerKey": "elite-prolight",
+  "fixtureKey": "blinder-200",
+  "gwFixtureTypeID": "6C6B30EB-EE66-42A0-9F03-6C36991ABBE2"
+}

@@ -1,0 +1,566 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Mini 7x40W",
+  "shortName": "BeamWashBBE",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "E621529A-6354-450D-8858-3EB586822E9F"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      200,
+      210,
+      200
+    ],
+    "weight": 13.0,
+    "power": 480,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5600,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "wheels": {
+    "Color1": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Black"
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#ff0000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00ff00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000ff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cyan",
+          "colors": [
+            "#00ffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#ffff00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#ff00ff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#fffbff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Warm White",
+          "colors": [
+            "#ffcfcf"
+          ]
+        }
+      ]
+    },
+    "Prisma": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Base PositionMSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Speed"
+        }
+      ]
+    },
+    "Head Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Zoom"
+        }
+      ]
+    },
+    "Beam Prism1PosRotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "PrismRotation"
+        }
+      ]
+    },
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            104,
+            107
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            108,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            208,
+            212
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            213,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Beam ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Beam CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "NoFunction",
+          "comment": "CTC 1"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorTemperature"
+        }
+      ]
+    },
+    "Beam Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    },
+    "Beam Effects2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Effects2 1"
+        }
+      ]
+    },
+    "Beam Effects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Effect",
+          "comment": "Effects1 1"
+        }
+      ]
+    },
+    "Beam Effects1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "Background Color ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Background Color ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Background Color ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Background Color ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Base Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            249
+          ],
+          "type": "Maintenance",
+          "comment": "Control1 1"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "FixtureGlobalReset 2"
+        }
+      ]
+    },
+    "Background Color Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam Effects1Fade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectDuration"
+        }
+      ]
+    },
+    "Beam Effects1Pos": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectParameter"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "23 CH",
+      "shortName": "23 CH",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Base PositionMSpeed",
+        "Head Zoom",
+        "Beam Prism1PosRotate",
+        "Beam Dimmer",
+        "Beam Shutter1",
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_W",
+        "Beam CTC",
+        "Beam Color1",
+        "Beam Effects2",
+        "Beam Effects1",
+        "Beam Effects1Rate",
+        "Background Color ColorAdd_R",
+        "Background Color ColorAdd_G",
+        "Background Color ColorAdd_B",
+        "Background Color ColorAdd_W",
+        "Base Control1"
+      ]
+    },
+    {
+      "name": "25 CH 1",
+      "shortName": "25 CH 1",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Base PositionMSpeed",
+        "Head Zoom",
+        "Beam Prism1PosRotate",
+        "Beam Dimmer",
+        "Beam Shutter1",
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_W",
+        "Beam CTC",
+        "Beam Color1",
+        "Beam Effects1Fade",
+        "Beam Effects1Pos",
+        "Beam Effects2",
+        "Beam Effects1",
+        "Beam Effects1Rate",
+        "Background Color ColorAdd_R",
+        "Background Color ColorAdd_G",
+        "Background Color ColorAdd_B",
+        "Background Color ColorAdd_W",
+        "Base Control1",
+        "Background Color Dimmer"
+      ]
+    }
+  ],
+  "gwDmxProfiles": [
+    {
+      "name": "DMX Inverted",
+      "points": [
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "0.000000",
+          "CFC1": "0.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        },
+        {
+          "DMXPercentage": "0.000000",
+          "CFC0": "100.000000",
+          "CFC1": "-100.000000",
+          "CFC2": "0.000000",
+          "CFC3": "0.000000"
+        }
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "7x40W LED Beam/Wash Fixture - DMX 21/25/110ch",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2024-10-13T20:06:35",
+      "text": "0001"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2d3b5d2bb178ac08"
+  },
+  "manufacturerKey": "homeilight",
+  "fixtureKey": "mini-7x40w",
+  "gwFixtureTypeID": "E621529A-6354-450D-8858-3EB586822E9F"
+}

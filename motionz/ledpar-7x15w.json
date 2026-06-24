@@ -1,0 +1,290 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Ledpar 7x15W",
+  "shortName": "PAR7-15",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-10-17",
+    "lastModifyDate": "2025-10-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DFB0DF30-FA15-4369-88C2-62F2F6BD92A2"
+    }
+  },
+  "comment": "Ledpar 7x15W RGBWAUV 6in1 IP65: Ledpar , 7x15W RGBWAUV 6in1, IP65 with seetronic ip connecters, power consumption: 120W, beam angle: 25°, control modes:DMX 6/10chs - master/slave - stand alone - soundactive, LEDdisplay, black clamp included",
+  "wheels": {
+    "color macro": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "color macro 1",
+          "colors": [
+            "#da000d"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "color macro 2",
+          "colors": [
+            "#00830f"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "color macro 3",
+          "colors": [
+            "#0018a5"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "color macro 4",
+          "colors": [
+            "#dee5e2"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "color macro 5",
+          "colors": [
+            "#d5a21b"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "color macro 6",
+          "colors": [
+            "#584b81"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "color pulse",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "color fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "color mix change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound control",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6 Channels (D-mode)",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "10 Channels (A-mode)",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV",
+        "Sh1",
+        "FX1",
+        "Color Mix MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      210,
+      100,
+      210
+    ],
+    "weight": 4.5,
+    "power": 120,
+    "bulb": {
+      "type": "620nm / 530nm / 460nm / 420nm / 590nm / 415nm LED"
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        30.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.642700,0.330900,100.000000",
+      "hex": "#ff0000",
+      "dominantWavelength": 620.0
+    },
+    {
+      "name": "Green",
+      "cie": "0.297700,0.605000,100.000000",
+      "hex": "#00ff00",
+      "dominantWavelength": 530.0
+    },
+    {
+      "name": "Blue",
+      "cie": "0.149600,0.060990,100.000000",
+      "hex": "#0036ff",
+      "dominantWavelength": 460.0
+    },
+    {
+      "name": "white",
+      "cie": "0.310900,0.330900,100.000000",
+      "hex": "#fbfffe",
+      "dominantWavelength": 420.0
+    },
+    {
+      "name": "Amber",
+      "cie": "0.473200,0.462500,50.000000",
+      "hex": "#eeb200",
+      "dominantWavelength": 590.0
+    },
+    {
+      "name": "UV",
+      "cie": "0.250000,0.190000,9.330000",
+      "hex": "#604990",
+      "dominantWavelength": 415.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Ledpar , 7x15W RGBWAUV 6in1, IP65 with seetronic ip connecters, power consumption: 120W, beam angle: 25°, control modes:DMX 6/10chs - master/slave - stand alone - soundactive, LEDdisplay, black clamp included",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-17T09:12:24",
+      "text": "0100"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9b532e1b99a275b6"
+  },
+  "manufacturerKey": "motionz",
+  "fixtureKey": "ledpar-7x15w",
+  "gwFixtureTypeID": "DFB0DF30-FA15-4369-88C2-62F2F6BD92A2"
+}

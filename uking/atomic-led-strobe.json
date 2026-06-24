@@ -1,0 +1,1872 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Atomic Led Strobe",
+  "shortName": "ZQ06121",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-07-10",
+    "lastModifyDate": "2026-03-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9EC4F5D3-6E69-4562-9A8D-8E97CA4FD088"
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        }
+      ]
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Anim FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "OFF",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "Effect",
+          "effectName": "Breathing",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            12,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Jump",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Pulse",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            34
+          ],
+          "type": "Effect",
+          "effectName": "Sinus 1 >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            35,
+            36
+          ],
+          "type": "Effect",
+          "effectName": "Sinus 1 <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            37,
+            38
+          ],
+          "type": "Effect",
+          "effectName": "Sinus 2 ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Sinus 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            42
+          ],
+          "type": "Effect",
+          "effectName": "Sinus fade >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            43,
+            44
+          ],
+          "type": "Effect",
+          "effectName": "Sinus fade <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            45,
+            46
+          ],
+          "type": "Effect",
+          "effectName": "Sinus 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            47,
+            48
+          ],
+          "type": "Effect",
+          "effectName": "Mountains",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            49,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Mountains big",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            52
+          ],
+          "type": "Effect",
+          "effectName": "Cars",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            53,
+            54
+          ],
+          "type": "Effect",
+          "effectName": "Waves 1 >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            55,
+            56
+          ],
+          "type": "Effect",
+          "effectName": "Waves 2 >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            57,
+            58
+          ],
+          "type": "Effect",
+          "effectName": "Waves 3 >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            59,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Waves 3 <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            62
+          ],
+          "type": "Effect",
+          "effectName": "Waves 2 <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "Effect",
+          "effectName": "Waves 1 <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            65,
+            66
+          ],
+          "type": "Effect",
+          "effectName": "Segments V 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            67,
+            68
+          ],
+          "type": "Effect",
+          "effectName": "Segmentr V 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            69,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Segments H 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            72
+          ],
+          "type": "Effect",
+          "effectName": "Feel 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            73,
+            74
+          ],
+          "type": "Effect",
+          "effectName": "In Out ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            76
+          ],
+          "type": "Effect",
+          "effectName": "Bounce TW",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            77,
+            78
+          ],
+          "type": "Effect",
+          "effectName": "TW W",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            79,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "TW V",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            82
+          ],
+          "type": "Effect",
+          "effectName": "TW H",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            83,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "TW S",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            86
+          ],
+          "type": "Effect",
+          "effectName": "TW B",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            87,
+            88
+          ],
+          "type": "Effect",
+          "effectName": "TW C",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            89,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "TW Z",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            92
+          ],
+          "type": "Effect",
+          "effectName": "TW Fill",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            93,
+            94
+          ],
+          "type": "Effect",
+          "effectName": "Soft >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            95,
+            96
+          ],
+          "type": "Effect",
+          "effectName": "Soft <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            97,
+            98
+          ],
+          "type": "Effect",
+          "effectName": "Soft <>",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            99,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Rain >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            102
+          ],
+          "type": "Effect",
+          "effectName": "Rain <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            103,
+            104
+          ],
+          "type": "Effect",
+          "effectName": "Zig zag V",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            105,
+            106
+          ],
+          "type": "Effect",
+          "effectName": "Zig zag H >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            107,
+            108
+          ],
+          "type": "Effect",
+          "effectName": "Zig zag H <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            109,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Flare bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            111,
+            112
+          ],
+          "type": "Effect",
+          "effectName": "Soft in",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            113,
+            114
+          ],
+          "type": "Effect",
+          "effectName": "Fill unfill",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            115,
+            116
+          ],
+          "type": "Effect",
+          "effectName": "TW Bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            117,
+            118
+          ],
+          "type": "Effect",
+          "effectName": "Th Bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Line Down",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            122
+          ],
+          "type": "Effect",
+          "effectName": "Line Cent",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            123,
+            124
+          ],
+          "type": "Effect",
+          "effectName": "Line ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            125,
+            126
+          ],
+          "type": "Effect",
+          "effectName": "Line zig",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "Line zag",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            129,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Block circle",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            132
+          ],
+          "type": "Effect",
+          "effectName": "Block down",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            133,
+            134
+          ],
+          "type": "Effect",
+          "effectName": "Block bounce 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            135,
+            136
+          ],
+          "type": "Effect",
+          "effectName": "Block bounce 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            137,
+            138
+          ],
+          "type": "Effect",
+          "effectName": "Brick bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            139,
+            140
+          ],
+          "type": "Effect",
+          "effectName": "Line bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            142
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            143,
+            144
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            145,
+            146
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            147,
+            148
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            149,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            152
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            153,
+            154
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            155,
+            156
+          ],
+          "type": "Effect",
+          "effectName": "Soft > lines ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            157,
+            158
+          ],
+          "type": "Effect",
+          "effectName": "Soft < lines",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Soft zig >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            162
+          ],
+          "type": "Effect",
+          "effectName": "Soft zig <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            163,
+            164
+          ],
+          "type": "Effect",
+          "effectName": "Soft zig",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            165,
+            166
+          ],
+          "type": "Effect",
+          "effectName": "Soft zig tw",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            167,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "Block c >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            169,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Block c <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            172
+          ],
+          "type": "Effect",
+          "effectName": "Drop >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            173,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "Drop <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            176
+          ],
+          "type": "Effect",
+          "effectName": "Fan >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            177,
+            178
+          ],
+          "type": "Effect",
+          "effectName": "Fan <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "Fill B",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            182
+          ],
+          "type": "Effect",
+          "effectName": "Bounce brick",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            183,
+            184
+          ],
+          "type": "Effect",
+          "effectName": "Bounce 2B",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            185,
+            186
+          ],
+          "type": "Effect",
+          "effectName": "Brick fill ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            187,
+            188
+          ],
+          "type": "Effect",
+          "effectName": "Brick RGB",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Scroll RGB",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            192
+          ],
+          "type": "Effect",
+          "effectName": "Circle out",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            193,
+            194
+          ],
+          "type": "Effect",
+          "effectName": "Circle in",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            195,
+            196
+          ],
+          "type": "Effect",
+          "effectName": "Circle bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            197,
+            198
+          ],
+          "type": "Effect",
+          "effectName": "Circle RGB >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            199,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Circle RGB <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            202
+          ],
+          "type": "Effect",
+          "effectName": "Circle RGB Bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            203,
+            204
+          ],
+          "type": "Effect",
+          "effectName": "Numbers",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            205,
+            229
+          ],
+          "type": "Effect",
+          "effectName": "Gradient",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            230,
+            233
+          ],
+          "type": "Effect",
+          "effectName": "Auto",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            234,
+            237
+          ],
+          "type": "Effect",
+          "effectName": "Sound 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            238,
+            241
+          ],
+          "type": "Effect",
+          "effectName": "Sound 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            242,
+            245
+          ],
+          "type": "Effect",
+          "effectName": "Sound 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            246,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "Sound 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ColorPreset",
+          "comment": "RED"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ColorPreset",
+          "comment": "GREEN"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ColorPreset",
+          "comment": "BLUE"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ColorPreset",
+          "comment": "YELLOW"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ColorPreset",
+          "comment": "PURPLE"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ColorPreset",
+          "comment": "CYAN"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "WHITE"
+        }
+      ]
+    },
+    "Strobe1 2": {
+      "name": "Strobe1",
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Anim FX 2": {
+      "name": "Anim FX",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "OFF",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Auto",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Static",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Pulse",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Soft bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Soft >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Soft <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Soft ><",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Soft <>",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Block >",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Block <",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            106,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            111,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            116,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            140
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            145
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            146,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            155
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            156,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            166,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Tik tak 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "Tik tak 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            185
+          ],
+          "type": "Effect",
+          "effectName": "Line bounce 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            186,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Line bounce 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "Line bounce 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            196,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Line bounce 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "Line bounce 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            206,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "Soft bounce",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            211,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Soft B out",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate 2": {
+      "name": "FX1 Rate",
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min Strobe"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max Strobe"
+        }
+      ]
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim"
+      ]
+    },
+    {
+      "name": "6CH",
+      "channels": [
+        "Dim 4",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "Dim 5"
+      ]
+    },
+    {
+      "name": "12CH",
+      "channels": [
+        "Dim 4",
+        "Strobe1",
+        "Anim FX",
+        "FX1 Rate",
+        "Color Macro1",
+        "Strobe1 2",
+        "Anim FX 2",
+        "FX1 Rate 2",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White"
+      ]
+    },
+    {
+      "name": "144CH",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "154CH",
+      "channels": [
+        "Dim 5",
+        "Sh1 2",
+        "R",
+        "G",
+        "B",
+        "Dim 7"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      203,
+      229,
+      410
+    ],
+    "weight": 3.7,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-29T19:10:44",
+      "text": "Rev 2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7db68bf7f1609daa"
+  },
+  "manufacturerKey": "uking",
+  "fixtureKey": "atomic-led-strobe",
+  "gwFixtureTypeID": "9EC4F5D3-6E69-4562-9A8D-8E97CA4FD088"
+}

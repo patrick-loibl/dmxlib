@@ -1,0 +1,867 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MBAR 3230 R LASER MKII",
+  "shortName": "MBAR3230II",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-28",
+    "lastModifyDate": "2025-11-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D0B51B1E-4DD1-493D-A167-DAA633A9F6F9"
+    }
+  },
+  "comment": "MBAR 3230 R LASER MK II es una barra de iluminación que incluye 6 LEDs de 3W de color blanco cálido (3200 ºK) y 7 LASERs de color rojo. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como los 9 programas de LED y los 8 de LASER que pueden ejecutarse automáticamente o mediante audio. Incluye el control del movimiento de la barra sobre su eje TILT y modo DMX (6/7/16/18/21 canales) con nivel de dimerización individual de cada LED o LASER, y la activación de los programas tanto automáticos como de audio. Su base permite colocar la barra en paredes y techo, o incluso en el suelo, y dirigir el haz al lugar deseado aprovechando los 7° de ángulo de apertura.",
+  "availableChannels": {
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Close",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Head 6+7_Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            10,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "LED + Laser Mode",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Head 6+7_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            40,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "Laser Mode",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            70,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "LED Mode",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            100,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "Auto Mode",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            130,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "Sound Laser",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            160,
+            189
+          ],
+          "type": "Effect",
+          "effectName": "Sound LED",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            190,
+            209
+          ],
+          "type": "Effect",
+          "effectName": "Sound LED + Laser",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            210,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mixed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "NoFunction",
+        "comment": "Blackout"
+      }
+    },
+    "FX1 Rate 2": {
+      "name": "FX1 Rate",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 2"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 3"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 4"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 5"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 6"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 7"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 8"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 9"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 10"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser LED Chase 11"
+        }
+      ]
+    },
+    "FX1 Rate 3": {
+      "name": "FX1 Rate",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            39
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser Chase 1"
+        },
+        {
+          "dmxRange": [
+            40,
+            79
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser Chase 2"
+        },
+        {
+          "dmxRange": [
+            80,
+            119
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser Chase 3"
+        },
+        {
+          "dmxRange": [
+            120,
+            159
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser Chase 4"
+        },
+        {
+          "dmxRange": [
+            160,
+            199
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser Chase 5"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Laser Chase 6"
+        }
+      ]
+    },
+    "FX1 Rate 4": {
+      "name": "FX1 Rate",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            39
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 1"
+        },
+        {
+          "dmxRange": [
+            40,
+            79
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 2"
+        },
+        {
+          "dmxRange": [
+            80,
+            119
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 3"
+        },
+        {
+          "dmxRange": [
+            120,
+            159
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 4"
+        },
+        {
+          "dmxRange": [
+            160,
+            199
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 5"
+        },
+        {
+          "dmxRange": [
+            200,
+            239
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 6"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "LED Chase 7"
+        }
+      ]
+    },
+    "FX1 Fade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Mode Speed S > F"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            32638
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Tilt"
+        },
+        {
+          "dmxRange": [
+            32639,
+            32639
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32640,
+            64254
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Tilt"
+        },
+        {
+          "dmxRange": [
+            64255,
+            64255
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            64256,
+            65535
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm",
+          "comment": "Tilt Rotate"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Stop Tilt"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Speed S > F"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimmer"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            4,
+            248
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        },
+        {
+          "dmxRange": [
+            249,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Sound Strobe"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimmer"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe1 2": {
+      "name": "Strobe1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            4,
+            248
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        },
+        {
+          "dmxRange": [
+            249,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Sound Strobe"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6 CHANNELS",
+      "channels": [
+        "FX1",
+        "0_Head 6+7_Effects1Rate",
+        "FX1 Fade",
+        "T",
+        "T fine",
+        "Pos MSpeed"
+      ]
+    },
+    {
+      "name": "7 CHANNELS",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "Dim 2",
+        "Strobe1 2",
+        "T",
+        "T fine",
+        "Pos MSpeed"
+      ]
+    },
+    {
+      "name": "16 CHANNELS",
+      "channels": [
+        "Dim 3",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 4",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "T",
+        "T fine",
+        "Pos MSpeed"
+      ]
+    },
+    {
+      "name": "18 CHANNELS",
+      "channels": [
+        "Dim 3",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe1",
+        "Dim 4",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe1 2",
+        "T",
+        "T fine",
+        "Pos MSpeed"
+      ]
+    },
+    {
+      "name": "21 CHANNELS",
+      "channels": [
+        "Dim 3",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe1",
+        "Dim 4",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Strobe1 2",
+        "FX1",
+        "0_Head 6+7_Effects1Rate",
+        "FX1 Fade",
+        "T",
+        "T fine",
+        "Pos MSpeed"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      131,
+      245,
+      1000
+    ],
+    "weight": 5.5,
+    "bulb": {
+      "type": "LED"
+    }
+  },
+  "gwSpecs": {
+    "description": "MBAR 3230 R LASER MK II es una barra de iluminación que incluye 6 LEDs de 3W de color blanco cálido (3200 ºK) y 7 LASERs de color rojo. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como los 9 programas de LED y los 8 de LASER que pueden ejecutarse automáticamente o mediante audio. Incluye el control del movimiento de la barra sobre su eje TILT y modo DMX (6/7/16/18/21 canales) con nivel de dimerización individual de cada LED o LASER, y la activación de los programas tanto automáticos como de audio. Su base permite colocar la barra en paredes y techo, o incluso en el suelo, y dirigir el haz al lugar deseado aprovechando los 7° de ángulo de apertura.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-21T09:54:52",
+      "text": "Version_2_6"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "da2ac1e437fe2536"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "mbar-3230-r-laser-mkii",
+  "gwFixtureTypeID": "D0B51B1E-4DD1-493D-A167-DAA633A9F6F9"
+}

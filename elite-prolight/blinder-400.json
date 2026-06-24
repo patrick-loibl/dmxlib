@@ -1,0 +1,266 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BLINDER 400",
+  "shortName": "BLINDER 400",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-25",
+    "lastModifyDate": "2025-07-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5012F544-69BF-4FAE-A705-99C6BB823D08"
+    }
+  },
+  "comment": "BLINDER 4X100W WW: Discover the BLINDER 400 WW, an epitome of luminosity with its four 100W warm white LED lamps. Offering precise dimming and flexible DMX control, it empowers creators to craft mesmerizing lighting displays. With options for 4 or 8 DMX channels, it adapts effortlessly to diverse setups. Engineered with robust iron shell protection and efficient fan control, it guarantees reliability and durability, setting the stage for unforgettable visual experiences.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            3,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "slow to fast"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max strobe"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "Empty Channel Set"
+        },
+        {
+          "dmxRange": [
+            6,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Jump"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Gradient"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ColorPreset",
+          "comment": "Pulse Changes"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound Mode"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8CH Standard Mode",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "4CH Basic Mode",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      40,
+      370,
+      350
+    ],
+    "weight": 10.2,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 25000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Led1",
+      "cie": "0.367500,0.386000,100.000000",
+      "hex": "#fffdbf"
+    },
+    {
+      "name": "Led2",
+      "cie": "0.367500,0.386000,100.000000",
+      "hex": "#fffdbf"
+    },
+    {
+      "name": "Led3",
+      "cie": "0.367500,0.386000,100.000000",
+      "hex": "#fffdbf"
+    },
+    {
+      "name": "Led4",
+      "cie": "0.367500,0.386000,100.000000",
+      "hex": "#fffdbf"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Discover the BLINDER 400 WW, an epitome of luminosity with its four 100W warm white LED lamps. Offering precise dimming and flexible DMX control, it empowers creators to craft mesmerizing lighting displays. With options for 4 or 8 DMX channels, it adapts effortlessly to diverse setups. Engineered with robust iron shell protection and efficient fan control, it guarantees reliability and durability, setting the stage for unforgettable visual experiences.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-25T08:04:47",
+      "text": "Ver1_07_25_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "01d160d396e51b51"
+  },
+  "manufacturerKey": "elite-prolight",
+  "fixtureKey": "blinder-400",
+  "gwFixtureTypeID": "5012F544-69BF-4FAE-A705-99C6BB823D08"
+}

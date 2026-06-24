@@ -1,0 +1,650 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Core AMY",
+  "shortName": "Amy",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-12-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2508FBCA-0265-46A1-AD0B-CFB26379B4C9"
+    }
+  },
+  "comment": "Core AMY 365 LED: Technical parameters:\nRated voltage 100~240V\nRated frequency 50/60Hz\nPower 180W\nLED 5W Cree Chip LEDs\nLED lifespan 50,000hours\nLED quantity 12 Red +12 Green +12 Blue\nColor mixing Red 0~255! Green 0~255! Blue 0~255\nEffect: strobe, fade, color wheel\nBeam angle 8°\nRotation Angle Pan 540°/630″ , Tilt 240″ ,self-correcting\nChannel quantity 7! 8! 9! 12\nControl mode DMX512! Master/slave! Sound active\nProtection grade IP20\nWorking environment: indoor\nEnvironment temperature -30~+40#\nSize L242*W130*H289mm\nWeight 3.6kg",
+  "wheels": {
+    "NewWheel": {
+      "slots": []
+    }
+  },
+  "availableChannels": {
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe (Slow to Fast)"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            44903
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            44904,
+            44904
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            44905,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            14
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset Entire Fixture"
+        },
+        {
+          "dmxRange": [
+            15,
+            39
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            44
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            45,
+            49
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            50,
+            54
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            55,
+            59
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            64
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full"
+        },
+        {
+          "dmxRange": [
+            65,
+            69
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            74
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Regulated"
+        },
+        {
+          "dmxRange": [
+            75,
+            89
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            90,
+            94
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RGB control mode (calibrated RGB)"
+        },
+        {
+          "dmxRange": [
+            95,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            104
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RAW control mode (uncalibrated RGB)"
+        },
+        {
+          "dmxRange": [
+            105,
+            109
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Smooth"
+        },
+        {
+          "dmxRange": [
+            125,
+            249
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Illuminate"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            174
+          ],
+          "type": "ColorPreset",
+          "comment": "Preset Colors"
+        },
+        {
+          "dmxRange": [
+            175,
+            179
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            180,
+            229
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Wheel Rotation Effect (Fast to Slow)"
+        },
+        {
+          "dmxRange": [
+            230,
+            234
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            235,
+            249
+          ],
+          "type": "ColorPreset",
+          "comment": "Random Color (Fast to Slow)"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "CTO": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 0,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            20,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTC (10000K to 2500K)"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            33677
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            33678,
+            33678
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            33679,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "P 2": {
+      "name": "P",
+      "fineChannelAliases": [
+        "P 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            8191
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            8193,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "P 3": {
+      "name": "P",
+      "fineChannelAliases": [
+        "P 3 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            57343
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            57344,
+            57344
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            57345,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "RGB/RAW",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Ctrl1",
+        "Color Macro1",
+        "R",
+        "G",
+        "B",
+        "CTO"
+      ]
+    },
+    {
+      "name": "RGB/RAW Right Side Mount",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "T 2",
+        "T 2 fine",
+        "P 2",
+        "P 2 fine",
+        "Ctrl1",
+        "Color Macro1",
+        "R",
+        "G",
+        "B",
+        "CTO"
+      ]
+    },
+    {
+      "name": "RGB/RAW Left Side Mount",
+      "channels": [
+        "Sh1",
+        "Dim",
+        "T 2",
+        "T 2 fine",
+        "P 3",
+        "P 3 fine",
+        "Ctrl1",
+        "Color Macro1",
+        "R",
+        "G",
+        "B",
+        "CTO"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      90,
+      190,
+      240
+    ],
+    "weight": 3.6,
+    "power": 180,
+    "bulb": {
+      "type": "640nm / 530nm / 470nm LED",
+      "lumens": 2400,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        8.0,
+        9.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000",
+      "dominantWavelength": 640.0,
+      "diodePart": "Red 5W Cree Chip LED"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00",
+      "dominantWavelength": 530.0,
+      "diodePart": "Green 5W Cree Chip LED"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.161300,0.102800,29.000000",
+      "hex": "#0078ff",
+      "dominantWavelength": 470.0,
+      "diodePart": "Blue 5W Cree Chip LED"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Technical parameters:\nRated voltage 100~240V\nRated frequency 50/60Hz\nPower 180W\nLED 5W Cree Chip LEDs\nLED lifespan 50,000hours\nLED quantity 12 Red +12 Green +12 Blue\nColor mixing Red 0~255! Green 0~255! Blue 0~255\nEffect: strobe, fade, color wheel\nBeam angle 8°\nRotation Angle Pan 540°/630″ , Tilt 240″ ,self-correcting\nChannel quantity 7! 8! 9! 12\nControl mode DMX512! Master/slave! Sound active\nProtection grade IP20\nWorking environment: indoor\nEnvironment temperature -30~+40#\nSize L242*W130*H289mm\nWeight 3.6kg",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -30,
+      40
+    ],
+    "revision": {
+      "date": "2024-12-14T20:41:26",
+      "text": "Added Presets"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "dfe7bb03e656ee65"
+  },
+  "manufacturerKey": "core-lighting",
+  "fixtureKey": "core-amy",
+  "gwFixtureTypeID": "2508FBCA-0265-46A1-AD0B-CFB26379B4C9"
+}

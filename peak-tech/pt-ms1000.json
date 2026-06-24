@@ -1,0 +1,937 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PT-MS1000",
+  "shortName": "PT-MS1000",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-06-02",
+    "lastModifyDate": "2025-04-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 171FCFFB-98A9-4DD6-BB81-A2B13D9CE9A4"
+    }
+  },
+  "availableChannels": {
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "HOME"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open "
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "0 ms"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "650 ms"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capability": {
+        "type": "StrobeSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "StrobeM Shutter": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "ON",
+          "switchChannels": {
+            "0_BEAM Main_StrobeRate": "Strobe Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 1",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 2",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 3",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 4",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 5",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 6",
+          "switchChannels": {}
+        }
+      ]
+    },
+    "Special Control": {
+      "capability": {
+        "type": "Unknown (Special Control)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Duration 2": {
+      "name": "Strobe Duration",
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "Strobe Rate 2": {
+      "name": "Strobe Rate",
+      "capability": {
+        "type": "StrobeSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "StrobeM Shutter 2": {
+      "name": "StrobeM Shutter",
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "ON",
+          "switchChannels": {
+            "0_MAIN PLATE_StrobeRate": "Strobe Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 1",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 2",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 3",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 4",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 5",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Flash 6",
+          "switchChannels": {}
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "FX1 Fade": {
+      "capability": {
+        "type": "EffectDuration",
+        "durationStart": 0,
+        "durationEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate 2": {
+      "name": "FX1 Rate",
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX1 2": {
+      "name": "FX1",
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 9": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 9": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "B 9": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 10": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 10": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 10": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 11": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 11": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 11": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 12": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 12": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 12": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 13": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 13": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 13": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 7": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 8": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 9": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 10": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 11": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 12": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 13": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 14": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 15": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 16": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "23ch",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim",
+        "Strobe Duration",
+        "0_BEAM Main_StrobeRate",
+        "StrobeM Shutter",
+        "Special Control",
+        "Dim 2",
+        "Strobe Duration 2",
+        "0_MAIN PLATE_StrobeRate",
+        "StrobeM Shutter 2",
+        "R",
+        "G",
+        "B",
+        "FX1 Fade",
+        "FX1 Rate",
+        "FX1",
+        "FX1 Rate 2",
+        "FX1 2",
+        "Dim 3",
+        "R 2",
+        "G 2",
+        "B 2"
+      ]
+    },
+    {
+      "name": "14ch",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim",
+        "Strobe Duration",
+        "0_BEAM Main_StrobeRate",
+        "StrobeM Shutter",
+        "Special Control",
+        "Dim 2",
+        "Strobe Duration 2",
+        "0_MAIN PLATE_StrobeRate",
+        "StrobeM Shutter 2",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "68ch",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim 4",
+        "Strobe Duration",
+        "0_BEAM Main_StrobeRate",
+        "StrobeM Shutter",
+        "Special Control",
+        "Dim 2",
+        "Strobe Duration 2",
+        "0_MAIN PLATE_StrobeRate",
+        "StrobeM Shutter 2",
+        "R",
+        "G",
+        "B",
+        "FX1 Fade",
+        "FX1 Rate",
+        "FX1",
+        "FX1 Rate 2",
+        "FX1 2",
+        "Dim 5",
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "R 10",
+        "G 10",
+        "B 10",
+        "R 11",
+        "G 11",
+        "B 11",
+        "R 12",
+        "G 12",
+        "B 12",
+        "R 13",
+        "G 13",
+        "B 13",
+        "Dim 6",
+        "Dim 3",
+        "Dim 7",
+        "Dim 8",
+        "Dim 9",
+        "Dim 10",
+        "Dim 11",
+        "Dim 12",
+        "Dim 13",
+        "Dim 14",
+        "Dim 15",
+        "Dim 16"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      182,
+      120,
+      389
+    ],
+    "weight": 16.0,
+    "DMXconnector": "XLR5",
+    "power": 20,
+    "bulb": {
+      "type": "640nm / 530nm / 470nm / 450nm / 45nm LED",
+      "lumens": 1098,
+      "colorTemperature": 6234
+    },
+    "lens": {
+      "degreesMinMax": [
+        106.8,
+        151.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.710000,0.290000,21.260000",
+      "hex": "#ff0000",
+      "dominantWavelength": 640.0,
+      "diodePart": "OSRAM LRTB GRTG"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.220000,0.710000,71.530000",
+      "hex": "#00ff00",
+      "dominantWavelength": 530.0,
+      "diodePart": "OSRAM LRTB GRTG"
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.130000,0.060000,7.220000",
+      "hex": "#002bff",
+      "dominantWavelength": 470.0,
+      "diodePart": "OSRAM LRTB GRTG"
+    },
+    {
+      "name": "WHITE",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff",
+      "dominantWavelength": 450.0,
+      "diodePart": "CREE XP L LED "
+    },
+    {
+      "name": "PLATE WHITE",
+      "cie": "0.324400,0.326900,92.500000",
+      "hex": "#fff2f4",
+      "dominantWavelength": 45.0,
+      "diodePart": "OSRAM LRTB GRTG"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-04-07T07:45:51",
+      "text": "2025/4/7"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7ec6597b2ac854b2"
+  },
+  "manufacturerKey": "peak-tech",
+  "fixtureKey": "pt-ms1000",
+  "gwFixtureTypeID": "171FCFFB-98A9-4DD6-BB81-A2B13D9CE9A4"
+}

@@ -1,9 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "ATMe",
-  "categories": ["Hazer"],
+  "categories": [
+    "Hazer",
+    "Smoke"
+  ],
   "meta": {
-    "authors": ["Manu"],
+    "authors": [
+      "Manu"
+    ],
     "createDate": "2026-01-23",
     "lastModifyDate": "2026-01-23"
   },
@@ -19,7 +24,11 @@
     ]
   },
   "physical": {
-    "dimensions": [180, 300, 685],
+    "dimensions": [
+      180,
+      300,
+      685
+    ],
     "weight": 16.8,
     "power": 1400,
     "DMXconnector": "5-pin"
@@ -29,12 +38,18 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 128],
+          "dmxRange": [
+            0,
+            128
+          ],
           "type": "Maintenance",
           "comment": "Unit OFF"
         },
         {
-          "dmxRange": [129, 255],
+          "dmxRange": [
+            129,
+            255
+          ],
           "type": "Maintenance",
           "comment": "Unit ON"
         }
@@ -50,17 +65,105 @@
     "Haze control": {
       "capabilities": [
         {
-          "dmxRange": [0, 128],
+          "dmxRange": [
+            0,
+            128
+          ],
           "type": "Fog",
           "fogType": "Haze",
           "fogOutput": "off",
           "comment": "Haze OFF"
         },
         {
-          "dmxRange": [129, 255],
+          "dmxRange": [
+            129,
+            255
+          ],
           "type": "Fog",
           "fogType": "Haze",
           "comment": "Haze ON"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Unit Off"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Unit On"
+        }
+      ]
+    },
+    "Output Level": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Haze 1%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Haze 100%"
+        }
+      ]
+    },
+    "Haze": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 0,
+          "comment": "Output Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 1,
+          "comment": "Output On"
         }
       ]
     }
@@ -78,5 +181,19 @@
   ],
   "fixtureKey": "atme",
   "manufacturerKey": "mdg",
-  "oflURL": "https://open-fixture-library.org/mdg/atme"
+  "oflURL": "https://open-fixture-library.org/mdg/atme",
+  "gwMedia": {
+    "thumbnail": "06b98c55cf84d28a"
+  },
+  "gwFixtureTypeID": "FB1DB063-5140-4211-BA8A-087409785925",
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-01T13:47:56",
+      "text": "Release_1.0"
+    }
+  }
 }

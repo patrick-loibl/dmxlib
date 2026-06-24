@@ -1,0 +1,281 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EclParIPMUV",
+  "shortName": "PARIPMUV",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "A59E9D70-C409-4F13-81D2-73D335DE2B33"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      210,
+      200,
+      201
+    ],
+    "weight": 4.1,
+    "DMXconnector": "XLR5",
+    "power": 80,
+    "bulb": {
+      "type": "365nm LED"
+    },
+    "lens": {
+      "degreesMinMax": [
+        40.0,
+        50.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Dimmer fine"
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "Open_Nofeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "NoFunction",
+          "comment": "Open_Nofeature 1"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "NoFunction",
+          "comment": "Open_Nofeature 2"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Body Control1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Maintenance",
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            2,
+            17
+          ],
+          "type": "Maintenance",
+          "comment": "Display Control"
+        },
+        {
+          "dmxRange": [
+            18,
+            25
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve"
+        },
+        {
+          "dmxRange": [
+            26,
+            35
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerSpeed"
+        },
+        {
+          "dmxRange": [
+            36,
+            51
+          ],
+          "type": "Maintenance",
+          "comment": "LedFrequency"
+        },
+        {
+          "dmxRange": [
+            52,
+            57
+          ],
+          "type": "Maintenance",
+          "comment": "No Signal Features"
+        },
+        {
+          "dmxRange": [
+            58,
+            63
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 1"
+        },
+        {
+          "dmxRange": [
+            64,
+            75
+          ],
+          "type": "Maintenance",
+          "comment": "StandAlone"
+        },
+        {
+          "dmxRange": [
+            76,
+            95
+          ],
+          "type": "Rotation"
+        },
+        {
+          "dmxRange": [
+            96,
+            249
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 2"
+        },
+        {
+          "dmxRange": [
+            250,
+            251
+          ],
+          "type": "Maintenance",
+          "comment": "FactoryDefault"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "NoFeature 3"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "UNO",
+      "shortName": "UNO",
+      "channels": [
+        "Body Dimmer"
+      ]
+    },
+    {
+      "name": "DUO",
+      "shortName": "DUO",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine"
+      ]
+    },
+    {
+      "name": "Standard",
+      "shortName": "Standard",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body Shutter1",
+        "Body Control1"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "UV",
+      "cie": "0.148000,0.032090,1.417000",
+      "hex": "#f900ff",
+      "dominantWavelength": 365.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "80W UV LED source (365nm) without visible light spectrum\nFlex-Lens optics: 40° lens fitted, 15° lens optional\nIP65 fan-free housing for reliable outdoor use\nDMX, RDM, optional CRMX signal\nEclPar IPMUV is an all-weather, IP65-rated, single-source UV LED spotlight engineered for professional use. It features a 80W ultraviolet LED at a 365 nm wavelength, delivering true UV output with no visible light spectrum.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2026-04-08T08:32:22",
+      "text": "Rev 002"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "b8d1d0a02461f7ca"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "eclparipmuv",
+  "gwFixtureTypeID": "A59E9D70-C409-4F13-81D2-73D335DE2B33"
+}

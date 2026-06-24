@@ -1,0 +1,148 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PPL-P60",
+  "shortName": "P60",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "6D7F337C-8AEF-4F7E-8C36-1A5F1FC01F33"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      178,
+      251,
+      250
+    ],
+    "weight": 7.1,
+    "power": 120,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8070,
+      "colorTemperature": 4382
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "beam ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ]
+    },
+    "beam ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "beam ColorMacro1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "beam Shutter1Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "MODE 1",
+      "shortName": "MODE 1",
+      "channels": [
+        "beam Dimmer",
+        "beam ColorAdd_WW",
+        "beam ColorAdd_CW",
+        null,
+        "beam ColorMacro1Rate",
+        "beam Shutter1Strobe"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "warm white",
+      "cie": "0.376000,0.384500,100.000000",
+      "hex": "#fffabd"
+    },
+    {
+      "name": "cool white",
+      "cie": "0.317600,0.347600,100.000000",
+      "hex": "#f9ffef"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      30,
+      50
+    ],
+    "revision": {
+      "date": "2021-12-08T08:42:48",
+      "text": "PPL-P60-1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5728ed3507e9894f"
+  },
+  "manufacturerKey": "prizma-lighting",
+  "fixtureKey": "ppl-p60",
+  "gwFixtureTypeID": "6D7F337C-8AEF-4F7E-8C36-1A5F1FC01F33"
+}

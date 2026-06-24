@@ -1,0 +1,245 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Storm 1000 RGBW",
+  "shortName": "Storm 1000",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-11-11",
+    "lastModifyDate": "2024-11-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E2187850-8BAA-4851-B4BA-15B04E500CB8"
+    }
+  },
+  "comment": "TourPro Lighting presents the Storm 1000 RGBW - a IP65 rated LED Strobe/Flood with an\nexplosive 1260 x RGBW SMD LED’s, and 120° Beam Angle. The Storm 1000 comes with a\nimpressive strobe rate of 0 - 30 seconds and can be controlled via 2 x individual LED Segments.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "max"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "max"
+        }
+      ]
+    },
+    "Effect1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "No Effect"
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Ramp Up"
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Ramp Down"
+        },
+        {
+          "dmxRange": [
+            86,
+            171
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Ramp Up Down"
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "8 Channel",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe Duration",
+        "Strobe Rate",
+        "Effect1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      285,
+      120,
+      490
+    ],
+    "weight": 8.05,
+    "DMXconnector": "BNC",
+    "power": 460,
+    "bulb": {
+      "type": "LED",
+      "lumens": 25163,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        110.0,
+        146.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "TourPro Lighting presents the Storm 1000 RGBW - a IP65 rated LED Strobe/Flood with an\nexplosive 1260 x RGBW SMD LED’s, and 120° Beam Angle. The Storm 1000 comes with a\nimpressive strobe rate of 0 - 30 seconds and can be controlled via 2 x individual LED Segments.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -40,
+      50
+    ],
+    "revision": {
+      "date": "2024-11-11T00:38:49",
+      "text": "First Release"
+    }
+  },
+  "manufacturerKey": "tourpro",
+  "fixtureKey": "storm-1000-rgbw",
+  "gwFixtureTypeID": "E2187850-8BAA-4851-B4BA-15B04E500CB8"
+}

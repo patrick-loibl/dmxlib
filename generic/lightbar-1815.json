@@ -1,0 +1,249 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LightBar-1815",
+  "shortName": "LightBar1815",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-08-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F92C06EB-62E5-4741-A7AD-8B405F4A1CE5"
+    }
+  },
+  "comment": "Generic LightBar-1815: LED LightBar ;15W*18pcs\nMode 1: Basic ;5 channels(have virtual \"Dimmer\" channel function)\nMode 2: Standard ;9 channels(have \"Dimmer and Strobe\" channels function)\nMode 3: Pixels ;90 channels(perLed havs \"RGBWA\" channel function ; vertual \"Dimmer\" channels function)\nCreated by NiPeng/China ;@20250819-1645",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Amber": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Min"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Max"
+        }
+      ]
+    },
+    "White 2": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Amber 2": {
+      "name": "Amber",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "C1 Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Basic",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber"
+      ]
+    },
+    {
+      "name": "Standard",
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White 2",
+        "Amber 2",
+        "C1 Mode",
+        "Color Mix MSpeed"
+      ]
+    },
+    {
+      "name": "Pixels",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      66,
+      81,
+      1000
+    ],
+    "weight": 9.0,
+    "power": 250,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10500,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        55.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED LightBar ;15W*18pcs\nMode 1: Basic ;5 channels(have virtual \"Dimmer\" channel function)\nMode 2: Standard ;9 channels(have \"Dimmer and Strobe\" channels function)\nMode 3: Pixels ;90 channels(perLed havs \"RGBWA\" channel function ; vertual \"Dimmer\" channels function)\nCreated by NiPeng/China ;@20250819-1645",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-08-19T10:47:46",
+      "text": "All Function, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "089112f883005557"
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "lightbar-1815",
+  "gwFixtureTypeID": "F92C06EB-62E5-4741-A7AD-8B405F4A1CE5"
+}

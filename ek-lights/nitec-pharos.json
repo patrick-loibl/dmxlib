@@ -1,0 +1,182 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "NITEC Pharos",
+  "shortName": "pharos",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-08",
+    "lastModifyDate": "2025-08-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4A7D401D-DCD5-49DA-8E0E-AEE56C2F8A69"
+    }
+  },
+  "comment": "LEDNIT130: Showpro/EK/Nitec pharos full size LED profile",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Fast"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Preset Speed from Display"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 1 (Fast)"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 2 (Medium)"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed Mode 3 (Slow)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "3 Channel Mode",
+      "channels": [
+        "Dim",
+        "Strobe Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      183,
+      529,
+      183
+    ],
+    "weight": 5.8,
+    "power": 105,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        30.0,
+        35.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Showpro/EK/Nitec pharos full size LED profile",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-08-30T04:21:33",
+      "text": "Version 8"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "0b088e4d93b24a9f"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "nitec-pharos",
+  "gwFixtureTypeID": "4A7D401D-DCD5-49DA-8E0E-AEE56C2F8A69"
+}

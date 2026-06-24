@@ -1,0 +1,929 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Ovation E-4WW IP",
+  "shortName": "OvE4WWIP",
+  "categories": [
+    "Moving Head",
+    "Gobo"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-15",
+    "lastModifyDate": "2025-09-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C5AEA262-D21D-11EE-8A80-525400685065"
+    }
+  },
+  "comment": "Designed to perform as the brightest outdoor-rated LED ellipsoidal fixture available anywhere, capable of projecting an even field of high CRI light for superior gobo projection with exceptionally long reach.",
+  "wheels": {
+    "Color Wheel 1": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Color Wheel 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Gobo Wheel 1": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe slow to fast"
+        }
+      ]
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer reset"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red shift on"
+        },
+        {
+          "dmxRange": [
+            24,
+            31
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red shift off"
+        },
+        {
+          "dmxRange": [
+            32,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-curve dimmer"
+        },
+        {
+          "dmxRange": [
+            40,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear dimmer"
+        },
+        {
+          "dmxRange": [
+            48,
+            55
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square dimmer curve"
+        },
+        {
+          "dmxRange": [
+            56,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inverse square dimmer curve"
+        },
+        {
+          "dmxRange": [
+            64,
+            71
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed mode OFF"
+        },
+        {
+          "dmxRange": [
+            72,
+            79
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed 1"
+        },
+        {
+          "dmxRange": [
+            80,
+            87
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed 2"
+        },
+        {
+          "dmxRange": [
+            88,
+            95
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer speed 3"
+        },
+        {
+          "dmxRange": [
+            96,
+            103
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan auto"
+        },
+        {
+          "dmxRange": [
+            104,
+            111
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan on"
+        },
+        {
+          "dmxRange": [
+            112,
+            119
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan off"
+        },
+        {
+          "dmxRange": [
+            120,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fan silent"
+        },
+        {
+          "dmxRange": [
+            128,
+            135
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "X-Fade Speed: OFF"
+        },
+        {
+          "dmxRange": [
+            136,
+            143
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "X-Fade Speed: 1 (fastest)"
+        },
+        {
+          "dmxRange": [
+            144,
+            151
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "X-Fade Speed: 2"
+        },
+        {
+          "dmxRange": [
+            152,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "X-Fade Speed: 3"
+        },
+        {
+          "dmxRange": [
+            160,
+            167
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "X-Fade Speed: 4"
+        },
+        {
+          "dmxRange": [
+            168,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reserved for future use"
+        }
+      ]
+    },
+    "G1 <>": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "Gobo Wheel 1",
+          "angleStart": "0deg",
+          "angleEnd": "360deg",
+          "comment": "Rot Gobo Index"
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "Gobo Wheel 1",
+          "speedStart": "60rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Gobo Rot CW F > S"
+        },
+        {
+          "dmxRange": [
+            191,
+            192
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "Gobo Wheel 1",
+          "speed": "stop",
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            193,
+            255
+          ],
+          "type": "WheelSlotRotation",
+          "wheel": "Gobo Wheel 1",
+          "speedStart": "-0.16666666666666669rpm",
+          "speedEnd": "-60rpm",
+          "comment": "Gobo Rot CCW S > F"
+        }
+      ]
+    },
+    "P": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            2147483647
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967294
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967294
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Zoom": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            2147483646
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967294
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    },
+    "Blade1A": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade1B": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Top",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade2A": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade2B": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Right",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade3A": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade3B": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Bottom",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade4A": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Blade4B": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            4294967294
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeInsertion",
+          "blade": "Left",
+          "insertionStart": 0,
+          "insertionEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Shaper Rot": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "BladeSystemRotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            2147483646
+          ],
+          "type": "BladeSystemRotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "BladeSystemRotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967294
+          ],
+          "type": "BladeSystemRotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "BladeSystemRotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "7ch",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Ctrl1",
+        "G1 <>"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      236,
+      643,
+      213
+    ],
+    "weight": 13.7,
+    "power": 400,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 15000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Designed to perform as the brightest outdoor-rated LED ellipsoidal fixture available anywhere, capable of projecting an even field of high CRI light for superior gobo projection with exceptionally long reach.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-09-02T11:20:02",
+      "text": "02.09.2025 - 1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9595f23d15072542"
+  },
+  "manufacturerKey": "chauvet-professional",
+  "fixtureKey": "ovation-e-4ww-ip",
+  "gwFixtureTypeID": "C5AEA262-D21D-11EE-8A80-525400685065"
+}

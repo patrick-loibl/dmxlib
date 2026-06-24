@@ -1,0 +1,343 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "S400 C",
+  "shortName": "S400",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2024-08-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2FFFB231-CCCD-47CF-BB95-5995E2208DEA"
+    }
+  },
+  "comment": "Spot 400 CMY: Indoor CMY CTO Spot Moving Head 400W Class",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "line prsim",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "NewWheel 1": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "5 prism ci",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "rot Gobo W": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "gobo",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "stat Gobo w": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "C": {
+      "fineChannelAliases": [
+        "C fine"
+      ],
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cyan"
+      }
+    },
+    "M": {
+      "fineChannelAliases": [
+        "M fine"
+      ],
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Magenta"
+      }
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine"
+      ],
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Yellow"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1
+      }
+    },
+    "AutoFocus": {
+      "capability": {
+        "type": "Unknown (Auto Focus)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Prism1 Pos": {
+      "capability": {
+        "type": "PrismRotation",
+        "angleStart": "0rpm",
+        "angleEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Rotate1": {
+      "capability": {
+        "type": "PrismRotation",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Prism1 Pos 2": {
+      "name": "Prism1 Pos",
+      "capability": {
+        "type": "PrismRotation",
+        "angleStart": "0rpm",
+        "angleEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Rotate1 2": {
+      "name": "Rotate1",
+      "capability": {
+        "type": "PrismRotation",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Frost1": {
+      "capability": {
+        "type": "Frost",
+        "frostIntensityStart": 0,
+        "frostIntensityEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Wheel Spin": {
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "rot Gobo W",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Rotate": {
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "rot Gobo W",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Wheel Spin 2": {
+      "name": "Wheel Spin",
+      "capability": {
+        "type": "WheelRotation",
+        "wheel": "stat Gobo w",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "Dim",
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "C",
+        "C fine",
+        "M",
+        "M fine",
+        "Y",
+        "Y fine",
+        "WW",
+        "Focus1",
+        "AutoFocus",
+        "Prism1 Pos",
+        "Rotate1",
+        "Prism1 Pos 2",
+        "Rotate1 2",
+        "Frost1",
+        "Ctrl1",
+        "Wheel Spin",
+        "Rotate",
+        "Wheel Spin 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 22.0,
+    "power": 700,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Indoor CMY CTO Spot Moving Head 400W Class",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-08-22T10:01:09",
+      "text": "1.0.0.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5a042d04c24675d0"
+  },
+  "manufacturerKey": "levi",
+  "fixtureKey": "s400-c",
+  "gwFixtureTypeID": "2FFFB231-CCCD-47CF-BB95-5995E2208DEA"
+}

@@ -1,0 +1,320 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR64 LED 1810 ZOOM IP65 v2",
+  "shortName": "PAR64 ZOOM",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-08-21",
+    "lastModifyDate": "2025-08-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A190E3FD-5190-41C5-AB11-274D00A044D0"
+    }
+  },
+  "comment": "F7100400",
+  "wheels": {
+    "Color macro": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "No function",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40500"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0900e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Amber",
+          "colors": [
+            "#e47700"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "UV",
+          "colors": [
+            "#5500ee"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue 1",
+          "colors": [
+            "#002d9e"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "All white",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "max"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            50,
+            149
+          ],
+          "type": "ColorPreset",
+          "comment": "Color chase"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "ColorPreset",
+          "comment": "Color fade"
+        },
+        {
+          "dmxRange": [
+            200,
+            249
+          ],
+          "type": "ColorPreset",
+          "comment": "Color pulse"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound control"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6ch",
+      "channels": [
+        "Zoom",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "9ch",
+      "channels": [
+        "Zoom",
+        "Dim 2",
+        "Sh1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      200,
+      250
+    ],
+    "weight": 9.2,
+    "power": 40,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "F7100400",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-08-21T11:52:25",
+      "text": "flash_v1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "b6fcd77796c49c28"
+  },
+  "manufacturerKey": "flash",
+  "fixtureKey": "par64-led-1810-zoom-ip65-v2",
+  "gwFixtureTypeID": "A190E3FD-5190-41C5-AB11-274D00A044D0"
+}

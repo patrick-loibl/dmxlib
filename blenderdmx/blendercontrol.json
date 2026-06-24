@@ -1,0 +1,167 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BlenderControl",
+  "shortName": "BlenderControl",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-15",
+    "lastModifyDate": "2025-11-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B504AA63-2AC7-46E5-9A5A-13F14EE59448"
+    }
+  },
+  "comment": "A device file to allow control of Blender properties. Currently supported properties: background color (RGB, Dimmer), animation/timeline play state, auto-keying.",
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Playmode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pause"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Rewind and Play"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Play <<"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Play >>"
+        }
+      ]
+    },
+    "Rec": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Recording)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            1,
+            128
+          ],
+          "type": "Unknown (Recording)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Recording Disabled"
+        },
+        {
+          "dmxRange": [
+            129,
+            255
+          ],
+          "type": "Unknown (Recording)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Recording Enabled"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Basic",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Playmode",
+        "Rec"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "A device file to allow control of Blender properties. Currently supported properties: background color (RGB, Dimmer), animation/timeline play state, auto-keying.",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-15T10:54:32",
+      "text": "ver1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "19abb65c79d75bd1"
+  },
+  "manufacturerKey": "blenderdmx",
+  "fixtureKey": "blendercontrol",
+  "gwFixtureTypeID": "B504AA63-2AC7-46E5-9A5A-13F14EE59448",
+  "physical": {}
+}

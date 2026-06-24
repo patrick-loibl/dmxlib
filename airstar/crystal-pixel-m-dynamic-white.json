@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Crystal Pixel M Dynamic White",
+  "shortName": "Crystal Pixel M DW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-08-16",
+    "lastModifyDate": "2023-08-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6509ECC9-56A3-4660-AAA7-78C7AADDE06B"
+    }
+  },
+  "comment": "Crystal Pixel Dynamic White has 6 3000K and 6500K white pixels (6 columns). \nThere are 4 sizes available. Only the 130cm size is modelized however all sizes work the same.\nFixing system is not modelized as well since several options are also available.  ",
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Ctrl2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Color Ctrl": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "One Pixel Mode",
+      "channels": [
+        "Ctrl1",
+        "Dim",
+        "FX1 Rate",
+        "Ctrl2",
+        "Color Ctrl"
+      ]
+    },
+    {
+      "name": "Pixel Mode",
+      "channels": [
+        "Ctrl1 2",
+        "Dim",
+        "White",
+        "WW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1300,
+      1300,
+      1300
+    ],
+    "weight": 10.5,
+    "power": 500,
+    "bulb": {
+      "type": "LED",
+      "lumens": 60000
+    },
+    "lens": {
+      "degreesMinMax": [
+        360.0,
+        360.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White 3000K",
+      "cie": "0.433900,0.403200,100.000000",
+      "hex": "#ffed91"
+    },
+    {
+      "name": "White 6500K",
+      "cie": "0.312300,0.328200,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Crystal Pixel Dynamic White has 6 3000K and 6500K white pixels (6 columns). \nThere are 4 sizes available. Only the 130cm size is modelized however all sizes work the same.\nFixing system is not modelized as well since several options are also available.",
+    "beamType": "Glow",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2023-08-16T10:31:27",
+      "text": "1.0.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "07437fc022fd773f"
+  },
+  "manufacturerKey": "airstar",
+  "fixtureKey": "crystal-pixel-m-dynamic-white",
+  "gwFixtureTypeID": "6509ECC9-56A3-4660-AAA7-78C7AADDE06B"
+}

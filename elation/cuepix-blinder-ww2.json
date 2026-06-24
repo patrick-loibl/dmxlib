@@ -1,9 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "CUEPIX Blinder WW2",
-  "categories": ["Blinder", "Strobe"],
+  "categories": [
+    "Blinder",
+    "Strobe",
+    "Dimmer"
+  ],
   "meta": {
-    "authors": ["Dávid Czirók", "István Király"],
+    "authors": [
+      "Dávid Czirók",
+      "István Király"
+    ],
     "createDate": "2019-10-30",
     "lastModifyDate": "2019-10-30",
     "importPlugin": {
@@ -21,16 +28,24 @@
     ]
   },
   "physical": {
-    "dimensions": [259.4, 181.2, 478],
+    "dimensions": [
+      259.4,
+      181.2,
+      478
+    ],
     "weight": 5.1,
     "power": 229,
     "DMXconnector": "3-pin and 5-pin",
     "bulb": {
       "type": "100W Warm White COB LEDs",
-      "colorTemperature": 3200
+      "colorTemperature": 3200,
+      "lumens": 5900
     },
     "lens": {
-      "degreesMinMax": [60, 60]
+      "degreesMinMax": [
+        60,
+        60
+      ]
     }
   },
   "matrix": {
@@ -51,41 +66,62 @@
       "defaultValue": 32,
       "capabilities": [
         {
-          "dmxRange": [0, 31],
+          "dmxRange": [
+            0,
+            31
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Closed"
         },
         {
-          "dmxRange": [32, 63],
+          "dmxRange": [
+            32,
+            63
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [64, 95],
+          "dmxRange": [
+            64,
+            95
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [96, 127],
+          "dmxRange": [
+            96,
+            127
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [128, 159],
+          "dmxRange": [
+            128,
+            159
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Pulse",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [160, 191],
+          "dmxRange": [
+            160,
+            191
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [192, 223],
+          "dmxRange": [
+            192,
+            223
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -93,7 +129,10 @@
           "randomTiming": true
         },
         {
-          "dmxRange": [224, 255],
+          "dmxRange": [
+            224,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         }
@@ -103,34 +142,369 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 41],
+          "dmxRange": [
+            0,
+            41
+          ],
           "type": "Maintenance",
           "comment": "Standard"
         },
         {
-          "dmxRange": [42, 84],
+          "dmxRange": [
+            42,
+            84
+          ],
           "type": "Maintenance",
           "comment": "Stage"
         },
         {
-          "dmxRange": [85, 127],
+          "dmxRange": [
+            85,
+            127
+          ],
           "type": "Maintenance",
           "comment": "TV"
         },
         {
-          "dmxRange": [128, 170],
+          "dmxRange": [
+            128,
+            170
+          ],
           "type": "Maintenance",
           "comment": "Architectural"
         },
         {
-          "dmxRange": [171, 213],
+          "dmxRange": [
+            171,
+            213
+          ],
           "type": "Maintenance",
           "comment": "Theatre"
         },
         {
-          "dmxRange": [214, 255],
+          "dmxRange": [
+            214,
+            255
+          ],
           "type": "Maintenance",
           "comment": "Default to unit setting"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min Dimmer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max Dimmer"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Left Cob Min Dimmer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Left Cob Max Dimmer"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Right Cob Min Dimmer"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Right Cob Max Dimmer"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 32,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "COB OFF"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "COB ON"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Min"
+        },
+        {
+          "dmxRange": [
+            65,
+            94
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            95,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Max"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "COB ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Pulse Min"
+        },
+        {
+          "dmxRange": [
+            129,
+            158
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Pulse Max"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "COB ON"
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe Min"
+        },
+        {
+          "dmxRange": [
+            193,
+            222
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            223,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe Max"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "COB ON"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            41
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            42,
+            84
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            85,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            128,
+            170
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            171,
+            213
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            214,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Setting"
         }
       ]
     }
@@ -182,5 +556,28 @@
   ],
   "fixtureKey": "cuepix-blinder-ww2",
   "manufacturerKey": "elation",
-  "oflURL": "https://open-fixture-library.org/elation/cuepix-blinder-ww2"
+  "oflURL": "https://open-fixture-library.org/elation/cuepix-blinder-ww2",
+  "gwMedia": {
+    "thumbnail": "115cd013315db01b"
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.463600,0.417500,100.000000",
+      "hex": "#ffe96f"
+    }
+  ],
+  "gwFixtureTypeID": "24921E11-5786-4C84-B977-F3E0A514165F",
+  "gwSpecs": {
+    "description": "The CUEPIX Blinder WW2™ features (2) long life 100W Warm White 3,200K COB LEDs, a 60° beam angle, RDM (Remote Device Management), individual control of each COB module including manual pan focus, variable and selectable dimming curves, strobe effects, flicker free operation for TV and Film, 3pin and 5pin DMX and Locking Power Cable in/out connections, LCD menu display with 4 button control panel, integrated rigging bracket, and a multi-voltage universal auto switching power supply (100-250v).",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2023-06-26T17:25:55",
+      "text": "2023-26-06 First Release"
+    }
+  }
 }

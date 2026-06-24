@@ -1,0 +1,181 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Spark One Pro",
+  "shortName": "Spark1Pro",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-12-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C6B8B09F-C9E5-4A3D-AF42-E5ACA10D26EE"
+    }
+  },
+  "availableChannels": {
+    "Spark Control": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Spark Control)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sparks Output OFF"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Unknown (Spark Control)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sparks Output ON"
+        }
+      ]
+    },
+    "Heat Control": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            200
+          ],
+          "type": "Unknown (Heat Control)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Preheat OFF"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Unknown (Heat Control)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Preheat ON"
+        }
+      ]
+    },
+    "EMERGENCY STOP": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Emergency Stop)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            80
+          ],
+          "type": "Unknown (Emergency Stop)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Emergency Stop"
+        },
+        {
+          "dmxRange": [
+            81,
+            200
+          ],
+          "type": "NoFunction",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Unknown (Purge)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Purge Material"
+        }
+      ]
+    },
+    "Spark Density": {
+      "capability": {
+        "type": "Unknown (Spark Density)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Spark Density (High to Low)"
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4A",
+      "channels": [
+        "Spark Control",
+        "Heat Control",
+        "EMERGENCY STOP",
+        "Spark Density"
+      ]
+    },
+    {
+      "name": "4B",
+      "channels": [
+        "Spark Control",
+        "Heat Control",
+        "EMERGENCY STOP",
+        "NoFeature"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "power": 150,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-15T17:33:12",
+      "text": "Added 4B Mode"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "de69032eeb88202b"
+  },
+  "manufacturerKey": "sparktacular",
+  "fixtureKey": "spark-one-pro",
+  "gwFixtureTypeID": "C6B8B09F-C9E5-4A3D-AF42-E5ACA10D26EE"
+}

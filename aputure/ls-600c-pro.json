@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LS 600C Pro",
+  "shortName": "600C",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-10-30",
+    "lastModifyDate": "2024-10-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 56631240-7C32-4021-A6D1-4E1CA0E01E5A"
+    }
+  },
+  "comment": "Light Storm 600C Pro",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "fineChannelAliases": [
+        "Tint fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4587
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral / No Effect"
+        },
+        {
+          "dmxRange": [
+            4588,
+            9830
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "Full Minus Green"
+        },
+        {
+          "dmxRange": [
+            9831,
+            30145
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": 1,
+          "comment": "- 99% - - 1%"
+        },
+        {
+          "dmxRange": [
+            30146,
+            39976
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "Neutral / No Effect"
+        },
+        {
+          "dmxRange": [
+            39977,
+            60292
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "1% - 99%"
+        },
+        {
+          "dmxRange": [
+            60293,
+            65535
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "Full Plus Green"
+        }
+      ]
+    },
+    "Color": {
+      "fineChannelAliases": [
+        "Color fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Color XF)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (Color XF)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (Color XF)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "RGB"
+        }
+      ]
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physical": "0Hz",
+          "comment": "No Effect"
+        },
+        {
+          "dmxRange": [
+            20,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "1Hz",
+          "physicalEnd": "25Hz",
+          "comment": "1 Hz - 25 Hz"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 12",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "CTC",
+        "CTC fine",
+        "Tint",
+        "Tint fine",
+        "Color",
+        "Color fine",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Strobe Frequency"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "weight": 5.86,
+    "power": 150,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-10-30T21:31:57",
+      "text": "0001"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "45be23ec79c96287"
+  },
+  "manufacturerKey": "aputure",
+  "fixtureKey": "ls-600c-pro",
+  "gwFixtureTypeID": "56631240-7C32-4021-A6D1-4E1CA0E01E5A"
+}

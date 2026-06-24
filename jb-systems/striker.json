@@ -1,0 +1,882 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Striker",
+  "shortName": "Strk",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-10",
+    "lastModifyDate": "2023-10-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5F71C8D9-B0D9-44C9-8383-4D1FCA5352B3"
+    }
+  },
+  "comment": "Striker 19/05CH:  An extremely compact but very bright LED moving spot and wash with 10° beam (spot)\n Specially designed for DJs and smaller clubs. \n Based on a 30W high power white LED (spot) and 6 RGBW 8W LED’S (Wash) \n Very low power consumption, only 95 W (money saving!) \n 0-100% dimming and different strobe effects \n Separate gobo wheel with 7 fixed gobos + open \n Separate color wheel with 7 colors + open \n Focus controlled by DMX \n Excellent built-in programs for wonderful, ever changing, light shows. \n Multiple working modes: \n DMX-control: via 5 or 19 channels \n Standalone: sound activated with internal mic \n Master/slave: wonderful synchronized shows in standalone mode \n Prepared for wireless DMX: just plug-in an optional WTR-DMX DONGLE ! (Briteq® order code: 4645) \n 4-digit LED-display for easy menu navigation",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Gobos",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Colors",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Centre"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Centre"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            23
+          ],
+          "type": "ColorPreset",
+          "comment": "Open (White)"
+        },
+        {
+          "dmxRange": [
+            24,
+            47
+          ],
+          "type": "ColorPreset",
+          "comment": "Orange"
+        },
+        {
+          "dmxRange": [
+            48,
+            71
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            72,
+            95
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            96,
+            119
+          ],
+          "type": "ColorPreset",
+          "comment": "Yellow"
+        },
+        {
+          "dmxRange": [
+            120,
+            143
+          ],
+          "type": "ColorPreset",
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            144,
+            167
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue (Dark)"
+        },
+        {
+          "dmxRange": [
+            168,
+            191
+          ],
+          "type": "ColorPreset",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow (slow/fast/reverse)"
+        }
+      ]
+    },
+    "G1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            11
+          ],
+          "type": "Effect",
+          "effectName": "open (White)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            12,
+            23
+          ],
+          "type": "Effect",
+          "effectName": "Gobo1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            24,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Gobo2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            36,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Gobo3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "Gobo4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Gobo5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "Gobo6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Gobo7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "Shaking 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Shaking 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            143
+          ],
+          "type": "Effect",
+          "effectName": "Shaking 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            144,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "Shaking 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Shaking 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            191
+          ],
+          "type": "Effect",
+          "effectName": "Shaking 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Rainbow (Slow/Fast/Reverse)",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Focus1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Focus",
+          "distanceStart": 0,
+          "distanceEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Focus",
+          "distanceStart": 0,
+          "distanceEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Focus",
+          "distanceStart": 0,
+          "distanceEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            5,
+            250
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Slow-Fast"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "DimWash": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Dimmer1)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Dimmer1)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Dimmer1)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Sh2": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (StrobeModeShutter)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            5,
+            250
+          ],
+          "type": "Unknown (StrobeModeShutter)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow-Fast"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Unknown (StrobeModeShutter)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "Manual",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "Auto 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "Auto 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Auto 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "Auto 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            207
+          ],
+          "type": "Effect",
+          "effectName": "Auto 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            208,
+            247
+          ],
+          "type": "Effect",
+          "effectName": "Auto 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Color/Gobo Sound Control",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Pos FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "Manual",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            32
+          ],
+          "type": "Effect",
+          "effectName": "Prog 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            33,
+            58
+          ],
+          "type": "Effect",
+          "effectName": "Prog 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            59,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "Prog 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Prog 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            111,
+            136
+          ],
+          "type": "Effect",
+          "effectName": "Prog 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            137,
+            162
+          ],
+          "type": "Effect",
+          "effectName": "Prog 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            163,
+            188
+          ],
+          "type": "Effect",
+          "effectName": "Prog 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            189,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "Prog 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            215,
+            240
+          ],
+          "type": "Effect",
+          "effectName": "Prog 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "P/T Sound Control",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Fixture Calibration Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "FixtureReset"
+        }
+      ]
+    },
+    "P 2": {
+      "name": "P",
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Focus1 2": {
+      "name": "Focus1",
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "19CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Color Macro1",
+        "G1",
+        "Focus1",
+        "Dim",
+        "Sh1",
+        "DimWash",
+        "Sh2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Color FX1",
+        "Pos FX",
+        "Fixture Calibration Reset"
+      ]
+    },
+    {
+      "name": "5CH",
+      "channels": [
+        "P 2",
+        "T 2",
+        "Focus1 2",
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 4.5,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        36.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Beam",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Wash",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": " An extremely compact but very bright LED moving spot and wash with 10° beam (spot)\n Specially designed for DJs and smaller clubs. \n Based on a 30W high power white LED (spot) and 6 RGBW 8W LED’S (Wash) \n Very low power consumption, only 95 W (money saving!) \n 0-100% dimming and different strobe effects \n Separate gobo wheel with 7 fixed gobos + open \n Separate color wheel with 7 colors + open \n Focus controlled by DMX \n Excellent built-in programs for wonderful, ever changing, light shows. \n Multiple working modes: \n DMX-control: via 5 or 19 channels \n Standalone: sound activated with internal mic \n Master/slave: wonderful synchronized shows in standalone mode \n Prepared for wireless DMX: just plug-in an optional WTR-DMX DONGLE ! (Briteq® order code: 4645) \n 4-digit LED-display for easy menu navigation",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-10-11T13:48:44",
+      "text": "DHAV-1.2Final1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "70226885788ba1a7"
+  },
+  "manufacturerKey": "jb-systems",
+  "fixtureKey": "striker",
+  "gwFixtureTypeID": "5F71C8D9-B0D9-44C9-8383-4D1FCA5352B3"
+}

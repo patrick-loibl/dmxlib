@@ -1,0 +1,558 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "NANLUX Evoke 1200B",
+  "shortName": "Evoke 1200B",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-12",
+    "lastModifyDate": "2025-02-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C0C8DA1D-EB70-4109-A3B5-D4B6C2A6B6F3"
+    }
+  },
+  "comment": "Evoke 1200B LED Bi-Color Spot Light",
+  "rdm": {
+    "modelId": 1282
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "SMART"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FULL SPEED"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "HALF SPEED"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN OFF"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "random fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "random mid"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "random slow"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            8,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max"
+        }
+      ]
+    },
+    "NoFeature": {
+      "fineChannelAliases": [
+        "NoFeature fine",
+        "NoFeature fine^2",
+        "NoFeature fine^3"
+      ],
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "FX7 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "CCT",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "EFFECTS",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            18
+          ],
+          "type": "Effect",
+          "effectName": "CCT LOOP",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            36
+          ],
+          "type": "Effect",
+          "effectName": "INT LOOP",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            37,
+            54
+          ],
+          "type": "Effect",
+          "effectName": "FLASH",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            55,
+            72
+          ],
+          "type": "Effect",
+          "effectName": "PULSE",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            73,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "STORM",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            108
+          ],
+          "type": "Effect",
+          "effectName": "TV",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            109,
+            126
+          ],
+          "type": "Effect",
+          "effectName": "PAPARAZZI",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            144
+          ],
+          "type": "Effect",
+          "effectName": "CANDLE / FIRE",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            145,
+            162
+          ],
+          "type": "Effect",
+          "effectName": "BAD BULB",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            163,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "FIREWORK",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            198
+          ],
+          "type": "Effect",
+          "effectName": "EXPLOSION",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            199,
+            216
+          ],
+          "type": "Effect",
+          "effectName": "WELDING",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            217,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "RESERVED",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX2 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX3 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX4 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX5 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "FX6 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "CCT 8bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Fan Mode",
+        "Sh1",
+        "NoFeature",
+        "NoFeature fine"
+      ]
+    },
+    {
+      "name": "CCT 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Fan Mode",
+        "Sh1",
+        "NoFeature",
+        "NoFeature fine",
+        "NoFeature fine^2",
+        "NoFeature fine^3"
+      ]
+    },
+    {
+      "name": "ULTIMATE DMX 8bit",
+      "channels": [
+        "FX7 Rate",
+        "Dim",
+        "FX1",
+        "FX2",
+        "FX1 Rate",
+        "FX2 Rate",
+        "FX3 Rate",
+        "FX4 Rate",
+        "FX5 Rate",
+        "FX6 Rate",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      210,
+      503,
+      370
+    ],
+    "weight": 7.75,
+    "power": 1260,
+    "bulb": {
+      "type": "LED",
+      "lumens": 118270,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        65.0,
+        154.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.310900,0.319800,100.000000",
+      "hex": "#fffdff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Evoke 1200B LED Bi-Color Spot Light",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-02-25T12:26:58",
+      "text": "ogi_v13"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "dc74e2b8b3031c5b"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "nanlux-evoke-1200b",
+  "gwFixtureTypeID": "C0C8DA1D-EB70-4109-A3B5-D4B6C2A6B6F3"
+}

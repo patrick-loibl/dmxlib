@@ -1,9 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "ColorSource PAR",
-  "categories": ["Color Changer"],
+  "categories": [
+    "Color Changer"
+  ],
   "meta": {
-    "authors": ["Joseph Gates"],
+    "authors": [
+      "Joseph Gates"
+    ],
     "createDate": "2019-10-30",
     "lastModifyDate": "2019-10-30"
   },
@@ -20,16 +24,24 @@
     ]
   },
   "physical": {
-    "dimensions": [203, 310, 240],
+    "dimensions": [
+      203,
+      310,
+      240
+    ],
     "weight": 3.77,
     "power": 90,
     "DMXconnector": "5-pin",
     "bulb": {
       "type": "40 Lumileds LUXEON Z LED",
-      "lumens": 3039
+      "lumens": 3039,
+      "colorTemperature": 6000
     },
     "lens": {
-      "degreesMinMax": [14.5, 14.5]
+      "degreesMinMax": [
+        14.5,
+        14.5
+      ]
     }
   },
   "rdm": {
@@ -68,21 +80,175 @@
     "Strobe": {
       "capabilities": [
         {
-          "dmxRange": [0, 0],
+          "dmxRange": [
+            0,
+            0
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [1, 254],
+          "dmxRange": [
+            1,
+            254
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "1Hz",
           "speedEnd": "33Hz"
         },
         {
-          "dmxRange": [255, 255],
+          "dmxRange": [
+            255,
+            255
+          ],
           "type": "NoFunction"
         }
       ]
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            253
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Rate"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Open"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Rate 2": {
+      "name": "Strobe Rate",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            253
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "StrobeRate"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
     }
   },
   "modes": [
@@ -132,5 +298,18 @@
   ],
   "fixtureKey": "colorsource-par",
   "manufacturerKey": "etc",
-  "oflURL": "https://open-fixture-library.org/etc/colorsource-par"
+  "oflURL": "https://open-fixture-library.org/etc/colorsource-par",
+  "gwFixtureTypeID": "B5C104A0-C099-4C1B-BBA0-32D4D798021D",
+  "gwSpecs": {
+    "description": "ETC Colorsource PAR Direct Mode 6 Channel IRGBL+Strobe",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-05-26T14:11:33",
+      "text": "physical-change-direct"
+    }
+  }
 }

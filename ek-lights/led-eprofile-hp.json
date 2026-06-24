@@ -1,0 +1,300 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED eProfile HP",
+  "shortName": "eProfHP",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-08-23",
+    "lastModifyDate": "2023-08-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D6C6443E-2307-4BBE-94C0-79359C2C886B"
+    }
+  },
+  "comment": "LED 3000K Profile",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "LED Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Menu Set"
+        },
+        {
+          "dmxRange": [
+            11,
+            50
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "600Hz"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "1200Hz"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "2000Hz"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "4000Hz"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "25000Hz"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto Program 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Menu Set"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dim Curve Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Curve 1 (Fast)"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Curve 2 (Mid)"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Curve 3 (Slow)"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2 Channel",
+      "channels": [
+        "Dim",
+        "LED Frequency"
+      ]
+    },
+    {
+      "name": "3 Channel",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "LED Frequency"
+      ]
+    },
+    {
+      "name": "6 Channel",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Dim Curve",
+        "LED Frequency"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      240,
+      625,
+      240
+    ],
+    "weight": 7.11,
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED 3000K Profile",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-08-23T02:56:16",
+      "text": "1.00"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7bf1705b91053c89"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "led-eprofile-hp",
+  "gwFixtureTypeID": "D6C6443E-2307-4BBE-94C0-79359C2C886B"
+}

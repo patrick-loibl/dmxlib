@@ -1,0 +1,175 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BTM100TW Fresnel Zoom ",
+  "shortName": "BTM100TW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-13",
+    "lastModifyDate": "2025-02-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 42A184B6-746C-48EB-97CA-16785FCF3A32"
+    }
+  },
+  "comment": "BTM100TW Fresnel Zoom 100W Tunable WW/CW: \n\n",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CCalib Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            30
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fade off"
+        },
+        {
+          "dmxRange": [
+            31,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Low"
+        },
+        {
+          "dmxRange": [
+            61,
+            90
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Medium "
+        },
+        {
+          "dmxRange": [
+            91,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "High"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Channels",
+      "channels": [
+        "Dim",
+        "CCalib Mode",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "4 Channels",
+      "channels": [
+        "Dim",
+        "CCalib Mode",
+        "Zoom",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "6 Channels",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CCalib Mode",
+        "Zoom",
+        "Sh1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      150,
+      260,
+      100
+    ],
+    "weight": 5.2,
+    "DMXconnector": "XLR5",
+    "power": 50,
+    "bulb": {
+      "type": "LED",
+      "lumens": 2108,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.0,
+        23.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2025-02-11T09:44:36",
+      "text": "BTM100TW "
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "889b57cc07e88d2a"
+  },
+  "manufacturerKey": "beamz",
+  "fixtureKey": "btm100tw-fresnel-zoom",
+  "gwFixtureTypeID": "42A184B6-746C-48EB-97CA-16785FCF3A32"
+}

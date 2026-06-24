@@ -1,0 +1,213 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "T90H-WW IP 26Deg",
+  "shortName": "T90H-WW IP 26Deg",
+  "categories": [
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "D108BDA3-D915-4F7B-9B12-E54C0D6B0E72"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      235,
+      593,
+      187
+    ],
+    "power": 170,
+    "bulb": {
+      "type": "LED",
+      "lumens": 11500,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        26.0,
+        26.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Dimmer fine"
+      ]
+    },
+    "Body Gobo1PosRotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "WheelSlotRotation"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "WheelSlotRotation"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Body DimmerCurve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerCurve 1"
+        }
+      ]
+    },
+    "Beam ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ],
+      "fineChannelAliases": [
+        "Beam ColorAdd_CW fine"
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3Channel",
+      "shortName": "3Channel",
+      "channels": [
+        "Body Dimmer",
+        "Body Gobo1PosRotate"
+      ]
+    },
+    {
+      "name": "6Channel",
+      "shortName": "6Channel",
+      "channels": [
+        "Body Shutter1",
+        "Body Dimmer",
+        "Body DimmerCurve",
+        "Body Gobo1PosRotate",
+        null,
+        "Beam ColorAdd_CW"
+      ]
+    },
+    {
+      "name": "8Channel",
+      "shortName": "8Channel",
+      "channels": [
+        "Body Shutter1",
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body DimmerCurve",
+        "Body Gobo1PosRotate",
+        null,
+        "Beam ColorAdd_CW",
+        "Beam ColorAdd_CW fine"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "It is 170W LED Profile, and Protection rating is IP65.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-25T02:04:00",
+      "text": "Realease"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d2dbe8295f1ffc62"
+  },
+  "manufacturerKey": "terbly",
+  "fixtureKey": "t90h-ww-ip-26deg",
+  "gwFixtureTypeID": "D108BDA3-D915-4F7B-9B12-E54C0D6B0E72"
+}

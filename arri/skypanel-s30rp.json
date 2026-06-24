@@ -1,0 +1,262 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SkyPanel S30RP",
+  "shortName": "S30-RP",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-15",
+    "lastModifyDate": "2021-01-13",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: D776D1C5-54B6-478E-B67D-1130FFAB75C5"
+    }
+  },
+  "comment": "ARRI SkyPanel S30RP: SkyPanel S30-RP (Remote Phosphor) Soft Light\nPhosphor Panels available in 2700k, 3200k, 4300k, 5600k, 6500k, 10000k, and Chroma Green",
+  "rdm": {
+    "modelId": 516
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Mode from Menu"
+        },
+        {
+          "dmxRange": [
+            10,
+            57
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Quiet"
+        },
+        {
+          "dmxRange": [
+            58,
+            105
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Variable"
+        },
+        {
+          "dmxRange": [
+            106,
+            153
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "High Temp"
+        },
+        {
+          "dmxRange": [
+            154,
+            201
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Normal"
+        },
+        {
+          "dmxRange": [
+            202,
+            249
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Full Speed"
+        },
+        {
+          "dmxRange": [
+            250,
+            250
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Off"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            1,
+            19
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "1Hz",
+          "comment": "slow"
+        },
+        {
+          "dmxRange": [
+            21,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "25Hz",
+          "comment": "fast"
+        }
+      ]
+    },
+    "NoFeature": {
+      "fineChannelAliases": [
+        "NoFeature fine"
+      ],
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 - Intensity 8Bit",
+      "channels": [
+        "Dim",
+        "Fan Mode",
+        "Sh1",
+        "NoFeature",
+        "NoFeature fine"
+      ]
+    },
+    {
+      "name": "Mode 2 - Intensity16Bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Fan Mode",
+        null,
+        null,
+        null,
+        "Sh1",
+        null,
+        null,
+        null,
+        null,
+        "NoFeature",
+        "NoFeature fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      347,
+      497,
+      495
+    ],
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 18000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        106.0,
+        106.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Blue LED",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "SkyPanel S30-RP (Remote Phosphor) Soft Light\nPhosphor Panels available in 2700k, 3200k, 4300k, 5600k, 6500k, 10000k, and Chroma Green",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-01-13T16:25:27",
+      "text": "DMX v4.4 13 Jan 2021"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "749b04307090cc67"
+  },
+  "manufacturerKey": "arri",
+  "fixtureKey": "skypanel-s30rp",
+  "gwFixtureTypeID": "D776D1C5-54B6-478E-B67D-1130FFAB75C5"
+}

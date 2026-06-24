@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LEDSTROB200",
+  "shortName": "",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-11-16",
+    "lastModifyDate": "2023-11-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 66E8AAC0-7442-4B22-8352-0260467F8BD7"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "NoFunction"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound Off"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Sound On"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      353,
+      80,
+      75
+    ],
+    "weight": 1.2,
+    "power": 27,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        100.0,
+        150.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-11-21T15:25:35",
+      "text": "Fioko"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f02e37a48e9a8c91"
+  },
+  "manufacturerKey": "involight",
+  "fixtureKey": "ledstrob200",
+  "gwFixtureTypeID": "66E8AAC0-7442-4B22-8352-0260467F8BD7"
+}

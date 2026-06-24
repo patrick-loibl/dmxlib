@@ -1,0 +1,301 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "DMG Maxi",
+  "shortName": "Maxi",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-10-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1A117E12-3B90-45A7-9201-04A7C455AF90"
+    }
+  },
+  "comment": "Rosco DMG Maxi",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Tint": {
+      "fineChannelAliases": [
+        "Tint fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            764
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "neutral / no effect"
+        },
+        {
+          "dmxRange": [
+            765,
+            765
+          ],
+          "type": "Unknown (Tint)",
+          "physical": -100,
+          "comment": "full minus green"
+        },
+        {
+          "dmxRange": [
+            766,
+            32767
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": -99,
+          "physicalEnd": -1,
+          "comment": "-99% to -1%"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 0,
+          "comment": "neutral / no effect"
+        },
+        {
+          "dmxRange": [
+            32769,
+            32894
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32895,
+            65534
+          ],
+          "type": "Unknown (Tint)",
+          "physicalStart": 1,
+          "physicalEnd": 99,
+          "comment": "1% to 99%"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (Tint)",
+          "physical": 100,
+          "comment": "full plus green"
+        }
+      ]
+    },
+    "Crossfade": {
+      "fineChannelAliases": [
+        "Crossfade fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (XF)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CTC"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Unknown (XF)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (XF)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "RGBWAL"
+        }
+      ]
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "fineChannelAliases": [
+        "Amber fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Lime": {
+      "fineChannelAliases": [
+        "Lime fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Lime"
+      }
+    },
+    "Strobe Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physical": "0Hz",
+          "comment": "no effect"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "25Hz",
+          "comment": "0 flash/s to 25 flashes/s"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 7 - Full 16B (CCT + RGBWAL)",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "CTC",
+        "CTC fine",
+        "Tint",
+        "Tint fine",
+        "Crossfade",
+        "Crossfade fine",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "White",
+        "White fine",
+        "Amber",
+        "Amber fine",
+        "Lime",
+        "Lime fine",
+        "Strobe Frequency",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "power": 150,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-10-31T12:54:04",
+      "text": "0006"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "rosco",
+  "fixtureKey": "dmg-maxi",
+  "gwFixtureTypeID": "1A117E12-3B90-45A7-9201-04A7C455AF90"
+}

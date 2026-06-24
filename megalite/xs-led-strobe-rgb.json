@@ -1,0 +1,669 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "XS LED Strobe RGB",
+  "shortName": "xsledstrbrgb",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-07-20",
+    "lastModifyDate": "2023-07-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F2D10BE8-EBE8-11E5-85B4-F0761CCEA3DE"
+    }
+  },
+  "comment": "XS LED Strobe RGB is an immensely bright, versatile fixture from Mega-Lite. It is equipped with a total of 324 RGB SMD LEDs. The LEDs have a wide 140º LED angle and the unit can operate as a wash or strobe. The XS LED Strobe RGB has 3 segments of control. Line up multiple unit together in matrix to create chases and other eye-catching effects.\n\nThe XS LED Strobe RGB is controlled via DMX 512. The unit has dimmer, red , green, blue, strobe, macro and 3 segment macro channels and 4 modes of operation. It is built with 5 pin XLR in and out connectors and PowerCon in and out connectors. The XS LED Strobe RGB has a single mounting yoke. And, it’s compact measuring 13.66” x 4” x 7.12” and weighing 6.5 lbs.",
+  "availableChannels": {
+    "R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe - Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "Effect",
+          "effectName": "Ramp Up Effect S > F - Effect",
+          "speedStart": 0.1,
+          "speedEnd": 10
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Ramp Down Effect S > F - Effect",
+          "speedStart": 0.1,
+          "speedEnd": 10
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "Ramp Up-Down Effect S > F - Effect",
+          "speedStart": 0.1,
+          "speedEnd": 10
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "Effect",
+          "effectName": "Random Effect S > F - Effect",
+          "speedStart": 0.1,
+          "speedEnd": 10
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "Lightning Effect S > F - Effect",
+          "speedStart": 0.1,
+          "speedEnd": 10
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Spike Effect - Effect",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            2,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Macro 2 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Macro 3 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Macro 4 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "Macro 5 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Macro 6 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Macro 7 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Macro 8 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            225
+          ],
+          "type": "Effect",
+          "effectName": "Macro 9 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            226,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Macro 10 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G 2": {
+      "name": "G",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B 2": {
+      "name": "B",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    },
+    "R 3": {
+      "name": "R",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G 3": {
+      "name": "G",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B 3": {
+      "name": "B",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1 3Ch",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "Mode2 7Ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Strobe Duration",
+        "Sh1",
+        "FX1"
+      ]
+    },
+    {
+      "name": "Mode3 8Ch",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Strobe Duration",
+        "Sh1",
+        "FX1",
+        "FX2"
+      ]
+    },
+    {
+      "name": "Mode4 9Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      131,
+      140,
+      299
+    ],
+    "weight": 3.0,
+    "power": 50,
+    "bulb": {
+      "type": "LED"
+    },
+    "lens": {
+      "degreesMinMax": [
+        126.0,
+        140.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "XS LED Strobe RGB is an immensely bright, versatile fixture from Mega-Lite. It is equipped with a total of 324 RGB SMD LEDs. The LEDs have a wide 140º LED angle and the unit can operate as a wash or strobe. The XS LED Strobe RGB has 3 segments of control. Line up multiple unit together in matrix to create chases and other eye-catching effects.\n\nThe XS LED Strobe RGB is controlled via DMX 512. The unit has dimmer, red , green, blue, strobe, macro and 3 segment macro channels and 4 modes of operation. It is built with 5 pin XLR in and out connectors and PowerCon in and out connectors. The XS LED Strobe RGB has a single mounting yoke. And, it’s compact measuring 13.66” x 4” x 7.12” and weighing 6.5 lbs.",
+    "beamType": "Rectangle",
+    "operatingTemperature": [
+      0,
+      80
+    ],
+    "revision": {
+      "date": "2023-07-20T08:06:23",
+      "text": "Initial upload by GDTFservice.com, powered by Crescit, commissioned by MegaLite"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "aa9025a068dbb711"
+  },
+  "manufacturerKey": "megalite",
+  "fixtureKey": "xs-led-strobe-rgb",
+  "gwFixtureTypeID": "F2D10BE8-EBE8-11E5-85B4-F0761CCEA3DE"
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RysyParLED",
+  "shortName": "RysyParLED",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-23",
+    "lastModifyDate": "2026-01-28",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 77D0E573-ADBB-40D7-BBDF-264D833D7ABE"
+    }
+  },
+  "comment": "A generic LED PAR 64 RGBW created for BlenderDMX.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            24
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            25,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "RGBW",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "RGBA",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      266,
+      297,
+      322
+    ],
+    "weight": 4.0,
+    "power": 216,
+    "bulb": {
+      "type": "LED",
+      "lumens": 7000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        90.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "A generic LED PAR 64 RGBW created for BlenderDMX.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-01-28T21:04:44",
+      "text": "version7"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c5338b5671d289d0"
+  },
+  "manufacturerKey": "blenderdmx",
+  "fixtureKey": "rysyparled",
+  "gwFixtureTypeID": "77D0E573-ADBB-40D7-BBDF-264D833D7ABE"
+}

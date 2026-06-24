@@ -1,0 +1,488 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EclMiniDAT2700Profile36",
+  "shortName": "Mini27PR36",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-12-21",
+    "lastModifyDate": "2023-02-03",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2B35DCC8-F67C-419C-B73E-9C65726C3737"
+    }
+  },
+  "comment": "The EclMini is a range of ultra-compact, low-profile LED spotlights, designed for galleries, retail or any hospitality venue. There are several control options, sources, and optics available to fit any application.\nThe EclMini DAT is configurable and addressed through RDM and includes a broad set of on-board control options: DMX, DALI Type 6 or local knob dimming control. The EclMini DAT includes a high-efficiency 18W white, high CRI LED source, available in 2,700K, 3,000K, 4,000K, 5,600K variants, with a wide choice of optics and accessories available, making it truly a multi-purpose fixture.",
+  "rdm": {
+    "modelId": 53366
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483646
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseInStrobe"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseOutStrobe"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Linear"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Square Law"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Inverse Square Law"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Auto"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "600 Hz"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "1200 Hz"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "2000 Hz"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "4000 Hz"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "6000 Hz "
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 5,
+          "comment": "25 KHz"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "STAND ALONE MASTER DMX"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "STAND ALONE MASTER NO DMX"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "STAND ALONE SLAVE"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hold"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "BlackOut"
+        },
+        {
+          "dmxRange": [
+            40,
+            253
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "StandAlone"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Control Features Factory Default"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "UNO",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Basic",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "Standard",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Extended",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      107,
+      125,
+      109
+    ],
+    "weight": 1.15,
+    "power": 18,
+    "bulb": {
+      "type": "585nm LED",
+      "lumens": 1104,
+      "colorTemperature": 2800
+    },
+    "lens": {
+      "degreesMinMax": [
+        34.4,
+        37.5
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Led",
+      "cie": "0.446000,0.402000,100.000000",
+      "hex": "#ffe98b",
+      "dominantWavelength": 585.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "The EclMini is a range of ultra-compact, low-profile LED spotlights, designed for galleries, retail or any hospitality venue. There are several control options, sources, and optics available to fit any application.\nThe EclMini DAT is configurable and addressed through RDM and includes a broad set of on-board control options: DMX, DALI Type 6 or local knob dimming control. The EclMini DAT includes a high-efficiency 18W white, high CRI LED source, available in 2,700K, 3,000K, 4,000K, 5,600K variants, with a wide choice of optics and accessories available, making it truly a multi-purpose fixture.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      10,
+      45
+    ],
+    "revision": {
+      "date": "2023-02-03T14:14:34",
+      "text": "Rev 0.2 - Snap disable on shutter"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5b14d8a197ad538e"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "eclminidat2700profile36",
+  "gwFixtureTypeID": "2B35DCC8-F67C-419C-B73E-9C65726C3737"
+}

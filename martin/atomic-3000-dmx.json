@@ -1,0 +1,543 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Atomic 3000 DMX",
+  "shortName": "Atomic",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-08-19",
+    "lastModifyDate": "2020-08-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.0 fixture type ID: E01719CC-4102-451A-8BF6-72E6A2028608"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "defaultValue": 0,
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Intensity",
+          "brightness": "0cd",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": "0.01cd",
+          "brightnessEnd": "1cd",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "defaultValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "0 ms"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "650 ms"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "defaultValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0Hz",
+          "comment": "No flash"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.5Hz",
+          "comment": "5 dHz"
+        },
+        {
+          "dmxRange": [
+            7,
+            129
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "12Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            131,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "25Hz",
+          "comment": "25 Hz"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "Macros off",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "5 dHz"
+        },
+        {
+          "dmxRange": [
+            7,
+            23
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            24,
+            24
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            25,
+            41
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            42,
+            42
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "25 Hz"
+        },
+        {
+          "dmxRange": [
+            43,
+            43
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "5 dHz"
+        },
+        {
+          "dmxRange": [
+            44,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            65,
+            84
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "25 Hz"
+        },
+        {
+          "dmxRange": [
+            86,
+            106
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            107,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "Dimmer effect",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            129,
+            149
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            151,
+            171
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            172,
+            192
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            193,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "Lightning",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            194,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            215,
+            234
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            235,
+            235
+          ],
+          "type": "Effect",
+          "effectName": "Spikes",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            236,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Strobe Duration 2": {
+      "name": "Strobe Duration",
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "0 ms"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "650 ms"
+        }
+      ]
+    },
+    "Strobe Rate 2": {
+      "name": "Strobe Rate",
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0Hz",
+          "comment": "No flash"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.5Hz",
+          "comment": "5 dHz"
+        },
+        {
+          "dmxRange": [
+            7,
+            129
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "12Hz",
+          "comment": "12 Hz"
+        },
+        {
+          "dmxRange": [
+            131,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "25Hz",
+          "comment": "25 Hz"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4 Channel",
+      "channels": [
+        "Dim",
+        "Strobe Duration",
+        "Strobe Rate",
+        "FX1"
+      ]
+    },
+    {
+      "name": "3 Channel",
+      "channels": [
+        "Dim",
+        "Strobe Duration 2",
+        "Strobe Rate 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      245,
+      256,
+      442
+    ],
+    "power": 3000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 180000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        82.0,
+        135.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "revision": {
+      "date": "2020-08-21T03:16:39",
+      "text": "Rev 1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "d1bc7648b5d49acf"
+  },
+  "manufacturerKey": "martin",
+  "fixtureKey": "atomic-3000-dmx",
+  "gwFixtureTypeID": "E01719CC-4102-451A-8BF6-72E6A2028608"
+}

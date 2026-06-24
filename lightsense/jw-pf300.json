@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "JW-PF300",
+  "shortName": "LED Profile Spot 300 W.",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2022-10-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BD1D1971-7A5D-4B19-980B-1299D846EA14"
+    }
+  },
+  "comment": "LED Profile Spot 300 W.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Strobe from fast to slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Closing pluse in sequences"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Opening pluse in sequences"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Random strobe speed frome fast to slow"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "Dim",
+        "Strobe Duration"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-10-12T02:12:20",
+      "text": "LED Profile Spot 300 W."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5bf6523ebbcfbb63"
+  },
+  "manufacturerKey": "lightsense",
+  "fixtureKey": "jw-pf300",
+  "gwFixtureTypeID": "BD1D1971-7A5D-4B19-980B-1299D846EA14"
+}

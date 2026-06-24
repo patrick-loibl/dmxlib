@@ -1,0 +1,284 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RGB LED 1000W COLOURING Strobe",
+  "shortName": "RGB LED 1000W COLOURING Strobe",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-08-04",
+    "lastModifyDate": "2025-08-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F6EF59E2-ED74-42DA-8667-68F6A4928178"
+    }
+  },
+  "wheels": {
+    "Color": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#800000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#008300"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0014ba"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "StrobeM Shutter": {
+      "capability": {
+        "type": "Unknown (StrobeModeShutter)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "C1 Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "C1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Color",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro2": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro2 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro2Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro3": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro3 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro3Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro4": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro4 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro4Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dummy": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dummy 2": {
+      "name": "Dummy",
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dummy 3": {
+      "name": "Dummy",
+      "highlightValue": 0,
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6ch",
+      "channels": [
+        "Dim",
+        "StrobeM Shutter",
+        "Sh1",
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "16ch",
+      "channels": [
+        "Dim",
+        "StrobeM Shutter",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "C1 Mode",
+        "C1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Color Macro2",
+        "Color Macro2 Rate",
+        "Color Macro3",
+        "Color Macro3 Rate",
+        "Color Macro4",
+        "Color Macro4 Rate"
+      ]
+    },
+    {
+      "name": "31ch",
+      "channels": [
+        "Dim",
+        "StrobeM Shutter",
+        "Sh1",
+        "Dummy",
+        "Dummy 2",
+        "Dummy 3",
+        "C1 Mode",
+        "C1",
+        "Color Macro1",
+        "Color Macro1 Rate",
+        "Color Macro2",
+        "Color Macro2 Rate",
+        "Color Macro3",
+        "Color Macro3 Rate",
+        "Color Macro4",
+        "Color Macro4 Rate",
+        "R",
+        "G",
+        "B"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      150,
+      420
+    ],
+    "weight": 5.0,
+    "power": 200,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-08-04T15:17:17",
+      "text": "rev3ok"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2d1d571361c6c375"
+  },
+  "manufacturerKey": "jfb",
+  "fixtureKey": "rgb-led-1000w-colouring-strobe",
+  "gwFixtureTypeID": "F6EF59E2-ED74-42DA-8667-68F6A4928178"
+}

@@ -1,0 +1,3570 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FINE 1200C STROBB",
+  "shortName": "FINE 1200C STROBE",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-26",
+    "lastModifyDate": "2024-04-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D17D1666-7421-4331-A104-A379CAD2C9BF"
+    }
+  },
+  "comment": "FINE 1200C STROBE: FINE 1200C STROBE本产品为一款大功率多功能高亮度LED超强频闪效果灯，最大功率达到1250W。 它的光学分三个部分：中间为超强频闪光部分，由180颗10W冷白光源+条形光学透镜组成，出光角度60度，分10段，每段单独控制，可以跑多种流水闪光效果，还可以通过白光效果时间1、白光效果时间2、白光效果选择三个通道的组合，产生强劲的白光频闪效果；上下为点阵发光面，各由1000颗 1W RGB三合一光源组成，出光角度130°，上下各分为20个方块排布，每个方块RGB均可单独控制。当做染色灯使用时，全域RGB可总控调光和混色，铺光均匀，混色效果好；上下点阵发光面也可以当做彩光频闪灯使用，通过彩光效果时间1、彩光效果时间2、彩光效果选择三个通道的组合，产生丰富的彩色频闪效果；当做效果灯使用时，利用淡入淡出、白光/彩光速度方向选择、白光/彩光形状选择、背景调光等通道的组合使用，效果绚丽多彩；灯体可绕Y轴±91°旋转，多台灯具可横向拼接，如同一台灯具运行；也可以将每台灯具当做10*4的像素矩阵，多台灯具组合使用时，可以跑视频效果；先进的散热设计，保证全色长亮或瞬间高亮频闪时不会损伤灯珠。产品外观简洁、结构紧凑，灯体小，重量才11公斤，适于酒吧、舞台、戏剧、演唱会、网综等各种演出场所。",
+  "availableChannels": {
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 20,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open "
+        },
+        {
+          "dmxRange": [
+            11,
+            105
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            106,
+            110
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            111,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "pulse"
+        },
+        {
+          "dmxRange": [
+            180,
+            185
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 3"
+        },
+        {
+          "dmxRange": [
+            186,
+            253
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 4"
+        }
+      ]
+    },
+    "WhiteShapeSel": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  1"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  2"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  3"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  4"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  5"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  6"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  7"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  8"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  9"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  10"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  11"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  12"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  13"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  14"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  15"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  16"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  17"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  18"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  19"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  20"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "WhiteEff  21"
+        },
+        {
+          "dmxRange": [
+            50,
+            255
+          ],
+          "type": "Unknown (WhiteShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "all WhiteEff  "
+        }
+      ]
+    },
+    "WhiteShapeOffset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape Forward Moving"
+        },
+        {
+          "dmxRange": [
+            16,
+            31
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape Backward Moving"
+        },
+        {
+          "dmxRange": [
+            32,
+            47
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape Bounce Moving"
+        },
+        {
+          "dmxRange": [
+            48,
+            159
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserve"
+        },
+        {
+          "dmxRange": [
+            160,
+            255
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "static sub Shape"
+        }
+      ]
+    },
+    "WhiteShapeSpd": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (ColorShapeSpeed)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static"
+        },
+        {
+          "dmxRange": [
+            8,
+            255
+          ],
+          "type": "Unknown (ColorShapeSpeed)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow to fast"
+        }
+      ]
+    },
+    "WhiteShapeTrans": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            4,
+            7
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fade"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "fade out"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Trails are small to large"
+        }
+      ]
+    },
+    "Color Strobe": {
+      "highlightValue": 20,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Close"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open "
+        },
+        {
+          "dmxRange": [
+            11,
+            105
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            106,
+            110
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            111,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "pulse"
+        },
+        {
+          "dmxRange": [
+            180,
+            185
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 3"
+        },
+        {
+          "dmxRange": [
+            186,
+            253
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 4"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Reserve": {
+      "capability": {
+        "type": "Unknown (Reserve)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ColorPreset",
+          "comment": "close"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 1"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 2"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 3"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 4"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 5"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 6"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 7"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Color variation"
+        }
+      ]
+    },
+    "ColorShapeSel": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 1"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 2"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 3"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 4"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 5"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 6"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 7"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 8"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 9"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 10"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 11"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 12"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 13"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 14"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 15"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 16"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 17"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 18"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 19"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 20"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 21"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 22"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 23"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 24"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 25"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 26"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 27"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 28"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 29"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 30"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 31"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 32"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 33"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 34"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 35"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 36"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 37"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 38"
+        },
+        {
+          "dmxRange": [
+            84,
+            85
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 39"
+        },
+        {
+          "dmxRange": [
+            86,
+            87
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 40"
+        },
+        {
+          "dmxRange": [
+            88,
+            89
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 41"
+        },
+        {
+          "dmxRange": [
+            90,
+            91
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 42"
+        },
+        {
+          "dmxRange": [
+            92,
+            93
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 43"
+        },
+        {
+          "dmxRange": [
+            94,
+            95
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 44"
+        },
+        {
+          "dmxRange": [
+            96,
+            97
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 45"
+        },
+        {
+          "dmxRange": [
+            98,
+            99
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 46"
+        },
+        {
+          "dmxRange": [
+            100,
+            101
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 47"
+        },
+        {
+          "dmxRange": [
+            102,
+            103
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 48"
+        },
+        {
+          "dmxRange": [
+            104,
+            105
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 49"
+        },
+        {
+          "dmxRange": [
+            106,
+            107
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 50"
+        },
+        {
+          "dmxRange": [
+            108,
+            109
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 51"
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            113
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 52"
+        },
+        {
+          "dmxRange": [
+            114,
+            115
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 53"
+        },
+        {
+          "dmxRange": [
+            116,
+            117
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 54"
+        },
+        {
+          "dmxRange": [
+            118,
+            119
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 56"
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 57"
+        },
+        {
+          "dmxRange": [
+            122,
+            123
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 58"
+        },
+        {
+          "dmxRange": [
+            124,
+            125
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 59"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 60"
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 61"
+        },
+        {
+          "dmxRange": [
+            130,
+            131
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 62"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 63"
+        },
+        {
+          "dmxRange": [
+            134,
+            135
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 64"
+        },
+        {
+          "dmxRange": [
+            136,
+            137
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 65"
+        },
+        {
+          "dmxRange": [
+            138,
+            139
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 66"
+        },
+        {
+          "dmxRange": [
+            140,
+            141
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 67"
+        },
+        {
+          "dmxRange": [
+            142,
+            143
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 68"
+        },
+        {
+          "dmxRange": [
+            144,
+            145
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 69"
+        },
+        {
+          "dmxRange": [
+            146,
+            147
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 70"
+        },
+        {
+          "dmxRange": [
+            148,
+            149
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 71"
+        },
+        {
+          "dmxRange": [
+            150,
+            151
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 72"
+        },
+        {
+          "dmxRange": [
+            152,
+            153
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 73"
+        },
+        {
+          "dmxRange": [
+            154,
+            155
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 74"
+        },
+        {
+          "dmxRange": [
+            156,
+            157
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 75"
+        },
+        {
+          "dmxRange": [
+            158,
+            159
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 76"
+        },
+        {
+          "dmxRange": [
+            160,
+            161
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 77"
+        },
+        {
+          "dmxRange": [
+            162,
+            163
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 78"
+        },
+        {
+          "dmxRange": [
+            164,
+            165
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 79"
+        },
+        {
+          "dmxRange": [
+            166,
+            167
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 80"
+        },
+        {
+          "dmxRange": [
+            168,
+            169
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 81"
+        },
+        {
+          "dmxRange": [
+            170,
+            171
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 82"
+        },
+        {
+          "dmxRange": [
+            172,
+            173
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 83"
+        },
+        {
+          "dmxRange": [
+            174,
+            175
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 84"
+        },
+        {
+          "dmxRange": [
+            176,
+            177
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 85"
+        },
+        {
+          "dmxRange": [
+            178,
+            179
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 86"
+        },
+        {
+          "dmxRange": [
+            180,
+            181
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 87"
+        },
+        {
+          "dmxRange": [
+            182,
+            183
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 88"
+        },
+        {
+          "dmxRange": [
+            184,
+            185
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 89"
+        },
+        {
+          "dmxRange": [
+            186,
+            187
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 90"
+        },
+        {
+          "dmxRange": [
+            188,
+            189
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 91"
+        },
+        {
+          "dmxRange": [
+            190,
+            191
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 92"
+        },
+        {
+          "dmxRange": [
+            192,
+            193
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 93"
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 94"
+        },
+        {
+          "dmxRange": [
+            196,
+            197
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 95"
+        },
+        {
+          "dmxRange": [
+            198,
+            199
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color effects 96"
+        },
+        {
+          "dmxRange": [
+            200,
+            215
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "circulate"
+        },
+        {
+          "dmxRange": [
+            216,
+            235
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "random colored"
+        },
+        {
+          "dmxRange": [
+            236,
+            245
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "Unknown (ColorShapeSel)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "random mono"
+        }
+      ]
+    },
+    "ColorShapeOffset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape Forward Moving"
+        },
+        {
+          "dmxRange": [
+            16,
+            31
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape Backward Moving"
+        },
+        {
+          "dmxRange": [
+            32,
+            47
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shape Bounce Moving"
+        },
+        {
+          "dmxRange": [
+            48,
+            159
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reserve"
+        },
+        {
+          "dmxRange": [
+            160,
+            255
+          ],
+          "type": "Unknown (WhiteShapeOffset)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "static sub Shape"
+        }
+      ]
+    },
+    "ColorShapeSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (ColorShapeSpeed)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Static"
+        },
+        {
+          "dmxRange": [
+            8,
+            255
+          ],
+          "type": "Unknown (ColorShapeSpeed)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow to fast"
+        }
+      ]
+    },
+    "ColorShapeTrans": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            4,
+            7
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fade"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "fade out"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Unknown (ColorShapeTrans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Trails are small to large"
+        }
+      ]
+    },
+    "ColorBkgDimmer": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "ColorBkgMacro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ColorPreset",
+          "comment": "close"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 1"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 2"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 3"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 4"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 5"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 6"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Rainbow effect 7"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Color variation"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            4,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED lattice reverse close"
+        },
+        {
+          "dmxRange": [
+            8,
+            11
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED lattice reverse open"
+        },
+        {
+          "dmxRange": [
+            12,
+            243
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "reserved 1"
+        },
+        {
+          "dmxRange": [
+            244,
+            247
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "actuated reset"
+        },
+        {
+          "dmxRange": [
+            248,
+            251
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "reserved 2"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "All reset"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 9": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 9": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 9": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 10": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 10": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 10": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 11": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 11": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 11": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 12": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 12": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 12": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 13": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 13": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 13": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 14": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 14": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 14": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 15": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 15": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 15": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 16": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 16": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 16": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 17": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 17": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 17": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 18": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 18": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 18": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 19": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 19": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 19": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 20": {
+      "name": "R",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 20": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 20": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 21": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 21": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 21": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 22": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 22": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 22": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 23": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 23": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 23": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 24": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 24": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 24": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 25": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 25": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 25": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 26": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 26": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 26": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 27": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 27": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 27": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 28": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 28": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 28": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 29": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 29": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 29": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 30": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 30": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 30": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 31": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 31": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 31": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 32": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 32": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 32": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 33": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 33": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 33": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 34": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 34": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 34": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 35": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 35": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 35": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 36": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 36": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 36": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 37": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 37": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 37": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 38": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 38": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 38": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 39": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 39": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 39": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 40": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 40": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 40": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White P1 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P1 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P2 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P2 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P3 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P3 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P4 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P4 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P5 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P5 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P6 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P6 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P7 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P7 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P8 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P8 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P9 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P9 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White P10 Dimmer": {
+      "capability": {
+        "type": "Unknown (White P10 Dimmer)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP1Dim": {
+      "capability": {
+        "type": "Unknown (ColorP1Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP2Dim": {
+      "capability": {
+        "type": "Unknown (ColorP2Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP3Dim": {
+      "capability": {
+        "type": "Unknown (ColorP3Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP5Dim": {
+      "capability": {
+        "type": "Unknown (ColorP5Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP6Dim": {
+      "capability": {
+        "type": "Unknown (ColorP6Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP7Dim": {
+      "capability": {
+        "type": "Unknown (ColorP7Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP8Dim": {
+      "capability": {
+        "type": "Unknown (ColorP7Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP9Dim": {
+      "capability": {
+        "type": "Unknown (ColorP9Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP10Dim": {
+      "capability": {
+        "type": "Unknown (ColorP10Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP11Dim": {
+      "capability": {
+        "type": "Unknown (ColorP11Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP12Dim": {
+      "capability": {
+        "type": "Unknown (ColorP12Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP13Dim": {
+      "capability": {
+        "type": "Unknown (ColorP13Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP14Dim": {
+      "capability": {
+        "type": "Unknown (ColorP14Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP15Dim": {
+      "capability": {
+        "type": "Unknown (ColorP15Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP16Dim": {
+      "capability": {
+        "type": "Unknown (ColorP16Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP17Dim": {
+      "capability": {
+        "type": "Unknown (ColorP17Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP18Dim": {
+      "capability": {
+        "type": "Unknown (ColorP18Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP19Dim": {
+      "capability": {
+        "type": "Unknown (ColorP19Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP20Dim": {
+      "capability": {
+        "type": "Unknown (ColorP20Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP4Dim": {
+      "capability": {
+        "type": "Unknown (ColorP4Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP21Dim": {
+      "capability": {
+        "type": "Unknown (ColorP21Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP22Dim": {
+      "capability": {
+        "type": "Unknown (ColorP22Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP23Dim": {
+      "capability": {
+        "type": "Unknown (ColorP23Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP24Dim": {
+      "capability": {
+        "type": "Unknown (ColorP24Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP25Dim": {
+      "capability": {
+        "type": "Unknown (ColorP25Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP26Dim": {
+      "capability": {
+        "type": "Unknown (ColorP26Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP27Dim": {
+      "capability": {
+        "type": "Unknown (ColorP27Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP28Dim": {
+      "capability": {
+        "type": "Unknown (ColorP28Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP29Dim": {
+      "capability": {
+        "type": "Unknown (ColorP29Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP30Dim": {
+      "capability": {
+        "type": "Unknown (ColorP30Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP31Dim": {
+      "capability": {
+        "type": "Unknown (ColorP31Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP32Dim": {
+      "capability": {
+        "type": "Unknown (ColorP32Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP33Dim": {
+      "capability": {
+        "type": "Unknown (ColorP33Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP34Dim": {
+      "capability": {
+        "type": "Unknown (ColorP34Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP35Dim": {
+      "capability": {
+        "type": "Unknown (ColorP35Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP36Dim": {
+      "capability": {
+        "type": "Unknown (ColorP36Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP37Dim": {
+      "capability": {
+        "type": "Unknown (ColorP37Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP38Dim": {
+      "capability": {
+        "type": "Unknown (ColorP38Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP39Dim": {
+      "capability": {
+        "type": "Unknown (ColorP39Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "ColorP40Dim": {
+      "capability": {
+        "type": "Unknown (ColorP40Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Stand-23",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim",
+        "Dim fine",
+        "White",
+        "Sh1",
+        "WhiteShapeSel",
+        "WhiteShapeOffset",
+        "WhiteShapeSpd",
+        "WhiteShapeTrans",
+        "Color Strobe",
+        "R",
+        "G",
+        "B",
+        "Reserve",
+        "Color Macro1",
+        "ColorShapeSel",
+        "ColorShapeOffset",
+        "ColorShapeSpeed",
+        "ColorShapeTrans",
+        "ColorBkgDimmer",
+        "ColorBkgMacro",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "1K2C-RGB 138",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Color Strobe",
+        "Ctrl1 2",
+        "Reserve",
+        "White P1 Dimmer",
+        "White P2 Dimmer",
+        "White P3 Dimmer",
+        "White P4 Dimmer",
+        "White P5 Dimmer",
+        "White P6 Dimmer",
+        "White P7 Dimmer",
+        "White P8 Dimmer",
+        "White P9 Dimmer",
+        "White P10 Dimmer",
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "R 10",
+        "G 10",
+        "B 10",
+        "R 11",
+        "G 11",
+        "B 11",
+        "R 12",
+        "G 12",
+        "B 12",
+        "R 13",
+        "G 13",
+        "B 13",
+        "R 14",
+        "G 14",
+        "B 14",
+        "R 15",
+        "G 15",
+        "B 15",
+        "R 16",
+        "G 16",
+        "B 16",
+        "R 17",
+        "G 17",
+        "B 17",
+        "R 18",
+        "G 18",
+        "B 18",
+        "R 19",
+        "G 19",
+        "B 19",
+        "R 20",
+        "G 20",
+        "B 20",
+        "R 21",
+        "G 21",
+        "B 21",
+        "R 22",
+        "G 22",
+        "B 22",
+        "R 23",
+        "G 23",
+        "B 23",
+        "R 24",
+        "G 24",
+        "B 24",
+        "R 25",
+        "G 25",
+        "B 25",
+        "R 26",
+        "G 26",
+        "B 26",
+        "R 27",
+        "G 27",
+        "B 27",
+        "R 28",
+        "G 28",
+        "B 28",
+        "R 29",
+        "G 29",
+        "B 29",
+        "R 30",
+        "G 30",
+        "B 30",
+        "R 31",
+        "G 31",
+        "B 31",
+        "R 32",
+        "G 32",
+        "B 32",
+        "R 33",
+        "G 33",
+        "B 33",
+        "R 34",
+        "G 34",
+        "B 34",
+        "R 35",
+        "G 35",
+        "B 35",
+        "R 36",
+        "G 36",
+        "B 36",
+        "R 37",
+        "G 37",
+        "B 37",
+        "R 38",
+        "G 38",
+        "B 38",
+        "R 39",
+        "G 39",
+        "B 39",
+        "R 40",
+        "G 40",
+        "B 40"
+      ]
+    },
+    {
+      "name": "1K2C-SIMP16",
+      "channels": [
+        "T",
+        "Dim",
+        "White",
+        "Sh1",
+        "WhiteShapeSel",
+        "WhiteShapeSpd",
+        "Color Strobe",
+        "R",
+        "G",
+        "B",
+        "Reserve",
+        "Color Macro1",
+        "ColorShapeSel",
+        "ColorShapeSpeed",
+        "ColorShapeTrans",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "1K2C-PixDim61",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Color Strobe",
+        "Ctrl1 2",
+        "Reserve",
+        "R",
+        "G",
+        "B",
+        "White P1 Dimmer",
+        "White P2 Dimmer",
+        "White P3 Dimmer",
+        "White P4 Dimmer",
+        "White P5 Dimmer",
+        "White P6 Dimmer",
+        "White P7 Dimmer",
+        "White P8 Dimmer",
+        "White P9 Dimmer",
+        "White P10 Dimmer",
+        "ColorP1Dim",
+        "ColorP2Dim",
+        "ColorP3Dim",
+        "ColorP4Dim",
+        "ColorP5Dim",
+        "ColorP6Dim",
+        "ColorP7Dim",
+        "ColorP8Dim",
+        "ColorP9Dim",
+        "ColorP10Dim",
+        "ColorP11Dim",
+        "ColorP12Dim",
+        "ColorP13Dim",
+        "ColorP14Dim",
+        "ColorP15Dim",
+        "ColorP16Dim",
+        "ColorP17Dim",
+        "ColorP18Dim",
+        "ColorP19Dim",
+        "ColorP20Dim",
+        "ColorP21Dim",
+        "ColorP22Dim",
+        "ColorP23Dim",
+        "ColorP24Dim",
+        "ColorP25Dim",
+        "ColorP26Dim",
+        "ColorP27Dim",
+        "ColorP28Dim",
+        "ColorP29Dim",
+        "ColorP30Dim",
+        "ColorP31Dim",
+        "ColorP32Dim",
+        "ColorP33Dim",
+        "ColorP34Dim",
+        "ColorP35Dim",
+        "ColorP36Dim",
+        "ColorP37Dim",
+        "ColorP38Dim",
+        "ColorP39Dim",
+        "ColorP40Dim"
+      ]
+    },
+    {
+      "name": "1K2C-RGB8+130",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Color Strobe",
+        "Ctrl1 2",
+        "Reserve",
+        "White P1 Dimmer",
+        "White P2 Dimmer",
+        "White P3 Dimmer",
+        "White P4 Dimmer",
+        "White P5 Dimmer",
+        "White P6 Dimmer",
+        "White P7 Dimmer",
+        "White P8 Dimmer",
+        "White P9 Dimmer",
+        "White P10 Dimmer",
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "R 8",
+        "G 8",
+        "B 8",
+        "R 9",
+        "G 9",
+        "B 9",
+        "R 10",
+        "G 10",
+        "B 10",
+        "R 11",
+        "G 11",
+        "B 11",
+        "R 12",
+        "G 12",
+        "B 12",
+        "R 13",
+        "G 13",
+        "B 13",
+        "R 14",
+        "G 14",
+        "B 14",
+        "R 15",
+        "G 15",
+        "B 15",
+        "R 16",
+        "G 16",
+        "B 16",
+        "R 17",
+        "G 17",
+        "B 17",
+        "R 18",
+        "G 18",
+        "B 18",
+        "R 19",
+        "G 19",
+        "B 19",
+        "R 20",
+        "G 20",
+        "B 20",
+        "R 21",
+        "G 21",
+        "B 21",
+        "R 22",
+        "G 22",
+        "B 22",
+        "R 23",
+        "G 23",
+        "B 23",
+        "R 24",
+        "G 24",
+        "B 24",
+        "R 25",
+        "G 25",
+        "B 25",
+        "R 26",
+        "G 26",
+        "B 26",
+        "R 27",
+        "G 27",
+        "B 27",
+        "R 28",
+        "G 28",
+        "B 28",
+        "R 29",
+        "G 29",
+        "B 29",
+        "R 30",
+        "G 30",
+        "B 30",
+        "R 31",
+        "G 31",
+        "B 31",
+        "R 32",
+        "G 32",
+        "B 32",
+        "R 33",
+        "G 33",
+        "B 33",
+        "R 34",
+        "G 34",
+        "B 34",
+        "R 35",
+        "G 35",
+        "B 35",
+        "R 36",
+        "G 36",
+        "B 36",
+        "R 37",
+        "G 37",
+        "B 37",
+        "R 38",
+        "G 38",
+        "B 38",
+        "R 39",
+        "G 39",
+        "B 39",
+        "R 40",
+        "G 40",
+        "B 40"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      148,
+      225,
+      390
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "FINE 1200C STROBE本产品为一款大功率多功能高亮度LED超强频闪效果灯，最大功率达到1250W。 它的光学分三个部分：中间为超强频闪光部分，由180颗10W冷白光源+条形光学透镜组成，出光角度60度，分10段，每段单独控制，可以跑多种流水闪光效果，还可以通过白光效果时间1、白光效果时间2、白光效果选择三个通道的组合，产生强劲的白光频闪效果；上下为点阵发光面，各由1000颗 1W RGB三合一光源组成，出光角度130°，上下各分为20个方块排布，每个方块RGB均可单独控制。当做染色灯使用时，全域RGB可总控调光和混色，铺光均匀，混色效果好；上下点阵发光面也可以当做彩光频闪灯使用，通过彩光效果时间1、彩光效果时间2、彩光效果选择三个通道的组合，产生丰富的彩色频闪效果；当做效果灯使用时，利用淡入淡出、白光/彩光速度方向选择、白光/彩光形状选择、背景调光等通道的组合使用，效果绚丽多彩；灯体可绕Y轴±91°旋转，多台灯具可横向拼接，如同一台灯具运行；也可以将每台灯具当做10*4的像素矩阵，多台灯具组合使用时，可以跑视频效果；先进的散热设计，保证全色长亮或瞬间高亮频闪时不会损伤灯珠。产品外观简洁、结构紧凑，灯体小，重量才11公斤，适于酒吧、舞台、戏剧、演唱会、网综等各种演出场所。",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-23T07:25:11",
+      "text": "FINE 1200C STROBB"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c80635c3ff21cfa9"
+  },
+  "manufacturerKey": "fine-art",
+  "fixtureKey": "fine-1200c-strobb",
+  "gwFixtureTypeID": "D17D1666-7421-4331-A104-A379CAD2C9BF"
+}

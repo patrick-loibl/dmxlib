@@ -1,0 +1,118 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Profile 180 CTO",
+  "shortName": "Profile 180 CTO",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-09-10",
+    "lastModifyDate": "2024-09-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F920EF62-BCE2-498D-8737-8635CE6B9FC8"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTO": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "Cold to Warm"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S>F"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3Ch",
+      "channels": [
+        "Dim",
+        "CTO",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      160,
+      540,
+      160
+    ],
+    "weight": 6.4,
+    "power": 180,
+    "bulb": {
+      "type": "LED",
+      "lumens": 22500,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        19.0,
+        19.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.412500,0.439600,71.750000",
+      "hex": "#fada6b"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2024-09-10T07:27:47",
+      "text": "Profile 180 CTO"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "cec72c97597b534d"
+  },
+  "manufacturerKey": "brighter",
+  "fixtureKey": "profile-180-cto",
+  "gwFixtureTypeID": "F920EF62-BCE2-498D-8737-8635CE6B9FC8"
+}

@@ -1,0 +1,397 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COB 200 4 IP",
+  "shortName": "COB200",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-12-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6412FE3B-A7D9-4E90-AC03-BDA920075509"
+    }
+  },
+  "comment": "COB 200 4 IP es un proyector potente que incluye 1x COB RGBW LED (4 en 1) de 150W. Este dispositivo permite obtener ricas variaciones de color mezclando estos 4 tonos. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como dimmer manual, colores fijos y dos modos de luz estroboscópica con control de velocidad. Su alto rango de IP (IP65) permite ser utilizado en aplicaciones de exterior, gracias a sus conectores con protecciones y la carcasa sellada. El dispositivo incluye el modo DMX (8 canales) con nivel de atenuación individual, función estrobo y programa automático con control de velocidad.",
+  "wheels": {
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cyan",
+          "colors": [
+            "#05e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#e404e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "S > F"
+      }
+    },
+    "FX1 Rate 2": {
+      "name": "FX1 Rate",
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "No function"
+      }
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 1,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            1,
+            17
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 2,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            18,
+            35
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 3,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            36,
+            53
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 4,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            54,
+            71
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 5,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            72,
+            89
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 6,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            90,
+            107
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 7,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            108,
+            125
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 8,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 5,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate 2"
+          }
+        },
+        {
+          "dmxRange": [
+            128,
+            169
+          ],
+          "type": "Effect",
+          "effectName": "Jump Red - Blue",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            170,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "Jump Color Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            211,
+            238
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Color Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            239,
+            245
+          ],
+          "type": "Effect",
+          "effectName": "Sound Burst Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate"
+          }
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Color Change",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Beam_Effects1Rate": "FX1 Rate"
+          }
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "8 CHANNELS",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Strobe1",
+        "0_Beam_Effects1Rate",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      260,
+      238
+    ],
+    "weight": 7.0,
+    "power": 30,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "COB 200 4 IP es un proyector potente que incluye 1x COB RGBW LED (4 en 1) de 150W. Este dispositivo permite obtener ricas variaciones de color mezclando estos 4 tonos. La interfaz de configuración tiene una pantalla con toda la información y los botones para navegar por los menús, seleccionando parámetros como dimmer manual, colores fijos y dos modos de luz estroboscópica con control de velocidad. Su alto rango de IP (IP65) permite ser utilizado en aplicaciones de exterior, gracias a sus conectores con protecciones y la carcasa sellada. El dispositivo incluye el modo DMX (8 canales) con nivel de atenuación individual, función estrobo y programa automático con control de velocidad.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-05T12:52:28",
+      "text": "Version2-1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "5cc278ad14967094"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "cob-200-4-ip",
+  "gwFixtureTypeID": "6412FE3B-A7D9-4E90-AC03-BDA920075509"
+}

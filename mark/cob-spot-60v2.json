@@ -1,0 +1,223 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "COB SPOT 60V2",
+  "shortName": "COBSpot80",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-12-02",
+    "lastModifyDate": "2025-12-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E1820648-D9CF-44F3-8F64-3042B9B49C2E"
+    }
+  },
+  "comment": "COB SPOT 80: Proyector RGB con LED COB de 60 W. Angulo de apertura de 60 w. Posibilidad de control mediante DMX y modos automáticos",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F"
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "Macro Speed S > F"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Effect",
+          "effectName": "No function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            52,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Color Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Gradual Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Effect",
+          "effectName": "Jump Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound Mode",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 CHANNELS",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "7 CHANNELS",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "Strobe1",
+        "FX1 Rate",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      210,
+      240,
+      260
+    ],
+    "weight": 3.5,
+    "power": 10,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 5999,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        6.0,
+        11.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Proyector RGB con LED COB de 60 W. Angulo de apertura de 60 w. Posibilidad de control mediante DMX y modos automáticos",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-02T16:48:19",
+      "text": "Version 2"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9165a063c44206d3"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "cob-spot-60v2",
+  "gwFixtureTypeID": "E1820648-D9CF-44F3-8F64-3042B9B49C2E"
+}

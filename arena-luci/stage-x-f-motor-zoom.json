@@ -1,0 +1,200 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Stage X F Motor zoom",
+  "shortName": "Stage X mot",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-12-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2159E679-025A-4FF8-B5B1-ED3BC9953BAC"
+    }
+  },
+  "comment": "TSF1214501-530XRNM Stage X F Motor zoom: Stage X, the latest addition to the world of stage lighting, is an excellent choice for anyone looking for a versatile, customizable and eco friendly spotlight for their performance or event. Developed and produced by Arena Luci, this spotlight is made in Italy and features high efficiency LED technology that ensures a bright and clear spotlight with minimal energy consumption. Its compact size and customizable features make it easy to handle and adjust to suit your specific lighting needs.\nYou can adjust brightness and beam angle to perfectly complement your performance, ensuring that you always have the right amount of light on stage. Stage X operates silently thanks to its top of the line heat dissipators that ensure efficient and silent operation. Whether  you're a professional stage performer, a theater production company  or simply looking for an effective lighting solution for your event, Stage X is an excellent choice.",
+  "rdm": {
+    "modelId": 329
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Mode 2",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode 3",
+      "channels": [
+        "Dim",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "Mode 4",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "weight": 7.0,
+    "power": 130,
+    "bulb": {
+      "type": "LED",
+      "lumens": 11600,
+      "colorTemperature": 3000
+    },
+    "lens": {
+      "degreesMinMax": [
+        10.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "3000K",
+      "cie": "0.320100,0.314000,100.000000",
+      "hex": "#fff8ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Stage X, the latest addition to the world of stage lighting, is an excellent choice for anyone looking for a versatile, customizable and eco friendly spotlight for their performance or event. Developed and produced by Arena Luci, this spotlight is made in Italy and features high efficiency LED technology that ensures a bright and clear spotlight with minimal energy consumption. Its compact size and customizable features make it easy to handle and adjust to suit your specific lighting needs.\nYou can adjust brightness and beam angle to perfectly complement your performance, ensuring that you always have the right amount of light on stage. Stage X operates silently thanks to its top of the line heat dissipators that ensure efficient and silent operation. Whether  you're a professional stage performer, a theater production company  or simply looking for an effective lighting solution for your event, Stage X is an excellent choice.",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -10,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-23T13:53:38",
+      "text": "0002"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2a11f3dc570985dc"
+  },
+  "manufacturerKey": "arena-luci",
+  "fixtureKey": "stage-x-f-motor-zoom",
+  "gwFixtureTypeID": "2159E679-025A-4FF8-B5B1-ED3BC9953BAC"
+}

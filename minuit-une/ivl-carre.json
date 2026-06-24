@@ -2,9 +2,16 @@
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "IVL Carré",
   "shortName": "ivlcarre",
-  "categories": ["Laser", "Effect", "Color Changer"],
+  "categories": [
+    "Laser",
+    "Effect",
+    "Color Changer",
+    "Gobo"
+  ],
   "meta": {
-    "authors": ["ameisso"],
+    "authors": [
+      "ameisso"
+    ],
     "createDate": "2018-03-30",
     "lastModifyDate": "2018-09-04"
   },
@@ -17,12 +24,24 @@
     ]
   },
   "physical": {
-    "dimensions": [594.3, 200, 551.9],
+    "dimensions": [
+      594.3,
+      200,
+      551.9
+    ],
     "weight": 13,
     "power": 125,
     "DMXconnector": "5-pin",
     "bulb": {
-      "type": "Laser"
+      "type": "Laser",
+      "lumens": 5000,
+      "colorTemperature": 10000
+    },
+    "lens": {
+      "degreesMinMax": [
+        0.1,
+        0.1
+      ]
     }
   },
   "availableChannels": {
@@ -30,17 +49,26 @@
       "defaultValue": 191,
       "capabilities": [
         {
-          "dmxRange": [0, 23],
+          "dmxRange": [
+            0,
+            23
+          ],
           "type": "Maintenance",
           "comment": "Off"
         },
         {
-          "dmxRange": [24, 49],
+          "dmxRange": [
+            24,
+            49
+          ],
           "type": "Maintenance",
           "comment": "Reset"
         },
         {
-          "dmxRange": [50, 255],
+          "dmxRange": [
+            50,
+            255
+          ],
           "type": "Maintenance",
           "comment": "On"
         }
@@ -53,7 +81,9 @@
       }
     },
     "Blade": {
-      "fineChannelAliases": ["Blade fine"],
+      "fineChannelAliases": [
+        "Blade fine"
+      ],
       "capability": {
         "type": "BladeRotation",
         "blade": 1,
@@ -86,40 +116,60 @@
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 14],
+          "dmxRange": [
+            0,
+            14
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         },
         {
-          "dmxRange": [15, 27],
+          "dmxRange": [
+            15,
+            27
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Closed"
         },
         {
-          "dmxRange": [28, 227],
+          "dmxRange": [
+            28,
+            227
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "30bpm",
           "speedEnd": "1440bpm"
         },
         {
-          "dmxRange": [228, 255],
+          "dmxRange": [
+            228,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Open"
         }
       ]
     },
     "Tilt All": {
-      "fineChannelAliases": ["Tilt All fine"],
+      "fineChannelAliases": [
+        "Tilt All fine"
+      ],
       "dmxValueResolution": "8bit",
       "defaultValue": 0,
       "capabilities": [
         {
-          "dmxRange": [0, 12],
+          "dmxRange": [
+            0,
+            12
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [13, 255],
+          "dmxRange": [
+            13,
+            255
+          ],
           "type": "Tilt",
           "angleStart": "0deg",
           "angleEnd": "360deg"
@@ -127,7 +177,9 @@
       ]
     },
     "Tilt 1": {
-      "fineChannelAliases": ["Tilt 1 fine"],
+      "fineChannelAliases": [
+        "Tilt 1 fine"
+      ],
       "defaultValue": 0,
       "capability": {
         "type": "Tilt",
@@ -136,7 +188,9 @@
       }
     },
     "Tilt 2": {
-      "fineChannelAliases": ["Tilt 2 fine"],
+      "fineChannelAliases": [
+        "Tilt 2 fine"
+      ],
       "defaultValue": 0,
       "capability": {
         "type": "Tilt",
@@ -145,7 +199,9 @@
       }
     },
     "Tilt 3": {
-      "fineChannelAliases": ["Tilt 3 fine"],
+      "fineChannelAliases": [
+        "Tilt 3 fine"
+      ],
       "defaultValue": 0,
       "capability": {
         "type": "Tilt",
@@ -154,7 +210,9 @@
       }
     },
     "Tilt 4": {
-      "fineChannelAliases": ["Tilt 4 fine"],
+      "fineChannelAliases": [
+        "Tilt 4 fine"
+      ],
       "defaultValue": 0,
       "capability": {
         "type": "Tilt",
@@ -165,39 +223,59 @@
     "Gobo All": {
       "capabilities": [
         {
-          "dmxRange": [0, 36],
+          "dmxRange": [
+            0,
+            36
+          ],
           "type": "Effect",
           "effectName": "1 Beam"
         },
         {
-          "dmxRange": [37, 73],
+          "dmxRange": [
+            37,
+            73
+          ],
           "type": "Effect",
           "effectName": "2 Beams"
         },
         {
-          "dmxRange": [74, 110],
+          "dmxRange": [
+            74,
+            110
+          ],
           "type": "Effect",
           "effectName": "3 Beams"
         },
         {
-          "dmxRange": [111, 147],
+          "dmxRange": [
+            111,
+            147
+          ],
           "type": "Effect",
           "effectName": "8 Beams"
         },
         {
-          "dmxRange": [148, 184],
+          "dmxRange": [
+            148,
+            184
+          ],
           "type": "Effect",
           "effectName": "16 Beams"
         },
         {
-          "dmxRange": [185, 255],
+          "dmxRange": [
+            185,
+            255
+          ],
           "type": "Effect",
           "effectName": "32 Beams"
         }
       ]
     },
     "Index": {
-      "fineChannelAliases": ["Index fine"],
+      "fineChannelAliases": [
+        "Index fine"
+      ],
       "defaultValue": 32767,
       "capability": {
         "type": "Rotation",
@@ -208,32 +286,49 @@
     "Rotation": {
       "capabilities": [
         {
-          "dmxRange": [0, 12],
+          "dmxRange": [
+            0,
+            12
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [13, 122],
+          "dmxRange": [
+            13,
+            122
+          ],
           "type": "Rotation",
           "speed": "fast CCW"
         },
         {
-          "dmxRange": [123, 133],
+          "dmxRange": [
+            123,
+            133
+          ],
           "type": "Rotation",
           "speed": "stop"
         },
         {
-          "dmxRange": [134, 242],
+          "dmxRange": [
+            134,
+            242
+          ],
           "type": "Rotation",
           "speed": "fast CW"
         },
         {
-          "dmxRange": [243, 255],
+          "dmxRange": [
+            243,
+            255
+          ],
           "type": "NoFunction"
         }
       ]
     },
     "Gobo Beam Angle all": {
-      "fineChannelAliases": ["Gobo Beam Angle all fine"],
+      "fineChannelAliases": [
+        "Gobo Beam Angle all fine"
+      ],
       "capability": {
         "type": "BeamAngle",
         "angleStart": "0deg",
@@ -243,44 +338,67 @@
     "Red Gobo": {
       "capabilities": [
         {
-          "dmxRange": [0, 36],
+          "dmxRange": [
+            0,
+            36
+          ],
           "type": "Effect",
           "effectName": "1 Beam"
         },
         {
-          "dmxRange": [37, 73],
+          "dmxRange": [
+            37,
+            73
+          ],
           "type": "Effect",
           "effectName": "2 Beams"
         },
         {
-          "dmxRange": [74, 110],
+          "dmxRange": [
+            74,
+            110
+          ],
           "type": "Effect",
           "effectName": "4 Beams"
         },
         {
-          "dmxRange": [111, 147],
+          "dmxRange": [
+            111,
+            147
+          ],
           "type": "Effect",
           "effectName": "8 Beams"
         },
         {
-          "dmxRange": [148, 184],
+          "dmxRange": [
+            148,
+            184
+          ],
           "type": "Effect",
           "effectName": "16 Beams"
         },
         {
-          "dmxRange": [185, 221],
+          "dmxRange": [
+            185,
+            221
+          ],
           "type": "Effect",
           "effectName": "32 Beams"
         },
         {
-          "dmxRange": [222, 255],
+          "dmxRange": [
+            222,
+            255
+          ],
           "type": "Effect",
           "effectName": "64 Beams"
         }
       ]
     },
     "Index Red": {
-      "fineChannelAliases": ["Index Red fine"],
+      "fineChannelAliases": [
+        "Index Red fine"
+      ],
       "defaultValue": 32767,
       "capability": {
         "type": "Rotation",
@@ -291,73 +409,113 @@
     "Green Gobo": {
       "capabilities": [
         {
-          "dmxRange": [0, 36],
+          "dmxRange": [
+            0,
+            36
+          ],
           "type": "Effect",
           "effectName": "1 Beam"
         },
         {
-          "dmxRange": [37, 73],
+          "dmxRange": [
+            37,
+            73
+          ],
           "type": "Effect",
           "effectName": "2 Beams"
         },
         {
-          "dmxRange": [74, 110],
+          "dmxRange": [
+            74,
+            110
+          ],
           "type": "Effect",
           "effectName": "3 Beams"
         },
         {
-          "dmxRange": [111, 147],
+          "dmxRange": [
+            111,
+            147
+          ],
           "type": "Effect",
           "effectName": "8 Beams"
         },
         {
-          "dmxRange": [148, 184],
+          "dmxRange": [
+            148,
+            184
+          ],
           "type": "Effect",
           "effectName": "16 Beams"
         },
         {
-          "dmxRange": [185, 221],
+          "dmxRange": [
+            185,
+            221
+          ],
           "type": "Effect",
           "effectName": "32 Beams"
         },
         {
-          "dmxRange": [222, 255],
+          "dmxRange": [
+            222,
+            255
+          ],
           "type": "Effect",
           "effectName": "64 Beams"
         }
       ]
     },
     "Rotation Red": {
-      "fineChannelAliases": ["Rotation Red fine"],
+      "fineChannelAliases": [
+        "Rotation Red fine"
+      ],
       "dmxValueResolution": "8bit",
       "capabilities": [
         {
-          "dmxRange": [0, 12],
+          "dmxRange": [
+            0,
+            12
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [13, 122],
+          "dmxRange": [
+            13,
+            122
+          ],
           "type": "Rotation",
           "speed": "fast CCW"
         },
         {
-          "dmxRange": [123, 133],
+          "dmxRange": [
+            123,
+            133
+          ],
           "type": "Rotation",
           "speed": "stop"
         },
         {
-          "dmxRange": [134, 242],
+          "dmxRange": [
+            134,
+            242
+          ],
           "type": "Rotation",
           "speed": "fast CW"
         },
         {
-          "dmxRange": [243, 255],
+          "dmxRange": [
+            243,
+            255
+          ],
           "type": "NoFunction"
         }
       ]
     },
     "Index Green": {
-      "fineChannelAliases": ["Index Green fine"],
+      "fineChannelAliases": [
+        "Index Green fine"
+      ],
       "defaultValue": 32767,
       "capability": {
         "type": "Rotation",
@@ -366,30 +524,47 @@
       }
     },
     "Rotation Green": {
-      "fineChannelAliases": ["Rotation Green fine"],
+      "fineChannelAliases": [
+        "Rotation Green fine"
+      ],
       "dmxValueResolution": "8bit",
       "capabilities": [
         {
-          "dmxRange": [0, 12],
+          "dmxRange": [
+            0,
+            12
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [13, 122],
+          "dmxRange": [
+            13,
+            122
+          ],
           "type": "Rotation",
           "speed": "fast CCW"
         },
         {
-          "dmxRange": [123, 133],
+          "dmxRange": [
+            123,
+            133
+          ],
           "type": "Rotation",
           "speed": "stop"
         },
         {
-          "dmxRange": [134, 242],
+          "dmxRange": [
+            134,
+            242
+          ],
           "type": "Rotation",
           "speed": "fast CW"
         },
         {
-          "dmxRange": [243, 255],
+          "dmxRange": [
+            243,
+            255
+          ],
           "type": "NoFunction"
         }
       ]
@@ -397,44 +572,67 @@
     "Blue Gobo": {
       "capabilities": [
         {
-          "dmxRange": [0, 36],
+          "dmxRange": [
+            0,
+            36
+          ],
           "type": "Effect",
           "effectName": "1 Beam"
         },
         {
-          "dmxRange": [37, 73],
+          "dmxRange": [
+            37,
+            73
+          ],
           "type": "Effect",
           "effectName": "2 Beams"
         },
         {
-          "dmxRange": [74, 110],
+          "dmxRange": [
+            74,
+            110
+          ],
           "type": "Effect",
           "effectName": "3 Beams"
         },
         {
-          "dmxRange": [111, 147],
+          "dmxRange": [
+            111,
+            147
+          ],
           "type": "Effect",
           "effectName": "8 Beams"
         },
         {
-          "dmxRange": [148, 184],
+          "dmxRange": [
+            148,
+            184
+          ],
           "type": "Effect",
           "effectName": "16 Beams"
         },
         {
-          "dmxRange": [185, 221],
+          "dmxRange": [
+            185,
+            221
+          ],
           "type": "Effect",
           "effectName": "32 Beams"
         },
         {
-          "dmxRange": [222, 255],
+          "dmxRange": [
+            222,
+            255
+          ],
           "type": "Effect",
           "effectName": "64 Beams"
         }
       ]
     },
     "Index Blue": {
-      "fineChannelAliases": ["Index Blue fine"],
+      "fineChannelAliases": [
+        "Index Blue fine"
+      ],
       "defaultValue": 32767,
       "capability": {
         "type": "Rotation",
@@ -443,36 +641,55 @@
       }
     },
     "Rotation Blue": {
-      "fineChannelAliases": ["Rotation Blue fine"],
+      "fineChannelAliases": [
+        "Rotation Blue fine"
+      ],
       "dmxValueResolution": "8bit",
       "capabilities": [
         {
-          "dmxRange": [0, 12],
+          "dmxRange": [
+            0,
+            12
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [13, 122],
+          "dmxRange": [
+            13,
+            122
+          ],
           "type": "Rotation",
           "speed": "fast CCW"
         },
         {
-          "dmxRange": [123, 133],
+          "dmxRange": [
+            123,
+            133
+          ],
           "type": "Rotation",
           "speed": "stop"
         },
         {
-          "dmxRange": [134, 242],
+          "dmxRange": [
+            134,
+            242
+          ],
           "type": "Rotation",
           "speed": "fast CW"
         },
         {
-          "dmxRange": [243, 255],
+          "dmxRange": [
+            243,
+            255
+          ],
           "type": "NoFunction"
         }
       ]
     },
     "Gobo Beam Angle Red": {
-      "fineChannelAliases": ["Gobo Beam Angle Red fine"],
+      "fineChannelAliases": [
+        "Gobo Beam Angle Red fine"
+      ],
       "capability": {
         "type": "Zoom",
         "angleStart": "0deg",
@@ -480,7 +697,9 @@
       }
     },
     "Gobo Beam Angle Green": {
-      "fineChannelAliases": ["Gobo Beam Angle Green fine"],
+      "fineChannelAliases": [
+        "Gobo Beam Angle Green fine"
+      ],
       "capability": {
         "type": "Zoom",
         "angleStart": "0deg",
@@ -488,11 +707,2747 @@
       }
     },
     "Gobo Beam Angle Blue": {
-      "fineChannelAliases": ["Gobo Beam Angle Blue fine"],
+      "fineChannelAliases": [
+        "Gobo Beam Angle Blue fine"
+      ],
       "capability": {
         "type": "Zoom",
         "angleStart": "0deg",
         "angleEnd": "360deg"
+      }
+    },
+    "Ctrl1": {
+      "defaultValue": 192,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            23
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            24,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            30
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RESET"
+        },
+        {
+          "dmxRange": [
+            31,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ON"
+        },
+        {
+          "dmxRange": [
+            193,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim": {
+      "defaultValue": 0,
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "R": {
+      "defaultValue": 255,
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "defaultValue": 255,
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "defaultValue": 255,
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Sh1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            14
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "OPEN"
+        },
+        {
+          "dmxRange": [
+            15,
+            27
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "CLOSE"
+        },
+        {
+          "dmxRange": [
+            28,
+            28
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "SLOW STROBE"
+        },
+        {
+          "dmxRange": [
+            29,
+            149
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "MID STROBE"
+        },
+        {
+          "dmxRange": [
+            151,
+            226
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            227,
+            227
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "FAST STROBE"
+        },
+        {
+          "dmxRange": [
+            228,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "OPEN"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            6553
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            6554,
+            6554
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 1 - 10%"
+        },
+        {
+          "dmxRange": [
+            6555,
+            7208
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7209,
+            7209
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 2 - 11%"
+        },
+        {
+          "dmxRange": [
+            7210,
+            7863
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7864,
+            7864
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 3 - 12%"
+        },
+        {
+          "dmxRange": [
+            7865,
+            8191
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "STRAIGHT - 12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            8519
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8520,
+            8520
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 1 - 13%"
+        },
+        {
+          "dmxRange": [
+            8521,
+            9174
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9175,
+            9175
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 2 - 14%"
+        },
+        {
+          "dmxRange": [
+            9176,
+            9829
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9830,
+            9830
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 3 - 15%"
+        },
+        {
+          "dmxRange": [
+            9831,
+            10485
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            10486,
+            10486
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 1 - 16%"
+        },
+        {
+          "dmxRange": [
+            10487,
+            11795
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            11796,
+            11796
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 2 - 18%"
+        },
+        {
+          "dmxRange": [
+            11797,
+            13106
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            13107,
+            13107
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 3 - 20%"
+        },
+        {
+          "dmxRange": [
+            13108,
+            39320
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            39321,
+            39321
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 1 - 60%"
+        },
+        {
+          "dmxRange": [
+            39322,
+            40958
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 2 - 62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            42597
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            42598,
+            42598
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 3 - 65%"
+        },
+        {
+          "dmxRange": [
+            42599,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            6553
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            6554,
+            6554
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 1 - 10%"
+        },
+        {
+          "dmxRange": [
+            6555,
+            7208
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7209,
+            7209
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 2 - 11%"
+        },
+        {
+          "dmxRange": [
+            7210,
+            7863
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7864,
+            7864
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 3 - 12%"
+        },
+        {
+          "dmxRange": [
+            7865,
+            8191
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "STRAIGHT - 12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            8519
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8520,
+            8520
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 1 - 13%"
+        },
+        {
+          "dmxRange": [
+            8521,
+            9174
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9175,
+            9175
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 2 - 14%"
+        },
+        {
+          "dmxRange": [
+            9176,
+            9829
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9830,
+            9830
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 3 - 15%"
+        },
+        {
+          "dmxRange": [
+            9831,
+            10485
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            10486,
+            10486
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 1 - 16%"
+        },
+        {
+          "dmxRange": [
+            10487,
+            11795
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            11796,
+            11796
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 2 - 18%"
+        },
+        {
+          "dmxRange": [
+            11797,
+            13106
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            13107,
+            13107
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 3 - 20%"
+        },
+        {
+          "dmxRange": [
+            13108,
+            39320
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            39321,
+            39321
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 1 - 60%"
+        },
+        {
+          "dmxRange": [
+            39322,
+            40958
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 2 - 62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            42597
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            42598,
+            42598
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 3 - 65%"
+        },
+        {
+          "dmxRange": [
+            42599,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 3": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 3 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            6553
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            6554,
+            6554
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 1 - 10%"
+        },
+        {
+          "dmxRange": [
+            6555,
+            7208
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7209,
+            7209
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 2 - 11%"
+        },
+        {
+          "dmxRange": [
+            7210,
+            7863
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7864,
+            7864
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 3 - 12%"
+        },
+        {
+          "dmxRange": [
+            7865,
+            8191
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "STRAIGHT - 12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            8519
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8520,
+            8520
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 1 - 13%"
+        },
+        {
+          "dmxRange": [
+            8521,
+            9174
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9175,
+            9175
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 2 - 14%"
+        },
+        {
+          "dmxRange": [
+            9176,
+            9829
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9830,
+            9830
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 3 - 15%"
+        },
+        {
+          "dmxRange": [
+            9831,
+            10485
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            10486,
+            10486
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 1 - 16%"
+        },
+        {
+          "dmxRange": [
+            10487,
+            11795
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            11796,
+            11796
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 2 - 18%"
+        },
+        {
+          "dmxRange": [
+            11797,
+            13106
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            13107,
+            13107
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 3 - 20%"
+        },
+        {
+          "dmxRange": [
+            13108,
+            39320
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            39321,
+            39321
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 1 - 60%"
+        },
+        {
+          "dmxRange": [
+            39322,
+            40958
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 2 - 62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            42597
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            42598,
+            42598
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 3 - 65%"
+        },
+        {
+          "dmxRange": [
+            42599,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T 4": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 4 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            6553
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            6554,
+            6554
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 1 - 10%"
+        },
+        {
+          "dmxRange": [
+            6555,
+            7208
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7209,
+            7209
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 2 - 11%"
+        },
+        {
+          "dmxRange": [
+            7210,
+            7863
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            7864,
+            7864
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "OPEN 3 - 12%"
+        },
+        {
+          "dmxRange": [
+            7865,
+            8191
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "STRAIGHT - 12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            8519
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            8520,
+            8520
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 1 - 13%"
+        },
+        {
+          "dmxRange": [
+            8521,
+            9174
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9175,
+            9175
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 2 - 14%"
+        },
+        {
+          "dmxRange": [
+            9176,
+            9829
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            9830,
+            9830
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "CLOSED 3 - 15%"
+        },
+        {
+          "dmxRange": [
+            9831,
+            10485
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            10486,
+            10486
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 1 - 16%"
+        },
+        {
+          "dmxRange": [
+            10487,
+            11795
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            11796,
+            11796
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 2 - 18%"
+        },
+        {
+          "dmxRange": [
+            11797,
+            13106
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            13107,
+            13107
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "PLEXI 3 - 20%"
+        },
+        {
+          "dmxRange": [
+            13108,
+            39320
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            39321,
+            39321
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 1 - 60%"
+        },
+        {
+          "dmxRange": [
+            39322,
+            40958
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 2 - 62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            42597
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            42598,
+            42598
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "FROST 3 - 65%"
+        },
+        {
+          "dmxRange": [
+            42599,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "NoFeature": {
+      "fineChannelAliases": [
+        "NoFeature fine"
+      ],
+      "defaultValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 2": {
+      "name": "NoFeature",
+      "fineChannelAliases": [
+        "NoFeature 2 fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GoboType": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            36
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "1 BEAM"
+        },
+        {
+          "dmxRange": [
+            37,
+            73
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2 BEAMS"
+        },
+        {
+          "dmxRange": [
+            74,
+            110
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4 BEAMS"
+        },
+        {
+          "dmxRange": [
+            111,
+            147
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "8 BEAMS"
+        },
+        {
+          "dmxRange": [
+            148,
+            184
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "16 BEAMS"
+        },
+        {
+          "dmxRange": [
+            185,
+            221
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "32 BEAMS"
+        },
+        {
+          "dmxRange": [
+            222,
+            255
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "64 BEAMS"
+        }
+      ]
+    },
+    "GoboSize": {
+      "fineChannelAliases": [
+        "GoboSize fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0% - OPEN"
+        },
+        {
+          "dmxRange": [
+            1,
+            8191
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            16383
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            16384,
+            16384
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "25%"
+        },
+        {
+          "dmxRange": [
+            16385,
+            24575
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            24576,
+            24576
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "37:5%"
+        },
+        {
+          "dmxRange": [
+            24577,
+            32767
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            40958
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            49150
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            49151,
+            49151
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "75%"
+        },
+        {
+          "dmxRange": [
+            49152,
+            57342
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            57343,
+            57343
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "87:5%"
+        },
+        {
+          "dmxRange": [
+            57344,
+            62257
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            62258,
+            62258
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "95%"
+        },
+        {
+          "dmxRange": [
+            62259,
+            65534
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100% - CLOSED"
+        }
+      ]
+    },
+    "GoboIndex": {
+      "fineChannelAliases": [
+        "GoboIndex fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            16383
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            16384,
+            16384
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "25%"
+        },
+        {
+          "dmxRange": [
+            16385,
+            32767
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            49150
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            49151,
+            49151
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "75%"
+        },
+        {
+          "dmxRange": [
+            49152,
+            65534
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100%"
+        }
+      ]
+    },
+    "GoboRot": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            12
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        },
+        {
+          "dmxRange": [
+            13,
+            121
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            122,
+            122
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CW SLOW"
+        },
+        {
+          "dmxRange": [
+            123,
+            127
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "RELATIVE STOP"
+        },
+        {
+          "dmxRange": [
+            129,
+            133
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCW SLOW"
+        },
+        {
+          "dmxRange": [
+            135,
+            254
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        }
+      ]
+    },
+    "NoFeature 3": {
+      "name": "NoFeature",
+      "fineChannelAliases": [
+        "NoFeature 3 fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "GoboRot 2": {
+      "name": "GoboRot",
+      "fineChannelAliases": [
+        "GoboRot 2 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        },
+        {
+          "dmxRange": [
+            1,
+            31429
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            31430,
+            31430
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CW SLOW"
+        },
+        {
+          "dmxRange": [
+            31431,
+            32767
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "RELATIVE STOP"
+        },
+        {
+          "dmxRange": [
+            32769,
+            34099
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            34100,
+            34100
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCW SLOW"
+        },
+        {
+          "dmxRange": [
+            34101,
+            65534
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        }
+      ]
+    },
+    "GoboType 2": {
+      "name": "GoboType",
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            36
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "1 BEAM"
+        },
+        {
+          "dmxRange": [
+            37,
+            73
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2 BEAMS"
+        },
+        {
+          "dmxRange": [
+            74,
+            110
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4 BEAMS"
+        },
+        {
+          "dmxRange": [
+            111,
+            147
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "8 BEAMS"
+        },
+        {
+          "dmxRange": [
+            148,
+            184
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "16 BEAMS"
+        },
+        {
+          "dmxRange": [
+            185,
+            221
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "32 BEAMS"
+        },
+        {
+          "dmxRange": [
+            222,
+            255
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "64 BEAMS"
+        }
+      ]
+    },
+    "GoboSize 2": {
+      "name": "GoboSize",
+      "fineChannelAliases": [
+        "GoboSize 2 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0% - OPEN"
+        },
+        {
+          "dmxRange": [
+            1,
+            8191
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            16383
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            16384,
+            16384
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "25%"
+        },
+        {
+          "dmxRange": [
+            16385,
+            24575
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            24576,
+            24576
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "37:5%"
+        },
+        {
+          "dmxRange": [
+            24577,
+            32767
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            40958
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            49150
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            49151,
+            49151
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "75%"
+        },
+        {
+          "dmxRange": [
+            49152,
+            57342
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            57343,
+            57343
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "87:5%"
+        },
+        {
+          "dmxRange": [
+            57344,
+            62257
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            62258,
+            62258
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "95%"
+        },
+        {
+          "dmxRange": [
+            62259,
+            65534
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100% - CLOSED"
+        }
+      ]
+    },
+    "GoboIndex 2": {
+      "name": "GoboIndex",
+      "fineChannelAliases": [
+        "GoboIndex 2 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            16383
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            16384,
+            16384
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "25%"
+        },
+        {
+          "dmxRange": [
+            16385,
+            32767
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            49150
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            49151,
+            49151
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "75%"
+        },
+        {
+          "dmxRange": [
+            49152,
+            65534
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100%"
+        }
+      ]
+    },
+    "GoboRot 3": {
+      "name": "GoboRot",
+      "fineChannelAliases": [
+        "GoboRot 3 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        },
+        {
+          "dmxRange": [
+            1,
+            31429
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            31430,
+            31430
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CW SLOW"
+        },
+        {
+          "dmxRange": [
+            31431,
+            32767
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "RELATIVE STOP"
+        },
+        {
+          "dmxRange": [
+            32769,
+            34099
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            34100,
+            34100
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCW SLOW"
+        },
+        {
+          "dmxRange": [
+            34101,
+            65534
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        }
+      ]
+    },
+    "GoboType 3": {
+      "name": "GoboType",
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            36
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "1 BEAM"
+        },
+        {
+          "dmxRange": [
+            37,
+            73
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "2 BEAMS"
+        },
+        {
+          "dmxRange": [
+            74,
+            110
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "4 BEAMS"
+        },
+        {
+          "dmxRange": [
+            111,
+            147
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "8 BEAMS"
+        },
+        {
+          "dmxRange": [
+            148,
+            184
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "16 BEAMS"
+        },
+        {
+          "dmxRange": [
+            185,
+            221
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "32 BEAMS"
+        },
+        {
+          "dmxRange": [
+            222,
+            255
+          ],
+          "type": "Unknown (GoboType)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "64 BEAMS"
+        }
+      ]
+    },
+    "GoboSize 3": {
+      "name": "GoboSize",
+      "fineChannelAliases": [
+        "GoboSize 3 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0% - OPEN"
+        },
+        {
+          "dmxRange": [
+            1,
+            8191
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            8192,
+            8192
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "12:5%"
+        },
+        {
+          "dmxRange": [
+            8193,
+            16383
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            16384,
+            16384
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "25%"
+        },
+        {
+          "dmxRange": [
+            16385,
+            24575
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            24576,
+            24576
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "37:5%"
+        },
+        {
+          "dmxRange": [
+            24577,
+            32767
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            40958
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            40959,
+            40959
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "62:5%"
+        },
+        {
+          "dmxRange": [
+            40960,
+            49150
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            49151,
+            49151
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "75%"
+        },
+        {
+          "dmxRange": [
+            49152,
+            57342
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            57343,
+            57343
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "87:5%"
+        },
+        {
+          "dmxRange": [
+            57344,
+            62257
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            62258,
+            62258
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "95%"
+        },
+        {
+          "dmxRange": [
+            62259,
+            65534
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboSize)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100% - CLOSED"
+        }
+      ]
+    },
+    "GoboIndex 3": {
+      "name": "GoboIndex",
+      "fineChannelAliases": [
+        "GoboIndex 3 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "0%"
+        },
+        {
+          "dmxRange": [
+            1,
+            16383
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            16384,
+            16384
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "25%"
+        },
+        {
+          "dmxRange": [
+            16385,
+            32767
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            32769,
+            49150
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            49151,
+            49151
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "75%"
+        },
+        {
+          "dmxRange": [
+            49152,
+            65534
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboIndex)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "100%"
+        }
+      ]
+    },
+    "GoboRot 4": {
+      "name": "GoboRot",
+      "fineChannelAliases": [
+        "GoboRot 4 fine"
+      ],
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        },
+        {
+          "dmxRange": [
+            1,
+            31429
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            31430,
+            31430
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CW SLOW"
+        },
+        {
+          "dmxRange": [
+            31431,
+            32767
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "RELATIVE STOP"
+        },
+        {
+          "dmxRange": [
+            32769,
+            34099
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            34100,
+            34100
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "CCW SLOW"
+        },
+        {
+          "dmxRange": [
+            34101,
+            65534
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Unknown (GoboRot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "NO ROT (RESET)"
+        }
+      ]
+    },
+    "NoFeature 4": {
+      "name": "NoFeature",
+      "fineChannelAliases": [
+        "NoFeature 4 fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 5": {
+      "name": "NoFeature",
+      "fineChannelAliases": [
+        "NoFeature 5 fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "NoFunction"
       }
     }
   },
@@ -582,5 +3537,40 @@
   ],
   "fixtureKey": "ivl-carre",
   "manufacturerKey": "minuit-une",
-  "oflURL": "https://open-fixture-library.org/minuit-une/ivl-carre"
+  "oflURL": "https://open-fixture-library.org/minuit-une/ivl-carre",
+  "gwMedia": {
+    "thumbnail": "e4483eeb9d269d46"
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.639400,0.329400,100.000000",
+      "hex": "#ff000e",
+      "dominantWavelength": 638.0,
+      "diodePart": "RED LASER DIODE"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.300000,0.599300,100.000000",
+      "hex": "#04ff05",
+      "dominantWavelength": 520.0,
+      "diodePart": "GREEN LASER DIODE"
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.150000,0.059500,100.000000",
+      "hex": "#1600ff",
+      "dominantWavelength": 450.0,
+      "diodePart": "BLUE LASER DIODE"
+    }
+  ],
+  "gwFixtureTypeID": "59018653-5450-42F5-AD2F-5311D9B4DBDE",
+  "gwSpecs": {
+    "description": "The square shape of the IVL lighting range by Minuit Une.",
+    "beamType": "Spot",
+    "revision": {
+      "date": "2020-12-02T11:06:04",
+      "text": "V2.2"
+    }
+  }
 }

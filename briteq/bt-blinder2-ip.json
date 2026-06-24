@@ -1,0 +1,774 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BT-BLINDER2 IP",
+  "shortName": "Blinder2 IP",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-06-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5B8EF12E-9769-4E5B-A5DF-A1761FF17397"
+    }
+  },
+  "comment": "BT-Blinder2 IP: Powerful IP65 outdoor 2x 130W COB blinder with amber drift effect, behaves exactly like a halogen blinder!",
+  "rdm": {
+    "modelId": 46
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            3,
+            84
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            86,
+            86
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            87,
+            168
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            171,
+            252
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            253,
+            253
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Closed"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            6,
+            26
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red shift Off"
+        },
+        {
+          "dmxRange": [
+            27,
+            27
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            28,
+            126
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            133
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            134,
+            139
+          ],
+          "type": "Unknown (PixelMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pixel order: A (standard 0)"
+        },
+        {
+          "dmxRange": [
+            140,
+            151
+          ],
+          "type": "Unknown (PixelMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pixel order: B (standard 180)"
+        },
+        {
+          "dmxRange": [
+            152,
+            157
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Auto"
+        },
+        {
+          "dmxRange": [
+            158,
+            167
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Full"
+        },
+        {
+          "dmxRange": [
+            168,
+            173
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Curve"
+        },
+        {
+          "dmxRange": [
+            174,
+            179
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square Curve"
+        },
+        {
+          "dmxRange": [
+            180,
+            185
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv Square Curve"
+        },
+        {
+          "dmxRange": [
+            186,
+            197
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            198,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Load Factory Settings"
+        }
+      ]
+    },
+    "White 2": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber 2": {
+      "name": "Amber",
+      "fineChannelAliases": [
+        "Amber 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Intensity MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            6,
+            133
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Red shift Off"
+        },
+        {
+          "dmxRange": [
+            134,
+            139
+          ],
+          "type": "Unknown (PixelMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pixel order: A (standard 0)"
+        },
+        {
+          "dmxRange": [
+            140,
+            151
+          ],
+          "type": "Unknown (PixelMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pixel order: B (standard 180)"
+        },
+        {
+          "dmxRange": [
+            152,
+            157
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Auto"
+        },
+        {
+          "dmxRange": [
+            158,
+            167
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Full"
+        },
+        {
+          "dmxRange": [
+            168,
+            173
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Curve"
+        },
+        {
+          "dmxRange": [
+            174,
+            179
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square Curve"
+        },
+        {
+          "dmxRange": [
+            180,
+            185
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv Square Curve"
+        },
+        {
+          "dmxRange": [
+            186,
+            197
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            198,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Load Factory Settings"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            3,
+            84
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            86,
+            86
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            87,
+            168
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            171,
+            252
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            253,
+            253
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Closed"
+        }
+      ]
+    },
+    "White 3": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 3 fine"
+      ],
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber 3": {
+      "name": "Amber",
+      "fineChannelAliases": [
+        "Amber 3 fine"
+      ],
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "1p 8b",
+      "channels": [
+        "White",
+        "Amber",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "1p 16b",
+      "channels": [
+        "White 2",
+        "White 2 fine",
+        "Amber 2",
+        "Amber 2 fine",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "1p 16s",
+      "channels": [
+        "White 2",
+        "White 2 fine",
+        "Amber 2",
+        "Amber 2 fine",
+        "Dim 2",
+        "Sh1",
+        "Intensity MSpeed",
+        "Ctrl1 2"
+      ]
+    },
+    {
+      "name": "2p 8b",
+      "channels": [
+        "White",
+        "Amber",
+        null,
+        null,
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "2p 16b",
+      "channels": [
+        "White 2",
+        "White 2 fine",
+        "Amber 2",
+        "Amber 2 fine",
+        null,
+        null,
+        null,
+        null,
+        "Sh1 2",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "2p 16s",
+      "channels": [
+        "White 3",
+        "White 3 fine",
+        "Amber 3",
+        "Amber 3 fine",
+        null,
+        null,
+        null,
+        null,
+        "Dim 2",
+        "Sh1 2",
+        "Intensity MSpeed",
+        "Ctrl1 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      225,
+      200,
+      400
+    ],
+    "weight": 8.1,
+    "power": 130,
+    "bulb": {
+      "type": "672nm / 641nm LED",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.393300,0.394100,100.000000",
+      "hex": "#fff7ae",
+      "dominantWavelength": 672.0
+    },
+    {
+      "name": "Amber",
+      "cie": "0.566000,0.403800,100.000000",
+      "hex": "#ffbf00",
+      "dominantWavelength": 641.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Powerful IP65 outdoor 2x 130W COB blinder with amber drift effect, behaves exactly like a halogen blinder!",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-06-20T13:29:27",
+      "text": "Rev 1-02 white to 0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "39686ece06d5923b"
+  },
+  "manufacturerKey": "briteq",
+  "fixtureKey": "bt-blinder2-ip",
+  "gwFixtureTypeID": "5B8EF12E-9769-4E5B-A5DF-A1761FF17397"
+}

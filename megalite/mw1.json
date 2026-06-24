@@ -1,0 +1,1175 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MW1",
+  "shortName": "MW1",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-05-11",
+    "lastModifyDate": "2023-05-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8224F932-B99F-11E9-BC75-525400685065"
+    }
+  },
+  "comment": "Mega-Lite MW1 is equipped with seven 40W RGBW OSRAM LEDs that can be individually controlled for easy pixel control.",
+  "wheels": {
+    "Color1": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Hue",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Color2": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Color",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "highlightValue": 32767,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "highlightValue": 32767,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Closed - Shutter Closed"
+        },
+        {
+          "dmxRange": [
+            4,
+            103
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Strobe S > F - Strobe"
+        },
+        {
+          "dmxRange": [
+            104,
+            107
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            108,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Pulse Strobe S > F - Strobe Pulse Random"
+        },
+        {
+          "dmxRange": [
+            208,
+            212
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            213,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random S > F - Strobe Random"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        }
+      ]
+    },
+    "H": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "S": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Unknown (HSB_Brightness)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Brightness)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fixture Reset - Reset"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color1",
+          "slotNumber": 1,
+          "comment": "Hue - Color"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Pre Built Patterns - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            3,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 8653,
+          "colorTemperatureEnd": 2823,
+          "comment": "CTO 8653K - 2823K - CTO"
+        }
+      ]
+    },
+    "Beam Shaper Macro": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction",
+          "comment": "No Func - Custom"
+        },
+        {
+          "dmxRange": [
+            1,
+            6
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1 - Macro"
+        },
+        {
+          "dmxRange": [
+            7,
+            13
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2 - Macro"
+        },
+        {
+          "dmxRange": [
+            14,
+            20
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 3 - Macro"
+        },
+        {
+          "dmxRange": [
+            21,
+            27
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 4 - Macro"
+        },
+        {
+          "dmxRange": [
+            28,
+            34
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 5 - Macro"
+        },
+        {
+          "dmxRange": [
+            35,
+            41
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 6 - Macro"
+        },
+        {
+          "dmxRange": [
+            42,
+            48
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 7 - Macro"
+        },
+        {
+          "dmxRange": [
+            49,
+            55
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3 - Macro"
+        },
+        {
+          "dmxRange": [
+            56,
+            62
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 4+5 - Macro"
+        },
+        {
+          "dmxRange": [
+            63,
+            69
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 6+7 - Macro"
+        },
+        {
+          "dmxRange": [
+            70,
+            76
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2+3 - Macro"
+        },
+        {
+          "dmxRange": [
+            77,
+            83
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+4+5 - Macro"
+        },
+        {
+          "dmxRange": [
+            84,
+            90
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+6+7 - Macro"
+        },
+        {
+          "dmxRange": [
+            91,
+            97
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2 - Macro"
+        },
+        {
+          "dmxRange": [
+            98,
+            104
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 3+6 - Macro"
+        },
+        {
+          "dmxRange": [
+            105,
+            111
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3+5+6 - Macro"
+        },
+        {
+          "dmxRange": [
+            112,
+            118
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+3+6 - Macro"
+        },
+        {
+          "dmxRange": [
+            119,
+            125
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+4+6 - Macro"
+        },
+        {
+          "dmxRange": [
+            126,
+            132
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2+3+5+6 - Macro"
+        },
+        {
+          "dmxRange": [
+            133,
+            139
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3+4+5+6+7 - Macro"
+        },
+        {
+          "dmxRange": [
+            140,
+            146
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3+4+5+6 M - Macro"
+        },
+        {
+          "dmxRange": [
+            147,
+            153
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3+4+5+6+7 M - Macro"
+        },
+        {
+          "dmxRange": [
+            154,
+            160
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2  1+3  1+4  1+5  1+6  1+7 M - Macro"
+        },
+        {
+          "dmxRange": [
+            161,
+            167
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2+3  1+4+5  1+6+7 - Macro"
+        },
+        {
+          "dmxRange": [
+            168,
+            174
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3+4  3+4+5  4+5+6  5+6+7  6+7+2  7+2+3 M - Macro"
+        },
+        {
+          "dmxRange": [
+            175,
+            181
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2+3+4 1+3+4+5 1+4+5+6 1+5+6+7 1+6+7+2 1+7+2+3 M - Macro"
+        },
+        {
+          "dmxRange": [
+            182,
+            188
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+5  3+6  4+7 M - Macro"
+        },
+        {
+          "dmxRange": [
+            189,
+            195
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3+5+6  3+4+6+7 4+5+7+1 M - Macro"
+        },
+        {
+          "dmxRange": [
+            196,
+            202
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2+5 1+3+6 1+4+7 M - Macro"
+        },
+        {
+          "dmxRange": [
+            203,
+            209
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1+2+3+5+6 1+3+4+6+7 1+4+5+7+1M - Macro"
+        },
+        {
+          "dmxRange": [
+            210,
+            216
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 2+3 7+1+4  4+5 M - Macro"
+        },
+        {
+          "dmxRange": [
+            217,
+            223
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1 2+3+4+5+6+7 - Macro"
+        },
+        {
+          "dmxRange": [
+            224,
+            230
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1 2+3+4+5+6+7 Color - Macro"
+        },
+        {
+          "dmxRange": [
+            231,
+            237
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1 2+3+4+5+6+7 Color - Macro"
+        },
+        {
+          "dmxRange": [
+            238,
+            244
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light 1 2+3 4+5 6+7 Color - Macro"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Unknown (BeamShaperMacro)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Light Random Color - Macro"
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "C2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color2",
+          "slotNumber": 0,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color2",
+          "slotNumber": 0,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 5": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 6": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 7": {
+      "name": "White",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "11Ch Mode",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Sh1",
+        "H",
+        "S",
+        "B",
+        "Zoom",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "14Ch Mode",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "C1",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "Sh1",
+        "Dim",
+        "Zoom",
+        "Ctrl1",
+        "FX1"
+      ]
+    },
+    {
+      "name": "18Ch Mode",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "CTO",
+        "C1",
+        "Beam Shaper Macro",
+        "FX1 Rate",
+        "C2",
+        "Zoom",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "38Ch Mode",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Zoom",
+        "Ctrl1",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "R 2",
+        "G 2",
+        "B 3",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 4",
+        "White 3",
+        "R 4",
+        "G 4",
+        "B 5",
+        "White 4",
+        "R 5",
+        "G 5",
+        "B 6",
+        "White 5",
+        "R 6",
+        "G 6",
+        "B 7",
+        "White 6",
+        "R 7",
+        "G 7",
+        "B 8",
+        "White 7"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      219,
+      162,
+      231
+    ],
+    "weight": 9.5,
+    "power": 376,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        23.9,
+        26.5
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Mega-Lite MW1 is equipped with seven 40W RGBW OSRAM LEDs that can be individually controlled for easy pixel control.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-05-11T08:22:25",
+      "text": "Initial upload by GDTFservice.com, powered by Crescit, commissioned by MegaLite"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "6a50dbf3cbaf96f6"
+  },
+  "manufacturerKey": "megalite",
+  "fixtureKey": "mw1",
+  "gwFixtureTypeID": "8224F932-B99F-11E9-BC75-525400685065"
+}

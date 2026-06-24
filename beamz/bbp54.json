@@ -1,0 +1,305 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BBP54",
+  "shortName": "BBP54",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-03-14",
+    "lastModifyDate": "2023-03-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: CEFBAF04-561A-457D-BF9C-4AB1D4F27FA2"
+    }
+  },
+  "comment": "BBP54 Battery Uplight Par 4x 12W IP65: The BBP54 is a compact Battery Par ideal for use as accent and uplighting. The BBP54 is IP65 rated and hence for outdoor and indoor use. It’s equipped with 4x super bright 12W RGBAW-UV LEDs and comes fitted with a removable built-in battery which will last up to 15 hours when fully charged, depending on colours and intensity. The adjustable foot can be fixed in different angles for angular placement of the par. The BBP54 can communicate in a variety of ways, with IR and wireless DMX. This makes the units easy to connect to each other.",
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "UV": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0Hz",
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "18Hz",
+          "comment": "strobe slow to fast"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "no function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "40 colors",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "63 colors",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "C1 Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "ColorPreset",
+          "comment": "no function"
+        },
+        {
+          "dmxRange": [
+            20,
+            87
+          ],
+          "type": "ColorPreset",
+          "comment": "color fade"
+        },
+        {
+          "dmxRange": [
+            88,
+            155
+          ],
+          "type": "ColorPreset",
+          "comment": "color jump"
+        },
+        {
+          "dmxRange": [
+            156,
+            223
+          ],
+          "type": "ColorPreset",
+          "comment": "color pulse"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "sound control"
+        }
+      ]
+    },
+    "Play Speed": {
+      "capability": {
+        "type": "Unknown (PlaySpeed)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "control panel"
+        },
+        {
+          "dmxRange": [
+            6,
+            55
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve 0"
+        },
+        {
+          "dmxRange": [
+            56,
+            105
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve 1"
+        },
+        {
+          "dmxRange": [
+            106,
+            155
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve 2"
+        },
+        {
+          "dmxRange": [
+            156,
+            205
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve 3"
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "dimmer curve 4"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6 channel ",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV"
+      ]
+    },
+    {
+      "name": "12 channel",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "UV",
+        "Strobe1",
+        "Color FX1",
+        "C1 Mode",
+        "Play Speed",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      150,
+      100
+    ],
+    "weight": 2.85,
+    "power": 10000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "The BBP54 is a compact Battery Par ideal for use as accent and uplighting. The BBP54 is IP65 rated and hence for outdoor and indoor use. It’s equipped with 4x super bright 12W RGBAW-UV LEDs and comes fitted with a removable built-in battery which will last up to 15 hours when fully charged, depending on colours and intensity. The adjustable foot can be fixed in different angles for angular placement of the par. The BBP54 can communicate in a variety of ways, with IR and wireless DMX. This makes the units easy to connect to each other.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-03-14T10:47:20",
+      "text": "BBP54"
+    }
+  },
+  "manufacturerKey": "beamz",
+  "fixtureKey": "bbp54",
+  "gwFixtureTypeID": "CEFBAF04-561A-457D-BF9C-4AB1D4F27FA2"
+}

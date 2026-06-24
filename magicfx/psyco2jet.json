@@ -2,9 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "PSYCO2JET",
   "shortName": "MFXPSYCO2Jet",
-  "categories": ["Effect"],
+  "categories": [
+    "Effect",
+    "Other"
+  ],
   "meta": {
-    "authors": ["MAGIC FX B.V."],
+    "authors": [
+      "MAGIC FX B.V."
+    ],
     "createDate": "2018-08-20",
     "lastModifyDate": "2018-08-21"
   },
@@ -26,7 +31,11 @@
     "softwareVersion": "16973824"
   },
   "physical": {
-    "dimensions": [250, 165, 330],
+    "dimensions": [
+      250,
+      165,
+      330
+    ],
     "weight": 9,
     "power": 35,
     "DMXconnector": "5-pin"
@@ -35,17 +44,26 @@
     "Safety": {
       "capabilities": [
         {
-          "dmxRange": [0, 99],
+          "dmxRange": [
+            0,
+            99
+          ],
           "type": "Generic",
           "comment": "Device disabled"
         },
         {
-          "dmxRange": [100, 155],
+          "dmxRange": [
+            100,
+            155
+          ],
           "type": "Generic",
           "comment": "Device enabled"
         },
         {
-          "dmxRange": [156, 255],
+          "dmxRange": [
+            156,
+            255
+          ],
           "type": "Generic",
           "comment": "Device test mode (CO₂ output is disabled)"
         }
@@ -69,12 +87,18 @@
     "Output": {
       "capabilities": [
         {
-          "dmxRange": [0, 199],
+          "dmxRange": [
+            0,
+            199
+          ],
           "type": "NoFunction",
           "comment": "Valve off"
         },
         {
-          "dmxRange": [200, 255],
+          "dmxRange": [
+            200,
+            255
+          ],
           "type": "Generic",
           "comment": "Valve on"
         }
@@ -83,52 +107,82 @@
     "Preset": {
       "capabilities": [
         {
-          "dmxRange": [0, 24],
+          "dmxRange": [
+            0,
+            24
+          ],
           "type": "Effect",
           "effectName": "Single pulse straight up (0°)"
         },
         {
-          "dmxRange": [25, 49],
+          "dmxRange": [
+            25,
+            49
+          ],
           "type": "Effect",
           "effectName": "2 pulses distributed over 180° (-45° +45°)"
         },
         {
-          "dmxRange": [50, 74],
+          "dmxRange": [
+            50,
+            74
+          ],
           "type": "Effect",
           "effectName": "3 pulses distributed over 180° (-90°, 0°, +90°)"
         },
         {
-          "dmxRange": [75, 99],
+          "dmxRange": [
+            75,
+            99
+          ],
           "type": "Effect",
           "effectName": "4 pulses distributed over 180° (-90°, -30°, +30°, +90°)"
         },
         {
-          "dmxRange": [100, 124],
+          "dmxRange": [
+            100,
+            124
+          ],
           "type": "Effect",
           "effectName": "5 pulses distributed over 180° (-90°, -45°, 0°, +45°, +90°)"
         },
         {
-          "dmxRange": [125, 149],
+          "dmxRange": [
+            125,
+            149
+          ],
           "type": "Effect",
           "effectName": "Random pulses over 180°"
         },
         {
-          "dmxRange": [150, 174],
+          "dmxRange": [
+            150,
+            174
+          ],
           "type": "Effect",
           "effectName": "Pulse at +45°, pulse at -45°, pulse at +45°, sweep from -45° back to +45°"
         },
         {
-          "dmxRange": [175, 199],
+          "dmxRange": [
+            175,
+            199
+          ],
           "type": "Effect",
           "effectName": "Three sweeps over 180° (-90° to -54°, -18° to +18° and +54° to +90°)"
         },
         {
-          "dmxRange": [200, 224],
+          "dmxRange": [
+            200,
+            224
+          ],
           "type": "Effect",
           "effectName": "Pulse at -90°, pulse at +90°, pulse at -60°, pulse at +60°, pulse at -30°, pulse at +30°, long pulse at 0°"
         },
         {
-          "dmxRange": [225, 255],
+          "dmxRange": [
+            225,
+            255
+          ],
           "type": "Effect",
           "effectName": "Sweep over 180°"
         }
@@ -137,22 +191,34 @@
     "Direction": {
       "capabilities": [
         {
-          "dmxRange": [0, 63],
+          "dmxRange": [
+            0,
+            63
+          ],
           "type": "Generic",
           "comment": "Left to right"
         },
         {
-          "dmxRange": [64, 127],
+          "dmxRange": [
+            64,
+            127
+          ],
           "type": "Generic",
           "comment": "Bounce, beginning from left"
         },
         {
-          "dmxRange": [128, 191],
+          "dmxRange": [
+            128,
+            191
+          ],
           "type": "Generic",
           "comment": "Bounce, beginning from right"
         },
         {
-          "dmxRange": [192, 255],
+          "dmxRange": [
+            192,
+            255
+          ],
           "type": "Generic",
           "comment": "Right to left"
         }
@@ -161,19 +227,211 @@
     "Go": {
       "capabilities": [
         {
-          "dmxRange": [0, 199],
+          "dmxRange": [
+            0,
+            199
+          ],
           "type": "Generic",
           "comment": "Off"
         },
         {
-          "dmxRange": [200, 249],
+          "dmxRange": [
+            200,
+            249
+          ],
           "type": "Generic",
           "comment": "Continuous mode"
         },
         {
-          "dmxRange": [250, 255],
+          "dmxRange": [
+            250,
+            255
+          ],
           "type": "Generic",
           "comment": "Step in preset"
+        }
+      ]
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "CO2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            199
+          ],
+          "type": "Unknown (CO2)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Unknown (CO2)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "On"
+        }
+      ]
+    },
+    "Pos FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            24
+          ],
+          "type": "Effect",
+          "effectName": "Single pulse straight up (0)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            25,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "2 pulses distributed over 180 (-45 +45)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            74
+          ],
+          "type": "Effect",
+          "effectName": "3 pulses distributed over 180 (-90 0 +90)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "4 pulses distributed over 180 (-90 -30 +30 +90)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            124
+          ],
+          "type": "Effect",
+          "effectName": "5 pulses distributed over 180 (-90 -45 0 +45 +90)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            125,
+            149
+          ],
+          "type": "Effect",
+          "effectName": "Random pulses over 180",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            150,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "Pulse at +45 pulse at -45 pulse at +45 sweep from -45 back to +45",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "Three sweeps over 180 (-90 to -54 -18 to +18 and +54 to +90)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            224
+          ],
+          "type": "Effect",
+          "effectName": "Pulse at -90 pulse at +90 pulse at -60 pulse at +60 pulse at -30 pulse at +30 long pulse at 0",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            225,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sweep over 180",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Pos FX Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Trigger": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            199
+          ],
+          "type": "Unknown (EffectTrigger)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            200,
+            249
+          ],
+          "type": "Unknown (EffectTrigger)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Continuous Mode"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "Unknown (EffectTrigger)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Step"
         }
       ]
     }
@@ -207,5 +465,20 @@
   ],
   "fixtureKey": "psyco2jet",
   "manufacturerKey": "magicfx",
-  "oflURL": "https://open-fixture-library.org/magicfx/psyco2jet"
+  "oflURL": "https://open-fixture-library.org/magicfx/psyco2jet",
+  "gwMedia": {
+    "thumbnail": "aab4691df765f9c4"
+  },
+  "gwFixtureTypeID": "F930FDD8-EAA8-4E20-B2B1-5F6753E4D90B",
+  "gwSpecs": {
+    "description": "The MAGICFX® PSYCO2JET is equipped with a CO2 powered rotating nozzle. A solenoid\nvalve controls the supply of liquid CO2 to the nozzle. From the nozzle, the CO2 escapes\nthrough the output pipe. A blast of escaping CO2 is accompanied by a strong hissing\nsound and a white plume of smoke will be visible from the output pipe. The nozzle\nwith output pipe is mounted on a 180° rotatable pipe, driven by an electric motor. By\nblasting and varying the output direction the MAGICFX® PSYCO2JET delivers\nspectacular effects.",
+    "operatingTemperature": [
+      -10,
+      50
+    ],
+    "revision": {
+      "date": "2025-11-20T20:14:53",
+      "text": "not tested"
+    }
+  }
 }

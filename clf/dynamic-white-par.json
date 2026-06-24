@@ -1,0 +1,299 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Dynamic White PAR",
+  "shortName": "Dynamic White",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-07-08",
+    "lastModifyDate": "2024-07-08",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1A3BEDAD-A606-4301-A63E-766E80878BE4"
+    }
+  },
+  "comment": "The CLF Dynamic White PAR is a compact LED fixture with an extraordinary high output which contains warm and cold white high power LEDs. The powerful LEDs provide extremely high output and ensures ‘flicker-free’ operation when using cameras.\n\nThe Dynamic White PAR contains specially selected LEDs which provide cold and warm white with a CRI > 90. Warm and cold white control between 2,800K and 6,500K and colour mixing can be adjusted in 3 different DMX modes or by using the on-board menu. The fixture contains both powerCON in and out and can be connected with three pins XLR. No fan is installed in the Dynamic White PAR so it is also suitable for silent applications. The fixture can be placed on the floor or mounted to truss structures by using the unique CLF quicklock system. This hanging system is easy to use and time-saving. The solid housing of the fixture make it suitable for every rental stock and fixed installations.",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            11,
+            40
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 2800,
+          "comment": "White 1: 2800K"
+        },
+        {
+          "dmxRange": [
+            41,
+            70
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3000,
+          "comment": "White: 3000K"
+        },
+        {
+          "dmxRange": [
+            71,
+            100
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3200,
+          "comment": "White: 3200K"
+        },
+        {
+          "dmxRange": [
+            101,
+            130
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3400,
+          "comment": "White: 3400K"
+        },
+        {
+          "dmxRange": [
+            131,
+            160
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4200,
+          "comment": "White: 4200K"
+        },
+        {
+          "dmxRange": [
+            161,
+            190
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4900,
+          "comment": "White: 4900K"
+        },
+        {
+          "dmxRange": [
+            191,
+            220
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5600,
+          "comment": "White: 5600K"
+        },
+        {
+          "dmxRange": [
+            221,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5900,
+          "comment": "White: 5900K"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Nio function"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "0Hz"
+        },
+        {
+          "dmxRange": [
+            3,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "20Hz"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1,
+        "comment": "ID address selection"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "7ch Mode",
+      "channels": [
+        "Dim",
+        "CW",
+        "WW"
+      ]
+    },
+    {
+      "name": "3ch Mode",
+      "channels": [
+        "Dim",
+        "CW",
+        "WW",
+        "CTC",
+        "Sh1",
+        "Dim Mode",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "2ch Mode",
+      "channels": [
+        "Dim",
+        null,
+        null,
+        "CTC"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      179,
+      300,
+      255
+    ],
+    "weight": 4.0,
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Cold White",
+      "cie": "0.293700,0.314700,85.980000",
+      "hex": "#e0f1ff"
+    },
+    {
+      "name": "Warm White",
+      "cie": "0.332700,0.345800,89.550000",
+      "hex": "#fff1e0"
+    }
+  ],
+  "gwSpecs": {
+    "description": "The CLF Dynamic White PAR is a compact LED fixture with an extraordinary high output which contains warm and cold white high power LEDs. The powerful LEDs provide extremely high output and ensures ‘flicker-free’ operation when using cameras.\n\nThe Dynamic White PAR contains specially selected LEDs which provide cold and warm white with a CRI > 90. Warm and cold white control between 2,800K and 6,500K and colour mixing can be adjusted in 3 different DMX modes or by using the on-board menu. The fixture contains both powerCON in and out and can be connected with three pins XLR. No fan is installed in the Dynamic White PAR so it is also suitable for silent applications. The fixture can be placed on the floor or mounted to truss structures by using the unique CLF quicklock system. This hanging system is easy to use and time-saving. The solid housing of the fixture make it suitable for every rental stock and fixed installations.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2024-07-08T16:10:41",
+      "text": "2024-07-08_v1.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7fd6522a8dfd03bc"
+  },
+  "manufacturerKey": "clf",
+  "fixtureKey": "dynamic-white-par",
+  "gwFixtureTypeID": "1A3BEDAD-A606-4301-A63E-766E80878BE4"
+}

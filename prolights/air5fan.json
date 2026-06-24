@@ -1,0 +1,1451 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Air5Fan",
+  "shortName": "Air5Fan",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-03-12",
+    "lastModifyDate": "2025-08-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D949D874-E1EA-41DA-B5EA-13F6CC649EB1"
+    }
+  },
+  "comment": "Air5Fan is a pixel-FX moving head, able to control the spread of its pixels through the motorised lens system, passing from a sharp linear beam effect to a multi-ray effect. Powered by 5x40W RGBW/FC LEDs, with a 2° beam each, delivering stunning brightness for large setups and featuring infinite rotation over pan and tilt. Last but not least, Air 5Fan allows for the mounting of a mirror on its housing allowing for an added effect as moving projecting surface bouncing beams from other light sources.",
+  "rdm": {
+    "modelId": 278
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            25
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast2Slow"
+        },
+        {
+          "dmxRange": [
+            26,
+            250
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "MovInBlack"
+        }
+      ]
+    },
+    "P Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "stop",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "-60rpm",
+          "comment": "Pan CWRotate Fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            126
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "-0.16666666666666669rpm",
+          "comment": "Pan CWRotate Slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            131
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "stop",
+          "comment": "NoRotation"
+        },
+        {
+          "dmxRange": [
+            132,
+            132
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "0.16666666666666669rpm",
+          "comment": "Pan CCW Rotate Slow"
+        },
+        {
+          "dmxRange": [
+            133,
+            254
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (PanRotate)",
+          "physical": "60rpm",
+          "comment": "Pan CCW Rotate Fast"
+        }
+      ]
+    },
+    "T Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "stop",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "-60rpm",
+          "comment": "Tilt CWRotate Fast"
+        },
+        {
+          "dmxRange": [
+            5,
+            126
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "-0.16666666666666669rpm",
+          "comment": "Tilt CWRotate Slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            131
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "stop",
+          "comment": "NoRotation"
+        },
+        {
+          "dmxRange": [
+            132,
+            132
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "0.16666666666666669rpm",
+          "comment": "Tilt CCW Rotate Slow"
+        },
+        {
+          "dmxRange": [
+            133,
+            254
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physicalStart": "0rpm",
+          "physicalEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (TiltRotate)",
+          "physical": "60rpm",
+          "comment": "Tilt CCW Rotate Fast"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            12,
+            81
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            82,
+            82
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            83,
+            93
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            94,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "PulseEffect"
+        },
+        {
+          "dmxRange": [
+            164,
+            164
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe Slow"
+        },
+        {
+          "dmxRange": [
+            165,
+            243
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            244,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Color Mix Mode": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "NoFunction",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            16,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "White Presets",
+          "switchChannels": {
+            "0_Head_ColorMacro1": "Color Macro1"
+          }
+        },
+        {
+          "dmxRange": [
+            32,
+            47
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CW Spin",
+          "switchChannels": {
+            "0_Head_ColorMacro1": "Color Macro1 2"
+          }
+        },
+        {
+          "dmxRange": [
+            48,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "CCW Spin",
+          "switchChannels": {
+            "0_Head_ColorMacro1": "Color Macro1 3"
+          }
+        },
+        {
+          "dmxRange": [
+            64,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Continuous",
+          "switchChannels": {
+            "0_Head_ColorMacro1": "Color Macro1 4"
+          }
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            55
+          ],
+          "type": "ColorPreset",
+          "comment": "2000-2700K"
+        },
+        {
+          "dmxRange": [
+            56,
+            95
+          ],
+          "type": "ColorPreset",
+          "comment": "2700-3200K"
+        },
+        {
+          "dmxRange": [
+            96,
+            135
+          ],
+          "type": "ColorPreset",
+          "comment": "3200-4200K"
+        },
+        {
+          "dmxRange": [
+            136,
+            175
+          ],
+          "type": "ColorPreset",
+          "comment": "4200-5600K"
+        },
+        {
+          "dmxRange": [
+            176,
+            215
+          ],
+          "type": "ColorPreset",
+          "comment": "5600-8000K"
+        },
+        {
+          "dmxRange": [
+            216,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "8000-10000K"
+        }
+      ]
+    },
+    "Color Macro1 2": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "CW RainbowEffect Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "CW RainbowEffect Fast"
+        }
+      ]
+    },
+    "Color Macro1 3": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "CCW RainbowEffect Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "CCW RainbowEffect Fast"
+        }
+      ]
+    },
+    "Color Macro1 4": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Black"
+        },
+        {
+          "dmxRange": [
+            1,
+            13
+          ],
+          "type": "ColorPreset",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            14,
+            27
+          ],
+          "type": "ColorPreset",
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            28,
+            41
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            42,
+            55
+          ],
+          "type": "ColorPreset",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            56,
+            69
+          ],
+          "type": "ColorPreset",
+          "comment": "Pastel Red"
+        },
+        {
+          "dmxRange": [
+            70,
+            83
+          ],
+          "type": "ColorPreset",
+          "comment": "Pastel Green"
+        },
+        {
+          "dmxRange": [
+            84,
+            97
+          ],
+          "type": "ColorPreset",
+          "comment": "Pastel BLue"
+        },
+        {
+          "dmxRange": [
+            98,
+            111
+          ],
+          "type": "ColorPreset",
+          "comment": "Cyan"
+        },
+        {
+          "dmxRange": [
+            112,
+            125
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            126,
+            139
+          ],
+          "type": "ColorPreset",
+          "comment": "Yellow"
+        },
+        {
+          "dmxRange": [
+            140,
+            153
+          ],
+          "type": "ColorPreset",
+          "comment": "Light Yellow"
+        },
+        {
+          "dmxRange": [
+            154,
+            167
+          ],
+          "type": "ColorPreset",
+          "comment": "Light BLue"
+        },
+        {
+          "dmxRange": [
+            168,
+            181
+          ],
+          "type": "ColorPreset",
+          "comment": "Light Magenta"
+        },
+        {
+          "dmxRange": [
+            182,
+            195
+          ],
+          "type": "ColorPreset",
+          "comment": "Full White"
+        },
+        {
+          "dmxRange": [
+            196,
+            225
+          ],
+          "type": "ColorPreset",
+          "comment": "Full White to 3200K"
+        },
+        {
+          "dmxRange": [
+            226,
+            235
+          ],
+          "type": "ColorPreset",
+          "comment": "3200-4200K"
+        },
+        {
+          "dmxRange": [
+            236,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "4200-5600K"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angle": "28deg",
+          "comment": "Large"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angle": "2deg",
+          "comment": "Small"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "NoPattern",
+          "speed": 0,
+          "switchChannels": {
+            "0_Head_Effects1Pos": "FX1 Pos 3"
+          }
+        },
+        {
+          "dmxRange": [
+            16,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "Pattern Control",
+          "speed": 0,
+          "switchChannels": {
+            "0_Head_Effects1Pos": "FX1 Pos 2"
+          }
+        },
+        {
+          "dmxRange": [
+            32,
+            229
+          ],
+          "type": "Effect",
+          "effectName": "Pattern 1-22",
+          "speed": 0,
+          "switchChannels": {
+            "0_Head_Effects1Pos": "FX1 Pos 7"
+          }
+        },
+        {
+          "dmxRange": [
+            230,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Random Patterns",
+          "speed": 0,
+          "switchChannels": {}
+        }
+      ]
+    },
+    "FX1 Pos": {
+      "capability": {
+        "type": "Rotation",
+        "angle": "0deg",
+        "comment": "NoFeature"
+      }
+    },
+    "FX1 Pos 2": {
+      "name": "FX1 Pos",
+      "capability": {
+        "type": "Rotation",
+        "angleStart": "1deg",
+        "angleEnd": "250deg",
+        "comment": "Pattern 1-250"
+      }
+    },
+    "FX1 Pos 3": {
+      "name": "FX1 Pos",
+      "capability": {
+        "type": "Rotation",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "FX1 Pos 4": {
+      "name": "FX1 Pos",
+      "capability": {
+        "type": "Rotation",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Dynamic Pattern Indexing"
+      }
+    },
+    "FX1 Pos 5": {
+      "name": "FX1 Pos",
+      "capabilities": [
+        {
+          "dmxRange": [
+            38,
+            38
+          ],
+          "type": "Rotation",
+          "speed": "0.16666666666666669rpm",
+          "comment": "Dynamic Pattern CW Slow"
+        },
+        {
+          "dmxRange": [
+            39,
+            143
+          ],
+          "type": "Rotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            144,
+            255
+          ],
+          "type": "Rotation",
+          "speed": "60rpm",
+          "comment": "Dynamic Pattern CW Fast"
+        }
+      ]
+    },
+    "FX1 Pos 6": {
+      "name": "FX1 Pos",
+      "capability": {
+        "type": "Rotation",
+        "speed": "stop",
+        "comment": "Dynamic Pattern Stop"
+      }
+    },
+    "FX1 Pos 7": {
+      "name": "FX1 Pos",
+      "capabilities": [
+        {
+          "dmxRange": [
+            149,
+            149
+          ],
+          "type": "Rotation",
+          "speed": "-0.16666666666666669rpm",
+          "comment": "Dynamic Pattern CCW Slow"
+        },
+        {
+          "dmxRange": [
+            150,
+            254
+          ],
+          "type": "Rotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Rotation",
+          "speed": "-60rpm",
+          "comment": "Dynamic Pattern CCW Fast"
+        }
+      ]
+    },
+    "FX1 Fade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectDuration",
+          "duration": 0,
+          "comment": "Snap"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectDuration",
+          "durationStart": 0,
+          "durationEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectDuration",
+          "duration": 1,
+          "comment": "Smooth"
+        }
+      ]
+    },
+    "Color Macro1 5": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "FG Colors"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            12,
+            162
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            163,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            164,
+            174
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            175
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe Slow"
+        },
+        {
+          "dmxRange": [
+            176,
+            243
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            244,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    },
+    "Color Macro1 6": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "BG Colors"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            12,
+            162
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            163,
+            163
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            164,
+            174
+          ],
+          "type": "NoFunction",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            175,
+            175
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.9Hz",
+          "speedEnd": "15Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe Slow"
+        },
+        {
+          "dmxRange": [
+            176,
+            243
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            244,
+            244
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "randomTiming": true,
+          "comment": "RandomStrobe Fast"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Safe"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "ResetAll"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Position Reset"
+        },
+        {
+          "dmxRange": [
+            24,
+            47
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "TBD"
+        },
+        {
+          "dmxRange": [
+            48,
+            55
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Other Reset"
+        },
+        {
+          "dmxRange": [
+            56,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Display Off"
+        },
+        {
+          "dmxRange": [
+            64,
+            71
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Display On"
+        },
+        {
+          "dmxRange": [
+            72,
+            87
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "TBD"
+        },
+        {
+          "dmxRange": [
+            88,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Hibernation"
+        },
+        {
+          "dmxRange": [
+            96,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "TBD"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Pix-Fx",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "P Rotate",
+        "T Rotate",
+        "Sh1",
+        "Dim",
+        "Dim Mode",
+        "Color Mix Mode",
+        "0_Head_ColorMacro1",
+        "Zoom",
+        "FX1",
+        "0_Head_Effects1Pos",
+        "FX1 Fade",
+        "Color Macro1 5",
+        "Dim 2",
+        "Sh1 2",
+        "Color Macro1 6",
+        "Dim 3",
+        "Sh1 3",
+        "Ctrl1",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      577,
+      313,
+      100
+    ],
+    "weight": 16.0,
+    "DMXconnector": "XLR5",
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 176,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        2.0,
+        4.7
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red Led",
+      "cie": "0.635600,0.330700,100.000000",
+      "hex": "#ff241b"
+    },
+    {
+      "name": "Green Led",
+      "cie": "0.298100,0.602700,100.000000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue Led",
+      "cie": "0.146200,0.058670,100.000000",
+      "hex": "#002bff"
+    },
+    {
+      "name": "White Led",
+      "cie": "0.313100,0.332800,100.000000",
+      "hex": "#fdfffc"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Air5Fan is a pixel-FX moving head, able to control the spread of its pixels through the motorised lens system, passing from a sharp linear beam effect to a multi-ray effect. Powered by 5x40W RGBW/FC LEDs, with a 2° beam each, delivering stunning brightness for large setups and featuring infinite rotation over pan and tilt. Last but not least, Air 5Fan allows for the mounting of a mirror on its housing allowing for an added effect as moving projecting surface bouncing beams from other light sources.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-08-22T16:16:32",
+      "text": "Rev 012 - Default - Highlight and Snap values review"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "beb4a9bf9cb6ad85"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "air5fan",
+  "gwFixtureTypeID": "D949D874-E1EA-41DA-B5EA-13F6CC649EB1"
+}

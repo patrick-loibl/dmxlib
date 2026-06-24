@@ -1,0 +1,159 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "L400 Variwhite",
+  "shortName": "L400",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2025-09-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 000CF548-9DEF-427F-8F46-6463F6CA5F17"
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTO": {
+      "fineChannelAliases": [
+        "CTO fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "WW": {
+      "fineChannelAliases": [
+        "WW fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "fineChannelAliases": [
+        "CW fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8bit CTO=On",
+      "channels": [
+        "Dim",
+        "CTO"
+      ]
+    },
+    {
+      "name": "8bit CTO=Off",
+      "channels": [
+        "Dim",
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "16bit CTO=On",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTO",
+        "CTO fine"
+      ]
+    },
+    {
+      "name": "16bit CTO=Off",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "WW",
+        "WW fine",
+        "CW",
+        "CW fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      238,
+      395,
+      238
+    ],
+    "weight": 6.5,
+    "power": 150,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      50
+    ],
+    "revision": {
+      "date": "2025-09-21T17:02:07",
+      "text": "init, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cd454b2542c491b"
+  },
+  "manufacturerKey": "b-and-s",
+  "fixtureKey": "l400-variwhite",
+  "gwFixtureTypeID": "000CF548-9DEF-427F-8F46-6463F6CA5F17"
+}

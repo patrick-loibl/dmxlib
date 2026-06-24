@@ -1,0 +1,285 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "F90-CW",
+  "shortName": "F90CW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2020-07-15",
+    "lastModifyDate": "2020-09-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.0 fixture type ID: 2DEED1F6-7922-4F17-8861-4CC402676755"
+    }
+  },
+  "comment": "Terbly F90-CW: 150W LED Fresnel(5600K)",
+  "rdm": {
+    "modelId": 1153
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": []
+    }
+  },
+  "availableChannels": {
+    "CW": {
+      "defaultValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "defaultValue": 0,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": "0cd",
+        "brightnessEnd": "1cd"
+      }
+    },
+    "Zoom": {
+      "fineChannelAliases": [
+        "Zoom fine"
+      ],
+      "defaultValue": 32768,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            32767
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            33023
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "normal"
+        },
+        {
+          "dmxRange": [
+            33024,
+            65279
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            65280,
+            65535
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "wide"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Theatre"
+        },
+        {
+          "dmxRange": [
+            101,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Default to Unit Curve Setting"
+        }
+      ]
+    },
+    "Zoom 2": {
+      "name": "Zoom",
+      "defaultValue": 128,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "normal"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "wide"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "6Channel",
+      "channels": [
+        "CW",
+        "Dim",
+        "Dim fine",
+        "Zoom",
+        "Zoom fine",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "3Channel",
+      "channels": [
+        "CW",
+        "Dim",
+        "Zoom 2"
+      ]
+    },
+    {
+      "name": "2Channel",
+      "channels": [
+        "Dim",
+        "Zoom 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      349,
+      666,
+      349
+    ],
+    "power": 150,
+    "bulb": {
+      "type": "LED",
+      "lumens": 11000,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        57.0,
+        72.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "150W LED Fresnel(5600K)",
+    "beamType": "Wash",
+    "revision": {
+      "date": "2020-09-07T00:50:39",
+      "text": "Offical"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2c42c3e79a2512e9"
+  },
+  "manufacturerKey": "terbly",
+  "fixtureKey": "f90-cw",
+  "gwFixtureTypeID": "2DEED1F6-7922-4F17-8861-4CC402676755"
+}

@@ -1,0 +1,509 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Profile Light Engine TWW 10Deg",
+  "shortName": "LekoLEDProfileTWW10",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2022-09-02",
+    "lastModifyDate": "2022-11-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 568D45CB-29D5-11ED-B3F1-525400685065"
+    }
+  },
+  "comment": "Strand Leko LED Profile TWW is a high output midsized LED theatrical luminaire",
+  "rdm": {
+    "modelId": 279,
+    "softwareVersion": "0x1"
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe S > F - Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Lighting Strobe S > F - Strobe"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random S > F - Strobe Random"
+        }
+      ]
+    },
+    "Fans": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan - Custom"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "S > F - Speed"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction",
+          "comment": "Idle - Custom"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Full Luminaire Recal - Reset"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "NoFunction",
+          "comment": "Fixture Shutdown - Custom"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display-Menu On - Custom"
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display-Menu Off - Custom"
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Tungsten Dimming On - Custom"
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Tungsten Dimming Off - Custom"
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimming Curve Linear - Dimmer"
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimming Curve S-Curve - Dimmer"
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Dimming Curve Square Law - Dimmer"
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Dimmer Snap On - Speed"
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Dimmer Snap Off - Speed"
+        },
+        {
+          "dmxRange": [
+            71,
+            110
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            111,
+            115
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Standard Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            116,
+            120
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Studio Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            121,
+            125
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Whisper Mode - Custom"
+        },
+        {
+          "dmxRange": [
+            126,
+            135
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            136,
+            140
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan On - Custom"
+        },
+        {
+          "dmxRange": [
+            141,
+            145
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fan Auto - Custom"
+        },
+        {
+          "dmxRange": [
+            146,
+            150
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            151,
+            155
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            156,
+            170
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        },
+        {
+          "dmxRange": [
+            171,
+            175
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset Fixture To Default - Reset"
+        },
+        {
+          "dmxRange": [
+            176,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "Reserved - Custom"
+        }
+      ]
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            65534
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "16-Bit Mode",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Fans",
+        "Ctrl1",
+        "CTC",
+        "CTC fine"
+      ]
+    },
+    {
+      "name": "8-Bit Mode",
+      "rdmPersonalityIndex": 2,
+      "channels": [
+        "Dim 2",
+        "Sh1",
+        "Fans",
+        "Ctrl1",
+        "CTC 2"
+      ]
+    },
+    {
+      "name": "2-Ch Mode",
+      "rdmPersonalityIndex": 3,
+      "channels": [
+        "Dim 2",
+        "CTC 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      305,
+      480,
+      279
+    ],
+    "weight": 9.3,
+    "power": 300,
+    "bulb": {
+      "type": "LED",
+      "lumens": 8000,
+      "colorTemperature": 3600
+    },
+    "lens": {
+      "degreesMinMax": [
+        9.0,
+        10.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Strand Leko LED Profile TWW is a high output midsized LED theatrical luminaire",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-11-02T02:06:08",
+      "text": "Update upload by GDTFservice.com, powered by Crescit, commissioned by Strand."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "7ebd8b1165344fac"
+  },
+  "manufacturerKey": "vari-lite",
+  "fixtureKey": "profile-light-engine-tww-10deg",
+  "gwFixtureTypeID": "568D45CB-29D5-11ED-B3F1-525400685065"
+}

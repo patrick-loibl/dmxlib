@@ -1,0 +1,1509 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MOVILIGHT 740 ZOOM",
+  "shortName": "Movi740Z",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-03",
+    "lastModifyDate": "2025-10-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EDDB3316-1971-43FE-BA23-A91901085C52"
+    }
+  },
+  "comment": "Esta innovadora cabeza móvil incorpora la última tecnología de iluminación con 7 LEDs RGBW 4 en 1 ultrabrillantes de 40W. Gracias a sus precisos motores, los movimientos en ambos ejes son realmente rápidos. Puede ofrecer escenas intensas de mezcla de colores y efectos.\nPara lograr estos efectos, MOVILIGHT 740 ZOOM incorpora zoom motorizado entre 5º y 60º.\n\nEl dispositivo incorpora un conector de alimentación PowerCON y una conexión tipo XLR de 3 pines para entrada y salida de señal DMX. MOVILIGHT 740 ZOOM se puede controlar a través del protocolo DMX y trabajar con programas independientes tanto por audio como maestro / esclavo. Si el dispositivo está funcionando bajo el protocolo DMX, es posible utilizar 8, 17, 21, 35 y 41 canales, aumentando las características y efectos como dimmer lineal, estrobo y control de color de cada LED o del dispositivo completo.\n\nMOVILIGHT 740 ZOOM está fabricado en plástico ABS, lo que reduce su peso y ofrece una carcasa dura contra los impactos. En el panel frontal hay una pantalla para navegar y programar el menú utilizando los botones colocados a tal efecto. Entre las funciones configurables desde el menú, cabe destacar la inversión de los ejes Pan y Tilt, la sensibilidad de audio o la selección de modos de uso.",
+  "wheels": {
+    "Color Wheel": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#e404e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cyan",
+          "colors": [
+            "#05e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Pan"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Tilt"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg",
+        "comment": "Zoom"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "F > S"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "S > F"
+        }
+      ]
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Warm > Cool"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 2
+        },
+        {
+          "dmxRange": [
+            31,
+            61
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 3
+        },
+        {
+          "dmxRange": [
+            62,
+            92
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 4
+        },
+        {
+          "dmxRange": [
+            93,
+            123
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 5
+        },
+        {
+          "dmxRange": [
+            124,
+            154
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 6
+        },
+        {
+          "dmxRange": [
+            155,
+            185
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 7
+        },
+        {
+          "dmxRange": [
+            186,
+            216
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 8
+        },
+        {
+          "dmxRange": [
+            217,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color Wheel",
+          "slotNumber": 5
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            32,
+            37
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            38,
+            43
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            44,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "Yellow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Magenta",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            61
+          ],
+          "type": "Effect",
+          "effectName": "Cyan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            62,
+            67
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            68,
+            73
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            74,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Macro 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            91
+          ],
+          "type": "Effect",
+          "effectName": "Macro 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            92,
+            97
+          ],
+          "type": "Effect",
+          "effectName": "Macro 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            98,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "Macro 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Macro 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            110,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "Macro 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            116,
+            121
+          ],
+          "type": "Effect",
+          "effectName": "Macro 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            122,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Macro 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            133
+          ],
+          "type": "Effect",
+          "effectName": "Macro 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            134,
+            139
+          ],
+          "type": "Effect",
+          "effectName": "Macro 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            145
+          ],
+          "type": "Effect",
+          "effectName": "Macro 13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            146,
+            151
+          ],
+          "type": "Effect",
+          "effectName": "Macro 14",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            152,
+            157
+          ],
+          "type": "Effect",
+          "effectName": "Macro 15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            158,
+            163
+          ],
+          "type": "Effect",
+          "effectName": "Macro 16",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            164,
+            169
+          ],
+          "type": "Effect",
+          "effectName": "Macro 17",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Macro 18",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "Macro 19",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            182,
+            187
+          ],
+          "type": "Effect",
+          "effectName": "Macro 20",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            188,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "Macro 21",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            194,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "Macro 22",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "Macro 23",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            206,
+            211
+          ],
+          "type": "Effect",
+          "effectName": "Macro 24",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            212,
+            217
+          ],
+          "type": "Effect",
+          "effectName": "Macro 25",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            218,
+            223
+          ],
+          "type": "Effect",
+          "effectName": "All Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "All Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color FX2": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "F > S",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            244
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        }
+      ]
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Warm > Cool"
+        }
+      ]
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 2": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 3": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "NoFeature 4": {
+      "name": "NoFeature",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 5": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 6": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "R 7": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "Red"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "Green"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue"
+      }
+    },
+    "White 7": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "Color FX1 2": {
+      "name": "Color FX1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Open",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Red",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            31
+          ],
+          "type": "Effect",
+          "effectName": "Green",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            32,
+            37
+          ],
+          "type": "Effect",
+          "effectName": "Blue",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            38,
+            43
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            44,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "Yellow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Magenta",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            61
+          ],
+          "type": "Effect",
+          "effectName": "Cyan",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            62,
+            67
+          ],
+          "type": "Effect",
+          "effectName": "White",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            68,
+            73
+          ],
+          "type": "Effect",
+          "effectName": "Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            74,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Macro 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            91
+          ],
+          "type": "Effect",
+          "effectName": "Macro 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            92,
+            97
+          ],
+          "type": "Effect",
+          "effectName": "Macro 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            98,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "Macro 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Macro 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            110,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "Macro 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            116,
+            121
+          ],
+          "type": "Effect",
+          "effectName": "Macro 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            122,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Macro 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            133
+          ],
+          "type": "Effect",
+          "effectName": "Macro 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            134,
+            139
+          ],
+          "type": "Effect",
+          "effectName": "Macro 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            145
+          ],
+          "type": "Effect",
+          "effectName": "Macro 13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            146,
+            151
+          ],
+          "type": "Effect",
+          "effectName": "Macro 14",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            152,
+            157
+          ],
+          "type": "Effect",
+          "effectName": "Macro 15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            158,
+            163
+          ],
+          "type": "Effect",
+          "effectName": "Macro 16",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            164,
+            169
+          ],
+          "type": "Effect",
+          "effectName": "Macro 17",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Macro 18",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "Macro 19",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            182,
+            187
+          ],
+          "type": "Effect",
+          "effectName": "Macro 20",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            188,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "Macro 21",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            194,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "Macro 22",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "Macro 23",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            206,
+            211
+          ],
+          "type": "Effect",
+          "effectName": "Macro 24",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            212,
+            217
+          ],
+          "type": "Effect",
+          "effectName": "Macro 25",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            218,
+            223
+          ],
+          "type": "Effect",
+          "effectName": "All Macro 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "All Macro 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "8 CHANNELS",
+      "channels": [
+        "P",
+        "T",
+        "Zoom",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "17 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "CTC",
+        "C1",
+        "Color FX1",
+        "Color FX2",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "21 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "CTC 2",
+        "C1",
+        "Color FX1",
+        "Color FX2",
+        "NoFeature",
+        "NoFeature 2",
+        "NoFeature 3",
+        "NoFeature 4",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "35 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "White 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "White 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "White 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "White 7"
+      ]
+    },
+    {
+      "name": "41 CHANNELS",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        "R 4",
+        "G 4",
+        "B 4",
+        "White 4",
+        "R 5",
+        "G 5",
+        "B 5",
+        "White 5",
+        "R 6",
+        "G 6",
+        "B 6",
+        "White 6",
+        "R 7",
+        "G 7",
+        "B 7",
+        "White 7",
+        "CTC 2",
+        "C1",
+        "Color FX1 2",
+        "Color FX2",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      169,
+      161,
+      169
+    ],
+    "weight": 8.9,
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Esta innovadora cabeza móvil incorpora la última tecnología de iluminación con 7 LEDs RGBW 4 en 1 ultrabrillantes de 40W. Gracias a sus precisos motores, los movimientos en ambos ejes son realmente rápidos. Puede ofrecer escenas intensas de mezcla de colores y efectos.\nPara lograr estos efectos, MOVILIGHT 740 ZOOM incorpora zoom motorizado entre 5º y 60º.\n\nEl dispositivo incorpora un conector de alimentación PowerCON y una conexión tipo XLR de 3 pines para entrada y salida de señal DMX. MOVILIGHT 740 ZOOM se puede controlar a través del protocolo DMX y trabajar con programas independientes tanto por audio como maestro / esclavo. Si el dispositivo está funcionando bajo el protocolo DMX, es posible utilizar 8, 17, 21, 35 y 41 canales, aumentando las características y efectos como dimmer lineal, estrobo y control de color de cada LED o del dispositivo completo.\n\nMOVILIGHT 740 ZOOM está fabricado en plástico ABS, lo que reduce su peso y ofrece una carcasa dura contra los impactos. En el panel frontal hay una pantalla para navegar y programar el menú utilizando los botones colocados a tal efecto. Entre las funciones configurables desde el menú, cabe destacar la inversión de los ejes Pan y Tilt, la sensibilidad de audio o la selección de modos de uso.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-10-29T21:08:24",
+      "text": "Version_2_0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "6ca55228de00738a"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "movilight-740-zoom",
+  "gwFixtureTypeID": "EDDB3316-1971-43FE-BA23-A91901085C52"
+}

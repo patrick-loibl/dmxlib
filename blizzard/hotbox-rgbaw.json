@@ -1,0 +1,318 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "HotBox RGBAW",
+  "shortName": "HotBox RGBAW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "9C466659-AC8E-4AA4-B08C-10C80660144E"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      124,
+      179,
+      207
+    ],
+    "weight": 1.6,
+    "power": 58,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1700,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        26.0,
+        30.0
+      ]
+    }
+  },
+  "wheels": {
+    "HSV mode": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "No color",
+          "colors": [
+            "#000000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#ff0000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00ff00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000ff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#ffffff"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam ColorAdd_R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        }
+      ]
+    },
+    "Beam ColorAdd_G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        }
+      ]
+    },
+    "Beam ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Beam ColorAdd_RY": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Amber"
+        }
+      ]
+    },
+    "Beam ColorAdd_W": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White"
+        }
+      ]
+    },
+    "Beam Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "NoFunction",
+          "comment": "No Strobe"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        }
+      ]
+    },
+    "Beam Effects1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "NoFunction",
+          "comment": "No Effect"
+        },
+        {
+          "dmxRange": [
+            32,
+            127
+          ],
+          "type": "Effect",
+          "comment": "Fade Effects"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "ColorPreset"
+        }
+      ]
+    },
+    "Beam Effects1Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "EffectSpeed"
+        }
+      ]
+    },
+    "Beam Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "10 Channel Mode",
+      "shortName": "10 Channel M",
+      "channels": [
+        "Beam Dimmer",
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_RY",
+        "Beam ColorAdd_W",
+        "Beam Shutter1",
+        "Beam Effects1",
+        "Beam Effects1Rate"
+      ]
+    },
+    {
+      "name": "9 Channel Mode",
+      "shortName": "9 Channel Mo",
+      "channels": [
+        "Beam Dimmer",
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_RY",
+        "Beam ColorAdd_W",
+        "Beam Shutter1",
+        "Beam Effects1",
+        "Beam Effects1Rate"
+      ]
+    },
+    {
+      "name": "5 Channel Mode",
+      "shortName": "5 Channel Mo",
+      "channels": [
+        "Beam ColorAdd_R",
+        "Beam ColorAdd_G",
+        "Beam ColorAdd_B",
+        "Beam ColorAdd_RY",
+        "Beam ColorAdd_W"
+      ]
+    },
+    {
+      "name": "4 Channel Mode",
+      "shortName": "4 Channel Mo",
+      "channels": [
+        "Beam Color1",
+        "Beam ColorAdd_RY",
+        "Beam ColorAdd_W",
+        "Beam Dimmer"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.543600,0.406600,36.570000",
+      "hex": "#ff8000"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Six LED elements of red, green, blue, amber, white, and UV. 53 Watts maximum power consumption. PowerCON in/out and 3 pin DMX in/out connections.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-03-28T18:09:25",
+      "text": "First Edition"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "80b224ad51ba481f"
+  },
+  "manufacturerKey": "blizzard",
+  "fixtureKey": "hotbox-rgbaw",
+  "gwFixtureTypeID": "9C466659-AC8E-4AA4-B08C-10C80660144E"
+}

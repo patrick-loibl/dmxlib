@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "HazeKit",
+  "shortName": "HzKit",
+  "categories": [
+    "Smoke"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-22",
+    "lastModifyDate": "2026-01-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D40F0904-106C-4F37-BA68-2862407F7A88"
+    }
+  },
+  "rdm": {
+    "modelId": 1
+  },
+  "availableChannels": {
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Unit Off"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Unit On"
+        }
+      ]
+    },
+    "Output Level": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Haze 1%"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Haze 100%"
+        }
+      ]
+    },
+    "Haze": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 0,
+          "comment": "Output Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 1,
+          "comment": "Output On"
+        }
+      ]
+    },
+    "Fan1": {
+      "capability": {
+        "type": "Rotation",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 0",
+      "channels": [
+        "Ctrl1",
+        "Output Level",
+        "Haze",
+        "Fan1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      600,
+      1000,
+      800
+    ],
+    "weight": 16.8
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-01-16T17:15:28",
+      "text": "Init"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "06b98c55cf84d28a"
+  },
+  "manufacturerKey": "bombee",
+  "fixtureKey": "hazekit",
+  "gwFixtureTypeID": "D40F0904-106C-4F37-BA68-2862407F7A88"
+}

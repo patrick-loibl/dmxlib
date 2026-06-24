@@ -1,0 +1,301 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CLBEAM 100",
+  "shortName": "CLBEAM 100",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-13",
+    "lastModifyDate": "2025-03-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C0D68CB4-9924-4F98-AB28-6E357928C1A9"
+    }
+  },
+  "comment": "SG CLBEAM 100",
+  "wheels": {
+    "color wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "color",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "gobo wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "gobo",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "prism Wheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "prism ",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "C1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "WheelSlot",
+          "wheel": "color wheel",
+          "slotNumberStart": 1,
+          "slotNumberEnd": 1.03,
+          "comment": "Open "
+        },
+        {
+          "dmxRange": [
+            8,
+            127
+          ],
+          "type": "WheelSlot",
+          "wheel": "color wheel",
+          "slotNumberStart": 1.03,
+          "slotNumberEnd": 1.5,
+          "comment": "color wheel "
+        },
+        {
+          "dmxRange": [
+            128,
+            190
+          ],
+          "type": "WheelSlot",
+          "wheel": "color wheel",
+          "slotNumberStart": 1.5,
+          "slotNumberEnd": 1.75,
+          "comment": "color wheel clockwise"
+        },
+        {
+          "dmxRange": [
+            191,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "color wheel",
+          "slotNumberStart": 1.75,
+          "slotNumberEnd": 2,
+          "comment": "color wheel anticlockwhise"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 15,
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "WheelSlot",
+          "wheel": "gobo wheel",
+          "slotNumber": 1,
+          "comment": "no gobo "
+        },
+        {
+          "dmxRange": [
+            5,
+            89
+          ],
+          "type": "WheelSlot",
+          "wheel": "gobo wheel",
+          "slotNumber": 1,
+          "comment": "gobo wheel"
+        },
+        {
+          "dmxRange": [
+            90,
+            225
+          ],
+          "type": "WheelSlot",
+          "wheel": "gobo wheel",
+          "slotNumber": 1,
+          "comment": "gobo wheel shake "
+        },
+        {
+          "dmxRange": [
+            226,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "gobo wheel",
+          "slotNumber": 1,
+          "comment": "gobo wheel rot slow to fast "
+        }
+      ]
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1
+      }
+    },
+    "Prism1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Prism",
+          "comment": "no prism "
+        },
+        {
+          "dmxRange": [
+            6,
+            127
+          ],
+          "type": "Prism",
+          "comment": "prism "
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Prism",
+          "comment": "prism rot slow to fast "
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Fixture Global Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "mode 1 ",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "C1",
+        "G1",
+        "Sh1",
+        "Dim",
+        "Focus1",
+        "Prism1",
+        "Ctrl1",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      450,
+      240
+    ],
+    "weight": 7.3,
+    "power": 150,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        4.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-03-17T13:55:31",
+      "text": "Clbeam100"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3f28ecffcc5c972b"
+  },
+  "manufacturerKey": "sagitter",
+  "fixtureKey": "clbeam-100",
+  "gwFixtureTypeID": "C0D68CB4-9924-4F98-AB28-6E357928C1A9"
+}

@@ -1,0 +1,387 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LumiPar7VWPro",
+  "shortName": "LPAR7VW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-04",
+    "lastModifyDate": "2025-03-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 347EE0A1-D2FA-4138-A876-A7351BB8A840"
+    }
+  },
+  "comment": "LUMIPAR7VWPRO is a super-slim ParLED for professional use, designed to be a powerful wash light in rental/touring applications. The high efficiency variable white LED light source, the ultra-thin design and absence of fans make LUMIPAR7VWPRO a big innovation compared to traditional par cans, offering higher versatility, easy setup and reduced carrying volume.",
+  "availableChannels": {
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483646
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Effect",
+          "effectName": "NoFeature",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Effect",
+          "effectName": "Auto_1",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Effect",
+          "effectName": "Auto_2",
+          "speed": 2
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Effect",
+          "effectName": "Auto_3",
+          "speed": 3
+        },
+        {
+          "dmxRange": [
+            204,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "Auto_4",
+          "speed": 4
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto_5",
+          "speed": 5
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speed": "1Hz",
+          "comment": "Slow Speed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "1.07Hz",
+          "speedEnd": "19.93Hz",
+          "comment": "Speed"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speed": "20Hz",
+          "comment": "Fast Speed"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Default"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Liner"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Non Linear_1"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Non Linear_2"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Non Linear_3"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2ch",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "3ch",
+      "channels": [
+        "Dim 2",
+        "WW",
+        "CW"
+      ]
+    },
+    {
+      "name": "7ch",
+      "channels": [
+        "Dim 2",
+        "WW",
+        "CW",
+        "Sh1",
+        "FX1",
+        "FX1 Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      181,
+      100,
+      188
+    ],
+    "weight": 2.5,
+    "power": 42,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1339,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        39.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "CW",
+      "cie": "0.322000,0.331700,100.000000",
+      "hex": "#fffdfa"
+    },
+    {
+      "name": "WW",
+      "cie": "0.436900,0.404000,100.000000",
+      "hex": "#ffed8e"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LUMIPAR7VWPRO is a super-slim ParLED for professional use, designed to be a powerful wash light in rental/touring applications. The high efficiency variable white LED light source, the ultra-thin design and absence of fans make LUMIPAR7VWPRO a big innovation compared to traditional par cans, offering higher versatility, easy setup and reduced carrying volume.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-03-04T13:42:27",
+      "text": "Rev 02"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f4cdd2d423534cc9"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "lumipar7vwpro",
+  "gwFixtureTypeID": "347EE0A1-D2FA-4138-A876-A7351BB8A840"
+}

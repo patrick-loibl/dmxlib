@@ -1,0 +1,228 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ORB 300",
+  "shortName": "ORB 300",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-19",
+    "lastModifyDate": "2025-03-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4C3CB719-9D82-48D7-AC43-AB3DC0EFE7BC"
+    }
+  },
+  "comment": "230W COB LED\n5米距离980 Lux\n突破性设计, 高亮度输出\n4种调光曲线，模拟传统钨丝灯调光效果\nIP65防水结构，适合全天候使用\n针对户外及旅行演出的优化设计\nDMX控制",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Amber Shift": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Amber Shift)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "ON"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (Amber Shift)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (Amber Shift)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "OFF"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Effect Speed Slow to Fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            11,
+            80
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Effect 1"
+        },
+        {
+          "dmxRange": [
+            81,
+            160
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Effect 2"
+        },
+        {
+          "dmxRange": [
+            161,
+            240
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Effect 3"
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "No Function"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2CH",
+      "channels": [
+        "Dim",
+        "Amber Shift"
+      ]
+    },
+    {
+      "name": "3CH",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Amber Shift"
+      ]
+    },
+    {
+      "name": "4CH",
+      "channels": [
+        "Dim",
+        "Amber Shift",
+        "FX1",
+        "FX1 Rate"
+      ]
+    },
+    {
+      "name": "5CH",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Amber Shift",
+        "FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      370,
+      100,
+      370
+    ],
+    "weight": 8.5,
+    "power": 230,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 8800,
+      "colorTemperature": 2800
+    },
+    "lens": {
+      "degreesMinMax": [
+        33.0,
+        57.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "230W COB LED\n5米距离980 Lux\n突破性设计, 高亮度输出\n4种调光曲线，模拟传统钨丝灯调光效果\nIP65防水结构，适合全天候使用\n针对户外及旅行演出的优化设计\nDMX控制",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      45
+    ],
+    "revision": {
+      "date": "2025-03-31T03:30:05",
+      "text": "20250331"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ab330939d690b421"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "orb-300",
+  "gwFixtureTypeID": "4C3CB719-9D82-48D7-AC43-AB3DC0EFE7BC"
+}

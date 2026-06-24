@@ -1,0 +1,229 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Vintage Bowl RGBA",
+  "shortName": "Bowl",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-04-06",
+    "lastModifyDate": "2025-04-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BBC77C88-6B5C-4216-BC30-2B918C77FA5E"
+    }
+  },
+  "comment": "Vintage Bowl: LED Vintage Bowl 30 or 50",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Mix Mode": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "ColorMix RGBA"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AutoMode 7 Color Speed on 6"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AutoMode 12 Color Speed on 6"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AutoMode 4 Color Speed on 6"
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physical": 0,
+          "comment": "NoStrob"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strob min to max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4 Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber"
+      ]
+    },
+    {
+      "name": "6 Ch",
+      "channels": [
+        "Color Mix Mode",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Color Mix MSpeed"
+      ]
+    },
+    {
+      "name": "8 Ch",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Color FX1",
+        "StrobeM Strobe",
+        "Color Macro1",
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      510,
+      340,
+      510
+    ],
+    "weight": 8.2,
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        180.0,
+        180.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "LED Vintage Bowl 30 or 50",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-05T20:07:45",
+      "text": "0001"
+    }
+  },
+  "manufacturerKey": "stairville",
+  "fixtureKey": "led-vintage-bowl-rgba",
+  "gwFixtureTypeID": "BBC77C88-6B5C-4216-BC30-2B918C77FA5E"
+}

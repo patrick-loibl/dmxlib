@@ -1,0 +1,491 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Tarm 2_5",
+  "shortName": "Tarm2.5",
+  "categories": [
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-05-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 815A4BA9-3B6E-4833-88A8-2C0565E657C0"
+    }
+  },
+  "comment": "Laserworld Tarm 2.5: Laser",
+  "wheels": {
+    "NewWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "50%"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Full"
+        }
+      ]
+    },
+    "G1": {
+      "highlightValue": 1,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": 0,
+          "comment": "Patterns"
+        }
+      ]
+    },
+    "Gobo Wheel1 MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": "stop",
+          "comment": "Empty Channel Standard Speed 50 FPSSet"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": "stop",
+          "comment": "0 FPS"
+        },
+        {
+          "dmxRange": [
+            17,
+            135
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": "stop"
+        },
+        {
+          "dmxRange": [
+            136,
+            136
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": "stop",
+          "comment": "50FPS"
+        },
+        {
+          "dmxRange": [
+            137,
+            254
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": "stop"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "NewWheel",
+          "slotNumber": "stop",
+          "comment": "100FPS"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Full Size"
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Empty Channel Set"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Empty Channel Set"
+        }
+      ]
+    },
+    "Zoom Spot": {
+      "capability": {
+        "type": "Unknown (ZoomModeSpot)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Select Spin": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "NewWheel",
+        "slotNumberStart": "NaNrpm",
+        "slotNumberEnd": "NaNrpm"
+      }
+    },
+    "X": {
+      "fineChannelAliases": [
+        "X fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_X)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Y)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "C1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "NewWheel",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Lamp Ctrl": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "LED Zone Mode": {
+      "capability": {
+        "type": "Unknown (LEDZoneMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Lamp Power Mode": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Function": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G1 2": {
+      "name": "G1",
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "NewWheel",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Gobo Wheel1 MSpeed 2": {
+      "name": "Gobo Wheel1 MSpeed",
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Rotate": {
+      "fineChannelAliases": [
+        "Rotate fine"
+      ],
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "NewWheel",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "Zoom 2": {
+      "name": "Zoom",
+      "highlightValue": 1,
+      "capability": {
+        "type": "Unknown (ZoomMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Reflector Adj": {
+      "capability": {
+        "type": "Unknown (ReflectorAdjust)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "Unknown (VideoKeyColor_R)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "Unknown (VideoKeyColor_G)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "Unknown (VideoColorKey_B)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "DJ Mode ",
+      "channels": [
+        "Dim",
+        "G1",
+        "Gobo Wheel1 MSpeed",
+        "Zoom",
+        "Zoom Spot",
+        "Select Spin",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Color FX1",
+        "C1",
+        "Sh1",
+        "Lamp Ctrl",
+        "Ctrl1",
+        "LED Zone Mode",
+        "Lamp Power Mode",
+        "Function",
+        "NoFeature"
+      ]
+    },
+    {
+      "name": "Professional Mode",
+      "channels": [
+        "Dim 2",
+        "G1 2",
+        "Gobo Wheel1 MSpeed 2",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Rotate",
+        "Rotate fine",
+        "Zoom 2",
+        "Zoom Spot",
+        "Reflector Adj",
+        "C1",
+        "R",
+        "G",
+        "B",
+        "Strobe1",
+        "Lamp Ctrl",
+        "Ctrl1",
+        "Lamp Power Mode",
+        "R 2",
+        "G 2",
+        "B 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      150,
+      220
+    ],
+    "weight": 7.0
+  },
+  "gwSpecs": {
+    "description": "Laser",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-05-17T20:16:07",
+      "text": "Laserworld Tarm 2_5 "
+    }
+  },
+  "manufacturerKey": "laserworld",
+  "fixtureKey": "tarm-2-5",
+  "gwFixtureTypeID": "815A4BA9-3B6E-4833-88A8-2C0565E657C0"
+}

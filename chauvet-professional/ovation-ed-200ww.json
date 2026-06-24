@@ -1,0 +1,237 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Ovation ED-200WW",
+  "shortName": "OvationED200WW",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-26",
+    "lastModifyDate": "2025-05-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B0F4E4C9-2F54-4BE9-84B0-806AEB2F6BA1"
+    }
+  },
+  "comment": "Ovation ED-200WW brings a 750 W tungsten equivalent warm white intensity and 95 CRI to our exclusive, award-winning Ovation ED range of LED theatrical fixtures, making it the highest power LED ellipsoidal unit that can sense and respond to traditional dimming systems. This high performance ellipsoidal is equally as efficient running on constant power and DMX, as it is when connected directly to a dimming power source. Advanced onboard electronics automatically detect what type of power and data the fixture receives, and it responds accordingly. Retrofit and upgrade to the benefits of LED lighting without being held back by previous investments made in major dimming systems!",
+  "rdm": {
+    "modelId": 1508,
+    "softwareVersion": "0x0"
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "18Hz",
+          "comment": "Strobe S > F - Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            110,
+            179
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "18Hz",
+          "comment": "Lightning Effect - Strobe"
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.1Hz",
+          "speedEnd": "18Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random - Strobe Random"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "STD P",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "DOS",
+      "rdmPersonalityIndex": 2,
+      "channels": [
+        "Dim",
+        "Dim fine"
+      ]
+    },
+    {
+      "name": "UNO",
+      "rdmPersonalityIndex": 3,
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      371,
+      197,
+      371
+    ],
+    "weight": 9.8,
+    "power": 230,
+    "bulb": {
+      "type": "585nm LED",
+      "lumens": 12790,
+      "colorTemperature": 3334
+    },
+    "lens": {
+      "degreesMinMax": [
+        19.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White",
+      "cie": "0.415000,0.384000,100.000000",
+      "hex": "#ffedab",
+      "dominantWavelength": 585.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Ovation ED-200WW brings a 750 W tungsten equivalent warm white intensity and 95 CRI to our exclusive, award-winning Ovation ED range of LED theatrical fixtures, making it the highest power LED ellipsoidal unit that can sense and respond to traditional dimming systems. This high performance ellipsoidal is equally as efficient running on constant power and DMX, as it is when connected directly to a dimming power source. Advanced onboard electronics automatically detect what type of power and data the fixture receives, and it responds accordingly. Retrofit and upgrade to the benefits of LED lighting without being held back by previous investments made in major dimming systems!",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2025-05-20T16:32:57",
+      "text": "Beta 1.0.1 - 26Deg"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "0c52229016966972"
+  },
+  "manufacturerKey": "chauvet-professional",
+  "fixtureKey": "ovation-ed-200ww",
+  "gwFixtureTypeID": "B0F4E4C9-2F54-4BE9-84B0-806AEB2F6BA1"
+}

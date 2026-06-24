@@ -1,0 +1,926 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "GVM-REIGN-SD1200B",
+  "shortName": "R1200B",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-04-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 9A27AF7C-8EF2-4A35-B3F7-7D14B51A5FF0"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Rotation",
+          "speed": 0,
+          "comment": "Fan smart mode"
+        },
+        {
+          "dmxRange": [
+            86,
+            170
+          ],
+          "type": "Rotation",
+          "speed": 1,
+          "comment": "Fan high speed"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Rotation",
+          "speed": 2,
+          "comment": "Fan silent mode"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Strobe off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 1…25 mean?",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Lightning",
+          "speed": 0,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category",
+            "4_GVM-REIGN-SD1200B_PlayBegin": "Play Begin 3",
+            "4_GVM-REIGN-SD1200B_PlayBegin fine": "Play Begin 3 fine"
+          }
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Effect",
+          "effectName": "CCT loop",
+          "speed": 1,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 4"
+          }
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "Bad bulb",
+          "speed": 1,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 5"
+          }
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "Candle",
+          "speed": 2,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 6"
+          }
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "TV",
+          "speed": 3,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 7"
+          }
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "Paparazzi",
+          "speed": 4,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 2"
+          }
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "Explosion",
+          "speed": 5,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 8"
+          }
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Pulsing",
+          "speed": 6,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 9",
+            "4_GVM-REIGN-SD1200B_PlayBegin": "Play Begin 4",
+            "4_GVM-REIGN-SD1200B_PlayBegin fine": "Play Begin 4 fine"
+          }
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Strobe",
+          "speed": 7,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 10"
+          }
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "Fire",
+          "speed": 8,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 11",
+            "4_GVM-REIGN-SD1200B_PlayBegin": "Play Begin",
+            "4_GVM-REIGN-SD1200B_PlayBegin fine": "Play Begin fine"
+          }
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Firework",
+          "speed": 9,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 12",
+            "4_GVM-REIGN-SD1200B_PlayBegin": "Play Begin 2",
+            "4_GVM-REIGN-SD1200B_PlayBegin fine": "Play Begin 2 fine"
+          }
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "Empty Channel Set",
+          "speed": 11,
+          "switchChannels": {
+            "4_GVM-REIGN-SD1200B_Category": "Category 3"
+          }
+        },
+        {
+          "dmxRange": [
+            120,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {}
+        }
+      ]
+    },
+    "P": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Pan",
+          "angle": "0deg",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            86,
+            170
+          ],
+          "type": "Pan",
+          "angle": "1deg",
+          "comment": "Loop"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Pan",
+          "angle": "2deg",
+          "comment": "Once"
+        }
+      ]
+    },
+    "Play Speed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "100%",
+          "comment": "Spd 1"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "200%",
+          "comment": "Spd 2"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "300%",
+          "comment": "Spd 3"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "400%",
+          "comment": "Spd 4"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "500%",
+          "comment": "Spd 5"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "600%",
+          "comment": "Spd 6"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "700%",
+          "comment": "Spd 7"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "800%",
+          "comment": "Spd 8"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "900%",
+          "comment": "Spd 9"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "1000%",
+          "comment": "Spd 10"
+        },
+        {
+          "dmxRange": [
+            200,
+            219
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physical": "1100%",
+          "comment": "random 1-10"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Unknown (PlaySpeed)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        }
+      ]
+    },
+    "Category": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "Unknown (Category)",
+          "physical": 1,
+          "comment": "F1"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "Unknown (Category)",
+          "physical": 2,
+          "comment": "F2"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "Unknown (Category)",
+          "physical": 3,
+          "comment": "F3"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "Unknown (Category)",
+          "physical": 4,
+          "comment": "F4"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "Unknown (Category)",
+          "physical": 5,
+          "comment": "F5"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "Unknown (Category)",
+          "physical": 6,
+          "comment": "F6"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "Unknown (Category)",
+          "physical": 7,
+          "comment": "F7"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "Unknown (Category)",
+          "physical": 8,
+          "comment": "F8"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "Unknown (Category)",
+          "physical": 9,
+          "comment": "F9"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "Unknown (Category)",
+          "physical": 10,
+          "comment": "F10"
+        },
+        {
+          "dmxRange": [
+            200,
+            219
+          ],
+          "type": "Unknown (Category)",
+          "physical": 11,
+          "comment": "F-random"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Unknown (Category)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Category 2": {
+      "name": "Category",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "Unknown (Category)",
+          "physical": 1,
+          "comment": "F1"
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "Unknown (Category)",
+          "physical": 2,
+          "comment": "F2"
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "Unknown (Category)",
+          "physical": 3,
+          "comment": "F3"
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "Unknown (Category)",
+          "physical": 4,
+          "comment": "F4"
+        },
+        {
+          "dmxRange": [
+            80,
+            99
+          ],
+          "type": "Unknown (Category)",
+          "physical": 5,
+          "comment": "F5"
+        },
+        {
+          "dmxRange": [
+            100,
+            119
+          ],
+          "type": "Unknown (Category)",
+          "physical": 6,
+          "comment": "F6"
+        },
+        {
+          "dmxRange": [
+            120,
+            139
+          ],
+          "type": "Unknown (Category)",
+          "physical": 7,
+          "comment": "F7"
+        },
+        {
+          "dmxRange": [
+            140,
+            159
+          ],
+          "type": "Unknown (Category)",
+          "physical": 8,
+          "comment": "F8"
+        },
+        {
+          "dmxRange": [
+            160,
+            179
+          ],
+          "type": "Unknown (Category)",
+          "physical": 9,
+          "comment": "F9"
+        },
+        {
+          "dmxRange": [
+            180,
+            199
+          ],
+          "type": "Unknown (Category)",
+          "physical": 10,
+          "comment": "F10"
+        },
+        {
+          "dmxRange": [
+            200,
+            219
+          ],
+          "type": "Unknown (Category)",
+          "physical": 11,
+          "comment": "F-random"
+        },
+        {
+          "dmxRange": [
+            220,
+            255
+          ],
+          "type": "Unknown (Category)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Category 3": {
+      "name": "Category",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Unknown (Category)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Warm light"
+        },
+        {
+          "dmxRange": [
+            86,
+            170
+          ],
+          "type": "Unknown (Category)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Natural light"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Unknown (Category)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Cool light"
+        }
+      ]
+    },
+    "Category 4": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 5": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 6": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 7": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 8": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 9": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 10": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 11": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Category 12": {
+      "name": "Category",
+      "capability": {
+        "type": "Unknown (Category)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "CTC 3": {
+      "name": "CTC",
+      "fineChannelAliases": [
+        "CTC 3 fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Play Begin": {
+      "fineChannelAliases": [
+        "Play Begin fine"
+      ],
+      "capability": {
+        "type": "Unknown (PlayBegin)",
+        "physicalStart": "0s",
+        "physicalEnd": "1s"
+      }
+    },
+    "Play Begin 2": {
+      "name": "Play Begin",
+      "fineChannelAliases": [
+        "Play Begin 2 fine"
+      ],
+      "capability": {
+        "type": "Unknown (PlayBegin)",
+        "physicalStart": "0s",
+        "physicalEnd": "1s"
+      }
+    },
+    "Play Begin 3": {
+      "name": "Play Begin",
+      "fineChannelAliases": [
+        "Play Begin 3 fine"
+      ],
+      "capability": {
+        "type": "Unknown (PlayBegin)",
+        "physicalStart": "0s",
+        "physicalEnd": "1s"
+      }
+    },
+    "Play Begin 4": {
+      "name": "Play Begin",
+      "fineChannelAliases": [
+        "Play Begin 4 fine"
+      ],
+      "capability": {
+        "type": "Unknown (PlayBegin)",
+        "physicalStart": "0s",
+        "physicalEnd": "1s"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "CCT 8-bit",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "CCT 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine"
+      ]
+    },
+    {
+      "name": "CCT+CTRL 8-bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Fan1",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "CCT+CTRL 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC 2",
+        "CTC 2 fine",
+        "Fan1",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "FX 8-bit",
+      "channels": [
+        "Dim",
+        "FX1",
+        "P",
+        "Play Speed",
+        "4_GVM-REIGN-SD1200B_Category",
+        "CTC 3",
+        "4_GVM-REIGN-SD1200B_PlayBegin"
+      ]
+    },
+    {
+      "name": "FX 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "FX1",
+        "P",
+        "Play Speed",
+        "4_GVM-REIGN-SD1200B_Category",
+        "CTC 3",
+        "CTC 3 fine",
+        "4_GVM-REIGN-SD1200B_PlayBegin",
+        "4_GVM-REIGN-SD1200B_PlayBegin fine"
+      ]
+    },
+    {
+      "name": "FX+CTRL 8-bit",
+      "channels": [
+        "Dim",
+        "FX1",
+        "P",
+        "Play Speed",
+        "4_GVM-REIGN-SD1200B_Category",
+        "CTC 3",
+        "4_GVM-REIGN-SD1200B_PlayBegin",
+        "Fan1"
+      ]
+    },
+    {
+      "name": "FX+CTRL 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "FX1",
+        "P",
+        "Play Speed",
+        "4_GVM-REIGN-SD1200B_Category",
+        "CTC 3",
+        "CTC 3 fine",
+        "4_GVM-REIGN-SD1200B_PlayBegin",
+        "4_GVM-REIGN-SD1200B_PlayBegin fine",
+        "Fan1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-04-24T03:34:18",
+      "text": "Ver:0001"
+    }
+  },
+  "manufacturerKey": "gvm",
+  "fixtureKey": "gvm-reign-sd1200b",
+  "gwFixtureTypeID": "9A27AF7C-8EF2-4A35-B3F7-7D14B51A5FF0"
+}

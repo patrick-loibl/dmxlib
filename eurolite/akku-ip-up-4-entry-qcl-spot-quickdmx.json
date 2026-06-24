@@ -1,0 +1,749 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "AKKU IP UP-4 Entry QCL Spot QuickDMX",
+  "shortName": "IP UP-4",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-24",
+    "lastModifyDate": "2023-12-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 28689F89-58FC-4097-A598-FAB752A24C8C"
+    }
+  },
+  "comment": "IP65-Accu-Uplight with 4x 8Watt RGBW-LEDs, QuickDMX and IR-RemoteControl",
+  "wheels": {
+    "Color": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Off",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#e40100"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#00e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e4e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#e4e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#e404e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Cyan",
+          "colors": [
+            "#07e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dark orange",
+          "colors": [
+            "#e44000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green yellow",
+          "colors": [
+            "#aefa00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Salmon",
+          "colors": [
+            "#b3534e"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Turquoise",
+          "colors": [
+            "#50778a"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Light green",
+          "colors": [
+            "#00843d"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Orange",
+          "colors": [
+            "#e47700"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Straw",
+          "colors": [
+            "#856f32"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Lavender",
+          "colors": [
+            "#d793ea"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Light Blue",
+          "colors": [
+            "#00aefc"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Dark blue",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Pink",
+          "colors": [
+            "#bb4674"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Full on",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 1,
+          "slotNumberEnd": 1.05
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 2.05,
+          "slotNumberEnd": 2.1
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 3.1,
+          "slotNumberEnd": 3.15
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 4.15,
+          "slotNumberEnd": 4.2
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 5.2,
+          "slotNumberEnd": 5.25
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 6.25,
+          "slotNumberEnd": 6.3
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 7.3,
+          "slotNumberEnd": 7.35
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 8.35,
+          "slotNumberEnd": 8.4
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 9.4,
+          "slotNumberEnd": 9.45
+        },
+        {
+          "dmxRange": [
+            90,
+            99
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 10.45,
+          "slotNumberEnd": 10.5
+        },
+        {
+          "dmxRange": [
+            100,
+            109
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 11.5,
+          "slotNumberEnd": 11.55
+        },
+        {
+          "dmxRange": [
+            110,
+            119
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 12.55,
+          "slotNumberEnd": 12.6
+        },
+        {
+          "dmxRange": [
+            120,
+            129
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 13.6,
+          "slotNumberEnd": 13.65
+        },
+        {
+          "dmxRange": [
+            130,
+            139
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 14.65,
+          "slotNumberEnd": 14.7
+        },
+        {
+          "dmxRange": [
+            140,
+            149
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 15.7,
+          "slotNumberEnd": 15.75
+        },
+        {
+          "dmxRange": [
+            150,
+            159
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 16.75,
+          "slotNumberEnd": 16.8
+        },
+        {
+          "dmxRange": [
+            160,
+            169
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 17.8,
+          "slotNumberEnd": 17.85
+        },
+        {
+          "dmxRange": [
+            170,
+            179
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 18.85,
+          "slotNumberEnd": 18.9
+        },
+        {
+          "dmxRange": [
+            180,
+            189
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 19.9,
+          "slotNumberEnd": 19.95
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "Color",
+          "slotNumberStart": 20.95,
+          "slotNumberEnd": 21
+        }
+      ]
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "Off",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            19
+          ],
+          "type": "Effect",
+          "effectName": "4 Color Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "4 Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "7 Color Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "7 Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Effect",
+          "effectName": "3 Color Fade",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Effect",
+          "effectName": "3 Color Change",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Auto program 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Auto program 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            90,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Auto program 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Strobe1 2": {
+      "name": "Strobe1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            1,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Music",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "4 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "5 Channel",
+      "channels": [
+        "Dim 2",
+        "Strobe1",
+        "C1",
+        "FX1",
+        "FX1 Rate"
+      ]
+    },
+    {
+      "name": "6 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim 2",
+        "Strobe1 2"
+      ]
+    },
+    {
+      "name": "9 Channel",
+      "channels": [
+        "Dim 2",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "C1",
+        "FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      155,
+      232,
+      155
+    ],
+    "weight": 4.4,
+    "power": 32,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        16.0,
+        32.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "IP65-Accu-Uplight with 4x 8Watt RGBW-LEDs, QuickDMX and IR-RemoteControl",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -5,
+      45
+    ],
+    "revision": {
+      "date": "2023-12-29T14:59:09",
+      "text": "Release 1.1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "fb685e5683456784"
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "akku-ip-up-4-entry-qcl-spot-quickdmx",
+  "gwFixtureTypeID": "28689F89-58FC-4097-A598-FAB752A24C8C"
+}

@@ -1,9 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "Compar 20",
-  "categories": ["Color Changer", "Strobe"],
+  "categories": [
+    "Color Changer",
+    "Strobe"
+  ],
   "meta": {
-    "authors": ["Ljrens vd Burgt", "Ken Harris", "Flo Edelmann"],
+    "authors": [
+      "Ljrens vd Burgt",
+      "Ken Harris",
+      "Flo Edelmann"
+    ],
     "createDate": "2024-03-05",
     "lastModifyDate": "2024-03-05"
   },
@@ -19,7 +26,25 @@
     ]
   },
   "physical": {
-    "DMXconnector": "3-pin"
+    "DMXconnector": "3-pin",
+    "dimensions": [
+      130,
+      100,
+      130
+    ],
+    "weight": 1.5,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 500,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        45.0
+      ]
+    }
   },
   "availableChannels": {
     "Dimmer": {
@@ -30,11 +55,17 @@
     "Strobe": {
       "capabilities": [
         {
-          "dmxRange": [0, 7],
+          "dmxRange": [
+            0,
+            7
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [8, 255],
+          "dmxRange": [
+            8,
+            255
+          ],
           "type": "ShutterStrobe",
           "shutterEffect": "Strobe",
           "speedStart": "slow",
@@ -45,46 +76,81 @@
     "Color Macros": {
       "capabilities": [
         {
-          "dmxRange": [0, 36],
+          "dmxRange": [
+            0,
+            36
+          ],
           "type": "ColorPreset",
-          "colors": ["#ff0000"],
+          "colors": [
+            "#ff0000"
+          ],
           "comment": "Red"
         },
         {
-          "dmxRange": [37, 73],
+          "dmxRange": [
+            37,
+            73
+          ],
           "type": "ColorPreset",
-          "colors": ["#00ff00"],
+          "colors": [
+            "#00ff00"
+          ],
           "comment": "Green"
         },
         {
-          "dmxRange": [74, 110],
+          "dmxRange": [
+            74,
+            110
+          ],
           "type": "ColorPreset",
-          "colors": ["#0000ff"],
+          "colors": [
+            "#0000ff"
+          ],
           "comment": "Blue"
         },
         {
-          "dmxRange": [111, 147],
+          "dmxRange": [
+            111,
+            147
+          ],
           "type": "ColorPreset",
-          "colors": ["#ffff00"],
+          "colors": [
+            "#ffff00"
+          ],
           "comment": "Yellow"
         },
         {
-          "dmxRange": [148, 184],
+          "dmxRange": [
+            148,
+            184
+          ],
           "type": "ColorPreset",
-          "colors": ["#ff00ff"],
+          "colors": [
+            "#ff00ff"
+          ],
           "comment": "Magenta",
           "helpWanted": "Is DMX value 147 yellow or magenta?"
         },
         {
-          "dmxRange": [185, 221],
+          "dmxRange": [
+            185,
+            221
+          ],
           "type": "ColorPreset",
-          "colors": ["#00ffff"],
+          "colors": [
+            "#00ffff"
+          ],
           "comment": "Cyan"
         },
         {
-          "dmxRange": [222, 255],
+          "dmxRange": [
+            222,
+            255
+          ],
           "type": "ColorPreset",
-          "colors": ["#ffffff"],
+          "colors": [
+            "#ffffff"
+          ],
           "comment": "White"
         }
       ]
@@ -110,36 +176,137 @@
     "Effect": {
       "capabilities": [
         {
-          "dmxRange": [0, 4],
+          "dmxRange": [
+            0,
+            4
+          ],
           "type": "NoFunction"
         },
         {
-          "dmxRange": [5, 80],
+          "dmxRange": [
+            5,
+            80
+          ],
           "type": "ColorPreset",
           "comment": "Color 1…15",
           "helpWanted": "What colors at what values?"
         },
         {
-          "dmxRange": [81, 150],
+          "dmxRange": [
+            81,
+            150
+          ],
           "type": "Effect",
           "effectPreset": "ColorJump",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [151, 220],
+          "dmxRange": [
+            151,
+            220
+          ],
           "type": "Effect",
           "effectPreset": "ColorFade",
           "speedStart": "slow",
           "speedEnd": "fast"
         },
         {
-          "dmxRange": [221, 255],
+          "dmxRange": [
+            221,
+            255
+          ],
           "type": "Effect",
           "effectName": "Sound Control",
           "soundControlled": true,
           "soundSensitivityStart": "low",
           "soundSensitivityEnd": "high"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Static 1 tr 31"
+        },
+        {
+          "dmxRange": [
+            81,
+            150
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Jump"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Fade"
         }
       ]
     }
@@ -186,5 +353,38 @@
   ],
   "fixtureKey": "compar-20",
   "manufacturerKey": "ayra",
-  "oflURL": "https://open-fixture-library.org/ayra/compar-20"
+  "oflURL": "https://open-fixture-library.org/ayra/compar-20",
+  "gwMedia": {
+    "thumbnail": "d1726f200c929c8d"
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270005",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520003",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwFixtureTypeID": "173485E7-2BC8-48E9-AD66-248778CA6D71",
+  "gwSpecs": {
+    "description": "- Compact LED fixture with RGB colour system\n- Light source: 7x 3W RGB LED chip\n- Built-in colour macro’s, automatic chase/fade shows and extensive control via DMX\n- Fluent dimmers for each colour + fast strobe functionality\n- DMX operation: 2, 3, 3 (RGB) or 6 channels\n- Double bracket installed, use the fixture as floorspot, uplighting fixture or install it to a T-bar or truss\nsystem\n- Adjustable microphone sensitivity for music-controlled mode\n- Menu display and buttons for easy adjustment of settings\n- Low power consumption – High output – Long lifespan\n\nConnectors:\n- DMX: 3p XLR male and female\n- Power: IEC power input, IEC Power Link output\nPower:\n- Voltage: AC100-240V 50/60Hz\n- Power: 25W\nPhysical:\n- Dimensions: 175 x 180 x 110 (without bracket)\n- Weight: 1.5 kg\nIncluded accessories:\n- Power cable with Schuko & IEC connectors",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-27T08:26:29",
+      "text": "rev 002"
+    }
+  }
 }

@@ -1,0 +1,175 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Powerline 16 Bar RGBW",
+  "shortName": "Powerline 16",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-29",
+    "lastModifyDate": "2023-12-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 0503B503-778B-4417-897B-5A166A8A8499"
+    }
+  },
+  "comment": "The Powerline 16 is a compact but powerful RGBW projector based on LED technology.\nIt is equipped with 16 pieces 1 W LEDs combined with high precision Italian lenses.\nThe double bracket makes it easy to mount the fixture into the truss or to put it on the floor. The Powerline 16 has special lenses with a beam angle of 10 x 40°. Therefore, the unit is very suitable for wall-wash applications.",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "4 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "6 Channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim 2",
+        "Strobe1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      70,
+      80,
+      272
+    ],
+    "weight": 2.2,
+    "power": 16,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        40.0,
+        40.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "The Powerline 16 is a compact but powerful RGBW projector based on LED technology.\nIt is equipped with 16 pieces 1 W LEDs combined with high precision Italian lenses.\nThe double bracket makes it easy to mount the fixture into the truss or to put it on the floor. The Powerline 16 has special lenses with a beam angle of 10 x 40°. Therefore, the unit is very suitable for wall-wash applications.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-12-29T14:26:45",
+      "text": "Release 1.0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "968131bf55c38445"
+  },
+  "manufacturerKey": "showtec",
+  "fixtureKey": "led-powerline-16-bar-rgbw",
+  "gwFixtureTypeID": "0503B503-778B-4417-897B-5A166A8A8499"
+}

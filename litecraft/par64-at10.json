@@ -1,0 +1,271 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PAR64 AT10",
+  "shortName": "AT10",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-01-10",
+    "lastModifyDate": "2025-05-27",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E93120E7-B0B2-4D45-898D-43252AB16DDF"
+    }
+  },
+  "availableChannels": {
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Color Macro1 2": {
+      "name": "Color Macro1",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min"
+        },
+        {
+          "dmxRange": [
+            17,
+            254
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            143
+          ],
+          "type": "Unknown (SoundToLight)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            144,
+            179
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "auto color mix mode"
+        },
+        {
+          "dmxRange": [
+            180,
+            215
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "random colors 3-color"
+        },
+        {
+          "dmxRange": [
+            216,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "random colors 7-color"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 channel",
+      "channels": [
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "2 channel",
+      "channels": [
+        "Color Macro1",
+        "Dim"
+      ]
+    },
+    {
+      "name": "3 channel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "4 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber"
+      ]
+    },
+    {
+      "name": "8 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Color Macro1 2",
+        "Sh1",
+        "Ctrl1",
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      269,
+      408,
+      301
+    ],
+    "weight": 4.8,
+    "power": 1000,
+    "bulb": {
+      "type": "LED",
+      "lumens": 18000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.267290",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.121423,0.741811,41.158970",
+      "hex": "#00db00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.217500",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.626718,0.340548,14.617141",
+      "hex": "#d12000"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-05-27T07:23:25",
+      "text": "pm-270520250923"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "db6ef5f4a836f67f"
+  },
+  "manufacturerKey": "litecraft",
+  "fixtureKey": "par64-at10",
+  "gwFixtureTypeID": "E93120E7-B0B2-4D45-898D-43252AB16DDF"
+}

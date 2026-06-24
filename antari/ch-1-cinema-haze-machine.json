@@ -1,0 +1,222 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CH-1 Cinema Haze Machine",
+  "shortName": "CH-1",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-02-10",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: CF10FBEC-6664-4A09-9CE8-5459535BC206"
+    }
+  },
+  "availableChannels": {
+    "Haze1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutput": 0,
+          "comment": "No Output"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Haze",
+          "fogOutputStart": 0.01,
+          "fogOutputEnd": 1,
+          "comment": "Output Level"
+        }
+      ]
+    },
+    "Fan1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Rotation",
+          "speed": 0,
+          "comment": "No Fan Level"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 0.01,
+          "speedEnd": 1,
+          "comment": "Fan Level"
+        }
+      ]
+    },
+    "Heater": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Heater Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Heater On"
+        }
+      ]
+    },
+    "Fan1 2": {
+      "name": "Fan1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Rotation",
+          "speed": 0,
+          "comment": "Fan Off"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": 0.01,
+          "speedEnd": 1,
+          "comment": "Fan Level"
+        }
+      ]
+    },
+    "Operation Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX"
+        },
+        {
+          "dmxRange": [
+            128,
+            192
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Timer 1"
+        },
+        {
+          "dmxRange": [
+            193,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Timer 2"
+        }
+      ]
+    },
+    "Cleaning": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "On"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1 Channel Mode",
+      "channels": [
+        "Haze1"
+      ]
+    },
+    {
+      "name": "3 Channel Mode",
+      "channels": [
+        "Haze1",
+        "Fan1",
+        "Heater"
+      ]
+    },
+    {
+      "name": "5 Channel Mode",
+      "channels": [
+        "Haze1",
+        "Fan1 2",
+        "Heater",
+        "Operation Mode",
+        "Cleaning"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      164,
+      311,
+      579
+    ],
+    "weight": 17.0
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-02-10T23:40:18",
+      "text": "Final Revision - Not work in progress"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f703b67989ae1b87"
+  },
+  "manufacturerKey": "antari",
+  "fixtureKey": "ch-1-cinema-haze-machine",
+  "gwFixtureTypeID": "CF10FBEC-6664-4A09-9CE8-5459535BC206"
+}

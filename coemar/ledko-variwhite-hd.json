@@ -1,0 +1,548 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LEDko VariWhite HD",
+  "shortName": "LEDko VW HD",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-04-04",
+    "lastModifyDate": "2023-04-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 31E97BDB-969D-4084-AF6F-FC7B5C94694C"
+    }
+  },
+  "comment": "Variable White LED engine",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            6
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 2700,
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            7,
+            33
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 2701,
+          "colorTemperatureEnd": 3199,
+          "comment": "2700K > 3200K"
+        },
+        {
+          "dmxRange": [
+            34,
+            60
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3200,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            61,
+            87
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 3201,
+          "colorTemperatureEnd": 3999,
+          "comment": "3200K > 4000K"
+        },
+        {
+          "dmxRange": [
+            88,
+            114
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4000,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            115,
+            141
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 4001,
+          "colorTemperatureEnd": 4999,
+          "comment": "4000K > 5000K"
+        },
+        {
+          "dmxRange": [
+            142,
+            168
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5000,
+          "comment": "5000K"
+        },
+        {
+          "dmxRange": [
+            169,
+            195
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5001,
+          "comment": "5000K > 5600K"
+        },
+        {
+          "dmxRange": [
+            196,
+            222
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5600,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            223,
+            249
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 5601,
+          "colorTemperatureEnd": 6499,
+          "comment": "5600K > 6500K"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 6500,
+          "comment": "6500K"
+        }
+      ]
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            11,
+            56
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            57,
+            57
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            60,
+            60
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            61,
+            107
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            108,
+            108
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            109,
+            110
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            111,
+            111
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            112,
+            158
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            160,
+            161
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            162,
+            162
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Rnd Min"
+        },
+        {
+          "dmxRange": [
+            163,
+            206
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            207,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Rnd Max"
+        },
+        {
+          "dmxRange": [
+            208,
+            209
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            210,
+            210
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            211,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            84
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            85,
+            96
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "LOW Mode"
+        },
+        {
+          "dmxRange": [
+            97,
+            108
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "STUDIO Mode"
+        },
+        {
+          "dmxRange": [
+            109,
+            120
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "AUTO Mode"
+        },
+        {
+          "dmxRange": [
+            121,
+            133
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            134,
+            184
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            185,
+            185
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display OFF"
+        },
+        {
+          "dmxRange": [
+            186,
+            199
+          ],
+          "type": "Unknown (DisplayIntensity)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Display ON"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "NoFunction",
+          "comment": "No feature"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC 2": {
+      "name": "CTC",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5600,
+          "comment": "2700K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 6500,
+          "comment": "6500K"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "5ch",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "CTC",
+        "Strobe1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "2ch",
+      "channels": [
+        "Dim 2",
+        "CTC 2"
+      ]
+    },
+    {
+      "name": "1ch",
+      "channels": [
+        "Dim 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      250,
+      450,
+      250
+    ],
+    "weight": 6.0,
+    "power": 210,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        19.0,
+        20.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Variable White LED engine",
+    "beamType": "PC",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-04-04T19:39:34",
+      "text": "FW 0.61 - Lib V1.0.0.3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "dd7e2ef1ecbac3d9"
+  },
+  "manufacturerKey": "coemar",
+  "fixtureKey": "ledko-variwhite-hd",
+  "gwFixtureTypeID": "31E97BDB-969D-4084-AF6F-FC7B5C94694C"
+}

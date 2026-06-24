@@ -1,0 +1,262 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "RGB Fan",
+  "shortName": "FAN",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-03-18",
+    "lastModifyDate": "2025-09-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 914A280A-6BBE-4257-9BF1-AD6DD965F491"
+    }
+  },
+  "comment": "RGB FAN",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobo": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Unknown (Strobo)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Shuter Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "Unknown (Strobo)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe from slow to fast"
+        }
+      ]
+    },
+    "Macros": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            15
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            16,
+            71
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color Macro 1"
+        },
+        {
+          "dmxRange": [
+            72,
+            127
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color Macro 2"
+        },
+        {
+          "dmxRange": [
+            128,
+            183
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color Macro 3"
+        },
+        {
+          "dmxRange": [
+            184,
+            239
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Color Macro 4"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "Unknown (Macros)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Sound active"
+        }
+      ]
+    },
+    "Shaper Macros Speed": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Rotation Index",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            191
+          ],
+          "type": "Effect",
+          "effectName": "CW rotation from fast to slow",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "CCW rotation from slow to fast",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "11 Channel",
+      "channels": [
+        "Dim",
+        "Strobo",
+        "Macros",
+        "Shaper Macros Speed",
+        "R",
+        "G",
+        "B",
+        "R 2",
+        "G 2",
+        "B 2",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-04T07:53:07",
+      "text": "Version 1"
+    }
+  },
+  "manufacturerKey": "fos-technologies",
+  "fixtureKey": "rgb-fan",
+  "gwFixtureTypeID": "914A280A-6BBE-4257-9BF1-AD6DD965F491"
+}

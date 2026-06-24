@@ -1,0 +1,234 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "15Wx4 Mini Mover",
+  "shortName": "15Wx4Mini",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-06-04",
+    "lastModifyDate": "2026-06-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3C7A9B2E-4F1D-4E8C-9A2B-5D8F3C1E7A9B"
+    }
+  },
+  "comment": "Generic 15Wx4 Mini Mover RGBWAU Wash: 60W RGBWAU LED Mini Wash Moving Head with 580 pan 180 tilt, 11 channels, no fine movement",
+  "availableChannels": {
+    "P": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "580deg"
+      }
+    },
+    "T": {
+      "highlightValue": 127,
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "180deg"
+      }
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Full On"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "A": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Unknown (ColorAdd_A)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "UV": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "UV"
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.5Hz",
+          "speedEnd": "25Hz",
+          "comment": "Strobe"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "11CH",
+      "channels": [
+        "P",
+        "T",
+        "Pos MSpeed",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "A",
+        "UV",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      160,
+      180,
+      160
+    ],
+    "weight": 4.0,
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 3000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        40.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.700000,0.300000,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,100.000000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,100.000000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.580000,0.400000,100.000000",
+      "hex": "#ffb700"
+    },
+    {
+      "name": "UV",
+      "cie": "0.170000,0.010000,100.000000",
+      "hex": "#ff00ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "60W RGBWAU LED Mini Wash Moving Head with 580 pan 180 tilt, 11 channels, no fine movement",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-05T04:58:57",
+      "text": "Initial profile"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a2c6fbfd4f9028e4"
+  },
+  "manufacturerKey": "generic",
+  "fixtureKey": "15wx4-mini-mover",
+  "gwFixtureTypeID": "3C7A9B2E-4F1D-4E8C-9A2B-5D8F3C1E7A9B"
+}

@@ -1,0 +1,630 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Atomic Strobe",
+  "shortName": "LED Atomic Strobe",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-05-15",
+    "lastModifyDate": "2024-05-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: DBA9D3AF-2B5F-416B-AFB9-4B08F219E39C"
+    }
+  },
+  "comment": "Version 2.5 - 1728 LED PIXEL STROBE",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "StrobeM Strobe": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            30
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No flash/Closed"
+        },
+        {
+          "dmxRange": [
+            31,
+            100
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Strobe slow to fast"
+        },
+        {
+          "dmxRange": [
+            101,
+            130
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            131,
+            200
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Random strobe slow to fast"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Unknown (StrobeModeStrobe)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    },
+    "R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        }
+      ]
+    },
+    "G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        }
+      ]
+    },
+    "B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        }
+      ]
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "Min to Max"
+      }
+    },
+    "Dummy": {
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Hue Shift": {
+      "capability": {
+        "type": "Unknown (Dummy 1)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "Unknown (WhiteCount)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Pos FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "FX 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "FX 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "FX 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "FX 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "FX 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "FX 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "FX 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "FX 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "FX 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "FX 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "FX 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "FX 12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "FX 13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "FX 14",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "FX 15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "FX 16",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "FX 17",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "FX 18",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "FX 19",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            106,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "FX 20",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            111,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "FX 21",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            116,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "FX 22",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            125
+          ],
+          "type": "Effect",
+          "effectName": "FX 23",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            126,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "RESERVED(TBD)",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Random pixel(with density)",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Pos FX Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "EffectSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Static indexing"
+        },
+        {
+          "dmxRange": [
+            51,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "From slow to fast"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "From MENU"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode OFF"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode 1"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode 2"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Mode 3"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "15 Channels Mode",
+      "channels": [
+        "Dim",
+        "StrobeM Strobe",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dummy",
+        "Hue Shift",
+        "R 2",
+        "G 2",
+        "B 2",
+        "CW",
+        "Pos FX",
+        "Pos FX Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ],
+    "weight": 20.0,
+    "power": 50,
+    "bulb": {
+      "type": "LED"
+    },
+    "lens": {
+      "degreesMinMax": [
+        126.0,
+        140.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "Version 2.5 - 1728 LED PIXEL STROBE",
+    "beamType": "Rectangle",
+    "operatingTemperature": [
+      0,
+      80
+    ],
+    "revision": {
+      "date": "2024-05-15T08:30:56",
+      "text": "Ver 2.5"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "aa9025a068dbb711"
+  },
+  "manufacturerKey": "kadence",
+  "fixtureKey": "led-atomic-strobe",
+  "gwFixtureTypeID": "DBA9D3AF-2B5F-416B-AFB9-4B08F219E39C"
+}

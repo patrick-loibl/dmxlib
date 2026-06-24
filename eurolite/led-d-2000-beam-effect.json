@@ -1,0 +1,489 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED D-2000 Beam Effect",
+  "shortName": "D-2000",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2024-08-25",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8F7C2DC0-22C7-428F-89B8-55056B61A068"
+    }
+  },
+  "comment": "5 x 10W RGBAW LED Derby fixture\n\nRevisions:\nv1.000 - Initial release\nv1.001 - Corrected beam not displaying in 3D and other improvements\nv1.002 - Added strobe min and max options\nv1.003 - Added rotation degrees",
+  "availableChannels": {
+    "FX1 Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Fully ACW"
+        },
+        {
+          "dmxRange": [
+            1,
+            126
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Manual Angle"
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Fully CW"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "Rotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Slowest"
+        },
+        {
+          "dmxRange": [
+            129,
+            254
+          ],
+          "type": "Rotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "S > F"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Rotation",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "Fastest"
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Min"
+        },
+        {
+          "dmxRange": [
+            11,
+            254
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe S > F"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (StrobeFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Strobe Max"
+        }
+      ]
+    },
+    "R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    },
+    "White": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Amber": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Amber",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Amber",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Amber",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 1 Min"
+        },
+        {
+          "dmxRange": [
+            11,
+            49
+          ],
+          "type": "ColorPreset",
+          "comment": " Auto 1 S > F"
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 2 Min"
+        },
+        {
+          "dmxRange": [
+            51,
+            89
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 2  S > F"
+        },
+        {
+          "dmxRange": [
+            90,
+            90
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 3 Min"
+        },
+        {
+          "dmxRange": [
+            91,
+            129
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 3 S > F"
+        },
+        {
+          "dmxRange": [
+            130,
+            169
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound 1 S > F"
+        },
+        {
+          "dmxRange": [
+            170,
+            209
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound 2 S > F"
+        },
+        {
+          "dmxRange": [
+            210,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound 3 S > F"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "9ch Mode",
+      "channels": [
+        "FX1 Rotate",
+        "Dim",
+        "Strobe Frequency",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "Color Macro1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      285,
+      200,
+      290
+    ],
+    "weight": 2.7,
+    "power": 10,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm / 474nm LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        120.0,
+        120.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.702028,0.297316,19.150713",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.173442,0.710537,38.176816",
+      "hex": "#00d000",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.151900,0.071900,11.000000",
+      "hex": "#0031ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.316900,0.331100,97.750000",
+      "hex": "#fffcf9",
+      "dominantWavelength": 473.920013
+    },
+    {
+      "name": "Amber",
+      "cie": "0.526900,0.434600,100.000000",
+      "hex": "#ffdb00"
+    }
+  ],
+  "gwSpecs": {
+    "description": "5 x 10W RGBAW LED Derby fixture\n\nRevisions:\nv1.000 - Initial release\nv1.001 - Corrected beam not displaying in 3D and other improvements\nv1.002 - Added strobe min and max options\nv1.003 - Added rotation degrees",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2024-08-25T07:31:02",
+      "text": "v1.003 - Added rotation degrees"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "776b3c5d1791d498"
+  },
+  "manufacturerKey": "eurolite",
+  "fixtureKey": "led-d-2000-beam-effect",
+  "gwFixtureTypeID": "8F7C2DC0-22C7-428F-89B8-55056B61A068"
+}

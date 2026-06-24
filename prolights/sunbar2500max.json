@@ -1,0 +1,823 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "SunBar2500Max",
+  "shortName": "SBM2500Max",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-14",
+    "lastModifyDate": "2025-11-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E68B1B10-61CA-48A6-AF47-6AA05229518E"
+    }
+  },
+  "comment": "Staggering 160'000 lumen output (strobe) with 120° beam angle.\nArt-Net, Kling-Net and DMX control.\nGraphic effects from 64 individually controllable groups of 7.000 K White LEDs.\nSunBar 2500Max is an exceptionally powerful LED graphic strobe batten also featuring as a static blinder and flood. SunBar 2500Max offers flexible control of the beam coverage through an interchangeable lens system, passing from 120° wide to 40° beam increasing the light intensity up to x4. \nAvailable in white or full colour versions and designed to deliver simply staggering light levels, this versatile fixture can provide an unbelievable punch over a huge area.",
+  "rdm": {
+    "modelId": 53287
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Min Duration"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Max Duration"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow Strobe"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "Effect",
+          "effectName": "No Effect",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            3,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "Static",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            6,
+            42
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Open",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            43,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Pulse Close",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            86,
+            128
+          ],
+          "type": "Effect",
+          "effectName": "Pulse",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            129,
+            171
+          ],
+          "type": "Effect",
+          "effectName": "Random",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            172,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "Lighting",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Pattern",
+          "speed": 0
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            30
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "comment": "SlowStrobe"
+        },
+        {
+          "dmxRange": [
+            32,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "comment": "FastStrobe"
+        },
+        {
+          "dmxRange": [
+            101,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            132,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 3": {
+      "name": "Sh1",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            30
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "comment": "SlowStrobe"
+        },
+        {
+          "dmxRange": [
+            32,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "comment": "FastStrobe"
+        },
+        {
+          "dmxRange": [
+            101,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            132,
+            199
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe Fast"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "FX1 2": {
+      "name": "FX1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Vertical Line <-",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Vertical Line ->",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Vertical Line <--> Bounce",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Horizontal line UP to DN",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Horizontal line DN to UP",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            36,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Horizontal lines bounce",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            41,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Horizontal > - <",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            46,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Horizontal < - >",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            51,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "Block < -",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            56,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "Block - >",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            61,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "Lonely random pixel",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            66,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "Halves vertical",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            71,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "Halves horizontal",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            76,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Quaters clockwise",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            81,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "Pixel clockwise",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            86,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "Pixel counterclockwise",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            91,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "Block > - <",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            96,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "Block < - >",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            101,
+            105
+          ],
+          "type": "Effect",
+          "effectName": "Waves",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            106,
+            110
+          ],
+          "type": "Effect",
+          "effectName": "Duck race",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            111,
+            115
+          ],
+          "type": "Effect",
+          "effectName": "Stripes",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            116,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "Fan",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            121,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "All in sequence",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "RandomPixel Density",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Rotation",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Static Indexing"
+        },
+        {
+          "dmxRange": [
+            51,
+            51
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "SlowRate"
+        },
+        {
+          "dmxRange": [
+            52,
+            143
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            144,
+            144
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "MidRate"
+        },
+        {
+          "dmxRange": [
+            145,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "FastRate"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "As From menu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 1"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 2"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Mode 3"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Basic Static",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Basic Strobe",
+      "channels": [
+        "Dim",
+        "Strobe Duration",
+        "Sh1",
+        "FX1"
+      ]
+    },
+    {
+      "name": "Basic Pixel",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Advanced_1",
+      "channels": [
+        "Dim 2",
+        "Sh1 2",
+        "Dim 3",
+        "Sh1 3",
+        "FX1 2",
+        "FX1 Rate",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      75,
+      172,
+      1000
+    ],
+    "weight": 9.5,
+    "power": 21,
+    "bulb": {
+      "type": "LED",
+      "lumens": 625,
+      "colorTemperature": 7000
+    },
+    "lens": {
+      "degreesMinMax": [
+        40.0,
+        80.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Led",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Staggering 160'000 lumen output (strobe) with 120° beam angle.\nArt-Net, Kling-Net and DMX control.\nGraphic effects from 64 individually controllable groups of 7.000 K White LEDs.\nSunBar 2500Max is an exceptionally powerful LED graphic strobe batten also featuring as a static blinder and flood. SunBar 2500Max offers flexible control of the beam coverage through an interchangeable lens system, passing from 120° wide to 40° beam increasing the light intensity up to x4. \nAvailable in white or full colour versions and designed to deliver simply staggering light levels, this versatile fixture can provide an unbelievable punch over a huge area.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-11-14T15:27:39",
+      "text": "Rev 002 - Preliminary"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c17a8b1e0bc4405c"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "sunbar2500max",
+  "gwFixtureTypeID": "E68B1B10-61CA-48A6-AF47-6AA05229518E"
+}

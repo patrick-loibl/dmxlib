@@ -1,0 +1,1519 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "XCORE Beam",
+  "shortName": "XCOREB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-31",
+    "lastModifyDate": "2025-07-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1E0553C2-2976-8019-C030-92C3FB5CC3A2"
+    }
+  },
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 12,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "closed"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "open"
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "min Strobe"
+        },
+        {
+          "dmxRange": [
+            17,
+            118
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "max Strobe"
+        },
+        {
+          "dmxRange": [
+            120,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open (2)"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "randomTiming": true,
+          "comment": "min Rnd"
+        },
+        {
+          "dmxRange": [
+            129,
+            182
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            183,
+            183
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            184,
+            190
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open (3)"
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Unknown (SHUTTERAUDIO)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Unknown (SHUTTERAUDIO)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Audio"
+        },
+        {
+          "dmxRange": [
+            193,
+            246
+          ],
+          "type": "Unknown (SHUTTERAUDIO)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        },
+        {
+          "dmxRange": [
+            248,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "open (4)"
+        }
+      ]
+    },
+    "Dim Curve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Short rise time"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Medium rise time"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Long rise time"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Extra long rise time"
+        }
+      ]
+    },
+    "ColorMix": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Straw"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position"
+        },
+        {
+          "dmxRange": [
+            2,
+            18
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            19
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position"
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "ColorPreset",
+          "comment": "Warm white"
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (2)"
+        },
+        {
+          "dmxRange": [
+            22,
+            38
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            39
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (2)"
+        },
+        {
+          "dmxRange": [
+            40,
+            40
+          ],
+          "type": "ColorPreset",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            41,
+            41
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (3)"
+        },
+        {
+          "dmxRange": [
+            42,
+            58
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            59,
+            59
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (3)"
+        },
+        {
+          "dmxRange": [
+            60,
+            60
+          ],
+          "type": "ColorPreset",
+          "comment": "Cool white"
+        },
+        {
+          "dmxRange": [
+            61,
+            61
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (4)"
+        },
+        {
+          "dmxRange": [
+            62,
+            78
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            79,
+            79
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (4)"
+        },
+        {
+          "dmxRange": [
+            80,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            81,
+            81
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (5)"
+        },
+        {
+          "dmxRange": [
+            82,
+            98
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (5)"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            101,
+            101
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (6)"
+        },
+        {
+          "dmxRange": [
+            102,
+            118
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (6)"
+        },
+        {
+          "dmxRange": [
+            120,
+            120
+          ],
+          "type": "ColorPreset",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            121,
+            121
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (7)"
+        },
+        {
+          "dmxRange": [
+            122,
+            138
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            139,
+            139
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            140,
+            140
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            141
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (8)"
+        },
+        {
+          "dmxRange": [
+            142,
+            158
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            161
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (9)"
+        },
+        {
+          "dmxRange": [
+            162,
+            178
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            180,
+            180
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            181
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (10)"
+        },
+        {
+          "dmxRange": [
+            182,
+            198
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            199,
+            199
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (11)"
+        },
+        {
+          "dmxRange": [
+            202,
+            218
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            219,
+            219
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            220,
+            220
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            221,
+            221
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (12)"
+        },
+        {
+          "dmxRange": [
+            222,
+            238
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            239,
+            239
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            240,
+            240
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            241,
+            241
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (13)"
+        },
+        {
+          "dmxRange": [
+            242,
+            253
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            254,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Blackout"
+        }
+      ]
+    },
+    "Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 0,
+          "comment": "entry 0"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 1,
+          "comment": "Aura"
+        },
+        {
+          "dmxRange": [
+            16,
+            23
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 2,
+          "comment": "Ring"
+        },
+        {
+          "dmxRange": [
+            24,
+            31
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 3,
+          "comment": "Centre"
+        },
+        {
+          "dmxRange": [
+            32,
+            39
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 4,
+          "comment": "Centre+aura"
+        },
+        {
+          "dmxRange": [
+            40,
+            47
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 5,
+          "comment": "Ring+aura"
+        },
+        {
+          "dmxRange": [
+            48,
+            55
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 6,
+          "comment": "Centre+ring"
+        },
+        {
+          "dmxRange": [
+            56,
+            63
+          ],
+          "type": "Unknown (MODE)",
+          "physical": 7,
+          "comment": "Centre+ring+aura"
+        },
+        {
+          "dmxRange": [
+            64,
+            64
+          ],
+          "type": "Unknown (COLORCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Cycle"
+        },
+        {
+          "dmxRange": [
+            65,
+            158
+          ],
+          "type": "Unknown (COLORCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "Unknown (MODE)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Unknown (MODE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "entry 0 (2)"
+        },
+        {
+          "dmxRange": [
+            161,
+            161
+          ],
+          "type": "Unknown (COLORCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            162,
+            254
+          ],
+          "type": "Unknown (COLORCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (COLORCYCLE)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Cycle"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "ColorMix 2": {
+      "name": "ColorMix",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Straw"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position"
+        },
+        {
+          "dmxRange": [
+            2,
+            18
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            19,
+            19
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position"
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "ColorPreset",
+          "comment": "Warm white"
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (2)"
+        },
+        {
+          "dmxRange": [
+            22,
+            38
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            39
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (2)"
+        },
+        {
+          "dmxRange": [
+            40,
+            40
+          ],
+          "type": "ColorPreset",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            41,
+            41
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (3)"
+        },
+        {
+          "dmxRange": [
+            42,
+            58
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            59,
+            59
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (3)"
+        },
+        {
+          "dmxRange": [
+            60,
+            60
+          ],
+          "type": "ColorPreset",
+          "comment": "Cool white"
+        },
+        {
+          "dmxRange": [
+            61,
+            61
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (4)"
+        },
+        {
+          "dmxRange": [
+            62,
+            78
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            79,
+            79
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (4)"
+        },
+        {
+          "dmxRange": [
+            80,
+            80
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            81,
+            81
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (5)"
+        },
+        {
+          "dmxRange": [
+            82,
+            98
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (5)"
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "ColorPreset",
+          "comment": "Magenta"
+        },
+        {
+          "dmxRange": [
+            101,
+            101
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (6)"
+        },
+        {
+          "dmxRange": [
+            102,
+            118
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "max Position (6)"
+        },
+        {
+          "dmxRange": [
+            120,
+            120
+          ],
+          "type": "ColorPreset",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            121,
+            121
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (7)"
+        },
+        {
+          "dmxRange": [
+            122,
+            138
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            139,
+            139
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            140,
+            140
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            141
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (8)"
+        },
+        {
+          "dmxRange": [
+            142,
+            158
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            161
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (9)"
+        },
+        {
+          "dmxRange": [
+            162,
+            178
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            179
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            180,
+            180
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            181
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (10)"
+        },
+        {
+          "dmxRange": [
+            182,
+            198
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            199,
+            199
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (11)"
+        },
+        {
+          "dmxRange": [
+            202,
+            218
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            219,
+            219
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            220,
+            220
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            221,
+            221
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "min Position (12)"
+        },
+        {
+          "dmxRange": [
+            222,
+            253
+          ],
+          "type": "Unknown (COLORMIXPOSITION)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            254,
+            254
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue (2)"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "10 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Dim Curve",
+        "ColorMix",
+        "Mode"
+      ]
+    },
+    {
+      "name": "2 channel",
+      "channels": [
+        "Dim 2",
+        "ColorMix 2"
+      ]
+    },
+    {
+      "name": "22 channel",
+      "channels": [
+        "Dim 2",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Dim Curve"
+      ]
+    },
+    {
+      "name": "3 channel",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "64 channel",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim",
+        "Dim fine",
+        "Sh1",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      500,
+      450,
+      500
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 10000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R__10 channel",
+      "cie": "0.640074,0.329971,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G__10 channel",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B__10 channel",
+      "cie": "0.150017,0.060007,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White__10 channel",
+      "cie": "0.312716,0.329001,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "R__22 channel",
+      "cie": "0.640074,0.329971,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G__22 channel",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B__22 channel",
+      "cie": "0.150017,0.060007,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White__22 channel",
+      "cie": "0.312716,0.329001,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "R__3 channel",
+      "cie": "0.640074,0.329971,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G__3 channel",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B__3 channel",
+      "cie": "0.150017,0.060007,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "R__64 channel",
+      "cie": "0.640074,0.329971,21.260000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "G__64 channel",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "B__64 channel",
+      "cie": "0.150017,0.060007,7.220000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White__64 channel",
+      "cie": "0.312716,0.329001,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-07-31T12:48:45",
+      "text": "Initial upload, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "bright",
+  "fixtureKey": "xcore-beam",
+  "gwFixtureTypeID": "1E0553C2-2976-8019-C030-92C3FB5CC3A2"
+}

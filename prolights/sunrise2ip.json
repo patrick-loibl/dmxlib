@@ -1,0 +1,911 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Sunrise2IP",
+  "shortName": "Sunrise2IP",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-06-17",
+    "lastModifyDate": "2025-06-17",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: AEFAF6A4-1B27-4CD0-8DB1-CF367F60B1A2"
+    }
+  },
+  "comment": "Sunrise 2IP is an IP rated and convection cooled modular 2x1 LED Blinder, designed to be a perfect touring solution to replace classic halogen fixtures of any sizes.\nThe fixture is designed with on board fast-locking mechanism in order to combine multiple units together and using them as brick, turning the Sunrise 2IP into a 4x1 or a 2x2 blinder easily.\nSunrise 2IP is equipped with 2x75W COB WarmWhite LEDs pixel controlled and its optical system is capable to reproduce the same performance and beam angle of the fluorescent bulbs, including dimmer ramp with red-shift.",
+  "rdm": {
+    "modelId": 53337
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            3,
+            61
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            62,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            65,
+            65
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speed": "0.9Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            66,
+            124
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            125,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speed": "15Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            128
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speed": "0.9Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            129,
+            187
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            188,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speed": "15Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "0.9Hz",
+          "randomTiming": true,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            192,
+            250
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            251,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speed": "15Hz",
+          "randomTiming": true,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AsFromMenu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Slow"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Off",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "On",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 6": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 6 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "NoEffect",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            87
+          ],
+          "type": "Effect",
+          "effectName": "Effect1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            88,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "Effect2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            171
+          ],
+          "type": "Effect",
+          "effectName": "Effect3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            172,
+            213
+          ],
+          "type": "Effect",
+          "effectName": "Effect4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            214,
+            215
+          ],
+          "type": "Effect",
+          "effectName": "Effect5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            216,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz",
+        "comment": "EffectSpeed"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DisplayOn"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Display10s"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Display20s"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Display30s"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "FilpDisplayOn"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "FlipDisplayOff"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "KeyLockOn"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "KeyLockOff"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimCurveLiner"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimCurveS-Curve"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimCurveSquareLaw"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimCurveInvSquareLaw"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimmerSpeedAuto"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimmerSpeedFast"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimmerSpeedMedium"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimmerSpeedSlow"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "WhiteCalibrationOff"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "WhiteCalibrationManual"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "TunEmulationOn"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "TunEmulationOff"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "LedfFrequency600hz"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "LedfFrequency1200hz"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "LedfFrequency2000hz"
+        },
+        {
+          "dmxRange": [
+            48,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "LedfFrequency4000hz"
+        },
+        {
+          "dmxRange": [
+            50,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "LedfFrequency6000hz"
+        },
+        {
+          "dmxRange": [
+            52,
+            53
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "LedfFrequency25Khz"
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DmxFaultHold"
+        },
+        {
+          "dmxRange": [
+            56,
+            57
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DmxFaultBlackOut"
+        },
+        {
+          "dmxRange": [
+            58,
+            59
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DmxFaultStandAlone"
+        },
+        {
+          "dmxRange": [
+            60,
+            61
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "InvertMappingOn"
+        },
+        {
+          "dmxRange": [
+            62,
+            63
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "InvertMappingOff"
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneMaster"
+        },
+        {
+          "dmxRange": [
+            66,
+            67
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneSlave"
+        },
+        {
+          "dmxRange": [
+            68,
+            69
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneEffect1"
+        },
+        {
+          "dmxRange": [
+            70,
+            71
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneEffect2"
+        },
+        {
+          "dmxRange": [
+            72,
+            73
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneEffec3"
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneEffect4"
+        },
+        {
+          "dmxRange": [
+            76,
+            77
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StandAloneEffet5"
+        },
+        {
+          "dmxRange": [
+            78,
+            79
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "StanAloneStatic"
+        },
+        {
+          "dmxRange": [
+            80,
+            81
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DimmerSpeed Incandescent"
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "BB-Curve"
+        },
+        {
+          "dmxRange": [
+            84,
+            253
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Reserved"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "FactoryDefaultControls"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "UNO",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "BASIC",
+      "channels": [
+        "Dim",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "STANDARD",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Dim Mode",
+        "Color FX1",
+        "Dim 2",
+        "Dim 3"
+      ]
+    },
+    {
+      "name": "EXTENDED",
+      "channels": [
+        "Dim 4",
+        "Dim 4 fine",
+        "Sh1",
+        "Dim Mode",
+        "Color FX1",
+        "Dim 5",
+        "Dim 5 fine",
+        "Dim 6",
+        "Dim 6 fine",
+        "FX1",
+        "FX1 Rate",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      180,
+      99,
+      360
+    ],
+    "weight": 7.6,
+    "DMXconnector": "XLR5",
+    "power": 80,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5044,
+      "colorTemperature": 2700
+    },
+    "lens": {
+      "degreesMinMax": [
+        60.0,
+        100.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "White Led",
+      "cie": "0.457000,0.415000,100.000000",
+      "hex": "#ffea77"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Sunrise 2IP is an IP rated and convection cooled modular 2x1 LED Blinder, designed to be a perfect touring solution to replace classic halogen fixtures of any sizes.\nThe fixture is designed with on board fast-locking mechanism in order to combine multiple units together and using them as brick, turning the Sunrise 2IP into a 4x1 or a 2x2 blinder easily.\nSunrise 2IP is equipped with 2x75W COB WarmWhite LEDs pixel controlled and its optical system is capable to reproduce the same performance and beam angle of the fluorescent bulbs, including dimmer ramp with red-shift.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-06-17T08:55:41",
+      "text": "Rev 16 - FW 1_2 and above - Removed Virtual P/T"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "943c3f9f78bef2ee"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "sunrise2ip",
+  "gwFixtureTypeID": "AEFAF6A4-1B27-4CD0-8DB1-CF367F60B1A2"
+}

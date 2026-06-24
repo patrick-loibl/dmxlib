@@ -1,0 +1,633 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MoviLED 304",
+  "shortName": "MLed304",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-05-04",
+    "lastModifyDate": "2026-05-21",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 6A56EC2C-7EE6-4CA0-8C60-6431D77EFB79"
+    }
+  },
+  "comment": "MOVILED 304 es una cabeza móvil que incluye 19 LEDs RGBW de 15W. Esta serie de brillantes LEDs permite obtener un rico espectro de colores mezclando R, G, B, W. Sus motores de alta calidad ofrecen movimientos suaves en 8 y 16 bits con amplio desplazamiento. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar a través de los menús, seleccionando parámetros tales como: Pan/Tilt reverse, balance de blancos o función de reinicio. Incluye 2 modos DMX (14 y 24 canales), dimerización de los colores primarios (con función de mezcla), zoom y función estrobo. Asimismo, la matriz completa de LEDs puede ser dividida en 3 zonas diferentes y controlar un color específico en cada una de ellas.",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "16bit",
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Standard mode"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max speed time"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min speed time"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "narrow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "wide"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            4,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random zone effect slow to fast"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            24
+          ],
+          "type": "Effect",
+          "effectName": "Effect 1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            25,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "Effect 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            74
+          ],
+          "type": "Effect",
+          "effectName": "Effect 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "Effect 4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            124
+          ],
+          "type": "Effect",
+          "effectName": "Effect 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            125,
+            149
+          ],
+          "type": "Effect",
+          "effectName": "Effect 6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            150,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "Effect 7",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            199
+          ],
+          "type": "Effect",
+          "effectName": "Effect 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            224
+          ],
+          "type": "Effect",
+          "effectName": "Effect 9",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            225,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Effect 10",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            99
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 1"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "ColorPreset",
+          "comment": "Auto 2"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound Controlled"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            250
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Total reset"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "24Ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Dim 4",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White 2",
+        "R 3",
+        "G 3",
+        "B 3",
+        "White 3",
+        "FX1",
+        "FX1 Rate",
+        "Color Macro1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "14Ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1",
+        "Dim 4",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "FX1",
+        "Zoom"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      203,
+      156,
+      209
+    ],
+    "weight": 11.0,
+    "power": 10,
+    "bulb": {
+      "type": "625nm / 524nm / 453nm / 477nm LED",
+      "lumens": 141,
+      "colorTemperature": 15500
+    },
+    "lens": {
+      "degreesMinMax": [
+        53.0,
+        63.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.698181,0.300239,17.981949",
+      "hex": "#ff0000",
+      "dominantWavelength": 624.570007
+    },
+    {
+      "name": "Green",
+      "cie": "0.168400,0.690189,34.834335",
+      "hex": "#00c718",
+      "dominantWavelength": 523.770019
+    },
+    {
+      "name": "Blue",
+      "cie": "0.156105,0.025994,6.878003",
+      "hex": "#6d00ff",
+      "dominantWavelength": 453.100006
+    },
+    {
+      "name": "White",
+      "cie": "0.312135,0.312353,46.650254",
+      "hex": "#beb2bf",
+      "dominantWavelength": 476.890015
+    }
+  ],
+  "gwSpecs": {
+    "description": "MOVILED 304 es una cabeza móvil que incluye 19 LEDs RGBW de 15W. Esta serie de brillantes LEDs permite obtener un rico espectro de colores mezclando R, G, B, W. Sus motores de alta calidad ofrecen movimientos suaves en 8 y 16 bits con amplio desplazamiento. La interfaz de configuración tiene una pantalla con toda la información y botones para navegar a través de los menús, seleccionando parámetros tales como: Pan/Tilt reverse, balance de blancos o función de reinicio. Incluye 2 modos DMX (14 y 24 canales), dimerización de los colores primarios (con función de mezcla), zoom y función estrobo. Asimismo, la matriz completa de LEDs puede ser dividida en 3 zonas diferentes y controlar un color específico en cada una de ellas.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2026-05-21T07:36:34",
+      "text": "Version_1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "14fed606063bb2e7"
+  },
+  "manufacturerKey": "mark",
+  "fixtureKey": "moviled-304",
+  "gwFixtureTypeID": "6A56EC2C-7EE6-4CA0-8C60-6431D77EFB79"
+}

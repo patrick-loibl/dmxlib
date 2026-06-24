@@ -1,0 +1,144 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Phenom (Position Only)",
+  "shortName": "Phenom Pos",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "3056E5A2-5712-4570-9302-87160720F290"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      220,
+      300,
+      240
+    ],
+    "weight": 19.0,
+    "bulb": {
+      "type": "LED",
+      "lumens": 104
+    },
+    "lens": {
+      "degreesMinMax": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "wheels": {
+    "ColorWheel": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Laser Green",
+          "colors": [
+            "#00ff00"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Yoke Pan": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Pan"
+        }
+      ],
+      "fineChannelAliases": [
+        "Yoke Pan fine"
+      ]
+    },
+    "Head Tilt": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Tilt"
+        }
+      ],
+      "fineChannelAliases": [
+        "Head Tilt fine"
+      ]
+    },
+    "Head TiltMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "Tilt Limit"
+        }
+      ]
+    },
+    "Beam Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Beam Color1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "5ch Position Only",
+      "shortName": "5ch Position",
+      "channels": [
+        "Yoke Pan",
+        "Yoke Pan fine",
+        "Head Tilt",
+        "Head Tilt fine",
+        "Head TiltMode"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "This profile controls only position for the Phenom moving head laser by Lightwave International.  This profile is intended to connect via sACN/ArtNet directly into the BEYOND laser control software, which combines and proxies these instructions into the fixture control.  The BEYOND software is the source of truth for the actual visual control of the laser fixture.  This patch offsets in +5 increments, starting at 5, and is independent of actual channel patch sequence controlling the fixture.  Example:  If sending sACN/ArtNet to BEYOND on universe 1, the patch to control your fixtures should be:  Fixture 1:  1.005 Fixture 2:  1.010 Fixture 3:  1.015 ...",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-05-05T17:42:29",
+      "text": "v2025-MAY"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1a7fbfecf3e7e39f"
+  },
+  "manufacturerKey": "lightwave-international",
+  "fixtureKey": "phenom-position-only",
+  "gwFixtureTypeID": "3056E5A2-5712-4570-9302-87160720F290"
+}

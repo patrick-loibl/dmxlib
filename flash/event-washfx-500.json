@@ -1,0 +1,752 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EVENT WashFX 500",
+  "shortName": " Event WashFX 500",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-28",
+    "lastModifyDate": "2024-01-30",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 79730778-4B08-4F4F-BF3C-9DF7E43D700B"
+    }
+  },
+  "wheels": {
+    "Shape main": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Shape",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "Shape aura": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Zoom": {
+      "fineChannelAliases": [
+        "Zoom fine"
+      ],
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Beam Shaper": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            6,
+            62
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "rotate >>>"
+        },
+        {
+          "dmxRange": [
+            63,
+            127
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "rotate <<<"
+        },
+        {
+          "dmxRange": [
+            128,
+            192
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "infinitie >>>"
+        },
+        {
+          "dmxRange": [
+            193,
+            255
+          ],
+          "type": "Unknown (BeamShaper)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "infinite <<<"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            230
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            231,
+            245
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            55
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "strobe"
+        },
+        {
+          "dmxRange": [
+            56,
+            105
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "pulse strobe"
+        },
+        {
+          "dmxRange": [
+            106,
+            155
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "random strobe"
+        },
+        {
+          "dmxRange": [
+            156,
+            205
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "gradient strobe 1"
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "gradient strobe 2"
+        }
+      ]
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "No strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            55
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "strobe"
+        },
+        {
+          "dmxRange": [
+            56,
+            105
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "pulse strobe"
+        },
+        {
+          "dmxRange": [
+            106,
+            155
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "random strobe"
+        },
+        {
+          "dmxRange": [
+            156,
+            205
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "gradient strobe 1"
+        },
+        {
+          "dmxRange": [
+            206,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "gradient strobe 2"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "G1": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Shape main",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "G1 <>": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "G2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Shape aura",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "G2 <>": {
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "Shape aura",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "CTC": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            17
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTC off"
+        },
+        {
+          "dmxRange": [
+            18,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "CTC"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G1 2": {
+      "name": "G1",
+      "highlightValue": 0,
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Shape aura",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1 2": {
+      "name": "Color Macro1",
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "G1 <> 2": {
+      "name": "G1 <>",
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "Shape main",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Color Macro2": {
+      "highlightValue": 0,
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "26ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Zoom fine",
+        "Beam Shaper",
+        "Ctrl1",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "Sh1 2",
+        "R",
+        "G",
+        "B",
+        "White",
+        "R 2",
+        "G 2",
+        "B 2",
+        "G1",
+        "G1 <>",
+        "G2",
+        "G2 <>",
+        "Color Macro1",
+        "CTC"
+      ]
+    },
+    {
+      "name": "49ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Zoom fine",
+        "Beam Shaper",
+        "Ctrl1",
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "G1 2",
+        "G1 <>",
+        "Dim 4",
+        "Sh1 2",
+        "Color Macro1 2",
+        "CTC",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White"
+      ]
+    },
+    {
+      "name": "105ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Zoom fine",
+        "Beam Shaper",
+        "Ctrl1",
+        "Dim 4",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "G1",
+        "G1 <> 2",
+        "Color Macro2",
+        "CTC",
+        "Dim 5",
+        "Sh1 2",
+        "R 2",
+        "G 2",
+        "B 2"
+      ]
+    },
+    {
+      "name": "127ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Zoom fine",
+        "Beam Shaper",
+        "Ctrl1",
+        "Dim 4",
+        "Sh1",
+        "Color Macro1",
+        "CTC",
+        "R",
+        "G",
+        "B",
+        "White",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Dim 5",
+        "Sh1 2",
+        "R 2",
+        "G 2",
+        "B 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      120,
+      320,
+      380
+    ],
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "R",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "G",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "B",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "W",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Aura R",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Aura G",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Aura B",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-01-30T08:41:14",
+      "text": "FLASH_v3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3d24b1700651b1e8"
+  },
+  "manufacturerKey": "flash",
+  "fixtureKey": "event-washfx-500",
+  "gwFixtureTypeID": "79730778-4B08-4F4F-BF3C-9DF7E43D700B"
+}

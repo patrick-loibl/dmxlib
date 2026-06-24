@@ -1,0 +1,223 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Compact Fresnel Light - Spot - Bi-color",
+  "shortName": "CFL-BI-SP",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-02-05",
+    "lastModifyDate": "2024-02-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EB0E43D5-FBEE-40E2-8A0A-BEA58CF9F4BE"
+    }
+  },
+  "comment": "Compact Fresnel Light - Spot Mode - Bi-color 2700K-5600K: The Compact Fresnel Light (CFL) is a new type of LED for studio, stage and architectural\n\nlighting. With a 5.5” footprint, these versatile LED powerhouses draw just 40Watts yet pro-\nduce up to 2900-lumen output at 96TLCI (Bicolor). (Tunable from 2700 to 5600 Kelvin).\n\nThe CFL is also available in a 3200K & 5600K Single Color version. Available in Black and\nWhite. CFL outputs a hard-shadow rendering beam that fades from 100% at center to\n\n50% at the edges, so it is good for mixing and overlapping with other lights while eliminat-\ning blinding glare.\n\nIntegrated Zoom\nCFL has a smart ring-controlled focus system zooming from 12° to 52°\n\nthat is manually adjustable by turning the ring on the fixture. It is pow-\nerful enough to be used as key, fill or backlight on positions typically\n\nfrom 3 to 6 meter distances in any newsroom, on set or in architectural\napplications when a compact punch light is needed.",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967294
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "P": {
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Zoom": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Spot"
+        },
+        {
+          "dmxRange": [
+            1,
+            1589137898
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            1589137899,
+            1589137899
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            1589137900,
+            4294967294
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "8 Bit",
+      "channels": [
+        "Dim",
+        "CTC"
+      ]
+    },
+    {
+      "name": "16 Bit",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "CTC",
+        "CTC fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      147,
+      175,
+      147
+    ],
+    "weight": 1.6,
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1365
+    },
+    "lens": {
+      "degreesMinMax": [
+        11.3,
+        12.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "5600K",
+      "cie": "0.328000,0.337000,100.000000",
+      "hex": "#fffcf4"
+    },
+    {
+      "name": "2700K",
+      "cie": "0.453000,0.409000,100.000000",
+      "hex": "#ffe980"
+    }
+  ],
+  "gwSpecs": {
+    "description": "The Compact Fresnel Light (CFL) is a new type of LED for studio, stage and architectural\n\nlighting. With a 5.5” footprint, these versatile LED powerhouses draw just 40Watts yet pro-\nduce up to 2900-lumen output at 96TLCI (Bicolor). (Tunable from 2700 to 5600 Kelvin).\n\nThe CFL is also available in a 3200K & 5600K Single Color version. Available in Black and\nWhite. CFL outputs a hard-shadow rendering beam that fades from 100% at center to\n\n50% at the edges, so it is good for mixing and overlapping with other lights while eliminat-\ning blinding glare.\n\nIntegrated Zoom\nCFL has a smart ring-controlled focus system zooming from 12° to 52°\n\nthat is manually adjustable by turning the ring on the fixture. It is pow-\nerful enough to be used as key, fill or backlight on positions typically\n\nfrom 3 to 6 meter distances in any newsroom, on set or in architectural\napplications when a compact punch light is needed.",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-05T14:04:22",
+      "text": "REV0"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "acd1b755deb8bba3"
+  },
+  "manufacturerKey": "brother-brother-and-sons",
+  "fixtureKey": "compact-fresnel-light-spot-bi-color",
+  "gwFixtureTypeID": "EB0E43D5-FBEE-40E2-8A0A-BEA58CF9F4BE"
+}

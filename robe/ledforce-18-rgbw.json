@@ -1,0 +1,213 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LEDForce 18 RGBW",
+  "shortName": "LEDForce 18",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2022-11-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 69C31FC8-932B-4C7D-B1D8-CDDE0B2A7B2C"
+    }
+  },
+  "comment": "LEDForce 18™ RGBW: GDTF info: 3D model does not match 100% physical appearance of the light. Proportions of 3D model are correct. \n\nLEDForce 18 RGB and LEDForce 18 RGBW Par Cans will blind you with powerful light output of 18 x 3IN1 RGB LED or 18 x 4IN1 RGBW LED multichip New Tri-color and Quad-color LED technology. Superior color mixing with no multicolor shadows and extremely bright beam of 25°beam angle will please any lighting professional. Die cast aluminum casting with double hanging brackets – for truss mounting and floor standing allows mounting in any position. Gel frame included as standard and optional 10° lens kit available upon demand.",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow to Fast"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 RGBW",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "Mode 2 RGBW + dim + strobe",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Dim 2",
+        "Sh1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      216,
+      260,
+      262
+    ],
+    "weight": 4.9,
+    "power": 5,
+    "bulb": {
+      "type": "624nm / 526nm / 461nm / 485nm LED",
+      "lumens": 33,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        50.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.697802,0.302067,18.474940",
+      "hex": "#ff0000",
+      "dominantWavelength": 623.5
+    },
+    {
+      "name": "Green",
+      "cie": "0.165922,0.715633,29.324604",
+      "hex": "#00b900",
+      "dominantWavelength": 525.5
+    },
+    {
+      "name": "Blue",
+      "cie": "0.145199,0.035528,8.160411",
+      "hex": "#2300ff",
+      "dominantWavelength": 460.809998
+    },
+    {
+      "name": "White",
+      "cie": "0.306999,0.319856,47.977679",
+      "hex": "#b7b8bf",
+      "dominantWavelength": 484.820007
+    }
+  ],
+  "gwSpecs": {
+    "description": "GDTF info: 3D model does not match 100% physical appearance of the light. Proportions of 3D model are correct. \n\nLEDForce 18 RGB and LEDForce 18 RGBW Par Cans will blind you with powerful light output of 18 x 3IN1 RGB LED or 18 x 4IN1 RGBW LED multichip New Tri-color and Quad-color LED technology. Superior color mixing with no multicolor shadows and extremely bright beam of 25°beam angle will please any lighting professional. Die cast aluminum casting with double hanging brackets – for truss mounting and floor standing allows mounting in any position. Gel frame included as standard and optional 10° lens kit available upon demand.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2022-11-04T07:40:39",
+      "text": "2022-11-04  Color wheels correction"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "6d3c7ff7b1712d44"
+  },
+  "manufacturerKey": "robe",
+  "fixtureKey": "ledforce-18-rgbw",
+  "gwFixtureTypeID": "69C31FC8-932B-4C7D-B1D8-CDDE0B2A7B2C"
+}

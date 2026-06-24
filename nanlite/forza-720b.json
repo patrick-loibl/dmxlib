@@ -1,0 +1,150 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Forza 720B",
+  "shortName": "Forza 720B",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-11",
+    "lastModifyDate": "2023-06-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 77EF8703-786D-485E-9A07-C9BE0BA3BD4F"
+    }
+  },
+  "comment": "NANLITE Forza 720B: Forza 720B LED Bi-Color Spot Light",
+  "rdm": {
+    "modelId": 514
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTC": {
+      "fineChannelAliases": [
+        "CTC fine"
+      ],
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN OFF"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "CCT 8bit",
+      "channels": [
+        "Dim",
+        "CTC",
+        "Fan Mode"
+      ]
+    },
+    {
+      "name": "CCT 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CTC",
+        "CTC fine",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      142,
+      518,
+      228
+    ],
+    "weight": 5.3,
+    "power": 800,
+    "bulb": {
+      "type": "LED",
+      "lumens": 63768,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        66.0,
+        154.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.310400,0.322100,100.000000",
+      "hex": "#fffeff"
+    },
+    {
+      "name": "WarmWhite_LED",
+      "cie": "0.466500,0.411400,100.000000",
+      "hex": "#ffe673"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Forza 720B LED Bi-Color Spot Light",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2023-06-12T16:24:46",
+      "text": "DMX V1.0 12.Jun.2023"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "37258ed23974cc2c"
+  },
+  "manufacturerKey": "nanlite",
+  "fixtureKey": "forza-720b",
+  "gwFixtureTypeID": "77EF8703-786D-485E-9A07-C9BE0BA3BD4F"
+}

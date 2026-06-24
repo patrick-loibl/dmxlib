@@ -1,0 +1,1513 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Live FX Virtual Fixture",
+  "shortName": "LFX V-Fixture",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-09-25",
+    "lastModifyDate": "2025-12-07",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 97E61F34-E65F-4C88-974E-94BD1AE4055C"
+    }
+  },
+  "comment": "Assimilate Live FX Application and Fixture Control: This virtual fixture maps a series of properties as defined in Assimilate Live FX Virtual Production software. (remote) Control the color sampling and color grade of a fixture in Live FX, which in turn is mapped to a physical fixture. Control general application functions like player state, version selection. Control CDL grading parameters.",
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Crossfade": {
+      "capability": {
+        "type": "Unknown (Crossfade)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Crossfade sample and solid color"
+      }
+    },
+    "Sample Region X Position": {
+      "fineChannelAliases": [
+        "Sample Region X Position fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImagePosition)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "X position"
+      }
+    },
+    "Sample Region Y Position": {
+      "fineChannelAliases": [
+        "Sample Region Y Position fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImagePosition)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Y Position"
+      }
+    },
+    "Sample Region Width": {
+      "fineChannelAliases": [
+        "Sample Region Width fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImageSize)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Relative Width"
+      }
+    },
+    "Sample Region Height": {
+      "fineChannelAliases": [
+        "Sample Region Height fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImageSize)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Relative Height"
+      }
+    },
+    "Sample Region Rotation": {
+      "fineChannelAliases": [
+        "Sample Region Rotation fine"
+      ],
+      "capability": {
+        "type": "Unknown (Sample Region Rotate)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Sample Region Input": {
+      "capability": {
+        "type": "Unknown (Sample Region Input)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Range Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Unknown (Color Range Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Unknown (Color Range Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Scale Colors"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Unknown (Color Range Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Clip Colors"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "Unknown (Color Range Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Color Range Red Min": {
+      "fineChannelAliases": [
+        "Color Range Red Min fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Range Red Min)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Range Green Min": {
+      "fineChannelAliases": [
+        "Color Range Green Min fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Range Green Min)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Range Blue Min": {
+      "fineChannelAliases": [
+        "Color Range Blue Min fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Range Blue Min)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Range Red Max": {
+      "fineChannelAliases": [
+        "Color Range Red Max fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Range Red Max)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Range Green Max": {
+      "fineChannelAliases": [
+        "Color Range Green Max fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Range Green Max)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Range Blue Max": {
+      "fineChannelAliases": [
+        "Color Range Blue Max fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Range Blue Max)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Fixed Red": {
+      "fineChannelAliases": [
+        "Color Fixed Red fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Fixed Red)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Fixed Green": {
+      "fineChannelAliases": [
+        "Color Fixed Green fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Fixed Green)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Fixed Blue": {
+      "fineChannelAliases": [
+        "Color Fixed Blue fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Fixed Blue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Gain Master": {
+      "fineChannelAliases": [
+        "Color Gain Master fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Unknown (Color Gain Master)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Unknown (Color Gain Master)",
+          "physicalStart": 1,
+          "physicalEnd": 10
+        }
+      ]
+    },
+    "Color Gain Red": {
+      "fineChannelAliases": [
+        "Color Gain Red fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Unknown (Color Gain Red)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Unknown (Color Gain Red)",
+          "physicalStart": 1,
+          "physicalEnd": 10
+        }
+      ]
+    },
+    "Color Gain Green": {
+      "fineChannelAliases": [
+        "Color Gain Green fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Unknown (Color Gain Green)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Unknown (Color Gain Green)",
+          "physicalStart": 1,
+          "physicalEnd": 10
+        }
+      ]
+    },
+    "Color Gain Blue": {
+      "fineChannelAliases": [
+        "Color Gain Blue fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Unknown (Color Gain Blue)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Unknown (Color Gain Blue)",
+          "physicalStart": 1,
+          "physicalEnd": 10
+        }
+      ]
+    },
+    "Color Hue Shift": {
+      "fineChannelAliases": [
+        "Color Hue Shift fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Hue Shift)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Shift"
+      }
+    },
+    "Color Sasturation": {
+      "fineChannelAliases": [
+        "Color Sasturation fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Saturation)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Brightness": {
+      "fineChannelAliases": [
+        "Color Brightness fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Brightness)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Temperature Kelvin": {
+      "fineChannelAliases": [
+        "Color Temperature Kelvin fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Temperature Kelvin)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Temperature Tint": {
+      "fineChannelAliases": [
+        "Color Temperature Tint fine"
+      ],
+      "capability": {
+        "type": "Unknown (Color Temperature Tint)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Reserved": {
+      "fineChannelAliases": [
+        "Reserved fine",
+        "Reserved fine^2",
+        "Reserved fine^3"
+      ],
+      "capability": {
+        "type": "Unknown (Reserved)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Sample Region X Position 2": {
+      "name": "Sample Region X Position",
+      "fineChannelAliases": [
+        "Sample Region X Position 2 fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImagePosition)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "X Position"
+      }
+    },
+    "Sample Region Height 2": {
+      "name": "Sample Region Height",
+      "fineChannelAliases": [
+        "Sample Region Height 2 fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImageSize)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Playmode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            1,
+            10
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Pause"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Play Frw"
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Play Rev"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Goto Start"
+        },
+        {
+          "dmxRange": [
+            41,
+            50
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Goto End"
+        },
+        {
+          "dmxRange": [
+            51,
+            60
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Frame Frw"
+        },
+        {
+          "dmxRange": [
+            61,
+            70
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Frame Rev"
+        },
+        {
+          "dmxRange": [
+            71,
+            80
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Keyframe Frw"
+        },
+        {
+          "dmxRange": [
+            81,
+            90
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Keyframe Rev"
+        },
+        {
+          "dmxRange": [
+            91,
+            255
+          ],
+          "type": "Unknown (Playmode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Select Clip Version": {
+      "capability": {
+        "type": "Unknown (Clip Version)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Apply Memory Grade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 1"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 2"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 3"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 4"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 5"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 6"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 7"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 8"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 9"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 10"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Unknown (Apply Memory Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Apply Gallery Grade": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 1"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 2"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 3"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 4"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 5"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 6"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 7"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 8"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 9"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Grade 10"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Unknown (Apply Gallery Grade)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Slope Red": {
+      "fineChannelAliases": [
+        "Slope Red fine"
+      ],
+      "capability": {
+        "type": "Unknown (Slope Red)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Slope Green": {
+      "fineChannelAliases": [
+        "Slope Green fine"
+      ],
+      "capability": {
+        "type": "Unknown (Slope Green)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Slope Blue": {
+      "fineChannelAliases": [
+        "Slope Blue fine"
+      ],
+      "capability": {
+        "type": "Unknown (Slope Blue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Offset Red": {
+      "fineChannelAliases": [
+        "Offset Red fine"
+      ],
+      "capability": {
+        "type": "Unknown (Offset Red)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Offset Green": {
+      "fineChannelAliases": [
+        "Offset Green fine"
+      ],
+      "capability": {
+        "type": "Unknown (Offset Green)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Offset Blue": {
+      "fineChannelAliases": [
+        "Offset Blue fine"
+      ],
+      "capability": {
+        "type": "Unknown (Offset Blue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Power Red": {
+      "fineChannelAliases": [
+        "Power Red fine"
+      ],
+      "capability": {
+        "type": "Unknown (Power Red)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Power Green": {
+      "fineChannelAliases": [
+        "Power Green fine"
+      ],
+      "capability": {
+        "type": "Unknown (Power Green)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Power Blue": {
+      "fineChannelAliases": [
+        "Power Blue fine"
+      ],
+      "capability": {
+        "type": "Unknown (Power Blue)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Saturation": {
+      "fineChannelAliases": [
+        "Saturation fine"
+      ],
+      "capability": {
+        "type": "Unknown (Saturation)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Light Card Shape": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Unknown (Card Shape)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Unknown (Card Shape)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Round"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Unknown (Card Shape)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Square"
+        },
+        {
+          "dmxRange": [
+            151,
+            255
+          ],
+          "type": "Unknown (Card Shape)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Pos X": {
+      "fineChannelAliases": [
+        "Pos X fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImagePosition)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Card Pos Y": {
+      "fineChannelAliases": [
+        "Card Pos Y fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImagePosition)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Scale X": {
+      "fineChannelAliases": [
+        "Scale X fine"
+      ],
+      "capability": {
+        "type": "Unknown (Scale_X)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Scale X"
+      }
+    },
+    "Scale Y": {
+      "fineChannelAliases": [
+        "Scale Y fine"
+      ],
+      "capability": {
+        "type": "Unknown (Scale_Y)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Scale Y"
+      }
+    },
+    "Light Card Softness": {
+      "fineChannelAliases": [
+        "Light Card Softness fine"
+      ],
+      "capability": {
+        "type": "Unknown (ImageSize)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Softness"
+      }
+    },
+    "Opacity": {
+      "fineChannelAliases": [
+        "Opacity fine"
+      ],
+      "capability": {
+        "type": "Unknown (Card Opacity)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%",
+        "comment": "Opacity"
+      }
+    },
+    "Select Slot": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 1"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 2"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 3"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 4"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 5"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 6"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 7"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 8"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 9"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slot 10"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Unknown (Select_Slot)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Select Version": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 1"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 2"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 3"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 4"
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 5"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 6"
+        },
+        {
+          "dmxRange": [
+            7,
+            7
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 7"
+        },
+        {
+          "dmxRange": [
+            8,
+            8
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 8"
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 9"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Ver 10"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "Unknown (Select_Version)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "In Frame": {
+      "fineChannelAliases": [
+        "In Frame fine"
+      ],
+      "capability": {
+        "type": "Unknown (In_Frame)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Out Frame": {
+      "fineChannelAliases": [
+        "Out Frame fine"
+      ],
+      "capability": {
+        "type": "Unknown (Out_Frame)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Repeat Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Unknown (Repeat_Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Loop"
+        },
+        {
+          "dmxRange": [
+            11,
+            20
+          ],
+          "type": "Unknown (Repeat_Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Once"
+        },
+        {
+          "dmxRange": [
+            21,
+            30
+          ],
+          "type": "Unknown (Repeat_Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Bounce"
+        },
+        {
+          "dmxRange": [
+            31,
+            40
+          ],
+          "type": "Unknown (Repeat_Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reverse"
+        },
+        {
+          "dmxRange": [
+            41,
+            255
+          ],
+          "type": "Unknown (Repeat_Mode)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Play Speed": {
+      "fineChannelAliases": [
+        "Play Speed fine"
+      ],
+      "capability": {
+        "type": "Unknown (Play_Speed)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "LFX Fixture Full",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Crossfade",
+        "Sample Region X Position",
+        "Sample Region X Position fine",
+        "Sample Region Y Position",
+        "Sample Region Y Position fine",
+        "Sample Region Width",
+        "Sample Region Width fine",
+        "Sample Region Height",
+        "Sample Region Height fine",
+        "Sample Region Rotation",
+        "Sample Region Rotation fine",
+        "Sample Region Input",
+        "Color Range Mode",
+        "Color Range Red Min",
+        "Color Range Red Min fine",
+        "Color Range Green Min",
+        "Color Range Green Min fine",
+        "Color Range Blue Min",
+        "Color Range Blue Min fine",
+        "Color Range Red Max",
+        "Color Range Red Max fine",
+        "Color Range Green Max",
+        "Color Range Green Max fine",
+        "Color Range Blue Max",
+        "Color Range Blue Max fine",
+        "Color Fixed Red",
+        "Color Fixed Red fine",
+        "Color Fixed Green",
+        "Color Fixed Green fine",
+        "Color Fixed Blue",
+        "Color Fixed Blue fine",
+        "Color Gain Master",
+        "Color Gain Master fine",
+        "Color Gain Red",
+        "Color Gain Red fine",
+        "Color Gain Green",
+        "Color Gain Green fine",
+        "Color Gain Blue",
+        "Color Gain Blue fine",
+        "Color Hue Shift",
+        "Color Hue Shift fine",
+        "Color Sasturation",
+        "Color Sasturation fine",
+        "Color Brightness",
+        "Color Brightness fine",
+        "Color Temperature Kelvin",
+        "Color Temperature Kelvin fine",
+        "Color Temperature Tint",
+        "Color Temperature Tint fine",
+        "Reserved",
+        "Reserved fine",
+        "Reserved fine^2",
+        "Reserved fine^3"
+      ]
+    },
+    {
+      "name": "LFX Fixture Sampler",
+      "channels": [
+        "Sample Region X Position 2",
+        "Sample Region X Position 2 fine",
+        "Sample Region Y Position",
+        "Sample Region Y Position fine",
+        "Sample Region Width",
+        "Sample Region Width fine",
+        "Sample Region Height 2",
+        "Sample Region Height 2 fine",
+        "Sample Region Rotation",
+        "Sample Region Rotation fine",
+        "Sample Region Input",
+        "Reserved"
+      ]
+    },
+    {
+      "name": "LFX Player Control",
+      "channels": [
+        "Playmode",
+        "Select Clip Version",
+        "Apply Memory Grade",
+        "Apply Gallery Grade",
+        "Reserved"
+      ]
+    },
+    {
+      "name": "LFX CDL Grade",
+      "channels": [
+        "Slope Red",
+        "Slope Red fine",
+        "Slope Green",
+        "Slope Green fine",
+        "Slope Blue",
+        "Slope Blue fine",
+        "Offset Red",
+        "Offset Red fine",
+        "Offset Green",
+        "Offset Green fine",
+        "Offset Blue",
+        "Offset Blue fine",
+        "Power Red",
+        "Power Red fine",
+        "Power Green",
+        "Power Green fine",
+        "Power Blue",
+        "Power Blue fine",
+        "Saturation",
+        "Saturation fine"
+      ]
+    },
+    {
+      "name": "LFX Light Cards",
+      "channels": [
+        "Light Card Shape",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "Pos X",
+        "Pos X fine",
+        "Card Pos Y",
+        "Card Pos Y fine",
+        "Scale X",
+        "Scale X fine",
+        "Scale Y",
+        "Scale Y fine",
+        "Light Card Softness",
+        "Light Card Softness fine",
+        "Opacity",
+        "Opacity fine"
+      ]
+    },
+    {
+      "name": "LFX Switcher Input",
+      "channels": [
+        "Select Slot",
+        "Select Version",
+        "In Frame",
+        "In Frame fine",
+        "Out Frame",
+        "Out Frame fine",
+        "Repeat Mode",
+        "Play Speed",
+        "Play Speed fine"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "This virtual fixture maps a series of properties as defined in Assimilate Live FX Virtual Production software. (remote) Control the color sampling and color grade of a fixture in Live FX, which in turn is mapped to a physical fixture. Control general application functions like player state, version selection. Control CDL grading parameters.",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-07T19:05:12",
+      "text": "Added Channelsets for Slots and Versions in Switcher Profile"
+    }
+  },
+  "manufacturerKey": "assimilate-inc",
+  "fixtureKey": "live-fx-virtual-fixture",
+  "gwFixtureTypeID": "97E61F34-E65F-4C88-974E-94BD1AE4055C",
+  "physical": {}
+}

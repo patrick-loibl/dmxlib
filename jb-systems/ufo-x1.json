@@ -1,0 +1,300 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "UFO-X1",
+  "shortName": "UFO-X1",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-08-13",
+    "lastModifyDate": "2025-12-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 3DD11C7D-8516-804C-D1F1-AA4D20BE039E"
+    }
+  },
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "P": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Pan",
+          "angleStart": 0,
+          "angleEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Pan",
+          "angleStart": 0,
+          "angleEnd": 1,
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Pan",
+          "angleStart": 0,
+          "angleEnd": 1
+        }
+      ]
+    },
+    "T": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            126
+          ],
+          "type": "Tilt",
+          "angleStart": 0,
+          "angleEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Tilt",
+          "angleStart": 0,
+          "angleEnd": 1,
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Tilt",
+          "angleStart": 0,
+          "angleEnd": 1
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "P Rotate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (PanRotate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            8,
+            15
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            16,
+            139
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            140,
+            190
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Pulse closed"
+        },
+        {
+          "dmxRange": [
+            191,
+            239
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Pulse Open"
+        },
+        {
+          "dmxRange": [
+            240,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "randomTiming": true,
+          "comment": "Random strobe"
+        }
+      ]
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Disabled",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Auto",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Sound",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "11Ch",
+      "channels": [
+        "P",
+        "T",
+        "Pos MSpeed",
+        "P Rotate",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "FX1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      200,
+      90,
+      260
+    ],
+    "power": 40,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-24T08:20:41",
+      "text": "Created by Admin , Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "jb-systems",
+  "fixtureKey": "ufo-x1",
+  "gwFixtureTypeID": "3DD11C7D-8516-804C-D1F1-AA4D20BE039E"
+}

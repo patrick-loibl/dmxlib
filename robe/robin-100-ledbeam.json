@@ -1,0 +1,2828 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Robin 100 LEDBeam",
+  "shortName": "100 LEDBeam",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-03-23",
+    "lastModifyDate": "2024-02-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F74CAC5F-1BEA-4195-8B75-F9E466A0B802"
+    }
+  },
+  "comment": "A highly optimized motorised control produces speedy pan and tilt movement, three LED zones allow the creation of various colour chases, and the extra punchy 7 degree beam angle can be amplified with fast strobing. ",
+  "rdm": {
+    "modelId": 95,
+    "softwareVersion": "0x1"
+  },
+  "wheels": {
+    "VirtualColorWheel": {
+      "slots": [
+        {
+          "type": "Open",
+          "colors": [
+            "#ffffff"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 2700K",
+          "colors": [
+            "#d09055"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 2700K (Halogen)",
+          "colors": [
+            "#d09055"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 3200K",
+          "colors": [
+            "#daa577"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 3200K (Halogen)",
+          "colors": [
+            "#daa577"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 4200K",
+          "colors": [
+            "#f2d0b3"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 5600K",
+          "colors": [
+            "#e3d4c9"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White 8000K",
+          "colors": [
+            "#d2d3e3"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0016a7"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Light Blue",
+          "colors": [
+            "#007f77"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#168300"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Yellow",
+          "colors": [
+            "#f2ea00"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#d91400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Magenta",
+          "colors": [
+            "#820061"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0000ad"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Standard mode"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "max"
+        },
+        {
+          "dmxRange": [
+            2,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "min"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RGBW color mixing mode"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CMY color mixing mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 0,
+          "comment": "P/T speed mode"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 1,
+          "comment": "P/T time mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 1,
+          "comment": "enable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            80,
+            109
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 0,
+          "comment": "disable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "color calibration mode ON"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "color calibration mode OFF"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "tilt movement reduction ON"
+        },
+        {
+          "dmxRange": [
+            125,
+            139
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "tilt movement reduction OFF"
+        },
+        {
+          "dmxRange": [
+            140,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan/Tilt reset"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Total Reset"
+        }
+      ]
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "White 2": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 4": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "G 3": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "G 4": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "B 3": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "B 4": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "White 3": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 3 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "White 4": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 5": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 6": {
+      "name": "R",
+      "fineChannelAliases": [
+        "R 6 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "G 5": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "G 6": {
+      "name": "G",
+      "fineChannelAliases": [
+        "G 6 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "B 5": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "B 6": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 6 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "White 5": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 5 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "White 6": {
+      "name": "White",
+      "fineChannelAliases": [
+        "White 6 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "15500K"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "2700K"
+        }
+      ]
+    },
+    "CTO 2": {
+      "name": "CTO",
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "C1": {
+      "defaultValue": 0,
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 2,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R",
+            "0_Middlering_ColorAdd_R fine": "R fine",
+            "0_Middlering_ColorAdd_G": "G",
+            "0_Middlering_ColorAdd_G fine": "G fine",
+            "0_Middlering_ColorAdd_B": "B",
+            "0_Middlering_ColorAdd_B fine": "B fine",
+            "0_Middlering_ColorAdd_W": "White",
+            "0_Middlering_ColorAdd_W fine": "White fine",
+            "0_Halfring1_ColorAdd_R": "R 3",
+            "0_Halfring1_ColorAdd_R fine": "R 3 fine",
+            "0_Halfring1_ColorAdd_G": "G 3",
+            "0_Halfring1_ColorAdd_G fine": "G 3 fine",
+            "0_Halfring1_ColorAdd_B": "B 3",
+            "0_Halfring1_ColorAdd_B fine": "B 3 fine",
+            "0_Halfring1_ColorAdd_W": "White 3",
+            "0_Halfring1_ColorAdd_W fine": "White 3 fine",
+            "0_Halfring2_ColorAdd_R": "R 5",
+            "0_Halfring2_ColorAdd_R fine": "R 5 fine",
+            "0_Halfring2_ColorAdd_G": "G 5",
+            "0_Halfring2_ColorAdd_G fine": "G 5 fine",
+            "0_Halfring2_ColorAdd_B": "B 5",
+            "0_Halfring2_ColorAdd_B fine": "B 5 fine",
+            "0_Halfring2_ColorAdd_W": "White 5",
+            "0_Halfring2_ColorAdd_W fine": "White 5 fine",
+            "0_Head_CTO": "CTO",
+            "1_AllZones_CTO": "CTO",
+            "2_AllZones_ColorAdd_R": "R 7",
+            "2_AllZones_ColorAdd_G": "G 7",
+            "2_AllZones_ColorAdd_B": "B 7",
+            "2_AllZones_ColorAdd_W": "White 7"
+          }
+        },
+        {
+          "dmxRange": [
+            1,
+            2
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 3,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 4,
+          "comment": "White 2700K Halogen",
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 6,
+          "comment": "White 3200K Halogen",
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            7,
+            9
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 7,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            10,
+            12
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 8,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            13,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 9,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 8.5,
+          "slotNumberEnd": 9.5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            17,
+            55
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 0,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            56,
+            56
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 9.5,
+          "slotNumberEnd": 10.5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            57,
+            95
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 0,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            96,
+            96
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 10.5,
+          "slotNumberEnd": 11.5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            97,
+            134
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 0,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            135,
+            135
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 11.5,
+          "slotNumberEnd": 12.5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            136,
+            174
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 0,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            175,
+            175
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 12.5,
+          "slotNumberEnd": 13.5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            176,
+            214
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 0,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            215,
+            215
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 13.5,
+          "slotNumberEnd": 14.5,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            216,
+            246
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumber": 0,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            247,
+            247
+          ],
+          "type": "WheelSlot",
+          "wheel": "VirtualColorWheel",
+          "slotNumberStart": 14.5,
+          "slotNumberEnd": 16,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            248,
+            248
+          ],
+          "type": "Effect",
+          "effectName": "Rainbow (fade time)",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            249,
+            249
+          ],
+          "type": "Effect",
+          "effectName": "Rainbow",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            250,
+            250
+          ],
+          "type": "Effect",
+          "effectName": "Zone effect 1",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            251,
+            251
+          ],
+          "type": "Effect",
+          "effectName": "Zone effect 2",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            252,
+            252
+          ],
+          "type": "Effect",
+          "effectName": "Zone effect 3",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            253,
+            253
+          ],
+          "type": "Effect",
+          "effectName": "Zone effect 4",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            254,
+            254
+          ],
+          "type": "Effect",
+          "effectName": "Zone effect 5",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Zone effect 6",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "switchChannels": {
+            "0_Middlering_ColorAdd_R": "R 2",
+            "0_Middlering_ColorAdd_R fine": "R 2 fine",
+            "0_Middlering_ColorAdd_G": "G 2",
+            "0_Middlering_ColorAdd_G fine": "G 2 fine",
+            "0_Middlering_ColorAdd_B": "B 2",
+            "0_Middlering_ColorAdd_B fine": "B 2 fine",
+            "0_Middlering_ColorAdd_W": "White 2",
+            "0_Middlering_ColorAdd_W fine": "White 2 fine",
+            "0_Halfring1_ColorAdd_R": "R 4",
+            "0_Halfring1_ColorAdd_R fine": "R 4 fine",
+            "0_Halfring1_ColorAdd_G": "G 4",
+            "0_Halfring1_ColorAdd_G fine": "G 4 fine",
+            "0_Halfring1_ColorAdd_B": "B 4",
+            "0_Halfring1_ColorAdd_B fine": "B 4 fine",
+            "0_Halfring1_ColorAdd_W": "White 4",
+            "0_Halfring1_ColorAdd_W fine": "White 4 fine",
+            "0_Halfring2_ColorAdd_R": "R 6",
+            "0_Halfring2_ColorAdd_R fine": "R 6 fine",
+            "0_Halfring2_ColorAdd_G": "G 6",
+            "0_Halfring2_ColorAdd_G fine": "G 6 fine",
+            "0_Halfring2_ColorAdd_B": "B 6",
+            "0_Halfring2_ColorAdd_B fine": "B 6 fine",
+            "0_Halfring2_ColorAdd_W": "White 6",
+            "0_Halfring2_ColorAdd_W fine": "White 6 fine",
+            "0_Head_CTO": "CTO 2",
+            "2_AllZones_ColorAdd_R": "R 8",
+            "2_AllZones_ColorAdd_G": "G 8",
+            "2_AllZones_ColorAdd_B": "B 8",
+            "2_AllZones_ColorAdd_W": "White 8"
+          }
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Shutter closed"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Strobe slow to fast (zone 2 + 3)"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Strobe slow to fast (all zones)"
+        },
+        {
+          "dmxRange": [
+            96,
+            111
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "10Hz",
+          "comment": "Effect + rainbow speed slow to fast"
+        },
+        {
+          "dmxRange": [
+            112,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "10Hz",
+          "speedEnd": "1Hz",
+          "comment": "Effect + rainbow speed fast to slow"
+        },
+        {
+          "dmxRange": [
+            128,
+            143
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Opening slow to fast"
+        },
+        {
+          "dmxRange": [
+            144,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "10Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Closing fast to slow"
+        },
+        {
+          "dmxRange": [
+            160,
+            175
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe slow to fast (random zone)"
+        },
+        {
+          "dmxRange": [
+            176,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe slow to fast (random zone + random strobe)"
+        },
+        {
+          "dmxRange": [
+            192,
+            224
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "1Hz",
+          "speedEnd": "10Hz",
+          "randomTiming": true,
+          "comment": "Random Strobe slow to fast (all zones)"
+        },
+        {
+          "dmxRange": [
+            225,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Shutter Open"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 4 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "Unknown (Dummy)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RGBW color mixing mode"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CMY color mixing mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 0,
+          "comment": "P/T speed mode"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 1,
+          "comment": "P/T time mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 1,
+          "comment": "enable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            80,
+            109
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 0,
+          "comment": "disable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "color calibration mode ON"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "color calibration mode OFF"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "tilt movement reduction ON"
+        },
+        {
+          "dmxRange": [
+            125,
+            139
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "tilt movement reduction OFF"
+        },
+        {
+          "dmxRange": [
+            140,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan/Tilt reset"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Total Reset"
+        }
+      ]
+    },
+    "Ctrl1 3": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RGBW color mixing mode"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CMY color mixing mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 0,
+          "comment": "P/T speed mode"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 1,
+          "comment": "P/T time mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 1,
+          "comment": "enable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            80,
+            109
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 0,
+          "comment": "disable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "color calibration mode ON"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "color calibration mode OFF"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "tilt movement reduction ON"
+        },
+        {
+          "dmxRange": [
+            125,
+            139
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "tilt movement reduction OFF"
+        },
+        {
+          "dmxRange": [
+            140,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan/Tilt reset"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Total Reset"
+        }
+      ]
+    },
+    "R 7": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "R 8": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "G 7": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "G 8": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "B 7": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "B 8": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "White 7": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "White 8": {
+      "name": "White",
+      "highlightValue": 255,
+      "capability": {
+        "type": "NoFunction"
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Ctrl1 4": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RGBW color mixing mode"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CMY color mixing mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 0,
+          "comment": "P/T speed mode"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 1,
+          "comment": "P/T time mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 1,
+          "comment": "enable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            80,
+            109
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 0,
+          "comment": "disable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "color calibration mode ON"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "color calibration mode OFF"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "tilt movement reduction ON"
+        },
+        {
+          "dmxRange": [
+            125,
+            139
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "tilt movement reduction OFF"
+        },
+        {
+          "dmxRange": [
+            140,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan/Tilt reset"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Total Reset"
+        }
+      ]
+    },
+    "Lamp Ctrl": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            29
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            30,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "RGBW color mixing mode"
+        },
+        {
+          "dmxRange": [
+            40,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CMY color mixing mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            59
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 0,
+          "comment": "P/T speed mode"
+        },
+        {
+          "dmxRange": [
+            60,
+            69
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physical": 1,
+          "comment": "P/T time mode"
+        },
+        {
+          "dmxRange": [
+            70,
+            79
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 1,
+          "comment": "enable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            80,
+            109
+          ],
+          "type": "Unknown (BlackoutMode)",
+          "physical": 0,
+          "comment": "disable blackout while p/t moving"
+        },
+        {
+          "dmxRange": [
+            110,
+            114
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "color calibration mode ON"
+        },
+        {
+          "dmxRange": [
+            115,
+            119
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "color calibration mode OFF"
+        },
+        {
+          "dmxRange": [
+            120,
+            124
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "tilt movement reduction ON"
+        },
+        {
+          "dmxRange": [
+            125,
+            139
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "tilt movement reduction OFF"
+        },
+        {
+          "dmxRange": [
+            140,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Pan/Tilt reset"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Total Reset"
+        }
+      ]
+    },
+    "Dummy": {
+      "fineChannelAliases": [
+        "Dummy fine"
+      ],
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 1 Three LED Zones 16bit",
+      "rdmPersonalityIndex": 1,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1",
+        "0_Middlering_ColorAdd_R",
+        "0_Middlering_ColorAdd_R fine",
+        "0_Middlering_ColorAdd_G",
+        "0_Middlering_ColorAdd_G fine",
+        "0_Middlering_ColorAdd_B",
+        "0_Middlering_ColorAdd_B fine",
+        "0_Middlering_ColorAdd_W",
+        "0_Middlering_ColorAdd_W fine",
+        "0_Halfring1_ColorAdd_R",
+        "0_Halfring1_ColorAdd_R fine",
+        "0_Halfring1_ColorAdd_G",
+        "0_Halfring1_ColorAdd_G fine",
+        "0_Halfring1_ColorAdd_B",
+        "0_Halfring1_ColorAdd_B fine",
+        "0_Halfring1_ColorAdd_W",
+        "0_Halfring1_ColorAdd_W fine",
+        "0_Halfring2_ColorAdd_R",
+        "0_Halfring2_ColorAdd_R fine",
+        "0_Halfring2_ColorAdd_G",
+        "0_Halfring2_ColorAdd_G fine",
+        "0_Halfring2_ColorAdd_B",
+        "0_Halfring2_ColorAdd_B fine",
+        "0_Halfring2_ColorAdd_W",
+        "0_Halfring2_ColorAdd_W fine",
+        "0_Head_CTO",
+        "C1",
+        "Sh1",
+        "Dim 4",
+        "Dim 4 fine"
+      ]
+    },
+    {
+      "name": "Mode 2 Beam light 16bit",
+      "rdmPersonalityIndex": 2,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1 2",
+        "0_Middlering_ColorAdd_R",
+        "0_Middlering_ColorAdd_R fine",
+        "0_Middlering_ColorAdd_G",
+        "0_Middlering_ColorAdd_G fine",
+        "0_Middlering_ColorAdd_B",
+        "0_Middlering_ColorAdd_B fine",
+        "0_Middlering_ColorAdd_W",
+        "0_Middlering_ColorAdd_W fine",
+        "1_AllZones_CTO",
+        "C1",
+        "Sh1",
+        "Dim 4",
+        "Dim 4 fine"
+      ]
+    },
+    {
+      "name": "Mode 3 Beam light 8bit",
+      "rdmPersonalityIndex": 3,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1 3",
+        "2_AllZones_ColorAdd_R",
+        "2_AllZones_ColorAdd_G",
+        "2_AllZones_ColorAdd_B",
+        "2_AllZones_ColorAdd_W",
+        "0_Head_CTO",
+        "C1",
+        "Sh1",
+        "Dim 5"
+      ]
+    },
+    {
+      "name": "Mode 4 Macro colors 8bit",
+      "rdmPersonalityIndex": 4,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1 4",
+        "C1",
+        "Sh1",
+        "Dim 5"
+      ]
+    },
+    {
+      "name": "Mode 5 Three LED Zones at the end 16bit",
+      "rdmPersonalityIndex": 5,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Lamp Ctrl",
+        "Sh1",
+        "Dim 4",
+        "Dim 4 fine",
+        "0_Head_CTO",
+        "C1",
+        "0_Middlering_ColorAdd_R",
+        "0_Middlering_ColorAdd_R fine",
+        "0_Middlering_ColorAdd_G",
+        "0_Middlering_ColorAdd_G fine",
+        "0_Middlering_ColorAdd_B",
+        "0_Middlering_ColorAdd_B fine",
+        "0_Middlering_ColorAdd_W",
+        "0_Middlering_ColorAdd_W fine",
+        "0_Halfring1_ColorAdd_R",
+        "0_Halfring1_ColorAdd_R fine",
+        "0_Halfring1_ColorAdd_G",
+        "0_Halfring1_ColorAdd_G fine",
+        "0_Halfring1_ColorAdd_B",
+        "0_Halfring1_ColorAdd_B fine",
+        "0_Halfring1_ColorAdd_W",
+        "0_Halfring1_ColorAdd_W fine",
+        "0_Halfring2_ColorAdd_R",
+        "0_Halfring2_ColorAdd_R fine",
+        "0_Halfring2_ColorAdd_G",
+        "0_Halfring2_ColorAdd_G fine",
+        "0_Halfring2_ColorAdd_B",
+        "0_Halfring2_ColorAdd_B fine",
+        "0_Halfring2_ColorAdd_W",
+        "0_Halfring2_ColorAdd_W fine"
+      ]
+    },
+    {
+      "name": "Mode 6 Compatible with LW600 mode 1",
+      "rdmPersonalityIndex": 6,
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1 3",
+        "0_Middlering_ColorAdd_R",
+        "0_Middlering_ColorAdd_R fine",
+        "0_Middlering_ColorAdd_G",
+        "0_Middlering_ColorAdd_G fine",
+        "0_Middlering_ColorAdd_B",
+        "0_Middlering_ColorAdd_B fine",
+        "0_Middlering_ColorAdd_W",
+        "0_Middlering_ColorAdd_W fine",
+        "0_Halfring1_ColorAdd_R",
+        "0_Halfring1_ColorAdd_R fine",
+        "0_Halfring1_ColorAdd_G",
+        "0_Halfring1_ColorAdd_G fine",
+        "0_Halfring1_ColorAdd_B",
+        "0_Halfring1_ColorAdd_B fine",
+        "0_Halfring1_ColorAdd_W",
+        "0_Halfring1_ColorAdd_W fine",
+        "0_Halfring2_ColorAdd_R",
+        "0_Halfring2_ColorAdd_R fine",
+        "0_Halfring2_ColorAdd_G",
+        "0_Halfring2_ColorAdd_G fine",
+        "0_Halfring2_ColorAdd_B",
+        "0_Halfring2_ColorAdd_B fine",
+        "0_Halfring2_ColorAdd_W",
+        "0_Halfring2_ColorAdd_W fine",
+        "0_Head_CTO",
+        "C1",
+        "Dummy",
+        "Dummy fine",
+        "Sh1",
+        "Dim 4",
+        "Dim 4 fine"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      87,
+      198,
+      233
+    ],
+    "weight": 4.5,
+    "power": 60,
+    "bulb": {
+      "type": "625nm / 530nm / 452nm / 469nm LED",
+      "lumens": 1073,
+      "colorTemperature": 8000
+    },
+    "lens": {
+      "degreesMinMax": [
+        7.0,
+        15.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.699721,0.299438,17.723422",
+      "hex": "#ff0000",
+      "dominantWavelength": 624.969971
+    },
+    {
+      "name": "Green",
+      "cie": "0.191641,0.706770,39.632332",
+      "hex": "#00d200",
+      "dominantWavelength": 529.890015
+    },
+    {
+      "name": "Blue",
+      "cie": "0.155969,0.021761,7.274869",
+      "hex": "#7e00ff",
+      "dominantWavelength": 451.75
+    },
+    {
+      "name": "White",
+      "cie": "0.286412,0.269841,50.281764",
+      "hex": "#c3b5e7",
+      "dominantWavelength": 468.850006
+    }
+  ],
+  "gwSpecs": {
+    "description": "A highly optimized motorised control produces speedy pan and tilt movement, three LED zones allow the creation of various colour chases, and the extra punchy 7 degree beam angle can be amplified with fast strobing.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -5,
+      45
+    ],
+    "revision": {
+      "date": "2024-02-09T09:14:06",
+      "text": "2024-02-09  3D models with robe color revision"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "77fd6cd58c963ed6"
+  },
+  "manufacturerKey": "robe",
+  "fixtureKey": "robin-100-ledbeam",
+  "gwFixtureTypeID": "F74CAC5F-1BEA-4195-8B75-F9E466A0B802"
+}

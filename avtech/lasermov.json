@@ -1,0 +1,663 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LASERMOV",
+  "shortName": "LASERMOV12",
+  "categories": [
+    "Moving Head",
+    "Gobo",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-02-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 5979B985-E73A-4768-BD6E-61113481344E"
+    }
+  },
+  "comment": "LASERMOV12",
+  "wheels": {
+    "PAGES": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "PAGES",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "CUES": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "CUES",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "LED DIMMER": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    },
+    "GOBO SPEED": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Wheel Slot 1",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos FX": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Pos Reset": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "BLACKOUT"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "MANUAL PLAY"
+        },
+        {
+          "dmxRange": [
+            64,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "AUTO PLAY MACRO"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "SD PLAY MODE"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "G1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "PAGES",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "G1 <>": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "CUES",
+          "slotNumber": 0,
+          "comment": "BLACKOUT"
+        },
+        {
+          "dmxRange": [
+            16,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "CUES",
+          "slotNumber": 0,
+          "comment": "EACH 12 VALUES BE ONE CUE / TOTAL 20 CUES "
+        }
+      ]
+    },
+    "X": {
+      "fineChannelAliases": [
+        "X fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_X)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Y": {
+      "fineChannelAliases": [
+        "Y fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Y)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Z": {
+      "fineChannelAliases": [
+        "Z fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Z)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Zoom": {
+      "capability": {
+        "type": "Zoom",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Rot X": {
+      "capability": {
+        "type": "Unknown (Rot_X)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Rot Y": {
+      "capability": {
+        "type": "Unknown (Rot_Y)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Iris": {
+      "capability": {
+        "type": "Iris",
+        "openPercentStart": 0,
+        "openPercentEnd": 1
+      }
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX2": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX3": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Scale X": {
+      "capability": {
+        "type": "Unknown (Scale_X)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Scale Y": {
+      "capability": {
+        "type": "Unknown (Scale_Y)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Scale Z": {
+      "capability": {
+        "type": "Unknown (Scale_Z)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Scale XYZ": {
+      "capability": {
+        "type": "Unknown (Scale_XYZ)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "Anim Pos": {
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "Unknown",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Anim Rotate": {
+      "capability": {
+        "type": "WheelSlotRotation",
+        "wheel": "Unknown",
+        "speedStart": "0rpm",
+        "speedEnd": "0.16666666666666669rpm"
+      }
+    },
+    "C1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "LED DIMMER",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "StrobeM Strobe": {
+      "capability": {
+        "type": "Unknown (StrobeModeStrobe)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Anim1": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "Unknown",
+        "slotNumber": 0,
+        "comment": "each 4 values be one cue /total 64"
+      }
+    },
+    "Anim FX": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "PanTilt Mode": {
+      "capability": {
+        "type": "Unknown (PanTiltMode)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Built in pattern mode"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "manual play"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "file play"
+        },
+        {
+          "dmxRange": [
+            192,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Music trigger manual play choose patt"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G2": {
+      "capability": {
+        "type": "WheelSlot",
+        "wheel": "CUES",
+        "slotNumberStart": null,
+        "slotNumberEnd": null
+      }
+    },
+    "Wheel Spin": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "WheelRotation",
+          "wheel": "GOBO SPEED",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "100%"
+        },
+        {
+          "dmxRange": [
+            16,
+            31
+          ],
+          "type": "WheelRotation",
+          "wheel": "GOBO SPEED",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "pause"
+        },
+        {
+          "dmxRange": [
+            32,
+            255
+          ],
+          "type": "WheelRotation",
+          "wheel": "GOBO SPEED",
+          "speedStart": "0rpm",
+          "speedEnd": "0.16666666666666669rpm",
+          "comment": "25%-200%"
+        }
+      ]
+    },
+    "LED Frequency": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "Default "
+        },
+        {
+          "dmxRange": [
+            32,
+            223
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "6k-29k"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physicalStart": "0Hz",
+          "physicalEnd": "1Hz",
+          "comment": "30k"
+        }
+      ]
+    },
+    "StrobeM Shutter": {
+      "capability": {
+        "type": "Unknown (StrobeModeShutter)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro2": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Macro1 Rate": {
+      "capability": {
+        "type": "Unknown (ColorMacro1Rate)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "R 3": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "40CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos FX",
+        "Pos Reset",
+        "Ctrl1",
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "G1",
+        "G1 <>",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Z",
+        "Z fine",
+        "Zoom",
+        "Rot X",
+        "Rot Y",
+        "Color Macro1",
+        "Iris",
+        "FX1",
+        "FX2",
+        "FX3",
+        "Scale X",
+        "Scale Y",
+        "Scale Z",
+        "Scale XYZ",
+        "Anim Pos",
+        "Anim Rotate",
+        "C1",
+        "StrobeM Strobe",
+        "Anim1",
+        "Anim FX",
+        "R 2",
+        "G 2",
+        "B 2"
+      ]
+    },
+    {
+      "name": "33CH",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos FX",
+        "PanTilt Mode",
+        "Ctrl1 2",
+        "Dim 2",
+        "R 2",
+        "G",
+        "B",
+        "G1",
+        "G2",
+        "X",
+        "X fine",
+        "Y",
+        "Y fine",
+        "Z",
+        "Z fine",
+        "Zoom",
+        "Rot X",
+        "Rot Y",
+        "Color Macro1",
+        "Iris",
+        "Wheel Spin",
+        "LED Frequency",
+        "C1",
+        "StrobeM Shutter",
+        "Color Macro2",
+        "Color Macro1 Rate",
+        "R 3",
+        "G 2",
+        "B 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ],
+    "weight": 27.0
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-19T10:44:30",
+      "text": "Vers2"
+    }
+  },
+  "manufacturerKey": "avtech",
+  "fixtureKey": "lasermov",
+  "gwFixtureTypeID": "5979B985-E73A-4768-BD6E-61113481344E"
+}

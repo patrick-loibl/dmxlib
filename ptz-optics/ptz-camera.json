@@ -1,0 +1,287 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PTZ Camera",
+  "shortName": "PTZ Cam",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-02-22",
+    "lastModifyDate": "2023-02-23",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: A436D5FD-6C18-46E8-9BDD-5B6C089E0919"
+    }
+  },
+  "comment": "DMX Pan Tilt Camera: Simple fixture to remote control a PTZ optics camera using Midimonster sACN/Art-Net Bridge to VISCA over IP commands\n",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            85
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Wide"
+        },
+        {
+          "dmxRange": [
+            86,
+            170
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Medium"
+        },
+        {
+          "dmxRange": [
+            171,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Narrow"
+        }
+      ]
+    },
+    "Focus Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            229
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Manual Focus"
+        },
+        {
+          "dmxRange": [
+            230,
+            231
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            232,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Auto Focus"
+        }
+      ]
+    },
+    "Focus1": {
+      "capability": {
+        "type": "Focus",
+        "distanceStart": 0,
+        "distanceEnd": 1,
+        "comment": "Manual (set Focus Control Channel)"
+      }
+    },
+    "White Balance": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            229
+          ],
+          "type": "Unknown (White Balance)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Manual White Balance"
+        },
+        {
+          "dmxRange": [
+            230,
+            231
+          ],
+          "type": "Unknown (White Balance)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            232,
+            255
+          ],
+          "type": "Unknown (White Balance)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Auto White Balance"
+        }
+      ]
+    },
+    "White Balance Red": {
+      "capability": {
+        "type": "Unknown (WB_RedColor)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "White Balance Blue": {
+      "capability": {
+        "type": "Unknown (WB_Bluecolor)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "NoFeature": {
+      "capability": {
+        "type": "NoFunction"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Default",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Zoom",
+        "Focus Mode",
+        "Focus1",
+        "White Balance",
+        "White Balance Red",
+        "White Balance Blue",
+        "NoFeature"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      174,
+      206,
+      176
+    ]
+  },
+  "gwSpecs": {
+    "description": "Simple fixture to remote control a PTZ optics camera using Midimonster sACN/Art-Net Bridge to VISCA over IP commands",
+    "operatingTemperature": [
+      0,
+      0
+    ],
+    "revision": {
+      "date": "2023-02-23T14:22:59",
+      "text": "Fixed tilt physical range values"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "1f6bd7765c488669"
+  },
+  "manufacturerKey": "ptz-optics",
+  "fixtureKey": "ptz-camera",
+  "gwFixtureTypeID": "A436D5FD-6C18-46E8-9BDD-5B6C089E0919"
+}

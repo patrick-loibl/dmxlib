@@ -1,0 +1,773 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BT-TVPANEL TW",
+  "shortName": "TVpanel",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-02-20",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B57715EF-1176-46AA-8510-A4997AE5FABD"
+    }
+  },
+  "comment": "BT-TVpanel : Professional soft-light for TV-studio and outdoor applications (only under dry conditions). Compact but powerful output: 640 CW / WW LEDs with 260W total power. Tunable white 3000K → 5600K with precise CCT-presets. Excellent photometric specifications: Ra> 98, TLCI > 99, …",
+  "rdm": {
+    "modelId": 64
+  },
+  "wheels": {
+    "CCT Presets": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "2800K",
+          "colors": [
+            "#94683c"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3000K",
+          "colors": [
+            "#906a45"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "3200K",
+          "colors": [
+            "#8e6b49"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4000K",
+          "colors": [
+            "#846e57"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "4300K",
+          "colors": [
+            "#826e59"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "5600K",
+          "colors": [
+            "#f4e1cf"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "CCT": {
+      "highlightValue": 28,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CCT disabled"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 1,
+          "slotNumberEnd": 1.166667
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 2.166667,
+          "slotNumberEnd": 2.333333
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 3.333333,
+          "slotNumberEnd": 3.5
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 4.5,
+          "slotNumberEnd": 4.666667
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 5.666667,
+          "slotNumberEnd": 5.833333
+        },
+        {
+          "dmxRange": [
+            31,
+            35
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 6.833333,
+          "slotNumberEnd": 7
+        },
+        {
+          "dmxRange": [
+            36,
+            36
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            37,
+            254
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "T": {
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            2147483648
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483649,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T 2": {
+      "name": "T",
+      "dmxValueResolution": "32bit",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2147483646
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            2147483647,
+            2147483647
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            2147483648,
+            4294967295
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "CCT 2": {
+      "name": "CCT",
+      "highlightValue": 28,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "CCT disabled"
+        },
+        {
+          "dmxRange": [
+            6,
+            10
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 1,
+          "slotNumberEnd": 1.2,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            11,
+            15
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 2.2,
+          "slotNumberEnd": 2.4,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            16,
+            20
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 3.4,
+          "slotNumberEnd": 3.6,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            21,
+            25
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 4.6,
+          "slotNumberEnd": 4.8,
+          "comment": "4300K"
+        },
+        {
+          "dmxRange": [
+            26,
+            30
+          ],
+          "type": "WheelSlot",
+          "wheel": "CCT Presets",
+          "slotNumberStart": 5.8,
+          "slotNumberEnd": 6,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            31,
+            31
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            32,
+            254
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (CCTcolor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            7,
+            104
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            105,
+            110
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            111,
+            115
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Silent mode"
+        },
+        {
+          "dmxRange": [
+            116,
+            125
+          ],
+          "type": "Unknown (Fans)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Auto Mode"
+        },
+        {
+          "dmxRange": [
+            126,
+            130
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Linear Curve"
+        },
+        {
+          "dmxRange": [
+            131,
+            135
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Square Curve"
+        },
+        {
+          "dmxRange": [
+            136,
+            140
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Inv Square Curve"
+        },
+        {
+          "dmxRange": [
+            141,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "S-Curve"
+        },
+        {
+          "dmxRange": [
+            151,
+            155
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "900Hz",
+          "comment": "900Hz"
+        },
+        {
+          "dmxRange": [
+            156,
+            160
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1000Hz",
+          "comment": "1000Hz"
+        },
+        {
+          "dmxRange": [
+            161,
+            165
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1100Hz",
+          "comment": "1100Hz"
+        },
+        {
+          "dmxRange": [
+            166,
+            170
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1200Hz",
+          "comment": "1200Hz"
+        },
+        {
+          "dmxRange": [
+            171,
+            175
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1300Hz",
+          "comment": "1300Hz"
+        },
+        {
+          "dmxRange": [
+            176,
+            180
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1400Hz",
+          "comment": "1400Hz"
+        },
+        {
+          "dmxRange": [
+            181,
+            185
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "1500Hz",
+          "comment": "1500Hz"
+        },
+        {
+          "dmxRange": [
+            186,
+            190
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "2500Hz",
+          "comment": "2500Hz"
+        },
+        {
+          "dmxRange": [
+            191,
+            195
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "4000Hz",
+          "comment": "4000Hz"
+        },
+        {
+          "dmxRange": [
+            196,
+            200
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "5000Hz",
+          "comment": "5000Hz"
+        },
+        {
+          "dmxRange": [
+            201,
+            205
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "10000Hz",
+          "comment": "10000Hz"
+        },
+        {
+          "dmxRange": [
+            206,
+            210
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "15000Hz",
+          "comment": "15000Hz"
+        },
+        {
+          "dmxRange": [
+            211,
+            215
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "20000Hz",
+          "comment": "20000Hz"
+        },
+        {
+          "dmxRange": [
+            216,
+            255
+          ],
+          "type": "Unknown (LEDFrequency)",
+          "physical": "25000Hz",
+          "comment": "25000Hz"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            7,
+            124
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            125,
+            130
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            132,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Max"
+        }
+      ]
+    },
+    "WW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8Bit CCT",
+      "channels": [
+        "Dim",
+        "CCT"
+      ]
+    },
+    {
+      "name": "16Bit CCT",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CCT"
+      ]
+    },
+    {
+      "name": "16Bit CCT control",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CCT 2",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "16Bit+Str",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CCT",
+        "Sh1",
+        "Ctrl1"
+      ]
+    },
+    {
+      "name": "16Bit Full",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "CCT",
+        "WW",
+        "CW",
+        "Sh1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      142,
+      306,
+      460
+    ],
+    "weight": 9.0,
+    "bulb": {
+      "type": "450nm / 644nm LED",
+      "lumens": 10000
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Cold White",
+      "cie": "0.337600,0.357600,100.000000",
+      "hex": "#ffffe1",
+      "dominantWavelength": 450.0
+    },
+    {
+      "name": "Warm White",
+      "cie": "0.451700,0.407700,100.000000",
+      "hex": "#ffe982",
+      "dominantWavelength": 644.0
+    }
+  ],
+  "gwSpecs": {
+    "description": "Professional soft-light for TV-studio and outdoor applications (only under dry conditions). Compact but powerful output: 640 CW / WW LEDs with 260W total power. Tunable white 3000K → 5600K with precise CCT-presets. Excellent photometric specifications: Ra> 98, TLCI > 99, …",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-02-20T09:36:15",
+      "text": "20240220"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "9c36bb957721cff9"
+  },
+  "manufacturerKey": "briteq",
+  "fixtureKey": "bt-tvpanel-tw",
+  "gwFixtureTypeID": "B57715EF-1176-46AA-8510-A4997AE5FABD"
+}

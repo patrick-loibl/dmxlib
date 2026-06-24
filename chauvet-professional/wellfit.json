@@ -1,0 +1,248 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "WELLFit",
+  "shortName": "WellFit",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-01-06",
+    "lastModifyDate": "2024-06-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: BEBDDEE5-74AE-4349-9345-71291D39DAB3"
+    }
+  },
+  "comment": "Chauvet Professional Well Fit",
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Blue-Green": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "Blue-Green"
+      }
+    },
+    "Strobe Rate": {
+      "capability": {
+        "type": "StrobeSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim Curve": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode 4CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Amber"
+      ]
+    },
+    {
+      "name": "Mode 6CH",
+      "channels": [
+        "Dim 2",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "10CH",
+      "channels": [
+        "Dim 3",
+        "R 2",
+        "G 2",
+        "Blue-Green",
+        "Amber",
+        "Strobe Rate",
+        "Color Macro1",
+        "Color FX1",
+        "Color Mix MSpeed",
+        "Dim Curve"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      128,
+      202,
+      128
+    ],
+    "weight": 3.4,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 31,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        10.8,
+        19.6
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "RED",
+      "cie": "0.638000,0.334700,100.000000",
+      "hex": "#ff3200"
+    },
+    {
+      "name": "GREEN",
+      "cie": "0.296800,0.600300,100.000000",
+      "hex": "#00ff0f"
+    },
+    {
+      "name": "BLUE",
+      "cie": "0.146800,0.060550,100.000000",
+      "hex": "#004bff"
+    },
+    {
+      "name": "WHITE",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "AMBER",
+      "cie": "0.553600,0.415400,36.570000",
+      "hex": "#ff8000"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      45
+    ],
+    "revision": {
+      "date": "2024-06-04T14:44:48",
+      "text": "10CH mode "
+    }
+  },
+  "manufacturerKey": "chauvet-professional",
+  "fixtureKey": "wellfit",
+  "gwFixtureTypeID": "BEBDDEE5-74AE-4349-9345-71291D39DAB3"
+}

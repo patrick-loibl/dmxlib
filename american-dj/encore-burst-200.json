@@ -1,0 +1,658 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Encore Burst 200",
+  "shortName": "Encr200",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "A7BDEECA-A20E-4C5D-86AE-9F91A8E0C6C3"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      180,
+      220,
+      400
+    ],
+    "weight": 6.8,
+    "power": 110,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 6124,
+      "colorTemperature": 2700
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ],
+      "fineChannelAliases": [
+        "Body Dimmer fine"
+      ]
+    },
+    "Blinder 1 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Blinder 2 Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Body DimmerMode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Maintenance",
+          "comment": "DimmerMode 1"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dimming Modes": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Theater"
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stage 2"
+        },
+        {
+          "dmxRange": [
+            121,
+            255
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Default to Unit Setting"
+        }
+      ]
+    },
+    "StrobeM Shutter": {
+      "highlightValue": 48,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED Off"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            64,
+            80
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            81,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            143
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            144,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            192,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            208,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            224,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            20
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Standard"
+        },
+        {
+          "dmxRange": [
+            21,
+            40
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stage"
+        },
+        {
+          "dmxRange": [
+            41,
+            60
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "TV"
+        },
+        {
+          "dmxRange": [
+            61,
+            80
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Architectural"
+        },
+        {
+          "dmxRange": [
+            81,
+            100
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Theater"
+        },
+        {
+          "dmxRange": [
+            101,
+            120
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stage 2"
+        },
+        {
+          "dmxRange": [
+            121,
+            255
+          ],
+          "type": "Unknown (Dimming Modes)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Default to Unit Setting"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 48,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED Off"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            64,
+            80
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            81,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            143
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            144,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            192,
+            207
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            208,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            224,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "LED On"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "1CH",
+      "shortName": "1CH",
+      "channels": [
+        "Body Dimmer"
+      ]
+    },
+    {
+      "name": "2CH",
+      "shortName": "2CH",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine"
+      ]
+    },
+    {
+      "name": "2ACH",
+      "shortName": "2ACH",
+      "channels": [
+        "Blinder 1 Dimmer",
+        "Blinder 2 Dimmer"
+      ]
+    },
+    {
+      "name": "3CH",
+      "shortName": "3CH",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body DimmerMode"
+      ]
+    },
+    {
+      "name": "4CH",
+      "shortName": "4CH",
+      "channels": [
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body Shutter1",
+        "Body DimmerMode"
+      ]
+    },
+    {
+      "name": "6CH",
+      "shortName": "6CH",
+      "channels": [
+        "Blinder 1 Dimmer",
+        "Blinder 2 Dimmer",
+        "Body Shutter1",
+        "Body Dimmer",
+        "Body Dimmer fine",
+        "Body DimmerMode"
+      ]
+    }
+  ],
+  "gwEmitters": [
+    {
+      "name": "Emitter",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "The Encore Burst 200 is an IPX4 rated, high intensity dual lens audience blinder/strobe. It’s powered by two 110W warm white (2700K) CREE COB LEDs. The fixture is constructed with a rugged metal housing and an aluminum extrusion rails system to connect multiple fixtures to create a larger cluster of fixtures in a vertical or horizontal array. The fixture features a Tungsten Mode effect that replicates a halogen-like dimming profile.",
+    "beamType": "Fresnel",
+    "operatingTemperature": [
+      -15,
+      45
+    ],
+    "revision": {
+      "date": "2025-09-04T04:49:07",
+      "text": "0102"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "224e1d647f9e81d1"
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "encore-burst-200",
+  "gwFixtureTypeID": "A7BDEECA-A20E-4C5D-86AE-9F91A8E0C6C3"
+}

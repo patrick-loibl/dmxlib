@@ -1,9 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/schema-12.5.0/schemas/fixture.json",
   "name": "X2 Wave Flamer",
-  "categories": ["Effect"],
+  "categories": [
+    "Effect",
+    "Dimmer"
+  ],
   "meta": {
-    "authors": ["Gloryfire"],
+    "authors": [
+      "Gloryfire"
+    ],
     "createDate": "2019-07-20",
     "lastModifyDate": "2019-07-20"
   },
@@ -19,10 +24,25 @@
     ]
   },
   "physical": {
-    "dimensions": [335, 365, 560],
+    "dimensions": [
+      335,
+      365,
+      560
+    ],
     "weight": 27,
     "power": 350,
-    "DMXconnector": "3-pin"
+    "DMXconnector": "3-pin",
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 1800
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        25.0
+      ]
+    }
   },
   "availableChannels": {
     "Angle": {
@@ -43,12 +63,18 @@
     "Ignition": {
       "capabilities": [
         {
-          "dmxRange": [0, 253],
+          "dmxRange": [
+            0,
+            253
+          ],
           "type": "NoFunction",
           "comment": "No ignition"
         },
         {
-          "dmxRange": [254, 255],
+          "dmxRange": [
+            254,
+            255
+          ],
           "type": "Effect",
           "effectName": "Single ignition"
         }
@@ -57,13 +83,19 @@
     "Opening Time": {
       "capabilities": [
         {
-          "dmxRange": [0, 254],
+          "dmxRange": [
+            0,
+            254
+          ],
           "type": "Time",
           "timeStart": "0ms",
           "timeEnd": "2540ms"
         },
         {
-          "dmxRange": [255, 255],
+          "dmxRange": [
+            255,
+            255
+          ],
           "type": "Time",
           "time": "long",
           "comment": "permanent, stops at the latest of 2500ms"
@@ -73,432 +105,648 @@
     "Programs": {
       "capabilities": [
         {
-          "dmxRange": [0, 2],
+          "dmxRange": [
+            0,
+            2
+          ],
           "type": "Effect",
           "effectName": "No function"
         },
         {
-          "dmxRange": [3, 5],
+          "dmxRange": [
+            3,
+            5
+          ],
           "type": "Effect",
           "effectName": "-105°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [6, 7],
+          "dmxRange": [
+            6,
+            7
+          ],
           "type": "Effect",
           "effectName": "-90°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [8, 10],
+          "dmxRange": [
+            8,
+            10
+          ],
           "type": "Effect",
           "effectName": "-75°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [11, 12],
+          "dmxRange": [
+            11,
+            12
+          ],
           "type": "Effect",
           "effectName": "-60°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [13, 15],
+          "dmxRange": [
+            13,
+            15
+          ],
           "type": "Effect",
           "effectName": "-45°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [16, 17],
+          "dmxRange": [
+            16,
+            17
+          ],
           "type": "Effect",
           "effectName": "-30°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [18, 20],
+          "dmxRange": [
+            18,
+            20
+          ],
           "type": "Effect",
           "effectName": "-15°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [21, 22],
+          "dmxRange": [
+            21,
+            22
+          ],
           "type": "Effect",
           "effectName": "0°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [23, 25],
+          "dmxRange": [
+            23,
+            25
+          ],
           "type": "Effect",
           "effectName": "15°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [26, 28],
+          "dmxRange": [
+            26,
+            28
+          ],
           "type": "Effect",
           "effectName": "30°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [29, 30],
+          "dmxRange": [
+            29,
+            30
+          ],
           "type": "Effect",
           "effectName": "45°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [31, 33],
+          "dmxRange": [
+            31,
+            33
+          ],
           "type": "Effect",
           "effectName": "60°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [34, 35],
+          "dmxRange": [
+            34,
+            35
+          ],
           "type": "Effect",
           "effectName": "75°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [36, 38],
+          "dmxRange": [
+            36,
+            38
+          ],
           "type": "Effect",
           "effectName": "90°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [39, 40],
+          "dmxRange": [
+            39,
+            40
+          ],
           "type": "Effect",
           "effectName": "105°, single ignition short flame",
           "duration": "110ms"
         },
         {
-          "dmxRange": [41, 43],
+          "dmxRange": [
+            41,
+            43
+          ],
           "type": "Effect",
           "effectName": "-105°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [44, 45],
+          "dmxRange": [
+            44,
+            45
+          ],
           "type": "Effect",
           "effectName": "-90°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [46, 48],
+          "dmxRange": [
+            46,
+            48
+          ],
           "type": "Effect",
           "effectName": "-75°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [49, 50],
+          "dmxRange": [
+            49,
+            50
+          ],
           "type": "Effect",
           "effectName": "-60°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [51, 53],
+          "dmxRange": [
+            51,
+            53
+          ],
           "type": "Effect",
           "effectName": "-45°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [54, 56],
+          "dmxRange": [
+            54,
+            56
+          ],
           "type": "Effect",
           "effectName": "-30°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [57, 58],
+          "dmxRange": [
+            57,
+            58
+          ],
           "type": "Effect",
           "effectName": "-15°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [59, 61],
+          "dmxRange": [
+            59,
+            61
+          ],
           "type": "Effect",
           "effectName": "0°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [62, 63],
+          "dmxRange": [
+            62,
+            63
+          ],
           "type": "Effect",
           "effectName": "15°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [64, 66],
+          "dmxRange": [
+            64,
+            66
+          ],
           "type": "Effect",
           "effectName": "30°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [67, 68],
+          "dmxRange": [
+            67,
+            68
+          ],
           "type": "Effect",
           "effectName": "45°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [69, 71],
+          "dmxRange": [
+            69,
+            71
+          ],
           "type": "Effect",
           "effectName": "60°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [72, 73],
+          "dmxRange": [
+            72,
+            73
+          ],
           "type": "Effect",
           "effectName": "75°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [74, 76],
+          "dmxRange": [
+            74,
+            76
+          ],
           "type": "Effect",
           "effectName": "90°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [77, 79],
+          "dmxRange": [
+            77,
+            79
+          ],
           "type": "Effect",
           "effectName": "105°, single ignition long flame",
           "duration": "410ms"
         },
         {
-          "dmxRange": [80, 81],
+          "dmxRange": [
+            80,
+            81
+          ],
           "type": "Effect",
           "effectName": "Step sequence from 1-15, short flame",
           "duration": "2.4s"
         },
         {
-          "dmxRange": [82, 84],
+          "dmxRange": [
+            82,
+            84
+          ],
           "type": "Effect",
           "effectName": "Step sequence from 15-1, short flame",
           "duration": "2.4s"
         },
         {
-          "dmxRange": [85, 86],
+          "dmxRange": [
+            85,
+            86
+          ],
           "type": "Effect",
           "effectName": "Step sequence 5>8>11, short flame",
           "duration": "0.58s"
         },
         {
-          "dmxRange": [87, 89],
+          "dmxRange": [
+            87,
+            89
+          ],
           "type": "Effect",
           "effectName": "Step sequence 11>8>5, short flame",
           "duration": "0.58s"
         },
         {
-          "dmxRange": [90, 91],
+          "dmxRange": [
+            90,
+            91
+          ],
           "type": "Effect",
           "effectName": "Step sequence 6>10, short flame",
           "duration": "0.39s"
         },
         {
-          "dmxRange": [92, 94],
+          "dmxRange": [
+            92,
+            94
+          ],
           "type": "Effect",
           "effectName": "Step sequence 10>6, short flame",
           "duration": "0.39s"
         },
         {
-          "dmxRange": [95, 96],
+          "dmxRange": [
+            95,
+            96
+          ],
           "type": "Effect",
           "effectName": "Step sequence 4>6>8>10>12, short flame",
           "duration": "0.9s"
         },
         {
-          "dmxRange": [97, 99],
+          "dmxRange": [
+            97,
+            99
+          ],
           "type": "Effect",
           "effectName": "Step sequence 12>10>8>6>4, short flame",
           "duration": "0.9s"
         },
         {
-          "dmxRange": [100, 101],
+          "dmxRange": [
+            100,
+            101
+          ],
           "type": "Effect",
           "effectName": "Step sequence 8>6>10>4>12, short flame",
           "duration": "1s"
         },
         {
-          "dmxRange": [102, 104],
+          "dmxRange": [
+            102,
+            104
+          ],
           "type": "Effect",
           "effectName": "Step sequence 8>10>6>12>4, short flame",
           "duration": "1s"
         },
         {
-          "dmxRange": [105, 107],
+          "dmxRange": [
+            105,
+            107
+          ],
           "type": "Effect",
           "effectName": "Step sequence from 1-15, long flame",
           "duration": "6.89s"
         },
         {
-          "dmxRange": [108, 109],
+          "dmxRange": [
+            108,
+            109
+          ],
           "type": "Effect",
           "effectName": "Step sequence from 15-1, long flame",
           "duration": "6.89s"
         },
         {
-          "dmxRange": [110, 112],
+          "dmxRange": [
+            110,
+            112
+          ],
           "type": "Effect",
           "effectName": "Step sequence 5>8>11, long flame",
           "duration": "1.48s"
         },
         {
-          "dmxRange": [113, 114],
+          "dmxRange": [
+            113,
+            114
+          ],
           "type": "Effect",
           "effectName": "Step sequence 11>8>5, long flame",
           "duration": "1.48s"
         },
         {
-          "dmxRange": [115, 117],
+          "dmxRange": [
+            115,
+            117
+          ],
           "type": "Effect",
           "effectName": "Step sequence 6>10, long flame",
           "duration": "0.99s"
         },
         {
-          "dmxRange": [118, 119],
+          "dmxRange": [
+            118,
+            119
+          ],
           "type": "Effect",
           "effectName": "Step sequence 10>6, long flame",
           "duration": "0.99s"
         },
         {
-          "dmxRange": [120, 122],
+          "dmxRange": [
+            120,
+            122
+          ],
           "type": "Effect",
           "effectName": "Step sequence 4>6>8>10>12, long flame",
           "duration": "2.4s"
         },
         {
-          "dmxRange": [123, 124],
+          "dmxRange": [
+            123,
+            124
+          ],
           "type": "Effect",
           "effectName": "Step sequence 12>10>8>6>4, long flame",
           "duration": "2.4s"
         },
         {
-          "dmxRange": [125, 127],
+          "dmxRange": [
+            125,
+            127
+          ],
           "type": "Effect",
           "effectName": "Step sequence 8>6>10>4>12, long flame",
           "duration": "2.53s"
         },
         {
-          "dmxRange": [128, 130],
+          "dmxRange": [
+            128,
+            130
+          ],
           "type": "Effect",
           "effectName": "Step sequence 8>16>12>4, long flame",
           "duration": "2.53s"
         },
         {
-          "dmxRange": [131, 132],
+          "dmxRange": [
+            131,
+            132
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 5>11, middle",
           "duration": "1.79s"
         },
         {
-          "dmxRange": [133, 135],
+          "dmxRange": [
+            133,
+            135
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 11>5, middle",
           "duration": "1.79s"
         },
         {
-          "dmxRange": [136, 137],
+          "dmxRange": [
+            136,
+            137
+          ],
           "type": "Effect",
           "effectName": "BIG wave sequence 1>15, long",
           "duration": "3.93s"
         },
         {
-          "dmxRange": [138, 140],
+          "dmxRange": [
+            138,
+            140
+          ],
           "type": "Effect",
           "effectName": "BIG wave sequence 15>1, long",
           "duration": "3.93s"
         },
         {
-          "dmxRange": [141, 142],
+          "dmxRange": [
+            141,
+            142
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 8>1, middle",
           "duration": "2.26s"
         },
         {
-          "dmxRange": [143, 145],
+          "dmxRange": [
+            143,
+            145
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 8>15, middle",
           "duration": "2.26s"
         },
         {
-          "dmxRange": [146, 147],
+          "dmxRange": [
+            146,
+            147
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 1>8, middle",
           "duration": "2.26s"
         },
         {
-          "dmxRange": [148, 150],
+          "dmxRange": [
+            148,
+            150
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 15>8, middle",
           "duration": "2.26s"
         },
         {
-          "dmxRange": [151, 152],
+          "dmxRange": [
+            151,
+            152
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 8>11, short",
           "duration": "1.19s"
         },
         {
-          "dmxRange": [153, 155],
+          "dmxRange": [
+            153,
+            155
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 8>5, short",
           "duration": "1.19s"
         },
         {
-          "dmxRange": [156, 158],
+          "dmxRange": [
+            156,
+            158
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 5>8, short",
           "duration": "1.19s"
         },
         {
-          "dmxRange": [159, 160],
+          "dmxRange": [
+            159,
+            160
+          ],
           "type": "Effect",
           "effectName": "Wave sequence 11>8, short",
           "duration": "1.19s"
         },
         {
-          "dmxRange": [161, 163],
+          "dmxRange": [
+            161,
+            163
+          ],
           "type": "Effect",
           "effectName": "Step sequence 2>14, short flame",
           "duration": "0.48s"
         },
         {
-          "dmxRange": [164, 165],
+          "dmxRange": [
+            164,
+            165
+          ],
           "type": "Effect",
           "effectName": "Step sequence 14>2, short flame",
           "duration": "0.48s"
         },
         {
-          "dmxRange": [166, 168],
+          "dmxRange": [
+            166,
+            168
+          ],
           "type": "Effect",
           "effectName": "Step sequence 2>14, long flame",
           "duration": "1.23s"
         },
         {
-          "dmxRange": [169, 170],
+          "dmxRange": [
+            169,
+            170
+          ],
           "type": "Effect",
           "effectName": "Step sequence 14>2, long flame",
           "duration": "1.23s"
         },
         {
-          "dmxRange": [171, 173],
+          "dmxRange": [
+            171,
+            173
+          ],
           "type": "Effect",
           "effectName": "Unknown",
           "helpWanted": "Which effect is this (program 67)?"
         },
         {
-          "dmxRange": [174, 175],
+          "dmxRange": [
+            174,
+            175
+          ],
           "type": "Effect",
           "effectName": "Unknown",
           "helpWanted": "Which effect is this (program 68)?"
         },
         {
-          "dmxRange": [176, 178],
+          "dmxRange": [
+            176,
+            178
+          ],
           "type": "Effect",
           "effectName": "Unknown",
           "helpWanted": "Which effect is this (program 69)?"
         },
         {
-          "dmxRange": [179, 181],
+          "dmxRange": [
+            179,
+            181
+          ],
           "type": "Effect",
           "effectName": "Unknown",
           "helpWanted": "Which effect is this (program 70)?"
         },
         {
-          "dmxRange": [182, 255],
+          "dmxRange": [
+            182,
+            255
+          ],
           "type": "NoFunction"
         }
       ]
@@ -506,19 +754,2139 @@
     "Mode": {
       "capabilities": [
         {
-          "dmxRange": [0, 49],
+          "dmxRange": [
+            0,
+            49
+          ],
           "type": "Maintenance",
           "comment": "Test Mode"
         },
         {
-          "dmxRange": [50, 200],
+          "dmxRange": [
+            50,
+            200
+          ],
           "type": "Maintenance",
           "comment": "Armed Mode"
         },
         {
-          "dmxRange": [201, 255],
+          "dmxRange": [
+            201,
+            255
+          ],
           "type": "Maintenance",
           "comment": "Test Mode"
+        }
+      ]
+    },
+    "T": {
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Maximum"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Rising"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Maximum"
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            253
+          ],
+          "type": "Intensity",
+          "brightness": 0,
+          "comment": "Safe"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Ignition"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Continuous"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "10ms"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "20ms"
+        },
+        {
+          "dmxRange": [
+            3,
+            4
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "50ms"
+        },
+        {
+          "dmxRange": [
+            6,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "100ms"
+        },
+        {
+          "dmxRange": [
+            11,
+            24
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "250ms"
+        },
+        {
+          "dmxRange": [
+            26,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "500ms"
+        },
+        {
+          "dmxRange": [
+            51,
+            74
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            75,
+            75
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "750ms"
+        },
+        {
+          "dmxRange": [
+            76,
+            99
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1s"
+        },
+        {
+          "dmxRange": [
+            101,
+            149
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "1500ms"
+        },
+        {
+          "dmxRange": [
+            151,
+            199
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            200,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2s"
+        },
+        {
+          "dmxRange": [
+            201,
+            249
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            250,
+            250
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2500ms"
+        },
+        {
+          "dmxRange": [
+            251,
+            253
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        },
+        {
+          "dmxRange": [
+            254,
+            254
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "2540ms"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Continuous"
+        }
+      ]
+    },
+    "Pos FX": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "Effect",
+          "effectName": "Off",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            3,
+            5
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -105d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -90d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            8,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -75d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            11,
+            12
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -60d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            13,
+            14
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            15,
+            15
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -45d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            16,
+            16
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            17,
+            17
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -30d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            20,
+            20
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -15d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            21,
+            21
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            22,
+            22
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot 0d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            23,
+            24
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            25,
+            25
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +15d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            28,
+            28
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +30d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            29,
+            29
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            30,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +45d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            32
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            33,
+            33
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +60d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            34,
+            34
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            35,
+            35
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +75d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            38,
+            38
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +90d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            39,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            40
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +105d 110ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            41,
+            42
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            43,
+            43
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -105d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            44,
+            44
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            45,
+            45
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -90d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            48,
+            48
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -75d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            49,
+            49
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            50,
+            50
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -60d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            51,
+            52
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            53,
+            53
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -45d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            54,
+            55
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            56,
+            56
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -30d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            57,
+            57
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            58,
+            58
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot -15d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            59,
+            60
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            61,
+            61
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot 0d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            62,
+            62
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            63,
+            63
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +15d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            64,
+            65
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            66,
+            66
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +30d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            67,
+            67
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            68,
+            68
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +45d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            69,
+            70
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            71,
+            71
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +60d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            72,
+            72
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            73,
+            73
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +75d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            74,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            76
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +90d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            77,
+            78
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            79,
+            79
+          ],
+          "type": "Effect",
+          "effectName": "Single Shot +105d 410ms",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            80,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            81,
+            81
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 1-15 ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            82,
+            83
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            84,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 15-1 ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            85
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            86,
+            86
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 5-8-11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            87,
+            88
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            89,
+            89
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 11-8-5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            90,
+            90
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            91,
+            91
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 6-10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            92,
+            93
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            94,
+            94
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 10-6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            95,
+            95
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            96,
+            96
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 4-6-8-10-12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            97,
+            98
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            99,
+            99
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 12-10-8-6-4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            100,
+            100
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            101,
+            101
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 8-6-10-4-12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            102,
+            103
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            104,
+            104
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Step 8-10-6-12-4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            105,
+            106
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            107,
+            107
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 1-15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            108,
+            108
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            109,
+            109
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 15-1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            110,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            112
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 5-8-11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            113,
+            113
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            114,
+            114
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 11-8-5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            115,
+            116
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            117,
+            117
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 6-10",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            118,
+            118
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            119,
+            119
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 10-6",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            120,
+            121
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            122,
+            122
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 4-6-8-10-12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            124,
+            124
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 12-10-8-6-4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            125,
+            126
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            127,
+            127
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 8-6-10-4-12",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            128,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            130
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Step 8-10-6-12-4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            132,
+            132
+          ],
+          "type": "Effect",
+          "effectName": "Wave 5-11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            133,
+            134
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            135,
+            135
+          ],
+          "type": "Effect",
+          "effectName": "Wave 11-5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            136,
+            136
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            137,
+            137
+          ],
+          "type": "Effect",
+          "effectName": "Big Wave 1-15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            138,
+            139
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            140,
+            140
+          ],
+          "type": "Effect",
+          "effectName": "Big Wave 15-1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            141,
+            141
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            142,
+            142
+          ],
+          "type": "Effect",
+          "effectName": "Wave 8-1",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            143,
+            144
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            145,
+            145
+          ],
+          "type": "Effect",
+          "effectName": "Wave 8-15",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            146,
+            146
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            147,
+            147
+          ],
+          "type": "Effect",
+          "effectName": "Wave 1-8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            148,
+            149
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            150,
+            150
+          ],
+          "type": "Effect",
+          "effectName": "Wave 15-8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            151,
+            151
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            152,
+            152
+          ],
+          "type": "Effect",
+          "effectName": "Wave 8-11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            153,
+            154
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            155,
+            155
+          ],
+          "type": "Effect",
+          "effectName": "Wave 8-5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            156,
+            157
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            158,
+            158
+          ],
+          "type": "Effect",
+          "effectName": "Wave 5-8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            159,
+            159
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            160,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Wave 11-8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            161,
+            162
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            163,
+            163
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 2-4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            164,
+            164
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            165,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 14-2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            166,
+            167
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            168,
+            168
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Stepp 2-4",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            169,
+            169
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            170,
+            170
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Stepp 14-2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            171,
+            172
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            173,
+            173
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 8-13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            174,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            175
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 13-8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            176,
+            177
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            178,
+            178
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Stepp 8-13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            179,
+            180
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            181,
+            181
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Stepp 13-8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            182,
+            182
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            183,
+            183
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 8 > 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            184,
+            185
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            186,
+            186
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 3 > 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            187,
+            187
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            188,
+            188
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Stepp 3 > 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            191,
+            191
+          ],
+          "type": "Effect",
+          "effectName": "Long Flame Stepp 3 > 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            192,
+            192
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            193,
+            193
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 3 > 13 ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            194,
+            195
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            196,
+            196
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 13 > 3 ",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            197,
+            197
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            198,
+            198
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 2 > 14",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            199,
+            200
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            201,
+            201
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 14 > 2",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            202,
+            202
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            203,
+            203
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 8 > 5 > 11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            204,
+            205
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            206,
+            206
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp 8 > 11 > 5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            207,
+            208
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            209,
+            209
+          ],
+          "type": "Effect",
+          "effectName": "Short Flame Stepp von 5-11",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            210,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            211,
+            211
+          ],
+          "type": "Effect",
+          "effectName": "Short Stepp von 11-5",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            212,
+            213
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            214,
+            214
+          ],
+          "type": "Effect",
+          "effectName": "Wave 8 -->13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            215,
+            215
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            216,
+            216
+          ],
+          "type": "Effect",
+          "effectName": "Wave 13 --> 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            217,
+            218
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            219,
+            219
+          ],
+          "type": "Effect",
+          "effectName": "Wave 8 --> 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            220,
+            220
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            221,
+            221
+          ],
+          "type": "Effect",
+          "effectName": "Wave 3 --> 8",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            222,
+            223
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            224,
+            224
+          ],
+          "type": "Effect",
+          "effectName": "Wave 3 -->13",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            225,
+            225
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            226,
+            226
+          ],
+          "type": "Effect",
+          "effectName": "Wave 13 --> 3",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            227,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Test Mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Armed"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Test Mode"
+        }
+      ]
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Test- Mode"
+        },
+        {
+          "dmxRange": [
+            50,
+            200
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Armed"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Test- Mode"
         }
       ]
     }
@@ -535,9 +2903,30 @@
         "Programs",
         "Mode"
       ]
+    },
+    {
+      "name": "Easy DMX",
+      "channels": [
+        "Ctrl1 2"
+      ]
     }
   ],
   "fixtureKey": "x2-wave-flamer",
   "manufacturerKey": "explo",
-  "oflURL": "https://open-fixture-library.org/explo/x2-wave-flamer"
+  "oflURL": "https://open-fixture-library.org/explo/x2-wave-flamer",
+  "gwMedia": {
+    "thumbnail": "12bf11820cfcd9fb"
+  },
+  "gwFixtureTypeID": "69D41CB2-A5C3-42CD-9F49-93168A29710B",
+  "gwSpecs": {
+    "beamType": "Spot",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-05-08T11:29:09",
+      "text": "Updated Macros"
+    }
+  }
 }

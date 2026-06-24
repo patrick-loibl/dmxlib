@@ -1,0 +1,205 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "XineRobotics WX2512",
+  "shortName": "WX2512",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-01-19",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D126302F-0DDC-4F45-8F55-06AA336D0541"
+    }
+  },
+  "availableChannels": {
+    "Z": {
+      "fineChannelAliases": [
+        "Z fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Z)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Z 2": {
+      "name": "Z",
+      "fineChannelAliases": [
+        "Z 2 fine"
+      ],
+      "capability": {
+        "type": "Unknown (XYZ_Z)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Enable": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            120
+          ],
+          "type": "Unknown (EnableMotor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Disable Motor"
+        },
+        {
+          "dmxRange": [
+            121,
+            140
+          ],
+          "type": "Unknown (EnableMotor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Eneable Motor"
+        },
+        {
+          "dmxRange": [
+            141,
+            255
+          ],
+          "type": "Unknown (EnableMotor)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Disable Motor"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fastest"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Slowest"
+        }
+      ]
+    },
+    "Fixture Global Reset": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            245
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            246,
+            250
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Reset"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1
+        }
+      ]
+    },
+    "Z 3": {
+      "name": "Z",
+      "capability": {
+        "type": "Unknown (XYZ_Z)",
+        "physicalStart": "0m",
+        "physicalEnd": "1m"
+      }
+    },
+    "Pos MSpeed 2": {
+      "name": "Pos MSpeed",
+      "capability": {
+        "type": "PanTiltSpeed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Speed Fast > Slow"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Dual Winch",
+      "channels": [
+        "Z",
+        "Z fine",
+        "Z 2",
+        "Z 2 fine",
+        "Enable",
+        "Pos MSpeed",
+        "Fixture Global Reset"
+      ]
+    },
+    {
+      "name": "5CH 16Bit",
+      "channels": [
+        "Enable",
+        "Z",
+        "Z fine",
+        "Pos MSpeed 2",
+        "Fixture Global Reset"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      235350,
+      661866,
+      461567
+    ],
+    "weight": 52.0
+  },
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-01-19T14:48:08",
+      "text": "V002"
+    }
+  },
+  "manufacturerKey": "xine",
+  "fixtureKey": "xinerobotics-wx2512",
+  "gwFixtureTypeID": "D126302F-0DDC-4F45-8F55-06AA336D0541"
+}

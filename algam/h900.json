@@ -1,0 +1,100 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "H900",
+  "shortName": "HAZER",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-06-15",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: D2B96ABC-28C1-4D12-839C-FF89EF5B0205"
+    }
+  },
+  "comment": "HAZER H900: MACHINE A BROUILLARD 1500W",
+  "availableChannels": {
+    "Fog1": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Fog",
+        "fogType": "Fog",
+        "fogOutputStart": 0,
+        "fogOutputEnd": 1,
+        "comment": "Fog output setting"
+      }
+    },
+    "Fan1": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Rotation",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Fan speed setting"
+      }
+    },
+    "Fog Enable": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (FogEnable)",
+          "physical": 0,
+          "comment": "Disable"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (FogEnable)",
+          "physical": 1,
+          "comment": "Enable"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "CH3",
+      "channels": [
+        "Fog Enable",
+        "Fan1",
+        "Fog1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      280,
+      255,
+      480
+    ],
+    "weight": 13.0
+  },
+  "gwSpecs": {
+    "description": "MACHINE A BROUILLARD 1500W",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-15T20:04:15",
+      "text": "rev7"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "731f80b0117cfa91"
+  },
+  "manufacturerKey": "algam",
+  "fixtureKey": "h900",
+  "gwFixtureTypeID": "D2B96ABC-28C1-4D12-839C-FF89EF5B0205"
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "TPDMXDIM",
+  "shortName": "TPDMXDIM",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-11-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2D4F77B7-64E2-4C3E-A6B8-4078CB1C883F"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "0"
+        },
+        {
+          "dmxRange": [
+            1,
+            65534
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "fl"
+        }
+      ]
+    },
+    "Dummy": {
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Intensity",
+          "brightness": 0,
+          "comment": "OFF"
+        },
+        {
+          "dmxRange": [
+            32767,
+            65535
+          ],
+          "type": "Intensity",
+          "brightness": 1,
+          "comment": "ON"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Dim",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Dummy"
+      ]
+    },
+    {
+      "name": "Switch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Dummy"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-11T15:37:03",
+      "text": "Revision 1, Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "etc",
+  "fixtureKey": "tpdmxdim",
+  "gwFixtureTypeID": "2D4F77B7-64E2-4C3E-A6B8-4078CB1C883F",
+  "physical": {}
+}

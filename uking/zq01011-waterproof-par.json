@@ -1,0 +1,268 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ZQ01011 Waterproof PAR",
+  "shortName": "ZQ01011",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2026-06-05",
+    "lastModifyDate": "2026-06-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 8F3A2C5E-7D4B-4E9A-8C1F-6B9D3A2E7F5C"
+    }
+  },
+  "comment": "UKING ZQ01011 6x10W RGBW Waterproof PAR: IP65 100W RGBW Waterproof PAR with 6x10W 4-in-1 LED beads, 45 degree beam, 4CH and 8CH modes",
+  "availableChannels": {
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Closed",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0.5Hz",
+          "speedEnd": "25Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            50
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "DMX Control"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Color Output"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Color Jump"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Color Fade"
+        },
+        {
+          "dmxRange": [
+            201,
+            250
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Color Pulse"
+        },
+        {
+          "dmxRange": [
+            251,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Sound Active"
+        }
+      ]
+    },
+    "Ctrl2": {
+      "capability": {
+        "type": "Maintenance",
+        "parameterStart": 0,
+        "parameterEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "4CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "8CH",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Sh1",
+        "Ctrl1",
+        "Ctrl2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      180,
+      80,
+      180
+    ],
+    "weight": 3.5,
+    "power": 100,
+    "bulb": {
+      "type": "LED",
+      "lumens": 5000,
+      "colorTemperature": 6500
+    },
+    "lens": {
+      "degreesMinMax": [
+        45.0,
+        60.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.700000,0.300000,100.000000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,100.000000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,100.000000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.313100,0.324800,100.000000",
+      "hex": "#fffeff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "IP65 100W RGBW Waterproof PAR with 6x10W 4-in-1 LED beads, 45 degree beam, 4CH and 8CH modes",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -25,
+      35
+    ],
+    "revision": {
+      "date": "2026-06-05T23:08:33",
+      "text": "Initial profile"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "380052023fbcf31f"
+  },
+  "manufacturerKey": "uking",
+  "fixtureKey": "zq01011-waterproof-par",
+  "gwFixtureTypeID": "8F3A2C5E-7D4B-4E9A-8C1F-6B9D3A2E7F5C"
+}

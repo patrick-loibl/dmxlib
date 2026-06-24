@@ -1,0 +1,308 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CAPTURE Special effects",
+  "shortName": "CAPTURE Special effects",
+  "categories": [
+    "Moving Head"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-10-31",
+    "lastModifyDate": "2023-10-31",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: FF41FA67-4CD4-491D-8333-79D21F3107AB"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capability": {
+        "type": "Tilt",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capability": {
+        "type": "Pan",
+        "angleStart": "0deg",
+        "angleEnd": "1deg"
+      }
+    },
+    "PanTilt Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Maximum speed"
+        },
+        {
+          "dmxRange": [
+            10,
+            131
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reverse continuous rotation"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            134,
+            255
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Forward continuous rotation"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "PanTilt Mode 2": {
+      "name": "PanTilt Mode",
+      "fineChannelAliases": [
+        "PanTilt Mode 2 fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2559
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Maximum speed"
+        },
+        {
+          "dmxRange": [
+            2560,
+            33791
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Reverse continuous rotation"
+        },
+        {
+          "dmxRange": [
+            33792,
+            34303
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            34304,
+            65535
+          ],
+          "type": "Unknown (PanTiltMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Forward continuous rotation"
+        }
+      ]
+    },
+    "Valve": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (Valve)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (Valve)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Open"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": " Power 8-bit",
+      "channels": [
+        "Dim"
+      ]
+    },
+    {
+      "name": "Power / Tilt 8-bit",
+      "channels": [
+        "Dim",
+        "T"
+      ]
+    },
+    {
+      "name": "Power / Pan / Tilt 8-bit",
+      "channels": [
+        "Dim",
+        "T",
+        "P"
+      ]
+    },
+    {
+      "name": "Power / Pan / Pan Speed / Tilt 8-bit",
+      "channels": [
+        "Dim",
+        "T",
+        "P",
+        "PanTilt Mode"
+      ]
+    },
+    {
+      "name": "Tilt / Power 8-bit",
+      "channels": [
+        "T",
+        "Dim"
+      ]
+    },
+    {
+      "name": "Pan / Tilt / Power 8-bit",
+      "channels": [
+        "P",
+        "T",
+        "Dim"
+      ]
+    },
+    {
+      "name": "Power 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "Power / Tilt 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "T",
+        "T fine"
+      ]
+    },
+    {
+      "name": "Power / Pan / Tilt 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "P",
+        "P fine",
+        "T",
+        "T fine"
+      ]
+    },
+    {
+      "name": "Power / Pan / Pan Speed / Tilt 16-bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "P",
+        "P fine",
+        "PanTilt Mode 2",
+        "PanTilt Mode 2 fine",
+        "T",
+        "T fine"
+      ]
+    },
+    {
+      "name": "Tilt / Power 16-bit",
+      "channels": [
+        "T",
+        "T fine",
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "Pan / Tilt / Power 16-bit",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Dim 2",
+        "Dim 2 fine"
+      ]
+    },
+    {
+      "name": "Water jet valve control",
+      "channels": [
+        "Valve"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2023-10-31T17:38:14",
+      "text": "ogi_v1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "3e74d6a77d5b87d0"
+  },
+  "manufacturerKey": "ogson-fixtures",
+  "fixtureKey": "capture-special-effects",
+  "gwFixtureTypeID": "FF41FA67-4CD4-491D-8333-79D21F3107AB",
+  "physical": {}
+}

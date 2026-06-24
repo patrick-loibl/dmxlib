@@ -1,0 +1,233 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Fog Furry Jett",
+  "shortName": "FFJ",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-09-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 57F25682-39E4-463E-8220-C200C0025270"
+    }
+  },
+  "comment": "ADJ Fog Furry Jett: Features:- 700W professional DMX vertical Fog Machine with 12x 3-Watt LEDs- High performance pump for optimum output- ADJ’s Electronic Thermo Sensing (ETS) technology- Automatic circuit cut-off to protect pump if fog fluid tank runs dry- Special heating element design that uses an oil type transmission pipeline system to minimize the possibility clogging- 3 Operational modes: Manual, Remote Control, or DMX Controlled- 5 DMX modes : 1, 2, 3, 5 or 7 DMX Channels- 4-button control panel & LCD display on rear panel- 3-pin DMX XLR In/Out connections- Convenient carrying handle- Low Fluid Indicator on rear- Warm-up time: 9 min- External fog fluid tank: 3 Liter- Fog Output: 20,000 (cu.ft/min)- Tank can be mounted to either front or rear so that the effect may be pointed up or down- Included Accessory: ADJ FFJPWR - wireless remote- Power Connection: IEC AC In- Safety Loop on board - Only use high quality, water-based fog fluid, for optimum result, use ADJ Fog Juice CO2- Light Source: 12x 3-Watt LEDs, (3 Red, 3 Green, 3 Blue & 3 Amber LEDs) - Heater: 700W- Voltage: AC 120V, 230 or 240 50/60Hz (non switching)- Power Consumption: 730W (Full on)- Dimensions (LxWxH): 397 x 302 x 191mm- Weight: 7.1 kg.",
+  "rdm": {
+    "modelId": 0
+  },
+  "wheels": {
+    "NewWheel": {
+      "slots": []
+    }
+  },
+  "availableChannels": {
+    "Fog1": {
+      "highlightValue": 16,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Fog+LED"
+        },
+        {
+          "dmxRange": [
+            16,
+            31
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Preview LED"
+        },
+        {
+          "dmxRange": [
+            32,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog+LED"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Amber": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber"
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            32,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe"
+        },
+        {
+          "dmxRange": [
+            96,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse"
+        },
+        {
+          "dmxRange": [
+            160,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "7 Channel Mode",
+      "channels": [
+        "Fog1",
+        "R",
+        "G",
+        "B",
+        "Amber",
+        "Sh1",
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      302,
+      170,
+      397
+    ],
+    "weight": 7.1,
+    "power": 36,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        15.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.527600,0.450600,100.000000",
+      "hex": "#ffe000"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Features:- 700W professional DMX vertical Fog Machine with 12x 3-Watt LEDs- High performance pump for optimum output- ADJ’s Electronic Thermo Sensing (ETS) technology- Automatic circuit cut-off to protect pump if fog fluid tank runs dry- Special heating element design that uses an oil type transmission pipeline system to minimize the possibility clogging- 3 Operational modes: Manual, Remote Control, or DMX Controlled- 5 DMX modes : 1, 2, 3, 5 or 7 DMX Channels- 4-button control panel & LCD display on rear panel- 3-pin DMX XLR In/Out connections- Convenient carrying handle- Low Fluid Indicator on rear- Warm-up time: 9 min- External fog fluid tank: 3 Liter- Fog Output: 20,000 (cu.ft/min)- Tank can be mounted to either front or rear so that the effect may be pointed up or down- Included Accessory: ADJ FFJPWR - wireless remote- Power Connection: IEC AC In- Safety Loop on board - Only use high quality, water-based fog fluid, for optimum result, use ADJ Fog Juice CO2- Light Source: 12x 3-Watt LEDs, (3 Red, 3 Green, 3 Blue & 3 Amber LEDs) - Heater: 700W- Voltage: AC 120V, 230 or 240 50/60Hz (non switching)- Power Consumption: 730W (Full on)- Dimensions (LxWxH): 397 x 302 x 191mm- Weight: 7.1 kg.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-24T16:14:35",
+      "text": "Version 1"
+    }
+  },
+  "manufacturerKey": "american-dj",
+  "fixtureKey": "fog-furry-jett",
+  "gwFixtureTypeID": "57F25682-39E4-463E-8220-C200C0025270"
+}

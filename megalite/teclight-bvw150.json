@@ -1,0 +1,173 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Teclight BVW150",
+  "shortName": "Teclight BVW150",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "importPlugin": {
+      "plugin": "gdtf-python-fallback",
+      "fixtureTypeID": "352E0E48-0467-11F0-BE97-42010A37C002"
+    }
+  },
+  "physical": {
+    "dimensions": [
+      123,
+      96,
+      221
+    ],
+    "weight": 3.7,
+    "power": 0,
+    "bulb": {
+      "type": "LED",
+      "lumens": 13004,
+      "colorTemperature": 7211
+    },
+    "lens": {
+      "degreesMinMax": [
+        20.0,
+        25.0
+      ]
+    }
+  },
+  "availableChannels": {
+    "Body Dimmer": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Intensity"
+        }
+      ]
+    },
+    "Body ColorAdd_CW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Cold White"
+        }
+      ]
+    },
+    "Body ColorAdd_WW": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Warm White"
+        }
+      ]
+    },
+    "Body ColorAdd_B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue"
+        }
+      ]
+    },
+    "Body Shutter1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open"
+        },
+        {
+          "dmxRange": [
+            10,
+            99
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse"
+        },
+        {
+          "dmxRange": [
+            150,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "randomTiming": true
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Channel Mode",
+      "shortName": "3 Channel Mo",
+      "channels": [
+        "Body ColorAdd_CW",
+        "Body ColorAdd_WW",
+        "Body ColorAdd_B"
+      ]
+    },
+    {
+      "name": "4 Channel Mode",
+      "shortName": "4 Channel Mo",
+      "channels": [
+        "Body Dimmer",
+        "Body ColorAdd_CW",
+        "Body ColorAdd_WW",
+        "Body ColorAdd_B"
+      ]
+    },
+    {
+      "name": "5 Channel Mode",
+      "shortName": "5 Channel Mo",
+      "channels": [
+        "Body Dimmer",
+        "Body ColorAdd_CW",
+        "Body ColorAdd_WW",
+        "Body ColorAdd_B",
+        "Body Shutter1"
+      ]
+    }
+  ],
+  "gwSpecs": {
+    "description": "Teclight BVW150 is designed for illuminating spaces with discretion and power, offering a Variable White Light that ranges from Cool to Warm. This versatile lighting solution is ideal for illuminating both backstages and workspaces. With an IP65 rating, it performs reliably in both indoor and outdoor environments, providing the perfect lighting temperature for any space. DMX controllable, the Teclight offers complete control over your lighting setup.",
+    "beamType": "Rectangle",
+    "operatingTemperature": [
+      0,
+      55
+    ],
+    "revision": {
+      "date": "2025-03-27T07:36:03",
+      "text": "Initial upload by GDTFservice powered by Crescit commissioned by Megalite"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "de0daed64766415f"
+  },
+  "manufacturerKey": "megalite",
+  "fixtureKey": "teclight-bvw150",
+  "gwFixtureTypeID": "352E0E48-0467-11F0-BE97-42010A37C002"
+}

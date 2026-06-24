@@ -1,0 +1,132 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Forza 720",
+  "shortName": "Forza 720",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-11",
+    "lastModifyDate": "2023-06-12",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 232CDB44-6AAC-4A8E-AED3-07B862425F7E"
+    }
+  },
+  "comment": "NANLITE Forza 720: Forza 720 LED Spot Light",
+  "rdm": {
+    "modelId": 515
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Fan Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            127
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN ON"
+        },
+        {
+          "dmxRange": [
+            128,
+            255
+          ],
+          "type": "Unknown (FanMode)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "FAN OFF"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "DAYLIGHT 8bit",
+      "channels": [
+        "Dim",
+        "Fan Mode"
+      ]
+    },
+    {
+      "name": "DAYLIGHT 16bit",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Fan Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      142,
+      475,
+      231
+    ],
+    "weight": 4.8,
+    "power": 800,
+    "bulb": {
+      "type": "LED",
+      "lumens": 65621,
+      "colorTemperature": 5600
+    },
+    "lens": {
+      "degreesMinMax": [
+        65.0,
+        151.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "ColdWhite_LED",
+      "cie": "0.332600,0.332500,100.000000",
+      "hex": "#fff9f5"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Forza 720 LED Spot Light",
+    "beamType": "Spot",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2023-06-12T16:22:25",
+      "text": "DMX V1.0 12.Jun.2023"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "219417c424c3200d"
+  },
+  "manufacturerKey": "nanlite",
+  "fixtureKey": "forza-720",
+  "gwFixtureTypeID": "232CDB44-6AAC-4A8E-AED3-07B862425F7E"
+}

@@ -1,0 +1,238 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": " ACME STAGE PAR CCT (BL-100 VW)",
+  "shortName": "BL-100 VW",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2024-08-16",
+    "lastModifyDate": "2024-09-09",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 96DC82D5-482F-47F0-BF44-E48FA08ECDE3"
+    }
+  },
+  "comment": "ACME STAGE PAR CCT (BL-100 VW): ACME STAGE PAR CCT (BL-100 VW) 100W LED",
+  "availableChannels": {
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim": {
+      "fineChannelAliases": [
+        "Dim fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            6,
+            6
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "min Strobe"
+        },
+        {
+          "dmxRange": [
+            7,
+            122
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            123,
+            123
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "max Strobe"
+        },
+        {
+          "dmxRange": [
+            124,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        },
+        {
+          "dmxRange": [
+            128,
+            168
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran1"
+        },
+        {
+          "dmxRange": [
+            169,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran2"
+        },
+        {
+          "dmxRange": [
+            189,
+            249
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Ran3"
+        },
+        {
+          "dmxRange": [
+            250,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open 2"
+        }
+      ]
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode1 5 DMX",
+      "channels": [
+        "WW",
+        "CW",
+        "Dim",
+        "Dim fine",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Mode2 4 DMX",
+      "channels": [
+        "CTO",
+        "Dim",
+        "Dim fine",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Mode3 3 DMX",
+      "channels": [
+        "Dim",
+        "Dim fine",
+        "Strobe1"
+      ]
+    },
+    {
+      "name": "Mode4 2 DMX",
+      "channels": [
+        "WW",
+        "CW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      220,
+      246,
+      150
+    ],
+    "power": 100,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "ACME STAGE PAR CCT (BL-100 VW) 100W LED",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-09-09T01:53:11",
+      "text": " ACME STAGE PAR CCT (BL-100 VW)"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "dd08917767f14b06"
+  },
+  "manufacturerKey": "acme",
+  "fixtureKey": "acme-stage-par-cct-bl-100-vw",
+  "gwFixtureTypeID": "96DC82D5-482F-47F0-BF44-E48FA08ECDE3"
+}

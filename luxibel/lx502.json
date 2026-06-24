@@ -1,0 +1,286 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LX502",
+  "shortName": "LX502",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-12-11",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: F8CDFFB0-2E4E-420D-9982-F2D72DCA4F8D"
+    }
+  },
+  "comment": "LX502 : LED PYRO 1500W FOGGER\nFog + RGB LED's",
+  "availableChannels": {
+    "Fog1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1,
+          "comment": "Fog On"
+        }
+      ]
+    },
+    "R": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Red Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Red"
+        }
+      ]
+    },
+    "G": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Green Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Green"
+        }
+      ]
+    },
+    "B": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Blue Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            11,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Effect",
+          "effectName": "AutoColor Off",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Autocolor",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "Color Mix MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Speed Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Speed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Speed"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Dim": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Master Dim Off"
+        },
+        {
+          "dmxRange": [
+            10,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Master Dim"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Standard",
+      "channels": [
+        "Fog1",
+        "R",
+        "G",
+        "B",
+        "Color FX1",
+        "Color Mix MSpeed",
+        "Strobe Rate",
+        "Dim"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      345,
+      194,
+      341
+    ]
+  },
+  "gwEmitters": [
+    {
+      "name": "Emitter 1",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Emitter 2",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Emitter 3",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwSpecs": {
+    "description": "LED PYRO 1500W FOGGER\nFog + RGB LED's",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-12-11T21:53:50",
+      "text": "Ver 1"
+    }
+  },
+  "manufacturerKey": "luxibel",
+  "fixtureKey": "lx502",
+  "gwFixtureTypeID": "F8CDFFB0-2E4E-420D-9982-F2D72DCA4F8D"
+}

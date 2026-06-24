@@ -1,0 +1,246 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FINE 372 DG",
+  "shortName": "FINE 372 DG",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2025-12-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1B2D8309-3B86-4A43-B5C0-B6805C78D87B"
+    }
+  },
+  "comment": "FINE 372DG 为一款功能强大的LED防水洗墙灯，配置高亮度红、绿、蓝、白、琥珀五种不同颜色的LED光源，合理的LED布局让投射的光斑更均匀，混色更纯正，投光距离更远。前端可安装光栅板，可让光束变化更加随意、简单。可适用于各种室内、外大型演出及室外楼宇、桥梁、古建筑泛光投射照明",
+  "wheels": {
+    "RGBWA": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Red",
+          "colors": [
+            "#db0012"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Green",
+          "colors": [
+            "#078307"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Blue",
+          "colors": [
+            "#0012a9"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "White",
+          "colors": [
+            "#e5e4e2"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Amber",
+          "colors": [
+            "#c24e00"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "comment": "R"
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "comment": "G"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "comment": "B"
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "W"
+      }
+    },
+    "Amber": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Amber",
+        "comment": "Amber"
+      }
+    },
+    "Strobe1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            7
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            8,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "slow to fast  1Hz-25Hz"
+        }
+      ]
+    },
+    "Softlight": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Softlight)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Unknown (Softlight)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Soft light gradient from slow to fast "
+        }
+      ]
+    },
+    "Waterlight": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (Waterlight)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "None"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Unknown (Waterlight)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "The cycle speed is from slow to fast"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 100,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dim"
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "9CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        "Strobe1",
+        "Softlight",
+        "Waterlight",
+        "Dim"
+      ]
+    },
+    {
+      "name": "6CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber",
+        null,
+        null,
+        null,
+        "Dim"
+      ]
+    },
+    {
+      "name": "5CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "White",
+        "Amber"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1015,
+      408,
+      172
+    ]
+  },
+  "gwSpecs": {
+    "description": "FINE 372DG 为一款功能强大的LED防水洗墙灯，配置高亮度红、绿、蓝、白、琥珀五种不同颜色的LED光源，合理的LED布局让投射的光斑更均匀，混色更纯正，投光距离更远。前端可安装光栅板，可让光束变化更加随意、简单。可适用于各种室内、外大型演出及室外楼宇、桥梁、古建筑泛光投射照明",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-12-29T02:07:07",
+      "text": "FINE 372  DG"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "4207ecc6bd3270a0"
+  },
+  "manufacturerKey": "fine-art",
+  "fixtureKey": "fine-372-dg",
+  "gwFixtureTypeID": "1B2D8309-3B86-4A43-B5C0-B6805C78D87B"
+}

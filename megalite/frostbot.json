@@ -1,0 +1,1572 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "FrostBot",
+  "shortName": "FrostBot",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-09-24",
+    "lastModifyDate": "2025-09-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: B0C6E5F8-8FBF-11F0-BA60-42010A37C005"
+    }
+  },
+  "comment": "FrostBot is powered by 768 x 1.5W RGB LEDs and 144 x 2W White LEDs",
+  "wheels": {
+    "COLOR PRESET": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "Color Preset",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 2,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            2
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            3,
+            5
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe - Strobe"
+        },
+        {
+          "dmxRange": [
+            6,
+            50
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampUp",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Ramp Up - Strobe Pulse Open"
+        },
+        {
+          "dmxRange": [
+            51,
+            100
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "RampDown",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Ramp Down - Strobe Pulse Closed"
+        },
+        {
+          "dmxRange": [
+            101,
+            150
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open - Shutter Open"
+        },
+        {
+          "dmxRange": [
+            151,
+            200
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Lightning - Strobe"
+        },
+        {
+          "dmxRange": [
+            201,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random - Strobe Random"
+        }
+      ]
+    },
+    "Strobe Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Strobe Duration": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "StrobeDuration",
+          "durationStart": "0s",
+          "durationEnd": "1s",
+          "comment": "Max"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Frost1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Frost",
+          "frostIntensityStart": 0,
+          "frostIntensityEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    },
+    "White": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Max"
+        }
+      ]
+    },
+    "White 2": {
+      "name": "White",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Max"
+        }
+      ]
+    },
+    "White 3": {
+      "name": "White",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Max"
+        }
+      ]
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR PRESET",
+          "slotNumber": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR PRESET",
+          "slotNumber": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR PRESET",
+          "slotNumber": 2,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function - Custom"
+        },
+        {
+          "dmxRange": [
+            6,
+            15
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 1 - Macro"
+        },
+        {
+          "dmxRange": [
+            16,
+            25
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 2 - Macro"
+        },
+        {
+          "dmxRange": [
+            26,
+            35
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 3 - Macro"
+        },
+        {
+          "dmxRange": [
+            36,
+            45
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 4 - Macro"
+        },
+        {
+          "dmxRange": [
+            46,
+            55
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 5 - Macro"
+        },
+        {
+          "dmxRange": [
+            56,
+            65
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 6 - Macro"
+        },
+        {
+          "dmxRange": [
+            66,
+            75
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 7 - Macro"
+        },
+        {
+          "dmxRange": [
+            76,
+            85
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 8 - Macro"
+        },
+        {
+          "dmxRange": [
+            86,
+            95
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 9 - Macro"
+        },
+        {
+          "dmxRange": [
+            96,
+            105
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 10 - Macro"
+        },
+        {
+          "dmxRange": [
+            106,
+            115
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 11 - Macro"
+        },
+        {
+          "dmxRange": [
+            116,
+            125
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 12 - Macro"
+        },
+        {
+          "dmxRange": [
+            126,
+            135
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 13 - Macro"
+        },
+        {
+          "dmxRange": [
+            136,
+            145
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 14 - Macro"
+        },
+        {
+          "dmxRange": [
+            146,
+            155
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 15 - Macro"
+        },
+        {
+          "dmxRange": [
+            156,
+            165
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 16 - Macro"
+        },
+        {
+          "dmxRange": [
+            166,
+            175
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 17 - Macro"
+        },
+        {
+          "dmxRange": [
+            176,
+            185
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 18 - Macro"
+        },
+        {
+          "dmxRange": [
+            186,
+            195
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 19 - Macro"
+        },
+        {
+          "dmxRange": [
+            196,
+            205
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 20 - Macro"
+        },
+        {
+          "dmxRange": [
+            206,
+            215
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 21 - Macro"
+        },
+        {
+          "dmxRange": [
+            216,
+            225
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 22 - Macro"
+        },
+        {
+          "dmxRange": [
+            226,
+            235
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 23 - Macro"
+        },
+        {
+          "dmxRange": [
+            236,
+            245
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 24 - Macro"
+        },
+        {
+          "dmxRange": [
+            246,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "RGB Effect 25 - Macro"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            3
+          ],
+          "type": "Effect",
+          "effectName": "No Function - Custom",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            4,
+            12
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 1 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            13,
+            21
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 2 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            22,
+            30
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 3 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            31,
+            39
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 4 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            40,
+            48
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 5 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            49,
+            57
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 6 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            58,
+            66
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 7 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            67,
+            75
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 8 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            76,
+            84
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 9 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            85,
+            93
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 10 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            94,
+            102
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 11 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            103,
+            111
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 12 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            112,
+            120
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 13 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            121,
+            129
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 14 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            130,
+            138
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 15 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            139,
+            147
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 16 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            148,
+            156
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 17 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            157,
+            165
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 18 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            166,
+            174
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 19 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            175,
+            183
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 20 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            184,
+            192
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 21 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            193,
+            201
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 22 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            202,
+            210
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 23 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            211,
+            219
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 24 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            220,
+            228
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 25 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            229,
+            237
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 26 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            238,
+            246
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 27 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            247,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "White Effect 28 - Macro",
+          "speedStart": 0,
+          "speedEnd": 1
+        }
+      ]
+    },
+    "FX1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "EffectSpeed",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            42949671
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            42949672,
+            4252017622
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            4252017623,
+            4294967294
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "T 2": {
+      "name": "T",
+      "fineChannelAliases": [
+        "T 2 fine"
+      ],
+      "highlightValue": 32767,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32766
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32767,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Home"
+        },
+        {
+          "dmxRange": [
+            32768,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            42949671
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            42949672,
+            4252017622
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            4252017623,
+            4294967294
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            42949671
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            42949672,
+            4252017622
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            4252017623,
+            4294967294
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            4294967295,
+            4294967295
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "C1 2": {
+      "name": "C1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR PRESET",
+          "slotNumber": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR PRESET",
+          "slotNumber": 1,
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR PRESET",
+          "slotNumber": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Red",
+          "comment": "Max"
+        }
+      ]
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Green",
+          "comment": "Max"
+        }
+      ]
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "Blue",
+          "comment": "Max"
+        }
+      ]
+    },
+    "White 4": {
+      "name": "White",
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Min > Max"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorIntensity",
+          "color": "White",
+          "comment": "Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "14Ch Mode",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Strobe Rate",
+        "Strobe Duration",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Frost1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "White 2",
+        "White 3"
+      ]
+    },
+    {
+      "name": "18Ch Mode",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Strobe Rate",
+        "Strobe Duration",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Frost1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "White 2",
+        "White 3",
+        "C1",
+        "Color Macro1",
+        "Color FX1",
+        "FX1 Rate"
+      ]
+    },
+    {
+      "name": "76Ch Mode",
+      "channels": [
+        "White",
+        "G",
+        "B",
+        "Frost1"
+      ]
+    },
+    {
+      "name": "90Ch Mode",
+      "channels": [
+        "White 4",
+        "G 2",
+        "B 2",
+        "Strobe Duration",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Frost1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "White 2",
+        "White 3",
+        "C1 2",
+        "Color Macro1",
+        "Color FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      140,
+      346,
+      535
+    ],
+    "weight": 13.8,
+    "power": 2,
+    "bulb": {
+      "type": "LED",
+      "lumens": 27777,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        143.1,
+        159.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "FrostBot is powered by 768 x 1.5W RGB LEDs and 144 x 2W White LEDs",
+    "beamType": "Rectangle",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2025-09-24T02:22:20",
+      "text": "Initial upload by GDTFservice powered by Q2Q Technologies"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2f1510f2a5cb0dfe"
+  },
+  "manufacturerKey": "megalite",
+  "fixtureKey": "frostbot",
+  "gwFixtureTypeID": "B0C6E5F8-8FBF-11F0-BA60-42010A37C005"
+}

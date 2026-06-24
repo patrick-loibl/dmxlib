@@ -1,0 +1,608 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Electro T5",
+  "shortName": "Electro T5_T5 4PK",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-06-30",
+    "lastModifyDate": "2025-07-01",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 65FA9A44-31DD-4BF9-AC84-D860A97A857A"
+    }
+  },
+  "comment": "Electro T5_T5 4PK: By Daniel Dai",
+  "wheels": {
+    "RGB Mix": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "OFF",
+          "colors": [
+            "#000000"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "R",
+          "colors": [
+            "#e40301"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "Y",
+          "colors": [
+            "#e4e404"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "G",
+          "colors": [
+            "#07e400"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "C",
+          "colors": [
+            "#05e4e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "B",
+          "colors": [
+            "#0000e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "M",
+          "colors": [
+            "#e404e4"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "W",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            12
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            13,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Fast"
+        }
+      ]
+    },
+    "CTO": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "Unknown (none)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            5,
+            5
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            6,
+            231
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            232,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1,
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "H": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Unknown (HSB_Hue)",
+          "physicalStart": "0deg",
+          "physicalEnd": "1deg"
+        }
+      ]
+    },
+    "S": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (HSB_Saturation)",
+          "physicalStart": "0%",
+          "physicalEnd": "100%",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "WW": {
+      "fineChannelAliases": [
+        "WW fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "R 2": {
+      "name": "R",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G 2": {
+      "name": "G",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Static macro": {
+      "capability": {
+        "type": "Unknown (Static macro)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Macro BackgColor": {
+      "capability": {
+        "type": "Unknown (Macro BackgColor)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Macro BackgColor Dim": {
+      "capability": {
+        "type": "Unknown (Macro BackgColor Dim)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Color Macro1 2": {
+      "name": "Color Macro1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            214
+          ],
+          "type": "ColorPreset"
+        },
+        {
+          "dmxRange": [
+            215,
+            220
+          ],
+          "type": "ColorPreset",
+          "comment": "All auto macro"
+        },
+        {
+          "dmxRange": [
+            221,
+            228
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound control 1"
+        },
+        {
+          "dmxRange": [
+            229,
+            236
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound control 2"
+        },
+        {
+          "dmxRange": [
+            237,
+            244
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound control 3"
+        },
+        {
+          "dmxRange": [
+            245,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "Sound control 4"
+        }
+      ]
+    },
+    "Color Macro1 Rate": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Slow"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Unknown (ColorMacro1Rate)",
+          "physicalStart": 0,
+          "physicalEnd": 1,
+          "comment": "Fast"
+        }
+      ]
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4278190080,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "CCT-4CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "CTO",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "HSI-4CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "H",
+        "S"
+      ]
+    },
+    {
+      "name": "CCT/HSI-6CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "H",
+        "S",
+        "CTO",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "16Bit-13CH",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "White",
+        "White fine",
+        "WW",
+        "WW fine"
+      ]
+    },
+    {
+      "name": "RGBCW+S-7CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White",
+        "WW"
+      ]
+    },
+    {
+      "name": "Macro-12CH",
+      "channels": [
+        "Dim",
+        "Sh1",
+        "Static macro",
+        "Macro BackgColor",
+        "Macro BackgColor Dim",
+        "Color Macro1 2",
+        "Color Macro1 Rate",
+        "R 2",
+        "G 2",
+        "B 2",
+        "White",
+        "WW"
+      ]
+    },
+    {
+      "name": "Pix8-40CH",
+      "channels": [
+        "R 2",
+        "G 2",
+        "B 2",
+        "White",
+        "WW"
+      ]
+    },
+    {
+      "name": "Pix16-80CH",
+      "channels": [
+        "R 2",
+        "G 2",
+        "B 2",
+        "White",
+        "WW"
+      ]
+    },
+    {
+      "name": "Pix32-160CH",
+      "channels": [
+        "R 2",
+        "G 2",
+        "B 2",
+        "White",
+        "WW"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      52,
+      51,
+      1190
+    ],
+    "weight": 1.75,
+    "power": 96,
+    "bulb": {
+      "type": "626nm / 527nm / 452nm LED",
+      "lumens": 1000,
+      "colorTemperature": 10000
+    },
+    "lens": {
+      "degreesMinMax": [
+        35.0,
+        35.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640100,0.330000,21.260000",
+      "hex": "#ff0000",
+      "dominantWavelength": 626.419983
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00",
+      "dominantWavelength": 526.530029
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060010,7.220000",
+      "hex": "#0000ff",
+      "dominantWavelength": 452.0
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "Warm white",
+      "cie": "0.343000,0.379100,97.140000",
+      "hex": "#ffffcc"
+    }
+  ],
+  "gwSpecs": {
+    "description": "By Daniel Dai",
+    "beamType": "Glow",
+    "operatingTemperature": [
+      -10,
+      60
+    ],
+    "revision": {
+      "date": "2025-07-01T21:16:46",
+      "text": "Version 1.0, Uploaded to GDTF Share."
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "bf15c9daf38114db"
+  },
+  "manufacturerKey": "jmaz-professional",
+  "fixtureKey": "electro-t5",
+  "gwFixtureTypeID": "65FA9A44-31DD-4BF9-AC84-D860A97A857A"
+}

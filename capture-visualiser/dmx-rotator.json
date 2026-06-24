@@ -1,0 +1,294 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "DMX Rotator",
+  "shortName": "DMX Mover",
+  "categories": [
+    "Other"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-06-22",
+    "lastModifyDate": "2026-06-18",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: C99EAC7D-11DD-443E-8AEE-4335B29D4999"
+    }
+  },
+  "comment": "Capture DMX Rotator: Capture Visualiser DMX Mover fixture",
+  "availableChannels": {
+    "Rot X": {
+      "fineChannelAliases": [
+        "Rot X fine"
+      ],
+      "capability": {
+        "type": "Unknown (Rot_X)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "Pos MSpeed": {
+      "fineChannelAliases": [
+        "Pos MSpeed fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            1,
+            2558
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            2559,
+            2559
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            2560,
+            2560
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Reverse Continous Max"
+        },
+        {
+          "dmxRange": [
+            2561,
+            33790
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            33791,
+            33791
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Rev Contious Min"
+        },
+        {
+          "dmxRange": [
+            33792,
+            34303
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            34304,
+            34304
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fwd Continous Min"
+        },
+        {
+          "dmxRange": [
+            34305,
+            65534
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            65535,
+            65535
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fwd Continous Max"
+        }
+      ]
+    },
+    "Pos MSpeed 2": {
+      "name": "Pos MSpeed",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Max"
+        },
+        {
+          "dmxRange": [
+            1,
+            8
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            9,
+            9
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            10,
+            10
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Rev Continous Max"
+        },
+        {
+          "dmxRange": [
+            11,
+            130
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            131,
+            131
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Rev Continous Min"
+        },
+        {
+          "dmxRange": [
+            132,
+            133
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Stop"
+        },
+        {
+          "dmxRange": [
+            134,
+            134
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fwd Continous Min"
+        },
+        {
+          "dmxRange": [
+            135,
+            254
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "PanTiltSpeed",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Fwd Continous Max"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "Alpha 16-bit",
+      "channels": [
+        "Rot X",
+        "Rot X fine"
+      ]
+    },
+    {
+      "name": "Alpha 8-bit",
+      "channels": [
+        "Rot X"
+      ]
+    },
+    {
+      "name": "Alpha + Speed 16-bit",
+      "channels": [
+        "Rot X",
+        "Rot X fine",
+        "Pos MSpeed",
+        "Pos MSpeed fine"
+      ]
+    },
+    {
+      "name": "Alpha + Speed 8-bit",
+      "channels": [
+        "Rot X",
+        "Pos MSpeed 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwSpecs": {
+    "description": "Capture Visualiser DMX Mover fixture",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-06-18T15:36:51",
+      "text": "Preliminary"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "00fb21c2c4d37139"
+  },
+  "manufacturerKey": "capture-visualiser",
+  "fixtureKey": "dmx-rotator",
+  "gwFixtureTypeID": "C99EAC7D-11DD-443E-8AEE-4335B29D4999"
+}

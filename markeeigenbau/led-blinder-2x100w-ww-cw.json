@@ -1,0 +1,181 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "LED Blinder 2x100W WW_CW",
+  "shortName": "2 Lite LED",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-03-17",
+    "lastModifyDate": "2026-04-29",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 1FB03711-2D09-449B-8CD6-C99E1FF1E437"
+    }
+  },
+  "comment": "China LED COB Blinder 2x100W WW/CW",
+  "matrix": {
+    "pixelKeys": [
+      [
+        []
+      ]
+    ]
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe Duration": {
+      "capability": {
+        "type": "StrobeDuration",
+        "durationStart": "0s",
+        "durationEnd": "1s"
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "WW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "WW 2": {
+      "name": "WW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Warm White"
+      }
+    },
+    "CW 2": {
+      "name": "CW",
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Cold White"
+      }
+    }
+  },
+  "templateChannels": {
+    "Dim $pixelKey": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "8Ch - Mode",
+      "channels": [
+        "Dim",
+        "Strobe Duration",
+        "Color FX1",
+        "FX1 Rate",
+        {
+          "insert": "matrixChannels",
+          "repeatFor": "eachPixelXYZ",
+          "channelOrder": "perPixel",
+          "templateChannels": []
+        },
+        null,
+        null,
+        null,
+        null,
+        "WW",
+        "CW",
+        "WW 2",
+        "CW 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      180,
+      168,
+      332
+    ],
+    "weight": 6.4,
+    "power": 650,
+    "bulb": {
+      "type": "Tungsten",
+      "lumens": 17000,
+      "colorTemperature": 3200
+    },
+    "lens": {
+      "degreesMinMax": [
+        21.0,
+        21.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "DWE PAR-36 120V/650W - Left 1",
+      "cie": "0.427300,0.396900,57.790000",
+      "hex": "#ffba78"
+    },
+    {
+      "name": "DWE PAR-36 120V/650W - Right 1",
+      "cie": "0.427300,0.396900,57.790000",
+      "hex": "#ffba78"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      10,
+      40
+    ],
+    "revision": {
+      "date": "2026-04-29T06:23:44",
+      "text": "test1"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "35f7522009107781"
+  },
+  "manufacturerKey": "markeeigenbau",
+  "fixtureKey": "led-blinder-2x100w-ww-cw",
+  "gwFixtureTypeID": "1FB03711-2D09-449B-8CD6-C99E1FF1E437"
+}

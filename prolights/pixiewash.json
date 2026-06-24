@@ -1,0 +1,707 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "PixieWash",
+  "shortName": "PixeWash",
+  "categories": [
+    "Moving Head",
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-03-05",
+    "lastModifyDate": "2025-03-05",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E669DC1D-82A3-4FBE-BD07-A7568EF9AB65"
+    }
+  },
+  "comment": "Pixie Wash is a single source, compact LED wash luminaire with a 7° to 40° zoom. Featuring a single 60W LED, its small form factor and near-silent cooling make it ideal for low ceilings or noise-sensitive environments.",
+  "availableChannels": {
+    "P": {
+      "fineChannelAliases": [
+        "P fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Pan",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "T": {
+      "fineChannelAliases": [
+        "T fine"
+      ],
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            32767
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            32768,
+            32768
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Center"
+        },
+        {
+          "dmxRange": [
+            32769,
+            65535
+          ],
+          "type": "Tilt",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        }
+      ]
+    },
+    "Pos MSpeed": {
+      "capability": {
+        "type": "Unknown (PositionMSpeed 1)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Slow2Fast"
+      }
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            49
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            50,
+            99
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "PanTilt Reset"
+        },
+        {
+          "dmxRange": [
+            100,
+            149
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "NoFeature"
+        },
+        {
+          "dmxRange": [
+            150,
+            199
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "ZoomReset"
+        },
+        {
+          "dmxRange": [
+            200,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "NoFeature"
+        }
+      ]
+    },
+    "Dim": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Intensity",
+          "brightnessStart": 0,
+          "brightnessEnd": 1,
+          "comment": "Closed"
+        }
+      ]
+    },
+    "Sh1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            31
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            32,
+            63
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            64,
+            95
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow2Fast"
+        },
+        {
+          "dmxRange": [
+            96,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            128,
+            159
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse effect in sequence"
+        },
+        {
+          "dmxRange": [
+            160,
+            191
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            192,
+            223
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Strobe Random"
+        },
+        {
+          "dmxRange": [
+            224,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        }
+      ]
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Zoom": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Min"
+        },
+        {
+          "dmxRange": [
+            1,
+            254
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "Zoom",
+          "angleStart": "0deg",
+          "angleEnd": "1deg",
+          "comment": "Max"
+        }
+      ]
+    },
+    "Color Mix Mode": {
+      "defaultValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            19
+          ],
+          "type": "NoFunction",
+          "switchChannels": {}
+        },
+        {
+          "dmxRange": [
+            20,
+            39
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CTC",
+          "switchChannels": {
+            "1_Beam_ColorEffects1": "Color FX1 2"
+          }
+        },
+        {
+          "dmxRange": [
+            40,
+            59
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CW Spin",
+          "switchChannels": {
+            "1_Beam_ColorEffects1": "Color FX1 3"
+          }
+        },
+        {
+          "dmxRange": [
+            60,
+            79
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "CCW Spin",
+          "switchChannels": {
+            "1_Beam_ColorEffects1": "Color FX1 4"
+          }
+        },
+        {
+          "dmxRange": [
+            80,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Continuous",
+          "switchChannels": {
+            "1_Beam_ColorEffects1": "Color FX1 5"
+          }
+        }
+      ]
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "2000K-3000K"
+      }
+    },
+    "Color FX1 2": {
+      "name": "Color FX1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            224,
+            231
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3200,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            232,
+            239
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4200,
+          "comment": "4200K"
+        },
+        {
+          "dmxRange": [
+            240,
+            247
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5600,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            248,
+            254
+          ],
+          "type": "ColorTemperature",
+          "colorTemperatureStart": 0,
+          "colorTemperatureEnd": 1
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 8000,
+          "comment": "8000K"
+        }
+      ]
+    },
+    "Color FX1 3": {
+      "name": "Color FX1",
+      "capability": {
+        "type": "ColorPreset",
+        "comment": "CW Rainbow Effect Slow2Fast"
+      }
+    },
+    "Color FX1 4": {
+      "name": "Color FX1",
+      "capability": {
+        "type": "ColorPreset",
+        "comment": "CCW Rainbow Effect Slow2Fast"
+      }
+    },
+    "Color FX1 5": {
+      "name": "Color FX1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            1,
+            1
+          ],
+          "type": "ColorPreset",
+          "comment": "Red"
+        },
+        {
+          "dmxRange": [
+            2,
+            2
+          ],
+          "type": "ColorPreset",
+          "comment": "Green"
+        },
+        {
+          "dmxRange": [
+            3,
+            3
+          ],
+          "type": "ColorPreset",
+          "comment": "Blue"
+        },
+        {
+          "dmxRange": [
+            4,
+            4
+          ],
+          "type": "ColorPreset",
+          "comment": "White"
+        },
+        {
+          "dmxRange": [
+            5,
+            46
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0 / G 0-100 / B 100 / W 0"
+        },
+        {
+          "dmxRange": [
+            47,
+            88
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0 / G 100 / B 100-0 / W 0"
+        },
+        {
+          "dmxRange": [
+            89,
+            130
+          ],
+          "type": "ColorPreset",
+          "comment": "R 0-100 / G 100 / B 0 / W 0"
+        },
+        {
+          "dmxRange": [
+            131,
+            172
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100 / G 100-0 / B 0 / W 0"
+        },
+        {
+          "dmxRange": [
+            173,
+            214
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100 / G 0 / B 0-100 / W 0"
+        },
+        {
+          "dmxRange": [
+            215,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "R 100-0 / G 0 / B 100 / W 0"
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "AsFromMenu"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Fast"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Middle"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 4,
+          "comment": "Slow"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "13ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Zoom"
+      ]
+    },
+    {
+      "name": "16ch",
+      "channels": [
+        "P",
+        "P fine",
+        "T",
+        "T fine",
+        "Pos MSpeed",
+        "Ctrl1",
+        "Dim",
+        "Sh1",
+        "R",
+        "G",
+        "B",
+        "White",
+        "Color Mix Mode",
+        "1_Beam_ColorEffects1",
+        "Zoom",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      164,
+      200,
+      164
+    ],
+    "weight": 7.0,
+    "DMXconnector": "XLR5",
+    "power": 60,
+    "bulb": {
+      "type": "LED",
+      "lumens": 1312,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        14.6,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red Led",
+      "cie": "0.698000,0.300000,17.049000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green Led",
+      "cie": "0.166000,0.704000,34.228000",
+      "hex": "#00c605"
+    },
+    {
+      "name": "Blue Led",
+      "cie": "0.155000,0.024000,9.542000",
+      "hex": "#8200ff"
+    },
+    {
+      "name": "White Led",
+      "cie": "0.314000,0.317000,57.107000",
+      "hex": "#cfc4ce"
+    }
+  ],
+  "gwSpecs": {
+    "description": "Pixie Wash is a single source, compact LED wash luminaire with a 7° to 40° zoom. Featuring a single 60W LED, its small form factor and near-silent cooling make it ideal for low ceilings or noise-sensitive environments.",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2025-03-05T10:29:05",
+      "text": "Rev 08 - Added Snap Feature"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "8cef553c88466dfe"
+  },
+  "manufacturerKey": "prolights",
+  "fixtureKey": "pixiewash",
+  "gwFixtureTypeID": "E669DC1D-82A3-4FBE-BD07-A7568EF9AB65"
+}

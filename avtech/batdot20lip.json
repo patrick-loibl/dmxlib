@@ -1,0 +1,324 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "BatDot20LIP",
+  "shortName": "BatDot20LIP",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2026-03-04",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 72F40149-E246-420F-A062-21FE26B3D971"
+    }
+  },
+  "comment": "AVTech BatDot20LIP",
+  "availableChannels": {
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset",
+        "comment": "Color Macro"
+      }
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "3000k - 10000k"
+      }
+    },
+    "H": {
+      "capability": {
+        "type": "Unknown (HSB_Hue)",
+        "physicalStart": "0deg",
+        "physicalEnd": "1deg"
+      }
+    },
+    "S": {
+      "capability": {
+        "type": "Unknown (HSB_Saturation)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "Unknown (HSB_Brightness)",
+        "physicalStart": "0%",
+        "physicalEnd": "100%"
+      }
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Green"
+      }
+    },
+    "B 2": {
+      "name": "B",
+      "fineChannelAliases": [
+        "B 2 fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White",
+        "comment": "White"
+      }
+    },
+    "StrobeM Shutter": {
+      "capability": {
+        "type": "Unknown (StrobeModeShutter)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Strobo SLOW - fast"
+      }
+    },
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Dimmer"
+      }
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "Color Effects",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1,
+        "comment": "Color Speed"
+      }
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No function"
+        },
+        {
+          "dmxRange": [
+            10,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 1 Fast"
+        },
+        {
+          "dmxRange": [
+            30,
+            69
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 2"
+        },
+        {
+          "dmxRange": [
+            70,
+            129
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 3"
+        },
+        {
+          "dmxRange": [
+            130,
+            189
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 4"
+        },
+        {
+          "dmxRange": [
+            190,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Dimmer Speed 5 Slow"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "2 Channels",
+      "channels": [
+        "Color Macro1",
+        "CTO"
+      ]
+    },
+    {
+      "name": "3 Channels",
+      "channels": [
+        "H",
+        "S",
+        "B"
+      ]
+    },
+    {
+      "name": "5 Channels",
+      "channels": [
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "StrobeM Shutter"
+      ]
+    },
+    {
+      "name": "8 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "Color Macro1",
+        "CTO",
+        "StrobeM Shutter"
+      ]
+    },
+    {
+      "name": "11 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B 2",
+        "White",
+        "Color Macro1",
+        "CTO",
+        "StrobeM Shutter",
+        "Color FX1",
+        "Color Mix MSpeed",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "15 Channels",
+      "channels": [
+        "Dim",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B 2",
+        "B 2 fine",
+        "White",
+        "White fine",
+        "Color Macro1",
+        "CTO",
+        "StrobeM Shutter",
+        "Color FX1",
+        "Color Mix MSpeed",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      100,
+      95,
+      100
+    ],
+    "weight": 1.2
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    },
+    {
+      "name": "White",
+      "cie": "0.312700,0.329000,100.000000",
+      "hex": "#ffffff",
+      "diodePart": "1"
+    }
+  ],
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2026-03-04T19:41:09",
+      "text": "BatDot20LIP"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "ec22dbb0eaf7171b"
+  },
+  "manufacturerKey": "avtech",
+  "fixtureKey": "batdot20lip",
+  "gwFixtureTypeID": "72F40149-E246-420F-A062-21FE26B3D971"
+}

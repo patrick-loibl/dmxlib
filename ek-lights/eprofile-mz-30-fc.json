@@ -1,0 +1,761 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "EPROFILE-MZ-30-FC",
+  "shortName": "EPROFILE-MZ-30-FC",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2023-12-08",
+    "lastModifyDate": "2026-01-14",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: EE7A2372-F16A-43D0-BF92-D152C8C5F18C"
+    }
+  },
+  "comment": "38W RGBW LED光源 色温 2800K-8000K可调 显色指数  Ra≥90 4种调光曲线，0~100%调光 时尚、 现代化的机身设计 静音操作，无闪烁输出",
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "fineChannelAliases": [
+        "R fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "fineChannelAliases": [
+        "G fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "fineChannelAliases": [
+        "B fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "White": {
+      "fineChannelAliases": [
+        "White fine"
+      ],
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Closed"
+        },
+        {
+          "dmxRange": [
+            2,
+            62
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe from slow to fast"
+        },
+        {
+          "dmxRange": [
+            63,
+            64
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open1"
+        },
+        {
+          "dmxRange": [
+            65,
+            125
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse in from slow to fast"
+        },
+        {
+          "dmxRange": [
+            126,
+            127
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open2"
+        },
+        {
+          "dmxRange": [
+            128,
+            188
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Pulse",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Pulse out from slow to fast"
+        },
+        {
+          "dmxRange": [
+            189,
+            190
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open3"
+        },
+        {
+          "dmxRange": [
+            191,
+            251
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "Random from slow to fast"
+        },
+        {
+          "dmxRange": [
+            252,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open4"
+        }
+      ]
+    },
+    "CTO": {
+      "capability": {
+        "type": "ColorTemperature",
+        "colorTemperatureStart": 0,
+        "colorTemperatureEnd": 1,
+        "comment": "2800K-10000K"
+      }
+    },
+    "Crossfade": {
+      "capability": {
+        "type": "Unknown (Crossfade)",
+        "physicalStart": 0,
+        "physicalEnd": 1,
+        "comment": "Lineary From Layer1 To Layer2"
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "ColorPreset",
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            2,
+            135
+          ],
+          "type": "ColorPreset",
+          "comment": "Color Macro"
+        },
+        {
+          "dmxRange": [
+            136,
+            211
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 0,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            212,
+            213
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 2800,
+          "comment": "2800K"
+        },
+        {
+          "dmxRange": [
+            214,
+            215
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3000,
+          "comment": "3000K"
+        },
+        {
+          "dmxRange": [
+            216,
+            217
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3200,
+          "comment": "3200K"
+        },
+        {
+          "dmxRange": [
+            218,
+            219
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3400,
+          "comment": "3400K"
+        },
+        {
+          "dmxRange": [
+            220,
+            221
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3600,
+          "comment": "3600K"
+        },
+        {
+          "dmxRange": [
+            222,
+            223
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 3800,
+          "comment": "3800K"
+        },
+        {
+          "dmxRange": [
+            224,
+            225
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4000,
+          "comment": "4000K"
+        },
+        {
+          "dmxRange": [
+            226,
+            227
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4200,
+          "comment": "4200K"
+        },
+        {
+          "dmxRange": [
+            228,
+            229
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4400,
+          "comment": "4400K"
+        },
+        {
+          "dmxRange": [
+            230,
+            231
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4600,
+          "comment": "4600K"
+        },
+        {
+          "dmxRange": [
+            232,
+            233
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 4800,
+          "comment": "4800K"
+        },
+        {
+          "dmxRange": [
+            234,
+            235
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5000,
+          "comment": "5000K"
+        },
+        {
+          "dmxRange": [
+            236,
+            237
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5200,
+          "comment": "5200K"
+        },
+        {
+          "dmxRange": [
+            238,
+            239
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5400,
+          "comment": "5400K"
+        },
+        {
+          "dmxRange": [
+            240,
+            241
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 5600,
+          "comment": "5600K"
+        },
+        {
+          "dmxRange": [
+            242,
+            243
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 6000,
+          "comment": "6000K"
+        },
+        {
+          "dmxRange": [
+            244,
+            245
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 6500,
+          "comment": "6500K"
+        },
+        {
+          "dmxRange": [
+            246,
+            247
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 7000,
+          "comment": "7000K"
+        },
+        {
+          "dmxRange": [
+            248,
+            249
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 8000,
+          "comment": "8000K"
+        },
+        {
+          "dmxRange": [
+            250,
+            251
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 9000,
+          "comment": "9000K"
+        },
+        {
+          "dmxRange": [
+            252,
+            253
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 10000,
+          "comment": "10000K"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "ColorTemperature",
+          "colorTemperature": 0,
+          "comment": "Open"
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            1
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            2,
+            3
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER CURVE LINEAR"
+        },
+        {
+          "dmxRange": [
+            4,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER CURVE S-CURVE"
+        },
+        {
+          "dmxRange": [
+            6,
+            7
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER CURVE SQUARE LAW"
+        },
+        {
+          "dmxRange": [
+            8,
+            9
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER CURVE INVERSE SQUARE LAW"
+        },
+        {
+          "dmxRange": [
+            10,
+            11
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER SPEED AUTO"
+        },
+        {
+          "dmxRange": [
+            12,
+            13
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER SPEED FAST"
+        },
+        {
+          "dmxRange": [
+            14,
+            15
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER SPEED MEDIUM"
+        },
+        {
+          "dmxRange": [
+            16,
+            17
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DIMMER SPEED SLOW"
+        },
+        {
+          "dmxRange": [
+            18,
+            19
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED FREQUENCY 600HZ"
+        },
+        {
+          "dmxRange": [
+            20,
+            21
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED FREQUENCY 1200HZ"
+        },
+        {
+          "dmxRange": [
+            22,
+            23
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED FREQUENCY 2000HZ"
+        },
+        {
+          "dmxRange": [
+            24,
+            25
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED FREQUENCY 4000HZ"
+        },
+        {
+          "dmxRange": [
+            26,
+            27
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED FREQUENCY 6000HZ"
+        },
+        {
+          "dmxRange": [
+            28,
+            29
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "LED FREQUENCY 25KHZ"
+        },
+        {
+          "dmxRange": [
+            30,
+            31
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX FAULT HOLD"
+        },
+        {
+          "dmxRange": [
+            32,
+            33
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX FAULT BLACKOUT"
+        },
+        {
+          "dmxRange": [
+            34,
+            35
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "DMX FAULT STAND ALONE"
+        },
+        {
+          "dmxRange": [
+            36,
+            37
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAND ALONE MASTER"
+        },
+        {
+          "dmxRange": [
+            38,
+            39
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAND ALONE SLAVE"
+        },
+        {
+          "dmxRange": [
+            40,
+            41
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAND ALONE STATIC COLORS"
+        },
+        {
+          "dmxRange": [
+            42,
+            43
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAND ALONE WHITE PRESETS"
+        },
+        {
+          "dmxRange": [
+            44,
+            45
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAND ALONE COLOR MACROS"
+        },
+        {
+          "dmxRange": [
+            46,
+            47
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "STAND ALONE MANUAL COLORS"
+        },
+        {
+          "dmxRange": [
+            48,
+            253
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "RESERVED"
+        },
+        {
+          "dmxRange": [
+            254,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "FACTORY DEFAULT OF CONTROL FUNCTIONS"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "BASIC",
+      "channels": [
+        "Dim",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "STANDARD",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "CTO",
+        "Crossfade",
+        "Color Macro1"
+      ]
+    },
+    {
+      "name": "EXTENDED",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Sh1",
+        "CTO",
+        "Crossfade",
+        "R",
+        "R fine",
+        "G",
+        "G fine",
+        "B",
+        "B fine",
+        "White",
+        "White fine",
+        "Color Macro1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      115,
+      200,
+      141
+    ],
+    "weight": 2.0,
+    "power": 38,
+    "bulb": {
+      "type": "LED",
+      "lumens": 300,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        30.0,
+        30.0
+      ]
+    }
+  },
+  "gwSpecs": {
+    "description": "38W RGBW LED光源 色温 2800K-8000K可调 显色指数  Ra≥90 4种调光曲线，0~100%调光 时尚、 现代化的机身设计 静音操作，无闪烁输出",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -10,
+      45
+    ],
+    "revision": {
+      "date": "2026-01-14T02:31:04",
+      "text": "V1-01"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "a3520d6866792f4c"
+  },
+  "manufacturerKey": "ek-lights",
+  "fixtureKey": "eprofile-mz-30-fc",
+  "gwFixtureTypeID": "EE7A2372-F16A-43D0-BF92-D152C8C5F18C"
+}

@@ -1,0 +1,206 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "CSM Quad Blinder",
+  "shortName": "CSM Blinder",
+  "categories": [
+    "Dimmer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-05-30",
+    "lastModifyDate": "2024-04-26",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: E0A61AF2-0ACC-43FC-9F23-BC65A2D4187B"
+    }
+  },
+  "comment": "CW LED COB Lamps: 4 x 100W (400w), 2ch, 4ch, 8ch modes",
+  "rdm": {
+    "modelId": 0
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "NoFunction"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 4": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Dim 5": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            4
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            5,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": 0,
+          "speedEnd": 1,
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "FX1 Rate": {
+      "capability": {
+        "type": "EffectSpeed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "Mode H (2ch)",
+      "channels": [
+        "Dim",
+        "Sh1"
+      ]
+    },
+    {
+      "name": "Mode D (4ch)",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4"
+      ]
+    },
+    {
+      "name": "Mode A (8ch)",
+      "channels": [
+        "Dim",
+        "Dim 2",
+        "Dim 3",
+        "Dim 4",
+        "Dim 5",
+        "Sh1 2",
+        "FX1",
+        "FX1 Rate"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      380,
+      155,
+      380
+    ],
+    "weight": 8.0,
+    "power": 400,
+    "bulb": {
+      "type": "LED",
+      "colorTemperature": 4500
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        53.1
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Beam Emitter",
+      "cie": "0.315128,0.331089,98.581402",
+      "hex": "#fffdfb"
+    }
+  ],
+  "gwSpecs": {
+    "description": "CW LED COB Lamps: 4 x 100W (400w), 2ch, 4ch, 8ch modes",
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-26T02:40:24",
+      "text": "3 mode support, Capture profile pending verification., Uploaded to GDTF Share."
+    }
+  },
+  "manufacturerKey": "csm",
+  "fixtureKey": "csm-quad-blinder",
+  "gwFixtureTypeID": "E0A61AF2-0ACC-43FC-9F23-BC65A2D4187B"
+}

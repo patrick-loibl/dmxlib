@@ -1,0 +1,234 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "ATOMIC STROBE",
+  "shortName": "ATOMIC",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2024-04-16",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 4EB4802E-3D42-47FF-9340-6A22708805DB"
+    }
+  },
+  "comment": "PRJ ATOMIC STROBE",
+  "wheels": {
+    "COLOR": {
+      "slots": [
+        {
+          "type": "Color",
+          "name": "RED",
+          "colors": [
+            "#da000c"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "GREEN",
+          "colors": [
+            "#008300"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "BLUE",
+          "colors": [
+            "#000ea9"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "YELLOW",
+          "colors": [
+            "#fbe700"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "PURPLE",
+          "colors": [
+            "#c800d3"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "CYAN",
+          "colors": [
+            "#009390"
+          ]
+        },
+        {
+          "type": "Color",
+          "name": "WHITE",
+          "colors": [
+            "#e4e4e4"
+          ]
+        }
+      ]
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Strobe1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "shutterEffect": "Strobe",
+        "speedStart": "0Hz",
+        "speedEnd": "1Hz"
+      }
+    },
+    "R": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "G": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "B": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "White": {
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "White"
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Mix MSpeed": {
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "C1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "WheelSlot",
+          "wheel": "COLOR",
+          "slotNumberStart": null,
+          "slotNumberEnd": null
+        }
+      ]
+    },
+    "Sh1": {
+      "capability": {
+        "type": "ShutterStrobe",
+        "helpWanted": "What does physical value 0…1 mean?"
+      }
+    },
+    "Color Macro1 2": {
+      "name": "Color Macro1",
+      "capability": {
+        "type": "ColorPreset"
+      }
+    },
+    "Color Mix MSpeed 2": {
+      "name": "Color Mix MSpeed",
+      "capability": {
+        "type": "Speed",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "6CH",
+      "channels": [
+        "Dim",
+        "Strobe1",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    },
+    {
+      "name": "12CH",
+      "channels": [
+        "Dim 2",
+        "Strobe1",
+        "Color Macro1",
+        "Color Mix MSpeed",
+        "C1",
+        "Sh1",
+        "Color Macro1 2",
+        "Color Mix MSpeed 2",
+        "R",
+        "G",
+        "B",
+        "White"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      1000,
+      1000,
+      1000
+    ]
+  },
+  "gwDmxProfiles": [
+    {
+      "name": "DMX Profile 1",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2024-04-16T09:37:06",
+      "text": "april_V1"
+    }
+  },
+  "manufacturerKey": "prj",
+  "fixtureKey": "atomic-strobe",
+  "gwFixtureTypeID": "4EB4802E-3D42-47FF-9340-6A22708805DB"
+}

@@ -1,0 +1,235 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Genesis",
+  "shortName": "G1",
+  "categories": [
+    "Smoke"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-07-31",
+    "lastModifyDate": "2026-03-02",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 856C33AA-C9F1-4918-A6BE-FA1B8B24CEEA"
+    }
+  },
+  "comment": "Low-lying Fog Generator with FrostFlow Cooling",
+  "rdm": {
+    "modelId": 18
+  },
+  "availableChannels": {
+    "Fog1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        }
+      ]
+    },
+    "Fog2": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": 0,
+          "fogOutputEnd": 1
+        }
+      ]
+    },
+    "Ctrl1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Null"
+        },
+        {
+          "dmxRange": [
+            6,
+            126
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Power On"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Power Off"
+        }
+      ]
+    },
+    "Fan1": {
+      "capability": {
+        "type": "Rotation",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Ctrl1 2": {
+      "name": "Ctrl1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            5
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Null"
+        },
+        {
+          "dmxRange": [
+            6,
+            126
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Power On"
+        },
+        {
+          "dmxRange": [
+            127,
+            255
+          ],
+          "type": "Maintenance",
+          "parameterStart": 0,
+          "parameterEnd": 1,
+          "comment": "Power Off"
+        }
+      ]
+    },
+    "Fog1 2": {
+      "name": "Fog1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            255
+          ],
+          "type": "Fog",
+          "fogType": "Fog",
+          "fogOutputStart": "0%",
+          "fogOutputEnd": "100%"
+        }
+      ]
+    },
+    "NULL": {
+      "capability": {
+        "type": "Unknown (Null)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Fog1 3": {
+      "name": "Fog1",
+      "capability": {
+        "type": "Fog",
+        "fogType": "Fog",
+        "fogOutputStart": 0,
+        "fogOutputEnd": 1
+      }
+    },
+    "Null": {
+      "capability": {
+        "type": "Unknown (Null2)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    }
+  },
+  "modes": [
+    {
+      "name": "5 Channel P3-3ch",
+      "channels": [
+        "Fog1",
+        "Fog2",
+        "Ctrl1",
+        "Fan1",
+        "Ctrl1 2"
+      ]
+    },
+    {
+      "name": "5 Channel P3-2ch",
+      "channels": [
+        "Fog1 2",
+        "Ctrl1",
+        "NULL",
+        "Fan1",
+        "Ctrl1 2"
+      ]
+    },
+    {
+      "name": "5 Channel P2",
+      "channels": [
+        "Fog1 3",
+        "NULL",
+        "Null",
+        "Fan1",
+        "Ctrl1"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      897,
+      599,
+      633
+    ],
+    "weight": 112.0
+  },
+  "gwDmxProfiles": [
+    {
+      "name": "2 Channel ",
+      "points": []
+    },
+    {
+      "name": "3 Channel ",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "description": "Low-lying Fog Generator with FrostFlow Cooling",
+    "operatingTemperature": [
+      -20,
+      43
+    ],
+    "revision": {
+      "date": "2026-03-02T16:13:17",
+      "text": "rev1_21"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "2a707646c2971828"
+  },
+  "manufacturerKey": "master-fx",
+  "fixtureKey": "genesis",
+  "gwFixtureTypeID": "856C33AA-C9F1-4918-A6BE-FA1B8B24CEEA"
+}

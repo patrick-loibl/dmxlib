@@ -1,0 +1,303 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "MarsX1",
+  "shortName": "MarsX1",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2021-07-05",
+    "lastModifyDate": "2021-07-22",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.1 fixture type ID: E09F2E3E-1244-4C79-BFCE-5B8FC1AB48D6"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color FX1": {
+      "highlightValue": 255,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "Effect",
+          "effectName": "Red Shift ON",
+          "speed": 1
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "Red Shift OFF",
+          "speed": 0
+        }
+      ]
+    },
+    "Dim Mode": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            51
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "Internal Setup"
+        },
+        {
+          "dmxRange": [
+            52,
+            101
+          ],
+          "type": "Maintenance",
+          "parameter": 0,
+          "comment": "No Function"
+        },
+        {
+          "dmxRange": [
+            102,
+            152
+          ],
+          "type": "Maintenance",
+          "parameter": 1,
+          "comment": "Fast Mode"
+        },
+        {
+          "dmxRange": [
+            153,
+            203
+          ],
+          "type": "Maintenance",
+          "parameter": 2,
+          "comment": "Medium Mode"
+        },
+        {
+          "dmxRange": [
+            204,
+            255
+          ],
+          "type": "Maintenance",
+          "parameter": 3,
+          "comment": "Slow Mode"
+        }
+      ]
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "fineChannelAliases": [
+        "Dim 2 fine"
+      ],
+      "highlightValue": 65535,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Sh1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "ShutterStrobe",
+          "helpWanted": "What does physical value 0…1 mean?",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            11,
+            11
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            12,
+            254
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz"
+        },
+        {
+          "dmxRange": [
+            255,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "comment": "Strobe Fast"
+        }
+      ]
+    },
+    "FX1": {
+      "highlightValue": 0,
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            10
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speed": 0
+        },
+        {
+          "dmxRange": [
+            11,
+            80
+          ],
+          "type": "Effect",
+          "effectName": "Auto Mode 1",
+          "speedStart": 1,
+          "speedEnd": 100
+        },
+        {
+          "dmxRange": [
+            81,
+            160
+          ],
+          "type": "Effect",
+          "effectName": "Auto Mode 2",
+          "speedStart": 1,
+          "speedEnd": 100
+        },
+        {
+          "dmxRange": [
+            161,
+            240
+          ],
+          "type": "Effect",
+          "effectName": "Auto Mode 3",
+          "speedStart": 1,
+          "speedEnd": 100
+        },
+        {
+          "dmxRange": [
+            241,
+            255
+          ],
+          "type": "Effect",
+          "effectName": "No Function",
+          "speed": 0
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "3 Ch",
+      "channels": [
+        "Dim",
+        "Color FX1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "4 Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Color FX1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "5 Ch",
+      "channels": [
+        "Dim",
+        "Color FX1",
+        "Sh1",
+        "FX1",
+        "Dim Mode"
+      ]
+    },
+    {
+      "name": "6 Ch",
+      "channels": [
+        "Dim 2",
+        "Dim 2 fine",
+        "Color FX1",
+        "Sh1",
+        "FX1",
+        "Dim Mode"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      370,
+      250,
+      370
+    ],
+    "weight": 8.8,
+    "DMXconnector": "XLR5",
+    "power": 1000,
+    "bulb": {
+      "type": "Discharge",
+      "lumens": 1000,
+      "colorTemperature": 6000
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Warm White",
+      "cie": "0.406900,0.416700,100.000000",
+      "hex": "#fff994"
+    },
+    {
+      "name": "Amber",
+      "cie": "0.610300,0.376000,100.000000",
+      "hex": "#ff9600"
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      0,
+      40
+    ],
+    "revision": {
+      "date": "2021-07-22T14:30:43",
+      "text": "Basic"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "f91c0f77b78ff711"
+  },
+  "manufacturerKey": "litecraft",
+  "fixtureKey": "marsx1",
+  "gwFixtureTypeID": "E09F2E3E-1244-4C79-BFCE-5B8FC1AB48D6"
+}

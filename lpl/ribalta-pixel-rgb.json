@@ -1,0 +1,312 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenLightingProject/open-fixture-library/master/schemas/fixture.json",
+  "name": "Ribalta Pixel RGB",
+  "shortName": "RibaltaRGB",
+  "categories": [
+    "Color Changer"
+  ],
+  "meta": {
+    "authors": [
+      "GDTF Converter"
+    ],
+    "createDate": "2025-11-24",
+    "lastModifyDate": "2025-11-24",
+    "importPlugin": {
+      "plugin": "gdtf",
+      "date": "2026-06-22",
+      "comment": "GDTF v1.2 fixture type ID: 2C91C480-2C6C-4448-B97D-876856581157"
+    }
+  },
+  "availableChannels": {
+    "Dim": {
+      "dmxValueResolution": "32bit",
+      "highlightValue": 4294967295,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "R": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Red"
+      }
+    },
+    "G": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Green"
+      }
+    },
+    "B": {
+      "highlightValue": 255,
+      "capability": {
+        "type": "ColorIntensity",
+        "color": "Blue"
+      }
+    },
+    "Dummy": {
+      "capability": {
+        "type": "Unknown (Dummy)",
+        "physicalStart": 0,
+        "physicalEnd": 1
+      }
+    },
+    "Dim 2": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1
+      }
+    },
+    "Color Macro1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ColorPreset",
+          "comment": "Off"
+        },
+        {
+          "dmxRange": [
+            1,
+            30
+          ],
+          "type": "ColorPreset",
+          "comment": "ColorMacro1"
+        },
+        {
+          "dmxRange": [
+            31,
+            84
+          ],
+          "type": "ColorPreset",
+          "comment": "ColorMacro2"
+        },
+        {
+          "dmxRange": [
+            85,
+            255
+          ],
+          "type": "ColorPreset",
+          "comment": "SpinColor"
+        }
+      ]
+    },
+    "Sh1": {
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "11Hz",
+          "comment": "Strobe"
+        }
+      ]
+    },
+    "Color FX1": {
+      "capability": {
+        "type": "Effect",
+        "effectName": "",
+        "speedStart": 0,
+        "speedEnd": 1
+      }
+    },
+    "Dim 3": {
+      "name": "Dim",
+      "highlightValue": 255,
+      "capability": {
+        "type": "Intensity",
+        "brightnessStart": 0,
+        "brightnessEnd": 1,
+        "comment": "Closed"
+      }
+    },
+    "Sh1 2": {
+      "name": "Sh1",
+      "capabilities": [
+        {
+          "dmxRange": [
+            0,
+            0
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Open",
+          "comment": "Open"
+        },
+        {
+          "dmxRange": [
+            1,
+            100
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "6.56Hz",
+          "comment": "Strobe Slow"
+        },
+        {
+          "dmxRange": [
+            101,
+            152
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "6.62Hz",
+          "speedEnd": "10Hz",
+          "comment": "Strobe Max"
+        },
+        {
+          "dmxRange": [
+            153,
+            255
+          ],
+          "type": "ShutterStrobe",
+          "shutterEffect": "Strobe",
+          "speedStart": "0Hz",
+          "speedEnd": "1Hz",
+          "randomTiming": true,
+          "comment": "StrobeRandom"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "name": "A_03ch",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "B_05CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dummy",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "C_07CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Color Macro1",
+        "Sh1",
+        "Color FX1",
+        "Dim 2"
+      ]
+    },
+    {
+      "name": "D_54ch",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "E_09CH",
+      "channels": [
+        "R",
+        "G",
+        "B"
+      ]
+    },
+    {
+      "name": "F_15CH",
+      "channels": [
+        "R",
+        "G",
+        "B",
+        "Dim 3",
+        "Sh1 2"
+      ]
+    }
+  ],
+  "physical": {
+    "dimensions": [
+      7,
+      13,
+      100
+    ],
+    "weight": 5.0,
+    "power": 10,
+    "bulb": {
+      "type": "LED",
+      "lumens": 10000,
+      "colorTemperature": 6400
+    },
+    "lens": {
+      "degreesMinMax": [
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "gwEmitters": [
+    {
+      "name": "Red",
+      "cie": "0.640000,0.330000,21.270000",
+      "hex": "#ff0000"
+    },
+    {
+      "name": "Green",
+      "cie": "0.300000,0.600000,71.520000",
+      "hex": "#00ff00"
+    },
+    {
+      "name": "Blue",
+      "cie": "0.150000,0.060000,7.218000",
+      "hex": "#0000ff"
+    }
+  ],
+  "gwDmxProfiles": [
+    {
+      "name": "Linear",
+      "points": []
+    }
+  ],
+  "gwSpecs": {
+    "beamType": "Wash",
+    "operatingTemperature": [
+      -20,
+      40
+    ],
+    "revision": {
+      "date": "2025-11-24T19:55:31",
+      "text": "Tested - Real/3D/MA2/MA3"
+    }
+  },
+  "gwMedia": {
+    "thumbnail": "c3a1e228d167f278"
+  },
+  "manufacturerKey": "lpl",
+  "fixtureKey": "ribalta-pixel-rgb",
+  "gwFixtureTypeID": "2C91C480-2C6C-4448-B97D-876856581157"
+}
